@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CA Mains 2026 — Class 1(26): Gender Politics of the Constitution, Constitutional Morality &amp; Bail Jurisprudence</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: #faf9f6;
+    color: #1f2328;
+    margin: 0;
+    padding: 0 0 80px;
+    line-height: 1.6;
+  }
+  .toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: #ffffff;
+    border-bottom: 2px solid #1d5b8b;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: Arial, sans-serif;
+    flex-wrap: wrap;
+  }
+  .toolbar button {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    padding: 7px 14px;
+    border-radius: 6px;
+    border: 1px solid #d8d2c6;
+    background: #fff;
+    cursor: pointer;
+    color: #1f2328;
+  }
+  .toolbar button:hover { background: #e6f1fb; border-color: #1d5b8b; }
+  .toolbar button.active { background: #1d5b8b; color: #fff; border-color: #1d5b8b; }
+  .toolbar .save-btn { background: #2f6b4f; color: #fff; border-color: #2f6b4f; margin-left: auto; }
+  .toolbar .save-btn:hover { background: #24543e; }
+  .toolbar .status { font-size: 12px; color: #57606a; margin-left: auto; padding-right: 8px; }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 30px 20px; }
+  header { border-bottom: 3px solid #1d5b8b; padding-bottom: 20px; margin-bottom: 30px; }
+  header h1 { font-size: 1.7em; margin: 0 0 6px; color: #1d5b8b; }
+  header .meta { color: #57606a; font-size: 0.95em; font-family: Arial, sans-serif; }
+  section { margin-bottom: 42px; }
+  h2 { font-size: 1.4em; color: #1d5b8b; border-left: 4px solid #1d5b8b; padding-left: 12px; margin-bottom: 14px; }
+  h3 { font-size: 1.12em; margin: 22px 0 8px; }
+  p { margin: 10px 0; }
+  .summary-box { background: #e6f1fb; border-radius: 8px; padding: 18px 22px; font-size: 0.98em; }
+  ul, ol.answers { padding-left: 24px; }
+  li { margin-bottom: 6px; }
+  .timestamp { font-family: 'Courier New', monospace; font-size: 0.78em; color: #57606a; background: #e2ddd4; border-radius: 4px; padding: 1px 6px; margin-right: 6px; }
+  .quote-card { background: #fff; border: 1px solid #e2ddd4; border-left: 4px solid #1d5b8b; border-radius: 6px; padding: 14px 18px; margin: 14px 0; }
+  .quote-card .q { font-style: italic; font-size: 1.05em; }
+  .quote-card .attrib { font-family: Arial, sans-serif; font-size: 0.85em; color: #57606a; margin-top: 6px; }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.95em; background: #fff; }
+  th, td { border: 1px solid #e2ddd4; padding: 8px 12px; text-align: left; vertical-align: top; }
+  th { background: #e6f1fb; font-family: Arial, sans-serif; font-size: 0.88em; }
+  .gap-box { background: #eef4f0; border: 1px solid #cfe3d6; border-radius: 8px; padding: 16px 20px; margin-top: 16px; font-size: 0.95em; }
+  .gap-box h4 { margin: 0 0 8px; color: #2f6b4f; font-family: Arial, sans-serif; font-size: 0.95em; }
+  .exam-tip { background: #fff7e6; border: 1px solid #f0dba8; border-radius: 8px; padding: 14px 20px; margin: 14px 0; font-size: 0.95em; }
+  .exam-tip::before { content: "Exam strategy: "; font-weight: bold; font-family: Arial, sans-serif; }
+  .term-box { background: #fdf3f3; border: 1px solid #ecd4d4; border-radius: 8px; padding: 12px 16px; margin: 10px 0; }
+  .term-box strong { color: #8b3a3a; }
+  .data-box { background: #f3f0fb; border: 1px solid #ddd6f0; border-radius: 8px; padding: 12px 16px; margin: 10px 0; font-family: 'Courier New', monospace; font-size: 0.9em; }
+  footer { margin-top: 60px; border-top: 1px solid #e2ddd4; padding-top: 16px; color: #57606a; font-size: 0.82em; font-family: Arial, sans-serif; }
+  .toc {
+    background: #fff;
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    padding: 16px 22px;
+    margin-bottom: 36px;
+    font-family: Arial, sans-serif;
+    font-size: 0.9em;
+  }
+  .toc h2 { font-size: 1em; margin: 0 0 10px; border: none; padding: 0; color: #1d5b8b; text-transform: uppercase; letter-spacing: 0.04em; }
+  .toc ol { columns: 2; margin: 0; padding-left: 20px; }
+  .toc a { color: #1f2328; text-decoration: none; }
+  .toc a:hover { color: #1d5b8b; text-decoration: underline; }
+  details.collapse-section {
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    background: #fff;
+    margin: 14px 0;
+    padding: 0;
+  }
+  details.collapse-section summary {
+    cursor: pointer;
+    padding: 12px 16px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 0.92em;
+    color: #1d5b8b;
+    list-style: none;
+  }
+  details.collapse-section summary::-webkit-details-marker { display: none; }
+  details.collapse-section summary::before { content: "▸ "; }
+  details.collapse-section[open] summary::before { content: "▾ "; }
+  details.collapse-section .collapse-body { padding: 4px 16px 16px; }
+  .glossary-term {
+    display: flex;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+  }
+  .glossary-term:last-child { border-bottom: none; }
+  .glossary-term dt { font-weight: bold; color: #8b3a3a; min-width: 200px; flex-shrink: 0; font-family: Arial, sans-serif; font-size: 0.9em; }
+  .glossary-term dd { margin: 0; }
+
+  mark.user-highlight { background: #fff176; padding: 1px 2px; border-radius: 2px; }
+  u.user-underline { text-decoration: underline; text-decoration-color: #1d5b8b; text-decoration-thickness: 2px; }
+  .user-note {
+    background: #e6f1fb;
+    border: 1px solid #85b7eb;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin: 8px 0;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #0c447c;
+    position: relative;
+  }
+  .user-note .note-label { font-weight: bold; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; display: block; }
+  .user-note .del-note { position: absolute; top: 6px; right: 8px; cursor: pointer; border: none; background: none; color: #0c447c; font-size: 14px; font-family: Arial, sans-serif; }
+  #note-input-box {
+    position: fixed;
+    display: none;
+    background: #fff;
+    border: 2px solid #1d5b8b;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    z-index: 100;
+    font-family: Arial, sans-serif;
+  }
+  #note-input-box textarea { width: 240px; height: 60px; font-family: Arial, sans-serif; font-size: 13px; border: 1px solid #d8d2c6; border-radius: 4px; padding: 6px; }
+  #note-input-box .note-actions { margin-top: 6px; display: flex; gap: 6px; justify-content: flex-end; }
+  #note-input-box button { font-size: 12px; padding: 5px 10px; border-radius: 4px; border: 1px solid #d8d2c6; background: #fff; cursor: pointer; }
+  #note-input-box button.primary { background: #1d5b8b; color: #fff; border-color: #1d5b8b; }
+  .content-target::selection { background: #ffe082; }
+  .board-caption { font-family: Arial, sans-serif; font-size: 0.82em; color: #57606a; margin-top: -8px; margin-bottom: 14px; }
+  .mermaid { background: #fff; border: 1px solid #e2ddd4; border-radius: 8px; padding: 10px; margin: 14px 0; }
+  .arcs-box {
+    background: #fff;
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 14px 0;
+  }
+  .arcs-box h4 { margin: 0 0 10px; color: #1d5b8b; font-family: Arial, sans-serif; font-size: 0.98em; }
+  .recall-q { margin-bottom: 14px; }
+  .recall-q p.q-text { font-weight: bold; margin: 0 0 6px; }
+  .recall-q details { border: none; margin: 0; }
+  .recall-q summary { font-family: Arial, sans-serif; font-size: 0.82em; color: #1d5b8b; cursor: pointer; list-style: none; padding: 2px 0; }
+  .recall-q summary::-webkit-details-marker { display: none; }
+  .recall-q summary::before { content: "Show answer \25B8 "; }
+  .recall-q details[open] summary::before { content: "Hide answer \25BE "; }
+  .recall-q .ans { background: #eef4f0; border-radius: 6px; padding: 8px 12px; margin-top: 6px; font-size: 0.95em; }
+  .spacing-tracker { font-family: Arial, sans-serif; font-size: 0.92em; }
+  .spacing-tracker table { margin: 8px 0; }
+  .spacing-tracker input[type="checkbox"] { width: 16px; height: 16px; cursor: pointer; }
+  .mnemonic-box { background: #fff7e6; border: 1px solid #f0dba8; border-radius: 8px; padding: 14px 18px; margin: 10px 0; }
+  .mnemonic-box h4 { margin: 0 0 6px; color: #8b5a1d; font-family: Arial, sans-serif; font-size: 0.92em; }
+  .applic-table td.gs-tag { font-family: Arial, sans-serif; font-weight: bold; font-size: 0.85em; white-space: nowrap; }
+  .applic-table .prelims-badge, .applic-table .mains-badge {
+    display: inline-block; font-family: Arial, sans-serif; font-size: 0.72em; font-weight: bold;
+    padding: 2px 8px; border-radius: 10px; margin-right: 4px;
+  }
+  .prelims-badge { background: #eaf3de; color: #3b6d11; }
+  .mains-badge { background: #e6f1fb; color: #1d5b8b; }
+  #fallback-help {
+    position: fixed;
+    display: none;
+    top: 60px;
+    right: 20px;
+    max-width: 320px;
+    background: #fff;
+    border: 2px solid #993c1d;
+    border-radius: 8px;
+    padding: 14px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    z-index: 200;
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <button id="btn-highlight" title="Select text, then click to highlight it">Highlight</button>
+  <button id="btn-underline" title="Select text, then click to underline it">Underline</button>
+  <button id="btn-note" title="Click this, then click anywhere in the notes to drop a note">Add note</button>
+  <button id="btn-clear" title="Remove all your highlights, underlines, and notes">Clear my edits</button>
+  <span class="status" id="status-text">Not connected to file — click Save once to connect</span>
+  <button class="save-btn" id="btn-save">Save</button>
+</div>
+
+<div id="fallback-help">
+  <strong>Your browser can't save directly</strong>
+  <p style="margin:6px 0;">File System Access isn't supported here (common on Safari/Firefox). Use Chrome or Edge to enable direct-save, or use your browser's Save Page As (Ctrl/Cmd+S) to overwrite this file manually after editing.</p>
+  <button id="fallback-close" style="font-size: 12px; padding: 6px 12px; border-radius: 4px; border: 1px solid #993c1d; background: #993c1d; color: #fff; cursor: pointer;">Got it</button>
+</div>
+
+<div id="note-input-box">
+  <textarea id="note-text" placeholder="Type your note..."></textarea>
+  <div class="note-actions">
+    <button id="note-cancel">Cancel</button>
+    <button class="primary" id="note-add">Add</button>
+  </div>
+</div>
+
+<div class="wrap content-target" id="content-root">
+
+<header>
+  <h1>CA Mains 2026 — Class 1(26): Gender Politics of the Constitution, Constitutional Morality &amp; Bail Jurisprudence</h1>
+  <div class="meta">
+    <span>Source: unlisted YouTube lecture recording ("cava2026 1")</span> &middot;
+    <span>Duration: 0:00 – 1:20:31</span> &middot;
+    <span>Track: UPSC GS-2 (Polity/Governance) — Current Affairs Answer Writing</span>
+  </div>
+</header>
+
+<nav class="toc">
+  <h2>Contents</h2>
+  <ol>
+    <li><a href="#applicability">Applicability — GS papers, Prelims &amp; Mains</a></li>
+    <li><a href="#part1">Class format and approach</a></li>
+    <li><a href="#part2">Topic 1: Gender politics of the Constitution</a></li>
+    <li><a href="#part3">Topic 1: Scholarly quotes and sources</a></li>
+    <li><a href="#part4">Topic 2: Constitutional morality</a></li>
+    <li><a href="#part5">Topic 2: Debates on constitutional morality</a></li>
+    <li><a href="#part6">Topic 3: Bail jurisprudence</a></li>
+    <li><a href="#part7">Topic 3: Recommended answer structures</a></li>
+    <li><a href="#glossary">Glossary — quick revision</a></li>
+    <li><a href="#arcs">Revision kit (ARCS)</a></li>
+    <li><a href="#gaps">Supplementary research</a></li>
+  </ol>
+</nav>
+
+<section id="summary">
+  <h2>Executive summary</h2>
+  <div class="summary-box">
+  <p>First class of the CA Mains 2026 answer-writing series, covering three exam-relevant themes in sequence:</p>
+  <ul>
+    <li><strong>Topic 1</strong> — gender politics of India's Constitution-making: the contributions and marginalization of the 15 women members of the Constituent Assembly, the concept of a "postcolonial sexual contract," and terms like social/soft/digital patriarchy and the "double bind" faced by minority women.</li>
+    <li><strong>Topic 2</strong> — constitutional morality: its judicial evolution (from the "die at birth" skepticism of an early Attorney General to its revival in Sabarimala and NALSA-type cases), the laws-vs-conventions debate, and critiques like judicial nihilism and symbolic constitutionalism.</li>
+    <li><strong>Topic 3</strong> — bail jurisprudence: the tension between Article 21 personal liberty and stringent special-statute bail conditions (PMLA, UAPA), with the "bail is the rule, jail is the exception" principle, overcrowding data, and recent Supreme Court correctives.</li>
+  </ul>
+  <p>The lecture is answer-writing-first: for each topic the instructor models introduction, content structuring, and conclusion technique for timed mains answers.</p>
+  </div>
+</section>
+
+<section id="applicability">
+  <h2>Applicability — GS papers, Prelims &amp; Mains</h2>
+  <table class="applic-table">
+    <tr><th>Sub-topic</th><th>GS Paper</th><th>Prelims</th><th>Mains</th></tr>
+    <tr>
+      <td class="gs-tag">Gender politics of the Constitution (framers' debates, representation)</td>
+      <td>GS-1 (Society) / GS-2 (Polity)</td>
+      <td><span class="prelims-badge">Medium</span>Constituent Assembly debate specifics and named women members are occasional MCQ fodder.</td>
+      <td><span class="mains-badge">High</span>Classic GS-1/2 essay-adjacent theme — gender and constitutional design is a recurring analytical question type.</td>
+    </tr>
+    <tr>
+      <td class="gs-tag">Constitutional morality (concept, judicial usage)</td>
+      <td>GS-2 (Polity) / GS-4 (Ethics)</td>
+      <td><span class="prelims-badge">Low</span>A doctrinal concept, rarely tested as a standalone factual MCQ.</td>
+      <td><span class="mains-badge">High</span>High-value GS-2/GS-4 term — frequently anchors answers on judicial review, minority rights, and social reform judgments.</td>
+    </tr>
+    <tr>
+      <td class="gs-tag">Bail jurisprudence (recent judgments, proposed Bail Act)</td>
+      <td>GS-2 (Polity/Judiciary)</td>
+      <td><span class="prelims-badge">Medium</span>Named case citations and specific court directions can appear as MCQs.</td>
+      <td><span class="mains-badge">High</span>Bail reform is a recurring GS-2 governance/judicial-reform theme with strong PYQ precedent.</td>
+    </tr>
+  </table>
+  <p style="font-family: Arial, sans-serif; font-size: 0.85em; color: #57606a;">Rule of thumb applied across this series: any named Act/scheme/committee/case with a specific year, number, or figure is Prelims-relevant; any debate, framework, or comparative-model discussion is Mains-relevant (answer structure and analytical content), and the two are usually not mutually exclusive for a well-covered current-affairs topic.</p>
+</section>
+
+<section id="part1">
+  <h2>1. Class format and approach</h2>
+  <ul>
+    <li><span class="timestamp">0:35</span>First topic: gender politics of the Constitution, "in the news mainly in 2024" — direct context, but with reusable content across multiple potential questions/papers.</li>
+    <li><span class="timestamp">0:50</span>Explicit focus on introduction and conclusion technique — instructor's observation is that most students struggle with writing a good, impactful introduction and conclusion; provides ready-made ideas to use or reframe.</li>
+    <li><span class="timestamp">1:05</span>Framing note on the exam itself: with UPSC mains increasingly a "writing competition" under tight time limits, a fixed answer-writing format (introduction → content/keywords/debates → conclusion) is essential — a 5-marker needs no conclusion, but 10/15-markers need a full intro + conclusion structure.</li>
+    <li><span class="timestamp">54:42</span>Aside on exam pattern change: UPSC previously set 25 questions in 3 hours (mains GS papers); pattern has since shifted to a higher question count with proportionally lower marks per question (e.g., 5-mark, 2-mark questions), reinforcing the need for speed and a repeatable answer format.</li>
+  </ul>
+  <div class="exam-tip">Match your structure to marks: 5-markers can skip the conclusion entirely; 10/15-mark answers need a full introduction–content–conclusion arc. Pre-decide your format so you're not improvising under time pressure.</div>
+</section>
+
+<section id="part2">
+  <h2>2. Topic 1: Gender politics of the Constitution</h2>
+
+  <h3>Model introduction (verbatim, as taught)</h3>
+  <div class="quote-card">
+    <div class="q">The narrative of India's constitutional history is often framed through a patriarchal lens, foregrounding the "founding fathers." But critics argue that the vital contributions of the "founding mothers" have not been given due recognition.</div>
+    <div class="attrib">— Instructor's explicit model introduction for this topic (<span class="timestamp">1:51</span>–<span class="timestamp">2:23</span>), presented as a ready-to-use, "very strong" opening line — reusable pattern: name the dominant framing, then pivot to the critique/gap</div>
+  </div>
+  <div class="exam-tip">This introduction pattern generalizes: "the dominant narrative of X is framed through [lens], but critics argue [marginalized group/perspective] has not received due recognition" — reusable for any question on excluded or under-recognized contributors to a historical or institutional process.</div>
+
+  <p><span class="timestamp">3:02</span>Context peg: the 75th anniversary of the adoption of the Constitution — the President praised the 15 eminent women members of the Constituent Assembly, noting that while women's equality was a debated ideal, these members shaped the actual text.</p>
+
+  <h3>Framing the introduction: explicit vs. implicit demand</h3>
+  <ul>
+    <li><span class="timestamp">26:04</span><strong>Explicit demand</strong> of a question like "evaluate the contribution of the founding mothers": direct recognition of their role.</li>
+    <li><span class="timestamp">26:22</span><strong>Implicit/nuanced framing</strong>: rather than claiming their contribution went entirely unrecognized, the safer, more defensible framing (per Achyut Chetan's research) is that women members "gave their will, consent, and dissent" while drafting the Constitution — critics argue they were not given <em>due</em> recognition, not that they received none. This avoids overclaiming.</li>
+  </ul>
+  <div class="exam-tip">Don't overclaim. Say "critics argue X was not given due recognition" rather than asserting a total absence of recognition — attribute strong claims to named critics/scholars rather than stating them as settled fact.</div>
+
+  <h3>Key women framers and their contributions</h3>
+  <details class="collapse-section"><summary>Dr. Baker's quote and the "memory → culture → justice" framework</summary><div class="collapse-body">
+    Quote used as an introduction/conclusion device: <em>"I measure the progress of society based on the progress woman achieved."</em> — attributed in the lecture to "Dr. Baker" (likely Dr. B.R. Ambedkar; name transcribed imperfectly by auto-captions — verify before citing). Framework: the memory of these women framers should become part of daily culture, and that culture should in turn ensure justice (substantively, equality for women) — i.e., memory → culture → justice as a repeatable conclusion template.
+  </div></details>
+
+  <details class="collapse-section"><summary>The unnamed woman member's UCC advocacy</summary><div class="collapse-body">
+    A member (transcript unclear on name) pushed globally for the idea that "human beings are born free," and domestically pushed for a Uniform Civil Code (UCC) to be a fundamental right — on the view that discrimination rooted in personal law, and unchecked religious freedom, would subjugate women. Personal laws in India are fragmented; unchecked religious freedom was seen as enabling clergy-driven suppression of women's freedom and liberty.
+  </div></details>
+
+  <details class="collapse-section"><summary>Rajkumari Amrit Kaur (referenced as "Mari Ahmed" in transcript)</summary><div class="collapse-body">
+    India's first Health Minister (transcribed imperfectly as "Mari Ahmed" — likely Rajkumari Amrit Kaur; verify before citing). Fought against ritualism and dogma in the health/social sphere.
+  </div></details>
+
+  <details class="collapse-section"><summary>The "double bind" of minority/lower-class women</summary><div class="collapse-body">
+    Minority women or women from lower-class categories face a "double bind": discriminated against <em>outside</em> their community (by the majority/dominant society) and subjugated <em>inside</em> it (by patriarchal structures within their own community) — a bind they cannot escape from either direction. Useful for answers on intersectionality, avoiding social "ghettoization," or political fragmentation/polarization along community lines.
+  </div></details>
+
+  <details class="collapse-section"><summary>Social reformer against "denominational prejudice"</summary><div class="collapse-body">
+    A framer (name unclear in transcript) fought against denominational prejudice as a social reformer — flagged here for verification against handwritten notes before citing by name.
+  </div></details>
+
+  <h3>The "postcolonial sexual contract" (Christina Ginsburg's framework, per lecture)</h3>
+  <p><span class="timestamp">12:40</span>Central problem the Constituent Assembly struggled to reconcile: how to secure consent from a patriarchal society for a modern, egalitarian democracy. Their compromise:</p>
+  <ul>
+    <li><strong>Public equality</strong> was granted — fundamental rights (Articles 14, 15, 16) established formal equality in the public/state sphere.</li>
+    <li><strong>Discriminatory personal laws</strong> were nonetheless allowed to continue in the private/family sphere, continuing to suppress women even as public equality was constitutionally guaranteed.</li>
+  </ul>
+  <div class="term-box"><strong>Postcolonial sexual contract:</strong> the founding compromise that traded full private-sphere gender equality for a workable public-sphere equality — leaving personal laws (marriage, inheritance, family) as an unresolved site of gender discrimination to this day. Attributed in the lecture to a scholar transcribed as "Christine Ging"/"Christian gings" (name unclear in auto-captions — verify before citing; see supplementary research below).</div>
+  <p><span class="timestamp">13:39</span>The compromise is also described as <strong>fraternal acquiescence</strong> (or "male consent"):</p>
+  <ul>
+    <li>Men "consented" to grant public equality while retaining private-sphere control.</li>
+    <li>Women's own consent to this whole arrangement is characterized as a <em>perceived</em> consent, not a blind one — accepted pragmatically rather than as full agreement.</li>
+    <li>This fraternal acquiescence, combined with <strong>competitive claims</strong> from different social groups (each seeking recognition), is what produces the "double bind" described above.</li>
+  </ul>
+  <p class="board-caption">The compromise, as a flow (reusable diagram for a gender-and-Constitution answer):</p>
+  <pre class="mermaid">
+flowchart TD
+    A["Challenge: how to get patriarchal<br/>society's consent for a modern,<br/>egalitarian democracy"] --> B["Compromise struck by the<br/>Constituent Assembly"]
+    B --> C["Public sphere:<br/>formal equality granted<br/>(Articles 14, 15, 16)"]
+    B --> D["Private/family sphere:<br/>discriminatory personal laws<br/>left untouched"]
+    C --> E["Result: 'postcolonial sexual contract' —<br/>public equality co-exists with<br/>ongoing private-sphere discrimination"]
+    D --> E
+  </pre>
+
+  <h3>Forms of patriarchy (terms for quotation-style answers)</h3>
+  <details class="collapse-section"><summary>Social patriarchal power</summary><div class="collapse-body">
+    Not just individual/domestic-sphere male dominance, but patriarchy <em>institutionalized</em> — enforced through religion, political parties, or caste structures at a systemic level.
+  </div></details>
+  <details class="collapse-section"><summary>Soft patriarchy</summary><div class="collapse-body">
+    A gentler, less visibly coercive form of patriarchal control (contrasted with overt/hard patriarchy) — referenced in connection with "care economy" framing of women's unpaid/underpaid labor.
+  </div></details>
+  <details class="collapse-section"><summary>Digital patriarchy</summary><div class="collapse-body">
+    Patriarchy reproduced in ostensibly "open" or "equal" digital/gig-economy spaces — e.g., women disproportionately routed into lower-paid "pink collar" gig jobs, reinforcing gender stereotypes even in platforms marketed as neutral or meritocratic.
+  </div></details>
+  <details class="collapse-section"><summary>Politics of presence (Anne Phillips)</summary><div class="collapse-body">
+    Theory that fair representation of disadvantaged/marginalized groups requires their actual physical <em>presence</em> in elected/decision-making bodies — not just that their ideas or interests are represented by others. Directly relevant to debates on women's reservation and caste-based political reservation: the lecture flags the risk that reservation can let the same few individuals from a category keep benefiting ("cateization") without addressing why presence matters beyond descriptive representation.
+  </div></details>
+</section>
+
+<section id="part3">
+  <h2>3. Topic 1: Scholarly quotes and sources (for citation)</h2>
+  <div class="quote-card">
+    <div class="q">I measure the progress of society based on the progress woman achieved.</div>
+    <div class="attrib">— Attributed in the lecture to "Dr. Baker" (verify exact attribution before citing — likely Dr. B.R. Ambedkar)</div>
+  </div>
+  <div class="quote-card">
+    <div class="q">However good a constitution may be, it is sure to turn out bad because those who are called to work it happen to be a bad lot.</div>
+    <div class="attrib">— Referenced as a well-known constitutional quote in the lecture (commonly attributed to Dr. B.R. Ambedkar's closing Constituent Assembly speech)</div>
+  </div>
+  <div class="quote-card">
+    <div class="q">Fundamental rights are framed against the history of fundamental wrongs.</div>
+    <div class="attrib">— Cited in the lecture as a reusable line for any fundamental-rights answer; frames rights as a direct response to specific historical injustices, not abstract ideals</div>
+  </div>
+  <div class="quote-card">
+    <div class="q">The Indian Constitution is a great social document — almost revolutionary in its aim of transforming a medieval, hierarchical society into a modern, egalitarian democracy.</div>
+    <div class="attrib">— Instructor's paraphrase of the "transformative constitution" idea; usable in the introduction of any social-justice or gender-equality answer</div>
+  </div>
+  <div class="quote-card">
+    <div class="q">The Uniform Civil Code was a cheque drawn in favour of Indian women by the founding fathers and mothers, but it has been dishonoured.</div>
+    <div class="attrib">— Attributed in the lecture to a columnist referenced as "CK," described as a former Deputy Law Secretary of Kerala, in an article published in <em>The Hindu</em> (verify exact name/citation before use — directly usable for a UCC answer)</div>
+  </div>
+  <ul>
+    <li><strong>Achyut Chetan</strong>, <em>Founding Mothers of the Indian Republic: Gender Politics of the Framing of the Constitution</em> (Cambridge University Press, 2022) — central academic source for the "explicit vs. implicit demand" and "will, consent, and dissent" framing used in this class.</li>
+    <li><strong>Anne Phillips</strong>, <em>The Politics of Presence</em> (Oxford, 1995) — theory of descriptive representation referenced for the "politics of presence" term.</li>
+  </ul>
+
+  <h3>Live answer-writing exercise (as taught)</h3>
+  <div class="quote-card">
+    <div class="q">Evaluate the role of the founding mothers of the Constituent Assembly in shaping the gender-just framework of the Constitution.</div>
+    <div class="attrib">— Model question used for a timed (3-minute framework) structuring exercise in class</div>
+  </div>
+  <ol class="answers">
+    <li><strong>Introduction:</strong> the "patriarchal lens" model introduction above.</li>
+    <li><strong>Body:</strong> the Constitution was drafted not just by women's <em>consent</em>, but by their <em>will and dissent</em> — key framers and contributions (Section 2 above).</li>
+    <li><strong>Body — the underlying compromise:</strong> fraternal acquiescence plus competitive claims → the double bind.</li>
+    <li><strong>Conclusion:</strong> the founding mothers' contribution was to help "ensure fraternity, goodness, and equality" despite the compromise — the "memory → culture → justice" template above.</li>
+  </ol>
+</section>
+
+<section id="part4">
+  <h2>4. Topic 2: Constitutional morality</h2>
+  <p><span class="timestamp">29:26</span>Recommended answer format: introduction → recent examples/context → key debates/terms → conclusion. The instructor stresses having this format automatically ready before reading any question on this theme.</p>
+
+  <h3>Recent case law pegs</h3>
+  <details class="collapse-section" open><summary>Compassionate appointment case (married daughters as "family")</summary><div class="collapse-body">
+    Ruling that married daughters cannot be excluded from the definition of "family" when seeking compassionate appointments — the petitioner sought to inherit her mother's Public Distribution System (PDS)/ration shop license after her mother's death but was denied on the ground that a married daughter isn't "family." Court linked this to the constitutional right to equality.
+  </div></details>
+  <details class="collapse-section"><summary>Right to be forgotten (Delhi High Court, referenced as "L Singh Yadav")</summary><div class="collapse-body">
+    2026 Delhi High Court ruling linking the "right to be forgotten" to the fundamental right to privacy (Article 21) — case name transcribed imperfectly; verify exact citation before use.
+  </div></details>
+
+  <h3>Constitutional morality: the core debate</h3>
+  <p><span class="timestamp">33:02</span><strong>Origin of the term:</strong> "constitutional morality" was coined by British historian George Grote in 1846 (transcribed in the lecture as "George B" — verify spelling; see supplementary research below).</p>
+  <p><strong>Recommended answer technique:</strong> define the term first, then put historical/etymological detail (like the Grote origin) inside a separate boxed aside rather than the main flow of the answer — so the answer reads cleanly top to bottom while still showing depth.</p>
+  <p><span class="timestamp">30:15</span><strong>Board contrast — "police constable constitution" vs. "vibrant, equitable constitution":</strong></p>
+  <ul>
+    <li>A <em>police constable constitution</em> is merely a "watchman" — it only restricts what the state cannot do (a negative, restraining document).</li>
+    <li>Constitutional morality is framed as the force transforming this into a <em>vibrant, equitable</em> constitution — one that actively shapes society toward inclusion and empowerment, not merely policing state overreach.</li>
+  </ul>
+  <p><span class="timestamp">34:09</span>Core idea: constitutional morality requires <strong>all actors</strong> — not just government, legislature, and judiciary, but citizens themselves — to operate within the constitutional structure and exercise self-restraint in daily social behavior, not just formal institutional conduct.</p>
+  <div class="quote-card">
+    <div class="q">Democracy in India is only a top-dressing on Indian soil, which is essentially undemocratic.</div>
+    <div class="attrib">— Dr. B.R. Ambedkar, closing speeches to the Constituent Assembly (1948–49) — independently verified; directly links Topic 1 (founding figures) to Topic 2 (constitutional morality)</div>
+  </div>
+  <p>Ambedkar's point: democratic <em>form</em> was adopted before the underlying social culture caught up — so constitutional morality has to be actively cultivated rather than assumed as a natural sentiment.</p>
+  <div class="quote-card">
+    <div class="q">Use of constitutional morality can be very dangerous, and we can't be sure where it will lead us — therefore, I hope constitutional morality will die with its birth.</div>
+    <div class="attrib">— K.K. Venugopal, then Attorney General of India, remarks at the J. Dadachanji Memorial Debate (2018), shortly after the Sabarimala judgment — independently verified</div>
+  </div>
+  <p>The lecture uses this as a counterpoint/critical quote to cite before presenting the doctrine's judicial revival — Venugopal argued the Supreme Court's inconsistent invocation of constitutional morality (in Sabarimala, judges used it on both sides) risked making the Court a "third chamber" of Parliament.</p>
+
+  <h3>Laws vs. conventions of the Constitution ("Professor Dy" framework)</h3>
+  <p><span class="timestamp">39:25</span>Two components proposed by a cited scholar (transcribed as "Professor Dy" — likely a mis-transcription):</p>
+  <ul>
+    <li><strong>Laws of the Constitution</strong> — formally enforceable in a court of law.</li>
+    <li><strong>Conventions of the Constitution</strong> — unenforceable practices/habits (e.g., a Prime Minister customarily appointing ministers of high integrity) which this scholar equates with constitutional morality — i.e., constitutional morality operates more like a convention than an enforceable law. A cabinet or institution "full of politicians" acting purely on political calculation, rather than integrity/merit, would be a violation of this convention.</li>
+  </ul>
+
+  <h3>Key precedents</h3>
+  <details class="collapse-section" open><summary>Named cases (verify exact citations before use)</summary><div class="collapse-body">
+  <table>
+    <tr><th>Case</th><th>What it stands for</th></tr>
+    <tr><td>Manoj Narula case</td><td>Held that the "principle of constitutional morality" means bowing down to constitutional norms and not acting arbitrarily or in a manner that would be reflective/violative of those norms — described in the lecture as a counter-majoritarian check.</td></tr>
+    <tr><td>Government of NCT of Delhi case (2018)</td><td>Referenced alongside Manoj Narula on constitutional morality principles (specific holding cut short in source transcript — verify from original judgment before citing).</td></tr>
+  </table>
+  </div></details>
+
+  <h3>Sabarimala and the "faith vs. constitutional morality" tension</h3>
+  <p><span class="timestamp">41:53</span>In the Sabarimala temple-entry case, a dissenting judge held that constitutional morality should prevail even against majority religious sentiment or minority faith practices restricting women's temple entry.</p>
+  <ul>
+    <li>Critics call this vague, since accepting a restrictive practice as part of "faith" can itself be framed as a form of constitutional morality — exposing the concept's indeterminacy.</li>
+    <li>This same critique was also raised independently by the Solicitor General in later Sabarimala review proceedings (see supplementary research).</li>
+  </ul>
+</section>
+
+<section id="part5">
+  <h2>5. Topic 2: Critiques and debates on constitutional morality</h2>
+  <details class="collapse-section"><summary>Judicial rules vs. formal virtue debate</summary><div class="collapse-body">
+    One critique frames constitutional morality as merely a <em>pretext</em> used to justify a desired outcome ("rules" used instrumentally) rather than a genuine "formal virtue" or value guiding adjudication independently of outcome — i.e., is the doctrine actually serving marginalized groups' interests, or is it a convenient route for courts to reach whatever outcome they prefer?
+  </div></details>
+  <details class="collapse-section"><summary>The "closure term" critique</summary><div class="collapse-body">
+    A critique (attributed to an unnamed English philosopher in the lecture — transcribed as "Jins," identity unverified) that constitutional morality is a "closure term": a word whose entire meaning depends on being defined in opposition to another word, with no independent content of its own. On this view, "constitutional morality" only makes sense as the opposite of "social morality" — it has no free-standing definition of its own, which is itself a form of conceptual vagueness.
+  </div></details>
+  <details class="collapse-section"><summary>Judicial nihilism</summary><div class="collapse-body">
+    Without a grounding value/principle like constitutional morality, judges may appear unconstrained by consistent legal principles, leading to arbitrary judgments — described in the lecture as a slide toward "judicial nihilism."
+  </div></details>
+  <details class="collapse-section"><summary>Institutional atrophy</summary><div class="collapse-body">
+    Weakening of standard democratic institutions and structures over time — the concern that constitutional bodies themselves (not just individual actors) can become victims of this atrophy if they lose the internal discipline that constitutional morality is meant to enforce.
+  </div></details>
+  <details class="collapse-section"><summary>Culture of justification (Etienne Mureinik)</summary><div class="collapse-body">
+    Framework by South African legal scholar Etienne Mureinik (name transcribed imperfectly in the source as "HD Morenic" — independently verified spelling: Etienne Mureinik). Contrasts a <strong>culture of authority</strong> (the state acts simply because it has the power to — as under apartheid) with a <strong>culture of justification</strong> (every exercise of power — by courts, Parliament, or independent institutions — must be backed by a publicly defensible, substantive reason, not just formal authorization). Presented in the lecture as the standard constitutional morality should hold institutions to, rather than raw exercise of power.
+  </div></details>
+  <details class="collapse-section"><summary>Living constitutionalism</summary><div class="collapse-body">
+    The idea that the Constitution is a "living document" that must continuously dismantle existing structures of inequality and discrimination in society, rather than being read as a static, one-time-settled text.
+  </div></details>
+  <details class="collapse-section"><summary>Symbolic constitutionalism</summary><div class="collapse-body">
+    Describes a gap between proclaimed constitutional commitments (e.g., "gender equality") and the absence of actual institutional systems or mechanisms to ensure that equality in practice — the Constitution "preaches" a value without a working delivery mechanism behind it.
+  </div></details>
+  <details class="collapse-section"><summary>"Supreme Court as the third chamber" fear</summary><div class="collapse-body">
+    Raised by K.K. Venugopal (see quote above): if constitutional morality is invoked too expansively and inconsistently, the Supreme Court risks becoming a de facto "third chamber" of Parliament — substituting judicial preference for elected lawmaking. Linked in the lecture to a broader concern about the executive's own growing, largely unchecked power (framed as "no other party is this powerful," raising a similar risk from the opposite direction).
+  </div></details>
+  <div class="quote-card">
+    <div class="q">Constitutional morality refers to the formal virtues of constitutional sensibility, self-restraint, and common respect for plurality, and a commitment to the open culture of criticism that lies at the heart of constitutionalism.</div>
+    <div class="attrib">— Independently verified: this is political theorist Pratap Bhanu Mehta's summary of the elements of constitutional morality in Dr. Ambedkar's thought, from his essay "What is Constitutional Morality?" (India Seminar, 2010) — a strong, real, citable source for a model conclusion</div>
+  </div>
+  <div class="exam-tip">For a constitutional morality answer, structure the debate as a pendulum: (1) skepticism at origin ("die at birth," vagueness, judicial overreach) → (2) revival via transformative constitutionalism (Sabarimala, NALSA-type cases, living constitution) → (3) enduring critique (symbolic constitutionalism, judicial nihilism, institutional atrophy, third-chamber fear) → (4) your own balanced conclusion on why some judicially-guided value — held to a "culture of justification" rather than raw authority — is still necessary despite the risks.</div>
+  <p class="board-caption">The debate as a pendulum (reusable diagram for a constitutional morality answer):</p>
+  <pre class="mermaid">
+flowchart LR
+    A["Origin: skepticism<br/>('die at birth', vague,<br/>fear of judicial overreach)"] --> B["Revival: transformative<br/>constitutionalism<br/>(Sabarimala, living constitution)"]
+    B --> C["Critique: symbolic<br/>constitutionalism, judicial<br/>nihilism, institutional atrophy"]
+    C --> D["Your conclusion: judicially-guided<br/>value, held to a 'culture of<br/>justification' not raw authority"]
+  </pre>
+</section>
+
+<section id="part6">
+  <h2>6. Topic 3: Bail jurisprudence</h2>
+  <p><span class="timestamp">1:01:00</span>Context peg used in the lecture: a recent shooting-related case reignited debate on the bail system.</p>
+  <p>Bail itself is the temporary release of an accused person from legal custody, subject to conditions (sureties, bail bonds, etc.).</p>
+
+  <h3>Model introduction — lead with the data</h3>
+  <div class="data-box">
+    Per 2022 prison statistics cited in the lecture: over 75% of India's prison population is undertrials (i.e., not yet convicted). Global average of undertrial share: ~34%. India's figure is more than double the global average.
+  </div>
+  <div class="exam-tip">The instructor's explicit recommended introduction for a bail question: open with this data point, then pivot — "this prolonged deprivation of liberty highlights the problems related to India's bail jurisprudence." Data-first introductions are rated as stronger than abstract definitional openings.</div>
+
+  <h3>The legal architecture</h3>
+  <ul>
+    <li><strong>Ordinary criminal justice system:</strong> Sections 479, 480, 481 of the Bharatiya Nagarik Suraksha Sanhita (BNSS) deal with bail under general criminal law. Under ordinary law, bail is the rule and presumption of innocence applies — the prosecution must show reason to believe the accused is not guilty and is unlikely to reoffend.</li>
+    <li><strong>Special statutes with stringent bail conditions:</strong> laws like the Prevention of Money Laundering Act (PMLA), Unlawful Activities (Prevention) Act (UAPA), and NDPS impose additional, tougher conditions before bail can be granted — inverting the default so that jail becomes the rule ("statutory inversion").</li>
+    <li><strong>Constitutional anchor:</strong> Article 21 (right to life, read to include personal liberty and speedy trial) and Article 22 (protection against arbitrary arrest and detention).</li>
+  </ul>
+
+  <h3>Core tensions and problems</h3>
+  <details class="collapse-section" open><summary>Key problem areas (6 points)</summary><div class="collapse-body">
+  <table>
+    <tr><th>Problem</th><th>Description</th></tr>
+    <tr><td>Low conviction rate under special statutes</td><td>Example cited: roughly 5,000 cases registered but only ~40 convictions over the last 10 years under a stringent special statute — used to argue that harsh pre-trial bail denial is disproportionate to eventual conviction outcomes.</td></tr>
+    <tr><td>Economic disparity</td><td>Dependence on monetary bail bonds effectively discriminates against poor accused persons who cannot afford them, regardless of case merit.</td></tr>
+    <tr><td>Constitutional liberty vs. statutory restriction</td><td>Article 21 (right to life, read to include the right to a speedy trial) is in tension with special laws (UAPA, PMLA) that prioritize state security or economic integrity over individual liberty.</td></tr>
+    <tr><td>Presumption of guilt from the case diary</td><td>If the police case diary records an accusation against the person, courts may deny bail on this basis alone — making bail "almost impossible" to secure once any adverse material exists in the case diary, regardless of trial outcome.</td></tr>
+    <tr><td>Prison overcrowding</td><td>Per NCRB-type data cited in the lecture, Indian prison occupancy stands at ~131% of capacity — contributing to inhumane conditions, disproportionately affecting undertrials.</td></tr>
+    <tr><td>Proportionate enforcement</td><td>Raised as a further open challenge — ensuring that pre-trial detention is proportionate to the actual offense and risk, not just the statute invoked.</td></tr>
+    <tr><td>Low recidivism among bailed persons</td><td>Cited recidivism (repeat offense) rate among those granted bail: only ~1.9% — used to argue that blanket bail denial is disproportionate, since the overwhelming majority of bailed persons do not reoffend.</td></tr>
+  </table>
+  </div></details>
+
+  <h3>Two further debate frameworks</h3>
+  <ul>
+    <li><strong>Perception vs. presumption of guilt:</strong> under ordinary law, the accused is presumed innocent (perception of innocence guides the process); under special statutes, the burden effectively shifts to the accused to prove they are <em>not</em> guilty in order to secure bail — a presumption of guilt.</li>
+    <li><strong>Judicial mercy vs. statutory right:</strong> bail is meant to function as a right under ordinary law, but in practice Indian courts often treat it as a matter of ad hoc judicial discretion or "mercy" — granted or denied case-by-case, with judges reluctant to take on the perceived risk/responsibility of releasing an accused person, rather than bail being reliably available as a right.</li>
+  </ul>
+
+  <div class="gap-box">
+    <h4>Comparative practice — UK and US</h4>
+    <p>Cited in the lecture as international comparators:</p>
+    <ul>
+      <li><strong>UK:</strong> a bail application must be decided on the same day it is filed — a procedural speed benchmark India's system is compared against.</li>
+      <li><strong>US:</strong> courts commonly use GPS/ankle-monitoring devices as a bail condition for tracking movement, rather than continuous incarceration — offered as a possible model for balancing monitoring needs against liberty.</li>
+      <li><strong>Caveat:</strong> this needs to be weighed against the Frank W. case's finding that continuous GPS tracking as a bail condition was itself struck down in the Indian context (see case table below).</li>
+    </ul>
+  </div>
+
+  <h3>Judicial correctives — three case pegs</h3>
+  <p>Instructor's guidance: for a rights-violation-and-bail question, you don't need deep case facts — just what each judgment stands for and what it supports.</p>
+  <details class="collapse-section" open><summary>Three named precedents (verify exact citations before use)</summary><div class="collapse-body">
+  <table>
+    <tr><th>Case (as transcribed)</th><th>What it stands for</th></tr>
+    <tr><td>"Kumar case" / "Frank W's case" (likely the same case, transcribed two different ways)</td><td>Key recommendation: introduce a separate, standalone Bail Act. Also struck down a bail condition requiring continuous GPS tracking of the accused as excessive/disproportionate.</td></tr>
+    <tr><td>"Java case"</td><td>If the prosecution cannot ensure a speedy trial, it cannot withhold bail merely on the ground that the offense is "serious." Also held that grounds of arrest must be communicated to the accused in writing.</td></tr>
+    <tr><td>"Najib case"</td><td>Prolonged pre-trial incarceration combined with the unlikelihood of a timely trial can override statutory bail restrictions, even under UAPA.</td></tr>
+  </table>
+  </div></details>
+  <ul>
+    <li><strong>Article 21</strong> interpreted to include the right to a speedy trial — used to argue that prolonged pre-trial detention itself violates personal liberty, independent of the case's eventual merits.</li>
+    <li><strong>Support schemes:</strong> a scheme to assist poor undertrials/prisoners in paying bail amounts; and "FASTER" (Fast and Secure Transmission of Electronic Records) — a system for instantly transmitting bail orders and related communications to jail/prison authorities to reduce delays in release after bail is granted, with a directive that bail applications should be decided the same day.</li>
+  </ul>
+
+  <div class="quote-card">
+    <div class="q">Constitutional equilibrium will only be achieved when courts replace mechanical judicial conservatism with a humanistic mandate — that bail is the rule, and the stringent bail conditions under special statutes like PMLA and UAPA have inverted the cardinal principle that bail is the rule, jail is the exception.</div>
+    <div class="attrib">— Instructor's model conclusion, paraphrased from the lecture (verify exact wording/attribution before quoting verbatim in an answer)</div>
+  </div>
+</section>
+
+<section id="part7">
+  <h2>7. Topic 3: Recommended answer structure (as taught)</h2>
+  <div class="quote-card">
+    <div class="q">"Bail is the rule, jail is the exception" — but stringent bail conditions under special statutes have inverted this cardinal principle. Analyze this statement in the context of Supreme Court judgments.</div>
+    <div class="attrib">— Model question used for the live structuring exercise in class</div>
+  </div>
+  <ol class="answers">
+    <li><strong>Introduction:</strong> lead with the data (75% of India's prison population is undertrials, vs. ~34% global average), then state the "bail is the rule, jail is the exception" principle and flag the inversion under special statutes as the tension to be examined.</li>
+    <li><strong>Body — explicit demand:</strong> the special statutes and their challenges directly (BNSS ordinary bail vs. PMLA/UAPA/NDPS stringent conditions — the "statutory inversion").</li>
+    <li><strong>Body — implicit demand:</strong> the broader socio-economic fallout of prolonged pre-trial detention — economic disparity in bail bonds, low conviction-to-detention ratio, overcrowding (131% occupancy), low recidivism (~1.9%) undercutting the case for blanket denial.</li>
+    <li><strong>Body — debate frameworks:</strong> perception vs. presumption of guilt; judicial mercy vs. statutory right; comparative practice (UK same-day bail decisions, US GPS monitoring as an alternative to incarceration).</li>
+    <li><strong>Body — correctives:</strong> Article 21 speedy trial jurisprudence, the Kumar/Frank W., Java, and Najib precedents, and support schemes (poor prisoners' bail assistance, FASTER, same-day bail decisions).</li>
+    <li><strong>Conclusion:</strong> call for courts to replace "mechanical judicial conservatism" with a "humanistic mandate" restoring bail as the rule even under special statutes.</li>
+  </ol>
+  <div class="exam-tip">This is a reusable four-part skeleton for any bail/personal-liberty question: architecture → problems → judicial correctives → conclusion calling for restoring the "bail is the rule" default.</div>
+</section>
+
+<section id="glossary">
+  <h2>Glossary — quick revision (all terms, one screen)</h2>
+  <dl>
+    <div class="glossary-term"><dt>Founding Mothers</dt><dd>The 15 women members of India's Constituent Assembly; term popularized by Achyut Chetan's 2022 book.</dd></div>
+    <div class="glossary-term"><dt>Postcolonial sexual contract</dt><dd>Founding compromise: public-sphere equality granted, private-sphere (personal law) discrimination left unresolved.</dd></div>
+    <div class="glossary-term"><dt>Fraternal acquiescence</dt><dd>Men "consented" to public equality while retaining private-sphere control; women's consent to this was perceived, not blind.</dd></div>
+    <div class="glossary-term"><dt>Double bind (minority women)</dt><dd>Discriminated against outside their community, subjugated within it — inescapable either way.</dd></div>
+    <div class="glossary-term"><dt>Police constable constitution</dt><dd>A constitution as mere "watchman" restraining state overreach, vs. a vibrant one actively shaping society.</dd></div>
+    <div class="glossary-term"><dt>Social patriarchal power</dt><dd>Patriarchy institutionalized via religion, political parties, or caste — not just individual/domestic dominance.</dd></div>
+    <div class="glossary-term"><dt>Soft patriarchy</dt><dd>Less overtly coercive patriarchal control, e.g. undervaluing women's "care economy" labor.</dd></div>
+    <div class="glossary-term"><dt>Digital patriarchy</dt><dd>Gender bias reproduced in "open" digital/gig platforms via pink-collar job sorting.</dd></div>
+    <div class="glossary-term"><dt>Politics of presence</dt><dd>Anne Phillips: fair representation needs marginalized groups' actual presence, not just represented ideas.</dd></div>
+    <div class="glossary-term"><dt>Constitutional morality</dt><dd>Principle that all actors — state and citizens — must act per constitutional values, not just formal law.</dd></div>
+    <div class="glossary-term"><dt>Laws vs. conventions of the Constitution</dt><dd>Laws are court-enforceable; conventions are unenforceable practices equated with constitutional morality.</dd></div>
+    <div class="glossary-term"><dt>Judicial nihilism</dt><dd>Judges appearing unconstrained by consistent principle, absent a grounding value like constitutional morality.</dd></div>
+    <div class="glossary-term"><dt>Institutional atrophy</dt><dd>Weakening of standard democratic institutions/structures when internal constitutional discipline erodes.</dd></div>
+    <div class="glossary-term"><dt>Culture of justification (Mureinik)</dt><dd>Institutions must give publicly defensible reasons for action, not act merely because they hold power.</dd></div>
+    <div class="glossary-term"><dt>Symbolic constitutionalism</dt><dd>Constitution proclaims a value (e.g. equality) without institutional mechanisms to actually deliver it.</dd></div>
+    <div class="glossary-term"><dt>Living constitutionalism</dt><dd>Constitution as an evolving document that must continuously dismantle social inequality/discrimination.</dd></div>
+    <div class="glossary-term"><dt>"Third chamber" fear</dt><dd>Concern that expansive constitutional-morality reasoning turns the Supreme Court into a de facto legislature.</dd></div>
+    <div class="glossary-term"><dt>Bail is the rule, jail is the exception</dt><dd>Cardinal bail principle inverted in practice by stringent special-statute (PMLA/UAPA) conditions.</dd></div>
+    <div class="glossary-term"><dt>Statutory inversion</dt><dd>Special statutes (PMLA/UAPA/NDPS) flip the default so jail, not bail, becomes the practical rule.</dd></div>
+    <div class="glossary-term"><dt>Perception vs. presumption of guilt</dt><dd>Ordinary law presumes innocence; special statutes effectively presume guilt, shifting the burden to the accused.</dd></div>
+    <div class="glossary-term"><dt>Judicial mercy vs. statutory right</dt><dd>Bail should be a right, but is often granted/denied as ad hoc judicial discretion in practice.</dd></div>
+    <div class="glossary-term"><dt>Case-diary presumption of guilt</dt><dd>Adverse material in a police case diary can be used alone to deny bail, regardless of trial outcome.</dd></div>
+    <div class="glossary-term"><dt>FASTER</dt><dd>Fast and Secure Transmission of Electronic Records — system to instantly relay bail orders to prisons.</dd></div>
+    <div class="glossary-term"><dt>Prison occupancy / undertrial share (India)</dt><dd>~131% occupancy; ~75% of prisoners are undertrials vs. ~34% global average.</dd></div>
+    <div class="glossary-term"><dt>Recidivism rate (bailed persons, India)</dt><dd>~1.9% — used to argue blanket bail denial is disproportionate to actual reoffense risk.</dd></div>
+  </dl>
+</section>
+
+<section id="arcs">
+  <h2>Revision kit (ARCS method)</h2>
+  <p style="font-family: Arial, sans-serif; font-size: 0.88em; color: #57606a;">A—Active Recall, R—Repeat with Spacing, C—Contrast &amp; Chunk, S—Stick with Encoding Tricks. Close the notes above and test yourself before checking answers.</p>
+
+  <div class="arcs-box">
+    <h4>A — Active Recall: self-test (no peeking until you answer)</h4>
+    <div class="recall-q">
+      <p class="q-text">1. What is the "postcolonial sexual contract" and what compromise did it involve?</p>
+      <details><summary></summary><div class="ans">The Constituent Assembly's compromise for getting patriarchal society's consent to a modern democracy: public-sphere equality was granted (Articles 14/15/16), but discriminatory personal laws were left untouched in the private sphere — "fraternal acquiescence."</div></details>
+    </div>
+    <div class="recall-q">
+      <p class="q-text">2. What is the "double bind" faced by minority/lower-class women?</p>
+      <details><summary></summary><div class="ans">Discriminated against outside their community (by the majority society) and subjugated inside it (by patriarchal structures within their own community) — inescapable either way.</div></details>
+    </div>
+    <div class="recall-q">
+      <p class="q-text">3. Who coined "constitutional morality," and who revived it in the Indian Constituent Assembly context?</p>
+      <details><summary></summary><div class="ans">George Grote, British classicist, in "History of Greece" (1846–1856). Dr. B.R. Ambedkar quoted Grote at length in his 1948 and 1949 Constituent Assembly speeches.</div></details>
+    </div>
+    <div class="recall-q">
+      <p class="q-text">4. What is the difference between "culture of authority" and "culture of justification" (Mureinik)?</p>
+      <details><summary></summary><div class="ans">Culture of authority: state acts just because it has power (apartheid-era). Culture of justification: every exercise of power must be backed by a publicly defensible, substantive reason.</div></details>
+    </div>
+    <div class="recall-q">
+      <p class="q-text">5. What does "bail is the rule, jail is the exception" mean, and what inverts it?</p>
+      <details><summary></summary><div class="ans">Under ordinary law (BNSS), bail should be the default and presumption of innocence applies. Special statutes (PMLA, UAPA, NDPS) invert this — jail becomes the practical default ("statutory inversion").</div></details>
+    </div>
+  </div>
+
+  <div class="arcs-box spacing-tracker">
+    <h4>R — Repeat with Spacing: review checklist</h4>
+    <p>Lecture date: Aug 11, 2026. Forgetting is exponential — review at these intervals, not all at once.</p>
+    <table>
+      <tr><th>Review</th><th>Target date</th><th>Done</th></tr>
+      <tr><td>Day 1 (same day, quick skim)</td><td>Aug 11</td><td><input type="checkbox"></td></tr>
+      <tr><td>Day 3</td><td>Aug 14</td><td><input type="checkbox"></td></tr>
+      <tr><td>Day 7</td><td>Aug 18</td><td><input type="checkbox"></td></tr>
+      <tr><td>Day 21</td><td>Sep 1</td><td><input type="checkbox"></td></tr>
+    </table>
+    <p style="font-size:0.85em; color:#57606a;">Each review: close this file, answer the 5 recall questions above from memory first, then reopen to check.</p>
+  </div>
+
+  <div class="arcs-box">
+    <h4>C — Contrast &amp; Chunk: easily confused pairs</h4>
+    <table>
+      <tr><th>Term A</th><th>Term B</th><th>The ONE distinguishing point</th></tr>
+      <tr><td>Right to be forgotten</td><td>Right to erasure</td><td>Forgotten = de-indexed/hidden but backend data remains; erasure = complete deletion</td></tr>
+      <tr><td>Perception of guilt</td><td>Presumption of guilt</td><td>Ordinary law presumes innocence; special statutes (PMLA/UAPA) effectively presume guilt</td></tr>
+      <tr><td>Judicial nihilism</td><td>Symbolic constitutionalism</td><td>Nihilism = no consistent principle guiding judges; symbolic = a value is proclaimed but never institutionally delivered</td></tr>
+      <tr><td>Laws of the Constitution</td><td>Conventions of the Constitution</td><td>Laws are court-enforceable; conventions (equated with constitutional morality) are not</td></tr>
+    </table>
+    <p style="font-family: Arial, sans-serif; font-size: 0.88em;"><strong>Chunk:</strong> group the constitutional morality debate into 3 phases instead of one long list — (1) origin/skepticism (Grote, Venugopal), (2) revival (Sabarimala, living constitution, culture of justification), (3) critique (judicial nihilism, symbolic constitutionalism, third-chamber fear).</p>
+  </div>
+
+  <div class="arcs-box mnemonic-box">
+    <h4>S — Stick with Encoding Tricks</h4>
+    <p><strong>Dual coding:</strong> re-look at the two flowcharts (postcolonial sexual contract; constitutional morality pendulum) every time you review, instead of re-reading the paragraph versions.</p>
+    <p><strong>Image for the double bind:</strong> picture a person standing in a doorway between two rooms, being pulled by one arm from outside and pushed back by a hand from inside — neither direction lets them fully escape. That's the double bind.</p>
+  </div>
+</section>
+
+<section id="gaps">
+  <h2>Supplementary research — filling gaps</h2>
+
+  <div class="gap-box">
+    <h4>Founding Mothers of the Indian Republic — verified source</h4>
+    <p>Achyut Chetan's <em>Founding Mothers of the Indian Republic: Gender Politics of the Framing of the Constitution</em> (Cambridge University Press, 2022) is the first substantive academic study focused specifically on the 15 women members of the Constituent Assembly. Based on close archival reading of Constituent Assembly Debates, committee minutes, and personal correspondence, the book argues the Constitution would be a lesser document without their interventions — the women members favored written submissions over plenary interventions and showed strong mutual collaboration, often speaking on each other's behalf. This directly supports the lecture's "will, consent, and dissent" framing.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>Anne Phillips' "Politics of Presence" — precise framework</h4>
+    <p><em>The Politics of Presence</em> (Oxford, 1995) argues that a purely idea-based (rather than presence-based) model of political representation is inadequate for addressing political exclusion of marginalized groups — but Phillips is careful not to ground this in essentialist group identity, and does not treat presence and ideas as a strict either/or choice. In a 2023 retrospective essay, she reaffirms the continued relevance of descriptive representation in light of #MeToo and Black Lives Matter. Useful for both the gender-politics answer and any question on caste/women's reservation.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>Constitutional morality — verified origin and Ambedkar's use</h4>
+    <p>The term was coined by British classicist George Grote in his 12-volume <em>History of Greece</em> (published 1846–1856), describing the Athenian constitution's reforms under Cleisthenes as requiring a "paramount reverence for the forms of the Constitution." Dr. B.R. Ambedkar quoted Grote at length in his 4 November 1948 speech introducing the Draft Constitution, and again in his final Constituent Assembly reply on 25 November 1949 — including the "top dressing on Indian soil" line used in this lecture. Political theorist Pratap Bhanu Mehta's essay "What is Constitutional Morality?" (India Seminar, 2010) is the source of the "formal virtues of constitutional sensibility, self-restraint, and respect for plurality" formulation used as this lecture's model conclusion — a genuinely strong, citable academic source, not just an in-class paraphrase.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>Constitutional morality — Sabarimala and the "vague concept" critique</h4>
+    <p>Independent search confirms the Solicitor General separately argued before the Supreme Court that "constitutional morality" is a "judicially evolved, vague and indeterminate concept" used to override written constitutional text and rewrite religious tradition — this criticism, raised in later Sabarimala review proceedings, closely parallels the lecture's own critique of the doctrine's indeterminacy. The doctrine is more often defended not as a standalone test for statutory validity, but as an interpretive aid guiding how courts read "morality" elsewhere in the constitutional text — a useful nuance for a balanced answer.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>Bail is the rule, jail is the exception — verified 2024–25 developments</h4>
+    <p>Independent search confirms this is a live, actively litigated principle. The Supreme Court has explicitly held that "bail is the rule and jail is an exception" applies even under UAPA — directing lower courts to grant bail where justified despite anti-terror charges, and clarifying that indefinite incarceration is barred merely on the basis of UAPA allegations. A parallel 2024 ruling held that Section 45 PMLA's twin bail conditions do not override the broader principle that liberty is the rule and deprivation the exception. However, independent analysis (Supreme Court Observer) finds a sharp divergence between this stated principle and actual practice: bail is granted liberally in some cases after years of incarceration, while denied in others on near-identical facts — reflecting the judiciary's ongoing tension between individual liberty (Article 21) and state security/economic integrity concerns.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>Culture of justification — verified origin</h4>
+    <p>Etienne Mureinik (1950–1996), South African legal scholar, coined "culture of justification" in his influential 1994 article analyzing South Africa's Interim Constitution and Bill of Rights. His core claim: post-apartheid constitutionalism requires a shift from a "culture of authority" (where unreasoned command by a higher power was sufficient, as under apartheid) to a "culture of justification" (where every exercise of power — by courts, Parliament, and independent institutions alike — must be backed by a substantive, publicly defensible reason). The Constitutional Court of South Africa later adopted the position that all exercise of public power is lawful only if it is rational and capable of being justified. Directly useful for the lecture's constitutional morality argument: it gives a named, citable academic anchor for the claim that institutions (not just courts) must justify their actions rather than merely assert authority.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>What the lecture doesn't cover, but pairs well for GS-2 prep</h4>
+    <ul>
+      <li>NALSA v. Union of India (2014) and Navtej Singh Johar (2018) as parallel constitutional-morality/transformative-constitutionalism precedents beyond Sabarimala.</li>
+      <li>The Women's Reservation Act (Nari Shakti Vandan Adhiniyam, 2023) as a direct current-affairs link to the "politics of presence" debate on descriptive representation.</li>
+      <li>The 180th Law Commission Report and subsequent Supreme Court guidelines on bail reform, for a fuller institutional-response section on the bail jurisprudence answer.</li>
+      <li>Cross-reference NCRB's Prison Statistics India report for the most current official occupancy and undertrial population figures, to cite a dated, sourced statistic instead of the lecture's approximate figure.</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  Notes compiled from an unlisted lecture recording using YouTube's auto-generated transcript. Timestamps are approximate; several proper nouns (scholar names, case citations) were transcribed imperfectly by auto-captions and are flagged inline for verification against the original lecture or handwritten notes before citing in an exam answer. Supplementary research sections are separately verified via web search and marked accordingly. Click Save (first time will ask you to pick this file) to write your edits directly to disk — no chat needed.
+</footer>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11.15.0/dist/mermaid.min.js" integrity="sha384-yQ4mmBBT+vhTAwjFH0toJXNYJ6O4usWnt6EPIdWwrRvx2V/n5lXuDZQwQFeSFydF" crossorigin="anonymous"></script>
+<script>
+(function() {
+  var mode = null;
+  var noteCounter = 0;
+
+  var btnHighlight = document.getElementById('btn-highlight');
+  var btnUnderline = document.getElementById('btn-underline');
+  var btnNote = document.getElementById('btn-note');
+  var btnClear = document.getElementById('btn-clear');
+  var btnSave = document.getElementById('btn-save');
+  var statusText = document.getElementById('status-text');
+  var contentRoot = document.getElementById('content-root');
+  var noteBox = document.getElementById('note-input-box');
+  var noteText = document.getElementById('note-text');
+  var pendingNoteTarget = null;
+
+  function setMode(newMode) {
+    mode = mode === newMode ? null : newMode;
+    btnHighlight.classList.toggle('active', mode === 'highlight');
+    btnUnderline.classList.toggle('active', mode === 'underline');
+    btnNote.classList.toggle('active', mode === 'note');
+  }
+
+  btnHighlight.addEventListener('click', function() { setMode('highlight'); });
+  btnUnderline.addEventListener('click', function() { setMode('underline'); });
+  btnNote.addEventListener('click', function() { setMode('note'); });
+
+  function markDirty() {
+    statusText.textContent = 'Unsaved changes';
+    statusText.style.color = '#993c1d';
+  }
+
+  document.addEventListener('mouseup', function(e) {
+    if (mode !== 'highlight' && mode !== 'underline') return;
+    var sel = window.getSelection();
+    if (!sel || sel.isCollapsed || sel.rangeCount === 0) return;
+    var range = sel.getRangeAt(0);
+    if (!contentRoot.contains(range.commonAncestorContainer)) return;
+
+    var wrapper = document.createElement(mode === 'highlight' ? 'mark' : 'u');
+    wrapper.className = mode === 'highlight' ? 'user-highlight' : 'user-underline';
+    try {
+      range.surroundContents(wrapper);
+    } catch (err) {
+      var frag = range.extractContents();
+      wrapper.appendChild(frag);
+      range.insertNode(wrapper);
+    }
+    sel.removeAllRanges();
+    markDirty();
+  });
+
+  contentRoot.addEventListener('click', function(e) {
+    if (mode !== 'note') return;
+    if (e.target.closest('.user-note')) return;
+    pendingNoteTarget = e.target;
+    noteBox.style.display = 'block';
+    var x = Math.min(e.clientX, window.innerWidth - 280);
+    var y = Math.min(e.clientY, window.innerHeight - 140);
+    noteBox.style.left = x + 'px';
+    noteBox.style.top = y + 'px';
+    noteText.value = '';
+    noteText.focus();
+  });
+
+  document.getElementById('note-cancel').addEventListener('click', function() {
+    noteBox.style.display = 'none';
+    pendingNoteTarget = null;
+  });
+
+  document.getElementById('note-add').addEventListener('click', function() {
+    var text = noteText.value.trim();
+    if (!text || !pendingNoteTarget) { noteBox.style.display = 'none'; return; }
+    noteCounter++;
+    var noteDiv = document.createElement('div');
+    noteDiv.className = 'user-note';
+    noteDiv.setAttribute('data-note-id', noteCounter);
+    noteDiv.innerHTML = '<span class="note-label">Your note</span>' +
+      '<button class="del-note" title="Remove note">&times;</button>' +
+      '<span class="note-body"></span>';
+    noteDiv.querySelector('.note-body').textContent = text;
+    noteDiv.querySelector('.del-note').addEventListener('click', function() {
+      noteDiv.remove();
+      markDirty();
+    });
+
+    var target = pendingNoteTarget.closest('li, p, td, div.quote-card, section') || contentRoot;
+    target.parentNode.insertBefore(noteDiv, target.nextSibling);
+
+    noteBox.style.display = 'none';
+    pendingNoteTarget = null;
+    markDirty();
+    setMode('note');
+  });
+
+  btnClear.addEventListener('click', function() {
+    if (!confirm('Remove all your highlights, underlines, and notes on this page?')) return;
+    contentRoot.querySelectorAll('.user-note').forEach(function(n) { n.remove(); });
+    contentRoot.querySelectorAll('mark.user-highlight').forEach(function(m) {
+      var parent = m.parentNode;
+      while (m.firstChild) parent.insertBefore(m.firstChild, m);
+      parent.removeChild(m);
+    });
+    contentRoot.querySelectorAll('u.user-underline').forEach(function(u) {
+      var parent = u.parentNode;
+      while (u.firstChild) parent.insertBefore(u.firstChild, u);
+      parent.removeChild(u);
+    });
+    markDirty();
+  });
+
+  var fallbackHelp = document.getElementById('fallback-help');
+  document.getElementById('fallback-close').addEventListener('click', function() {
+    fallbackHelp.style.display = 'none';
+  });
+
+  var fileHandle = null;
+  var fsaSupported = 'showSaveFilePicker' in window;
+  var THIS_FILENAME = 'notes.html';
+
+  function buildFullHtml() {
+    var doc = document.documentElement.cloneNode(true);
+    var liveContentRoot = doc.querySelector('#content-root');
+    if (liveContentRoot) liveContentRoot.innerHTML = contentRoot.innerHTML;
+    return '<!DOCTYPE html>\n' + doc.outerHTML;
+  }
+
+  async function writeToFile() {
+    var writable = await fileHandle.createWritable();
+    await writable.write(buildFullHtml());
+    await writable.close();
+  }
+
+  btnSave.addEventListener('click', async function() {
+    statusText.textContent = 'Saving…';
+    statusText.style.color = '#57606a';
+    if (!fsaSupported) {
+      fallbackHelp.style.display = 'block';
+      statusText.textContent = 'Direct save not supported in this browser';
+      statusText.style.color = '#993c1d';
+      return;
+    }
+    try {
+      if (!fileHandle) {
+        fileHandle = await window.showSaveFilePicker({
+          suggestedName: THIS_FILENAME,
+          types: [{ description: 'HTML file', accept: { 'text/html': ['.html'] } }]
+        });
+      }
+      var perm = await fileHandle.queryPermission({ mode: 'readwrite' });
+      if (perm !== 'granted') {
+        perm = await fileHandle.requestPermission({ mode: 'readwrite' });
+      }
+      if (perm !== 'granted') {
+        statusText.textContent = 'File permission denied — click Save to retry';
+        statusText.style.color = '#993c1d';
+        fileHandle = null;
+        return;
+      }
+      await writeToFile();
+      statusText.textContent = 'Saved to file just now';
+      statusText.style.color = '#3b6d11';
+    } catch (err) {
+      console.error('SAVE_ERROR', err.name, err.message, err);
+      if (err.name === 'AbortError') {
+        statusText.textContent = 'Save cancelled';
+        statusText.style.color = '#57606a';
+      } else {
+        statusText.textContent = 'Save failed: ' + err.name + ' — click Save to retry';
+        statusText.style.color = '#993c1d';
+        fileHandle = null;
+      }
+    }
+  });
+
+  contentRoot.querySelectorAll('.user-note .del-note').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      btn.closest('.user-note').remove();
+      markDirty();
+    });
+  });
+
+  contentRoot.querySelectorAll('.spacing-tracker input[type="checkbox"]').forEach(function(cb) {
+    cb.addEventListener('change', function() {
+      if (cb.checked) { cb.setAttribute('checked', 'checked'); }
+      else { cb.removeAttribute('checked'); }
+      markDirty();
+    });
+  });
+
+  if (window.mermaid) {
+    mermaid.initialize({ startOnLoad: true, securityLevel: 'strict' });
+  }
+})();
+</script>
+
+</body>
+</html>

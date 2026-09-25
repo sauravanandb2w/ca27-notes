@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class 7(27): Right to Protest, Section 17A of PCA &amp; Judicial Appointments</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: #faf9f6;
+    color: #1f2328;
+    margin: 0;
+    padding: 0 0 80px;
+    line-height: 1.6;
+  }
+  .toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: #ffffff;
+    border-bottom: 2px solid #1d5b8b;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: Arial, sans-serif;
+    flex-wrap: wrap;
+  }
+  .toolbar button {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    padding: 7px 14px;
+    border-radius: 6px;
+    border: 1px solid #d8d2c6;
+    background: #fff;
+    cursor: pointer;
+    color: #1f2328;
+  }
+  .toolbar button:hover { background: #e6f1fb; border-color: #1d5b8b; }
+  .toolbar button.active { background: #1d5b8b; color: #fff; border-color: #1d5b8b; }
+  .toolbar .save-btn { background: #2f6b4f; color: #fff; border-color: #2f6b4f; margin-left: auto; }
+  .toolbar .save-btn:hover { background: #24543e; }
+  .toolbar .status { font-size: 12px; color: #57606a; margin-left: auto; padding-right: 8px; }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 30px 20px; }
+  header { border-bottom: 3px solid #1d5b8b; padding-bottom: 20px; margin-bottom: 30px; }
+  header h1 { font-size: 1.6em; margin: 0 0 6px; color: #1d5b8b; }
+  header .meta { color: #57606a; font-size: 0.95em; font-family: Arial, sans-serif; }
+  section { margin-bottom: 42px; }
+  h2 { font-size: 1.4em; color: #1d5b8b; border-left: 4px solid #1d5b8b; padding-left: 12px; margin-bottom: 14px; }
+  h3 { font-size: 1.12em; margin: 22px 0 8px; }
+  p { margin: 10px 0; }
+  .summary-box { background: #e6f1fb; border-radius: 8px; padding: 18px 22px; font-size: 0.98em; }
+  ul, ol.answers { padding-left: 24px; }
+  li { margin-bottom: 6px; }
+  .timestamp { font-family: 'Courier New', monospace; font-size: 0.78em; color: #57606a; background: #e2ddd4; border-radius: 4px; padding: 1px 6px; margin-right: 6px; }
+  .quote-card { background: #fff; border: 1px solid #e2ddd4; border-left: 4px solid #1d5b8b; border-radius: 6px; padding: 14px 18px; margin: 14px 0; }
+  .quote-card .q { font-style: italic; font-size: 1.05em; }
+  .quote-card .attrib { font-family: Arial, sans-serif; font-size: 0.85em; color: #57606a; margin-top: 6px; }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.95em; background: #fff; }
+  th, td { border: 1px solid #e2ddd4; padding: 8px 12px; text-align: left; vertical-align: top; }
+  th { background: #e6f1fb; font-family: Arial, sans-serif; font-size: 0.88em; }
+  .gap-box { background: #eef4f0; border: 1px solid #cfe3d6; border-radius: 8px; padding: 16px 20px; margin-top: 16px; font-size: 0.95em; }
+  .gap-box h4 { margin: 0 0 8px; color: #2f6b4f; font-family: Arial, sans-serif; font-size: 0.95em; }
+  .exam-tip { background: #fff7e6; border: 1px solid #f0dba8; border-radius: 8px; padding: 14px 20px; margin: 14px 0; font-size: 0.95em; }
+  .exam-tip::before { content: "Exam strategy: "; font-weight: bold; font-family: Arial, sans-serif; }
+  .term-box { background: #fdf3f3; border: 1px solid #ecd4d4; border-radius: 8px; padding: 12px 16px; margin: 10px 0; }
+  .term-box strong { color: #8b3a3a; }
+  .data-box { background: #f3f0fb; border: 1px solid #ddd6f0; border-radius: 8px; padding: 12px 16px; margin: 10px 0; font-family: 'Courier New', monospace; font-size: 0.9em; }
+  footer { margin-top: 60px; border-top: 1px solid #e2ddd4; padding-top: 16px; color: #57606a; font-size: 0.82em; font-family: Arial, sans-serif; }
+  .toc {
+    background: #fff;
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    padding: 16px 22px;
+    margin-bottom: 36px;
+    font-family: Arial, sans-serif;
+    font-size: 0.9em;
+  }
+  .toc h2 { font-size: 1em; margin: 0 0 10px; border: none; padding: 0; color: #1d5b8b; text-transform: uppercase; letter-spacing: 0.04em; }
+  .toc ol { columns: 2; margin: 0; padding-left: 20px; }
+  .toc a { color: #1f2328; text-decoration: none; }
+  .toc a:hover { color: #1d5b8b; text-decoration: underline; }
+  details.collapse-section {
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    background: #fff;
+    margin: 14px 0;
+    padding: 0;
+  }
+  details.collapse-section summary {
+    cursor: pointer;
+    padding: 12px 16px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 0.92em;
+    color: #1d5b8b;
+    list-style: none;
+  }
+  details.collapse-section summary::-webkit-details-marker { display: none; }
+  details.collapse-section summary::before { content: "▸ "; }
+  details.collapse-section[open] summary::before { content: "▾ "; }
+  details.collapse-section .collapse-body { padding: 4px 16px 16px; }
+  .glossary-term {
+    display: flex;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+  }
+  .glossary-term:last-child { border-bottom: none; }
+  .glossary-term dt { font-weight: bold; color: #8b3a3a; min-width: 220px; flex-shrink: 0; font-family: Arial, sans-serif; font-size: 0.9em; }
+  .glossary-term dd { margin: 0; }
+
+  mark.user-highlight { background: #fff176; padding: 1px 2px; border-radius: 2px; }
+  u.user-underline { text-decoration: underline; text-decoration-color: #1d5b8b; text-decoration-thickness: 2px; }
+  .user-note {
+    background: #e6f1fb;
+    border: 1px solid #85b7eb;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin: 8px 0;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #0c447c;
+    position: relative;
+  }
+  .user-note .note-label { font-weight: bold; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; display: block; }
+  .user-note .del-note { position: absolute; top: 6px; right: 8px; cursor: pointer; border: none; background: none; color: #0c447c; font-size: 14px; font-family: Arial, sans-serif; }
+  #note-input-box {
+    position: fixed;
+    display: none;
+    background: #fff;
+    border: 2px solid #1d5b8b;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    z-index: 100;
+    font-family: Arial, sans-serif;
+  }
+  #note-input-box textarea { width: 240px; height: 60px; font-family: Arial, sans-serif; font-size: 13px; border: 1px solid #d8d2c6; border-radius: 4px; padding: 6px; }
+  #note-input-box .note-actions { margin-top: 6px; display: flex; gap: 6px; justify-content: flex-end; }
+  #note-input-box button { font-size: 12px; padding: 5px 10px; border-radius: 4px; border: 1px solid #d8d2c6; background: #fff; cursor: pointer; }
+  #note-input-box button.primary { background: #1d5b8b; color: #fff; border-color: #1d5b8b; }
+  .content-target::selection { background: #ffe082; }
+  .board-caption { font-family: Arial, sans-serif; font-size: 0.82em; color: #57606a; margin-top: -8px; margin-bottom: 14px; }
+  .arcs-box {
+    background: #fff;
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 14px 0;
+  }
+  .arcs-box h4 { margin: 0 0 10px; color: #1d5b8b; font-family: Arial, sans-serif; font-size: 0.98em; }
+  .recall-q { margin-bottom: 14px; }
+  .recall-q p.q-text { font-weight: bold; margin: 0 0 6px; }
+  .recall-q details { border: none; margin: 0; }
+  .recall-q summary { font-family: Arial, sans-serif; font-size: 0.82em; color: #1d5b8b; cursor: pointer; list-style: none; padding: 2px 0; }
+  .recall-q summary::-webkit-details-marker { display: none; }
+  .recall-q summary::before { content: "Show answer \25B8 "; }
+  .recall-q details[open] summary::before { content: "Hide answer \25BE "; }
+  .recall-q .ans { background: #eef4f0; border-radius: 6px; padding: 8px 12px; margin-top: 6px; font-size: 0.95em; }
+  .spacing-tracker { font-family: Arial, sans-serif; font-size: 0.92em; }
+  .spacing-tracker table { margin: 8px 0; }
+  .spacing-tracker input[type="checkbox"] { width: 16px; height: 16px; cursor: pointer; }
+  .mnemonic-box { background: #fff7e6; border: 1px solid #f0dba8; border-radius: 8px; padding: 14px 18px; margin: 10px 0; }
+  .mnemonic-box h4 { margin: 0 0 6px; color: #8b5a1d; font-family: Arial, sans-serif; font-size: 0.92em; }
+  .applic-table td.gs-tag { font-family: Arial, sans-serif; font-weight: bold; font-size: 0.85em; white-space: nowrap; }
+  .applic-table .prelims-badge, .applic-table .mains-badge {
+    display: inline-block; font-family: Arial, sans-serif; font-size: 0.72em; font-weight: bold;
+    padding: 2px 8px; border-radius: 10px; margin-right: 4px;
+  }
+  .prelims-badge { background: #eaf3de; color: #3b6d11; }
+  .mains-badge { background: #e6f1fb; color: #1d5b8b; }
+  #fallback-help {
+    position: fixed;
+    display: none;
+    top: 60px;
+    right: 20px;
+    max-width: 320px;
+    background: #fff;
+    border: 2px solid #993c1d;
+    border-radius: 8px;
+    padding: 14px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    z-index: 200;
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <button id="btn-highlight" title="Select text, then click to highlight it">Highlight</button>
+  <button id="btn-underline" title="Select text, then click to underline it">Underline</button>
+  <button id="btn-note" title="Click this, then click anywhere in the notes to drop a note">Add note</button>
+  <button id="btn-clear" title="Remove all your highlights, underlines, and notes">Clear my edits</button>
+  <span class="status" id="status-text">Not connected to file — click Save once to connect</span>
+  <button class="save-btn" id="btn-save">Save</button>
+</div>
+
+<div id="fallback-help">
+  <strong>Your browser can't save directly</strong>
+  <p style="margin:6px 0;">File System Access isn't supported here (common on Safari/Firefox). Use Chrome or Edge to enable direct-save, or use your browser's Save Page As (Ctrl/Cmd+S) to overwrite this file manually after editing.</p>
+  <button id="fallback-close" style="font-size: 12px; padding: 6px 12px; border-radius: 4px; border: 1px solid #993c1d; background: #993c1d; color: #fff; cursor: pointer;">Got it</button>
+</div>
+
+<div id="note-input-box">
+  <textarea id="note-text" placeholder="Type your note..."></textarea>
+  <div class="note-actions">
+    <button id="note-cancel">Cancel</button>
+    <button class="primary" id="note-add">Add</button>
+  </div>
+</div>
+
+<div class="wrap content-target" id="content-root">
+
+<header>
+  <h1>Class 7(27) — Right to Protest, Section 17A of the Prevention of Corruption Act &amp; Judicial Appointments (Collegium)</h1>
+  <div class="meta">
+    <span>Source: unlisted YouTube lecture recording ("class 7")</span> &middot;
+    <span>Duration: 0:00 – 2:06:17 (of 2:12:57 total runtime)</span> &middot;
+    <span>Track: UPSC GS-2 (Polity, Governance, Judiciary) — Current Affairs Answer Writing</span>
+  </div>
+</header>
+
+<nav class="toc">
+  <h2>Contents</h2>
+  <ol>
+    <li><a href="#applicability">Applicability — GS papers, Prelims &amp; Mains</a></li>
+    <li><a href="#part1">Topic 1: Right to protest — constitutional basis &amp; core debates</a></li>
+    <li><a href="#part2">Topic 1: Significance, case law, reforms &amp; live answer-writing</a></li>
+    <li><a href="#part3">Topic 2: Section 17A of the Prevention of Corruption Act</a></li>
+    <li><a href="#part4">Topic 2: CPIL verdict, data &amp; live answer-writing exercise</a></li>
+    <li><a href="#part5">Topic 3: Judicial appointments — the collegium system</a></li>
+    <li><a href="#glossary">Glossary — quick revision</a></li>
+    <li><a href="#arcs">Revision kit (ARCS)</a></li>
+    <li><a href="#gaps">Supplementary research</a></li>
+  </ol>
+</nav>
+
+<section id="summary">
+  <h2>Executive summary</h2>
+  <div class="summary-box">
+  <p>Seventh class of the CA Mains 2027 series.</p>
+  <p>Covers three GS-2 polity/governance topics, with two full live timed answer-writing exercises.</p>
+  <p><strong>Topic 1 — Right to protest (0:00 – 1:11:46, with live answer writing):</strong></p>
+  <ul>
+    <li>Constitutional basis: Article 19(1)(a)/(b)/(c) as a derived composite right, tension with Article 19(1)(d) freedom of movement and Article 21</li>
+    <li>Core debates: spatial limitation vs. visibility of dissent, state deterrence vs. proportionate response, public order vs. public convenience, democracy vs. mobocracy</li>
+    <li>Key cases: Himat Lal K. Shah (1972), Ram Manohar Lohia (1966, concentric circles), Anita Thakur (2016), Amit Sahni/Shaheen Bagh (2020), Ramlila Maidan (2012)</li>
+    <li>Scholars cited: Ambedkar's "grammar of anarchy" (1949), Charles Tilly, Dipesh Chakrabarty (on "multitude"), Patrick Heller</li>
+    <li>Delhi Police Standing Order 10 (graded crowd-control response) as a case study, plus a suite of reform suggestions</li>
+    <li>Full live 15-mark timed answer-writing exercise on the constitutional/democratic significance of the right to protest and crowd-control reform</li>
+  </ul>
+  <p><strong>Topic 2 — Section 17A, Prevention of Corruption Act, 1988 (1:11:46 – 1:47:10, with live answer writing):</strong></p>
+  <ul>
+    <li>PCA's three foundational pillars: undue advantage, public duty, public servant</li>
+    <li>Section 17A (2018 amendment): prior sanction needed before investigation; Section 19: prior sanction needed before prosecution</li>
+    <li>Evolution of the "prior sanction" debate: Single Directive struck down in Vineet Narain (1997) &rarr; Section 6A DSPE Act struck down in Subramanian Swamy (2014) &rarr; Section 17A PCA (2018) &rarr; split verdict in Centre for Public Interest Litigation (CPIL) v. Union of India (2026)</li>
+    <li>Corruption Perceptions Index 2025: India ranked 91st of 182 countries</li>
+    <li>Live timed answer-writing exercise on anti-corruption measures vs. policy paralysis</li>
+  </ul>
+  <p><strong>Topic 3 — Judicial appointments / collegium system (1:47:10 – 2:06:17, introductory portion; continues next class):</strong></p>
+  <ul>
+    <li>Article 124 framework, three appointment routes (bench, bar, jurist)</li>
+    <li>Recent context: Supreme Court (Number of Judges) Amendment Act 2026 (strength raised to 38), Rajasthan High Court roster controversy, Justice Yashwant Varma impeachment matter</li>
+    <li>Full evolution: First Judges Case (1981/S.P. Gupta) &rarr; Second Judges Case (1993, birth of collegium) &rarr; Third Judges Case (1998 presidential reference, institutionalization) &rarr; NJAC/Fourth Judges Case (2015, struck down)</li>
+    <li>Two live debates introduced: transparency vs. confidentiality, judicial independence vs. accountability — instructor noted the rest continues in the next class</li>
+  </ul>
+  <p style="font-family: Arial, sans-serif; font-size: 0.88em; color: #57606a;">Instructor's repeated advice: use diagrams for balancing/flow-type answers over dense prose. For split-weightage questions (e.g. 7+8 marks), give proportional depth to each part. Pair every listed reform with its expected impact, not just the issue it addresses.</p>
+  </div>
+</section>
+
+<section id="applicability">
+  <h2>Applicability — GS papers, Prelims &amp; Mains</h2>
+  <table class="applic-table">
+    <tr><th>Sub-topic</th><th>GS Paper</th><th>Prelims</th><th>Mains</th></tr>
+    <tr>
+      <td class="gs-tag">Right to protest — constitutional basis &amp; case law</td>
+      <td>GS-2 (Polity)</td>
+      <td><span class="prelims-badge">High</span>Article numbers, named cases (Himat Lal Shah, Amit Sahni, Ramlila Maidan) are standard factual MCQ material.</td>
+      <td><span class="mains-badge">High</span>Recurring theme given continuous protest-related news cycles; the "mighty state" framing is a strong differentiator.</td>
+    </tr>
+    <tr>
+      <td class="gs-tag">Crowd-control reforms (Delhi Police SO-10, mediation cells, civic assembly parks)</td>
+      <td>GS-2 (Governance)</td>
+      <td><span class="prelims-badge">Medium</span>Standing Order 10 specifics are current-affairs MCQ fodder.</td>
+      <td><span class="mains-badge">High</span>Concrete reform suggestions elevate an answer beyond generic points.</td>
+    </tr>
+    <tr>
+      <td class="gs-tag">Section 17A PCA &amp; prior sanction evolution</td>
+      <td>GS-2 (Governance) / GS-4 (Ethics, integrity in public life)</td>
+      <td><span class="prelims-badge">High</span>Section numbers, case names, and the CPI rank are direct MCQ material.</td>
+      <td><span class="mains-badge">High</span>The 2026 split verdict is a fresh, high-probability current-affairs question.</td>
+    </tr>
+    <tr>
+      <td class="gs-tag">Judicial appointments / collegium system</td>
+      <td>GS-2 (Polity, Judiciary)</td>
+      <td><span class="prelims-badge">High</span>Article 124, the four Judges Cases, and appointment routes are classic static+current MCQ territory.</td>
+      <td><span class="mains-badge">High</span>Perennial GS-2 favorite, freshly topical due to the 2026 strength expansion and Varma controversy.</td>
+    </tr>
+  </table>
+  <p style="font-family: Arial, sans-serif; font-size: 0.85em; color: #57606a;">Rule of thumb applied across this series: any named Act/case/institution/formula with a specific year or figure is Prelims-relevant; any debate, theoretical framework, or comparative-model discussion is Mains-relevant.</p>
+</section>
+
+<section id="part1">
+  <h2>1. Topic 1: Right to protest — constitutional basis &amp; core debates</h2>
+  <p><span class="timestamp">0:00</span>Opening context cited in class:</p>
+  <ul>
+    <li>Recent student protests</li>
+    <li>Farmer protests</li>
+    <li>Ethnic-group blockades</li>
+    <li>A plea for a comprehensive national policy/guidelines on crowd control and public assembly</li>
+  </ul>
+
+  <h3>Constitutional basis</h3>
+  <ul>
+    <li>Right to peaceful protest is <strong>not an explicit fundamental right</strong>.
+      <ul>
+        <li>It is a <strong>derived, composite right</strong></li>
+        <li>Built from Article 19(1)(a): freedom of speech and expression</li>
+        <li>Built from Article 19(1)(b): right to assemble peaceably without arms</li>
+        <li>Built from Article 19(1)(c): right to form associations, unions, cooperatives</li>
+      </ul>
+    </li>
+    <li>Freedom of speech has both instrumental value and intrinsic value.
+      <ul>
+        <li>Instrumental value: a means to hold government accountable, to inform public debate</li>
+        <li>Intrinsic value: self-expression is valuable in itself, independent of its effects</li>
+      </ul>
+    </li>
+    <li>The "golden triangle" of the Constitution: Articles 14, 19, and 21 read together.</li>
+    <li>Article 19(1)(d) — freedom of movement — creates direct tension with the right to protest.
+      <ul>
+        <li>Protesters' assembly rights can obstruct other citizens' movement</li>
+        <li>This tension recurs across nearly every debate in this topic</li>
+      </ul>
+    </li>
+    <li>Restrictions permitted under Article 19(2) and 19(3): sovereignty and integrity of India, security of the state, public order, decency, morality.
+      <ul>
+        <li>Restrictions must be minimum</li>
+        <li>Restrictions must be proportional</li>
+      </ul>
+    </li>
+  </ul>
+  <div class="mnemonic-box">
+    <h4>Formula to remember</h4>
+    <p><strong>Maximum rights plus minimum restrictions.</strong> State action/police action must be minimum and must pass the test of proportionality.</p>
+  </div>
+
+  <h3>Test of proportionality — three prongs</h3>
+  <ul>
+    <li><strong>Legitimate state interest:</strong> e.g. public order, security of the state.</li>
+    <li><strong>Rational nexus:</strong> a real link must exist between the measure adopted (e.g. internet shutdown, pellet guns) and the objective to be achieved (e.g. tranquility, public order).
+      <ul>
+        <li>A complete nationwide internet shutdown to manage a local protest would be disproportionate</li>
+      </ul>
+    </li>
+    <li><strong>Balancing:</strong> the rights of protesters must be balanced against the rights of commuters/other citizens — the "harmonious balancing of constitutional rights."</li>
+  </ul>
+
+  <h3>Core debate 1: spatial limitation vs. visibility of dissent</h3>
+  <ul>
+    <li>Government proposals sometimes suggest relocating protest sites (e.g. away from Jantar Mantar to outskirts).
+      <ul>
+        <li>Advantage claimed: prevents public-order issues and public inconvenience</li>
+      </ul>
+    </li>
+    <li><strong>Protesters' view:</strong> dissent needs visibility.
+      <ul>
+        <li>A protest far from the seat of power may fail to achieve its objective</li>
+        <li>Example cited: the farmers' protest at border areas had lower visibility than the recent, highly visible student protests near the seat of power</li>
+        <li>The three farm laws were eventually withdrawn, but the lecturer notes this was not solely due to the protest's visibility/pressure</li>
+      </ul>
+    </li>
+    <li><strong>Commuters' view:</strong> a centrally located protest site (e.g. Jantar Mantar) penalizes innocent citizens and creates public inconvenience.</li>
+    <li>Tension: proximity to the seat of power is important for democratic effectiveness, but it also maximizes disruption to daily life.</li>
+  </ul>
+
+  <h3>Core debate 2: state deterrence vs. proportionate response</h3>
+  <ul>
+    <li>State's justification for strict measures: preventing public disorder, preventing infiltration by criminal elements into demonstrations.</li>
+    <li>This can lead to aggressive executive crackdowns, considered disproportionate.
+      <ul>
+        <li>Example cited: use of pellet guns</li>
+      </ul>
+    </li>
+    <li>Aggressive surveillance technologies used by police:
+      <ul>
+        <li>Facial Recognition Technology (FRT)</li>
+        <li>Drone camera filming</li>
+      </ul>
+    </li>
+    <li>Consequence: a <strong>chilling effect</strong>.
+      <ul>
+        <li>People become hesitant to join demonstrations</li>
+        <li>This defeats the very purpose of the right to protest</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>Core debate 3: public order vs. public convenience</h3>
+  <ul>
+    <li>Article 19(2) permits restrictions for <strong>public order</strong> — this is constitutional.</li>
+    <li>Restricting protest merely for <strong>public inconvenience</strong> (e.g. a traffic jam) is <strong>extra-constitutional</strong> — not sanctioned by the Constitution.</li>
+    <li>Public order = affects the community/society at large (e.g. a protest turning violent, leading to rioting).</li>
+    <li>Public inconvenience = a lesser, localized effect (e.g. a traffic diversion) — this should not by itself justify aggressive state action.</li>
+  </ul>
+  <div class="term-box">
+    <strong>Ram Manohar Lohia v. State of Bihar (1965/66 AIR 740):</strong> Supreme Court articulated a "concentric circles" model of state interest.
+    <ul>
+      <li>Innermost circle: security of the state</li>
+      <li>Next circle: public order (affects peace/tranquility of the community at large)</li>
+      <li>Next circle: law and order (a narrower, more local problem — not a valid basis for invoking Section 163 BNSS/old Section 144 CrPC)</li>
+      <li>Outermost circle: public inconvenience (the lowest-level concern — action based purely on this is disproportionate)</li>
+    </ul>
+  </div>
+  <div class="exam-tip">Cite the Lohia case's concentric-circles framework whenever a question asks about the distinction between public order, law and order, and public inconvenience — it directly substantiates why state action must be graded to the actual level of threat.</div>
+
+  <h3>Core debate 4: democracy vs. mobocracy</h3>
+  <ul>
+    <li>Ideal democratic model: grievances are addressed through institutional/constitutional routes.
+      <ul>
+        <li>Peaceful protest is itself one such constitutional mechanism</li>
+        <li>Courts and elections are other such routes</li>
+      </ul>
+    </li>
+    <li>Risk: protest can turn into "mobocracy" through sheer number of people.
+      <ul>
+        <li>Crowds may attempt to negotiate/bargain through intimidation rather than democratic process</li>
+        <li>Can escalate into mob lynching — citizens taking law into their own hands</li>
+      </ul>
+    </li>
+    <li>Ambedkar's view (cited in this context): before independence, no institutional avenues existed, so civil disobedience was necessary.
+      <ul>
+        <li>After independence, constitutional methods are available and should be preferred</li>
+      </ul>
+    </li>
+    <li><strong>Rule of law vs. rule by law:</strong>
+      <ul>
+        <li>The British used law as a tool to enforce colonial control — that is rule <em>by</em> law</li>
+        <li>Democracy requires rule <em>of</em> law — no one, including government, is above the law</li>
+        <li>State risk: using laws like the Unlawful Activities (Prevention) Act to treat protest actions (e.g. a road/economic blockade) as terrorist activity — this itself becomes "rule by law"</li>
+      </ul>
+    </li>
+    <li>Popular sovereignty (people's collective will expressed democratically) is distinct from mere crowd sentiment (which can lead to violence/anarchy without following democratic routes).</li>
+  </ul>
+
+  <h3>Legal framework — laws that can restrict protest</h3>
+  <ul>
+    <li><strong>Section 163, Bharatiya Nagarik Suraksha Sanhita (BNSS)</strong> — replaces the old Section 144 CrPC.
+      <ul>
+        <li>Executive magistrate may impose prohibitory orders</li>
+        <li>Can prevent assembly of five or more persons</li>
+      </ul>
+    </li>
+    <li><strong>Prevention of Damage to Public Property Act</strong> — can be invoked against protesters who destroy public/state assets.</li>
+  </ul>
+</section>
+
+<section id="part2">
+  <h2>2. Topic 1: Significance, case law, reforms &amp; live answer-writing</h2>
+  <h3>Significance of the right to protest</h3>
+  <ul>
+    <li><strong>Upholds popular sovereignty:</strong> people are the source of power; citizens do not surrender their voice after elections.</li>
+    <li><strong>Continuous citizen oversight:</strong> elections offer feedback only once every five years; protest is a continuous, active feedback mechanism.</li>
+    <li><strong>Democratic accountability:</strong> keeps the executive/government responsive between elections.</li>
+    <li><strong>Historical continuity in India:</strong> independence itself was won through civil disobedience and mass demonstrations, not a post-independence invention.</li>
+    <li><strong>Drives legislative reform:</strong> examples cited — the Right to Information Act (RTI), and amendments to the Public Examinations (Prevention of Unfair Means) Act following student protests over exam-paper leaks.</li>
+    <li><strong>Protects marginalized-section interests:</strong> majoritarian democracy can otherwise neglect minority/marginalized concerns.
+      <ul>
+        <li>Example cited: Dr. Ambedkar's Mahad Satyagraha</li>
+        <li>Other examples: Forest Rights Act-related tribal-rights protests</li>
+      </ul>
+    </li>
+    <li><strong>Fosters social fraternity:</strong> gives voice to dissenters, prevents alienation from the state, builds constitutional faith.</li>
+  </ul>
+
+  <h3>Arguments against / concerns</h3>
+  <ul>
+    <li>Infringes on other citizens' right to life/movement (mobility), causes disturbance to nearby residential communities.</li>
+    <li>Disrupts essential/public utility services, including medical services and sanitation — a compromise on public health.</li>
+    <li>Economic and industrial dislocation from disrupted transport/logistics — affects movement of people and goods.</li>
+    <li>Overall threats to public security: large demonstrations can turn violent, risk of infiltration by criminal elements or communal polarization.</li>
+  </ul>
+
+  <h3>Constraints and challenges</h3>
+  <ul>
+    <li><strong>Absence of a comprehensive national crowd-control policy:</strong> no graded-response guidelines exist.
+      <ul>
+        <li>Leads to arbitrary executive action</li>
+      </ul>
+    </li>
+    <li><strong>The "mighty state" problem</strong> (a concern the Supreme Court itself has flagged): an overwhelmingly powerful state risks becoming "rule by law."
+      <ul>
+        <li>Linked to misuse of laws like preventive detention</li>
+      </ul>
+    </li>
+    <li><strong>Mass surveillance and profiling</strong> via technologies like FRT.
+      <ul>
+        <li>Violates right to privacy</li>
+        <li>Disproportionate, produces a chilling effect</li>
+      </ul>
+    </li>
+    <li><strong>Digital censorship:</strong> internet shutdown orders, site blocking.</li>
+    <li><strong>Disinformation and fake news</strong> during protests.
+      <ul>
+        <li>Misinformation: not intentional (e.g. forwarding an unverified WhatsApp message)</li>
+        <li>Disinformation: a deliberate act, sometimes intended to create internal security challenges</li>
+      </ul>
+    </li>
+    <li><strong>Rise of digital vigilantism / "cancel culture":</strong> online mob action (hate speech, doxxing) replacing the democratic route with a digital one.</li>
+    <li>Destruction of public property during protests.</li>
+  </ul>
+
+  <h3>Key Supreme Court judgments</h3>
+  <div class="term-box">
+    <strong>Himat Lal K. Shah v. Commissioner of Police, Ahmedabad (1972 INSC 220 / AIR 1973 SC 87):</strong>
+    <ul>
+      <li>Held: freedom of assembly is an essential element of a democratic system</li>
+      <li>Held: public streets are natural places for expression of opinion</li>
+      <li>Government cannot abridge the right of assembly by prohibiting it on every public street, but a citizen cannot protest "wherever they please" either — reasonable regulation (e.g. traffic management) is permitted</li>
+    </ul>
+  </div>
+  <div class="term-box">
+    <strong>Anita Thakur &amp; Ors. v. State of Jammu &amp; Kashmir (2016):</strong>
+    <ul>
+      <li>Held: police use of force must be the minimum necessary</li>
+      <li>Held: force must satisfy the principles of reasonableness and proportionality</li>
+      <li>Where an assembly is peaceful, use of police force is not warranted at all</li>
+    </ul>
+  </div>
+  <div class="term-box">
+    <strong>Amit Sahni v. Commissioner of Police (2020) 10 SCC 573 — the Shaheen Bagh case:</strong>
+    <ul>
+      <li>Arose from over 100 days of anti-CAA protest blocking the Okhla underpass (Dec 2019 – Mar 2020)</li>
+      <li>Held: protesters cannot occupy public spaces indefinitely</li>
+      <li>Criticism noted in class: this arguably creates an extra-constitutional restriction not directly grounded in Article 19(2)/(3)</li>
+    </ul>
+  </div>
+  <div class="term-box">
+    <strong>In Re: Ramlila Maidan Incident (2012) 5 SCC 1:</strong>
+    <ul>
+      <li>Arose from a 2011 midnight crackdown on a Baba Ramdev-led anti-corruption gathering</li>
+      <li>Held: Section 144 CrPC (now Section 163 BNSS) orders can be justified only when the threat to peace is real and imminent, not a mere likely possibility</li>
+      <li>Court apportioned negligence 3:1 between the state and the organizing foundation for compensation purposes</li>
+    </ul>
+  </div>
+  <div class="term-box">
+    <strong>Maniyar Iliyaz v. P. Ayyappan (2026):</strong>
+    <ul>
+      <li>Supreme Court held the right to walk on safe, demarcated footpaths is a fundamental right</li>
+      <li>Grounded in Article 19(1)(d) (movement), read with 19(1)(a)/(b)/(c) and Article 21</li>
+      <li>Arose from a road-accident compensation case, not directly a protest case, but cited in class as a fresh 2026 illustration of Article 21's expanding scope</li>
+    </ul>
+  </div>
+
+  <h3>Quotes to cite</h3>
+  <div class="quote-card">
+    <div class="q">Dissent is the safety valve of democracy — if dissent is not allowed, the pressure cooker may burst. A free society must make space for it.</div>
+    <div class="attrib">— Justice D.Y. Chandrachud, then a sitting Supreme Court judge (later CJI, 2022–2024); first made this remark in February 2020 amid the anti-CAA protests (see Supplementary research)</div>
+  </div>
+  <div class="quote-card">
+    <div class="q">There may be times when we are powerless to prevent injustice, but there must never be a time when we fail to protest.</div>
+    <div class="attrib">— Elie Wiesel, Holocaust survivor and 1986 Nobel Peace Prize laureate</div>
+  </div>
+
+  <h3>Scholarly perspectives on protest and democracy</h3>
+  <ul>
+    <li><strong>Ambedkar's "Grammar of Anarchy" — three warnings</strong> (speech to the Constituent Assembly, 25 November 1949):
+      <ul>
+        <li><strong>First warning:</strong> hold fast to constitutional methods; abandon "grammar of anarchy" methods like civil disobedience and non-cooperation, since constitutional avenues now exist</li>
+        <li><strong>Second warning:</strong> do not lay liberties at the feet of a great man, or trust him with power that could subvert institutions — a caution against hero-worship (bhakti in politics is "a sure road to degradation")</li>
+        <li><strong>Third warning:</strong> political democracy cannot survive without social democracy — formal one-person-one-vote equality is not enough while the underlying society remains unequal</li>
+      </ul>
+    </li>
+    <li><strong>Charles Tilly</strong> (sociologist): popular movements are not symptoms of democratic failure, but products of democracy's evolution — they drive institutional opening-up, which in turn mobilizes further reform.</li>
+    <li><strong>Dipesh Chakrabarty</strong> (the auto-caption's garbled "deep chakraati" — resolved via Supplementary research; not Partha Chatterjee).
+      <ul>
+        <li>Argues in "In the Name of Politics: Sovereignty, Democracy, and the Multitude in India" (EPW 2005; Public Culture 2007) that large gatherings of ordinary people are not an emergency response to institutional failure</li>
+        <li>They are integral to the logic of Indian democracy</li>
+        <li>They are the principal avenue for subaltern sections to make claims on the state</li>
+      </ul>
+    </li>
+    <li><strong>Patrick Heller</strong> (sociologist, comparative work on India/Brazil/South Africa): crowds and mass mobilization are not pathologies of democracy, but one of its principal mechanisms in unequal societies, where weak bargaining power leaves subaltern groups no option but collective mobilization.</li>
+  </ul>
+
+  <h3>Case study: Delhi Police Standing Order 10</h3>
+  <ul>
+    <li>A graded-response system for crowd control.</li>
+    <li>Introduced to replace arbitrary/discretionary permit decisions.</li>
+    <li>Follows a tiered demarcation of venue.
+      <ul>
+        <li>Example cited: below ~1,000 participants may be allocated Jantar Mantar; above that, protesters may be directed to Ramlila Maidan</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>Suggested reforms</h3>
+  <ul>
+    <li><strong>Institutionalized preemptive mediation/grievance-redressal cells</strong> at the lowest/local level, to engage early and let people vent grievances.</li>
+    <li><strong>Designated civic assembly parks</strong> at the state level, equipped with basic civic amenities (e.g. toilets) — reduces public disorder from ad hoc protest sites.</li>
+    <li><strong>Strict SOPs for biometric/digital surveillance technology:</strong> mandatory data purging after the event/investigation concludes.</li>
+    <li><strong>Uniform and visible policing:</strong> officers should not operate in plain clothes; body-worn cameras recommended — ensures executive accountability.</li>
+    <li><strong>Safeguards on internet shutdowns/digital blocking:</strong> to prevent disproportionate action while still curbing disinformation risk.</li>
+    <li><strong>Independent assembly monitors:</strong> neutral observers such as human-rights or legal-aid groups to document police-protester interactions.</li>
+    <li>Above all: sustained institutional dialogue between state and protesters.</li>
+  </ul>
+
+  <h3>Live answer-writing exercise (timed, in-class — 15 marks, split 7+8)</h3>
+  <div class="quote-card">
+    <div class="q">In a democracy, dissent expressed through peaceful protest is a "sine qua non" for ensuring governmental accountability. Examine the constitutional and democratic significance of the right to protest in India. In light of the Supreme Court's concerns regarding the "mighty state," suggest reforms for establishing a proportionate and rights-sensitive crowd-control framework in India.</div>
+    <div class="attrib">— Practice question set for a timed writing exercise (~56:55 to 1:03:18 in the recording; part 1 worth 7 marks, part 2 worth 8 marks)</div>
+  </div>
+  <p><span class="timestamp">1:03:35</span>Suggested structure discussed in class:</p>
+  <ul>
+    <li><strong>Introduction:</strong> combine a historical point (India's independence movement itself built through anti-colonial protest/demonstration) with a contemporary point (protest as a constitutional value in today's India).
+      <ul>
+        <li>Can open with the "dissent is a safety valve" quote</li>
+      </ul>
+    </li>
+    <li><strong>Part 1 (7 marks) — constitutional and democratic significance:</strong>
+      <ul>
+        <li>Article 19(1)(c): the right is a derived/composite right</li>
+        <li>Substantiate with Himat Lal Shah: freedom of peaceful assembly is a fundamental right</li>
+        <li>Popular sovereignty / safety-valve framing, with a supporting quote</li>
+        <li>Democratic accountability (example: recent student protest against public-examination unfair means)</li>
+        <li>Drives legislative reform (RTI or the recent examination-law case)</li>
+        <li>Social-economic catalyst for marginalized groups (Mahad Satyagraha)</li>
+        <li>Democratic-evolution framing (Tilly) and subaltern-claims framing (Chatterjee)</li>
+        <li>Briefly note one or two concerns/limits, for balance</li>
+      </ul>
+    </li>
+    <li><strong>Part 2 (8 marks) — reforms for a proportionate crowd-control framework:</strong>
+      <ul>
+        <li>Open with the "mighty state" concern and the resulting risk of executive arbitrariness/rule by law</li>
+        <li>A diagram is recommended here: one side shows protesters' rights (19(1)(a)/(b)/(c)), the other shows citizens'/commuters' concerns (19(1)(d), public order) — resolved through judicial balancing via the proportionality test ("maximum rights plus minimum restriction")</li>
+        <li>List each reform paired with its expected impact (not just the issue it solves), since this is worth nearly a 10-mark weightage:
+          <ul>
+            <li>Mediation cells &rarr; lowest-level grievance redressal</li>
+            <li>Civic assembly parks &rarr; prevents public disorder, provides amenities</li>
+            <li>Surveillance data-purging SOPs &rarr; prevents mighty-state/executive arbitrariness</li>
+            <li>Uniform policing/body cameras &rarr; greater proportionality and police accountability</li>
+            <li>Internet-shutdown safeguards &rarr; limits disproportionate action, still addresses disinformation risk</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><strong>Conclusion:</strong> tie back to harmonious balancing, and/or the proposed national public assembly policy; close with a quote (e.g. the Wiesel quote, if not already used).</li>
+  </ul>
+</section>
+
+<section id="part3">
+  <h2>3. Topic 2: Section 17A of the Prevention of Corruption Act</h2>
+  <p><span class="timestamp">1:11:48</span>Suggested introduction framing: "The Prevention of Corruption Act, 1988 serves as the primary statutory shield safeguarding India's democratic and administrative framework from the corrosive effects of corruption."</p>
+  <p><span class="timestamp">1:13:08</span>Context: a split verdict by the Supreme Court in <em>Centre for Public Interest Litigation v. Union of India</em> (2026), on the constitutional validity of Section 17A of the PCA, revived a long-running debate on balancing administrative protection with accountability.</p>
+
+  <h3>PCA 1988 — objective and three foundational pillars</h3>
+  <ul>
+    <li>Objective: ensure probity in public life.</li>
+    <li>Enacted to consolidate the law relating to prevention of corruption and to provide punishment for offences committed by public servants while performing public duties.</li>
+    <li>Three pillars define a corrupt transaction:
+      <ul>
+        <li><strong>Undue advantage:</strong> any gratification other than legal remuneration — covers non-monetary satisfaction/favor, not just money.</li>
+        <li><strong>Public duty:</strong> a duty in the discharge of which the state, the public, or the community at large has an interest — not limited narrowly to one's job description.</li>
+        <li><strong>Public servant:</strong> includes any government or local-authority official, a judge, or any person holding public office who is required to perform a public duty — can include a vice-chancellor or other office-bearers, not only classic government employees.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>Section 17A and Section 19 — what they require</h3>
+  <div class="term-box">
+    <strong>Section 17A</strong> (introduced by a 2018 amendment): investigating officers/agencies must seek prior approval from the appropriate government before conducting any inquiry or investigation into a public servant — this is "permission to investigate."
+  </div>
+  <div class="term-box">
+    <strong>Section 19:</strong> investigative agencies require prior permission from the appropriate government before formally prosecuting a public servant in a court of law — this is "permission to prosecute."
+  </div>
+
+  <h3>Evolution of the "prior sanction" debate</h3>
+  <ul>
+    <li><strong>Till 1997:</strong> a single consolidated executive "Single Directive" required agencies like the CBI to get government approval before investigating senior officers.</li>
+    <li><strong>Vineet Narain v. Union of India (1997)</strong> — the Jain Hawala case:
+      <ul>
+        <li>Supreme Court struck down the Single Directive</li>
+        <li>Held: no such executive directive can negate the rule of law</li>
+        <li>Associated with the principle that no one stands above the law, however high their office</li>
+      </ul>
+    </li>
+    <li><strong>Parliament's response:</strong> enacted Section 6A of the Delhi Special Police Establishment Act, requiring CBI to get prior sanction before investigating officers of the rank of Joint Secretary or above.</li>
+    <li><strong>Dr. Subramanian Swamy v. Director, CBI (2014):</strong>
+      <ul>
+        <li>Supreme Court struck down Section 6A</li>
+        <li>Held it discriminatory and violative of Article 14 — it treated senior officers differently from junior ones</li>
+        <li>A later 2023 Constitution Bench held this invalidity applied retrospectively, from the date Section 6A was inserted</li>
+      </ul>
+    </li>
+    <li><strong>2018:</strong> Parliament enacted Section 17A of the PCA, again requiring prior sanction — but this time extended to <strong>all public servants</strong>, not just Joint Secretary-and-above, in an apparent attempt to avoid the Article 14 problem that sank Section 6A.</li>
+    <li>This is the provision challenged in the 2026 CPIL case.</li>
+  </ul>
+  <svg viewBox="0 0 780 130" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Timeline: evolution of the prior-sanction requirement from the Single Directive to the 2026 CPIL verdict" style="width:100%; height:auto; margin-top:6px;">
+    <defs>
+      <marker id="tl-arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L6,3 L0,6 Z" fill="#1d5b8b"/>
+      </marker>
+    </defs>
+    <line x1="148" y1="55" x2="170" y2="55" stroke="#1d5b8b" stroke-width="2" marker-end="url(#tl-arrow)"/>
+    <line x1="302" y1="55" x2="324" y2="55" stroke="#1d5b8b" stroke-width="2" marker-end="url(#tl-arrow)"/>
+    <line x1="456" y1="55" x2="478" y2="55" stroke="#1d5b8b" stroke-width="2" marker-end="url(#tl-arrow)"/>
+    <line x1="610" y1="55" x2="632" y2="55" stroke="#1d5b8b" stroke-width="2" marker-end="url(#tl-arrow)"/>
+    <g font-family="Arial, sans-serif" text-anchor="middle">
+      <rect x="16" y="10" width="132" height="90" rx="6" fill="#fff" stroke="#1d5b8b" stroke-width="1.5"/>
+      <text x="82" y="32" font-size="11" font-weight="bold" fill="#1f2328">Single Directive</text>
+      <text x="82" y="47" font-size="9.5" fill="#57606a">(pre-1997)</text>
+      <text x="82" y="63" font-size="9.5" fill="#57606a">Executive control</text>
+      <text x="82" y="78" font-size="9.5" fill="#57606a">over investigation</text>
+
+      <rect x="170" y="10" width="132" height="90" rx="6" fill="#fdf3f3" stroke="#8b3a3a" stroke-width="1.5"/>
+      <text x="236" y="32" font-size="11" font-weight="bold" fill="#1f2328">Vineet Narain</text>
+      <text x="236" y="47" font-size="9.5" fill="#57606a">(1997)</text>
+      <text x="236" y="63" font-size="9.5" fill="#8b3a3a">Struck down</text>
+      <text x="236" y="78" font-size="9.5" fill="#57606a">"none above law"</text>
+
+      <rect x="324" y="10" width="132" height="90" rx="6" fill="#fdf3f3" stroke="#8b3a3a" stroke-width="1.5"/>
+      <text x="390" y="32" font-size="11" font-weight="bold" fill="#1f2328">Sec 6A DSPE Act</text>
+      <text x="390" y="47" font-size="9.5" fill="#57606a">Swamy (2014)</text>
+      <text x="390" y="63" font-size="9.5" fill="#8b3a3a">Struck down</text>
+      <text x="390" y="78" font-size="9.5" fill="#57606a">(Art. 14, discriminatory)</text>
+
+      <rect x="478" y="10" width="132" height="90" rx="6" fill="#fff" stroke="#1d5b8b" stroke-width="1.5"/>
+      <text x="544" y="32" font-size="11" font-weight="bold" fill="#1f2328">Sec 17A, PCA</text>
+      <text x="544" y="47" font-size="9.5" fill="#57606a">(2018)</text>
+      <text x="544" y="63" font-size="9.5" fill="#57606a">Extended to ALL</text>
+      <text x="544" y="78" font-size="9.5" fill="#57606a">public servants</text>
+
+      <rect x="632" y="10" width="132" height="90" rx="6" fill="#fff7e6" stroke="#8b5a1d" stroke-width="1.5"/>
+      <text x="698" y="32" font-size="11" font-weight="bold" fill="#1f2328">CPIL v. UOI</text>
+      <text x="698" y="47" font-size="9.5" fill="#57606a">(2026)</text>
+      <text x="698" y="63" font-size="9.5" fill="#8b5a1d">Split verdict</text>
+      <text x="698" y="78" font-size="9.5" fill="#57606a">&rarr; larger bench</text>
+    </g>
+  </svg>
+  <p class="board-caption">Diagram: each redesign of the "prior sanction" shield gets struck down or challenged on the same underlying ground — protecting the corrupt along with the honest.</p>
+  <div class="exam-tip">The full sequence — Single Directive (pre-1997) &rarr; Vineet Narain (1997) &rarr; Section 6A DSPE Act &rarr; Subramanian Swamy (2014) &rarr; Section 17A PCA (2018) &rarr; CPIL (2026) — is exactly the kind of "evolution of a provision" timeline UPSC likes to test. Memorize the sequence, not just the individual cases.</div>
+</section>
+
+<section id="part4">
+  <h2>4. Topic 2: CPIL verdict, data &amp; live answer-writing exercise</h2>
+  <h3>Centre for Public Interest Litigation v. Union of India (13 January 2026) — the split verdict</h3>
+  <ul>
+    <li>A two-judge bench delivered a split verdict on Section 17A's constitutional validity.</li>
+    <li>Both judges agreed there is <em>some</em> problem with Section 17A as it stands — the disagreement was about the remedy.</li>
+    <li><strong>Justice B.V. Nagarathna:</strong> struck down Section 17A entirely.
+      <ul>
+        <li>Held it an impermissible fetter on the rule of law, discriminatory and violative of Article 14</li>
+        <li>Reasoning: the vice lies in the very requirement of prior sanction, not in who grants it</li>
+        <li>Identified a structural conflict of interest — the government both oversees the accused officials and decides whether to approve their investigation</li>
+        <li>Described it as protecting the corrupt — "old wine in a new bottle," no real change from Section 6A</li>
+      </ul>
+    </li>
+    <li><strong>Justice K.V. Viswanathan:</strong> upheld Section 17A, but only if "read down."
+      <ul>
+        <li>Reasoning: the provision prevents a "play-safe syndrome" among honest bureaucrats, avoiding policy paralysis</li>
+        <li>Suggested the approval process be filtered through an independent body — specifically the Lokpal — rather than the concerned government/ministry</li>
+        <li>This tracks the Law Commission's 254th Report recommendation of independent screening</li>
+      </ul>
+    </li>
+    <li><strong>Outcome:</strong> the conflicting opinions were referred to the Chief Justice of India for constitution of an appropriate larger bench to resolve the split.</li>
+  </ul>
+
+  <h3>Key data and framing</h3>
+  <div class="data-box">
+    Corruption Perceptions Index (CPI) 2025 (Transparency International): India ranked 91st of 182 countries, score 39/100 — an improvement from 96th in 2024<br>
+    Central Vigilance Commission (CVC) annual report figures cited in class: more than 7,000 corruption cases investigated by CBI remain pending, including 379 cases pending for over 20 years
+  </div>
+  <ul>
+    <li><strong>"Sanskritization"/normalization of corruption</strong> (framing cited in class, attributed to Professor Kaushik Basu): society gradually accepts a certain baseline level of corruption rather than pursuing punishment.</li>
+    <li><strong>Gary Becker's "economics of crime"</strong> framework: if the expected cost of corrupt behavior (probability of punishment &times; severity, discounted over a 20-30 year pendency) is low, the deterrent effect collapses.</li>
+  </ul>
+
+  <h3>Arguments supporting Section 17A</h3>
+  <ul>
+    <li>Prevents the "play-safe syndrome" — without protection, bureaucrats may avoid signing off on any file/decision, fearing future inquiry.</li>
+    <li>Protects honest officers, allowing them to function as the "steel frame" of administration.</li>
+    <li>Filters out frivolous/vexatious complaints against honest officers.</li>
+    <li>Supreme Court's own reasoning (cited in class): if honest public servants are not assured that their official decisions will not be subjected to frivolous complaints, "it is the nation that will suffer."</li>
+  </ul>
+
+  <h3>Arguments against Section 17A</h3>
+  <ul>
+    <li>Violates Article 14 by creating an unequal protection regime between decision-makers/higher officials and lower-grade employees/clerks.</li>
+    <li>Filtering the initial inquiry itself can protect the corrupt, not just the honest.</li>
+    <li>Inherent conflict of interest: the government is often the largest stakeholder in protecting its own department/ministry from scrutiny.</li>
+    <li>Operational impact: investigations need a surprise element.
+      <ul>
+        <li>Seeking prior sanction first gives the public servant advance notice</li>
+        <li>This creates an opportunity to destroy evidence/records before the investigation begins</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>Committees, global comparisons &amp; way forward</h3>
+  <ul>
+    <li><strong>Vohra Committee (1993)</strong> — the transcript's garbled "NNA committee," resolved via Supplementary research.
+      <ul>
+        <li>Chaired by then-Home Secretary N.N. Vohra, formed after the 1993 Bombay bomb blasts</li>
+        <li>Documented the criminal nexus among politicians, bureaucrats, police, and criminal syndicates</li>
+        <li>Its findings fed into the broader case for strengthening bribery/criminal-misconduct law, including provisions later reflected in the PCA framework</li>
+      </ul>
+    </li>
+    <li>Law Commission's 254th Report: recommended prior sanction be routed through an independent body such as the Lokpal.</li>
+    <li>United Nations Convention Against Corruption (ratified by India): frames corruption as a human-rights issue.</li>
+    <li>In 2026, India hosted a meeting of the GLOBE Network (Global Operational Network of Anti-Corruption Law Enforcement Authorities) — signals India's commitment to cross-border anti-corruption enforcement.</li>
+  </ul>
+  <ul>
+    <li><strong>Way forward suggested in class:</strong>
+      <ul>
+        <li>Independent screening model (e.g. via the Lokpal), addressing the conflict-of-interest problem while retaining some filter against frivolous complaints</li>
+        <li>Judicial reforms: fast-track courts, time-bound trials, to clear the large pending-case backlog</li>
+        <li>Systemic reforms: whistleblower protection, technology adoption (removing intermediaries/"middlemen") to reduce opportunities for corruption at the source</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>Live answer-writing exercise (timed, in-class)</h3>
+  <div class="quote-card">
+    <div class="q">The pursuit of anti-corruption measures must not result in policy paralysis. Examine the statement in the context of Section 17A of the Prevention of Corruption Act and the recent judicial debates surrounding it.</div>
+    <div class="attrib">— Practice question set for a timed writing exercise (~1:39:11 to 1:44:31 in the recording); instructor noted this exact theme (anti-corruption measures) tends to recur across UPSC cycles, sometimes reappearing after a 2-3 year gap</div>
+  </div>
+  <p><span class="timestamp">1:44:47</span>Suggested structure:</p>
+  <ul>
+    <li><strong>Introduction:</strong> use the CPIL context — mention the recent split verdict on Section 17A.</li>
+    <li><strong>Explain what Section 17A is about.</strong></li>
+    <li><strong>Trace the judicial evolution</strong> of the prior-sanction requirement (a simple timeline/diagram works well here).</li>
+    <li><strong>Present both judicial views from CPIL:</strong> Justice Nagarathna's position and Justice Viswanathan's position.</li>
+    <li><strong>Discuss the positives of Section 17A first</strong> (play-safe syndrome, protecting honest officers), then the concerns (Article 14 violation, conflict of interest).</li>
+    <li><strong>Propose a middle path:</strong> a diagram balancing "protecting honest officers" against "addressing conflict of interest," resolved through independent screening (e.g. Lokpal) rather than government-filtered approval — this represents the recommendation echoed by both the Law Commission's 254th Report and Justice Viswanathan.</li>
+    <li><strong>Conclusion:</strong> anti-corruption accountability and administrative efficiency need not be a zero-sum trade-off if the screening mechanism is institutionally independent.</li>
+  </ul>
+</section>
+
+<section id="part5">
+  <h2>5. Topic 3: Judicial appointments — the collegium system</h2>
+  <p style="font-family: Arial, sans-serif; font-size: 0.85em; color: #57606a;">Note: this topic begins around 1:47:10 and the lecture recording ends at 2:06:17 with the instructor stating the remainder will continue in the next class. Notes below cover only what was actually taught in this session.</p>
+  <p><span class="timestamp">1:49:42</span>Suggested introduction framing: "The appointment of the higher judiciary lies at the core of constitutional democracy, balancing judicial independence with democratic accountability."</p>
+
+  <h3>Constitutional dimension</h3>
+  <ul>
+    <li>Article 124 establishes the Supreme Court of India, its structure, and judge strength (as prescribed by Parliament).</li>
+    <li>Original constitutional text: judges appointed by the President "in consultation with" the Chief Justice of India — a middle course, not full executive primacy nor full judicial primacy.</li>
+    <li>Through subsequent judicial interpretation, "consultation" was transformed into "concurrence" — giving rise to a self-appointing collegium system.</li>
+    <li>Article 124(3) provides three routes by which a person may become a Supreme Court judge:
+      <ul>
+        <li><strong>Bench route:</strong> a sitting High Court judge elevated to the Supreme Court</li>
+        <li><strong>Bar route:</strong> a practicing advocate with at least 10 years' experience</li>
+        <li><strong>Jurist route:</strong> a "distinguished jurist" in the opinion of the President — this route has never actually been used in India's history; a similar route existed for High Courts but was removed by a later constitutional amendment</li>
+      </ul>
+    </li>
+    <li>Article 217 provides an analogous framework for High Court judges.</li>
+  </ul>
+
+  <h3>Recent context making this topical</h3>
+  <ul>
+    <li><strong>Supreme Court (Number of Judges) Amendment Act, 2026:</strong> raised the Supreme Court's sanctioned strength from 34 to 38, including the CJI (Cabinet approval 5 May 2026; the previous increase was 2019, from 31 to 34 including the CJI).
+      <ul>
+        <li>Full historical trajectory of sanctioned strength (useful comparative data point): 8 (1950) &rarr; 11 (1956) &rarr; 14 (1960) &rarr; 18 (1978) &rarr; 26 (1986) &rarr; 31 (2009) &rarr; 34 (2019) &rarr; 38 (2026)</li>
+        <li>Strength has nearly quintupled since 1950, roughly tracking rising case pendency rather than any fixed ratio</li>
+      </ul>
+    </li>
+    <li><strong>Justice Ujjal Bhuyan</strong> recently called for invoking Article 124(3)'s "distinguished jurist" clause (transcript's "Justice Bhuyan," now identified via Supplementary research).
+      <ul>
+        <li>Remarks made at NLU Delhi's convocation, 30 August 2026</li>
+        <li>Called the route an "unused mandate," never invoked in 76 years of the Constitution's operation</li>
+      </ul>
+    </li>
+    <li><strong>Rajasthan High Court controversy:</strong> allegations against the acting Chief Justice of corruption, nepotism, favoritism, and misuse of "master of roster" powers (case allocation to benches).</li>
+    <li><strong>Allahabad High Court judge impeachment matter — Justice Yashwant Varma:</strong>
+      <ul>
+        <li>Burnt cash was recovered from his official residence in March 2025</li>
+        <li>A parliamentary probe committee found the recovered cash unexplained and found evidence of interference after the fire</li>
+        <li>Justice Varma resigned in April 2026, just before impeachment hearings were to begin — consistent with the lecture's broader point that in India's history, no judge has ever actually been removed through the impeachment process to completion (resignation has pre-empted it in this and other instances)</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>Data cited in class</h3>
+  <div class="data-box">
+    Judicial pendency: more than 5.6 crore cases pending across the judiciary; around 90,000+ cases actively pending in the Supreme Court alone<br>
+    High Court vacancies: 370+ vacant posts against a sanctioned strength of 1,122<br>
+    Subordinate court vacancies: 7,000+ vacant posts against a sanctioned strength of 30,000 judges<br>
+    Judicial transparency index figure cited in class: of 813 High Court judges, only 87 had publicly disclosed their assets<br>
+    "Uncle judges syndrome": a 2025 assessment cited in class found nearly one-third of Supreme Court judges had familial links to former judges
+  </div>
+  <div class="gap-box">
+    <h4>Data above — now verified</h4>
+    <p>All three figures were checked via web search (Sept 2026) and hold up closely to the lecture's numbers — see "Judiciary vacancy and transparency data" in Supplementary research below for exact figures and sources.</p>
+  </div>
+
+  <h3>Evolution of the collegium system — four phases</h3>
+  <ul>
+    <li><strong>Phase 1 (1950s–1980s):</strong> executive primacy.
+      <ul>
+        <li>"Consultation" with the CJI did not mean "concurrence" — the executive retained the final say</li>
+        <li>Consistent with a period of very strong, "towering leader"-led executives with large parliamentary majorities</li>
+      </ul>
+    </li>
+    <li><strong>Phase 2 — First Judges Case (S.P. Gupta v. Union of India, 1981):</strong>
+      <ul>
+        <li>Supreme Court held "consultation" does not mean "concurrence"</li>
+        <li>Continued executive primacy in appointments</li>
+      </ul>
+    </li>
+    <li><strong>Phase 3 — Second Judges Case (1993):</strong>
+      <ul>
+        <li>Coincides with a period of declining executive dominance and the rise of coalition politics (from the late 1980s)</li>
+        <li>Supreme Court reversed course: held "consultation" now means "concurrence"</li>
+        <li>Gave birth to the collegium system, shifting primacy to the judiciary</li>
+      </ul>
+    </li>
+    <li><strong>Phase 4 — Third Judges Case (1998, presidential reference):</strong>
+      <ul>
+        <li>President sought clarification on exactly who must be consulted under "concurrence"</li>
+        <li>Supreme Court institutionalized the collegium: CJI plus the four senior-most judges must be consulted</li>
+      </ul>
+    </li>
+    <li><strong>NJAC episode / Fourth Judges Case (2015):</strong>
+      <ul>
+        <li>Parliament had enacted the National Judicial Appointments Commission (NJAC) — appointments via a body of three judicial members and three executive/other members</li>
+        <li>Supreme Court struck down the NJAC (99th Constitutional Amendment), by a 4:1 majority</li>
+        <li>Held it violated the basic structure doctrine, specifically judicial independence (already recognized as basic structure since the Second Judges Case)</li>
+        <li>Reinstated the collegium system's primacy</li>
+      </ul>
+    </li>
+  </ul>
+  <div class="exam-tip">This is a classic "evolution" answer structure UPSC often asks for directly (not just "arguments for/against" but "how did we get here"). Memorize the four-phase sequence with its case names and years in order: 1980s executive primacy &rarr; 1981 First Judges Case &rarr; 1993 Second Judges Case &rarr; 1998 Third Judges Case &rarr; 2015 NJAC/Fourth Judges Case.</div>
+
+  <h3>Two debates introduced (to be continued next class)</h3>
+  <ul>
+    <li><strong>Transparency vs. confidentiality:</strong>
+      <ul>
+        <li>Pro-transparency view: citizens have a right to know who their judges are and why they were selected, and by what criteria</li>
+        <li>Former Justice Ruma Pal's characterization cited in class: the collegium system is "the best-kept secret in the country"</li>
+        <li>Pro-confidentiality view: secrecy shields candidates from political pressure and media/lobbying influence, and protects the reputation of bench-route candidates who are considered but not ultimately selected</li>
+      </ul>
+    </li>
+    <li><strong>Judicial independence vs. accountability:</strong>
+      <ul>
+        <li>Independence argument: the selection process must be insulated from political/executive interference</li>
+        <li>Accountability argument: a non-transparent, non-accountable appointment process itself undermines constitutional accountability and the rule of law</li>
+      </ul>
+    </li>
+  </ul>
+  <div class="gap-box">
+    <h4>Note on scope — what's likely pending for Class 8(27)</h4>
+    <p>The instructor explicitly stated "the rest of the things we'll discuss in next class" at the end of this recording (2:05:57). This topic is therefore incomplete in this lecture. Based only on the instructor's own stated outline and the pattern already followed for Topics 1 and 2 in this class, expect the next class to cover:</p>
+    <ul>
+      <li>Further development of the two debates already introduced here: transparency vs. confidentiality, and judicial independence vs. accountability</li>
+      <li>Reform proposals for the appointments process — flagged in the instructor's outline but not yet reached in this recording</li>
+      <li>Global comparisons (UK/USA judicial appointment models) — also flagged in the outline but not covered in this session</li>
+      <li>Likely a full live timed answer-writing exercise on judicial appointments, matching the pattern of the two live exercises already completed on Topics 1 and 2</li>
+    </ul>
+    <p style="font-size:0.85em; color:#57606a;">This is a forward-looking placeholder based on what the instructor signaled, not fabricated content — update once Class 8(27) is transcribed.</p>
+  </div>
+</section>
+
+<section id="glossary">
+  <h2>Glossary — quick revision</h2>
+  <dl>
+    <div class="glossary-term"><dt>Golden triangle</dt><dd>Articles 14, 19, and 21 read together as a mutually reinforcing set of fundamental rights.</dd></div>
+    <div class="glossary-term"><dt>Concentric circles of state interest</dt><dd>Ram Manohar Lohia framework: security of state (innermost) &rarr; public order &rarr; law and order &rarr; public inconvenience (outermost) — state action must be proportional to which circle is actually threatened.</dd></div>
+    <div class="glossary-term"><dt>Mighty state</dt><dd>Supreme Court's own framing for an overwhelmingly powerful state whose centralized power risks tipping into "rule by law" rather than "rule of law."</dd></div>
+    <div class="glossary-term"><dt>Grammar of anarchy</dt><dd>Ambedkar's phrase (1949) for methods like civil disobedience and non-cooperation, which he argued should be abandoned once constitutional methods become available.</dd></div>
+    <div class="glossary-term"><dt>Section 163, BNSS</dt><dd>Successor to Section 144 CrPC; lets an executive magistrate impose prohibitory orders preventing assembly of five or more persons, justified only where the threat to peace is real and imminent (Ramlila Maidan, 2012).</dd></div>
+    <div class="glossary-term"><dt>Section 17A, PCA</dt><dd>2018 amendment requiring prior government sanction before investigating a public servant; subject of a 2026 split Supreme Court verdict (CPIL v. Union of India).</dd></div>
+    <div class="glossary-term"><dt>Section 19, PCA</dt><dd>Requires prior government sanction before formally prosecuting a public servant in court — distinct from Section 17A's "sanction to investigate."</dd></div>
+    <div class="glossary-term"><dt>Collegium system</dt><dd>Judiciary-driven mechanism for appointing judges, born from the Second Judges Case (1993) and institutionalized in the Third Judges Case (1998); not mentioned anywhere in the Constitution's original text.</dd></div>
+    <div class="glossary-term"><dt>NJAC</dt><dd>National Judicial Appointments Commission — a 2014 constitutional amendment creating a mixed judicial-executive appointments body; struck down in 2015 for violating the basic structure (judicial independence).</dd></div>
+    <div class="glossary-term"><dt>Distinguished jurist route</dt><dd>Article 124(3)'s third appointment route (alongside bench and bar routes) allowing a legal scholar/academician to become a Supreme Court judge directly — never yet used in practice.</dd></div>
+  </dl>
+</section>
+
+<section id="arcs">
+  <h2>Revision kit (ARCS)</h2>
+  <div class="arcs-box">
+    <h4>A — Active Recall: self-test before re-reading</h4>
+    <div class="recall-q">
+      <p class="q-text">1. Why is the right to protest called a "derived, composite right" rather than an explicit fundamental right?</p>
+      <details><summary></summary><div class="ans">There is no single article that directly names a "right to protest." It is built up from three separate Article 19(1) freedoms read together: 19(1)(a) freedom of speech and expression, 19(1)(b) right to assemble peaceably without arms, and 19(1)(c) right to form associations/unions. Courts have recognized peaceful assembly as fundamental (e.g. Himat Lal K. Shah, 1972) even though the Constitution never uses the word "protest."</div></details>
+    </div>
+    <div class="recall-q">
+      <p class="q-text">2. What is the difference between "public order" and "public inconvenience," and why does it matter constitutionally?</p>
+      <details><summary></summary><div class="ans">Public order affects the community/society at large (e.g. a protest turning violent, risking rioting) and is a valid ground for restriction under Article 19(2)/(3). Public inconvenience (e.g. a traffic jam from a protest) is a much narrower, localized effect. Restricting protest based only on public inconvenience is extra-constitutional — not sanctioned by the Constitution — per the Ram Manohar Lohia "concentric circles" framework.</div></details>
+    </div>
+    <div class="recall-q">
+      <p class="q-text">3. What did the Supreme Court hold in the 2026 CPIL v. Union of India split verdict on Section 17A of the PCA?</p>
+      <details><summary></summary><div class="ans">Justice B.V. Nagarathna struck down Section 17A entirely, holding it discriminatory, violative of Article 14, and structurally protective of corrupt officials due to a built-in government conflict of interest. Justice K.V. Viswanathan upheld it but only if "read down" so that the prior-sanction screening is done by an independent body like the Lokpal, rather than the government itself. The split was referred to the CJI for a larger bench to resolve.</div></details>
+    </div>
+    <div class="recall-q">
+      <p class="q-text">4. Trace the four-phase evolution of the judicial-appointments collegium system.</p>
+      <details><summary></summary><div class="ans">Phase 1 (1950s-80s): executive primacy, "consultation" did not mean "concurrence." Phase 2 (First Judges Case, S.P. Gupta, 1981): Supreme Court confirmed consultation does not equal concurrence, continuing executive primacy. Phase 3 (Second Judges Case, 1993): Supreme Court reversed this, holding consultation now means concurrence — birth of the collegium. Phase 4 (Third Judges Case, 1998 presidential reference): institutionalized exactly who must be consulted (CJI plus four senior-most judges). The NJAC (2015, Fourth Judges Case) attempted to add executive representation but was struck down for violating the basic structure (judicial independence).</div></details>
+    </div>
+    <div class="recall-q">
+      <p class="q-text">5. What is the "chilling effect" and where does it recur across this class's topics?</p>
+      <details><summary></summary><div class="ans">The chilling effect is the discouragement of legitimate activity (protest, dissent, whistleblowing) caused by fear of disproportionate state response or surveillance. It recurs in the right-to-protest discussion (aggressive FRT/drone surveillance discouraging participation in demonstrations) and echoes structurally in the Section 17A debate (fear of frivolous corruption complaints causing bureaucratic "play-safe syndrome" and policy paralysis) — both are cases where a security/accountability tool, if disproportionate, ends up suppressing the very activity a healthy democracy needs.</div></details>
+    </div>
+  </div>
+
+  <div class="arcs-box spacing-tracker">
+    <h4>R — Repeat with Spacing: review checklist</h4>
+    <p>Lecture date: Sep 6, 2026. Forgetting is exponential — review at these intervals, not all at once.</p>
+    <table>
+      <tr><th>Review</th><th>Target date</th><th>Done</th></tr>
+      <tr><td>Day 1 (same day, quick skim)</td><td>Sep 6</td><td><input type="checkbox"></td></tr>
+      <tr><td>Day 3</td><td>Sep 9</td><td><input type="checkbox"></td></tr>
+      <tr><td>Day 7</td><td>Sep 13</td><td><input type="checkbox"></td></tr>
+      <tr><td>Day 21</td><td>Sep 27</td><td><input type="checkbox"></td></tr>
+    </table>
+    <p style="font-size:0.85em; color:#57606a;">Each review: close this file, answer the 5 recall questions above from memory first, then reopen to check.</p>
+  </div>
+
+  <div class="arcs-box">
+    <h4>C — Contrast &amp; Chunk: easily confused pairs</h4>
+    <table>
+      <tr><th>Term A</th><th>Term B</th><th>The ONE distinguishing point</th></tr>
+      <tr><td>Public order</td><td>Public inconvenience</td><td>Public order affects the community/society at large and is a valid constitutional ground for restriction; public inconvenience is a lesser, localized effect and cannot alone justify restricting protest</td></tr>
+      <tr><td>Section 17A, PCA</td><td>Section 19, PCA</td><td>Section 17A requires prior sanction before investigation begins; Section 19 requires prior sanction before formal prosecution in court, after investigation is complete</td></tr>
+      <tr><td>Section 6A, DSPE Act</td><td>Section 17A, PCA</td><td>Section 6A (struck down 2014) applied prior sanction only to Joint Secretary-and-above officers, making it discriminatory under Article 14; Section 17A (2018) extended prior sanction to all public servants to avoid that specific defect</td></tr>
+      <tr><td>Second Judges Case (1993)</td><td>Third Judges Case (1998)</td><td>Second Judges Case established that "consultation" means "concurrence," giving birth to the collegium; Third Judges Case (a presidential reference) institutionalized exactly who must be consulted within that collegium</td></tr>
+      <tr><td>Misinformation</td><td>Disinformation</td><td>Misinformation is unintentional (e.g. forwarding an unverified message); disinformation is a deliberate act, sometimes aimed at creating internal security challenges</td></tr>
+    </table>
+    <p style="font-family: Arial, sans-serif; font-size: 0.88em;"><strong>Chunk:</strong> all three topics in this class revolve around the same underlying tension — a power that protects a legitimate interest (protesters' voice; honest officials' decision-making; judicial independence) can, if left unchecked, curdle into a "mighty" or unaccountable actor (an overreaching state; officials shielded from scrutiny; a self-appointing judiciary). In each case, the proposed fix is the same shape: route the check through an independent third party (assembly monitors; the Lokpal; a reformed, more transparent collegium) rather than leaving either side to police itself.</p>
+  </div>
+
+  <div class="arcs-box mnemonic-box">
+    <h4>S — Stick with Encoding Tricks</h4>
+    <p><strong>Concentric circles image:</strong> picture a dartboard — bullseye is security of the state, next ring is public order, next ring is law and order, outer ring is public inconvenience. The closer to the bullseye the actual threat is, the more force the state may proportionately use; acting as if an outer-ring problem (a traffic jam) were a bullseye problem is disproportionate.</p>
+    <p><strong>17A timeline image:</strong> a shield that keeps getting redesigned. First it was for everyone (Single Directive) — struck down. Then only for the "VIP" officers, Joint Secretary and above (Section 6A) — struck down for favoring VIPs. Then back to everyone again (Section 17A, 2018) — now under fresh challenge for still shielding wrongdoing regardless of rank.</p>
+    <p><strong>Collegium evolution image:</strong> a seesaw between the executive and the judiciary. 1950s-80s: executive end down (heavier). 1993: judiciary end goes down instead. 1998: judiciary firms up exactly who sits on its end of the seesaw. 2015: executive tries to climb back on via NJAC, but the seesaw's frame itself (basic structure/judicial independence) is ruled unable to bear that weight.</p>
+  </div>
+</section>
+
+<section id="gaps">
+  <h2>Supplementary research — filling gaps</h2>
+
+  <div class="gap-box">
+    <h4>Himat Lal K. Shah v. Commissioner of Police, Ahmedabad — verified</h4>
+    <p>Decided 15 September 1972 (reported at 1973 SCC context; also cited as 1972 INSC 220). Confirmed: the Court held freedom of assembly is essential to democracy, that public streets are natural places for expression of opinion, and drew a line between reasonable regulation (e.g. traffic management, requiring prior permission in some contexts) and an outright ban on assembly. Source: <a href="https://indiankanoon.org/doc/296985/" target="_blank" rel="noopener">Indian Kanoon, full judgment</a>; <a href="https://www.casemine.com/commentary/in/shah-v.-commissioner-of-police:-supreme-court-upholds-right-to-peaceful-assembly-on-public-streets/view" target="_blank" rel="noopener">CaseMine commentary</a>.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>Dr. Ram Manohar Lohia v. State of Bihar — verified, citation corrected</h4>
+    <p>Decided 7 September 1965, reported as 1966 AIR 740 (the lecture's "1966" reference matches the reported year). Confirmed: the case turned on the distinction between "public order" (broader, society-wide) and "law and order" (narrower), in the context of a preventive-detention order that cited the wrong ground. The "concentric circles" framing taught in class is a widely used pedagogical gloss on this and related public-order jurisprudence, not a verbatim phrase quoted from the judgment itself — safe to use analytically, but do not present it as a direct quotation from the Court. Source: <a href="https://indiankanoon.org/doc/1733535/" target="_blank" rel="noopener">Indian Kanoon, full judgment</a>.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>Amit Sahni v. Commissioner of Police (Shaheen Bagh) — verified</h4>
+    <p>Citation: (2020) 10 SCC 573, decided 7 October 2020 by Justices Sanjay Kishan Kaul, Aniruddha Bose, and Krishna Murari. Confirmed: arose from over 100 days of anti-CAA protest blocking the Okhla underpass; the Court held protests must occur in designated areas and cannot continue indefinitely, and that no fundamental right is absolute. Source: <a href="https://indiankanoon.org/doc/145656971/" target="_blank" rel="noopener">Indian Kanoon, full judgment</a>; <a href="https://globalfreedomofexpression.columbia.edu/cases/amit-sahni-v-commissioner-of-police/" target="_blank" rel="noopener">Columbia Global Freedom of Expression case summary</a>.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>In Re: Ramlila Maidan Incident — verified</h4>
+    <p>Decided 23 February 2012, reported as (2012) 5 SCC 1, arising from a June 2011 midnight police crackdown on a Baba Ramdev-led anti-corruption gathering. Confirmed: the Court held Section 144 CrPC orders are justified only where the threat to peace is real and imminent, not a mere likely possibility, and apportioned negligence 3:1 between the state and the organizing foundation. Source: <a href="https://indiankanoon.org/doc/17021567/" target="_blank" rel="noopener">Indian Kanoon, full judgment</a>; <a href="https://lawfoyer.in/ramlila-maindan-union-of-india-case/" target="_blank" rel="noopener">LawFoyer case summary</a>.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>Anita Thakur v. State of Jammu &amp; Kashmir — verified</h4>
+    <p>Decided 12 August 2016. Confirmed: the Court held that where an assembly is peaceful, use of police force is not warranted at all, and that force used to disperse an unlawful assembly must remain reasonable and confined to what is necessary. Arose from a migrant protest march that escalated into police-crowd confrontation. Source: <a href="https://www.rightofassembly.info/assets/downloads/Anita_Thakur_v._State_of_Jammu_Kashmir_(2016).pdf" target="_blank" rel="noopener">Full judgment text (rightofassembly.info)</a>; <a href="https://www.casemine.com/commentary/in/compensation-for-police-excess-in-dispersing-unlawful-assemblies:-anita-thakur-&-ors.-v.-govt.-of-j&k-&-ors./view" target="_blank" rel="noopener">CaseMine commentary</a>.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>Maniyar Iliyaz v. P. Ayyappan (2026) — verified, case name corrected</h4>
+    <p>The lecture's auto-transcript garbled this as "man IA's case" — the correct case name is <strong>Maniyar Iliyaz @ Shaik Riyaz &amp; Anr. v. P. Ayyappan &amp; Ors. (June 2026)</strong>, decided by Justices Pamidighantam Sri Narasimha and Atul S. Chandurkar. Confirmed: the Court held the right to walk on safe, demarcated footpaths is a fundamental right anchored in Article 19(1)(d), read with 19(1)(a)/(b)/(c) and Article 21. It arose from a fatal road-accident compensation claim (a child killed by a tanker lorry at a location with no footpath), not directly from a protest case. Source: <a href="https://www.drishtiias.com/daily-updates/daily-news-analysis/supreme-court-declares-right-to-walk-a-fundamental-right" target="_blank" rel="noopener">Drishti IAS summary</a>; <a href="https://www.scconline.com/blog/post/2026/06/24/right-to-walk-on-footpath-is-a-fundamental-right-supreme-court/" target="_blank" rel="noopener">SCC Online</a>.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>Ambedkar's "Grammar of Anarchy" speech — verified</h4>
+    <p>Delivered 25 November 1949 (the lecture's passing reference to "1945" is incorrect — the correct date is 25 November 1949, the Constituent Assembly's concluding session), not 1945. Confirmed all three warnings as taught in class: abandon unconstitutional/"grammar of anarchy" methods now that constitutional avenues exist; avoid hero-worship/bhakti in politics; and ensure social democracy accompanies political democracy. Source: <a href="https://scroll.in/article/802495/why-br-ambedkars-three-warnings-in-his-last-speech-to-the-constituent-assembly-resonate-even-today" target="_blank" rel="noopener">Scroll.in</a>; <a href="https://speakola.com/political/babasaheb-ambedkar-grammar-of-anarchy-1949" target="_blank" rel="noopener">Speakola, full speech text</a>.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>Vineet Narain v. Union of India — verified</h4>
+    <p>Decided 18 December 1997 (also referenced as (1998) 1 SCC 226), commonly called the Jain Hawala case. Confirmed: a three-judge bench struck down the 1969 "Single Directive" requiring prior sanction before investigating senior officials, arising from allegations agencies failed to prosecute officials implicated by the seized "Jain Diaries." The exact wording "however high you may be, the law is above you" could not be located verbatim in search results — the judgment's actual language is closer to "none stands above the law." Use the substance of the principle, but avoid presenting it as an exact quotation without checking the full judgment text first. Source: <a href="https://indiankanoon.org/doc/1203995/" target="_blank" rel="noopener">Indian Kanoon, full judgment</a>; <a href="https://www.scobserver.in/journal/be-you-ever-so-high-a-brief-history-of-the-supreme-courts-call-for-impartial-agencies/" target="_blank" rel="noopener">Supreme Court Observer</a>.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>Dr. Subramanian Swamy v. Director, CBI — verified</h4>
+    <p>Decided 6 May 2014 by a five-judge Constitution Bench. Confirmed: Section 6A of the Delhi Special Police Establishment Act, 1946 (requiring prior Central Government sanction to investigate Joint Secretary-and-above officers) was struck down as violative of Article 14. A 2023 Constitution Bench later held this invalidity operates retrospectively, from the date of the section's insertion. Source: <a href="https://indiankanoon.org/doc/183165917/" target="_blank" rel="noopener">Indian Kanoon, full judgment</a>; <a href="https://www.scconline.com/blog/post/2023/09/11/section-6a-dspe-act-unconstitutional-from-date-of-insertion-supreme-court/" target="_blank" rel="noopener">SCC Online, 2023 retrospectivity ruling</a>.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>Centre for Public Interest Litigation v. Union of India (2026) — verified</h4>
+    <p>Decided 13 January 2026. Confirmed: split verdict on Section 17A PCA's constitutionality, with Justice B.V. Nagarathna striking it down entirely (calling it an impermissible fetter on the rule of law, protecting the corrupt) and Justice K.V. Viswanathan upholding it in "read down" form requiring independent Lokpal-level screening. The matter was referred to the CJI for a larger bench. Source: <a href="https://www.livelaw.in/lawschool/articles/section-17a-prevention-of-corruption-act-constitutional-battle-520546" target="_blank" rel="noopener">LiveLaw, detailed case analysis</a>; <a href="https://www.verdictum.in/court-updates/supreme-court/centre-for-public-interest-litigation-v-union-of-india-2026-insc-55-pca-1604409" target="_blank" rel="noopener">Verdictum, judgment summary</a>.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>Corruption Perceptions Index 2025 — verified</h4>
+    <p>India ranked 91st out of 182 countries with a score of 39/100, an improvement from 96th in 2024 — matches the lecture's figure closely. Source: <a href="https://www.newsgram.com/corruption-files/2026/02/11/india-rank-91-corruption-perception-index-2025" target="_blank" rel="noopener">Newsgram</a>; <a href="https://www.drishtiias.com/daily-updates/daily-news-analysis/corruption-perception-index-2025" target="_blank" rel="noopener">Drishti IAS</a>.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>NJAC / Fourth Judges Case — verified</h4>
+    <p>Struck down 16 October 2015 by a 4:1 majority. Confirmed: the Court held the 99th Constitutional Amendment (creating the NJAC) violated the basic structure doctrine, specifically judicial independence, and reinstated the collegium system. Source: <a href="https://www.scobserver.in/journal/why-did-the-sc-strike-down-the-njac-act-in-2015/" target="_blank" rel="noopener">Supreme Court Observer</a>.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>Supreme Court (Number of Judges) Amendment Act, 2026 — verified</h4>
+    <p>Confirmed: raises the Supreme Court's sanctioned strength from 34 to 38 judges (including the CJI). Cabinet approved the bill on 5 May 2026, following a request from CJI Surya Kant. The previous increase was in 2019 (31 to 34, including CJI). Source: <a href="https://www.scobserver.in/journal/cabinet-clears-bill-to-expand-supreme-court-strength-to-38-judges/" target="_blank" rel="noopener">Supreme Court Observer</a>; <a href="https://www.livelaw.in/top-stories/president-grants-assent-to-law-increasing-strength-of-supreme-court-judges-to-38-545405" target="_blank" rel="noopener">LiveLaw</a>.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>Justice Yashwant Varma impeachment matter — verified, nuance added</h4>
+    <p>Confirmed: burnt cash was recovered from Justice Varma's official residence in March 2025; a parliamentary probe committee found the cash unexplained and found evidence tampering after the fire; 145 Lok Sabha MPs signed an impeachment motion under Articles 124, 217, and 218. Justice Varma resigned in April 2026, just before impeachment hearings were scheduled to begin — this resignation-before-completion pattern is exactly what the lecture's broader point about India's impeachment process (no judge has ever been removed via a completed impeachment) was illustrating, though the lecture's phrasing in the transcript was ambiguous about whether the process was still "ongoing" at time of recording. Source: <a href="https://www.theweek.in/news/india/2026/04/10/cash-at-judges-home-justice-yashwant-varma-resigns-as-impeachment-probe-looms.html" target="_blank" rel="noopener">The Week</a>; <a href="https://www.theweek.in/news/india/2026/08/12/justice-varma-impeachment-inquiry.html" target="_blank" rel="noopener">The Week, August 2026 update</a>.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>Scholar on "multitude" — corrected from Partha Chatterjee to Dipesh Chakrabarty, verified</h4>
+    <p>The auto-transcript's garbled "deep chakraati" is <strong>Dipesh Chakrabarty</strong>, historian and subaltern-studies scholar — not Partha Chatterjee, whose signature concept is "political society," not "multitude." Chakrabarty's essay "In the Name of Politics: Sovereignty, Democracy, and the Multitude in India" (Economic and Political Weekly, 2005; republished in Public Culture, 2007) argues large-scale popular mobilization is not a symptom of democratic breakdown but integral to how Indian democracy functions, and a route for subaltern claims-making — matching the class's framing closely. Cite Chakrabarty, not Chatterjee. Source: <a href="https://read.dukeupress.edu/public-culture/article-abstract/19/1/35/31846/In-the-Name-of-Politics-Democracy-and-the-Power-of" target="_blank" rel="noopener">Public Culture (Duke University Press)</a>; <a href="https://www.cambridge.org/core/books/abs/varieties-of-world-making/in-the-name-of-politics-sovereignty-democracy-and-the-multitude-in-india/B57E0466DC4841072C9CD3B67D1C4EE4" target="_blank" rel="noopener">Cambridge University Press</a>.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>"NNA committee" — resolved as the Vohra Committee (1993), verified</h4>
+    <p>The transcript's "NNA committee" is the <strong>Vohra Committee</strong>, chaired by then-Home Secretary N.N. Vohra, submitted October 1993 after the 1993 Bombay bomb blasts. Confirmed: it documented the nexus among politicians, bureaucrats, police, and criminal syndicates, describing criminal networks running a virtual parallel government in parts of the country. The Supreme Court has since declined to order a Lokpal-monitored probe into the nexus it flagged (2020). Source: <a href="https://en.wikipedia.org/wiki/Vohra_Report" target="_blank" rel="noopener">Vohra Report, background and findings</a>.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>Justice Bhuyan — verified</h4>
+    <p>Confirmed: <strong>Justice Ujjal Bhuyan</strong> of the Supreme Court, speaking at NLU Delhi's 13th convocation on 30 August 2026, called Article 124(3)'s "distinguished jurist" route an "unused mandate" after 76 years of the Constitution's operation, and argued that appointing legal academics/scholars directly could diversify the Bench. Source: <a href="https://amanshantinews.com/constitutional-norm-for-jurist-as-sc-judge-unmet-justice-bhuyan-india-news/" target="_blank" rel="noopener">news report on Justice Bhuyan's remarks</a>.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>Judiciary vacancy and transparency data — verified</h4>
+    <p>High Court vacancies: confirmed at 341 vacant against a sanctioned strength of 1,122 as of 1 July 2026 (30.4% vacancy rate) — closely matches the lecture's "370+" figure; a more recent snapshot (13 September 2026) shows 299 vacant (26.6%), reflecting the pace of fresh appointments. Asset disclosure: confirmed — of 813 High Court judges nationwide, only 87 (roughly 10–12%) have publicly disclosed their assets, with about 80% of all disclosures coming from just three High Courts (Kerala, Punjab &amp; Haryana, and Delhi). "Uncle judges": confirmed — reporting based on Supreme Court data (as of March 2025) found at least 30% of sitting Supreme Court judges are related to former judges, matching the lecture's "nearly one-third" framing (a further ~30% are second/third-generation lawyers; a parallel High Court analysis found roughly 1 in 3 HC judges have comparable family/legal-fraternity links). Source: <a href="https://www.doj.gov.in/static/uploads/2026/05/c0f593db7c35d425c94883b9a4afb139.pdf" target="_blank" rel="noopener">Dept. of Justice, HC sanctioned/working strength (1 July 2026)</a>; <a href="https://www.barandbench.com/news/12-judges-assets-public-supreme-court-transparency-to-system" target="_blank" rel="noopener">Bar and Bench, judicial asset disclosure</a>; <a href="https://theprint.in/judiciary/lineage-runs-deep-in-indias-supreme-court-60-judges-are-from-lawyer-or-judge-families/2573937/" target="_blank" rel="noopener">The Print, Supreme Court judge lineage data</a>.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>"Dissent is the safety valve of democracy" quote — resolved</h4>
+    <p>Confirmed: this is <strong>Justice D.Y. Chandrachud</strong> (then a sitting Supreme Court judge, later CJI, 2022–2024), first made in a February 2020 speech amid the anti-CAA protests: "Dissent is a safety valve of democracy... if it is not allowed, the pressure cooker will burst." He reiterated the same framing as a former CJI in June 2026. The quote-card attribution above has been updated accordingly. Source: <a href="https://scroll.in/latest/953264/labelling-dissent-as-anti-national-strikes-at-the-heart-of-democracy-says-justice-chandrachud" target="_blank" rel="noopener">Scroll.in, February 2020</a>; <a href="https://www.theweek.in/news/india/2026/06/10/dissent-is-democracys-safety-valve-but-ex-cji-dy-chandrachud-the-week-education-conclave-2026.html" target="_blank" rel="noopener">The Week, June 2026</a>.</p>
+  </div>
+</section>
+
+</div>
+
+<footer>
+  Notes compiled from an unlisted lecture recording using YouTube's auto-generated transcript. Timestamps are approximate; several names and figures were transcribed imperfectly by auto-captions and are flagged inline for verification against the original lecture or handwritten notes before citing in an exam answer. Supplementary research sections are separately verified via web search and marked accordingly. Click Save (first time will ask you to pick this file) to write your edits directly to disk — no chat needed.
+</footer>
+
+
+<script>
+(function() {
+  var mode = null;
+  var noteCounter = 0;
+
+  var btnHighlight = document.getElementById('btn-highlight');
+  var btnUnderline = document.getElementById('btn-underline');
+  var btnNote = document.getElementById('btn-note');
+  var btnClear = document.getElementById('btn-clear');
+  var btnSave = document.getElementById('btn-save');
+  var statusText = document.getElementById('status-text');
+  var contentRoot = document.getElementById('content-root');
+  var noteBox = document.getElementById('note-input-box');
+  var noteText = document.getElementById('note-text');
+  var pendingNoteTarget = null;
+
+  function setMode(newMode) {
+    mode = mode === newMode ? null : newMode;
+    btnHighlight.classList.toggle('active', mode === 'highlight');
+    btnUnderline.classList.toggle('active', mode === 'underline');
+    btnNote.classList.toggle('active', mode === 'note');
+  }
+
+  btnHighlight.addEventListener('click', function() { setMode('highlight'); });
+  btnUnderline.addEventListener('click', function() { setMode('underline'); });
+  btnNote.addEventListener('click', function() { setMode('note'); });
+
+  function markDirty() {
+    statusText.textContent = 'Unsaved changes';
+    statusText.style.color = '#993c1d';
+  }
+
+  document.addEventListener('mouseup', function(e) {
+    if (mode !== 'highlight' && mode !== 'underline') return;
+    var sel = window.getSelection();
+    if (!sel || sel.isCollapsed || sel.rangeCount === 0) return;
+    var range = sel.getRangeAt(0);
+    if (!contentRoot.contains(range.commonAncestorContainer)) return;
+
+    var wrapper = document.createElement(mode === 'highlight' ? 'mark' : 'u');
+    wrapper.className = mode === 'highlight' ? 'user-highlight' : 'user-underline';
+    try {
+      range.surroundContents(wrapper);
+    } catch (err) {
+      var frag = range.extractContents();
+      wrapper.appendChild(frag);
+      range.insertNode(wrapper);
+    }
+    sel.removeAllRanges();
+    markDirty();
+  });
+
+  contentRoot.addEventListener('click', function(e) {
+    if (mode !== 'note') return;
+    if (e.target.closest('.user-note')) return;
+    pendingNoteTarget = e.target;
+    noteBox.style.display = 'block';
+    var x = Math.min(e.clientX, window.innerWidth - 280);
+    var y = Math.min(e.clientY, window.innerHeight - 140);
+    noteBox.style.left = x + 'px';
+    noteBox.style.top = y + 'px';
+    noteText.value = '';
+    noteText.focus();
+  });
+
+  document.getElementById('note-cancel').addEventListener('click', function() {
+    noteBox.style.display = 'none';
+    pendingNoteTarget = null;
+  });
+
+  document.getElementById('note-add').addEventListener('click', function() {
+    var text = noteText.value.trim();
+    if (!text || !pendingNoteTarget) { noteBox.style.display = 'none'; return; }
+    noteCounter++;
+    var noteDiv = document.createElement('div');
+    noteDiv.className = 'user-note';
+    noteDiv.setAttribute('data-note-id', noteCounter);
+    noteDiv.innerHTML = '<span class="note-label">Your note</span>' +
+      '<button class="del-note" title="Remove note">&times;</button>' +
+      '<span class="note-body"></span>';
+    noteDiv.querySelector('.note-body').textContent = text;
+    noteDiv.querySelector('.del-note').addEventListener('click', function() {
+      noteDiv.remove();
+      markDirty();
+    });
+
+    var target = pendingNoteTarget.closest('li, p, td, div.quote-card, section') || contentRoot;
+    target.parentNode.insertBefore(noteDiv, target.nextSibling);
+
+    noteBox.style.display = 'none';
+    pendingNoteTarget = null;
+    markDirty();
+    setMode('note');
+  });
+
+  btnClear.addEventListener('click', function() {
+    if (!confirm('Remove all your highlights, underlines, and notes on this page?')) return;
+    contentRoot.querySelectorAll('.user-note').forEach(function(n) { n.remove(); });
+    contentRoot.querySelectorAll('mark.user-highlight').forEach(function(m) {
+      var parent = m.parentNode;
+      while (m.firstChild) parent.insertBefore(m.firstChild, m);
+      parent.removeChild(m);
+    });
+    contentRoot.querySelectorAll('u.user-underline').forEach(function(u) {
+      var parent = u.parentNode;
+      while (u.firstChild) parent.insertBefore(u.firstChild, u);
+      parent.removeChild(u);
+    });
+    markDirty();
+  });
+
+  var fallbackHelp = document.getElementById('fallback-help');
+  document.getElementById('fallback-close').addEventListener('click', function() {
+    fallbackHelp.style.display = 'none';
+  });
+
+  var fileHandle = null;
+  var fsaSupported = 'showSaveFilePicker' in window;
+  var THIS_FILENAME = 'notes.html';
+
+  function buildFullHtml() {
+    var doc = document.documentElement.cloneNode(true);
+    var liveContentRoot = doc.querySelector('#content-root');
+    if (liveContentRoot) liveContentRoot.innerHTML = contentRoot.innerHTML;
+    return '<!DOCTYPE html>\n' + doc.outerHTML;
+  }
+
+  async function writeToFile() {
+    var writable = await fileHandle.createWritable();
+    await writable.write(buildFullHtml());
+    await writable.close();
+  }
+
+  btnSave.addEventListener('click', async function() {
+    statusText.textContent = 'Saving…';
+    statusText.style.color = '#57606a';
+    if (!fsaSupported) {
+      fallbackHelp.style.display = 'block';
+      statusText.textContent = 'Direct save not supported in this browser';
+      statusText.style.color = '#993c1d';
+      return;
+    }
+    try {
+      if (!fileHandle) {
+        fileHandle = await window.showSaveFilePicker({
+          suggestedName: THIS_FILENAME,
+          types: [{ description: 'HTML file', accept: { 'text/html': ['.html'] } }]
+        });
+      }
+      var perm = await fileHandle.queryPermission({ mode: 'readwrite' });
+      if (perm !== 'granted') {
+        perm = await fileHandle.requestPermission({ mode: 'readwrite' });
+      }
+      if (perm !== 'granted') {
+        statusText.textContent = 'File permission denied — click Save to retry';
+        statusText.style.color = '#993c1d';
+        fileHandle = null;
+        return;
+      }
+      await writeToFile();
+      statusText.textContent = 'Saved to file just now';
+      statusText.style.color = '#3b6d11';
+    } catch (err) {
+      console.error('SAVE_ERROR', err.name, err.message, err);
+      if (err.name === 'AbortError') {
+        statusText.textContent = 'Save cancelled';
+        statusText.style.color = '#57606a';
+      } else {
+        statusText.textContent = 'Save failed: ' + err.name + ' — click Save to retry';
+        statusText.style.color = '#993c1d';
+        fileHandle = null;
+      }
+    }
+  });
+
+  contentRoot.querySelectorAll('.user-note .del-note').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      btn.closest('.user-note').remove();
+      markDirty();
+    });
+  });
+
+  contentRoot.querySelectorAll('.spacing-tracker input[type="checkbox"]').forEach(function(cb) {
+    cb.addEventListener('change', function() {
+      if (cb.checked) { cb.setAttribute('checked', 'checked'); }
+      else { cb.removeAttribute('checked'); }
+      markDirty();
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

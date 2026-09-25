@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class 3(27): Artificial Intelligence in Judiciary &amp; Public Distribution System (SARTHAK-PDS)</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: #faf9f6;
+    color: #1f2328;
+    margin: 0;
+    padding: 0 0 80px;
+    line-height: 1.6;
+  }
+  .toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: #ffffff;
+    border-bottom: 2px solid #1d5b8b;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: Arial, sans-serif;
+    flex-wrap: wrap;
+  }
+  .toolbar button {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    padding: 7px 14px;
+    border-radius: 6px;
+    border: 1px solid #d8d2c6;
+    background: #fff;
+    cursor: pointer;
+    color: #1f2328;
+  }
+  .toolbar button:hover { background: #e6f1fb; border-color: #1d5b8b; }
+  .toolbar button.active { background: #1d5b8b; color: #fff; border-color: #1d5b8b; }
+  .toolbar .save-btn { background: #2f6b4f; color: #fff; border-color: #2f6b4f; margin-left: auto; }
+  .toolbar .save-btn:hover { background: #24543e; }
+  .toolbar .status { font-size: 12px; color: #57606a; margin-left: auto; padding-right: 8px; }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 30px 20px; }
+  header { border-bottom: 3px solid #1d5b8b; padding-bottom: 20px; margin-bottom: 30px; }
+  header h1 { font-size: 1.6em; margin: 0 0 6px; color: #1d5b8b; }
+  header .meta { color: #57606a; font-size: 0.95em; font-family: Arial, sans-serif; }
+  section { margin-bottom: 42px; }
+  h2 { font-size: 1.4em; color: #1d5b8b; border-left: 4px solid #1d5b8b; padding-left: 12px; margin-bottom: 14px; }
+  h3 { font-size: 1.12em; margin: 22px 0 8px; }
+  p { margin: 10px 0; }
+  .summary-box { background: #e6f1fb; border-radius: 8px; padding: 18px 22px; font-size: 0.98em; }
+  ul, ol.answers { padding-left: 24px; }
+  li { margin-bottom: 6px; }
+  .timestamp { font-family: 'Courier New', monospace; font-size: 0.78em; color: #57606a; background: #e2ddd4; border-radius: 4px; padding: 1px 6px; margin-right: 6px; }
+  .quote-card { background: #fff; border: 1px solid #e2ddd4; border-left: 4px solid #1d5b8b; border-radius: 6px; padding: 14px 18px; margin: 14px 0; }
+  .quote-card .q { font-style: italic; font-size: 1.05em; }
+  .quote-card .attrib { font-family: Arial, sans-serif; font-size: 0.85em; color: #57606a; margin-top: 6px; }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.95em; background: #fff; }
+  th, td { border: 1px solid #e2ddd4; padding: 8px 12px; text-align: left; vertical-align: top; }
+  th { background: #e6f1fb; font-family: Arial, sans-serif; font-size: 0.88em; }
+  .gap-box { background: #eef4f0; border: 1px solid #cfe3d6; border-radius: 8px; padding: 16px 20px; margin-top: 16px; font-size: 0.95em; }
+  .gap-box h4 { margin: 0 0 8px; color: #2f6b4f; font-family: Arial, sans-serif; font-size: 0.95em; }
+  .exam-tip { background: #fff7e6; border: 1px solid #f0dba8; border-radius: 8px; padding: 14px 20px; margin: 14px 0; font-size: 0.95em; }
+  .exam-tip::before { content: "Exam strategy: "; font-weight: bold; font-family: Arial, sans-serif; }
+  .term-box { background: #fdf3f3; border: 1px solid #ecd4d4; border-radius: 8px; padding: 12px 16px; margin: 10px 0; }
+  .term-box strong { color: #8b3a3a; }
+  .data-box { background: #f3f0fb; border: 1px solid #ddd6f0; border-radius: 8px; padding: 12px 16px; margin: 10px 0; font-family: 'Courier New', monospace; font-size: 0.9em; }
+  .case-box { background: #fff; border: 1px solid #e2ddd4; border-left: 4px solid #8b3a3a; border-radius: 6px; padding: 12px 18px; margin: 10px 0; }
+  .case-box strong { color: #8b3a3a; }
+  footer { margin-top: 60px; border-top: 1px solid #e2ddd4; padding-top: 16px; color: #57606a; font-size: 0.82em; font-family: Arial, sans-serif; }
+  .toc {
+    background: #fff;
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    padding: 16px 22px;
+    margin-bottom: 36px;
+    font-family: Arial, sans-serif;
+    font-size: 0.9em;
+  }
+  .toc h2 { font-size: 1em; margin: 0 0 10px; border: none; padding: 0; color: #1d5b8b; text-transform: uppercase; letter-spacing: 0.04em; }
+  .toc ol { columns: 2; margin: 0; padding-left: 20px; }
+  .toc a { color: #1f2328; text-decoration: none; }
+  .toc a:hover { color: #1d5b8b; text-decoration: underline; }
+  details.collapse-section {
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    background: #fff;
+    margin: 14px 0;
+    padding: 0;
+  }
+  details.collapse-section summary {
+    cursor: pointer;
+    padding: 12px 16px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 0.92em;
+    color: #1d5b8b;
+    list-style: none;
+  }
+  details.collapse-section summary::-webkit-details-marker { display: none; }
+  details.collapse-section summary::before { content: "▸ "; }
+  details.collapse-section[open] summary::before { content: "▾ "; }
+  details.collapse-section .collapse-body { padding: 4px 16px 16px; }
+  .glossary-term {
+    display: flex;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+  }
+  .glossary-term:last-child { border-bottom: none; }
+  .glossary-term dt { font-weight: bold; color: #8b3a3a; min-width: 220px; flex-shrink: 0; font-family: Arial, sans-serif; font-size: 0.9em; }
+  .glossary-term dd { margin: 0; }
+
+  mark.user-highlight { background: #fff176; padding: 1px 2px; border-radius: 2px; }
+  u.user-underline { text-decoration: underline; text-decoration-color: #1d5b8b; text-decoration-thickness: 2px; }
+  .user-note {
+    background: #e6f1fb;
+    border: 1px solid #85b7eb;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin: 8px 0;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #0c447c;
+    position: relative;
+  }
+  .user-note .note-label { font-weight: bold; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; display: block; }
+  .user-note .del-note { position: absolute; top: 6px; right: 8px; cursor: pointer; border: none; background: none; color: #0c447c; font-size: 14px; font-family: Arial, sans-serif; }
+  #note-input-box {
+    position: fixed;
+    display: none;
+    background: #fff;
+    border: 2px solid #1d5b8b;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    z-index: 100;
+    font-family: Arial, sans-serif;
+  }
+  #note-input-box textarea { width: 240px; height: 60px; font-family: Arial, sans-serif; font-size: 13px; border: 1px solid #d8d2c6; border-radius: 4px; padding: 6px; }
+  #note-input-box .note-actions { margin-top: 6px; display: flex; gap: 6px; justify-content: flex-end; }
+  #note-input-box button { font-size: 12px; padding: 5px 10px; border-radius: 4px; border: 1px solid #d8d2c6; background: #fff; cursor: pointer; }
+  #note-input-box button.primary { background: #1d5b8b; color: #fff; border-color: #1d5b8b; }
+  .content-target::selection { background: #ffe082; }
+  .board-caption { font-family: Arial, sans-serif; font-size: 0.82em; color: #57606a; margin-top: -8px; margin-bottom: 14px; }
+  .mermaid { background: #fff; border: 1px solid #e2ddd4; border-radius: 8px; padding: 10px; margin: 14px 0; }
+  .arcs-box {
+    background: #fff;
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 14px 0;
+  }
+  .arcs-box h4 { margin: 0 0 10px; color: #1d5b8b; font-family: Arial, sans-serif; font-size: 0.98em; }
+  .recall-q { margin-bottom: 14px; }
+  .recall-q p.q-text { font-weight: bold; margin: 0 0 6px; }
+  .recall-q details { border: none; margin: 0; }
+  .recall-q summary { font-family: Arial, sans-serif; font-size: 0.82em; color: #1d5b8b; cursor: pointer; list-style: none; padding: 2px 0; }
+  .recall-q summary::-webkit-details-marker { display: none; }
+  .recall-q summary::before { content: "Show answer \25B8 "; }
+  .recall-q details[open] summary::before { content: "Hide answer \25BE "; }
+  .recall-q .ans { background: #eef4f0; border-radius: 6px; padding: 8px 12px; margin-top: 6px; font-size: 0.95em; }
+  .spacing-tracker { font-family: Arial, sans-serif; font-size: 0.92em; }
+  .spacing-tracker table { margin: 8px 0; }
+  .spacing-tracker input[type="checkbox"] { width: 16px; height: 16px; cursor: pointer; }
+  .mnemonic-box { background: #fff7e6; border: 1px solid #f0dba8; border-radius: 8px; padding: 14px 18px; margin: 10px 0; }
+  .mnemonic-box h4 { margin: 0 0 6px; color: #8b5a1d; font-family: Arial, sans-serif; font-size: 0.92em; }
+  .applic-table td.gs-tag { font-family: Arial, sans-serif; font-weight: bold; font-size: 0.85em; white-space: nowrap; }
+  .applic-table .prelims-badge, .applic-table .mains-badge {
+    display: inline-block; font-family: Arial, sans-serif; font-size: 0.72em; font-weight: bold;
+    padding: 2px 8px; border-radius: 10px; margin-right: 4px;
+  }
+  .prelims-badge { background: #eaf3de; color: #3b6d11; }
+  .mains-badge { background: #e6f1fb; color: #1d5b8b; }
+  .pyramid { font-family: Arial, sans-serif; font-size: 0.92em; margin: 14px 0; }
+  .pyramid-row { display: flex; align-items: center; gap: 12px; padding: 8px 14px; border-radius: 6px; margin-bottom: 6px; }
+  .pyramid-red { background: #fdf3f3; border-left: 5px solid #b33a3a; }
+  .pyramid-amber { background: #fff7e6; border-left: 5px solid #d99a1d; }
+  .pyramid-green { background: #eaf3de; border-left: 5px solid #3b6d11; }
+  .pyramid-row strong { min-width: 90px; display: inline-block; }
+  #fallback-help {
+    position: fixed;
+    display: none;
+    top: 60px;
+    right: 20px;
+    max-width: 320px;
+    background: #fff;
+    border: 2px solid #993c1d;
+    border-radius: 8px;
+    padding: 14px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    z-index: 200;
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <button id="btn-highlight" title="Select text, then click to highlight it">Highlight</button>
+  <button id="btn-underline" title="Select text, then click to underline it">Underline</button>
+  <button id="btn-note" title="Click this, then click anywhere in the notes to drop a note">Add note</button>
+  <button id="btn-clear" title="Remove all your highlights, underlines, and notes">Clear my edits</button>
+  <span class="status" id="status-text">Not connected to file — click Save once to connect</span>
+  <button class="save-btn" id="btn-save">Save</button>
+</div>
+
+<div id="fallback-help">
+  <strong>Your browser can't save directly</strong>
+  <p style="margin:6px 0;">File System Access isn't supported here (common on Safari/Firefox). Use Chrome or Edge to enable direct-save, or use your browser's Save Page As (Ctrl/Cmd+S) to overwrite this file manually after editing.</p>
+  <button id="fallback-close" style="font-size: 12px; padding: 6px 12px; border-radius: 4px; border: 1px solid #993c1d; background: #993c1d; color: #fff; cursor: pointer;">Got it</button>
+</div>
+
+<div id="note-input-box">
+  <textarea id="note-text" placeholder="Type your note..."></textarea>
+  <div class="note-actions">
+    <button id="note-cancel">Cancel</button>
+    <button class="primary" id="note-add">Add</button>
+  </div>
+</div>
+
+<div class="wrap content-target" id="content-root">
+
+<header>
+  <h1>Class 3(27) — Artificial Intelligence in Judiciary &amp; Public Distribution System (SARTHAK-PDS)</h1>
+  <div class="meta">
+    <span>Source: unlisted YouTube lecture recording ("class3")</span> &middot;
+    <span>Duration: 0:00 – 1:39:15</span> &middot;
+    <span>Track: UPSC GS-2 (Polity/Governance/Judiciary) / GS-3 (Economy, Food Security) — Current Affairs Answer Writing</span>
+  </div>
+</header>
+
+<nav class="toc">
+  <h2>Contents</h2>
+  <ol>
+    <li><a href="#applicability">Applicability — GS papers, Prelims &amp; Mains</a></li>
+    <li><a href="#recap">Recap: previous class's agri-marketing PYQ answer</a></li>
+    <li><a href="#part1">Topic 1: AI in judiciary — framework &amp; key terms</a></li>
+    <li><a href="#part2">Topic 1: Draft regulations, cases &amp; global comparison</a></li>
+    <li><a href="#part3">Topic 1: Live answer-writing exercise</a></li>
+    <li><a href="#part4">Topic 2: PDS — evolution &amp; institutional framework</a></li>
+    <li><a href="#part5">Topic 2: SARTHAK-PDS, data &amp; challenges</a></li>
+    <li><a href="#part6">Topic 2: Live answer-writing exercise</a></li>
+    <li><a href="#glossary">Glossary — quick revision</a></li>
+    <li><a href="#arcs">Revision kit (ARCS)</a></li>
+    <li><a href="#gaps">Supplementary research</a></li>
+  </ol>
+</nav>
+
+<section id="summary">
+  <h2>Executive summary</h2>
+  <div class="summary-box">
+  <p>Third class of the CA Mains 2027 answer-writing series. Opens with a review of the previous class's model PYQ answer on agricultural marketing bottlenecks (Sahyadri Farms case reinforced as a reusable model for any agriculture question).</p>
+  <p><strong>Topic 1</strong> is <strong>Artificial Intelligence in the judiciary</strong>:</p>
+  <ul>
+    <li>Introduction strategy — clinical/assistive role of AI vs. adjudication being irreducibly human</li>
+    <li>The Supreme Court's Draft Regulations for Use of AI in Courts, 2026 (five core principles, apex body, CORE-AI, ethical impact assessment, human-in-the-loop)</li>
+    <li>The "innovation versus independence" debate</li>
+    <li>A green/amber/red pyramid model of permissible AI use</li>
+    <li>Key hallucination incidents (the July 2026 NCLT/NCLAT "methyl isocyanate" judgment, Mata v. Avianca in the US)</li>
+    <li>Domestic tech initiatives (SUVAS, Kerala's 24×7 ONCOURTS)</li>
+    <li>A full live timed answer-writing exercise on the quote "Justice is not a mere algorithm... it is a reflection of human conscience"</li>
+  </ul>
+  <p><strong>Topic 2</strong> is the <strong>Public Distribution System</strong>:</p>
+  <ul>
+    <li>Three generations of food security (availability → affordability/accessibility → sustainability)</li>
+    <li>The PDS institutional framework (center/state roles, FCI procurement and storage, CAP model)</li>
+    <li>The newly approved SARTHAK-PDS scheme (₹25,530 crore, merging intra-state movement assistance and SMART-PDS)</li>
+    <li>Verified leakage/digitization data (ICRIER's 28-29% leakage finding, Aadhaar seeding, EPOS coverage)</li>
+    <li>Scholarly debate (Himanshu and Sen vs. the Shanta Kumar Committee on coverage vs. leakage)</li>
+    <li>A second live answer-writing exercise on the role of technology in improving PDS efficiency</li>
+  </ul>
+  <p>The instructor repeatedly stresses data-first introductions, diagram-first answers, and reusable case studies/quotes across GS papers.</p>
+  </div>
+</section>
+
+<section id="applicability">
+  <h2>Applicability — GS papers, Prelims &amp; Mains</h2>
+  <table class="applic-table">
+    <tr><th>Sub-topic</th><th>GS Paper</th><th>Prelims</th><th>Mains</th></tr>
+    <tr>
+      <td class="gs-tag">AI in judiciary — draft regulations, key terms, hallucination cases</td>
+      <td>GS-2 (Judiciary) / GS-3 (Science &amp; Tech)</td>
+      <td><span class="prelims-badge">Medium</span>Regulation dates, named incidents (e.g. the NCLT hallucination case), and named tools (SUVAS) are testable facts.</td>
+      <td><span class="mains-badge">High</span>One of the most consistently asked emerging-tech-in-governance themes; the AI-use pyramid (red/amber/green) is strong original mains content.</td>
+    </tr>
+    <tr>
+      <td class="gs-tag">Public Distribution System — evolution, institutional framework</td>
+      <td>GS-2 (Governance) / GS-3 (Food Security)</td>
+      <td><span class="prelims-badge">High</span>Three generations of food security, FCI role, and institutional architecture are classic static+CA MCQ material.</td>
+      <td><span class="mains-badge">High</span>PDS reform is a near-guaranteed recurring GS-3 food-security theme.</td>
+    </tr>
+    <tr>
+      <td class="gs-tag">SARTHAK-PDS scheme (2026) — data &amp; modules</td>
+      <td>GS-3 (Food Security/Governance)</td>
+      <td><span class="prelims-badge">High</span>Scheme name, cabinet-approval date, outlay figure, and beneficiary count are exactly the kind of scheme-detail facts Prelims tests.</td>
+      <td><span class="mains-badge">High</span>Directly reusable as the current-affairs "hook" and data backbone for a PDS-efficiency mains answer.</td>
+    </tr>
+    <tr>
+      <td class="gs-tag">Scholarly debate — Shanta Kumar Committee vs. Himanshu/Sen on coverage vs. leakage</td>
+      <td>GS-3 (Economy/Welfare)</td>
+      <td><span class="prelims-badge">Low</span>Scholarly positions are rarely tested as standalone MCQs.</td>
+      <td><span class="mains-badge">High</span>Named-scholar debate framing is high-value differentiator content for a welfare-targeting mains answer.</td>
+    </tr>
+  </table>
+  <p style="font-family: Arial, sans-serif; font-size: 0.85em; color: #57606a;">Rule of thumb applied across this series:</p>
+  <ul style="font-family: Arial, sans-serif; font-size: 0.85em; color: #57606a;">
+    <li>Any named Act/scheme/committee/case with a specific year, number, or figure is Prelims-relevant</li>
+    <li>Any debate, framework, or comparative-model discussion is Mains-relevant (answer structure and analytical content)</li>
+    <li>The two are usually not mutually exclusive for a well-covered current-affairs topic</li>
+  </ul>
+</section>
+
+<section id="recap">
+  <h2>0. Recap: previous class's agri-marketing PYQ answer</h2>
+  <p><span class="timestamp">0:39</span>Class opens reviewing a model answer to the 2022 PYQ: "What are the main bottlenecks in the upstream and downstream process of marketing of agriculture products in India?" — the same question flagged at the end of Class 2(27).</p>
+  <ul>
+    <li>Model answer opened with the same data-first introduction from Class 2(27): "despite India being the seventh largest exporter of agriculture produce with shipments more than ₹5 lakh crore, the domestic marketing ecosystem remains deeply fragmented."</li>
+    <li>Used a value-chain diagram: farming → harvesting → collection → storage → processing → wholesaler → retailer → consumer, split into upstream and downstream halves.</li>
+    <li>Upstream: low productivity/yield data, land fragmentation, low technology/automation, lack of economies of scale, cropping pattern distortion (cereal-centric due to MSP policy).</li>
+    <li>Downstream: post-harvest loss data (with a bar diagram), low food processing (~10%), FTA/trade negotiation pressure tied to the deregulation debate.</li>
+    <li>Cited eNAM and a farmer-aggregation-to-quick-commerce diagram (farmer → aggregator → cold store → dark store), Sahyadri Farms as an emulable case study, and closed with a "go global farming" slogan-based conclusion.</li>
+  </ul>
+  <div class="exam-tip">Instructor's core message: writing an average answer earns ~3-3.5 marks on a 10-marker; the difference between an average and a 4+ / 6+ scoring answer comes from properly using diagrams, data, and reusable case studies (e.g., Sahyadri Farms — 10 farmers in 2004 to 26,500 farmers now — is presented as usable in <em>any</em> agriculture question, not just marketing).</div>
+</section>
+
+<section id="part1">
+  <h2>1. Topic 1: AI in judiciary — framework &amp; key terms</h2>
+  <p>Recommended structure: introduction → context (news hook) → key differentiations/terms → debates → pros and cons (substantiated with data) → draft regulation details → domestic and global examples → suggestions → conclusion.</p>
+
+  <h3>Introduction strategy</h3>
+  <div class="quote-card">
+    <div class="q">As India struggles with the massive judicial backlog of more than 5 crore cases (National Judicial Data Grid), AI offers tools to improve efficiency. However, the fundamental nature of justice demands that machines do not take up the role of the judge.</div>
+    <div class="attrib">— Instructor's model introduction; deliberately states both what AI can solve and what it cannot, to signal clarity to the examiner</div>
+  </div>
+  <p>Immediate news hook: the Supreme Court's release of the Draft Regulations for Use of AI in Courts, 2026 in June 2026.</p>
+  <p>Instructor notes this is the most current context and can substitute for or accompany the definitional introduction.</p>
+
+  <h3>Key differentiations</h3>
+  <div class="term-box"><strong>Deployment of AI in judiciary:</strong> use of AI to enhance the speed, transparency, and administrative efficiency of the justice delivery system (the accepted, "clinical"/assistive use).</div>
+  <div class="term-box"><strong>Algorithmic decision-making:</strong> use of AI to automatically generate judicial outcomes, sentences, or risk profiling/bail determination — i.e., AI actually deciding a case. This is explicitly NOT wanted.</div>
+  <div class="term-box"><strong>Administrative AI vs. Adjudicator AI:</strong> Administrative AI is assistive/clerical (case management, scheduling) and is encouraged; Adjudicator AI makes judicial decisions affecting individual rights and is not recommended.</div>
+  <div class="term-box"><strong>Human-in-the-loop model:</strong> AI operates only in an assistive capacity; a human must supervise, verify, and take the final decision. This is the recurring conclusion for any AI-related answer, not just judiciary.</div>
+
+  <h3>The core debate: innovation versus independence</h3>
+  <ul>
+    <li><strong>Innovation (why AI is needed):</strong> reduce delay/backlogs via caseload management (automatically categorizing cases by pendency — e.g., flagging 5-6-year-old cases).</li>
+    <li>Improving the case clearance rate (ratio of cases disposed of to cases filed, keeping backlog from growing).</li>
+    <li><strong>Independence (what must not be compromised):</strong>
+      <ul>
+        <li>Judicial independence is part of the basic structure of the Constitution.</li>
+        <li>The Supreme Court is the guardian of the Constitution and protector of fundamental rights.</li>
+        <li>Over-dependence on AI risks hallucinations (e.g., the NCLT case — see below).</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>Human primacy versus "organic justice" (algorithmic bias)</h3>
+  <p>AI trained on historical data will reproduce historical patterns and biases.</p>
+  <ul>
+    <li><strong>Example used in class:</strong> India's colonial-era "Criminal Tribes" classification (tribes labeled criminal by the British, later denotified after independence)</li>
+    <li>If an AI model were trained on such historically discriminatory data, it could reproduce the same bias in bail/risk-scoring decisions today</li>
+    <li>E.g., systematically assessing poor defendants as higher flight risks than wealthy ones on biased historical correlations rather than actual case facts</li>
+  </ul>
+  <div class="term-box"><strong>Black-box AI:</strong> the core transparency problem — a model can output a decision (e.g., grant bail to person A, deny to person B) without any explainable basis, making it impossible to audit for fairness.</div>
+  <div class="term-box"><strong>Accountability void (accountability vacuum):</strong> if an AI-assisted decision goes wrong, it is unclear whether the developer, the approving ministry, the judge, or the lawyer is accountable — no single accountable party.</div>
+
+  <h3>The pyramid of permissible AI use in judiciary</h3>
+  <p class="board-caption">Board diagram rebuilt from the lecture — a traffic-light pyramid of AI use cases:</p>
+  <div class="pyramid">
+    <div class="pyramid-row pyramid-red"><strong>Red (prohibited)</strong> Adjudication — deciding cases, determining bail eligibility, assessing witness credibility. Requires a human judge's ethical/moral compass; cannot be delegated.</div>
+    <div class="pyramid-row pyramid-amber"><strong>Amber (caution)</strong> Case research, translation, transcription — permitted but requires verification (e.g., a UK case where "no" was mistranslated, changing the meaning of a judgment; India's own "leave granted" vs. "holiday granted" translation ambiguity example).</div>
+    <div class="pyramid-row pyramid-green"><strong>Green (allowed)</strong> Case management, categorization by pendency, administrative/clerical tasks — AI can do these better than manual processes.</div>
+  </div>
+</section>
+
+<section id="part2">
+  <h2>2. Topic 1: Draft regulations, cases &amp; global comparison</h2>
+
+  <h3>Key judicial data (mug up for any judiciary question)</h3>
+  <div class="data-box">
+    More than 5 crore cases pending in India (National Judicial Data Grid):<br>
+    — ~60 lakh in High Courts, 80,000+ in the Supreme Court<br>
+    — Meaning ~4.3-4.4 crore cases are pending in the lower judiciary (the major bottleneck)<br><br>
+    Judge-to-population ratio: ~21 judges per million population in India (verified: Law Commission's 120th Report, 1987, recommended raising this to 50 per million; the Supreme Court endorsed this in 2002 in <em>All India Judges Association vs. Union of India</em>).<br>
+    Comparator: USA ~150/million, Europe ~220/million (lecture figures; broadly consistent with commonly cited comparisons, though exact European figures vary by country).
+  </div>
+
+  <h3>Draft Regulations for Use of AI in Courts, 2026 — verified details</h3>
+  <div class="term-box">Released by the Supreme Court's AI Committee in June 2026 (3 June 2026, public comment period closing 20 June 2026). Five core principles: <strong>human primacy, transparency and explainability, fairness and non-discrimination, accountability, and inclusivity/accessibility</strong> (data protection also cited).</div>
+  <ul>
+    <li><strong>Permitted uses:</strong> legal research, drafting assistance, scheduling, transcription, translation, citation verification, case/record management, judicial administration.</li>
+    <li><strong>Prohibited uses:</strong> deciding cases, determining bail eligibility, assessing witness credibility, or influencing judicial deliberation unless authorized by law — i.e., no algorithmic adjudication.</li>
+    <li><strong>Institutional structure:</strong> a full-time "apex body" at the Supreme Court (comprising SC judges, HC Chief Justices, HC judges, a MeitY officer, and technical/legal experts) to regulate AI integration; specialized committees; a proposed Centre of Research and Excellence on AI (CORE-AI).</li>
+    <li><strong>Ethical impact assessment:</strong> analogous to an environmental impact assessment — before deploying an AI tool, courts must pilot it and identify risks, biases, and vulnerabilities.</li>
+    <li><strong>Disclosure requirement (Regulation 43(3)):</strong> lawyers must formally disclose to the court whenever an AI tool is used in preparing pleadings, documents, or evidence.</li>
+    <li><strong>Conclusion principle:</strong> human-in-the-loop model — AI must remain assistive; a human must verify and take the final call.</li>
+  </ul>
+  <div class="gap-box">
+    <h4>Resolved: Regulation number confirmed against primary source</h4>
+    <p>The lecture's "Regulation 43" citation is <strong>correct</strong>. The Supreme Court AI Committee's original draft text (notice dated 3 June 2026) confirms Regulation 43 is titled "Transparency and disclosure," and sub-regulation 43(3) specifically requires that where an AI tool is used by a party or legal representative in preparing a document, pleading, or evidence, its AI-assisted character must be disclosed to the court via a certificate under Annexure I. Some secondary legal commentary loosely cites this as "Regulation 3" (the Definitions clause), which was the source of the earlier flagged discrepancy — the lecture and Regulation 43(3) are the correct citation.</p>
+  </div>
+
+  <h3>Hallucination cases — domestic and global</h3>
+  <div class="case-box">
+    <strong>NCLT/NCLAT "methyl isocyanate" case (Supreme Court, 2 July 2026, Justices P.S. Narasimha and Alok Aradhe):</strong>
+    <ul>
+      <li>The Court set aside NCLT and NCLAT orders in an insolvency matter (J&amp;K Bank vs. Essel Infraprojects Ltd., involving a default of ₹87.43 crore) after finding the tribunals had relied on six AI-generated judicial precedents that were either non-existent or misapplied.</li>
+      <li>The Court held: <em>"The production of fake, non-existent, and hallucinated material and its utilisation as precedents in law, is like the release of methyl isocyanate in the province of law and justice: invisible, insidious, and catastrophic by the time anyone notices."</em></li>
+      <li>The Court mandated a "zero tolerance" approach and directed the Bar Council of India to constitute a committee to frame guiding principles on AI use in adjudication.</li>
+    </ul>
+    <em>(Independently verified — this is the correct case; the lecture's brief mention of an earlier "ITAT" hallucination incident refers to a separate, different case from December 2024.)</em>
+  </div>
+  <div class="case-box">
+    <strong>Mata v. Avianca, Inc. (US, Southern District of New York, decided 22 June 2023, Judge P. Kevin Castel):</strong>
+    <ul>
+      <li>Lawyers representing Roberto Mata submitted a legal brief containing fake case citations generated by ChatGPT, including fabricated quotations.</li>
+      <li>When challenged, the lawyers compounded the error by filing an affidavit with further fabricated excerpts.</li>
+      <li>The court sanctioned the lawyers (Peter LoDuca, Steven A. Schwartz) and their firm $5,000 each for violating Federal Rule of Civil Procedure 11 by failing to verify the authenticity of cited authorities.</li>
+    </ul>
+    <em>(Independently verified — correctly cited in the lecture as "Mata versus Aanka.")</em>
+  </div>
+  <div class="data-box">China: experimenting with AI decision-making for petty cases/small fines. US: strict sanctions regime post-Mata v. Avianca for fake AI-generated citations.</div>
+
+  <h3>Domestic technology initiatives</h3>
+  <table>
+    <tr><th>Initiative</th><th>Description</th></tr>
+    <tr><td>SUVAS (Supreme Court Vidhik Anuvaad Software)</td><td>AI-based neural machine translation tool for judgments, launched Nov 2019; as of 2026 supports translation between English and ~19 Indian languages; has translated 36,000+ Supreme Court judgments (verified, updated from lecture's general mention)</td></tr>
+    <tr><td>Kerala HC 24×7 ONCOURTS (Kollam)</td><td>India's first fully digital court for cheque-bounce cases — filing, registration, hearings, and judgments conducted entirely online, linked with banks and police for information exchange (verified; lecture's "24/7 e-court for check-bounce cases" description matches this initiative)</td></tr>
+    <tr><td>eCourts Mission / unified data platform</td><td>"One case, one data" — unified case-data platform cited in class as a Supreme Court initiative for centralized case data management</td></tr>
+  </table>
+
+  <h3>Quotes for citation (all verified/correctly attributed to the Supreme Court)</h3>
+  <div class="quote-card"><div class="q">Relying on non-existent, AI-generated judgments is not merely an error in decision-making but amounts to judicial misconduct.</div></div>
+  <div class="quote-card"><div class="q">Technology must augment, not replace, the human mind's discernment.</div></div>
+  <div class="quote-card"><div class="q">The law, after all, is not a mere algorithm. It is a reflection of human conscience, shaped by empathy, moral reasoning, and an understanding of context that machines cannot replicate.</div></div>
+  <div class="quote-card"><div class="q">Technology is only a tool. The heart of justice must remain human.</div></div>
+  <div class="gap-box">
+    <h4>Scholar references — one verified, one still unresolved</h4>
+    <p>The lecture references two sources:</p>
+    <ul>
+      <li><strong>Still unverified:</strong> "Scholars like Leis" advocating for AI literacy and litigants' right to opt out of AI-assisted courtrooms — no scholar of this name could be matched via search; treat as unverified and do not cite the name in an exam answer.</li>
+      <li><strong>Verified:</strong> the Harvard Kennedy School paper is <em>"AI, Judges and Judgment: Setting the Scene"</em> (M-RCBG Associate Working Paper No. 220, Nov 2023), authored by Robert Buckland (UK's former Secretary of State for Justice). It argues AI in judicial administration is growing rapidly but that public skepticism toward courtroom AI is a healthy check, since low transparency plus poor public perception amplifies the risk of unaddressed bias — matching the lecture's framing.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="part3">
+  <h2>3. Topic 1: Live answer-writing exercise</h2>
+  <div class="quote-card">
+    <div class="q">"Justice is not a mere algorithm. It is a reflection of human conscience." In light of the statement, critically examine the use of AI in courts.</div>
+    <div class="attrib">— Model question used for a full timed live answer-writing exercise in class</div>
+  </div>
+  <ol class="answers">
+    <li><strong>Introduction:</strong> open with the quote itself (Supreme Court), or the "human conscience" framing directly — instructor notes it is fine to attribute a quote to "the Supreme Court" generically if the exact case name is not recalled, rather than omitting it.</li>
+    <li><strong>Body — organic justice vs. algorithmic justice (draw as a two-column comparison, not prose):</strong> Organic/human justice = facts + law + precedent + reasoning + empathy. Algorithmic justice = input → black-box → output, with no explainable reasoning — explicitly flagged as "not what we want."</li>
+    <li><strong>Body — pros (each substantiated with data):</strong> reduces pendency (5 crore+ cases, National Judicial Data Grid), improves efficiency (21 judges/million vs. 150/million in the USA), advanced legal research (SUVAS multilingual translation, case summarization), unified case-data platforms.</li>
+    <li><strong>Body — cons (each substantiated with a case):</strong> hallucination risk (NCLT "methyl isocyanate" case), lack of administrative capacity given 4.3+ crore pending in lower judiciary alone, digital divide 2.0 (even those with smartphones lack digital literacy), Personal Data Protection concerns given the sensitivity of judicial case data.</li>
+    <li><strong>Body — the regulatory response:</strong> Draft Regulations for Use of AI in Courts, 2026 — permitted/prohibited activities, the apex body, human-in-the-loop conclusion drawn directly from the regulation itself.</li>
+    <li><strong>Conclusion:</strong> human-in-the-loop model — AI in an assistive capacity only, human as final decision-maker and supervisor.</li>
+  </ol>
+  <div class="exam-tip">Put all diagrams (organic-vs-algorithmic comparison, pyramid of AI use) on the first page/side of the answer sheet visible to the examiner; do not bury them mid-answer. The instructor is explicit that a plain-text answer without diagrams loses marks even with identical content ("out of 10, I'm seeing a very plain sheet — you are not influencing me").</div>
+</section>
+
+<section id="part4">
+  <h2>4. Topic 2: PDS — evolution &amp; institutional framework</h2>
+  <p>Recommended structure: introduction (data-first) → three-part context (SARTHAK-PDS announcement / evolution timeline / definition) → institutional framework → SARTHAK-PDS specifics → data on leakage and digitization → significance → challenges → suggestions → conclusion.</p>
+
+  <h3>Model introduction</h3>
+  <div class="quote-card">
+    <div class="q">The Public Distribution System is the backbone of India's food security, delivering subsidized food grains to over 80 crore citizens. However, the food subsidy budget is increasing every year — ₹2.28 lakh crore for FY 2026-27, up from ₹2.03 lakh crore previously — hence a technological overhaul through SARTHAK-PDS is important to improve the system.</div>
+    <div class="attrib">— Instructor's model introduction; the same opening (minus the SARTHAK-specific sentence) is recommended for any general PDS or food security question</div>
+  </div>
+  <div class="exam-tip">For Paper 3 topics generally, lead the introduction with a data point rather than a general statement — it reads as more impactful to an examiner scanning many similar answers.</div>
+
+  <h3>Evolution of PDS — timeline</h3>
+  <table>
+    <tr><th>Period</th><th>Character</th></tr>
+    <tr><td>Before 1960s</td><td>Mainly for urban consumers, to address food inflation / stabilize food prices (India was food-deficit; relied on the US PL-480 "ship to mouth" import program)</td></tr>
+    <tr><td>1960s-1980s</td><td>General entitlement scheme available to all at a subsidized price (post-Green Revolution)</td></tr>
+    <tr><td>1990s</td><td>Revamped PDS (extended to remote/food-insecure areas), then Targeted PDS (TPDS) — shift from universal entitlement to BPL/Antyodaya targeting of the "poorest of the poor"</td></tr>
+    <tr><td>After 2013</td><td>National Food Security Act (NFSA) — statutory right to subsidized food grain for ~67% of the population</td></tr>
+    <tr><td>2020s onward</td><td>Modernization and digitization phase — SMART-PDS, and now SARTHAK-PDS (2026)</td></tr>
+  </table>
+
+  <h3>Three generations of food security (reusable framework)</h3>
+  <ul>
+    <li><strong>First generation — Availability:</strong> addressed via the Green Revolution.</li>
+    <li><strong>Second generation — Affordability and Accessibility:</strong> addressed via Revamped PDS / PDS expansion.</li>
+    <li><strong>Third generation — Sustainability:</strong> current focus — resilience against climate, geopolitical (e.g., West Asia/Russia grain shocks, COVID-19), and fertilizer supply shocks; achieved through climate-smart agriculture, PDS modernization, and "intelligence per acre" rather than merely increasing land under cultivation.</li>
+  </ul>
+
+  <h3>Institutional framework — roles</h3>
+  <table>
+    <tr><th>Level</th><th>Role</th></tr>
+    <tr><td>Center (FCI)</td><td>Procurement and storage. Procurement can be centralized (everything routed through FCI, requiring huge storage capacity — inherently inefficient) or decentralized (states procure and store directly).</td></tr>
+    <tr><td>State</td><td>Beneficiary identification, issuing ration cards, setting up Fair Price Shops (FPS), monitoring and supervision, and intra-state movement of food grains (center → district → block → FPS).</td></tr>
+    <tr><td>FPS dealer</td><td>Final-mile distribution to consumers; requires a sustainable dealer margin/commission to avoid incentivizing leakage.</td></tr>
+  </table>
+  <div class="term-box"><strong>CAP model (Cover and Plinth):</strong> an open-air storage method — food grain sacks are stacked on a raised platform (plinth) and covered with a sheet — used when covered warehouse capacity is insufficient. Leads to significant wastage/losses, often informally attributed to rodents ("blamed on rats") rather than acknowledged as a structural storage-capacity problem.</div>
+</section>
+
+<section id="part5">
+  <h2>5. Topic 2: SARTHAK-PDS, data &amp; challenges</h2>
+
+  <h3>SARTHAK-PDS — verified scheme details</h3>
+  <div class="data-box">
+    <strong>SARTHAK-PDS</strong> (Scheme for Assistance in Ration Transport and Handling — Income with Automation in PDS):<br>
+    — Approved by the Union Cabinet on <strong>27 May 2026</strong><br>
+    — Central outlay: <strong>₹25,530 crore</strong>, covering April 2026 to March 2031<br>
+    — Merges two prior schemes: assistance for intra-state food grain movement plus FPS dealer margin under NFSA, and SMART-PDS (the digitization scheme)<br>
+    — Covers <strong>81.35 crore NFSA beneficiaries</strong> (lecture's "more than 80 crore" figure is consistent)<br><br>
+    Three AI-enabled modules (verified, not covered by name in the lecture but directly relevant):<br>
+    — <strong>NIRMAL</strong> — real-time beneficiary registry<br>
+    — <strong>ASHA</strong> — multilingual grievance redressal platform<br>
+    — <strong>SAKSHAM</strong> — supply-chain platform with vehicle tracking (maps to the lecture's "Vehicle Location Tracking System (VTS)")
+  </div>
+  <div class="term-box">Twin objectives of SARTHAK-PDS as taught: (1) intra-state food grain movement — financial support to states, sustainable FPS dealer margins; (2) digitization — beneficiary registry, real-time transaction tracking (EPOS), portability (One Nation One Ration Card), grievance redressal.</div>
+  <div class="term-box">Anticipated benefits (as taught): a "secure system" preventing leakages, enhanced dealer margins for better service, a state command-and-control center for monitoring, and a national digital database ensuring portability and coordination between states and center, avoiding duplicate records.</div>
+
+  <p class="board-caption">SARTHAK-PDS supply-chain flow, with the AI-enabled module intervening at each leakage-prone stage:</p>
+  <div class="mermaid">
+flowchart LR
+    FCI["FCI<br/>Procurement &amp; central storage"] -->|"SAKSHAM: vehicle tracking (VTS)"| STATE["State Govt<br/>Allocation, intra-state movement"]
+    STATE --> DIST["District"]
+    DIST --> BLOCK["Block"]
+    BLOCK -->|"NIRMAL: real-time beneficiary registry"| FPS["Fair Price Shop"]
+    FPS -->|"EPOS + Aadhaar authentication"| BEN["Beneficiary"]
+    FPS -.->|"One Nation One Ration Card: portability"| BEN
+    BEN -.->|"ASHA: grievance redressal"| FPS
+  </div>
+
+  <h3>Verified data on leakage and digitization</h3>
+  <div class="data-box">
+    ICRIER study: <strong>~28-29% of PDS grains</strong> supplied by FCI and state governments do not reach intended beneficiaries — a financial loss of <strong>₹69,108 crore</strong>, equivalent to ~20 million metric tonnes of rice and wheat (study analyzed FCI offtake data, August 2022-July 2023, against Household Consumption Expenditure Survey data). Lecture's "28%" figure matches; the ₹69,108 crore loss figure is an added verified detail.<br><br>
+    Per Economic Survey (cited generally in lecture):<br>
+    — ~99.8% of ration cards are Aadhaar-seeded<br>
+    — ~99.6% of Fair Price Shops are equipped with ePOS (electronic point of sale) devices<br><br>
+    Over 2 crore ineligible beneficiaries removed following field verification (lecture figure; general order of magnitude consistent with known deduplication drives, though the specific source/date was not independently pinned down).
+  </div>
+  <div class="gap-box">
+    <h4>Correction: FCI rice stock figure</h4>
+    <p>The lecture cites FCI holding "309 lakh tonnes of rice" as of January 2026, "nine times the buffer norm." Independent search could not confirm this exact figure; closest verified data points found:</p>
+    <ul>
+      <li>Total foodgrain stocks of ~604 lakh tonnes (roughly 3x the buffer requirement)</li>
+      <li>An April 2026 figure of 386.10 lakh tonnes of rice against a buffer norm of 135.80 lakh tonnes (roughly 2.8x, not 9x)</li>
+    </ul>
+    <p>The broad point — FCI holds food grain stock well above the mandated buffer norm — is correct and well-documented, but do not cite the specific "309 lakh tonnes / nine times" figures in an exam without further verification.</p>
+  </div>
+
+  <h3>Scholarly debate: coverage vs. leakage</h3>
+  <div class="term-box"><strong>Shanta Kumar Committee (report submitted 20 January 2015 — lecture said "2014," a minor date error):</strong> recommended reducing NFSA coverage from 67% to 40% of the population to concentrate subsidies on the most vulnerable; also recommended raising priority-household allocation from 5 kg to 7 kg per person/month and piloting cash transfers in cities with population over 1 million, projecting savings of ~₹33,000 crore. Criticized for potentially excluding many genuinely poor households.</div>
+  <div class="term-box">
+    <strong>Himanshu and Sen (economists, Centre for Economic Studies and Planning, JNU):</strong>
+    <ul>
+      <li>Argued for near-universal PDS coverage to reduce leakage, directly opposing the Shanta Kumar Committee's coverage-reduction approach.</li>
+      <li>Cited historical data showing diversion/leakage rose from ~24% to ~54% between 1999-2000 and 2004-05, a period that coincided with the shift from universal to targeted (narrower) PDS coverage.</li>
+      <li>This supports a negative relationship between narrower coverage and leakage control (i.e., narrowing coverage did not reduce leakage as intended).</li>
+    </ul>
+    <em>(Independently verified; corrects the lecture's garbled "Professor Pakrishna" and "Humanu and Sen" references — the correct citation is Himanshu and Sen.)</em>
+  </div>
+  <div class="term-box">
+    <strong>Government initiatives cited:</strong>
+    <ul>
+      <li><strong>Annapurti Grain ATM</strong> — automated grain-dispensing machine (FCI + UN World Food Programme); dispenses up to 50 kg of rice/wheat in ~5 minutes via ration card or Aadhaar biometric verification; operates 24/7; deployed at 29 locations across 6 states, first launched in Odisha.</li>
+      <li><strong>One Nation One Ration Card</strong> — enables portability of ration entitlements, especially benefiting migrant workers.</li>
+    </ul>
+  </div>
+
+  <h3>Significance of PDS (beyond food security)</h3>
+  <ul>
+    <li><strong>Equalizes consumption:</strong> narrows the nutritional/consumption gap between rich and poor.
+      <ul>
+        <li>Cited via a scholar (referred to in lecture as "Professor Pakrishna," name not independently verifiable; treat with caution) arguing PDS can be leveraged to equalize primary food consumption across the population.</li>
+        <li>This is preferable to cash transfers/food coupons, which do not guarantee actual nutrition access during a food-price shock.</li>
+      </ul>
+    </li>
+    <li><strong>Crisis resilience:</strong> functions as a buffer during economic shocks (e.g., COVID-19, West Asia/Russia grain-supply disruptions).</li>
+    <li><strong>Farmer support:</strong> PDS procurement guarantees farmers MSP-based demand for their produce, linking food security policy to agricultural income support.</li>
+  </ul>
+
+  <h3>Challenges</h3>
+  <table>
+    <tr><th>SARTHAK-specific challenges</th><th>General PDS challenges</th></tr>
+    <tr><td>Allocation of intra-state movement funds when states differ between centralized/decentralized procurement models</td><td>Massive fiscal burden (₹2.28 lakh crore and rising)</td></tr>
+    <tr><td>No one-size-fits-all FPS dealer margin — costs vary by topography/remoteness</td><td>Administrative, technical, and coordination capacity gaps for full digitization</td></tr>
+    <tr><td>Ease of access and beneficiary "agency" — awareness of entitlements at the FPS level</td><td>
+      <ul style="margin:0; padding-left:18px;">
+        <li>Inclusion/exclusion errors</li>
+        <li>Storage deficits (CAP model losses)</li>
+        <li>FCI's centralized-procurement inefficiencies</li>
+      </ul>
+    </td></tr>
+    <tr><td>—</td><td>
+      <ul style="margin:0; padding-left:18px;">
+        <li>Cropping pattern distortion (wheat/rice-centric procurement)</li>
+        <li>Nutritional skew (Engel's law — as income rises, food's share of the household budget falls but nutritional diversity should rise, which PDS's limited grain basket does not fully support)</li>
+        <li>WTO trade-distorting subsidy classification concerns (echoes the "amber box" issue from Class 2(27)'s agri-marketing discussion)</li>
+      </ul>
+    </td></tr>
+  </table>
+</section>
+
+<section id="part6">
+  <h2>6. Topic 2: Live answer-writing exercise</h2>
+  <div class="quote-card">
+    <div class="q">Examine the role of technology in improving the efficiency of India's PDS system.</div>
+    <div class="attrib">— Model question used for a second full timed live answer-writing exercise in class</div>
+  </div>
+  <ol class="answers">
+    <li><strong>Introduction:</strong> context-first is preferable here — mention SARTHAK-PDS (₹25,530 crore modernization scheme) directly if recalled, otherwise a PDS/NFSA-based definitional opening works equally well.</li>
+    <li><strong>Body — brief timeline box:</strong> two to three points only (Targeted PDS → NFSA → modernization/SARTHAK) — a small side-box, not a full paragraph, since the question demand is about technology, not history.</li>
+    <li><strong>Body — role of technology by institutional level:</strong> Center/FCI — storage/inventory offloading tech, Vehicle Location Tracking System (VTS) for movement monitoring. State — Aadhaar-based beneficiary identification, EPOS for real-time transactions, Annapurti Grain ATMs, One Nation One Ration Card for portability. Draw a diagram of SARTHAK's flow from FCI/Center to FPS, showing where leakage/corruption is prevented at each stage.</li>
+    <li><strong>Body — challenges (still required even in a "positive" question):</strong> fiscal burden (₹2.28 lakh crore vs. SARTHAK's ₹25,530 crore outlay — frame this as: the outlay is a fraction of what could be recovered by plugging leakages) and technological/administrative capacity gaps.</li>
+    <li><strong>Conclusion/suggestions:</strong> capacity building, enhancing dealer margins, using PDS as a nutrition hub (diversifying the food basket, not just wheat/rice), and a gradual shift toward Direct Benefit Transfer (DBT) as a complementary (not wholesale-replacement) technology-driven reform.</li>
+  </ol>
+  <div class="exam-tip">Instructor's implicit-demand tip: even in a technology-focused question, do not omit the fiscal-burden point — juxtaposing the ₹2.28 lakh crore subsidy bill against the ₹25,530 crore SARTHAK outlay makes an implicit cost-benefit argument that most students miss.</div>
+</section>
+
+<section id="glossary">
+  <h2>Glossary — quick revision (all terms, one screen)</h2>
+  <dl>
+    <div class="glossary-term"><dt>Human-in-the-loop model</dt><dd>AI operates only in an assistive capacity; a human supervises, verifies, and makes the final decision — the standing conclusion for any AI-related answer.</dd></div>
+    <div class="glossary-term"><dt>Algorithmic decision-making</dt><dd>AI automatically generating judicial outcomes/sentences/bail decisions — explicitly prohibited under the Draft Regulations for AI in Courts, 2026.</dd></div>
+    <div class="glossary-term"><dt>Black-box AI</dt><dd>Opacity in how an AI model reaches a decision — the core transparency/explainability problem.</dd></div>
+    <div class="glossary-term"><dt>Draft Regulations for Use of AI in Courts, 2026</dt><dd>SC AI Committee's June 2026 draft; five principles (human primacy, transparency, fairness, accountability, inclusivity); apex body + CORE-AI; mandatory AI-use disclosure by lawyers.</dd></div>
+    <div class="glossary-term"><dt>NCLT "methyl isocyanate" case</dt><dd>July 2026 SC judgment (Justices Narasimha, Aradhe) setting aside NCLT/NCLAT orders based on AI-hallucinated precedents; compared fake citations to the Bhopal gas tragedy's toxic release.</dd></div>
+    <div class="glossary-term"><dt>Mata v. Avianca</dt><dd>2023 US case where lawyers were sanctioned $5,000 each for submitting ChatGPT-fabricated case citations.</dd></div>
+    <div class="glossary-term"><dt>SUVAS</dt><dd>Supreme Court Vidhik Anuvaad Software — AI translation tool for judgments into Indian languages; 36,000+ judgments translated as of 2026.</dd></div>
+    <div class="glossary-term"><dt>SARTHAK-PDS</dt><dd>₹25,530 crore Cabinet-approved scheme (May 2026) merging intra-state food grain movement assistance and SMART-PDS digitization; modules NIRMAL, ASHA, SAKSHAM.</dd></div>
+    <div class="glossary-term"><dt>CAP model (Cover and Plinth)</dt><dd>Open-air food grain storage method used when covered warehouse capacity is insufficient; associated with high wastage.</dd></div>
+    <div class="glossary-term"><dt>Shanta Kumar Committee (Jan 2015)</dt><dd>Recommended reducing NFSA coverage from 67% to 40%; opposed by economists Himanshu and Sen, who favored near-universal coverage to reduce leakage.</dd></div>
+    <div class="glossary-term"><dt>Three generations of food security</dt><dd>Availability (Green Revolution) → Affordability/Accessibility (Revamped PDS) → Sustainability (climate-smart agriculture, PDS modernization).</dd></div>
+    <div class="glossary-term"><dt>One Nation One Ration Card</dt><dd>Enables portability of ration entitlements across states, benefiting migrant workers.</dd></div>
+    <div class="glossary-term"><dt>Annapurti Grain ATM</dt><dd>FCI + UN WFP automated grain-dispensing machine; 24/7, Aadhaar/ration-card verified, up to 50 kg dispensed in ~5 minutes.</dd></div>
+  </dl>
+</section>
+
+<section id="arcs">
+  <h2>Revision kit (ARCS method)</h2>
+  <p style="font-family: Arial, sans-serif; font-size: 0.88em; color: #57606a;">A—Active Recall, R—Repeat with Spacing, C—Contrast &amp; Chunk, S—Stick with Encoding Tricks. Close the notes above and test yourself before checking answers.</p>
+
+  <div class="arcs-box">
+    <h4>A — Active Recall: self-test (no peeking until you answer)</h4>
+    <div class="recall-q">
+      <p class="q-text">1. What did the Supreme Court hold in the July 2026 NCLT/NCLAT "methyl isocyanate" case, and what precedents did the tribunals rely on?</p>
+      <details><summary></summary><div class="ans">The Court set aside NCLT/NCLAT orders in J&amp;K Bank vs. Essel Infraprojects after finding the tribunals relied on six AI-generated, non-existent or misapplied precedents. It compared reliance on such hallucinated material to the release of methyl isocyanate (the Bhopal gas tragedy chemical) — "invisible, insidious, and catastrophic by the time anyone notices" — and mandated zero tolerance, directing the BCI to frame guiding principles.</div></details>
+    </div>
+    <div class="recall-q">
+      <p class="q-text">2. What are the five core principles of the Draft Regulations for Use of AI in Courts, 2026?</p>
+      <details><summary></summary><div class="ans">Human primacy, transparency and explainability, fairness and non-discrimination, accountability, and inclusivity/accessibility (data protection also cited).</div></details>
+    </div>
+    <div class="recall-q">
+      <p class="q-text">3. What is SARTHAK-PDS, and what two prior schemes does it merge?</p>
+      <details><summary></summary><div class="ans">A ₹25,530 crore Cabinet-approved scheme (27 May 2026, April 2026-March 2031) merging (1) assistance for intra-state food grain movement and FPS dealer margin under NFSA, and (2) SMART-PDS (the digitization scheme). Covers 81.35 crore NFSA beneficiaries.</div></details>
+    </div>
+    <div class="recall-q">
+      <p class="q-text">4. What did the Shanta Kumar Committee recommend, and who opposed it?</p>
+      <details><summary></summary><div class="ans">Recommended reducing NFSA coverage from 67% to 40% of the population (report submitted January 2015) to focus subsidies on the most vulnerable. Economists Himanshu and Sen opposed this, arguing for near-universal coverage since historical data showed leakage rising, not falling, as coverage narrowed (1999-2000 to 2004-05).</div></details>
+    </div>
+    <div class="recall-q">
+      <p class="q-text">5. What are the three generations of food security discussed in class?</p>
+      <details><summary></summary><div class="ans">First generation — Availability (Green Revolution). Second generation — Affordability and Accessibility (Revamped/Targeted PDS). Third generation — Sustainability (climate-smart agriculture, PDS modernization, "intelligence per acre").</div></details>
+    </div>
+  </div>
+
+  <div class="arcs-box spacing-tracker">
+    <h4>R — Repeat with Spacing: review checklist</h4>
+    <p>Lecture date: Aug 14, 2026. Forgetting is exponential — review at these intervals, not all at once.</p>
+    <table>
+      <tr><th>Review</th><th>Target date</th><th>Done</th></tr>
+      <tr><td>Day 1 (same day, quick skim)</td><td>Aug 14</td><td><input type="checkbox"></td></tr>
+      <tr><td>Day 3</td><td>Aug 17</td><td><input type="checkbox"></td></tr>
+      <tr><td>Day 7</td><td>Aug 21</td><td><input type="checkbox"></td></tr>
+      <tr><td>Day 21</td><td>Sep 4</td><td><input type="checkbox"></td></tr>
+    </table>
+    <p style="font-size:0.85em; color:#57606a;">Each review: close this file, answer the 5 recall questions above from memory first, then reopen to check.</p>
+  </div>
+
+  <div class="arcs-box">
+    <h4>C — Contrast &amp; Chunk: easily confused pairs</h4>
+    <table>
+      <tr><th>Term A</th><th>Term B</th><th>The ONE distinguishing point</th></tr>
+      <tr><td>Deployment of AI (administrative)</td><td>Algorithmic decision-making (adjudicative)</td><td>Deployment = speed/transparency/efficiency tool; Algorithmic decision-making = AI actually deciding outcomes — prohibited</td></tr>
+      <tr><td>Centralized procurement (FCI)</td><td>Decentralized procurement (state)</td><td>Centralized = everything routed through FCI (needs huge storage, inefficient); Decentralized = state procures/stores directly</td></tr>
+      <tr><td>SARTHAK-PDS</td><td>SMART-PDS</td><td>SARTHAK is the 2026 umbrella scheme that merges SMART-PDS (digitization) with intra-state movement assistance — SMART-PDS no longer stands alone</td></tr>
+      <tr><td>Shanta Kumar Committee view</td><td>Himanshu and Sen view</td><td>Shanta Kumar = narrow coverage to target better; Himanshu/Sen = narrow coverage historically increased leakage, so favor near-universal coverage</td></tr>
+      <tr><td>Digital divide 1.0</td><td>Digital divide 2.0</td><td>1.0 = lacking a device/connection (largely solved in India); 2.0 = having a device but lacking digital literacy/hygiene (ongoing, even among younger "digital native" users)</td></tr>
+    </table>
+    <p style="font-family: Arial, sans-serif; font-size: 0.88em;"><strong>Chunk:</strong> both topics share the same underlying tension — a system (judiciary; PDS) burdened by scale and inefficiency (5 crore+ pending cases; ₹2.28 lakh crore subsidy with 28%+ leakage), where technology offers efficiency gains but introduces new risks (algorithmic bias/hallucination; digital exclusion) unless kept strictly assistive with a human/institutional check (human-in-the-loop; state command-and-control center) at the center of the reform.</p>
+  </div>
+
+  <div class="arcs-box mnemonic-box">
+    <h4>S — Stick with Encoding Tricks</h4>
+    <p><strong>Dual coding:</strong> re-look at the AI-use pyramid (red/amber/green) and the SARTHAK-PDS flow diagram (FCI → state → FPS) each time you revise, instead of re-reading the paragraph explanations.</p>
+    <p><strong>Image for the methyl isocyanate quote:</strong> picture a single fake citation as an invisible gas leak in a courtroom — undetected at first, but capable of catastrophic damage to the entire case once it spreads through subsequent rulings that rely on it.</p>
+    <p><strong>Image for CAP storage:</strong> picture sacks of grain stacked in the open under a tarp, exposed to monsoon rain and rodents — a visual reminder of why "leakage" in food security isn't always corruption; sometimes it's just inadequate covered warehouse capacity.</p>
+  </div>
+</section>
+
+<section id="gaps">
+  <h2>Supplementary research — filling gaps</h2>
+
+  <div class="gap-box">
+    <h4>NCLT/NCLAT hallucination case — full verified background</h4>
+    <p>Decided 2 July 2026 by a Supreme Court bench of Justices P.S. Narasimha and Alok Aradhe. The underlying dispute involved insolvency proceedings initiated by Jammu &amp; Kashmir Bank Ltd. against Essel Infraprojects Ltd. (NCLT admitted the application on 28 August 2024, recording a default of ₹87.43 crore). Senior Advocate Madhavi Divan argued that the tribunals below had relied on six judicial decisions that either did not exist or did not support the propositions attributed to them. The Supreme Court set aside the orders, directed a zero-tolerance approach to AI-hallucinated citations, and asked the Bar Council of India to constitute a committee to frame guiding principles — distinct from (and more recent than) an earlier, separate December 2024 incident involving an ITAT Bengaluru bench citing non-existent judgments, which the lecture briefly conflated in passing.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>Draft Regulations for AI in Courts — Regulation numbering (resolved)</h4>
+    <p>Checked directly against the Supreme Court AI Committee's original draft (notice dated 3 June 2026): Regulation 43 ("Transparency and disclosure"), sub-regulation (3), requires that where an AI tool is used by a party or legal representative in preparing a document, pleading, or evidence, its AI-assisted character must be disclosed via a certificate. The lecture's "Regulation 43" citation is therefore correct; scattered secondary commentary citing "Regulation 3" (actually the Definitions clause) was the source of the earlier flagged discrepancy.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>SARTHAK-PDS — full verified scheme architecture</h4>
+    <p>Approved by the Union Cabinet on 27 May 2026 with a central outlay of ₹25,530 crore over April 2026-March 2031, covering 81.35 crore NFSA beneficiaries. It merges the pre-existing "Assistance for intra-State foodgrain movement and FPS dealers' margin under NFSA" scheme with SMART-PDS. Three AI-enabled technology modules underpin it: NIRMAL (a real-time beneficiary registry), ASHA (a multilingual grievance-redressal platform), and SAKSHAM (a supply-chain platform including vehicle tracking — corresponding to the lecture's "Vehicle Location Tracking System"). The scheme uses AI, machine learning, blockchain, and other data-driven tools to strengthen NFSA implementation. None of these three module names were mentioned by name in the lecture, but they map directly onto the functions described in class (beneficiary digitization, grievance redress, supply-chain/vehicle monitoring).</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>ICRIER PDS leakage study — precise figures</h4>
+    <p>The ICRIER working paper (analyzing FCI offtake data from August 2022-July 2023 against Household Consumption Expenditure Survey data) found ~28-29% of PDS-supplied grains do not reach intended beneficiaries, amounting to a loss of ₹69,108 crore (~20 million metric tonnes of rice and wheat). Arunachal Pradesh, Nagaland, and Gujarat were identified as the states with the highest PDS leakage. This closely matches the lecture's "28%" figure; the ₹69,108 crore rupee-value figure is a useful addition not mentioned in class.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>FCI rice stock figure — could not be verified as stated</h4>
+    <p>The lecture states FCI held 309 lakh tonnes of rice as of January 2026, described as nine times the buffer norm. Independent search found different figures: total foodgrain stocks of ~604 lakh tonnes (roughly 3x buffer requirement) in some reporting, and an April 2026 figure of 386.10 lakh tonnes of rice against a 135.80 lakh tonnes buffer norm (roughly 2.8x). The general point that FCI holds surplus stock well above mandated buffer norms is well-established and can be safely cited; the specific "309 lakh tonnes / nine times" figures should not be used in an exam answer without further verification against a primary FCI source.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>Himanshu and Sen — corrected scholarly citation</h4>
+    <p>The lecture's audio-garbled references to "Professor Pakrishna" (introducing the PDS-as-equalizer argument) and "Humanu and Sen" (documenting the negative relationship between PDS coverage and leakage) are best matched to economists Himanshu (Centre for Economic Studies and Planning, JNU) and Sen — their 2011 work argued for near-universal PDS coverage specifically because narrowing coverage (from universal to targeted, 1999-2000 to 2004-05) coincided with rising, not falling, diversion/leakage (from ~24% to ~54%), directly contradicting the Shanta Kumar Committee's later (2015) recommendation to narrow coverage further. The "Professor Pakrishna" reference (PDS as a tool to equalize primary food consumption) could not be independently matched to a specific named economist — treat this specific attribution as unverified.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>What the lecture doesn't cover, but pairs well for GS-2/GS-3 prep</h4>
+    <ul>
+      <li>The EU AI Act's risk-based classification system (high-risk/limited-risk/minimal-risk AI) as a comparative global regulatory model, distinct from India's own draft regulations.</li>
+      <li>The Personal Data Protection framework's specific applicability to judicial case data and PDS beneficiary data, if a question links AI/digitization with data protection.</li>
+      <li>SUPACE (Supreme Court Portal for Assistance in Court's Efficiency) — a related AI research-assistance tool for judges, distinct from SUVAS (translation-focused), that could strengthen a domestic-initiatives list in a judiciary-AI answer.</li>
+      <li>The National Food Security Act, 2013's full architecture (Section-wise entitlements, grievance redressal mechanisms, State Food Commissions) as a fuller institutional backdrop beyond what was covered in class.</li>
+      <li>One Nation One Ration Card (ONORC) — enables NFSA beneficiaries to lift entitled foodgrains from any ePoS-enabled Fair Price Shop nationwide via Aadhaar/biometric authentication, implemented across all 36 states/UTs, covering ~80 crore beneficiaries; relevant as the portability counterpart to SARTHAK-PDS's digitization push (verified via web search, Sept 2026).</li>
+      <li>NITI Aayog's "Responsible AI for All" strategy (Principles for Responsible AI, Feb 2021; Operationalizing document, Aug 2021) — lays out seven principles (safety/reliability, equality, inclusivity/non-discrimination, privacy/security, transparency, accountability, protection of human values) that could frame an answer on regulating AI in courts or PDS beyond the judiciary-specific Draft Regulations (verified via web search, Sept 2026).</li>
+      <li>Justice K.S. Puttaswamy v. Union of India (2017) 10 SCC 1 — nine-judge bench held the right to privacy is intrinsic to Article 21; relevant if a question links Aadhaar-based authentication in PDS/SARTHAK or AI-based case-data processing to privacy concerns (verified via web search, Sept 2026).</li>
+    </ul>
+  </div>
+</section>
+
+</div>
+
+<footer>
+  Notes compiled from an unlisted lecture recording using YouTube's auto-generated transcript. Timestamps are approximate; several proper nouns (scholar names, case citations, regulation numbers) were transcribed imperfectly by auto-captions and are flagged inline for verification against the original lecture or handwritten notes before citing in an exam answer. Supplementary research sections are separately verified via web search and marked accordingly. Click Save (first time will ask you to pick this file) to write your edits directly to disk — no chat needed.
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11.15.0/dist/mermaid.min.js" integrity="sha384-yQ4mmBBT+vhTAwjFH0toJXNYJ6O4usWnt6EPIdWwrRvx2V/n5lXuDZQwQFeSFydF" crossorigin="anonymous"></script>
+<script>
+(function() {
+  var mode = null;
+  var noteCounter = 0;
+
+  var btnHighlight = document.getElementById('btn-highlight');
+  var btnUnderline = document.getElementById('btn-underline');
+  var btnNote = document.getElementById('btn-note');
+  var btnClear = document.getElementById('btn-clear');
+  var btnSave = document.getElementById('btn-save');
+  var statusText = document.getElementById('status-text');
+  var contentRoot = document.getElementById('content-root');
+  var noteBox = document.getElementById('note-input-box');
+  var noteText = document.getElementById('note-text');
+  var pendingNoteTarget = null;
+
+  function setMode(newMode) {
+    mode = mode === newMode ? null : newMode;
+    btnHighlight.classList.toggle('active', mode === 'highlight');
+    btnUnderline.classList.toggle('active', mode === 'underline');
+    btnNote.classList.toggle('active', mode === 'note');
+  }
+
+  btnHighlight.addEventListener('click', function() { setMode('highlight'); });
+  btnUnderline.addEventListener('click', function() { setMode('underline'); });
+  btnNote.addEventListener('click', function() { setMode('note'); });
+
+  function markDirty() {
+    statusText.textContent = 'Unsaved changes';
+    statusText.style.color = '#993c1d';
+  }
+
+  document.addEventListener('mouseup', function(e) {
+    if (mode !== 'highlight' && mode !== 'underline') return;
+    var sel = window.getSelection();
+    if (!sel || sel.isCollapsed || sel.rangeCount === 0) return;
+    var range = sel.getRangeAt(0);
+    if (!contentRoot.contains(range.commonAncestorContainer)) return;
+
+    var wrapper = document.createElement(mode === 'highlight' ? 'mark' : 'u');
+    wrapper.className = mode === 'highlight' ? 'user-highlight' : 'user-underline';
+    try {
+      range.surroundContents(wrapper);
+    } catch (err) {
+      var frag = range.extractContents();
+      wrapper.appendChild(frag);
+      range.insertNode(wrapper);
+    }
+    sel.removeAllRanges();
+    markDirty();
+  });
+
+  contentRoot.addEventListener('click', function(e) {
+    if (mode !== 'note') return;
+    if (e.target.closest('.user-note')) return;
+    pendingNoteTarget = e.target;
+    noteBox.style.display = 'block';
+    var x = Math.min(e.clientX, window.innerWidth - 280);
+    var y = Math.min(e.clientY, window.innerHeight - 140);
+    noteBox.style.left = x + 'px';
+    noteBox.style.top = y + 'px';
+    noteText.value = '';
+    noteText.focus();
+  });
+
+  document.getElementById('note-cancel').addEventListener('click', function() {
+    noteBox.style.display = 'none';
+    pendingNoteTarget = null;
+  });
+
+  document.getElementById('note-add').addEventListener('click', function() {
+    var text = noteText.value.trim();
+    if (!text || !pendingNoteTarget) { noteBox.style.display = 'none'; return; }
+    noteCounter++;
+    var noteDiv = document.createElement('div');
+    noteDiv.className = 'user-note';
+    noteDiv.setAttribute('data-note-id', noteCounter);
+    noteDiv.innerHTML = '<span class="note-label">Your note</span>' +
+      '<button class="del-note" title="Remove note">&times;</button>' +
+      '<span class="note-body"></span>';
+    noteDiv.querySelector('.note-body').textContent = text;
+    noteDiv.querySelector('.del-note').addEventListener('click', function() {
+      noteDiv.remove();
+      markDirty();
+    });
+
+    var target = pendingNoteTarget.closest('li, p, td, div.quote-card, section') || contentRoot;
+    target.parentNode.insertBefore(noteDiv, target.nextSibling);
+
+    noteBox.style.display = 'none';
+    pendingNoteTarget = null;
+    markDirty();
+    setMode('note');
+  });
+
+  btnClear.addEventListener('click', function() {
+    if (!confirm('Remove all your highlights, underlines, and notes on this page?')) return;
+    contentRoot.querySelectorAll('.user-note').forEach(function(n) { n.remove(); });
+    contentRoot.querySelectorAll('mark.user-highlight').forEach(function(m) {
+      var parent = m.parentNode;
+      while (m.firstChild) parent.insertBefore(m.firstChild, m);
+      parent.removeChild(m);
+    });
+    contentRoot.querySelectorAll('u.user-underline').forEach(function(u) {
+      var parent = u.parentNode;
+      while (u.firstChild) parent.insertBefore(u.firstChild, u);
+      parent.removeChild(u);
+    });
+    markDirty();
+  });
+
+  var fallbackHelp = document.getElementById('fallback-help');
+  document.getElementById('fallback-close').addEventListener('click', function() {
+    fallbackHelp.style.display = 'none';
+  });
+
+  var fileHandle = null;
+  var fsaSupported = 'showSaveFilePicker' in window;
+  var THIS_FILENAME = 'notes.html';
+
+  function buildFullHtml() {
+    var doc = document.documentElement.cloneNode(true);
+    var liveContentRoot = doc.querySelector('#content-root');
+    if (liveContentRoot) liveContentRoot.innerHTML = contentRoot.innerHTML;
+    return '<!DOCTYPE html>\n' + doc.outerHTML;
+  }
+
+  async function writeToFile() {
+    var writable = await fileHandle.createWritable();
+    await writable.write(buildFullHtml());
+    await writable.close();
+  }
+
+  btnSave.addEventListener('click', async function() {
+    statusText.textContent = 'Saving…';
+    statusText.style.color = '#57606a';
+    if (!fsaSupported) {
+      fallbackHelp.style.display = 'block';
+      statusText.textContent = 'Direct save not supported in this browser';
+      statusText.style.color = '#993c1d';
+      return;
+    }
+    try {
+      if (!fileHandle) {
+        fileHandle = await window.showSaveFilePicker({
+          suggestedName: THIS_FILENAME,
+          types: [{ description: 'HTML file', accept: { 'text/html': ['.html'] } }]
+        });
+      }
+      var perm = await fileHandle.queryPermission({ mode: 'readwrite' });
+      if (perm !== 'granted') {
+        perm = await fileHandle.requestPermission({ mode: 'readwrite' });
+      }
+      if (perm !== 'granted') {
+        statusText.textContent = 'File permission denied — click Save to retry';
+        statusText.style.color = '#993c1d';
+        fileHandle = null;
+        return;
+      }
+      await writeToFile();
+      statusText.textContent = 'Saved to file just now';
+      statusText.style.color = '#3b6d11';
+    } catch (err) {
+      console.error('SAVE_ERROR', err.name, err.message, err);
+      if (err.name === 'AbortError') {
+        statusText.textContent = 'Save cancelled';
+        statusText.style.color = '#57606a';
+      } else {
+        statusText.textContent = 'Save failed: ' + err.name + ' — click Save to retry';
+        statusText.style.color = '#993c1d';
+        fileHandle = null;
+      }
+    }
+  });
+
+  if (window.mermaid) {
+    mermaid.initialize({ startOnLoad: true, securityLevel: 'strict' });
+  }
+
+  contentRoot.querySelectorAll('.user-note .del-note').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      btn.closest('.user-note').remove();
+      markDirty();
+    });
+  });
+
+  contentRoot.querySelectorAll('.spacing-tracker input[type="checkbox"]').forEach(function(cb) {
+    cb.addEventListener('change', function() {
+      if (cb.checked) { cb.setAttribute('checked', 'checked'); }
+      else { cb.removeAttribute('checked'); }
+      markDirty();
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

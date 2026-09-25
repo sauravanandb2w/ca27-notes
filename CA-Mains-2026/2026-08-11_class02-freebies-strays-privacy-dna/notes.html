@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CA Mains 2026 — Class 2(26): Freebies, Stray Dogs, Right to be Forgotten &amp; DNA Testing</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: #faf9f6;
+    color: #1f2328;
+    margin: 0;
+    padding: 0 0 80px;
+    line-height: 1.6;
+  }
+  .toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: #ffffff;
+    border-bottom: 2px solid #1d5b8b;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: Arial, sans-serif;
+    flex-wrap: wrap;
+  }
+  .toolbar button {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    padding: 7px 14px;
+    border-radius: 6px;
+    border: 1px solid #d8d2c6;
+    background: #fff;
+    cursor: pointer;
+    color: #1f2328;
+  }
+  .toolbar button:hover { background: #e6f1fb; border-color: #1d5b8b; }
+  .toolbar button.active { background: #1d5b8b; color: #fff; border-color: #1d5b8b; }
+  .toolbar .save-btn { background: #2f6b4f; color: #fff; border-color: #2f6b4f; margin-left: auto; }
+  .toolbar .save-btn:hover { background: #24543e; }
+  .toolbar .status { font-size: 12px; color: #57606a; margin-left: auto; padding-right: 8px; }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 30px 20px; }
+  header { border-bottom: 3px solid #1d5b8b; padding-bottom: 20px; margin-bottom: 30px; }
+  header h1 { font-size: 1.6em; margin: 0 0 6px; color: #1d5b8b; }
+  header .meta { color: #57606a; font-size: 0.95em; font-family: Arial, sans-serif; }
+  section { margin-bottom: 42px; }
+  h2 { font-size: 1.4em; color: #1d5b8b; border-left: 4px solid #1d5b8b; padding-left: 12px; margin-bottom: 14px; }
+  h3 { font-size: 1.12em; margin: 22px 0 8px; }
+  p { margin: 10px 0; }
+  .summary-box { background: #e6f1fb; border-radius: 8px; padding: 18px 22px; font-size: 0.98em; }
+  ul, ol.answers { padding-left: 24px; }
+  li { margin-bottom: 6px; }
+  .timestamp { font-family: 'Courier New', monospace; font-size: 0.78em; color: #57606a; background: #e2ddd4; border-radius: 4px; padding: 1px 6px; margin-right: 6px; }
+  .quote-card { background: #fff; border: 1px solid #e2ddd4; border-left: 4px solid #1d5b8b; border-radius: 6px; padding: 14px 18px; margin: 14px 0; }
+  .quote-card .q { font-style: italic; font-size: 1.05em; }
+  .quote-card .attrib { font-family: Arial, sans-serif; font-size: 0.85em; color: #57606a; margin-top: 6px; }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.95em; background: #fff; }
+  th, td { border: 1px solid #e2ddd4; padding: 8px 12px; text-align: left; vertical-align: top; }
+  th { background: #e6f1fb; font-family: Arial, sans-serif; font-size: 0.88em; }
+  .gap-box { background: #eef4f0; border: 1px solid #cfe3d6; border-radius: 8px; padding: 16px 20px; margin-top: 16px; font-size: 0.95em; }
+  .gap-box h4 { margin: 0 0 8px; color: #2f6b4f; font-family: Arial, sans-serif; font-size: 0.95em; }
+  .exam-tip { background: #fff7e6; border: 1px solid #f0dba8; border-radius: 8px; padding: 14px 20px; margin: 14px 0; font-size: 0.95em; }
+  .exam-tip::before { content: "Exam strategy: "; font-weight: bold; font-family: Arial, sans-serif; }
+  .term-box { background: #fdf3f3; border: 1px solid #ecd4d4; border-radius: 8px; padding: 12px 16px; margin: 10px 0; }
+  .term-box strong { color: #8b3a3a; }
+  .data-box { background: #f3f0fb; border: 1px solid #ddd6f0; border-radius: 8px; padding: 12px 16px; margin: 10px 0; font-family: 'Courier New', monospace; font-size: 0.9em; }
+  footer { margin-top: 60px; border-top: 1px solid #e2ddd4; padding-top: 16px; color: #57606a; font-size: 0.82em; font-family: Arial, sans-serif; }
+  .toc {
+    background: #fff;
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    padding: 16px 22px;
+    margin-bottom: 36px;
+    font-family: Arial, sans-serif;
+    font-size: 0.9em;
+  }
+  .toc h2 { font-size: 1em; margin: 0 0 10px; border: none; padding: 0; color: #1d5b8b; text-transform: uppercase; letter-spacing: 0.04em; }
+  .toc ol { columns: 2; margin: 0; padding-left: 20px; }
+  .toc a { color: #1f2328; text-decoration: none; }
+  .toc a:hover { color: #1d5b8b; text-decoration: underline; }
+  details.collapse-section {
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    background: #fff;
+    margin: 14px 0;
+    padding: 0;
+  }
+  details.collapse-section summary {
+    cursor: pointer;
+    padding: 12px 16px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 0.92em;
+    color: #1d5b8b;
+    list-style: none;
+  }
+  details.collapse-section summary::-webkit-details-marker { display: none; }
+  details.collapse-section summary::before { content: "▸ "; }
+  details.collapse-section[open] summary::before { content: "▾ "; }
+  details.collapse-section .collapse-body { padding: 4px 16px 16px; }
+  .glossary-term {
+    display: flex;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+  }
+  .glossary-term:last-child { border-bottom: none; }
+  .glossary-term dt { font-weight: bold; color: #8b3a3a; min-width: 200px; flex-shrink: 0; font-family: Arial, sans-serif; font-size: 0.9em; }
+  .glossary-term dd { margin: 0; }
+
+  mark.user-highlight { background: #fff176; padding: 1px 2px; border-radius: 2px; }
+  u.user-underline { text-decoration: underline; text-decoration-color: #1d5b8b; text-decoration-thickness: 2px; }
+  .user-note {
+    background: #e6f1fb;
+    border: 1px solid #85b7eb;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin: 8px 0;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #0c447c;
+    position: relative;
+  }
+  .user-note .note-label { font-weight: bold; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; display: block; }
+  .user-note .del-note { position: absolute; top: 6px; right: 8px; cursor: pointer; border: none; background: none; color: #0c447c; font-size: 14px; font-family: Arial, sans-serif; }
+  #note-input-box {
+    position: fixed;
+    display: none;
+    background: #fff;
+    border: 2px solid #1d5b8b;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    z-index: 100;
+    font-family: Arial, sans-serif;
+  }
+  #note-input-box textarea { width: 240px; height: 60px; font-family: Arial, sans-serif; font-size: 13px; border: 1px solid #d8d2c6; border-radius: 4px; padding: 6px; }
+  #note-input-box .note-actions { margin-top: 6px; display: flex; gap: 6px; justify-content: flex-end; }
+  #note-input-box button { font-size: 12px; padding: 5px 10px; border-radius: 4px; border: 1px solid #d8d2c6; background: #fff; cursor: pointer; }
+  #note-input-box button.primary { background: #1d5b8b; color: #fff; border-color: #1d5b8b; }
+  .content-target::selection { background: #ffe082; }
+  .board-caption { font-family: Arial, sans-serif; font-size: 0.82em; color: #57606a; margin-top: -8px; margin-bottom: 14px; }
+  .mermaid { background: #fff; border: 1px solid #e2ddd4; border-radius: 8px; padding: 10px; margin: 14px 0; }
+  .arcs-box {
+    background: #fff;
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 14px 0;
+  }
+  .arcs-box h4 { margin: 0 0 10px; color: #1d5b8b; font-family: Arial, sans-serif; font-size: 0.98em; }
+  .recall-q { margin-bottom: 14px; }
+  .recall-q p.q-text { font-weight: bold; margin: 0 0 6px; }
+  .recall-q details { border: none; margin: 0; }
+  .recall-q summary { font-family: Arial, sans-serif; font-size: 0.82em; color: #1d5b8b; cursor: pointer; list-style: none; padding: 2px 0; }
+  .recall-q summary::-webkit-details-marker { display: none; }
+  .recall-q summary::before { content: "Show answer \25B8 "; }
+  .recall-q details[open] summary::before { content: "Hide answer \25BE "; }
+  .recall-q .ans { background: #eef4f0; border-radius: 6px; padding: 8px 12px; margin-top: 6px; font-size: 0.95em; }
+  .spacing-tracker { font-family: Arial, sans-serif; font-size: 0.92em; }
+  .spacing-tracker table { margin: 8px 0; }
+  .spacing-tracker input[type="checkbox"] { width: 16px; height: 16px; cursor: pointer; }
+  .mnemonic-box { background: #fff7e6; border: 1px solid #f0dba8; border-radius: 8px; padding: 14px 18px; margin: 10px 0; }
+  .mnemonic-box h4 { margin: 0 0 6px; color: #8b5a1d; font-family: Arial, sans-serif; font-size: 0.92em; }
+  .applic-table td.gs-tag { font-family: Arial, sans-serif; font-weight: bold; font-size: 0.85em; white-space: nowrap; }
+  .applic-table .prelims-badge, .applic-table .mains-badge {
+    display: inline-block; font-family: Arial, sans-serif; font-size: 0.72em; font-weight: bold;
+    padding: 2px 8px; border-radius: 10px; margin-right: 4px;
+  }
+  .prelims-badge { background: #eaf3de; color: #3b6d11; }
+  .mains-badge { background: #e6f1fb; color: #1d5b8b; }
+  #fallback-help {
+    position: fixed;
+    display: none;
+    top: 60px;
+    right: 20px;
+    max-width: 320px;
+    background: #fff;
+    border: 2px solid #993c1d;
+    border-radius: 8px;
+    padding: 14px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    z-index: 200;
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <button id="btn-highlight" title="Select text, then click to highlight it">Highlight</button>
+  <button id="btn-underline" title="Select text, then click to underline it">Underline</button>
+  <button id="btn-note" title="Click this, then click anywhere in the notes to drop a note">Add note</button>
+  <button id="btn-clear" title="Remove all your highlights, underlines, and notes">Clear my edits</button>
+  <span class="status" id="status-text">Not connected to file — click Save once to connect</span>
+  <button class="save-btn" id="btn-save">Save</button>
+</div>
+
+<div id="fallback-help">
+  <strong>Your browser can't save directly</strong>
+  <p style="margin:6px 0;">File System Access isn't supported here (common on Safari/Firefox). Use Chrome or Edge to enable direct-save, or use your browser's Save Page As (Ctrl/Cmd+S) to overwrite this file manually after editing.</p>
+  <button id="fallback-close" style="font-size: 12px; padding: 6px 12px; border-radius: 4px; border: 1px solid #993c1d; background: #993c1d; color: #fff; cursor: pointer;">Got it</button>
+</div>
+
+<div id="note-input-box">
+  <textarea id="note-text" placeholder="Type your note..."></textarea>
+  <div class="note-actions">
+    <button id="note-cancel">Cancel</button>
+    <button class="primary" id="note-add">Add</button>
+  </div>
+</div>
+
+<div class="wrap content-target" id="content-root">
+
+<header>
+  <h1>CA Mains 2026 — Class 2(26): Freebies, Stray Dogs, Right to be Forgotten &amp; DNA Testing</h1>
+  <div class="meta">
+    <span>Source: unlisted YouTube lecture recording ("forumCA 02")</span> &middot;
+    <span>Duration: 0:00 – 1:37:27</span> &middot;
+    <span>Track: UPSC GS-2 (Polity/Governance) / GS-3 (Economy) — Current Affairs Answer Writing</span>
+  </div>
+</header>
+
+<nav class="toc">
+  <h2>Contents</h2>
+  <ol>
+    <li><a href="#applicability">Applicability — GS papers, Prelims &amp; Mains</a></li>
+    <li><a href="#part1">Topic 1: Freebies vs. welfare measures</a></li>
+    <li><a href="#part2">Topic 1: Debates, data &amp; recommended structure</a></li>
+    <li><a href="#part3">Topic 2: Stray dogs and public safety</a></li>
+    <li><a href="#part4">Topic 2: Debates, judgment &amp; live exercise</a></li>
+    <li><a href="#part5">Topic 3: Right to be forgotten</a></li>
+    <li><a href="#part6">Topic 3: Case law, debates &amp; live exercise</a></li>
+    <li><a href="#part7">Topic 4: DNA testing and paternity disputes</a></li>
+    <li><a href="#part8">Topic 4: Evolution of case law</a></li>
+    <li><a href="#glossary">Glossary — quick revision</a></li>
+    <li><a href="#arcs">Revision kit (ARCS)</a></li>
+    <li><a href="#gaps">Supplementary research</a></li>
+  </ol>
+</nav>
+
+<section id="summary">
+  <h2>Executive summary</h2>
+  <div class="summary-box">
+  <p>Second class of the CA Mains 2026 answer-writing series, covering four exam-relevant themes:</p>
+  <ul>
+    <li><strong>Topic 1</strong> examines the "freebies vs. welfare measures" distinction — competitive populism, transactionalism, the vicious cycle of fiscal deficit, and the blurred line via unconditional cash transfers, with the 2013 Subramaniam Balaji case and Economic Survey recommendations.</li>
+    <li><strong>Topic 2</strong> covers the 2025 Supreme Court stray dog controversy — the August 11 shelter order and its August 22 reversal to the CNVR (Catch-Neuter-Vaccinate-Release) model, with terms like vacuum effect, feeder accountability, and anthropocentrism vs. ecocentrism.</li>
+    <li><strong>Topic 3</strong> covers the right to be forgotten — its distinction from the right to erasure, de-indexing vs. masking, and the Jorawar Singh Mundy precedent.</li>
+    <li><strong>Topic 4</strong> covers DNA testing in paternity disputes — the presumption of legitimacy under the Evidence Act, the shift from Section 112 to BSA Section 116, and the case-law evolution from Kamti Devi through Gautam Kundu to modern two-stage tests.</li>
+  </ul>
+  <p>Throughout, the instructor models introduction, structuring, and conclusion technique, with two live timed answer-writing exercises.</p>
+  </div>
+</section>
+
+<section id="applicability">
+  <h2>Applicability — GS papers, Prelims &amp; Mains</h2>
+  <table class="applic-table">
+    <tr><th>Sub-topic</th><th>GS Paper</th><th>Prelims</th><th>Mains</th></tr>
+    <tr>
+      <td class="gs-tag">Freebies vs. welfare debate, Finance Commission angle</td>
+      <td>GS-2 (Governance) / GS-3 (Economy)</td>
+      <td><span class="prelims-badge">Medium</span>Fiscal figures (state debt-to-GSDP, subsidy bill data) are plausible MCQ material.</td>
+      <td><span class="mains-badge">High</span>A recurring, near-guaranteed GS-2/GS-3 essay and answer theme every election cycle.</td>
+    </tr>
+    <tr>
+      <td class="gs-tag">Stray dogs and public safety (Supreme Court directions)</td>
+      <td>GS-2 (Governance/Judiciary) / GS-1 (Society)</td>
+      <td><span class="prelims-badge">Low</span>Case-specific directions are less likely as standalone MCQs.</td>
+      <td><span class="mains-badge">Medium</span>Useful as a judicial-overreach-vs-public-safety case study in a governance answer.</td>
+    </tr>
+    <tr>
+      <td class="gs-tag">Right to be Forgotten (RTBF)</td>
+      <td>GS-2 (Polity — fundamental rights/privacy)</td>
+      <td><span class="prelims-badge">Medium</span>Puttaswamy-linked privacy jurisprudence and specific RTBF case law are testable facts.</td>
+      <td><span class="mains-badge">High</span>Digital-rights/privacy is a high-frequency GS-2 mains theme with clear doctrinal content.</td>
+    </tr>
+    <tr>
+      <td class="gs-tag">DNA testing and paternity disputes</td>
+      <td>GS-2 (Polity — privacy) / GS-3 (Science &amp; Tech)</td>
+      <td><span class="prelims-badge">Low</span>Niche case-law facts, low MCQ probability.</td>
+      <td><span class="mains-badge">Medium</span>Works as a privacy-vs-truth-seeking case study inside a broader digital/bodily-privacy answer.</td>
+    </tr>
+  </table>
+  <p style="font-family: Arial, sans-serif; font-size: 0.85em; color: #57606a;">Rule of thumb applied across this series: any named Act/scheme/committee/case with a specific year, number, or figure is Prelims-relevant; any debate, framework, or comparative-model discussion is Mains-relevant (answer structure and analytical content), and the two are usually not mutually exclusive for a well-covered current-affairs topic.</p>
+</section>
+
+<section id="part1">
+  <h2>1. Topic 1: Freebies vs. welfare measures</h2>
+  <p>Recommended structure (as taught): introduction → definitions of freebies and welfare measures → legal framework → supporting arguments/concerns → data → key judgment → expert views/suggestions (including Economic Survey) → conclusion.</p>
+
+  <h3>Model introduction</h3>
+  <div class="quote-card">
+    <div class="q">The proliferation of freebie culture, characterized by competitive populism, has emerged as a defining feature of India's political economy.</div>
+    <div class="attrib">— Instructor's model introduction; can be followed by noting this transforms the constitutional obligation of welfare measures under the Directive Principles of State Policy (DPSP) into "transactionalism"</div>
+  </div>
+  <p><span class="timestamp">2:51</span>Central observation: the freebie culture transforms the constitutional obligation of welfare measures under the DPSP into <strong>transactionalism</strong> — vote-buying disguised as policy.</p>
+
+  <h3>Freebies vs. welfare measures — the core distinction</h3>
+  <table>
+    <tr><th>Dimension</th><th>Freebies</th><th>Welfare measures</th></tr>
+    <tr><td>Nature</td><td>Unpaid-for goods/services, financed by the state, aimed at elections</td><td>Constitutional obligations under the DPSP that enhance human capabilities</td></tr>
+    <tr><td>Time horizon</td><td>Short-term/instantaneous gratification</td><td>Long-term developmental benefits (education, health, skilling, employment)</td></tr>
+    <tr><td>Targeting</td><td>Often universal/non-targeted (e.g., free bus travel, free electricity)</td><td>Targeted at vulnerable/marginalized sections</td></tr>
+    <tr><td>Economic effect</td><td>Vicious cycle — increases deficit and borrowing, crowds out long-term human capital spending</td><td>Virtuous cycle — acts as an economic multiplier, leading to long-term growth and better state finances</td></tr>
+  </table>
+
+  <h3>Key terms — competitive populism</h3>
+  <details class="collapse-section"><summary>Competitive populism (unnamed political scientist, transcribed "Abi")</summary><div class="collapse-body">
+    Political leaders and parties prioritize short-term survival and measures to appease voters and secure electoral victories — eventually leading to a "crisis of governability."
+  </div></details>
+  <details class="collapse-section"><summary>Plebiscitary and personalized leadership</summary><div class="collapse-body">
+    A related concept: leaders bypass political parties and institutions, appealing directly to voters ("vote for me") — voters respond to a leader's charisma rather than ideology, party, or manifesto.
+  </div></details>
+
+  <p><span class="timestamp">7:34</span>According to cited scholars, freebies focus on immediate gratification/electoral pressures, while welfare measures focus on long-term wellbeing and development.</p>
+
+  <h3>The vicious cycle of freebies</h3>
+  <p class="board-caption">Board diagram rebuilt from the lecture:</p>
+  <pre class="mermaid">
+flowchart TD
+    A["State announces freebies<br/>to win elections"] --> B["Fiscal deficit increases;<br/>borrowing requirement rises"]
+    B --> C["Crowds out long-term public<br/>expenditure on human capital"]
+    C --> D["Development stalls"]
+    D --> A
+  </pre>
+  <p class="board-caption">The virtuous cycle of welfare measures (opposite dynamic):</p>
+  <pre class="mermaid">
+flowchart TD
+    A["State invests in health,<br/>education, skilling"] --> B["Human capital formation improves"]
+    B --> C["Long-term economic growth"]
+    C --> D["Higher tax revenue to the state"]
+    D --> A
+  </pre>
+  <p><span class="timestamp">8:54</span>Over time, freebies stop being seen as a "gift" and become an entitlement:</p>
+  <ul>
+    <li>Political parties come to believe they cannot win elections without offering them</li>
+    <li>This creates a self-reinforcing "laboratory of freebies" dynamic across states</li>
+  </ul>
+</section>
+
+<section id="part2">
+  <h2>2. Topic 1: Debates, data &amp; recommended structure</h2>
+
+  <h3>Where the line blurs — unconditional cash transfers (UCTs)</h3>
+  <p><span class="timestamp">10:31</span>Many state schemes (women-focused unconditional cash transfers) sit ambiguously between "freebie" and "welfare measure":</p>
+  <ul>
+    <li><strong>Case for welfare measure:</strong> per economist Esther Duflo's research (referenced in the lecture as "Noble estate the flow her"/"the flow ass" — economics Nobel laureate Esther Duflo, verify spelling), when women control more income, they invest more in children's education and health — i.e., human capital formation. UCTs also increase consumption, creating a positive economic multiplier effect via cash circulation.</li>
+    <li><strong>Case for freebie:</strong> unconditional and universal rather than targeted; scaling rapidly (see data below), raising fiscal sustainability concerns.</li>
+  </ul>
+
+  <h3>Key data points</h3>
+  <div class="data-box">
+    Unconditional cash transfers to women alone: ~₹1.7 lakh crore (per a cited survey). Per the 16th Finance Commission's review: such transfers by states expanded from ₹73,000 crore (2018–19) to ₹4.14 lakh crore (2026) — described in the lecture as a "ballooning" of such transfers, contributing to sub-national fiscal stress.
+  </div>
+  <div class="quote-card">
+    <div class="q">The freebie culture is not a road to prosperity — it's a passport to fiscal disaster.</div>
+    <div class="attrib">— Attributed in the lecture to a former Chairman of the Finance Commission (name transcribed as "Nasing" — likely N.K. Singh; verify before citing)</div>
+  </div>
+
+  <h3>Further negative externalities</h3>
+  <ul>
+    <li><strong>Democratic distortion:</strong> freebies challenge the principle of free and fair elections — the bedrock of democracy.</li>
+    <li><strong>Environmental cost:</strong> e.g., free electricity is cited as a major driver of groundwater over-exploitation.</li>
+    <li><strong>Rights-holder to beneficiary shift:</strong> transactionalism changes citizens from rights-holders (who can demand institutional accountability under the social contract) into dependent beneficiaries engaged in a transactional relationship with the state.</li>
+    <li><strong>"Captive political-industrial complex":</strong> freebies involving goods (free laptops, TVs, mobile phones) create captive markets for politically-connected suppliers — a form of crony capitalism.</li>
+  </ul>
+
+  <h3>Key case and Economic Survey recommendations</h3>
+  <div class="term-box"><strong>S. Subramaniam Balaji vs. State of Tamil Nadu (2013):</strong> the Supreme Court held that election manifesto promises of freebies do not amount to a "corrupt practice" under Section 123 of the Representation of the People Act, 1951 — because that section applies to the conduct of individual candidates, not to party manifestos as policy statements. This is described in the lecture as a legal "loophole" not yet closed by legislative or further judicial clarification. (Independently verified — see supplementary research; the Court did direct the Election Commission to frame manifesto guidelines.)</div>
+  <p><span class="timestamp">17:01</span>The Economic Survey has flagged that such schemes cause severe fiscal strain and crowd out productive investment, and recommends:</p>
+  <ul>
+    <li>Schemes should not be open-ended — a <strong>sunset clause</strong> and periodic review mechanism should apply</li>
+    <li>Cites Mexico's <em>Bolsa Família</em>-style conditional cash transfer model (transfers stop once a family meets certain conditions) as international best practice, contrasted with India's typically open-ended, unconditional schemes</li>
+  </ul>
+
+  <h3>Model conclusion</h3>
+  <div class="quote-card">
+    <div class="q">To preserve India's economic stability and the purity of its elections, states must pivot away from dependency-inducing populist freebies and return to capability-building — i.e., genuine welfare.</div>
+    <div class="attrib">— Instructor's model conclusion</div>
+  </div>
+
+  <h3>Live answer-writing exercise (as taught)</h3>
+  <div class="quote-card">
+    <div class="q">The line between a legitimate constitutional welfare measure and an irrational electoral freebie is increasingly blurring in India. Critically analyze.</div>
+    <div class="attrib">— Model question used for a timed (5-minute) structuring exercise in class</div>
+  </div>
+  <ol class="answers">
+    <li><strong>Introduction:</strong> lead with data, a definition, or recent context (list of ongoing petitions challenging freebie culture) — instructor's guidance: any of the three works.</li>
+    <li><strong>Body — differentiate:</strong> freebies vs. welfare measures in a table format.</li>
+    <li><strong>Body — why the line is blurring:</strong> (1) unconditional cash transfers serve as welfare under DBT schemes, yet are also freebies when targeted narrowly by some state governments; (2) universalization without targeting — benefits go to non-vulnerable groups too; (3) UCTs still create a genuine economic multiplier effect; (4) both freebies and welfare measures involve implementing election manifesto promises, blurring the line between policy and vote-buying.</li>
+    <li><strong>Body — implicit demand:</strong> use a diagram (the vicious-cycle flow above) to show second-order effects — data-first framing is rated more impactful than definitional framing (e.g., citing that unconditional cash transfers to women alone amount to a ₹1.7 lakh crore burden, rather than merely defining the term).</li>
+    <li><strong>Conclusion:</strong> suggestions for reform, explicitly citing the DPSP (Articles 38, 41) as the constitutional basis for genuine welfare obligations.</li>
+  </ol>
+  <div class="exam-tip">Cite sources carefully: attribute data to its actual source ("according to [X] report/survey," "according to newspaper Y") rather than inventing false precision — the instructor explicitly warns against citing an ambiguous or hallucinated source just to sound authoritative.</div>
+</section>
+
+<section id="part3">
+  <h2>3. Topic 2: Stray dogs and public safety</h2>
+  <p>Recommended structure: introduction → recent examples → constitutional/legal framework → data → debates/arguments for and against → challenges → judgment → views/quotes → suggestions/best practices → conclusion.</p>
+
+  <h3>Model introduction</h3>
+  <div class="quote-card">
+    <div class="q">The intersection of urban governance, public health, and animal welfare has transformed the management of India's community animals into a constitutional and civic crisis.</div>
+    <div class="attrib">— Instructor's model introduction; can be tweaked to frame a conflict between Article 21 and Article 51A(g) (fundamental duty to show compassion to living creatures), or between Article 21 and any other fundamental duty depending on the question</div>
+  </div>
+
+  <h3>The 2025 Supreme Court "judicial flip"</h3>
+  <p><span class="timestamp">30:25</span>Sequence of events as taught, independently verified (see supplementary research):</p>
+  <ul>
+    <li>The Supreme Court took cognizance of rising dog-bite fatalities and directed NCR local bodies to capture strays and permanently relocate them to shelters (August 2025).</li>
+    <li>This order triggered significant public pushback, and the Court subsequently restored the status quo — the <strong>CNVR</strong> (Catch, Neuter, Vaccinate, Release) approach, i.e., sterilize/vaccinate strays and release them back to their original territory rather than permanent confinement.</li>
+  </ul>
+
+  <h3>Key terms (for quotation-style answers)</h3>
+  <details class="collapse-section"><summary>Community animals</summary><div class="collapse-body">
+    Term introduced under the Animal Birth Control (ABC) Rules: territorial animals belonging to a particular local area; the rules also permit "community feeding" of these animals.
+  </div></details>
+  <details class="collapse-section"><summary>Vacuum effect</summary><div class="collapse-body">
+    Removing sterilized/vaccinated dogs from their territory creates an empty niche ("vacuum") that gets filled by unvaccinated or unsterilized animals migrating in — worsening, not improving, the public health problem this removal was meant to solve.
+  </div></details>
+  <details class="collapse-section"><summary>Feeder accountability</summary><div class="collapse-body">
+    Individuals, organizations, or communities who feed community animals should assume some responsibility for their behavior — a tension point, since disputes often arise between feeders and other residents (not just between residents and dogs).
+  </div></details>
+  <details class="collapse-section"><summary>Anthropocentrism vs. ecocentrism</summary><div class="collapse-body">
+    The ethical dilemma of whether human interest should be prioritized exclusively (anthropocentrism) or whether policy should pursue a shared, coexisting relationship between humans and other species (ecocentrism) — connects to the "One Health" approach below.
+  </div></details>
+  <details class="collapse-section"><summary>One Health approach</summary><div class="collapse-body">
+    A framework recognizing the intersection of human, animal, and environmental health — used in the lecture to argue that this intersection is key to preventing/reducing rabies, rather than treating human and animal health as separate governance silos.
+  </div></details>
+  <details class="collapse-section"><summary>Facultatively social (Indian street dogs)</summary><div class="collapse-body">
+    A behavioral trait of Indian street dogs: while scavengers by nature, they form social bonds with humans shaped by domestication rather than true "ferality" — a nuance used to push back against framing strays as purely wild/dangerous animals.
+  </div></details>
+
+  <h3>Key data points</h3>
+  <div class="data-box">
+    India accounts for ~33–36% of global rabies deaths (per WHO, cited in lecture). Rabies case load (per the Integrated Disease Surveillance Programme, IDSP): rose from 1.5 million cases (2019) to 3.7 million cases (2024). National sterilization coverage remains at only ~30%.
+  </div>
+
+  <h3>Legal and constitutional framework</h3>
+  <ul>
+    <li><strong>Article 21</strong> — right to life (includes a healthy environment; prioritizes human life in this debate).</li>
+    <li><strong>Article 51A(g)</strong> — fundamental duty to protect the environment and show compassion for living creatures.</li>
+    <li><strong>Prevention of Cruelty to Animals Act, 1960</strong> — central legislation prohibiting unnecessary pain/suffering to animals.</li>
+    <li><strong>Animal Birth Control Rules, 2023</strong> — mandates the CNVR approach.</li>
+    <li><strong>Dog Breeding and Pet Shop Rules</strong> — mandates registration/regulation of breeders.</li>
+  </ul>
+</section>
+
+<section id="part4">
+  <h2>4. Topic 2: Debates, judgment &amp; live exercise</h2>
+
+  <h3>CNVR vs. mass confinement — arguments</h3>
+  <table>
+    <tr><th>Dimension</th><th>CNVR (sterilize &amp; release)</th><th>Mass confinement/culling</th></tr>
+    <tr><td>Vacuum effect</td><td>Prevents it — territory stays occupied by sterilized, non-aggressive animals</td><td>Creates it — empty territory draws in unvaccinated migrants</td></tr>
+    <tr><td>Cost</td><td>~₹1,500 per dog (one-time)</td><td>~₹2,000–25,500 per dog per month (ongoing shelter cost)</td></tr>
+    <tr><td>Legal compliance</td><td>Compliant with PCA Act and ABC Rules</td><td>Legally contested — may violate PCA Act protections</td></tr>
+    <tr><td>Ecological role</td><td>Preserves scavenger function</td><td>Disrupts local ecological balance</td></tr>
+    <tr><td>Accountability</td><td>Diffuse, harder to enforce targets</td><td>Fixes clear civic-authority accountability/targets</td></tr>
+    <tr><td>Public safety (direct)</td><td>Slower visible reduction in encounters</td><td>Faster removal from public spaces, but risks vacuum effect</td></tr>
+  </table>
+
+  <h3>Governance challenges</h3>
+  <ul>
+    <li><strong>Fragmented governance:</strong> human health (Health Ministry) and animal health (Animal Husbandry) are managed as separate departments; National Rabies Control Programme and the National Action Plan for Dog-Mediated Rabies Elimination are joint initiatives but face poor coordination.</li>
+    <li><strong>Data mismatch:</strong> inconsistent dog-bite reporting across states/lifestyle surveys.</li>
+    <li><strong>Medical supply deficit:</strong> shortage of anti-rabies immunoglobulin; patient non-compliance with the full 5-dose vaccination course.</li>
+    <li><strong>"Judiciary legislates without implementation knowledge":</strong> a general critique (used illustratively in the lecture with an unrelated example of a court-ordered highway bar closure that shifted rather than solved the underlying problem) — courts issuing directions without full consideration of on-ground implementability.</li>
+  </ul>
+
+  <h3>Key judgment quotes</h3>
+  <div class="quote-card">
+    <div class="q">The constitutional balance must necessarily tilt in favor of the preservation and protection of human life.</div>
+    <div class="attrib">— From the Supreme Court's stray dog order (2025) — verify exact citation before use</div>
+  </div>
+  <div class="quote-card">
+    <div class="q">Roaming dogs do not indicate compassion and civilization in a society. Instead, they show the ignorance and lethargy of its members.</div>
+    <div class="attrib">— Attributed in the lecture to Mahatma Gandhi</div>
+  </div>
+  <div class="quote-card">
+    <div class="q">Public policy collapses when objectives are framed without resources — compassion without capacity.</div>
+    <div class="attrib">— Instructor's own formulation, usable as a reusable conclusion line for public-policy questions generally</div>
+  </div>
+
+  <h3>Key precedents and best practices</h3>
+  <details class="collapse-section" open><summary>Key cases and international comparisons</summary><div class="collapse-body">
+  <table>
+    <tr><th>Case/example</th><th>Significance</th></tr>
+    <tr><td>Animal Welfare Board of India case</td><td>Municipalities are bound by the PCA Act and ABC Rules, prohibiting mass culling.</td></tr>
+    <tr><td>Animal Welfare Board of India vs. Nagaraja</td><td>Animal life falls within the protective meaning of Article 21's "life."</td></tr>
+    <tr><td>Goa, Pune (domestic best practice)</td><td>Achieved ~70% vaccination coverage.</td></tr>
+    <tr><td>Netherlands</td><td>Cited as a country with no stray dog population — nationwide neutering, strict animal welfare laws, dedicated animal police force.</td></tr>
+    <tr><td>China</td><td>Focused on a "One Health" approach; reduced rabies deaths.</td></tr>
+  </table>
+  </div></details>
+
+  <h3>Live answer-writing exercise (as taught)</h3>
+  <div class="quote-card">
+    <div class="q">The management of community animals highlights an ethical and constitutional dilemma between the human right to a safe environment and the fundamental duty to show compassion for living creatures. How can public policy reconcile these competing claims?</div>
+    <div class="attrib">— Model question used for a timed (4-minute) structuring exercise in class</div>
+  </div>
+  <ol class="answers">
+    <li><strong>Introduction:</strong> fact-based — India accounts for ~36% of global rabies deaths (WHO) — then link: "the increase in human-animal conflict has escalated the management of community animals into a deeply contested governance issue."</li>
+    <li><strong>Body — four dilemmas:</strong> (1) right to life vs. Article 51A(g); (2) anthropocentrism vs. ecocentrism; (3) doctrine of parens patriae — should the state act as guardian for both vulnerable humans and voiceless animals; (4) compassion vs. accountability — feeders show compassion but must also bear responsibility; also note judicial expansion (Nagaraja) as adding a further constitutional dimension.</li>
+    <li><strong>Body — implicit/underlying issues:</strong> governance failure (only 30% sterilization coverage), solid waste management failure (food sources fueling population growth), medical supply gaps.</li>
+    <li><strong>Body — the CNVR vs. confinement debate:</strong> scientific efficacy, legal validity, economic viability, and public safety trade-offs (see table above).</li>
+    <li><strong>Conclusion:</strong> One Health approach; domestic best practices (Goa, Pune); separating waste-management and feeding zones; regulating the pet trade.</li>
+  </ol>
+</section>
+
+<section id="part5">
+  <h2>5. Topic 3: Right to be forgotten</h2>
+  <p>Recommended structure: introduction → difference between "right to be forgotten" and "right to erasure" → constitutional/legal framework → key judgments → arguments for/against → views/suggestions/best practices → conclusion.</p>
+
+  <h3>Model introduction</h3>
+  <p><span class="timestamp">57:06</span>General strong opening for any privacy-related question:</p>
+  <ul>
+    <li>Cite the Supreme Court's landmark <em>Puttaswamy</em> judgment (referenced in the lecture simply as "the landmark case"), which transformed privacy from a mere common-law privilege into a constitutionally protected fundamental right under Article 21</li>
+    <li>Then note the digital age has forced continuous expansion of this right, of which the right to be forgotten is one example</li>
+  </ul>
+
+  <h3>Three essential elements of the right to privacy</h3>
+  <ul>
+    <li><strong>Bodily/spatial privacy</strong> — personal autonomy over one's body (e.g., questions on DNA testing fall here).</li>
+    <li><strong>Decisional privacy</strong> — autonomy of personal choice.</li>
+    <li><strong>Informational privacy</strong> — control over personal information (right to be forgotten falls here).</li>
+  </ul>
+  <p><span class="timestamp">58:48</span>Like all rights, privacy is not absolute — any infringement must pass a <strong>three-prong test</strong>:</p>
+  <ul>
+    <li><strong>Legality</strong> — a valid law must authorize it</li>
+    <li><strong>Necessity</strong> — a compelling state interest</li>
+    <li><strong>Proportionality</strong> — the action must be necessary and the least intrusive means available</li>
+  </ul>
+
+  <h3>Key debate terms</h3>
+  <details class="collapse-section"><summary>Homo privaticus fallacy</summary><div class="collapse-body">
+    By analogy to "homo economicus" in classical economics (the assumption that humans act rationally), the "homo privaticus" assumption is that an ideal digital user is fully informed and rational enough to manage their own privacy. This is a fallacy because there is no real informed consent online — most users click "I agree" without reading terms, amounting to a "voluntary battering" (bartering) of personal data rather than genuine consent.
+  </div></details>
+  <details class="collapse-section"><summary>Consent vs. coercion</summary><div class="collapse-body">
+    Digital platforms often operate on a "take it or leave it" basis rather than genuine informed consent — described as coercion rather than consent, since users effectively cannot use the service at all without surrendering their data.
+  </div></details>
+  <details class="collapse-section"><summary>National security vs. privacy</summary><div class="collapse-body">
+    The state has a legitimate interest in limiting privacy for national security, but this can lead to disproportionate data collection beyond what is required — violating the proportionality prong of the three-part test.
+  </div></details>
+  <details class="collapse-section"><summary>Article 19 vs. right to be forgotten</summary><div class="collapse-body">
+    Direct conflict between the right to information (Article 19) / freedom of the press and an individual's claim to have information about them de-indexed or suppressed.
+  </div></details>
+
+  <h3>Right to be forgotten vs. right to erasure</h3>
+  <table>
+    <tr><th>Dimension</th><th>Right to be forgotten</th><th>Right to erasure</th></tr>
+    <tr><td>What happens to the data</td><td>Remains in the backend, but is de-indexed/masked so it doesn't appear in search results</td><td>Complete deletion of the data itself, including from backend systems</td></tr>
+    <tr><td>Legal basis in India</td><td>Evolving subset of the right to privacy; recognized case-by-case by High Courts, not yet an explicit Supreme Court fundamental right</td><td>Debated during drafting of India's data protection law but ultimately not included</td></tr>
+    <tr><td>GDPR analogue</td><td>—</td><td>Article 17 of the EU GDPR ("right to erasure"), sometimes loosely called "right to be forgotten" — but is in fact closer to full deletion</td></tr>
+  </table>
+  <p><span class="timestamp">1:06:42</span>Two further technical distinctions:</p>
+  <ul>
+    <li><strong>De-indexing</strong> — disables name-based search functionality on a platform (e.g., search engines)</li>
+    <li><strong>Masking</strong> — replaces a personal identifier with a neutral reference in official records (e.g., court records/registries); the underlying record still exists but the identifying detail is hidden</li>
+  </ul>
+</section>
+
+<section id="part6">
+  <h2>6. Topic 3: Case law, debates &amp; live exercise</h2>
+
+  <h3>Key precedent</h3>
+  <div class="term-box"><strong>Jorawar Singh Mundy vs. Union of India (Delhi High Court, 2021):</strong> recognized the right to be forgotten as an integral facet of the right to privacy under Article 21, directing that search engines like Google must de-index or mask the identities of individuals who have been acquitted, discharged, or involved in purely private disputes. (Independently verified: the petitioner was a US citizen of Indian origin, acquitted of NDPS charges in 2011, who successfully sought removal of the judgment from Google and legal databases after it continued to harm his employment prospects abroad.) In the lecture this is referred to loosely as "the Delhi case" or transcribed imperfectly as "Laksh Vir Singh Yadav" — treat both as pointing to the same line of Delhi High Court jurisprudence and verify the exact case relied on before citing.</div>
+
+  <h3>Arguments for and against</h3>
+  <table>
+    <tr><th>For recognizing the right</th><th>Against / concerns</th></tr>
+    <tr><td>Protects dignity and enables genuine rehabilitation — "the shadow of crime should not replace the shadow of dignity"</td><td>May amount to arbitrary censorship, denying the public legitimate information</td></tr>
+    <tr><td>Prevents disproportionate, perpetual reputational harm from outdated search results</td><td>Parliament has already deliberately excluded this right from India's data protection law — recognizing it judicially risks judicial overreach into a legislative domain</td></tr>
+    <tr><td>Ensures "algorithmic neutrality" — since platforms like Google do not create content (unlike a newspaper), they cannot claim their own free-speech right is at stake in a de-indexing order</td><td>Undermines the principle of open justice — court records are public information, and altering search access to them affects historical/legal transparency</td></tr>
+    <tr><td>—</td><td>Risk of selective erasure — public figures could misuse the right to hide genuine misconduct</td></tr>
+  </table>
+
+  <h3>Best practices and comparative examples</h3>
+  <ul>
+    <li><strong>EU GDPR:</strong> formally recognizes the right to erasure/be forgotten.</li>
+    <li><strong>Delhi High Court:</strong> has refused the right to be forgotten to public figures attempting to hide genuine misconduct — the right is not absolute or automatic.</li>
+    <li><strong>France vs. Google (Court of Justice of the European Union):</strong> ruled that Google does not have to apply the right to be forgotten globally — de-indexing obligations apply only within the relevant jurisdiction (e.g., Europe), not worldwide.</li>
+  </ul>
+  <div class="quote-card">
+    <div class="q">Humans forget, but the internet does not forget — and does not let humans forget.</div>
+    <div class="attrib">— Attributed in the lecture to a columnist referenced as "Sanjay" (surname unclear in transcript — verify before citing); recommended as a strong opening quote for this topic</div>
+  </div>
+
+  <h3>Decision framework diagram (as taught)</h3>
+  <p class="board-caption">A litigant seeking the right to be forgotten — decision tree recommended for use as a page-margin diagram in the answer:</p>
+  <pre class="mermaid">
+flowchart TD
+    A["Is it a heinous offense?"] -->|Yes| B["No right to be forgotten —<br/>public interest prevails"]
+    A -->|No| C["Would granting it enable<br/>selective erasure by a public figure?"]
+    C -->|Yes| B
+    C -->|No| D["Is it a complete private matter/dispute?"]
+    D -->|Yes| E["Legal remedy / right to be<br/>forgotten may apply"]
+    D -->|No| F["Case-to-case basis"]
+  </pre>
+
+  <h3>Live answer-writing exercise (as taught)</h3>
+  <div class="quote-card">
+    <div class="q">"The shadow of crime should not be allowed to replace the shadow of dignity." In light of the statement, examine the judicial recognition of the right to be forgotten in India.</div>
+    <div class="attrib">— Model question used for a timed (4-minute) structuring exercise in class</div>
+  </div>
+  <ol class="answers">
+    <li><strong>Introduction:</strong> open with the "internet does not forget" quote, link it to the increasing demand for judicial recognition of a right to be forgotten, then briefly define the right.</li>
+    <li><strong>Body — the "shadow" framing:</strong> shadow of crime = a permanent digital record of someone's past misconduct; shadow of dignity = a person's right to a dignified life not permanently defined by their worst moment.</li>
+    <li><strong>Body — advantages:</strong> gradual judicial expansion of the right; addresses disproportionate harm; ensures algorithmic neutrality and rehabilitation.</li>
+    <li><strong>Body — the decision framework:</strong> use the decision-tree diagram above as a margin diagram — heinous offense? → selective erasure risk? → purely private matter? — to show nuanced, case-by-case judicial reasoning rather than an absolute right.</li>
+    <li><strong>Conclusion:</strong> suggestions — legislative clarity (revisit the deliberate exclusion from the data protection law), follow EU GDPR-style models, and ensure media/platforms prioritize accuracy in records.</li>
+  </ol>
+</section>
+
+<section id="part7">
+  <h2>7. Topic 4: DNA testing and paternity disputes</h2>
+  <p>Recommended structure: introduction → constitutional/legal framework → core debate → evolution of case law in India → arguments for/against → global comparisons → conclusion.</p>
+
+  <h3>Model introduction</h3>
+  <div class="quote-card">
+    <div class="q">The intersection of constitutional jurisprudence and modern scientific advancement is evident in the conflict between a child's right to biological truth and an individual's right to privacy.</div>
+    <div class="attrib">— Instructor's model introduction, given in the context of the Supreme Court recently upholding a High Court order directing a DNA test to prove paternity (case referenced as "CP vs. AP," 2026 — verify exact citation before use)</div>
+  </div>
+  <div class="exam-tip">The instructor explicitly warns against inventing false precision with data — don't fabricate a year or exact figure you don't actually remember; it's better to write "there has been a marked increase in X" than a specific number you're unsure of, since evaluators can tell when statistics are being manipulated for effect.</div>
+
+  <h3>Constitutional and statutory framework</h3>
+  <ul>
+    <li><strong>Article 21</strong> — bodily autonomy and the right to privacy (compelling someone to undergo a DNA test implicates this right).</li>
+    <li><strong>Presumption of legitimacy:</strong> under Section 112 of the (now-replaced) Indian Evidence Act, 1872 — carried forward with the same substantive language as Section 116 of the Bharatiya Sakshya Adhiniyam (BSA). Any child born during a valid marriage is presumed legitimate, unless the party disputing paternity can prove "non-access" (no physical access to the spouse) during the relevant period.</li>
+  </ul>
+
+  <h3>Core debates</h3>
+  <ul>
+    <li><strong>Scientific truth vs. legal presumption:</strong> should modern, conclusive DNA evidence automatically override an 1872-era legal presumption designed before such technology existed?</li>
+    <li><strong>Routine use vs. exceptional use:</strong> should DNA testing be ordered whenever requested in a dispute, or only in exceptional circumstances (to avoid its use as a harassment or pressure tactic, e.g., in maintenance disputes)?</li>
+    <li><strong>Child's right vs. father's privacy:</strong> a child's right to know their biological origin/identity vs. an individual's protection against compelled medical/bodily intrusion.</li>
+  </ul>
+</section>
+
+<section id="part8">
+  <h2>8. Topic 4: Evolution of case law</h2>
+  <details class="collapse-section" open><summary>Timeline of Indian DNA/paternity jurisprudence (verify exact citations before use)</summary><div class="collapse-body">
+  <table>
+    <tr><th>Year</th><th>Case (as transcribed)</th><th>Holding</th></tr>
+    <tr><td>1991</td><td>Kerala High Court case ("versus Mano")</td><td>First major breakthrough — accepted DNA test results, spurring wider adoption of DNA evidence in Indian courts through the 1990s.</td></tr>
+    <tr><td>1993</td><td>Gautam Kundu vs. State of West Bengal</td><td>The husband seeking a DNA test to disprove paternity must first establish a <em>prima facie</em> case of non-access under Section 112 — DNA testing cannot be ordered as a matter of routine.</td></tr>
+    <tr><td>2001/2005</td><td>Case involving an inheritance dispute (Kamti Devi-line jurisprudence)</td><td>Held DNA testing "must not be directed as a matter of routine"; law must lean in favor of the innocent child and avoid illegitimizing children absent strong justification (i.e., presumption of legitimacy favored over routine testing).</td></tr>
+    <tr><td>2014</td><td>Two-stage test case (transcribed as "Nandlal"/"Bhabani" — verify)</td><td>Established a <strong>two-stage test</strong>: Stage 1 — the disputing party must establish a strong <em>prima facie</em> case of non-access; Stage 2 — only if that is established does the court order a DNA test, and once DNA evidence is available, it must be given preference over the legal presumption of legitimacy.</td></tr>
+    <tr><td>Recent case</td><td>Balancing case (name unclear in transcript)</td><td>DNA testing cannot be used as a tool for harassment — courts must weigh social impact, whether there is a genuine need to know biological origin (vs. a pretext for harassment or an inheritance-related motive), and proportionality (whether a less intrusive alternative exists).</td></tr>
+    <tr><td>2016</td><td>Case establishing DNA testing is "not an unrestricted right"</td><td>A child does not have an unrestricted right to demand DNA testing — privacy interests give way only when paternity is the central issue in the dispute and DNA testing is the only realistic means to discover the truth.</td></tr>
+  </table>
+  </div></details>
+
+  <h3>Doctrinal shift over time</h3>
+  <p class="board-caption">Three phases of Indian paternity jurisprudence, as taught:</p>
+  <pre class="mermaid">
+flowchart LR
+    A["Phase 1: Social factor —<br/>sanctity of marriage, stigma<br/>of illegitimacy prioritized"] --> B["Phase 2: Bodily privacy —<br/>focus shifts to Article 21<br/>privacy protections"]
+    B --> C["Phase 3 (present): Child's<br/>right to know biological<br/>origin/identity given weight"]
+  </pre>
+
+  <h3>Arguments for and against DNA testing</h3>
+  <table>
+    <tr><th>Arguments for</th><th>Arguments against / concerns</th></tr>
+    <tr><td>Scientific accuracy — conclusive biological fact over presumption</td><td>Compelling someone to undergo a medical test violates their Article 21 bodily autonomy if not truly necessary</td></tr>
+    <tr><td>Child's right to identity and closure</td><td>Social stigma of illegitimacy can cause emotional trauma if misused</td></tr>
+    <tr><td>Judicial efficiency — gives disputes a conclusive end (example cited: a case that dragged on for 6 years before DNA testing resolved it)</td><td>Potential for misuse as a harassment or pressure tactic in maintenance/matrimonial disputes</td></tr>
+    <tr><td>Protects against fraud in paternity or inheritance claims and clarifies financial obligations</td><td>New criminal justice laws (BSA) retained the same 1872-era language, creating a persistent gap between law and technology; lack of clear guidelines leads to inconsistent judicial application</td></tr>
+  </table>
+
+  <h3>Global comparisons</h3>
+  <ul>
+    <li><strong>European Court of Human Rights:</strong> ruled that knowledge of one's parentage forms a crucial part of personal identity, affecting psychological wellbeing (right to private life).</li>
+    <li><strong>Canada and Australia:</strong> prioritize practical reasons for resolving paternity disputes — e.g., understanding family medical history and genetic predisposition to disease.</li>
+  </ul>
+
+  <h3>Live answer-writing exercise (as taught)</h3>
+  <div class="quote-card">
+    <div class="q">The Supreme Court balanced a child's right to know their parentage with an individual's right to privacy. Discuss with reference to relevant case laws.</div>
+    <div class="attrib">— Model question flagged by the instructor for the next class's discussion</div>
+  </div>
+</section>
+
+<section id="glossary">
+  <h2>Glossary — quick revision (all terms, one screen)</h2>
+  <dl>
+    <div class="glossary-term"><dt>Freebies</dt><dd>Unpaid-for goods/services financed by the state to win elections; short-term, often untargeted.</dd></div>
+    <div class="glossary-term"><dt>Welfare measures</dt><dd>Constitutional (DPSP) obligations enhancing human capabilities; long-term, targeted at vulnerable groups.</dd></div>
+    <div class="glossary-term"><dt>Competitive populism</dt><dd>Parties prioritize short-term voter appeasement over governance, risking a "crisis of governability."</dd></div>
+    <div class="glossary-term"><dt>Plebiscitary/personalized leadership</dt><dd>Leaders bypass parties/institutions, appealing to voters directly via personal charisma.</dd></div>
+    <div class="glossary-term"><dt>S. Subramaniam Balaji case (2013)</dt><dd>Manifesto freebie promises are not a "corrupt practice" under RPA Section 123.</dd></div>
+    <div class="glossary-term"><dt>Captive political-industrial complex</dt><dd>Freebie goods (laptops, TVs) create captive markets for politically-connected suppliers.</dd></div>
+    <div class="glossary-term"><dt>CNVR</dt><dd>Catch-Neuter-Vaccinate-Release — the legally mandated approach to managing stray dog populations.</dd></div>
+    <div class="glossary-term"><dt>Vacuum effect</dt><dd>Removing dogs from a territory lets unvaccinated animals migrate in, worsening public health risk.</dd></div>
+    <div class="glossary-term"><dt>Feeder accountability</dt><dd>Those feeding community animals should bear some responsibility for resulting disputes/behavior.</dd></div>
+    <div class="glossary-term"><dt>Anthropocentrism vs. ecocentrism</dt><dd>Prioritizing human interest exclusively, vs. a shared coexistence model with other species.</dd></div>
+    <div class="glossary-term"><dt>One Health approach</dt><dd>Framework linking human, animal, and environmental health as one interconnected system.</dd></div>
+    <div class="glossary-term"><dt>Right to be forgotten</dt><dd>De-indexing/masking personal info from search results; data itself remains in the backend.</dd></div>
+    <div class="glossary-term"><dt>Right to erasure</dt><dd>Complete deletion of data, including from backend systems (EU GDPR Article 17 concept).</dd></div>
+    <div class="glossary-term"><dt>De-indexing vs. masking</dt><dd>De-indexing disables search visibility on platforms; masking replaces identifiers in official records.</dd></div>
+    <div class="glossary-term"><dt>Homo privaticus fallacy</dt><dd>False assumption that digital users are rational, informed managers of their own privacy.</dd></div>
+    <div class="glossary-term"><dt>Jorawar Singh Mundy case (2021)</dt><dd>Delhi HC recognized right to be forgotten as part of Article 21 privacy; ordered de-indexing.</dd></div>
+    <div class="glossary-term"><dt>Presumption of legitimacy</dt><dd>Child born during valid marriage presumed legitimate unless "non-access" is proven (BSA S.116).</dd></div>
+    <div class="glossary-term"><dt>Two-stage test (DNA/paternity)</dt><dd>Prima facie non-access must be shown before a DNA test is ordered; DNA result then prevails.</dd></div>
+    <div class="glossary-term"><dt>Gautam Kundu case (1993)</dt><dd>DNA test cannot be ordered as a matter of routine; prima facie non-access required first.</dd></div>
+  </dl>
+</section>
+
+<section id="arcs">
+  <h2>Revision kit (ARCS method)</h2>
+  <p style="font-family: Arial, sans-serif; font-size: 0.88em; color: #57606a;">A—Active Recall, R—Repeat with Spacing, C—Contrast &amp; Chunk, S—Stick with Encoding Tricks. Close the notes above and test yourself before checking answers.</p>
+
+  <div class="arcs-box">
+    <h4>A — Active Recall: self-test (no peeking until you answer)</h4>
+    <div class="recall-q">
+      <p class="q-text">1. What is the ONE core distinction between a "freebie" and a "welfare measure"?</p>
+      <details><summary></summary><div class="ans">Freebies = short-term gratification, often untargeted, financed to win elections. Welfare measures = long-term, constitutionally obligated (DPSP), targeted at vulnerable groups, enhance human capabilities.</div></details>
+    </div>
+    <div class="recall-q">
+      <p class="q-text">2. What did the Supreme Court hold in S. Subramaniam Balaji vs. State of Tamil Nadu (2013)?</p>
+      <details><summary></summary><div class="ans">Election manifesto promises of freebies do not amount to a "corrupt practice" under Section 123 of the RPA, 1951, since that section governs individual candidate conduct, not party manifestos. The Court directed the EC to frame manifesto guidelines.</div></details>
+    </div>
+    <div class="recall-q">
+      <p class="q-text">3. What is the "vacuum effect" in the stray dog debate, and why does mass removal backfire?</p>
+      <details><summary></summary><div class="ans">Removing dogs from a territory leaves it empty; unvaccinated/unsterilized animals migrate in to fill the gap, worsening the public health risk rather than solving it — this is why CNVR (sterilize and release) is preferred over confinement.</div></details>
+    </div>
+    <div class="recall-q">
+      <p class="q-text">4. What is the difference between "right to be forgotten" and "right to erasure"?</p>
+      <details><summary></summary><div class="ans">Right to be forgotten: data stays in the backend but is de-indexed/masked from search. Right to erasure: complete deletion of the data itself (EU GDPR Article 17 concept).</div></details>
+    </div>
+    <div class="recall-q">
+      <p class="q-text">5. What is the "presumption of legitimacy" in Indian paternity law, and what must be proven to rebut it?</p>
+      <details><summary></summary><div class="ans">A child born during a valid marriage is presumed legitimate under Section 116 BSA (formerly S.112 Evidence Act) unless the party disputing paternity proves "non-access" — no physical access to the spouse — during the relevant period.</div></details>
+    </div>
+  </div>
+
+  <div class="arcs-box spacing-tracker">
+    <h4>R — Repeat with Spacing: review checklist</h4>
+    <p>Lecture date: Aug 11, 2026. Forgetting is exponential — review at these intervals, not all at once.</p>
+    <table>
+      <tr><th>Review</th><th>Target date</th><th>Done</th></tr>
+      <tr><td>Day 1 (same day, quick skim)</td><td>Aug 11</td><td><input type="checkbox"></td></tr>
+      <tr><td>Day 3</td><td>Aug 14</td><td><input type="checkbox"></td></tr>
+      <tr><td>Day 7</td><td>Aug 18</td><td><input type="checkbox"></td></tr>
+      <tr><td>Day 21</td><td>Sep 1</td><td><input type="checkbox"></td></tr>
+    </table>
+    <p style="font-size:0.85em; color:#57606a;">Each review: close this file, answer the 5 recall questions above from memory first, then reopen to check.</p>
+  </div>
+
+  <div class="arcs-box">
+    <h4>C — Contrast &amp; Chunk: easily confused pairs</h4>
+    <table>
+      <tr><th>Term A</th><th>Term B</th><th>The ONE distinguishing point</th></tr>
+      <tr><td>Freebies</td><td>Welfare measures</td><td>Freebies = short-term/untargeted; Welfare = long-term/constitutionally obligated/targeted</td></tr>
+      <tr><td>De-indexing</td><td>Masking</td><td>De-indexing disables search visibility (platforms); masking replaces identifiers in official records</td></tr>
+      <tr><td>CNVR</td><td>Mass confinement</td><td>CNVR releases sterilized dogs back to territory (no vacuum effect); confinement removes them permanently (creates vacuum effect)</td></tr>
+      <tr><td>Section 112 (old) / Section 116 (BSA)</td><td>DNA test result</td><td>Legal presumption of legitimacy vs. scientific evidence — presumption still hard to displace even with DNA proof (Kamti Devi)</td></tr>
+    </table>
+    <p style="font-family: Arial, sans-serif; font-size: 0.88em;"><strong>Chunk:</strong> group this lecture's 4 topics by their shared underlying tension rather than as 4 separate blocks — all four pit a short-term/individual claim (freebie, public safety, information suppression, biological truth) against a long-term/systemic value (fiscal health, animal welfare, free speech, family stability).</p>
+  </div>
+
+  <div class="arcs-box mnemonic-box">
+    <h4>S — Stick with Encoding Tricks</h4>
+    <p><strong>Dual coding:</strong> re-look at the vicious/virtuous cycle diagrams (Topic 1), the right-to-be-forgotten decision tree (Topic 3), and the 3-phase paternity doctrine diagram (Topic 4) each time you revise, instead of re-reading the paragraph explanations.</p>
+    <p><strong>Image for the vacuum effect:</strong> picture a swept-clean patch of floor that new dust immediately drifts into — removing the sterilized dog doesn't leave the space empty, it just invites an unvaccinated one to take its place.</p>
+  </div>
+</section>
+
+<section id="gaps">
+  <h2>Supplementary research — filling gaps</h2>
+
+  <div class="gap-box">
+    <h4>S. Subramaniam Balaji vs. State of Tamil Nadu (2013) — verified holding</h4>
+    <p>The Supreme Court held that election manifesto promises cannot be construed as a "corrupt practice" under Section 123 of the Representation of the People Act, 1951, because that provision governs individual candidate conduct, not party manifestos as policy documents. However, the Court explicitly acknowledged that "distribution of freebies of any kind, undoubtedly, influences all people. It shakes the root of free and fair elections to a large degree" — and directed the Election Commission to frame guidelines regulating manifesto content, a genuine institutional response not fully covered in the lecture's framing of this as an unaddressed "loophole."</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>The 2025 Supreme Court stray dog controversy — verified timeline</h4>
+    <p>The crisis was triggered by the death of a young child, Chavi Sharma, from rabies on 25 July 2025. On 11 August 2025, a two-judge bench directed Delhi/NCR authorities to capture all stray dogs and permanently relocate them to shelters within eight weeks. Following significant public backlash, a three-judge bench (Justices Vikram Nath, Sandeep Mehta, and N.V. Anjaria) stayed this order on 22 August 2025, calling for a "holistic approach" balancing human safety and animal welfare, and reinstated the CNVR model — with rabid or dangerously aggressive dogs still subject to quarantine/shelter, while sterilized, vaccinated dogs are returned to their original territory. The Court's scope was expanded pan-India, directing municipal bodies nationwide to ensure only sterilized, immunized dogs are released back to their areas.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>Jorawar Singh Mundy vs. Union of India — verified case background</h4>
+    <p>The petitioner, a US citizen of Indian origin, was tried under the NDPS Act during a 2009 visit to India and acquitted on 30 April 2011. After returning to the US and studying law, he discovered his acquittal judgment remained fully searchable online (Google, Indian Kanoon, vLex), causing ongoing reputational harm with potential employers. In April 2021, Delhi High Court Justice Pratibha M. Singh passed an interim order recognizing the right to be forgotten as part of the fundamental right to privacy, and granted limited de-indexing relief — while emphasizing courts must weigh this against the public's right to information and judicial transparency on a case-by-case basis.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>DNA/paternity case law — verified corrections</h4>
+    <p>Independent search confirms the key precedent likely intended by the lecture's 1993 reference is <strong>Gautam Kundu vs. State of West Bengal</strong>, and the "2001/2005" reference likely corresponds to <strong>Kamti Devi vs. Poshi Ram (2001)</strong> — which held that even genuine DNA evidence contrary to Section 112's presumption cannot automatically override it; the presumption can only be rebutted by "strong, clear, satisfying and conclusive evidence," not mere DNA results alone, since Section 112 was enacted before DNA/RNA technology existed. Note this is a more legally conservative position than the lecture's account of a clean "two-stage test" giving DNA evidence automatic preference — in practice, Indian courts have continued to treat the Section 112/116 presumption as difficult to displace even post-DNA-testing, and a November 2025 Supreme Court ruling reaffirmed that DNA tests should not be ordered unless the Section 112-type presumption is first rebutted and paternity is directly linked to the matter in dispute. Verify the exact 2014 "two-stage test" case name against the original judgment or handwritten notes before citing.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>What the lecture doesn't cover, but pairs well for GS-2/GS-3 prep</h4>
+    <ul>
+      <li>The Digital Personal Data Protection Act, 2023 (DPDP Act) — its provisions on data erasure requests and how they interact with (but stop short of) a full "right to be forgotten."</li>
+      <li>15th/16th Finance Commission recommendations on state fiscal responsibility and freebie-driven debt sustainability, for deeper GS-3 economy linkage.</li>
+      <li>The National Action Plan for Dog-Mediated Rabies Elimination (NAPRE) target year and specific inter-ministerial coordination mechanisms, to substantiate the "fragmented governance" critique with a named policy document.</li>
+      <li>Puttaswamy vs. Union of India (2017) itself — the specific holding establishing privacy as a fundamental right under Article 21, referenced only generically in this lecture as "the landmark case."</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  Notes compiled from an unlisted lecture recording using YouTube's auto-generated transcript. Timestamps are approximate; several proper nouns (scholar names, case citations) were transcribed imperfectly by auto-captions and are flagged inline for verification against the original lecture or handwritten notes before citing in an exam answer. Supplementary research sections are separately verified via web search and marked accordingly. Click Save (first time will ask you to pick this file) to write your edits directly to disk — no chat needed.
+</footer>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11.15.0/dist/mermaid.min.js" integrity="sha384-yQ4mmBBT+vhTAwjFH0toJXNYJ6O4usWnt6EPIdWwrRvx2V/n5lXuDZQwQFeSFydF" crossorigin="anonymous"></script>
+<script>
+(function() {
+  var mode = null;
+  var noteCounter = 0;
+
+  var btnHighlight = document.getElementById('btn-highlight');
+  var btnUnderline = document.getElementById('btn-underline');
+  var btnNote = document.getElementById('btn-note');
+  var btnClear = document.getElementById('btn-clear');
+  var btnSave = document.getElementById('btn-save');
+  var statusText = document.getElementById('status-text');
+  var contentRoot = document.getElementById('content-root');
+  var noteBox = document.getElementById('note-input-box');
+  var noteText = document.getElementById('note-text');
+  var pendingNoteTarget = null;
+
+  function setMode(newMode) {
+    mode = mode === newMode ? null : newMode;
+    btnHighlight.classList.toggle('active', mode === 'highlight');
+    btnUnderline.classList.toggle('active', mode === 'underline');
+    btnNote.classList.toggle('active', mode === 'note');
+  }
+
+  btnHighlight.addEventListener('click', function() { setMode('highlight'); });
+  btnUnderline.addEventListener('click', function() { setMode('underline'); });
+  btnNote.addEventListener('click', function() { setMode('note'); });
+
+  function markDirty() {
+    statusText.textContent = 'Unsaved changes';
+    statusText.style.color = '#993c1d';
+  }
+
+  document.addEventListener('mouseup', function(e) {
+    if (mode !== 'highlight' && mode !== 'underline') return;
+    var sel = window.getSelection();
+    if (!sel || sel.isCollapsed || sel.rangeCount === 0) return;
+    var range = sel.getRangeAt(0);
+    if (!contentRoot.contains(range.commonAncestorContainer)) return;
+
+    var wrapper = document.createElement(mode === 'highlight' ? 'mark' : 'u');
+    wrapper.className = mode === 'highlight' ? 'user-highlight' : 'user-underline';
+    try {
+      range.surroundContents(wrapper);
+    } catch (err) {
+      var frag = range.extractContents();
+      wrapper.appendChild(frag);
+      range.insertNode(wrapper);
+    }
+    sel.removeAllRanges();
+    markDirty();
+  });
+
+  contentRoot.addEventListener('click', function(e) {
+    if (mode !== 'note') return;
+    if (e.target.closest('.user-note')) return;
+    pendingNoteTarget = e.target;
+    noteBox.style.display = 'block';
+    var x = Math.min(e.clientX, window.innerWidth - 280);
+    var y = Math.min(e.clientY, window.innerHeight - 140);
+    noteBox.style.left = x + 'px';
+    noteBox.style.top = y + 'px';
+    noteText.value = '';
+    noteText.focus();
+  });
+
+  document.getElementById('note-cancel').addEventListener('click', function() {
+    noteBox.style.display = 'none';
+    pendingNoteTarget = null;
+  });
+
+  document.getElementById('note-add').addEventListener('click', function() {
+    var text = noteText.value.trim();
+    if (!text || !pendingNoteTarget) { noteBox.style.display = 'none'; return; }
+    noteCounter++;
+    var noteDiv = document.createElement('div');
+    noteDiv.className = 'user-note';
+    noteDiv.setAttribute('data-note-id', noteCounter);
+    noteDiv.innerHTML = '<span class="note-label">Your note</span>' +
+      '<button class="del-note" title="Remove note">&times;</button>' +
+      '<span class="note-body"></span>';
+    noteDiv.querySelector('.note-body').textContent = text;
+    noteDiv.querySelector('.del-note').addEventListener('click', function() {
+      noteDiv.remove();
+      markDirty();
+    });
+
+    var target = pendingNoteTarget.closest('li, p, td, div.quote-card, section') || contentRoot;
+    target.parentNode.insertBefore(noteDiv, target.nextSibling);
+
+    noteBox.style.display = 'none';
+    pendingNoteTarget = null;
+    markDirty();
+    setMode('note');
+  });
+
+  btnClear.addEventListener('click', function() {
+    if (!confirm('Remove all your highlights, underlines, and notes on this page?')) return;
+    contentRoot.querySelectorAll('.user-note').forEach(function(n) { n.remove(); });
+    contentRoot.querySelectorAll('mark.user-highlight').forEach(function(m) {
+      var parent = m.parentNode;
+      while (m.firstChild) parent.insertBefore(m.firstChild, m);
+      parent.removeChild(m);
+    });
+    contentRoot.querySelectorAll('u.user-underline').forEach(function(u) {
+      var parent = u.parentNode;
+      while (u.firstChild) parent.insertBefore(u.firstChild, u);
+      parent.removeChild(u);
+    });
+    markDirty();
+  });
+
+  var fallbackHelp = document.getElementById('fallback-help');
+  document.getElementById('fallback-close').addEventListener('click', function() {
+    fallbackHelp.style.display = 'none';
+  });
+
+  var fileHandle = null;
+  var fsaSupported = 'showSaveFilePicker' in window;
+  var THIS_FILENAME = 'notes.html';
+
+  function buildFullHtml() {
+    var doc = document.documentElement.cloneNode(true);
+    var liveContentRoot = doc.querySelector('#content-root');
+    if (liveContentRoot) liveContentRoot.innerHTML = contentRoot.innerHTML;
+    return '<!DOCTYPE html>\n' + doc.outerHTML;
+  }
+
+  async function writeToFile() {
+    var writable = await fileHandle.createWritable();
+    await writable.write(buildFullHtml());
+    await writable.close();
+  }
+
+  btnSave.addEventListener('click', async function() {
+    statusText.textContent = 'Saving…';
+    statusText.style.color = '#57606a';
+    if (!fsaSupported) {
+      fallbackHelp.style.display = 'block';
+      statusText.textContent = 'Direct save not supported in this browser';
+      statusText.style.color = '#993c1d';
+      return;
+    }
+    try {
+      if (!fileHandle) {
+        fileHandle = await window.showSaveFilePicker({
+          suggestedName: THIS_FILENAME,
+          types: [{ description: 'HTML file', accept: { 'text/html': ['.html'] } }]
+        });
+      }
+      var perm = await fileHandle.queryPermission({ mode: 'readwrite' });
+      if (perm !== 'granted') {
+        perm = await fileHandle.requestPermission({ mode: 'readwrite' });
+      }
+      if (perm !== 'granted') {
+        statusText.textContent = 'File permission denied — click Save to retry';
+        statusText.style.color = '#993c1d';
+        fileHandle = null;
+        return;
+      }
+      await writeToFile();
+      statusText.textContent = 'Saved to file just now';
+      statusText.style.color = '#3b6d11';
+    } catch (err) {
+      console.error('SAVE_ERROR', err.name, err.message, err);
+      if (err.name === 'AbortError') {
+        statusText.textContent = 'Save cancelled';
+        statusText.style.color = '#57606a';
+      } else {
+        statusText.textContent = 'Save failed: ' + err.name + ' — click Save to retry';
+        statusText.style.color = '#993c1d';
+        fileHandle = null;
+      }
+    }
+  });
+
+  if (window.mermaid) {
+    mermaid.initialize({ startOnLoad: true, securityLevel: 'strict' });
+  }
+
+  contentRoot.querySelectorAll('.user-note .del-note').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      btn.closest('.user-note').remove();
+      markDirty();
+    });
+  });
+
+  contentRoot.querySelectorAll('.spacing-tracker input[type="checkbox"]').forEach(function(cb) {
+    cb.addEventListener('change', function() {
+      if (cb.checked) { cb.setAttribute('checked', 'checked'); }
+      else { cb.removeAttribute('checked'); }
+      markDirty();
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

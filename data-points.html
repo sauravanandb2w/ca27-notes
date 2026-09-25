@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CA27 — Master Data Points (All Lectures)</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: #faf9f6;
+    color: #1f2328;
+    margin: 0;
+    padding: 0 0 80px;
+    line-height: 1.6;
+  }
+  .toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: #ffffff;
+    border-bottom: 2px solid #1d5b8b;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: Arial, sans-serif;
+    flex-wrap: wrap;
+  }
+  .toolbar input[type="search"] {
+    flex: 1;
+    max-width: 320px;
+    padding: 7px 12px;
+    border-radius: 6px;
+    border: 1px solid #d8d2c6;
+    font-size: 13px;
+  }
+  .toolbar button {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    padding: 7px 14px;
+    border-radius: 6px;
+    border: 1px solid #d8d2c6;
+    background: #fff;
+    cursor: pointer;
+    color: #1f2328;
+  }
+  .toolbar button:hover { background: #e6f1fb; border-color: #1d5b8b; }
+  .toolbar button.active { background: #1d5b8b; color: #fff; border-color: #1d5b8b; }
+  .toolbar .save-btn { background: #2f6b4f; color: #fff; border-color: #2f6b4f; margin-left: auto; }
+  .toolbar .save-btn:hover { background: #24543e; }
+  .toolbar .status { font-size: 12px; color: #57606a; padding-right: 8px; }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 30px 20px; }
+  header { border-bottom: 3px solid #1d5b8b; padding-bottom: 20px; margin-bottom: 24px; }
+  header h1 { font-size: 1.7em; margin: 0 0 6px; color: #1d5b8b; }
+  header .meta { color: #57606a; font-size: 0.95em; font-family: Arial, sans-serif; }
+  .filter-bar {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    margin-bottom: 26px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .filter-bar button {
+    padding: 6px 14px;
+    border-radius: 16px;
+    border: 1px solid #d8d2c6;
+    background: #fff;
+    cursor: pointer;
+    color: #1f2328;
+    font-size: 12.5px;
+  }
+  .filter-bar button.active { background: #1d5b8b; color: #fff; border-color: #1d5b8b; }
+  section.lecture-block { margin-bottom: 50px; }
+  section.lecture-block > h2 {
+    font-size: 1.35em;
+    color: #fff;
+    background: #1d5b8b;
+    padding: 10px 18px;
+    border-radius: 8px;
+    margin-bottom: 4px;
+  }
+  .lecture-meta { font-family: Arial, sans-serif; font-size: 0.82em; color: #57606a; margin: 6px 0 18px; }
+  .lecture-meta a { color: #1d5b8b; text-decoration: none; }
+  .lecture-meta a:hover { text-decoration: underline; }
+  h3 { font-size: 1.12em; margin: 24px 0 8px; color: #1d5b8b; border-left: 4px solid #1d5b8b; padding-left: 10px; }
+  h4 { font-size: 0.98em; margin: 16px 0 6px; color: #2f2f6b; }
+  p { margin: 8px 0; }
+  ul { padding-left: 22px; margin: 8px 0; }
+  li { margin-bottom: 5px; }
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 0.92em; background: #fff; }
+  th, td { border: 1px solid #e2ddd4; padding: 7px 11px; text-align: left; vertical-align: top; }
+  th { background: #e6f1fb; font-family: Arial, sans-serif; font-size: 0.85em; }
+  .data-box { background: #f3f0fb; border: 1px solid #ddd6f0; border-radius: 8px; padding: 10px 16px; margin: 8px 0; font-family: 'Courier New', monospace; font-size: 0.88em; }
+  .quote-card { background: #fff; border: 1px solid #e2ddd4; border-left: 4px solid #1d5b8b; border-radius: 6px; padding: 10px 16px; margin: 8px 0; }
+  .quote-card .q { font-style: italic; font-size: 1em; }
+  .quote-card .attrib { font-family: Arial, sans-serif; font-size: 0.82em; color: #57606a; margin-top: 5px; }
+  .case-box { background: #fdf3f3; border: 1px solid #ecd4d4; border-radius: 8px; padding: 10px 16px; margin: 8px 0; font-size: 0.95em; }
+  .case-box strong { color: #8b3a3a; }
+  .tag-2026 { display: inline-block; font-family: Arial, sans-serif; font-size: 0.68em; padding: 2px 8px; border-radius: 10px; background: #eaf3de; color: #3b6d11; font-weight: bold; margin-left: 6px; }
+  .tag-2027 { display: inline-block; font-family: Arial, sans-serif; font-size: 0.68em; padding: 2px 8px; border-radius: 10px; background: #e6f1fb; color: #1d5b8b; font-weight: bold; margin-left: 6px; }
+  mark.user-highlight { background: #fff176; padding: 1px 2px; border-radius: 2px; }
+  u.user-underline { text-decoration: underline; text-decoration-color: #1d5b8b; text-decoration-thickness: 2px; }
+  .user-note {
+    background: #e6f1fb;
+    border: 1px solid #85b7eb;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin: 8px 0;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #0c447c;
+    position: relative;
+  }
+  .user-note .note-label { font-weight: bold; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; display: block; }
+  .user-note .del-note { position: absolute; top: 6px; right: 8px; cursor: pointer; border: none; background: none; color: #0c447c; font-size: 14px; font-family: Arial, sans-serif; }
+  #note-input-box {
+    position: fixed;
+    display: none;
+    background: #fff;
+    border: 2px solid #1d5b8b;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    z-index: 100;
+    font-family: Arial, sans-serif;
+  }
+  #note-input-box textarea { width: 240px; height: 60px; font-family: Arial, sans-serif; font-size: 13px; border: 1px solid #d8d2c6; border-radius: 4px; padding: 6px; }
+  #note-input-box .note-actions { margin-top: 6px; display: flex; gap: 6px; justify-content: flex-end; }
+  #note-input-box button { font-size: 12px; padding: 5px 10px; border-radius: 4px; border: 1px solid #d8d2c6; background: #fff; cursor: pointer; }
+  #note-input-box button.primary { background: #1d5b8b; color: #fff; border-color: #1d5b8b; }
+  .content-target::selection { background: #ffe082; }
+  .hidden-by-filter { display: none !important; }
+  footer { margin-top: 60px; border-top: 1px solid #e2ddd4; padding-top: 16px; color: #57606a; font-size: 0.82em; font-family: Arial, sans-serif; }
+  #fallback-help {
+    position: fixed;
+    display: none;
+    top: 60px;
+    right: 20px;
+    max-width: 320px;
+    background: #fff;
+    border: 2px solid #993c1d;
+    border-radius: 8px;
+    padding: 14px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    z-index: 200;
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <input type="search" id="search-box" placeholder="Search all data points (e.g. 'Hormuz', '75%', 'Grote')...">
+  <button id="btn-highlight" title="Select text, then click to highlight it">Highlight</button>
+  <button id="btn-underline" title="Select text, then click to underline it">Underline</button>
+  <button id="btn-note" title="Click this, then click anywhere to drop a note">Add note</button>
+  <button id="btn-clear" title="Remove all your highlights, underlines, and notes">Clear my edits</button>
+  <span class="status" id="status-text">Not connected to file — click Save once to connect</span>
+  <button class="save-btn" id="btn-save">Save</button>
+</div>
+
+<div id="fallback-help">
+  <strong>Your browser can't save directly</strong>
+  <p style="margin:6px 0;">File System Access isn't supported here (common on Safari/Firefox). Use Chrome or Edge to enable direct-save, or use Ctrl/Cmd+S to overwrite this file manually after editing.</p>
+  <button id="fallback-close" style="font-size: 12px; padding: 6px 12px; border-radius: 4px; border: 1px solid #993c1d; background: #993c1d; color: #fff; cursor: pointer;">Got it</button>
+</div>
+
+<div id="note-input-box">
+  <textarea id="note-text" placeholder="Type your note..."></textarea>
+  <div class="note-actions">
+    <button id="note-cancel">Cancel</button>
+    <button class="primary" id="note-add">Add</button>
+  </div>
+</div>
+
+<div class="wrap content-target" id="content-root">
+
+<header>
+  <h1>Master Data Points — All Lectures</h1>
+  <div class="meta">Every verified statistic, case name, quote, and key fact across all lectures logged so far, in one page. Organized by lecture; use the filter bar or search box to narrow down. Updated as new lectures are added — see <a href="index.html" style="color:#1d5b8b;">the main index</a> for full notes.</div>
+</header>
+
+<div class="filter-bar" id="filter-bar">
+  <button class="filter-btn active" data-filter="all">All lectures</button>
+  <button class="filter-btn" data-filter="hormuz">Class 1(27) — Hormuz</button>
+  <button class="filter-btn" data-filter="class1">Class 1(26) — Gender/Morality/Bail</button>
+  <button class="filter-btn" data-filter="class2">Class 2(26) — Freebies/Strays/RTBF/DNA</button>
+  <button class="filter-btn" data-filter="class3">Class 3(26) — Menstrual/AI/Assurances</button>
+  <button class="filter-btn" data-filter="class2-27">Class 2(27) — Care Economy/Agri Marketing</button>
+  <button class="filter-btn" data-filter="class3-27">Class 3(27) — AI Judiciary/PDS</button>
+  <button class="filter-btn" data-filter="class4-27">Class 4(27) — Public Exams/MSME</button>
+  <button class="filter-btn" data-filter="class5-27">Class 5(27) — MSME/Mecca Pact</button>
+  <button class="filter-btn" data-filter="class6-27">Class 6(27) — Freebies/MSP</button>
+  <button class="filter-btn" data-filter="class7-27">Class 7(27) — Protest/PCA/Judiciary</button>
+  <button class="filter-btn" data-filter="class8-27">Class 8(27) — Collegium/Tribunals/PM-AASHA</button>
+  <button class="filter-btn" data-filter="class9-27">Class 9(27) — RUPPs/VB-G RAM G</button>
+  <button class="filter-btn" data-filter="class10-27">Class 10(27) — MMDR/SCO</button>
+  <button class="filter-btn" data-filter="class10a-27">Class 10-A(27) — BBNJ/PSL/Scramjet/Critical Minerals</button>
+  <button class="filter-btn" data-filter="class11-27">Class 11(27) — River Disputes/DFC/Education</button>
+</div>
+
+<section class="lecture-block" data-lecture="hormuz">
+  <h2>Class 1(27) — Strait of Hormuz Crisis <span class="tag-2027">CA Mains 2027</span></h2>
+  <div class="lecture-meta">Aug 10, 2026 &middot; <a href="CA-Mains-2027/2026-08-10_class01-strait-of-hormuz/notes.html">Full notes →</a></div>
+
+  <h3>Geography &amp; scale</h3>
+  <div class="data-box">Strait width: ~21 nautical miles &nbsp;|&nbsp; Crude oil transiting (peacetime): ~20–21 million barrels/day &nbsp;|&nbsp; Share of global liquid petroleum: ~20%</div>
+
+  <h3>India's exposure</h3>
+  <table>
+    <tr><th>Metric</th><th>Value</th></tr>
+    <tr><td>Crude oil import dependency</td><td>~90%</td></tr>
+    <tr><td>Share of oil imports transiting Strait of Hormuz</td><td>~40–50%</td></tr>
+    <tr><td>Major crude suppliers via this route</td><td>Iraq, Saudi Arabia</td></tr>
+    <tr><td>LNG import dependency</td><td>~50% of total consumption</td></tr>
+    <tr><td>Share of LNG imports transiting the Strait</td><td>~50–60%</td></tr>
+    <tr><td>Urea dependency via this corridor</td><td>Oman alone supplies ~45% of India's imported urea</td></tr>
+    <tr><td>Muriate of potash (MOP)</td><td>~100% imported, mostly via this corridor</td></tr>
+  </table>
+  <div class="data-box">Per CareEdge Global: a sustained US$10/barrel rise in crude oil prices could widen India's current account deficit by 0.3–0.4% of GDP, and shave off ~0.2–0.5 percentage points from real GDP growth.</div>
+  <p>India cited (with South Korea, Thailand) among the top 3 countries most vulnerable to a Middle East energy crisis — per IEA.</p>
+
+  <h3>Timeline (2026)</h3>
+  <ul>
+    <li><strong>Feb 2026:</strong> coordinated US–Israel attack on Iran — Operation Epic Fury and Operation Rising Lion.</li>
+    <li>Subsequent US–Iran MOU/peace deal (Versailles-style setting) later showed signs of collapse, alongside a related US–Saudi civil nuclear deal (proliferation concern).</li>
+  </ul>
+
+  <h3>Legal framework — UNCLOS</h3>
+  <ul>
+    <li><strong>Transit passage</strong> (UNCLOS Art. 38): commerce-first, cannot be unilaterally suspended by a bordering state.</li>
+    <li><strong>Innocent passage</strong> (UNCLOS Art. 19): sovereignty-first, more limited/suspendable — Iran's preferred standard, since it signed but never ratified UNCLOS.</li>
+    <li>Iran makes passage <em>conditional</em> — political filters (ally-flagged vessels like China's pass) + financial filters (tolls), not a blanket closure.</li>
+  </ul>
+
+  <h3>Key doctrines &amp; terms</h3>
+  <table>
+    <tr><th>Term</th><th>Meaning</th></tr>
+    <tr><td>Carter Doctrine (1980)</td><td>US pledge to defend the Gulf by force — "oil for security"</td></tr>
+    <tr><td>Trump Doctrine</td><td>Transactional foreign policy — war only if there's "return on investment"</td></tr>
+    <tr><td>Monroe Doctrine (1823)</td><td>US regional hegemony in its own hemisphere; non-interference elsewhere</td></tr>
+    <tr><td>Samson Option</td><td>Iran's asymmetric/existential warfare doctrine given military weakness vs. US</td></tr>
+    <tr><td>Pottery Barn Rule</td><td>Colin Powell's "you break it, you own it" — intervener owes post-war stabilization</td></tr>
+    <tr><td>BANI World</td><td>Brittle, Anxious, Nonlinear, Incomprehensible — Jamais Cascio's post-VUCA framework</td></tr>
+    <tr><td>Axis of Evil / Axis of Resistance</td><td>US label for Iran/Iraq/N.Korea vs. Iran's own proxy network (Hezbollah, Hamas, Houthis)</td></tr>
+    <tr><td>Dark transits / shadow fleets</td><td>Vessels using false flags/registrations to evade detection or sanctions</td></tr>
+    <tr><td>Demos problem</td><td>Democracies structurally overlook non-voters (e.g. foreign seafarers) in policy response</td></tr>
+  </table>
+
+  <h3>India-specific strategic terms</h3>
+  <table>
+    <tr><th>Term</th><th>Meaning</th></tr>
+    <tr><td>Net Security Provider</td><td>India's doctrine of contributing more Indian Ocean Region security than it consumes</td></tr>
+    <tr><td>Two Blue Water Challenge</td><td>Simultaneous Malacca Strait (east, China-linked) + Hormuz (west) maritime pressure</td></tr>
+    <tr><td>Triple Squeeze</td><td>Energy + fertilizer + consumer/household crisis from a Hormuz shock</td></tr>
+    <tr><td>3 C framework</td><td>Cold War distancing → "oil in, labour out" → Contemporary "Think West" policy</td></tr>
+    <tr><td>De-risking vs. Decoupling</td><td>Reducing dependence with alternatives, vs. full severance (unrealistic here)</td></tr>
+    <tr><td>Gulf Doctrine (proposal)</td><td>Syed Akbaruddin's call for a unified India-Gulf policy vs. fragmented bilateralism</td></tr>
+    <tr><td>Chabahar Port</td><td>India-operated Iranian port outside the Strait; anchors INSTC route, counters Gwadar</td></tr>
+  </table>
+
+  <h3>India's response measures</h3>
+  <ul>
+    <li>Infrastructure resilience (terminals, energy infra)</li>
+    <li>Demand-side management (e.g. regulating commercial LPG use)</li>
+    <li>Diversification of supply (Russia, North America, Algeria)</li>
+    <li>Diplomatic engagement with Iran for safe tanker passage</li>
+    <li>Fiscal measures — excise duty cuts</li>
+  </ul>
+</section>
+
+<section class="lecture-block" data-lecture="class1">
+  <h2>Class 1(26) — Gender Politics, Constitutional Morality &amp; Bail <span class="tag-2026">CA Mains 2026</span></h2>
+  <div class="lecture-meta">Aug 11, 2026 &middot; <a href="CA-Mains-2026/2026-08-11_class01-gender-morality-bail/notes.html">Full notes →</a></div>
+
+  <h3>Gender politics of the Constitution</h3>
+  <div class="quote-card">
+    <div class="q">The narrative of India's constitutional history is often framed through a patriarchal lens, foregrounding the "founding fathers." But critics argue that the vital contributions of the "founding mothers" have not been given due recognition.</div>
+    <div class="attrib">— Model introduction, timestamped 1:51–2:23</div>
+  </div>
+  <div class="case-box"><strong>Postcolonial sexual contract</strong> (per lecture, attributed to a scholar transcribed unclearly — verify before citing): the founding compromise traded full private-sphere gender equality for workable public-sphere equality, leaving personal laws (marriage, inheritance, family) an unresolved site of gender discrimination to this day.</div>
+  <div class="quote-card">
+    <div class="q">Fundamental rights are framed against the history of fundamental wrongs.</div>
+  </div>
+  <div class="quote-card">
+    <div class="q">The Indian Constitution is a great social document — almost revolutionary...</div>
+  </div>
+
+  <h3>Constitutional morality</h3>
+  <div class="quote-card">
+    <div class="q">Use of constitutional morality can be very dangerous, and we can't be sure where it will lead us — therefore, I hope constitutional morality will die with its birth.</div>
+    <div class="attrib">— K.K. Venugopal, then Attorney General of India, J. Dadachanji Memorial Debate (2018), shortly after the Sabarimala judgment — verified</div>
+  </div>
+  <p>Term origin: <strong>George Grote</strong>, British classicist, in "History of Greece" (1846–1856). Dr. B.R. Ambedkar quoted Grote at length in his 1948 and 1949 Constituent Assembly speeches.</p>
+  <table>
+    <tr><th>Case</th><th>Holding</th></tr>
+    <tr><td>Manoj Narula case</td><td>"Constitutional morality" = bowing to constitutional norms, not acting arbitrarily — a counter-majoritarian check</td></tr>
+    <tr><td>Government of NCT of Delhi case (2018)</td><td>Referenced alongside Manoj Narula on constitutional morality principles</td></tr>
+  </table>
+
+  <h3>Bail jurisprudence</h3>
+  <div class="data-box">Per 2022 prison statistics: over 75% of India's prison population is undertrials (not yet convicted). Global average: ~34%. India's figure is more than double the global average. Prison occupancy: ~131% of capacity. Recidivism rate among bailed persons: only ~1.9%.</div>
+  <div class="data-box">Example cited: ~5,000 cases registered but only ~40 convictions over 10 years under a stringent special statute — used to argue harsh pre-trial bail denial is disproportionate to eventual conviction outcomes.</div>
+  <table>
+    <tr><th>Case</th><th>Holding</th></tr>
+    <tr><td>"Kumar" / "Frank W." case</td><td>Recommended a standalone Bail Act; struck down continuous GPS tracking as an excessive bail condition</td></tr>
+    <tr><td>"Java" case</td><td>Prosecution can't withhold bail merely because offense is "serious" if it can't ensure a speedy trial; grounds of arrest must be communicated in writing</td></tr>
+    <tr><td>"Najib" case</td><td>Prolonged pre-trial incarceration + unlikelihood of timely trial can override statutory bail restrictions, even under UAPA</td></tr>
+  </table>
+  <p><em>Note: case names above are auto-caption transcriptions of unclear proper nouns — verify exact citations against original judgments before quoting in an exam answer.</em></p>
+</section>
+
+<section class="lecture-block" data-lecture="class2">
+  <h2>Class 2(26) — Freebies, Stray Dogs, Right to be Forgotten, DNA Testing <span class="tag-2026">CA Mains 2026</span></h2>
+  <div class="lecture-meta">Aug 11, 2026 &middot; <a href="CA-Mains-2026/2026-08-11_class02-freebies-strays-privacy-dna/notes.html">Full notes →</a></div>
+
+  <h3>Freebies vs. welfare measures</h3>
+  <div class="case-box"><strong>S. Subramaniam Balaji vs. State of Tamil Nadu (2013):</strong> manifesto freebie promises are not a "corrupt practice" under RPA Section 123 (governs candidate conduct, not party manifestos); Court directed the EC to frame manifesto guidelines.</div>
+  <div class="data-box">Unconditional cash transfers to women: ~₹1.7 lakh crore <em>(source unverified — lecture did not name the survey; do not cite as-is in an exam answer)</em>. Per 16th Finance Commission review: such state transfers expanded from ₹73,000 crore (2018–19) to ₹4.14 lakh crore (2026).</div>
+
+  <h3>Stray dogs — the 2025 Supreme Court "judicial flip"</h3>
+  <div class="case-box">Trigger: death of a child, Chavi Sharma, from rabies, 25 July 2025. 11 Aug 2025: two-judge bench ordered permanent shelter relocation of strays (Delhi/NCR). 22 Aug 2025: three-judge bench (Justices Vikram Nath, Sandeep Mehta, N.V. Anjaria) stayed this, reinstating the CNVR (Catch-Neuter-Vaccinate-Release) model pan-India.</div>
+  <div class="data-box">India: ~33–36% of global rabies deaths (WHO). Rabies case load (IDSP): 1.5 million (2019) → 3.7 million (2024). National sterilization coverage: only ~30%. CNVR cost: ~₹1,500/dog one-time vs. ₹2,000–25,500/dog/month for shelter confinement.</div>
+  <p><strong>Key term — vacuum effect:</strong> removing sterilized dogs from a territory lets unvaccinated animals migrate in, worsening (not improving) the public health risk.</p>
+
+  <h3>Right to be forgotten</h3>
+  <div class="case-box"><strong>Jorawar Singh Mundy vs. Union of India (Delhi HC, 2021, Justice Pratibha M. Singh):</strong> US citizen acquitted of NDPS charges in 2011; sought de-indexing of the judgment from Google/Indian Kanoon/vLex due to ongoing reputational harm. Recognized right to be forgotten as part of Article 21 privacy.</div>
+  <table>
+    <tr><th>Right to be forgotten</th><th>Right to erasure</th></tr>
+    <tr><td>Data stays in backend, de-indexed/masked from search</td><td>Complete deletion of data, including backend (EU GDPR Art. 17)</td></tr>
+  </table>
+
+  <h3>DNA testing &amp; paternity</h3>
+  <p>Legal basis: presumption of legitimacy — Section 112, Evidence Act, 1872 (now Section 116, BSA). Child born during valid marriage presumed legitimate unless "non-access" is proven.</p>
+  <div class="case-box"><strong>Gautam Kundu vs. State of West Bengal (1993):</strong> DNA test cannot be ordered as a matter of routine; prima facie non-access must be shown first.<br><strong>Kamti Devi vs. Poshi Ram (2001):</strong> even genuine DNA evidence cannot automatically override the Section 112 presumption — needs "strong, clear, satisfying and conclusive evidence," not DNA alone. A more conservative position than a clean "two-stage test" giving DNA automatic preference.</div>
+</section>
+
+<section class="lecture-block" data-lecture="class3">
+  <h2>Class 3(26) — Menstrual Leave, AI in Courts, Committee on Government Assurances <span class="tag-2026">CA Mains 2026</span></h2>
+  <div class="lecture-meta">Aug 12, 2026 &middot; <a href="CA-Mains-2026/2026-08-12_class03-menstrual-ai-judiciary-govt-assurances/notes.html">Full notes →</a></div>
+
+  <h3>Reproductive autonomy (opening recap)</h3>
+  <table>
+    <tr><th>Law</th><th>Key limit</th></tr>
+    <tr><td>ART (Regulation) Act, 2021, S.21(g)</td><td>Women: 21–50 yrs; Men: 21–55 yrs</td></tr>
+    <tr><td>MTP (Amendment) Act, 2021</td><td>Upper gestation limit 20→24 weeks for special categories (rape/incest survivors, minors, differently-abled); beyond 24 weeks needs State Medical Board opinion, mainly for substantial foetal abnormality — no absolute cap for that category</td></tr>
+    <tr><td>PCPNDT Act, 1994/2003</td><td>Prohibits sex-determination and sex-selective abortion</td></tr>
+  </table>
+
+  <h3>Menstrual leave &amp; substantive equality</h3>
+  <p><strong>Sandra Fredman's four dimensions of substantive equality:</strong> Redistribution, Recognition, Participation, Transformation.</p>
+  <div class="data-box">Dasra (2014, with USAID/Kiawah Trust): 70% of mothers consider menstruation "dirty." ~23 million girls drop out of school annually (menstrual hygiene infrastructure gap). ~60% of menstruating individuals in India experience dysmenorrhea, often undisclosed.</div>
+  <table>
+    <tr><th>Jurisdiction</th><th>Policy</th></tr>
+    <tr><td>Spain</td><td>State-funded menstrual sick leave, effective 1 June 2023 — first in Europe; 3 days/month (up to 5), paid via Social Security from Day 1 (60% of contribution base)</td></tr>
+    <tr><td>Japan</td><td>Labour Standards Act, 1947, Art. 67 ("seiri kyūka") — legal right since 1947 but usage fell from ~26% (1965) to under 1% (2017)</td></tr>
+    <tr><td>Bihar (India)</td><td>2 days/month for state govt employees — since early 1990s, India's first mover</td></tr>
+    <tr><td>Kerala (India)</td><td>Leave for students/staff in certain educational institutions (2023)</td></tr>
+    <tr><td>Sikkim High Court</td><td>2–3 days/month for women staff (May 2024)</td></tr>
+  </table>
+  <div class="case-box"><strong>Shailendra Mani Tripathi vs. Union of India (2023):</strong> Supreme Court declined to mandate nationwide menstrual leave (feared employer hiring discrimination); directed Centre to frame a model policy via consultation instead.</div>
+
+  <h3>AI in the judiciary</h3>
+  <div class="data-box">India's judicial backlog: ~4.5–5 crore cases pending (District Courts alone: ~4.6 crore). Judge-population ratio: ~15–22 per million vs. Law Commission's recommended 50/million. eCourts Mission spend: Phase I (2011–15) ₹935 cr sanctioned; Phase II (2015–23) ₹1,670 cr; Phase III (2023–27) ₹7,210 cr sanctioned.</div>
+  <div class="case-box"><strong>Draft Regulations for Use of AI in Courts, 2026:</strong> released by SC's AI Committee, 3 June 2026 (consultation deadline extended to 15 July 2026). AI permitted for research/drafting/scheduling/transcription/translation/citation-verification/case management. AI barred from deciding cases, bail eligibility, witness credibility, or influencing deliberation. Lawyers must disclose AI use. Annual audits mandated.</div>
+  <table>
+    <tr><th>Date</th><th>AI-hallucination incident</th></tr>
+    <tr><td>Dec 2024</td><td>ITAT Bengaluru bench cited 3 non-existent SC judgments + 1 fake Madras HC ruling (unverified ChatGPT use)</td></tr>
+    <tr><td>Oct 2025</td><td>Bombay HC quashed a ₹27.91 crore tax assessment relying on 3 non-existent judicial decisions</td></tr>
+    <tr><td>Sep 2025</td><td>Delhi HC — petition withdrawn after fabricated citations exposed, incl. fake content attributed to <em>Raj Narain vs. Indira Nehru Gandhi</em></td></tr>
+    <tr><td>27 Feb 2026</td><td>Supreme Court (Justices Narasimha, Aradhe): citing AI-generated fake judgments = professional misconduct</td></tr>
+  </table>
+
+  <h3>Committee on Government Assurances</h3>
+  <ul>
+    <li>Formed <strong>1953</strong> (Lok Sabha; parallel Rajya Sabha committee exists).</li>
+    <li>An assurance is <strong>pending</strong> if not fulfilled within 3 months.</li>
+    <li>Ministerial floor statements carry a <strong>quasi-binding character</strong>.</li>
+  </ul>
+  <div class="data-box">~60–66% of assurances made in Lok Sabha/Rajya Sabha reported pending as of March 2024. ~699 Rajya Sabha assurances undelivered per recent reporting.</div>
+</section>
+
+<section class="lecture-block" data-lecture="class2-27">
+  <h2>Class 2(27) — Care Economy &amp; Unpaid Domestic Work, Agricultural Marketing <span class="tag-2027">CA Mains 2027</span></h2>
+  <div class="lecture-meta">Aug 13, 2026 &middot; <a href="CA-Mains-2027/2026-08-13_class02-care-economy-agri-marketing/notes.html">Full notes →</a></div>
+
+  <h3>Care economy — key data</h3>
+  <div class="data-box">NSO Time Use Survey: women spend ~8x more time than men on household/caregiving (lecture figure; verified NSO 2019 data: ~7.3x, 19.8% vs 2.7% of the day). Women's unpaid caregiving estimated at 15–17% of GDP (lecture figure; verified estimates: 3.1–5% of GDP by differing valuation methods — cite the lower range in exam answers). ILO: women perform 76% of global unpaid care work hours. Ashoka University: 73% of Indian women leave jobs after childbirth. World Bank: marriage cited as reducing female LFP by 12% (unverified as stated; independently, only ~25% of married Indian women were in the labour force in 2019 vs. 48% global average).</div>
+  <div class="case-box"><strong>Shishupal @ Shish Ram vs. Surjeet (Supreme Court, 11 June 2026, Justices Sanjay Karol &amp; N. Kotiswar Singh):</strong> created a new "loss of domestic care" compensation head; fixed ₹30,000/month minimum notional income for homemakers; total enhanced compensation ₹62,77,900. Held homemakers are "nation builders."</div>
+  <div class="case-box"><strong>Madras High Court (21 June 2023, Justice Krishnan Ramasamy):</strong> homemaker wife entitled to equal share in husband's assets given her indirect contribution — "a 24-hour unpaid job cannot rank below an 8-hour paid job."</div>
+  <table>
+    <tr><th>Scholar</th><th>Framework</th></tr>
+    <tr><td>Claudia Goldin</td><td>U-shaped female LFP hypothesis (agrarian → industrial dip → services rebound); "greedy jobs" concept (high-pay jobs demand disproportionate time, disadvantaging caregivers)</td></tr>
+    <tr><td>Diane Elson</td><td>3R framework — Recognize, Reduce, Redistribute unpaid care work; basis for SDG target 5.4</td></tr>
+    <tr><td>Robin West</td><td>"Intimate labour" — care work as emotionally intensive yet financially uncompensated</td></tr>
+    <tr><td>Thorstein Veblen</td><td>Theory of the leisure class (1899) — conspicuous leisure/consumption; linked to "tradwife" debate</td></tr>
+  </table>
+
+  <h3>Agricultural marketing — key data</h3>
+  <div class="data-box">India: 7th largest agri-exporter (~₹5 lakh crore/year); exports ~US$55 billion of food/agri produce globally, but 20% concentrated in West Asia alone (diversification risk). Peri-Urban Vegetable Clusters (PUVC) scheme: ₹2,000 crore Central Sector Scheme, clusters within ~100 km of urban centres, run via National Horticulture Board.</div>
+  <div class="data-box">eNAM (verified, March 2026): 1,656 mandis across 23 states + 4 UTs; 1.80 crore+ farmers, 2.73 lakh traders, 4,724 FPOs registered; cumulative trade 13.25 crore MT; trade value ₹3.19 lakh crore (2024) → ₹4.84 lakh crore (March 2026). Economic Survey 2023–24: 54% of farmers prefer eNAM over traditional markets.</div>
+  <div class="data-box">Post-harvest loss: ~₹90,000 crore/year (NITI Aayog). India processes &lt;10% of agri output. Cold chain capacity meets &lt;15% of requirement (linked to Essential Commodities Act policy uncertainty). FICCI: 67–82% of fruits sold through middlemen. India's apple yield ~9–10 t/ha vs. New Zealand's ~40 t/ha.</div>
+  <table>
+    <tr><th>Case study</th><th>Key detail</th></tr>
+    <tr><td>Bihar APMC abolition</td><td>Cautionary precedent — abolishing APMC led to structural collapse of the state's marketing ecosystem, not private investment influx</td></tr>
+    <tr><td>Sahyadri Farms</td><td>10 farmers (2004) → 250+ villages, ~26,500 farmers; major grape exporter</td></tr>
+    <tr><td>Kalanamak rice (UP)</td><td>Success via GI tagging + FPO integration + traceability + export development foundation</td></tr>
+  </table>
+</section>
+
+<section class="lecture-block" data-lecture="class3-27">
+  <h2>Class 3(27) — AI in Judiciary &amp; Public Distribution System (SARTHAK-PDS) <span class="tag-2027">CA Mains 2027</span></h2>
+  <div class="lecture-meta">Aug 14, 2026 &middot; <a href="CA-Mains-2027/2026-08-14_class03-ai-judiciary-pds/notes.html">Full notes →</a></div>
+
+  <h3>AI in judiciary — key data &amp; cases</h3>
+  <div class="data-box">India: 5 crore+ pending cases (National Judicial Data Grid) — ~60 lakh in High Courts, 80,000+ in Supreme Court, ~4.3-4.4 crore in lower judiciary. Judge-population ratio: ~21/million vs. Law Commission's (1987) recommended 50/million (endorsed by SC in All India Judges Association vs. Union of India, 2002); comparator USA ~150/million, Europe ~220/million.</div>
+  <div class="case-box"><strong>NCLT/NCLAT "methyl isocyanate" case (Supreme Court, 2 July 2026, Justices Narasimha &amp; Aradhe):</strong> set aside NCLT/NCLAT orders in J&amp;K Bank vs. Essel Infraprojects after tribunals relied on six AI-hallucinated precedents; held reliance on such material is "like the release of methyl isocyanate... invisible, insidious, and catastrophic"; mandated zero tolerance, directed BCI to frame guiding principles.</div>
+  <div class="case-box"><strong>Mata v. Avianca (US, 2023):</strong> lawyers sanctioned $5,000 each for submitting ChatGPT-fabricated case citations (Judge P. Kevin Castel, SDNY).</div>
+  <div class="data-box">Draft Regulations for Use of AI in Courts, 2026 (SC AI Committee, June 2026): five principles — human primacy, transparency/explainability, fairness/non-discrimination, accountability, inclusivity/accessibility. Prohibits algorithmic adjudication, bail determination, witness-credibility assessment. Apex body + CORE-AI proposed. Human-in-the-loop is the standing conclusion for any AI-related answer.</div>
+
+  <h3>PDS / SARTHAK-PDS — key data</h3>
+  <div class="data-box">SARTHAK-PDS: ₹25,530 crore Cabinet-approved scheme (27 May 2026, FY26-31), merging intra-state movement assistance + SMART-PDS; covers 81.35 crore NFSA beneficiaries; modules NIRMAL (beneficiary registry), ASHA (grievance redressal), SAKSHAM (supply-chain/vehicle tracking).</div>
+  <div class="data-box">ICRIER: ~28-29% of PDS grains don't reach beneficiaries, ₹69,108 crore loss. Aadhaar-seeded ration cards ~99.8%, EPOS-equipped FPS ~99.6%. Food subsidy: ₹2.28 lakh crore (FY26-27), up from ₹2.03 lakh crore.</div>
+  <table>
+    <tr><th>Scholar/Committee</th><th>Position</th></tr>
+    <tr><td>Shanta Kumar Committee (Jan 2015)</td><td>Recommended reducing NFSA coverage from 67% to 40% to target subsidies better</td></tr>
+    <tr><td>Himanshu and Sen</td><td>Opposed narrowing coverage — historical data (1999-2000 to 2004-05) showed leakage rose (24%→54%) as coverage narrowed, favoring near-universal PDS instead</td></tr>
+  </table>
+  <p><em>Note: FCI's cited "309 lakh tonnes rice, 9x buffer norm" (Jan 2026) could not be independently verified — closest verified figures show ~2.8-3x buffer, not 9x. Do not cite the specific multiple without further verification.</em></p>
+</section>
+
+<section class="lecture-block" data-lecture="class4-27">
+  <h2>Class 4(27) — Public Examinations (Prevention of Unfair Means) Amendment Act 2026 &amp; MSME Sector <span class="tag-2027">CA Mains 2027</span></h2>
+  <div class="lecture-meta">Aug 20, 2026 &middot; <a href="CA-Mains-2027/2026-08-20_class04-public-exams-msme/notes.html">Full notes →</a></div>
+
+  <h3>Public examination reform — key data &amp; law</h3>
+  <div class="data-box">Public Examinations (Prevention of Unfair Means) Amendment Act, 2026 (passed Lok Sabha 27 Jul 2026): individual punishment raised from 3-5 years to 5-10 years imprisonment; max fine ₹10 lakh → ₹50 lakh; service-provider debarment 4 → 8 years; investigation deadline 2 months; fast-track courts + Special Public Prosecutors. Offense remains cognizable, non-bailable, non-compoundable. Covers UPSC, SSC, RRBs, IBPS, NTA, and other notified bodies.</div>
+  <table>
+    <tr><th>Concept/Committee</th><th>Position/Detail</th></tr>
+    <tr><td>Cobra effect</td><td>Well-intentioned exam reform can worsen the problem (colonial cobra-bounty analogy) — e.g. tougher exams risk becoming more elite/exclusionary</td></tr>
+    <tr><td>Radhakrishnan Committee</td><td>Flagged over-reliance on pen-and-paper exam model; recommended format shift (specifics need independent verification)</td></tr>
+    <tr><td>Proposed 50:50 model (unverified name)</td><td>50% board exam performance + 50% entrance test weightage, to reduce single-exam-day stakes</td></tr>
+    <tr><td>China's Double Reduction Policy</td><td>Reduces homework burden (grades 1-9) and private-tuition burden — comparative model cited</td></tr>
+  </table>
+  <div class="case-box"><strong>Constitutional framework:</strong> 42nd Amendment (1976) moved education to Concurrent List; Article 21A (RTE, up to 14 yrs); Article 45 DPSP (early childhood care/education); Article 46 DPSP (SC/ST/weaker-section education).</div>
+
+  <h3>MSME sector — key data &amp; law</h3>
+  <div class="data-box">MSME contribution to India (verified, mid-2026): ~30.1-31.1% of GDP; ~35.4% of manufacturing output; ~45.7-48.6% of exports; ~38.9 crore employed. Registered MSMEs: 7.85 crore (Feb 2026); Udyam + Udyam Assist registrations crossed 8.7 crore (Jun 2026). Source: PIB.</div>
+  <div class="data-box">MSMED (Amendment) Act 2026: twin classification criterion (investment in plant/machinery or equipment + turnover, both required); permanent statutory status for Udyam Registration Portal; Online Dispute Resolution with fixed timelines — 90 days mediation, 30 days to refer arbitration, 90 days for arbitral award post-pleadings.</div>
+  <table>
+    <tr><th>Concept</th><th>Definition/Data</th></tr>
+    <tr><td>Creative destruction (Schumpeter)</td><td>New firms/products destroy old ones while creating growth (e.g., smartphone vs. camera/calculator)</td></tr>
+    <tr><td>Dwarf firms</td><td>Small firms kept small by size-linked policy incentives + compliance-burden thresholds</td></tr>
+    <tr><td>Gazelles</td><td>Young (3-5 yr) high-growth firms, net job creators</td></tr>
+    <tr><td>Missing middle / gazelle gap</td><td>India lacks mid-sized firms and high-growth gazelles relative to economy's needs</td></tr>
+    <tr><td>Inverted duty structure</td><td>Raw material duty higher than finished-product duty — discourages domestic manufacturing</td></tr>
+    <tr><td>TReDS</td><td>Trade Receivables Discounting System — MSMEs paid in 1-2 days via invoice discounting; mandatory for CPSEs</td></tr>
+    <tr><td>India vs. China vs. Vietnam</td><td>MSME e-commerce exports: India ~$5bn/yr vs. China ~$300bn/yr. Cost of capital: India 6.2-8.2% vs. China ~3.1% vs. Vietnam ~1%</td></tr>
+  </table>
+  <p><em>Note: Lecture's "9.16 crore MSMEs registered as of August 2026" could not be matched to a specific verified PIB release — closest verified figures are 7.85 crore (Feb 2026) / 8.7 crore Udyam+Assist (Jun 2026). Treat the lecture's figure as approximate.</em></p>
+</section>
+
+<section class="lecture-block" data-lecture="class5-27">
+  <h2>Class 5(27) — MSME Sector (contd.) &amp; the Mecca Joint Defense Agreement 2026 <span class="tag-2027">CA Mains 2027</span></h2>
+  <div class="lecture-meta">Aug 26, 2026 &middot; <a href="CA-Mains-2027/2026-08-26_class05-msme-mecca-pact/notes.html">Full notes →</a></div>
+
+  <h3>MSME — scholar studies &amp; schemes</h3>
+  <div class="data-box">Life-cycle-of-plants study: avg. 40-yr-old US manufacturing plant is 8x larger than a new entrant; comparable Indian firm only 1.5x larger — growth stagnation/dwarfism in numbers. Joseph &amp; Santana: lifting distortive policies would raise manufacturing output per worker by 9.8%. Ashoka &amp; Rao: India's apparel export stagnation attributed to missing middle; cost of capital India 6.2-8.2% vs. China ~3.1%.</div>
+  <table>
+    <tr><th>Scheme</th><th>Purpose</th></tr>
+    <tr><td>Udyam Portal</td><td>Digital voluntary MSME registration — aids formalization</td></tr>
+    <tr><td>RAMP</td><td>World Bank-assisted; ecosystem-strengthening for MSMEs (not just funding)</td></tr>
+    <tr><td>SRI Fund (Self-Reliant India Fund)</td><td>Equity infusion into viable, high-potential MSMEs</td></tr>
+    <tr><td>CGTMSE</td><td>Collateral-free loans to MSMEs</td></tr>
+    <tr><td>ONDC</td><td>Counters large private e-commerce monopoly; better margins for MSMEs</td></tr>
+  </table>
+  <div class="case-box"><strong>Peter Pan syndrome (MSME):</strong> firms intentionally avoid transparency/formalization to stay outside the tax/regulatory network.</div>
+
+  <h3>Mecca Joint Defense Agreement (MJDA) 2026 — key data &amp; concepts</h3>
+  <div class="data-box">Signed 7 Aug 2026, Mecca — Saudi Arabia, Turkey, Pakistan (verified). NATO Article 5-style collective defense clause. Combined: ~1.4 million active personnel, 3,400 aircraft, 6,000 tanks, 340+ naval assets. Defense spending (SIPRI 2026, verified): Saudi Arabia $83.2bn (8th largest), India $92.1bn (5th largest). India-Saudi trade ~$41.9-43bn; Saudi crude ~14.3% of India's oil imports; ~4 million Indian diaspora in Saudi Arabia.</div>
+  <table>
+    <tr><th>Concept</th><th>Definition</th></tr>
+    <tr><td>Collective defense vs. collective security</td><td>Collective defense = exclusionary, needs common enemy (NATO/MJDA); collective security = universalistic, UN Charter Ch. VII, any aggressor</td></tr>
+    <tr><td>Strategic hedging</td><td>Reducing dependence on one power/alliance to manage risk — Saudi Arabia's core MJDA motivation as US "de-prioritizes" West Asia</td></tr>
+    <tr><td>Security mirroring / security renting</td><td>Mirroring = counter-alliance building in response to rivals; renting = paying for another country's military personnel/protection</td></tr>
+    <tr><td>3 E's of alliance viability</td><td>Enemy (common adversary), Economy (burden-sharing), Efficiency (interoperability) — MJDA reportedly fails all three per cited scholars</td></tr>
+    <tr><td>Pax Americana erosion</td><td>Declining US willingness/capacity to underwrite global security order — cited as MJDA's deeper structural driver</td></tr>
+  </table>
+  <div class="case-box"><strong>Implications for India:</strong> "four-front challenge" framing (Pakistan, China, Turkey, +Saudi Arabia diplomatically); strain on India's West Asia multi-alignment/de-hyphenation policy; suggested response includes Sindhu Doctrine (deterrence by punishment) and a proposed "Gulf Doctrine."</div>
+</section>
+
+<section class="lecture-block" data-lecture="class6-27">
+  <h2>Class 6(27) — Freebies vs. Welfare (Answer Writing) &amp; Minimum Support Price (MSP) <span class="tag-2027">CA Mains 2027</span></h2>
+  <div class="lecture-meta">Aug 26, 2026 &middot; <a href="CA-Mains-2027/2026-08-26_class06-freebies-msp/notes.html">Full notes →</a></div>
+
+  <h3>Freebies vs. welfare — key data &amp; law</h3>
+  <div class="data-box">RPA 1951 Section 123: freebies in election manifestos NOT a "corrupt practice" (confirmed in S. Subramaniam Balaji v. Tamil Nadu, 2013). State FRLs cap fiscal deficit at 3% of GSDP. Economic Survey 2025-26 (verified): states' unconditional cash transfer (UCT) burden ≈ ₹1.7 lakh crore; UCT-offering states grew 5x+ FY23-FY26, covering ~12 crore women, nearly half facing revenue deficits.</div>
+  <table>
+    <tr><th>Concept</th><th>Definition</th></tr>
+    <tr><td>Freebies</td><td>Unpaid goods/services, electorally motivated, unproductive, state-financed</td></tr>
+    <tr><td>Welfareism</td><td>Constitutionally obligated, capacity-building, long-term development orientation</td></tr>
+    <tr><td>New welfareism</td><td>State provision of private goods (e.g., housing, toilets), not just public goods</td></tr>
+    <tr><td>Paying vs. non-paying class dynamic</td><td>Targeted freebies → higher taxes/user charges on paying class → reduced purchasing power → reduced demand → reduced tax revenue → further extraction (vicious cycle)</td></tr>
+  </table>
+  <div class="case-box"><strong>Key views:</strong> NK Singh — "freebie culture is a passport to fiscal disaster, not a road to prosperity." SBI Research praised MP's Ladli Behna scheme (beneficiary spending up 3.5x). Suggestions: sunset clauses, periodic review, conditional cash transfer models (Mexico's Prospera, Brazil's Bolsa Família), outcome-linked incentives.</div>
+
+  <h3>Minimum Support Price (MSP) — key data &amp; concepts</h3>
+  <div class="data-box">MSP: pre-planting price for 22 crops (14 kharif, 6 rabi, 2 commercial), CACP-recommended, CCEA-approved, purely executive (no statutory backing). A2+FL (current formula) vs. C2+50% (Swaminathan Commission demand). FRP (legally binding, sugarcane only) under Sugarcane Control Order 1966. WTO Amber box subsidy, 10% de minimis limit, shielded temporarily by the Bali Peace Clause (India-pushed).</div>
+  <table>
+    <tr><th>Concept</th><th>Definition</th></tr>
+    <tr><td>Dual objective dilemma</td><td>Protecting farmer income (higher MSP) vs. protecting consumers from food inflation — a recurring policy conflict</td></tr>
+    <tr><td>Tragedy of the commons (subsidy-linked)</td><td>Free/subsidized inputs (e.g., electricity) → over-extraction of a shared resource (groundwater) → depletion for all</td></tr>
+    <tr><td>Engel's Law</td><td>Rising income → diversified diet (pulses, fruits, vegetables) away from cereal staples — creates demand-supply mismatch given MSP's cereal-centric bias</td></tr>
+    <tr><td>Legalization models</td><td>Mandatory procurement / legal floor-price ban / statutory price deficiency payment (PDP) — each with distinct cost and risk profiles</td></tr>
+  </table>
+  <div class="data-box">Verified figures (2025-26): food subsidy allocation ₹2.11 lakh crore (lecture cited ₹2.28 lakh cr); economic cost of rice ₹41.73/kg (lecture cited ₹44/kg); India rice production ~154 MMT, ~40% of global rice trade; pulses import ~$5.5bn (2024-25).</div>
+  <div class="case-box"><strong>Global comparisons:</strong> China's 3-point lesson (invest in agri R&amp;D, agri-market reforms, input subsidies → direct income support); US Price Loss Coverage (PLC) model; PM-AASHA's three components (PSS/PDPS/PPSS); Haryana's Bhavantar Bharpai Yojana and MP's Bhavantar Bhugtan Yojana as state-level PDP models.</div>
+</section>
+
+<section class="lecture-block" data-lecture="class7-27">
+  <h2>Class 7(27) — Right to Protest, Section 17A of the Prevention of Corruption Act &amp; Judicial Appointments (Collegium) <span class="tag-2027">CA Mains 2027</span></h2>
+  <div class="lecture-meta">Sep 6, 2026 &middot; <a href="CA-Mains-2027/2026-09-06_class07-right-to-protest/notes.html">Full notes →</a></div>
+
+  <h3>Right to protest — constitutional basis &amp; case law</h3>
+  <div class="data-box">Right to protest: a derived/composite right from Article 19(1)(a)/(b)/(c), read with Article 19(1)(d) (movement) and Article 21. Golden triangle: Articles 14, 19, 21. Restrictions under Article 19(2)/(3) must be minimum and pass the 3-prong proportionality test (legitimate state interest, rational nexus, balancing).</div>
+  <table>
+    <tr><th>Case</th><th>Holding</th></tr>
+    <tr><td>Ram Manohar Lohia v. State of Bihar (1965/66 AIR 740)</td><td>"Concentric circles" of state interest — security of state &gt; public order &gt; law and order &gt; public inconvenience; only the two innermost justify serious restriction</td></tr>
+    <tr><td>Himat Lal K. Shah v. Commissioner of Police (1972)</td><td>Freedom of assembly essential to democracy; public streets are natural places for expression of opinion</td></tr>
+    <tr><td>Anita Thakur v. State of J&amp;K (2016)</td><td>Police use of force must be minimum necessary and proportionate; no force warranted against a peaceful assembly</td></tr>
+    <tr><td>In Re: Ramlila Maidan Incident (2012) 5 SCC 1</td><td>Section 144 CrPC/Section 163 BNSS orders justified only where threat to peace is real and imminent, not a mere possibility</td></tr>
+    <tr><td>Amit Sahni v. Commissioner of Police (2020) 10 SCC 573 (Shaheen Bagh)</td><td>Protesters cannot occupy public spaces indefinitely; no fundamental right is absolute</td></tr>
+    <tr><td>Maniyar Iliyaz v. P. Ayyappan (2026)</td><td>Right to walk on safe, demarcated footpaths is a fundamental right under Article 19(1)(d) read with Article 21</td></tr>
+  </table>
+  <div class="case-box"><strong>Scholars cited:</strong> Ambedkar's "Grammar of Anarchy" three warnings (Constituent Assembly, 25 Nov 1949) — constitutional methods over civil disobedience, no hero-worship, social democracy alongside political democracy. Charles Tilly (protest as democracy's evolution, not its failure). Partha Chatterjee ("multitude" as subaltern claims-making). Patrick Heller (crowds as a principal mechanism of democracy in unequal societies). Delhi Police Standing Order 10: graded crowd-control response.</div>
+
+  <h3>Section 17A, Prevention of Corruption Act — evolution &amp; 2026 split verdict</h3>
+  <div class="data-box">PCA 1988's three pillars: undue advantage (any gratification beyond legal remuneration), public duty, public servant. Section 17A (2018): prior sanction to investigate. Section 19: prior sanction to prosecute. Corruption Perceptions Index 2025 (verified): India ranked 91st of 182 countries, score 39/100 (up from 96th in 2024). CVC figures cited in class: 7,000+ CBI corruption cases pending, 379 pending over 20 years.</div>
+  <table>
+    <tr><th>Case/step</th><th>Holding</th></tr>
+    <tr><td>Vineet Narain v. Union of India (1997) — Jain Hawala case</td><td>Struck down the pre-1997 executive "Single Directive"; no directive can negate the rule of law</td></tr>
+    <tr><td>Dr. Subramanian Swamy v. Director, CBI (2014)</td><td>Struck down Section 6A, DSPE Act (prior sanction only for Joint Secretary+ officers) as violative of Article 14</td></tr>
+    <tr><td>Centre for Public Interest Litigation v. Union of India (13 Jan 2026)</td><td>Split verdict on Section 17A PCA — Justice B.V. Nagarathna struck it down entirely (Article 14 violation, protects the corrupt); Justice K.V. Viswanathan upheld it "read down" via independent Lokpal screening; referred to CJI for a larger bench</td></tr>
+  </table>
+  <div class="case-box"><strong>Key framings:</strong> "Play-safe syndrome" — bureaucrats avoid decisions fearing future inquiry, risking policy paralysis. Kaushik Basu's "Sanskritization"/normalization of corruption. Gary Becker's economics-of-crime framework (low probability of punishment over 20-30 year pendency collapses deterrence). Law Commission's 254th Report: recommends independent (Lokpal-level) screening of the sanction-to-investigate decision.</div>
+
+  <h3>Judicial appointments — collegium system (introductory portion)</h3>
+  <div class="data-box">Article 124: Supreme Court's structure, judge strength (as prescribed by Parliament), and appointment "in consultation with" the CJI (constitutional text) — transformed via judicial interpretation into "concurrence" (collegium). Three appointment routes under Article 124(3): bench (sitting HC judge), bar (10+ years practicing advocate), jurist (distinguished jurist — never yet used). Supreme Court (Number of Judges) Amendment Act 2026 (verified): sanctioned strength raised from 34 to 38 including CJI.</div>
+  <table>
+    <tr><th>Case/phase</th><th>Holding</th></tr>
+    <tr><td>First Judges Case (S.P. Gupta v. Union of India, 1981)</td><td>"Consultation" does not mean "concurrence" — continued executive primacy</td></tr>
+    <tr><td>Second Judges Case (1993)</td><td>Reversed course — "consultation" now means "concurrence"; birth of the collegium system</td></tr>
+    <tr><td>Third Judges Case (1998, presidential reference)</td><td>Institutionalized the collegium — CJI plus four senior-most judges must be consulted</td></tr>
+    <tr><td>NJAC / Fourth Judges Case (2015, verified)</td><td>Struck down the National Judicial Appointments Commission (99th Amendment) 4:1, as violating the basic structure (judicial independence); reinstated the collegium</td></tr>
+  </table>
+  <div class="case-box"><strong>Recent context:</strong> Rajasthan High Court roster-misuse controversy (acting Chief Justice); Justice Yashwant Varma cash-recovery and impeachment matter (resigned April 2026, just before impeachment hearings — no Indian judge has ever been removed via a completed impeachment). Two debates introduced (continues next class): transparency vs. confidentiality (former Justice Ruma Pal — collegium is "the best-kept secret in the country"); judicial independence vs. accountability.</div>
+</section>
+
+<section class="lecture-block" data-lecture="class8-27">
+  <h2>Class 8(27) — Judicial Appointments Continued (UK/USA Models), Tribunal Reforms Act 2026 &amp; PM-AASHA <span class="tag-2027">CA Mains 2027</span></h2>
+  <div class="lecture-meta">Sep 8, 2026 &middot; <a href="CA-Mains-2027/2026-09-08_class08-judicial-tribunals-pmaasha/notes.html">Full notes →</a></div>
+
+  <h3>Judicial appointments — UK &amp; USA comparison (continuing Class 7's collegium topic)</h3>
+  <div class="data-box">CPIO, Supreme Court of India v. Subhash Chandra Agarwal (2019, verified): CJI's office falls under RTI; judicial independence not secured by "secrecy of cloistered halls." Media One judgment (2023, verified): sealed-cover secrecy antithetical to a transparent, accountable system. UK's Judicial Appointments Commission (JAC): 15-member statutory body under the Constitutional Reforms Act 2005 — mandatory lay chairperson, judicial/professional/lay members, public advertisement of vacancies, handles both judiciary and tribunals. USA: Article II Section 2 — President nominates, US Senate Judiciary Committee holds televised confirmation hearings; lifetime tenure subject to "good behaviour."</div>
+  <table>
+    <tr><th>Model</th><th>Key feature</th></tr>
+    <tr><td>India — collegium</td><td>Judicially evolved (not in Constitution/legislation); CJI + 4 senior-most judges; closed-door; only higher judiciary</td></tr>
+    <tr><td>UK — JAC</td><td>Statutory body, mandatory lay chair, diverse 15-member composition, open advertisement; covers judiciary + tribunals</td></tr>
+    <tr><td>USA — Senate confirmation</td><td>Presidential nomination + Senate confirmation; publicized/televised hearings; lifetime tenure risks long-term political patronage</td></tr>
+  </table>
+  <div class="case-box"><strong>Insider criticism:</strong> Fali S. Nariman (collegium architect turned critic) — system became "not receptive at all" to Bar inputs. Kerala High Court model cited as best practice: 90%+ voluntary judicial asset-disclosure compliance. Suggestions: activate the Article 124(3) distinguished-jurist route; permanent collegium secretariat; a reformed NJAC modeled on the NTC (see below).</div>
+
+  <h3>Tribunals &amp; the Tribunal Reforms Act 2026</h3>
+  <div class="data-box">Articles 323A/323B (42nd Amendment, 1976, Part XIVA) — constitutional basis for tribunals. 2025 data cited in class: ~5.36 lakh cases pending across tribunals; Debt Recovery Tribunals highest at ~2.45 lakh; NCLT ~95% contract-staff dependence; ~Rs 25 lakh crore locked in 3.5 lakh+ pending tribunal cases ("State of Tribunals" report 2025). National Tribunals Commission (NTC, verified): 5-member body (chairperson + 2 judicial + 2 technical members) administering 16 tribunals; search-cum-selection committee recommends a single name (+1 waiting-list name) per vacancy; 3-month appointment timeline; standardized 5-year tenure; retirement age 70 (chair)/67 (members).</div>
+  <table>
+    <tr><th>Case/phase</th><th>Holding</th></tr>
+    <tr><td>S.P. Sampath Kumar v. Union of India (1987, verified)</td><td>Tribunals upheld as an "effective substitute" for High Courts, if equally efficacious/independent</td></tr>
+    <tr><td>L. Chandra Kumar v. Union of India (1997, verified)</td><td>Overruled Sampath Kumar — tribunals only "supplemental" to High Courts; judicial review by High Courts is basic structure</td></tr>
+    <tr><td>Madras Bar Association I (2010)</td><td>Laid down guidelines for tribunal judicial independence — debate shifts explicitly to independence</td></tr>
+    <tr><td>Rojer Mathew v. South Indian Bank (2019, verified)</td><td>Struck down Tribunal Rules 2017 for lacking judicial independence; struck down the 3-year tenure</td></tr>
+    <tr><td>Madras Bar Association IV/V &amp; Tribunal Reforms Act 2021</td><td>2020 Rules and the 2021 Act both struck down; 2021 Act called an impermissible "legislative override"; Court directed creation of the NTC within 4 months</td></tr>
+  </table>
+  <div class="case-box"><strong>Continuing concerns despite the 2026 Act:</strong> executive still holds final appointment veto; government-secretary seat on the search-cum-selection committee; complaint pre-screening by the parent ministry; delegated-legislation gaps (qualifications/salary left to future rules); NTC lacks fiscal autonomy (still budget-dependent on government). Way forward: codify service standards directly in law; direct budget allocation; judicial impact assessment before enacting laws affecting courts/tribunals.</div>
+
+  <h3>PM-AASHA — components &amp; data</h3>
+  <div class="data-box">Pradhan Mantri Annadata Aay SanraksHan Abhiyan (PM-AASHA, verified), launched Sep 2018 — four components: Price Support Scheme (PSS, procurement via NAFED/NCCF, capped ~25% of state produce/30% national, 100% for urad &amp; masur), Price Deficiency Payment Scheme (PDPS, direct MSP-minus-market-price payment, capped at 15% of MSP, no procurement), Market Intervention Scheme (MIS, for perishables/horticulture, triggered on a 10% price fall below previous season), Price Stabilization Fund (PSF, the only consumer-centric component — buffer-stock release to cool food inflation, e.g. tomato/onion/potato). Budgetary allocation cited in class: ~Rs 5,400 cr (FY25) rising to ~Rs 6,900 cr (FY26) (exact figures flagged for verification). Actual PSS procurement covered only ~2.9% to 12.4% of India's total pulse production over the cited 5-year period.</div>
+  <div class="case-box"><strong>Significance:</strong> operationalizes M.S. Swaminathan's "assured price + assured market" framework; addresses the cobweb phenomenon (price-production oscillation); reduces import dependence on pulses/oilseeds; drives formalization via bank-linked payments. <strong>Challenges:</strong> tenant-farmer exclusion (database tied to land ownership); infrastructure/storage risk (3 of 4 components need procurement); low actual procurement undermines reliability as a market stabilizer; policy incoherence (import agreements continuing even as domestic procurement/production rises). e-Samridhi (NAFED) and e-Samyukti (NCCF) digitize farmer registration and payment eligibility.</div>
+</section>
+
+<section class="lecture-block" data-lecture="class9-27">
+  <h2>Class 9(27) — Registered Unrecognised Political Parties (RUPPs) &amp; VB-G RAM G <span class="tag-2027">CA Mains 2027</span></h2>
+  <div class="lecture-meta">Sep 10, 2026 &middot; <a href="CA-Mains-2027/2026-09-10_class09-rupps-vbgramg/notes.html">Full notes →</a></div>
+
+  <h3>RUPPs — key data &amp; law</h3>
+  <div class="data-box">Six Gujarat-based RUPPs (verified: Aam Janmat Party, Bharatiya National Janata Dal, Garib Kalyan Party, New India United Party, Satyawadi Rakshak Party, Swatantrata Abhivyakti Party) received ~Rs 1,700 crore in donations, FY 2023-24 — exceeding the combined ~Rs 1,480 crore received by five recognized national parties (excluding BJP). Of 2,800+ RUPPs, only ~750 fielded candidates in the 2024 general election. ADR 2025: only ~26% of RUPPs disclosed annual financial reports for FY 2022-23. ECI delisted ~800 RUPPs the preceding year.</div>
+  <div class="case-box"><strong>Indian National Congress (I) v. Institute of Social Welfare (2002, verified):</strong> Supreme Court held the ECI has no general power to deregister a political party — only on three grounds: (i) registration obtained by fraud, (ii) party constitution amended in violation of the Section 29A(5) constitutional-allegiance undertaking, (iii) party declared unlawful by government. Delisting (administrative list-removal) is not deregistration (legal cancellation).</div>
+  <table>
+    <tr><th>Source</th><th>Recommendation</th></tr>
+    <tr><td>Law Commission's 255th Report (2015, verified)</td><td>Grant ECI explicit power to deregister a party failing to contest elections for 10 consecutive years</td></tr>
+    <tr><td>ECI's Memorandum of Electoral Reforms (2016)</td><td>Amend Section 29A of RPA 1951 to grant explicit deregistration power</td></tr>
+  </table>
+  <div class="case-box"><strong>Regulatory loopholes enabling misuse:</strong> Section 29C's Rs 20,000 disclosure threshold; Income Tax Act Section 12's Rs 2,000 cash-donation threshold; tax exemption available even to newly registered RUPPs with no track record; nominal candidate-fielding avoids delisting without genuine electoral participation.</div>
+
+  <h3>VB-G RAM G (replacing MGNREGA) — key data &amp; law</h3>
+  <div class="data-box">Viksit Bharat – Guarantee for Rozgar and Ajeevika Mission (Gramin) Act, 2025 (verified): in force 1 July 2026, replacing MGNREGA. 125-day guarantee (up from 100 days). Fund-sharing for wages: 60:40 (Centre:State) general states, 90:10 special-category (NE/Himalayan) states — vs. MGNREGA's ~100% Centre-funded wage bill. Normative (formula-based, budgeted) allocation via the 16th Finance Commission's devolution formula, replacing demand-driven open-ended allocation. Interim base wage floor ~Rs 300/day. Work must be provided within 15 days; unemployment-allowance disentitlement clause removed.</div>
+  <div class="data-box">Economic Survey-cited data: MGNREGA demand declined ~53% FY21→FY26; rural unemployment fell 3.3%→2.5% (2021→2023-24); FY25-26 MGNREGA transition allocation ~Rs 86,000 cr; ~5.78 cr households participated. World Bank study ("Does India's Employment Guarantee Scheme Guarantee Employment?"): job-application fulfilment ~22% Bihar, ~48% UP, ~56% national average (figures cited in class, not independently re-verified).</div>
+  <div class="case-box"><strong>Olga Tellis v. Bombay Municipal Corporation (1985, verified):</strong> right to life (Article 21) includes right to livelihood — though the Court still upheld the Municipality's eviction power on procedural grounds. <strong>Aruna Roy petition (2026, Supreme Court observations, verified direction):</strong> MGNREGA held a "salutary scheme," neither a freebie nor exploitation of rural workers; Court separately questioned equating a statutory rural-employment guarantee with the Article 21 fundamental right to life, noting no fundamental right to work exists.</div>
+  <table>
+    <tr><th>Concept</th><th>Definition</th></tr>
+    <tr><td>Normative vs. demand-driven allocation</td><td>Normative = fixed formula-based budget set in advance (predictable, better for poorer states by design); demand-driven = open-ended, responsive to real-time rural distress but prone to a "Matthew effect" favouring administratively stronger states</td></tr>
+    <tr><td>Unfunded mandate</td><td>Centre mandates a 125-day guarantee but funds only 60-90% of wages, shifting fiscal burden to states</td></tr>
+    <tr><td>Four thematic priority areas</td><td>Water security, rural infrastructure, livelihood-related infrastructure, disaster mitigation — new under VB-G RAM G, absent under MGNREGA</td></tr>
+  </table>
+  <p><em>Note: Tamil Nadu's cited "150-day" state top-up scheme and the exact instructor-quoted MGNREGA demand-decline percentage could not be independently verified against a specific state notification/Economic Survey table in the time available — see full notes gap-box.</em></p>
+</section>
+
+<section class="lecture-block" data-lecture="class10-27">
+  <h2>Class 10(27) — MMDR Amendment Act 2026 (Mineral Fiscal Federalism) &amp; SCO — 25 Years <span class="tag-2027">CA Mains 2027</span></h2>
+  <div class="lecture-meta">Sep 17, 2026 &middot; <a href="CA-Mains-2027/2026-09-17_class10-mmdr-sco/notes.html">Full notes →</a></div>
+
+  <h3>MMDR Amendment Act 2026 &amp; mineral fiscal federalism — key data &amp; law</h3>
+  <div class="data-box">MMDR Amendment Act 2026 (verified): assented 17 Aug 2026. Section 9D bars states from imposing any tax/cess/levy on mineral rights or mineral-bearing land (MBL); nullifies uncollected past dues (already-collected amounts not refundable). DMF (Section 9B, verified): 10% of royalty for post-2015 leases, 30% for pre-2015 leases, benefiting mining-affected districts. NMET (Section 9C, verified): 2% of royalty, funds mineral-exploration research. FIMI: India's effective mining tax rate ~54-58% vs. ~31-44% in Mongolia/Chile/Australia/South Africa/Namibia.</div>
+  <div class="case-box"><strong>Case-law arc:</strong> India Cement Ltd. v. State of Tamil Nadu (1989, 7-judge bench, verified) — royalty IS a tax, states lack competence to tax mineral rights. State of West Bengal v. Kesoram Industries (2004) — reversed: royalty is NOT a tax. Mineral Area Development Authority v. Steel Authority of India (MADA, 2024, 9-judge bench, 8:1, verified) — settled: royalty is not a tax, states retain Entry 49/50 taxing power subject to Parliament's Entry 54 limits; retrospective dues recoverable only from 1 April 2005, staggered over 12 years from 1 April 2026. MMDR Amendment Act 2026 then legislatively reverses states' MADA-era gains. M.C. Mehta v. Kamal Nath (1996-97, verified): Public Trust Doctrine — state is trustee of natural resources for present and future generations.</div>
+  <table>
+    <tr><th>Concept</th><th>Definition</th></tr>
+    <tr><td>Laffer curve</td><td>Inverted-U relationship between tax rate and revenue; optimum ~35-40%, prohibitive beyond ~45%; India's mining sector cited as being in the prohibitive zone</td></tr>
+    <tr><td>Levy maximization vs. production maximization</td><td>Jharkhand raised a new cess and undershot revenue targets (levy maximization); Odisha auctioned more blocks instead (production maximization) — the better strategy per the lecture</td></tr>
+    <tr><td>Constitutional entries</td><td>Entry 54 (Union List): regulation of mines/minerals. Entry 50 (State List): tax on mineral rights, subject to Parliament's Entry 54 law. Entry 49 (State List): general land tax, the route states used to tax MBL</td></tr>
+  </table>
+  <p><em>Note: the exact list of states challenging the 2026 Act's constitutionality, Jharkhand's "~85% non-tax revenue from mining" figure, and India's "~Rs 10 lakh crore mineral imports FY25-26" figure were cited verbally in class and could not be independently re-verified in the time available — see full notes gap-box.</em></p>
+
+  <h3>Shanghai Cooperation Organisation (SCO) — 25 years, Bishkek Declaration — key data &amp; law</h3>
+  <div class="data-box">26th SCO Summit, Bishkek, Kyrgyzstan, 31 Aug–1 Sep 2026 (verified) — theme "25 Years of the SCO: Together for Sustainable Peace, Development and Prosperity." SCO founded 2001 (Shanghai Five origin). 10 full members; India and Pakistan joined at the 2017 Astana Summit (verified). Significance: ~40% of world population, ~24-25% of global land mass, ~20-25% of global GDP, ~20% of global oil/energy reserves. Bishkek Declaration (verified): English added as an official SCO language alongside Russian and Chinese; new Universal Center and Anti-Drug Center established as permanent bodies; Kyrgyzstan handed rotating chairmanship to Pakistan.</div>
+  <div class="case-box"><strong>PM Modi's SCO framing (verified):</strong> "Security, Connectivity, Opportunity" — three pillars, urging a shift from "vision" to "concrete outcomes." <strong>Key terms:</strong> multi-alignment (issue-based partnerships across blocs); asymmetric multilateralism (multilateral in form, hierarchical in practice — applied to China's dominant SCO role); "tarmac-and-steel" multilateralism (China's BRI-style, infrastructure-led cooperation) vs. rule-based multilateralism (Western model, built on shared values/rules).</div>
+  <table>
+    <tr><th>Challenge cluster</th><th>Examples cited</th></tr>
+    <tr><td>Internal bilateral conflicts</td><td>India-China, India-Pakistan, Iran-Pakistan, Kyrgyzstan-Tajikistan border disputes</td></tr>
+    <tr><td>Sovereignty vs. connectivity</td><td>CPEC (part of BRI) passing through disputed territory</td></tr>
+    <tr><td>External conflicts</td><td>Russia-Ukraine war, Iran-Israel conflict</td></tr>
+    <tr><td>Narrative/structural</td><td>Anti-West (China) vs. non-West (India) framing; double standards on terrorism; asymmetric Chinese economic dominance</td></tr>
+  </table>
+  <p><em>Note: the scholar quoted on SCO as an "inner-Asian club" and the former ambassador quoted on "equality and mutual respect" (likely Sujan R. Chinoy) were both transcribed with uncertain names in the auto-transcript — do not cite specific names without independent verification. See full notes gap-box.</em></p>
+</section>
+
+<section class="lecture-block" data-lecture="class10a-27">
+  <h2>Class 10-A(27) — BBNJ/High Seas Treaty, RBI PSL Norms, DRDO Scramjet &amp; Critical Minerals (Coking Coal), Greenland <span class="tag-2027">CA Mains 2027</span></h2>
+  <div class="lecture-meta">Sep 18, 2026 &middot; <a href="CA-Mains-2027/2026-09-18_class10a-bbnj-psl-critminerals/notes.html">Full notes →</a></div>
+
+  <h3>BBNJ / UNCLOS bodies — key data &amp; law</h3>
+  <div class="data-box">BBNJ Agreement ("High Seas Treaty," verified): adopted June 2023; reached 60 ratifications 19 Sep 2025; entered into force 17 Jan 2026 — third UNCLOS implementation agreement after the UN Fish Stocks Agreement and the Deep Seabed Mining Agreement. India has signed but not ratified; Sanjay Upadhyay Committee (12-member, Ministry of Earth Sciences, verified) drafting the domestic law needed. India ratified UNCLOS in 1995 (30th anniversary 2025).</div>
+  <table>
+    <tr><th>UNCLOS body</th><th>HQ</th><th>Function</th><th>India's member</th></tr>
+    <tr><td>ITLOS</td><td>Hamburg, Germany</td><td>Adjudicates maritime disputes</td><td>Prof. Bimal N. Patel (corrected from lecture's "Vimal"), term 2026-2035, elected June 2026, succeeds Neeru Chadha</td></tr>
+    <tr><td>ISA (International Seabed Authority)</td><td>Kingston, Jamaica</td><td>Grants deep-seabed mineral exploration licences</td><td>India holds polymetallic-nodule (Central Indian Ocean Basin) and polymetallic-sulphide (Indian Ocean Ridge) exploration contracts</td></tr>
+    <tr><td>CLCS</td><td>New York</td><td>Reviews continental-shelf-limit claims</td><td>Rajan Sivaramakrishnan (corrected from lecture's "Rajan Shiva Ramakrishnan"), term 2023-2028</td></tr>
+  </table>
+  <div class="case-box"><strong>Maritime-pollution convention map:</strong> MARPOL (IMO, London; 6 annexes — oil, noxious liquid substances, packaged harmful substances, sewage, garbage, air pollution) covers ship-based pollution but excludes ballast water, oil-spill response, and ship recycling. Ballast water → separate Ballast Water Management Convention. Oil-spill response → OPRC Convention. Ship recycling → Hong Kong Convention. High-seas biodiversity conservation → BBNJ.</div>
+  <p><em>Note: the lecture's "just in September 2026" framing for Bimal Patel's ITLOS election could not be reconciled with the verified June 2026 election date — see full notes gap-box.</em></p>
+
+  <h3>RBI Priority Sector Lending (PSL) norms — key data</h3>
+  <div class="data-box">PSL targets (2025-26, verified): Domestic commercial banks 40% &middot; Foreign banks (20+ branches) 40% &middot; Foreign banks (&lt;20 branches) 40% overall (up to 32% export credit + 8% other, no agri/weaker-section sub-target) &middot; RRBs 75% &middot; Small Finance Banks 60% (cut from 75% effective FY25-26) &middot; Urban Co-op Banks 60% (no agri sub-target). Within agriculture (18% of base): Non-Corporate Farmers 14% of base, Small &amp; Marginal Farmers 10% of base (NOT nested percentages). Weaker sections 12% of base (15% for RRBs). Micro enterprises 7.5% of base.</div>
+  <table>
+    <tr><th>Mechanism</th><th>What it does</th></tr>
+    <tr><td>ANBC / CEOBSE</td><td>The two possible bases for PSL targets (Adjusted Net Bank Credit / Credit Equivalent of Off-Balance Sheet Exposure) — whichever is higher is used</td></tr>
+    <tr><td>PSLC (PSL Certificate)</td><td>Tradable certificate — a surplus bank sells compliance credit to a shortfall bank; only the certificate transfers, not the underlying loan</td></tr>
+    <tr><td>RIDF (under NABARD)</td><td>Shortfall amount must be parked here, earning below-market interest (bank rate minus a penalty spread that widens with shortfall size); MUDRA/SIDBI/NHB as alternates</td></tr>
+    <tr><td>On-lending via NCDC</td><td>Recent amendment: bank credit routed through NCDC to cooperative societies now counts toward the bank's PSL target</td></tr>
+  </table>
+
+  <h3>DRDO scramjet &amp; hypersonic missiles — key data</h3>
+  <div class="data-box">DRDO/DRDL (Hyderabad, verified): Actively Cooled Full Scale Scramjet Combustor ground-tested at the Scramjet Connect Pipe Test facility — ~700 seconds in Jan 2026, ~1,200 seconds (~20 min) in May 2026. Uses indigenous endothermic hydrocarbon fuel (cools chamber walls, then combusts). Feeds India's Extended Trajectory Long Duration Hypersonic Cruise Missile (ET-LDHCM), Project Vishnu — target ~Mach 8, ~1,500 km range. Hypersonic = above Mach 5.</div>
+  <div class="case-box"><strong>Engine hierarchy:</strong> rocket motor (carries fuel + oxidizer, works in vacuum) → jet engine (uses ambient air, needs mechanical compressor/turbine, cannot work in space) → ramjet (no mechanical compressor, uses forward motion to slow air to sub-sonic before combustion, cannot start from rest) → scramjet (combustion while air stays supersonic/hypersonic, enabling sustained hypersonic flight, still cannot start from rest or operate in space). Hypersonic cruise missile = sustained propulsion after boost; hypersonic glide vehicle = boost only, then unpowered glide.</div>
+
+  <h3>Critical minerals — coking coal &amp; MMDR Schedule I — key data &amp; law</h3>
+  <div class="data-box">Coking coal notified as critical &amp; strategic mineral under MMDR Act, 1957 (verified, notification dated 29 Jan 2026): Schedule I Part A now reads "Coal, including Coking Coal"; also added to Part D. India's coking-coal resources: ~37.37 billion tonnes (lecture said "million" — unit slip, see gap-box), mainly Jharkhand + MP/WB/Chhattisgarh; imports ~58 million tonnes (FY24-25); steel sector still ~95% import-dependent for coking coal. Veena Kumari Dermal Committee (2022, 7-member, Ministry of Mines, verified): recommended 30 critical minerals; 24 placed in Part D (23 from the 30 + glauconite added separately; 7 of the 30 remain outside Part D). All 17 rare earth elements bundled into one single Part D entry. Six minerals denotified from India's atomic-minerals list via the MMDR Amendment Act 2023 and moved to Part D (verified): Lithium, Titanium, Niobium, Tantalum, Zirconium, Beryllium. National Critical Mineral Mission: 2024-25 to 2030-31, nodal ministry = Ministry of Mines, covers the entire value chain (not mining alone); domestic exploration by GSI + NMET.</div>
+
+  <h3>Greenland — key data</h3>
+  <div class="data-box">Greenland (verified): part of the Kingdom of Denmark; not part of the EU (left the European Community in 1985); Greenlanders hold Danish nationality/EU citizenship even though the territory itself is outside the EU. Contains the world's second-largest ice sheet after Antarctica. US strategic interest: military basing, mineral wealth (incl. rare earths), national security — any forcible US intervention would be framed as violating UN Charter Article 2 (sovereignty non-negotiable). Regional geography (Atlantic → Greenland): Labrador Sea → Davis Strait → Baffin Bay → Hudson Strait/Bay (toward Canada); Denmark Strait (Greenland-Iceland); GIUK Gap (Greenland-Iceland-UK) — Cold War chokepoint for Soviet submarines reaching the Atlantic.</div>
+  <p><em>Note: the exact 7-mineral list outside Part D was read out quickly and transcribed unevenly; verify exact names against the Ministry of Mines' official text before citing in an exam answer. See full notes gap-box.</em></p>
+</section>
+
+<section class="lecture-block" data-lecture="class11-27">
+  <h2>Class 11(27) — Interstate River Water Disputes, Integrated Industrial Corridors (DFC) &amp; Education in Concurrent List <span class="tag-2027">CA Mains 2027</span></h2>
+  <div class="lecture-meta">Sep 22, 2026 &middot; <a href="CA-Mains-2027/2026-09-22_class11-riverwater-corridors-education/notes.html">Full notes →</a></div>
+
+  <h3>Interstate river water disputes — key data &amp; law</h3>
+  <div class="data-box">Article 262: cl.(1) lets Parliament legislate for adjudicating interstate river disputes; cl.(2) lets Parliament exclude SC/court jurisdiction (verified) — though states still reach SC via Art. 131/136 in practice. Interstate River Water Disputes Act, 1956: state-triggered only (Centre not proactive); mandates a fresh tribunal per dispute (no transfer to existing tribunal). 2019 Amendment Bill (verified): two-tier system — Dispute Resolution Committee (1 yr, +6 months) → single permanent tribunal with multiple benches (2 yrs, +1 yr), replacing multiple ad hoc tribunals. NITI Aayog CWMI (2018, verified): ~600 million Indians face extreme water stress. Per capita water availability (verified): ~5,000 cu.m (1951) → 1,486 cu.m (2021), lecture cites ~1,400. Cauvery Water Disputes Tribunal (verified): constituted 1990, final award 2007 (~17 yrs, not the lecture's "27 years"), Gazette notification 2013, CWMA formed after SC's 2018 modification.</div>
+  <table>
+    <tr><th>Concept</th><th>Meaning</th></tr>
+    <tr><td>Territorial trap</td><td>Upper riparian state treats water within its border as absolute property, ignoring lower riparian rights</td></tr>
+    <tr><td>Harmon Doctrine</td><td>Theory of absolute upper-riparian territorial sovereignty over water; used to justify the territorial trap</td></tr>
+    <tr><td>Parchment vs. practical rights</td><td>Gap between a tribunal award on paper and its actual on-ground implementation/enforcement</td></tr>
+    <tr><td>State List Entry 17 vs. Union List Entry 56</td><td>Water supply/irrigation is state subject (17), but interstate-river regulation is Union subject (56) once Parliament legislates — the "dual system"</td></tr>
+  </table>
+  <div class="case-box"><strong>Kishau Multipurpose Project (verified, corrects the lecture's "Kisha"):</strong> MoA signed 15 Sep 2026 by UP, Uttarakhand, Himachal Pradesh, Rajasthan, Delhi, Haryana in presence of Amit Shah; 232.6m dam on the Tons river (Yamuna tributary), 1,562 MCM live storage, ended a 17-year deadlock — cited as a cooperative-hydro-federalism success that also builds in environmental flow for Yamuna pollution dilution. International models: New Zealand's Whanganui River granted legal personhood (Te Awa Tupua Act, 2017, verified); Germany's LAWA (federal-state water working group); Mekong River Commission (Laos/Cambodia/Vietnam/Thailand joint basin body).</div>
+
+  <h3>Integrated industrial corridors / DFC — key data</h3>
+  <div class="data-box">DFC network (verified): Eastern DFC 1,337 km (Ludhiana-Sonnagar) + Western DFC 1,506 km = 2,843 km, fully dedicated by PM Sep 8, 2026; ~430-435 trains/day (Apr-Aug 2026). India's logistics cost: ~14-16% of GDP historically → ~8% now (developed-country benchmark also ~8%). National Industrial Corridor Development Programme: 11 corridors/13 states; employment potential cited in lecture as ~1.4 million jobs (a separate industry source cites "100 million by 2030" — large discrepancy, flag as unverified/inconsistent). World Bank Logistics Performance Index (verified): India rank 54 (2014) → 38 (2023). NCAER modal cost: rail ~₹1.96 vs. road ~₹3.78 per unit distance (unit transcribed as "per 10 km" — likely should read per tonne-km). India modal share ~70% road/~27% rail vs. China ~50% rail; National Rail Plan target 45% rail share. Maruti Suzuki rail dispatch share: 5% (2014) → 26% (2025-26) via in-plant rail siding.</div>
+  <table>
+    <tr><th>Concept</th><th>Meaning</th></tr>
+    <tr><td>New Economic Geography (Paul Krugman)</td><td>Lower transport/logistics cost raises economies of scale and induces spatial clustering of firms/workers</td></tr>
+    <tr><td>Growth pole</td><td>A powerful anchor industry attracts ancillary industries and stimulates connected regional growth (e.g. Manesar around the Maruti plant)</td></tr>
+    <tr><td>Network externalities</td><td>A multimodal network's utility rises exponentially with each additional connected node (e.g. DFC linked to a port, then an airport)</td></tr>
+    <tr><td>Spatial equilibrium</td><td>Corridors equalize factor costs, letting capital move to cheaper tier-2/3 cities while retaining market access via connectivity</td></tr>
+    <tr><td>China Plus One</td><td>MNCs diversify manufacturing to a second country alongside China to de-risk supply chains, without full decoupling</td></tr>
+  </table>
+
+  <h3>Education in the Concurrent List — key data &amp; law</h3>
+  <div class="data-box">Education = Entry 25, Concurrent List, moved from State List by the 42nd Constitutional Amendment Act, 1976 (verified). Entry 25 is subject to Union List Entries 63-66; Entry 66 gives Parliament exclusive power over coordination/determination of standards in higher education — the anchor for UGC/NEET. Gujarat University v. Krishna Ranganath Mudholkar (verified): Entry 66 prevails over state education power where they conflict, includes power to prevent dilution of standards. CMC Vellore Association v. Union of India (verified, 2020): upheld NEET under Entry 66. Union Education Ministry's Budget share (verified): 4.6% (2013-14) → 2.5% (2025-26, lecture said "23-24"). States bear ~75% of public school-education spending. ~94,000 government schools closed/consolidated over the past decade (verified, NITI-Aayog-linked). India runs ~5x as many schools as China (verified directionally: ~1.5 million vs. ~291,000 schools).</div>
+  <div class="case-box"><strong>State "laboratories of federalism":</strong> Tamil Nadu's mid-day meal scheme (later adopted nationwide); Andhra Pradesh's "Mana Badi: Nadu-Nedu" school-infrastructure scheme; Odisha's multilingual education program (phased L1→L2→L3 for tribal/PVTG children). Justice Kurian Joseph Committee (verified, constituted by Tamil Nadu, April 2025): examining Centre-state relations/state autonomy; interim report due Jan 2026, full report only 2028 — treat lecture's framing of it as having already "recommended" shifting education to the State List with caution.</div>
+  <p><em>Note: several figures in this class (NCAER "per 10 km" unit, National Rail Plan 45% target, "36% of schools &lt;50 students," Parliamentary Standing Committee's "363rd" report number) were not independently re-verified this session — see full notes gap-box.</em></p>
+</section>
+
+<section id="cross-lecture-index">
+  <h2 style="color:#1d5b8b; border-left:4px solid #1d5b8b; padding-left:12px;">Cross-lecture quick index (recurring themes)</h2>
+  <table>
+    <tr><th>Theme</th><th>Appears in</th></tr>
+    <tr><td>Article 21 (right to life/privacy/dignity)</td><td>Class 1(26) (bail), Class 2(26) (RTBF, DNA), Class 3(26) (menstrual dignity, reproductive autonomy), Class 2(27) (homemaker dignity — Shishupal case)</td></tr>
+    <tr><td>Presumption vs. evidence-based override</td><td>Class 1(26) (presumption of guilt/bail), Class 2(26) (presumption of legitimacy/DNA)</td></tr>
+    <tr><td>Supreme Court "judicial flip"/course correction under public pressure</td><td>Class 2(26) (stray dogs), Class 3(26) (menstrual leave PIL)</td></tr>
+    <tr><td>Institutional accountability vs. symbolic commitment</td><td>Class 1(26) (constitutional morality), Class 3(26) (Committee on Govt Assurances, AI safeguards)</td></tr>
+    <tr><td>Judicial recognition of unpaid/unrecognized labour</td><td>Class 2(27) (Shishupal case, Madras HC homemaker property rights) — extends the substantive equality theme from Class 3(26)'s Sandra Fredman framework</td></tr>
+    <tr><td>AI in judiciary — draft regulations, hallucination risk, human-in-the-loop</td><td>Class 3(26) (initial coverage: draft regulations released, hallucination incidents timeline) deepened by Class 3(27) (pyramid of AI use, innovation-vs-independence debate, NCLT "methyl isocyanate" case, human-in-the-loop as standing conclusion for any AI answer)</td></tr>
+    <tr><td>Technology-driven public service delivery reform</td><td>Class 2(27) (agri-marketing eNAM/PUVC), Class 3(27) (SARTHAK-PDS) — both frame digitization as the third-generation solution to leakage/inefficiency in a welfare/marketing system</td></tr>
+    <tr><td>Reform backfiring / perverse incentives</td><td>Class 4(27) (Cobra effect in exam reform, dwarf firms staying small to keep policy benefits) — both examples of well-intentioned policy design producing the opposite of its goal</td></tr>
+    <tr><td>Data-first introduction strategy</td><td>Emphasized across Class 1(26), 2(26), 3(26), 2(27), 3(27), 4(27) — always lead with a statistic over a vague claim</td></tr>
+    <tr><td>Institutional accountability vs. executive/self-regulating overreach</td><td>Class 3(26) (Committee on Govt Assurances, AI safeguards), Class 7(27) (the "mighty state" problem in crowd control, Section 17A's conflict-of-interest, collegium's non-transparency) — the same tension recurs: unchecked power in any of the three organs of the state</td></tr>
+    <tr><td>Evolution-of-a-provision/case-law timeline as an answer structure</td><td>Class 6(27) (MSP legalization models), Class 7(27) (Section 17A's Single Directive → Vineet Narain → Section 6A → Subramanian Swamy → Section 17A → CPIL; and the four-phase collegium evolution) — UPSC increasingly asks for the "how did we get here" trajectory, not just static facts</td></tr>
+    <tr><td>Chilling effect / disproportionate state response</td><td>Class 3(27) (AI-in-courts innovation-vs-independence trade-off), Class 7(27) (FRT/drone surveillance chilling protest participation; Section 17A's "play-safe syndrome" chilling honest bureaucratic decision-making)</td></tr>
+    <tr><td>Cite source, not unsure names/figures</td><td>Class 3(27) (don't guess scholar names), Class 4(27) (give suggestion before attribution; cite "according to experts" or a source like PIB rather than inventing a name or false precision), Class 5(27) (multiple garbled commentator/diplomat names flagged in the Mecca Pact transcript)</td></tr>
+    <tr><td>Reform/policy captured by perverse incentives</td><td>Class 4(27) (Cobra effect, dwarf firms), Class 5(27) (Peter Pan syndrome — firms avoiding transparency; "sanctification of the small" keeping firms deliberately small)</td></tr>
+    <tr><td>Erosion of a dominant power's security guarantee</td><td>Class 1(27) Hormuz (US security posture in the Gulf), Class 5(27) (Pax Americana erosion, oil-for-security/Carter Doctrine end, driving the Mecca Pact)</td></tr>
+    <tr><td>Freebies/welfare theme revisited across tracks</td><td>Class 2(26) (initial freebies vs. welfare coverage), Class 6(27) (dedicated answer-writing revision on the same theme with updated Economic Survey 2025-26 and 16th FC data)</td></tr>
+    <tr><td>Subsidy-driven resource depletion / commons distortion</td><td>Class 6(27) (tragedy of the commons — free electricity/groundwater depletion; rice cultivation's water footprint)</td></tr>
+    <tr><td>Legal vs. executive/non-binding policy status</td><td>Class 4(27) (MSME twin classification under statute), Class 6(27) (MSP's executive-only status vs. the legally binding FRP for sugarcane — the core legalization debate)</td></tr>
+    <tr><td>Executive-vs-judiciary institutional tussle, resolved via a repeated strike-down-and-reenact cycle</td><td>Class 7(27) (Section 17A's prior-sanction evolution), Class 8(27) (the Madras Bar Association/Rojer Mathew tribunal-rules cycle culminating in the court-mandated NTC) — Parliament/executive repeatedly re-legislates a struck-down provision until an independent body is finally imposed</td></tr>
+    <tr><td>Comparative global model as the answer's "way forward"</td><td>Class 6(27) (global MSP-legalization models), Class 8(27) (UK's Judicial Appointments Commission cited as best practice for both judicial appointments and tribunal member selection)</td></tr>
+    <tr><td>Residual executive veto surviving an "independence" reform</td><td>Class 7(27) (Section 17A's prior-sanction debate; the collegium's own final-say tension with the executive), Class 8(27) (NTC's search-cum-selection committee still includes a government secretary; final tribunal appointment still rests with the executive)</td></tr>
+    <tr><td>Cobweb phenomenon / price-production oscillation in agri-policy</td><td>Class 2(27) (agri-marketing reforms), Class 8(27) (PM-AASHA's four components explicitly designed to dampen the cobweb cycle)</td></tr>
+    <tr><td>UNCLOS legal architecture (maritime zones, transit passage, treaty bodies)</td><td>Class 1(27) Hormuz (transit passage vs. innocent passage, Iran's non-ratification of UNCLOS), Class 10-A(27) (UNCLOS's three lesser-known bodies — ITLOS, ISA, CLCS — plus the BBNJ high-seas implementation agreement) — both build on the same UNCLOS zone/rights framework</td></tr>
+    <tr><td>Centre auctions, but royalty still flows to the state</td><td>Class 10(27) (MMDR Amendment Act 2026's Section 9D fiscal-federalism fight over mineral rights/MBL taxation), Class 10-A(27) (coking coal and other Part D critical minerals — Centre auctions exclusively, but royalty proceeds still accrue to the state where the mineral is located) — same Centre-state revenue-split logic applied to a new mineral</td></tr>
+    <tr><td>Layered-percentage/base-confusion trap in numeric policy targets</td><td>Class 10(27) (DMF 10%/30% of royalty, NMET 2% of royalty), Class 10-A(27) (RBI PSL sub-targets — 18% agriculture, 14% non-corporate farmers, 10% small/marginal farmers, each measured against the total base, not nested against each other) — recurring UPSC trap of applying a sub-target percentage to the wrong parent figure</td></tr>
+    <tr><td>Committee-recommended list vs. narrower statutory list</td><td>Class 9(27) (RUPPs — registered vs. recognised parties), Class 10-A(27) (Veena Kumari Dermal Committee's 30 critical minerals vs. the 24 actually placed in MMDR Schedule I Part D) — a broader advisory/administrative list narrowed down into a binding legal category</td></tr>
+    <tr><td>Concurrent/Union List entry overriding a state's General power where they conflict</td><td>Class 10(27) (MMDR's Union-auction power over Part D minerals despite mining being state-administered generally), Class 11(27) (Union List Entry 66 overriding state education power per Gujarat University v. Mudholkar) — the same "coordination/standard-setting" logic used to justify central primacy in a nominally shared/state domain</td></tr>
+    <tr><td>Tribunal/adjudicatory delay undermining a constitutionally "final" mechanism</td><td>Class 8(27) (NCLT/tribunal reform, NTC's search-cum-selection cycle), Class 11(27) (Article 262(2)'s intended exclusion of courts undermined by states still reaching the SC via Art. 131/136; multi-decade Cauvery tribunal timeline) — an institution meant to be final in law repeatedly ends up litigated anyway</td></tr>
+    <tr><td>Cooperative vs. conflictual federalism, resolved via a state-level MoU/agreement</td><td>Class 9(27) (VB-G RAM G's Centre-state implementation friction), Class 11(27) (Kishau Multipurpose Project's six-state MoA ending a 17-year deadlock, cited as a cooperative-federalism success story) — contrasting a stalled/friction-heavy scheme with a negotiated multi-state success</td></tr>
+    <tr><td>Platform/shared infrastructure vs. isolated/single-purpose investment</td><td>Class 10(27) (MMDR's push for integrated mineral value-chain investment via the National Critical Mineral Mission), Class 11(27) (PM GatiShakti's platform infrastructure vs. old isolated infrastructure, explained via DFCs and industrial corridors) — the recurring "coordinate once, benefit many sectors" infrastructure philosophy</td></tr>
+  </table>
+</section>
+
+<footer>
+  Auto-compiled from the notes.html files of all logged lectures. Every figure/case/quote here was independently verified during note-building; where the original lecture transcript was ambiguous, the verified/corrected version is shown. Click Save to write your edits (highlights/notes) directly to disk. Regenerate this page manually after adding new lectures.
+</footer>
+
+</div>
+
+<script>
+(function() {
+  var mode = null;
+  var noteCounter = 0;
+
+  var btnHighlight = document.getElementById('btn-highlight');
+  var btnUnderline = document.getElementById('btn-underline');
+  var btnNote = document.getElementById('btn-note');
+  var btnClear = document.getElementById('btn-clear');
+  var btnSave = document.getElementById('btn-save');
+  var statusText = document.getElementById('status-text');
+  var contentRoot = document.getElementById('content-root');
+  var noteBox = document.getElementById('note-input-box');
+  var noteText = document.getElementById('note-text');
+  var pendingNoteTarget = null;
+
+  function setMode(newMode) {
+    mode = mode === newMode ? null : newMode;
+    btnHighlight.classList.toggle('active', mode === 'highlight');
+    btnUnderline.classList.toggle('active', mode === 'underline');
+    btnNote.classList.toggle('active', mode === 'note');
+  }
+
+  btnHighlight.addEventListener('click', function() { setMode('highlight'); });
+  btnUnderline.addEventListener('click', function() { setMode('underline'); });
+  btnNote.addEventListener('click', function() { setMode('note'); });
+
+  function markDirty() {
+    statusText.textContent = 'Unsaved changes';
+    statusText.style.color = '#993c1d';
+  }
+
+  document.addEventListener('mouseup', function(e) {
+    if (mode !== 'highlight' && mode !== 'underline') return;
+    var sel = window.getSelection();
+    if (!sel || sel.isCollapsed || sel.rangeCount === 0) return;
+    var range = sel.getRangeAt(0);
+    if (!contentRoot.contains(range.commonAncestorContainer)) return;
+
+    var wrapper = document.createElement(mode === 'highlight' ? 'mark' : 'u');
+    wrapper.className = mode === 'highlight' ? 'user-highlight' : 'user-underline';
+    try {
+      range.surroundContents(wrapper);
+    } catch (err) {
+      var frag = range.extractContents();
+      wrapper.appendChild(frag);
+      range.insertNode(wrapper);
+    }
+    sel.removeAllRanges();
+    markDirty();
+  });
+
+  contentRoot.addEventListener('click', function(e) {
+    if (mode !== 'note') return;
+    if (e.target.closest('.user-note')) return;
+    pendingNoteTarget = e.target;
+    noteBox.style.display = 'block';
+    var x = Math.min(e.clientX, window.innerWidth - 280);
+    var y = Math.min(e.clientY, window.innerHeight - 140);
+    noteBox.style.left = x + 'px';
+    noteBox.style.top = y + 'px';
+    noteText.value = '';
+    noteText.focus();
+  });
+
+  document.getElementById('note-cancel').addEventListener('click', function() {
+    noteBox.style.display = 'none';
+    pendingNoteTarget = null;
+  });
+
+  document.getElementById('note-add').addEventListener('click', function() {
+    var text = noteText.value.trim();
+    if (!text || !pendingNoteTarget) { noteBox.style.display = 'none'; return; }
+    noteCounter++;
+    var noteDiv = document.createElement('div');
+    noteDiv.className = 'user-note';
+    noteDiv.setAttribute('data-note-id', noteCounter);
+    noteDiv.innerHTML = '<span class="note-label">Your note</span>' +
+      '<button class="del-note" title="Remove note">&times;</button>' +
+      '<span class="note-body"></span>';
+    noteDiv.querySelector('.note-body').textContent = text;
+    noteDiv.querySelector('.del-note').addEventListener('click', function() {
+      noteDiv.remove();
+      markDirty();
+    });
+
+    var target = pendingNoteTarget.closest('li, p, td, div.quote-card, div.case-box, section') || contentRoot;
+    target.parentNode.insertBefore(noteDiv, target.nextSibling);
+
+    noteBox.style.display = 'none';
+    pendingNoteTarget = null;
+    markDirty();
+    setMode('note');
+  });
+
+  btnClear.addEventListener('click', function() {
+    if (!confirm('Remove all your highlights, underlines, and notes on this page?')) return;
+    contentRoot.querySelectorAll('.user-note').forEach(function(n) { n.remove(); });
+    contentRoot.querySelectorAll('mark.user-highlight').forEach(function(m) {
+      var parent = m.parentNode;
+      while (m.firstChild) parent.insertBefore(m.firstChild, m);
+      parent.removeChild(m);
+    });
+    contentRoot.querySelectorAll('u.user-underline').forEach(function(u) {
+      var parent = u.parentNode;
+      while (u.firstChild) parent.insertBefore(u.firstChild, u);
+      parent.removeChild(u);
+    });
+    markDirty();
+  });
+
+  var fallbackHelp = document.getElementById('fallback-help');
+  document.getElementById('fallback-close').addEventListener('click', function() {
+    fallbackHelp.style.display = 'none';
+  });
+
+  // Filter bar
+  var filterButtons = document.querySelectorAll('.filter-btn');
+  var lectureBlocks = document.querySelectorAll('.lecture-block');
+  filterButtons.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      filterButtons.forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      var filter = btn.getAttribute('data-filter');
+      lectureBlocks.forEach(function(block) {
+        var lec = block.getAttribute('data-lecture');
+        block.classList.toggle('hidden-by-filter', filter !== 'all' && lec !== filter);
+      });
+      var crossIndex = document.getElementById('cross-lecture-index');
+      if (crossIndex) crossIndex.classList.toggle('hidden-by-filter', filter !== 'all');
+    });
+  });
+
+  // Search box — simple text-match highlight-scroll across all blocks (ignores filter)
+  var searchBox = document.getElementById('search-box');
+  searchBox.addEventListener('input', function() {
+    var q = searchBox.value.trim().toLowerCase();
+    if (!q) {
+      contentRoot.querySelectorAll('[data-search-hidden]').forEach(function(el) {
+        el.style.display = '';
+        el.removeAttribute('data-search-hidden');
+      });
+      return;
+    }
+    var candidates = contentRoot.querySelectorAll('li, p, td, div.quote-card, div.case-box, div.data-box, tr');
+    candidates.forEach(function(el) {
+      var match = el.textContent.toLowerCase().indexOf(q) !== -1;
+      if (!match) {
+        el.style.display = 'none';
+        el.setAttribute('data-search-hidden', '1');
+      } else if (el.hasAttribute('data-search-hidden')) {
+        el.style.display = '';
+        el.removeAttribute('data-search-hidden');
+      }
+    });
+  });
+
+  var fileHandle = null;
+  var fsaSupported = 'showSaveFilePicker' in window;
+  var THIS_FILENAME = 'data-points.html';
+
+  function buildFullHtml() {
+    var doc = document.documentElement.cloneNode(true);
+    var liveContentRoot = doc.querySelector('#content-root');
+    if (liveContentRoot) liveContentRoot.innerHTML = contentRoot.innerHTML;
+    return '<!DOCTYPE html>\n' + doc.outerHTML;
+  }
+
+  async function writeToFile() {
+    var writable = await fileHandle.createWritable();
+    await writable.write(buildFullHtml());
+    await writable.close();
+  }
+
+  btnSave.addEventListener('click', async function() {
+    statusText.textContent = 'Saving…';
+    statusText.style.color = '#57606a';
+    if (!fsaSupported) {
+      fallbackHelp.style.display = 'block';
+      statusText.textContent = 'Direct save not supported in this browser';
+      statusText.style.color = '#993c1d';
+      return;
+    }
+    try {
+      if (!fileHandle) {
+        fileHandle = await window.showSaveFilePicker({
+          suggestedName: THIS_FILENAME,
+          types: [{ description: 'HTML file', accept: { 'text/html': ['.html'] } }]
+        });
+      }
+      var perm = await fileHandle.queryPermission({ mode: 'readwrite' });
+      if (perm !== 'granted') {
+        perm = await fileHandle.requestPermission({ mode: 'readwrite' });
+      }
+      if (perm !== 'granted') {
+        statusText.textContent = 'File permission denied — click Save to retry';
+        statusText.style.color = '#993c1d';
+        fileHandle = null;
+        return;
+      }
+      await writeToFile();
+      statusText.textContent = 'Saved to file just now';
+      statusText.style.color = '#3b6d11';
+    } catch (err) {
+      console.error('SAVE_ERROR', err.name, err.message, err);
+      if (err.name === 'AbortError') {
+        statusText.textContent = 'Save cancelled';
+        statusText.style.color = '#57606a';
+      } else {
+        statusText.textContent = 'Save failed: ' + err.name + ' — click Save to retry';
+        statusText.style.color = '#993c1d';
+        fileHandle = null;
+      }
+    }
+  });
+
+  contentRoot.querySelectorAll('.user-note .del-note').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      btn.closest('.user-note').remove();
+      markDirty();
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

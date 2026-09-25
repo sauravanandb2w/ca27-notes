@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class 4(27): Public Examinations (Prevention of Unfair Means) Amendment Act 2026 &amp; MSME Sector</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: #faf9f6;
+    color: #1f2328;
+    margin: 0;
+    padding: 0 0 80px;
+    line-height: 1.6;
+  }
+  .toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: #ffffff;
+    border-bottom: 2px solid #1d5b8b;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: Arial, sans-serif;
+    flex-wrap: wrap;
+  }
+  .toolbar button {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    padding: 7px 14px;
+    border-radius: 6px;
+    border: 1px solid #d8d2c6;
+    background: #fff;
+    cursor: pointer;
+    color: #1f2328;
+  }
+  .toolbar button:hover { background: #e6f1fb; border-color: #1d5b8b; }
+  .toolbar button.active { background: #1d5b8b; color: #fff; border-color: #1d5b8b; }
+  .toolbar .save-btn { background: #2f6b4f; color: #fff; border-color: #2f6b4f; margin-left: auto; }
+  .toolbar .save-btn:hover { background: #24543e; }
+  .toolbar .status { font-size: 12px; color: #57606a; margin-left: auto; padding-right: 8px; }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 30px 20px; }
+  header { border-bottom: 3px solid #1d5b8b; padding-bottom: 20px; margin-bottom: 30px; }
+  header h1 { font-size: 1.6em; margin: 0 0 6px; color: #1d5b8b; }
+  header .meta { color: #57606a; font-size: 0.95em; font-family: Arial, sans-serif; }
+  section { margin-bottom: 42px; }
+  h2 { font-size: 1.4em; color: #1d5b8b; border-left: 4px solid #1d5b8b; padding-left: 12px; margin-bottom: 14px; }
+  h3 { font-size: 1.12em; margin: 22px 0 8px; }
+  p { margin: 10px 0; }
+  .summary-box { background: #e6f1fb; border-radius: 8px; padding: 18px 22px; font-size: 0.98em; }
+  ul, ol.answers { padding-left: 24px; }
+  li { margin-bottom: 6px; }
+  .timestamp { font-family: 'Courier New', monospace; font-size: 0.78em; color: #57606a; background: #e2ddd4; border-radius: 4px; padding: 1px 6px; margin-right: 6px; }
+  .quote-card { background: #fff; border: 1px solid #e2ddd4; border-left: 4px solid #1d5b8b; border-radius: 6px; padding: 14px 18px; margin: 14px 0; }
+  .quote-card .q { font-style: italic; font-size: 1.05em; }
+  .quote-card .attrib { font-family: Arial, sans-serif; font-size: 0.85em; color: #57606a; margin-top: 6px; }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.95em; background: #fff; }
+  th, td { border: 1px solid #e2ddd4; padding: 8px 12px; text-align: left; vertical-align: top; }
+  th { background: #e6f1fb; font-family: Arial, sans-serif; font-size: 0.88em; }
+  .gap-box { background: #eef4f0; border: 1px solid #cfe3d6; border-radius: 8px; padding: 16px 20px; margin-top: 16px; font-size: 0.95em; }
+  .gap-box h4 { margin: 0 0 8px; color: #2f6b4f; font-family: Arial, sans-serif; font-size: 0.95em; }
+  .exam-tip { background: #fff7e6; border: 1px solid #f0dba8; border-radius: 8px; padding: 14px 20px; margin: 14px 0; font-size: 0.95em; }
+  .exam-tip::before { content: "Exam strategy: "; font-weight: bold; font-family: Arial, sans-serif; }
+  .term-box { background: #fdf3f3; border: 1px solid #ecd4d4; border-radius: 8px; padding: 12px 16px; margin: 10px 0; }
+  .term-box strong { color: #8b3a3a; }
+  .data-box { background: #f3f0fb; border: 1px solid #ddd6f0; border-radius: 8px; padding: 12px 16px; margin: 10px 0; font-family: 'Courier New', monospace; font-size: 0.9em; }
+  footer { margin-top: 60px; border-top: 1px solid #e2ddd4; padding-top: 16px; color: #57606a; font-size: 0.82em; font-family: Arial, sans-serif; }
+  .toc {
+    background: #fff;
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    padding: 16px 22px;
+    margin-bottom: 36px;
+    font-family: Arial, sans-serif;
+    font-size: 0.9em;
+  }
+  .toc h2 { font-size: 1em; margin: 0 0 10px; border: none; padding: 0; color: #1d5b8b; text-transform: uppercase; letter-spacing: 0.04em; }
+  .toc ol { columns: 2; margin: 0; padding-left: 20px; }
+  .toc a { color: #1f2328; text-decoration: none; }
+  .toc a:hover { color: #1d5b8b; text-decoration: underline; }
+  details.collapse-section {
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    background: #fff;
+    margin: 14px 0;
+    padding: 0;
+  }
+  details.collapse-section summary {
+    cursor: pointer;
+    padding: 12px 16px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 0.92em;
+    color: #1d5b8b;
+    list-style: none;
+  }
+  details.collapse-section summary::-webkit-details-marker { display: none; }
+  details.collapse-section summary::before { content: "▸ "; }
+  details.collapse-section[open] summary::before { content: "▾ "; }
+  details.collapse-section .collapse-body { padding: 4px 16px 16px; }
+  .glossary-term {
+    display: flex;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+  }
+  .glossary-term:last-child { border-bottom: none; }
+  .glossary-term dt { font-weight: bold; color: #8b3a3a; min-width: 220px; flex-shrink: 0; font-family: Arial, sans-serif; font-size: 0.9em; }
+  .glossary-term dd { margin: 0; }
+
+  mark.user-highlight { background: #fff176; padding: 1px 2px; border-radius: 2px; }
+  u.user-underline { text-decoration: underline; text-decoration-color: #1d5b8b; text-decoration-thickness: 2px; }
+  .user-note {
+    background: #e6f1fb;
+    border: 1px solid #85b7eb;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin: 8px 0;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #0c447c;
+    position: relative;
+  }
+  .user-note .note-label { font-weight: bold; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; display: block; }
+  .user-note .del-note { position: absolute; top: 6px; right: 8px; cursor: pointer; border: none; background: none; color: #0c447c; font-size: 14px; font-family: Arial, sans-serif; }
+  #note-input-box {
+    position: fixed;
+    display: none;
+    background: #fff;
+    border: 2px solid #1d5b8b;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    z-index: 100;
+    font-family: Arial, sans-serif;
+  }
+  #note-input-box textarea { width: 240px; height: 60px; font-family: Arial, sans-serif; font-size: 13px; border: 1px solid #d8d2c6; border-radius: 4px; padding: 6px; }
+  #note-input-box .note-actions { margin-top: 6px; display: flex; gap: 6px; justify-content: flex-end; }
+  #note-input-box button { font-size: 12px; padding: 5px 10px; border-radius: 4px; border: 1px solid #d8d2c6; background: #fff; cursor: pointer; }
+  #note-input-box button.primary { background: #1d5b8b; color: #fff; border-color: #1d5b8b; }
+  .content-target::selection { background: #ffe082; }
+  .board-caption { font-family: Arial, sans-serif; font-size: 0.82em; color: #57606a; margin-top: -8px; margin-bottom: 14px; }
+  .arcs-box {
+    background: #fff;
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 14px 0;
+  }
+  .arcs-box h4 { margin: 0 0 10px; color: #1d5b8b; font-family: Arial, sans-serif; font-size: 0.98em; }
+  .recall-q { margin-bottom: 14px; }
+  .recall-q p.q-text { font-weight: bold; margin: 0 0 6px; }
+  .recall-q details { border: none; margin: 0; }
+  .recall-q summary { font-family: Arial, sans-serif; font-size: 0.82em; color: #1d5b8b; cursor: pointer; list-style: none; padding: 2px 0; }
+  .recall-q summary::-webkit-details-marker { display: none; }
+  .recall-q summary::before { content: "Show answer \25B8 "; }
+  .recall-q details[open] summary::before { content: "Hide answer \25BE "; }
+  .recall-q .ans { background: #eef4f0; border-radius: 6px; padding: 8px 12px; margin-top: 6px; font-size: 0.95em; }
+  .spacing-tracker { font-family: Arial, sans-serif; font-size: 0.92em; }
+  .spacing-tracker table { margin: 8px 0; }
+  .spacing-tracker input[type="checkbox"] { width: 16px; height: 16px; cursor: pointer; }
+  .mnemonic-box { background: #fff7e6; border: 1px solid #f0dba8; border-radius: 8px; padding: 14px 18px; margin: 10px 0; }
+  .mnemonic-box h4 { margin: 0 0 6px; color: #8b5a1d; font-family: Arial, sans-serif; font-size: 0.92em; }
+  .applic-table td.gs-tag { font-family: Arial, sans-serif; font-weight: bold; font-size: 0.85em; white-space: nowrap; }
+  .applic-table .prelims-badge, .applic-table .mains-badge {
+    display: inline-block; font-family: Arial, sans-serif; font-size: 0.72em; font-weight: bold;
+    padding: 2px 8px; border-radius: 10px; margin-right: 4px;
+  }
+  .prelims-badge { background: #eaf3de; color: #3b6d11; }
+  .mains-badge { background: #e6f1fb; color: #1d5b8b; }
+  #fallback-help {
+    position: fixed;
+    display: none;
+    top: 60px;
+    right: 20px;
+    max-width: 320px;
+    background: #fff;
+    border: 2px solid #993c1d;
+    border-radius: 8px;
+    padding: 14px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    z-index: 200;
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <button id="btn-highlight" title="Select text, then click to highlight it">Highlight</button>
+  <button id="btn-underline" title="Select text, then click to underline it">Underline</button>
+  <button id="btn-note" title="Click this, then click anywhere in the notes to drop a note">Add note</button>
+  <button id="btn-clear" title="Remove all your highlights, underlines, and notes">Clear my edits</button>
+  <span class="status" id="status-text">Not connected to file — click Save once to connect</span>
+  <button class="save-btn" id="btn-save">Save</button>
+</div>
+
+<div id="fallback-help">
+  <strong>Your browser can't save directly</strong>
+  <p style="margin:6px 0;">File System Access isn't supported here (common on Safari/Firefox). Use Chrome or Edge to enable direct-save, or use your browser's Save Page As (Ctrl/Cmd+S) to overwrite this file manually after editing.</p>
+  <button id="fallback-close" style="font-size: 12px; padding: 6px 12px; border-radius: 4px; border: 1px solid #993c1d; background: #993c1d; color: #fff; cursor: pointer;">Got it</button>
+</div>
+
+<div id="note-input-box">
+  <textarea id="note-text" placeholder="Type your note..."></textarea>
+  <div class="note-actions">
+    <button id="note-cancel">Cancel</button>
+    <button class="primary" id="note-add">Add</button>
+  </div>
+</div>
+
+<div class="wrap content-target" id="content-root">
+
+<header>
+  <h1>Class 4(27) — Public Examinations (Prevention of Unfair Means) Amendment Act 2026 &amp; MSME Sector</h1>
+  <div class="meta">
+    <span>Source: unlisted YouTube lecture recording ("Class 4")</span> &middot;
+    <span>Duration: 0:00 – 1:41:48</span> &middot;
+    <span>Track: UPSC GS-2 (Governance/Education) / GS-3 (Economy, Industry, MSME) — Current Affairs Answer Writing</span>
+  </div>
+</header>
+
+<nav class="toc">
+  <h2>Contents</h2>
+  <ol>
+    <li><a href="#applicability">Applicability — GS papers, Prelims &amp; Mains</a></li>
+    <li><a href="#part1">Topic 1: Public examination reform — context &amp; debates</a></li>
+    <li><a href="#part2">Topic 1: Legal framework &amp; the 2026 Amendment Act</a></li>
+    <li><a href="#part3">Topic 1: Challenges, committee views &amp; live answer-writing exercise</a></li>
+    <li><a href="#part4">Topic 2: Industrial economics — key models &amp; terms</a></li>
+    <li><a href="#part5">Topic 2: MSME sector — data, classification &amp; MSMED Amendment</a></li>
+    <li><a href="#part6">Topic 2: MSME challenges &amp; India vs. China/Vietnam comparison</a></li>
+    <li><a href="#glossary">Glossary — quick revision</a></li>
+    <li><a href="#arcs">Revision kit (ARCS)</a></li>
+    <li><a href="#gaps">Supplementary research</a></li>
+  </ol>
+</nav>
+
+<section id="summary">
+  <h2>Executive summary</h2>
+  <div class="summary-box">
+  <p>Fourth class of the CA Mains 2027 series. Opens with a recall-worksheet routine — arrive early, self-test on the previous class before the lecture starts.</p>
+  <p><strong>Topic 1 — public examination integrity</strong> (via the Public Examinations Act, 2024/2026 Amendment):</p>
+  <ul>
+    <li>Malpractice classified as cognizable, non-bailable, non-compoundable</li>
+    <li>Constitutional backdrop: 42nd Amendment, Articles 21A/45/46</li>
+    <li>Core debates: centralization vs. decentralization; the "Cobra effect"</li>
+    <li>Committee views: Radhakrishnan Committee, a proposed 50:50 board/entrance weightage, China's "Double Reduction" policy</li>
+    <li>Full live timed answer-writing exercise on a PYQ-style question</li>
+  </ul>
+  <p><strong>Topic 2 — industrial economics &amp; the MSME sector:</strong></p>
+  <ul>
+    <li>Foundational concepts: creative destruction, dwarf firms, gazelles, missing middle/gazelle gap, Lewisian transformation, inverted duty structure, CBAM/Industry 3.0</li>
+    <li>MSME's economic weight — GDP/manufacturing/export/employment share, verified against PIB</li>
+    <li>MSMED (Amendment) Act 2026: twin investment+turnover classification, permanent Udyam Portal, fixed dispute-resolution timelines</li>
+    <li>The delayed-payment problem and TReDS as a partial fix</li>
+    <li>Comparative angle: India vs. China vs. Vietnam on e-commerce exports and cost of capital</li>
+  </ul>
+  <p style="font-family: Arial, sans-serif; font-size: 0.88em; color: #57606a;">Instructor's repeated advice: cite a source rather than an unsure name; give suggestion before attribution; close with a "positive conclusion" bridge (education → social mobility; MSME → inclusive growth).</p>
+  </div>
+</section>
+
+<section id="applicability">
+  <h2>Applicability — GS papers, Prelims &amp; Mains</h2>
+  <table class="applic-table">
+    <tr><th>Sub-topic</th><th>GS Paper</th><th>Prelims</th><th>Mains</th></tr>
+    <tr>
+      <td class="gs-tag">Public Examinations (Prevention of Unfair Means) Act 2024/2026</td>
+      <td>GS-2 (Governance)</td>
+      <td><span class="prelims-badge">High</span>Act name, year, punishment figures (5-10 yrs, ₹50 lakh fine, 8-yr debarment), offense classification (cognizable/non-bailable/non-compoundable) are all fair-game factual MCQ material.</td>
+      <td><span class="mains-badge">High</span>Directly PYQ-style: "critically evaluate provisions + suggest measures" is a standard GS-2 governance/transparency question format.</td>
+    </tr>
+    <tr>
+      <td class="gs-tag">Constitutional framework for education (42nd Amendment, Art. 21A/45/46)</td>
+      <td>GS-2 (Polity)</td>
+      <td><span class="prelims-badge">High</span>Classic static-polity MCQ fodder — which list/article/amendment does what.</td>
+      <td><span class="mains-badge">Medium</span>Useful as constitutional-backing paragraph inside a broader education-reform answer, not usually a standalone question.</td>
+    </tr>
+    <tr>
+      <td class="gs-tag">Centralization vs. decentralization debate, Cobra effect, committee views</td>
+      <td>GS-2 (Governance) / Essay</td>
+      <td><span class="prelims-badge">Low</span>Conceptual, not typically tested as an MCQ fact.</td>
+      <td><span class="mains-badge">High</span>Strong analytical/essay material — debate framing and the Cobra-effect analogy travel well into any "reform vs. unintended consequences" essay or GS-2 answer.</td>
+    </tr>
+    <tr>
+      <td class="gs-tag">Industrial economics terms (creative destruction, dwarf firms, gazelles, missing middle, inverted duty structure, CBAM)</td>
+      <td>GS-3 (Economy/Industry)</td>
+      <td><span class="prelims-badge">Medium</span>Terms like CBAM and inverted duty structure have appeared as concept-based MCQs in recent years.</td>
+      <td><span class="mains-badge">High</span>Core vocabulary for any "manufacturing competitiveness" or "industrial policy" GS-3 question — supplies the analytical framework, not just facts.</td>
+    </tr>
+    <tr>
+      <td class="gs-tag">MSME sector data &amp; MSMED (Amendment) Act 2026</td>
+      <td>GS-3 (Economy)</td>
+      <td><span class="prelims-badge">High</span>Classification criteria (twin investment+turnover), Udyam Portal status, and headline GDP/export/employment figures are prime static+current-affairs MCQ material.</td>
+      <td><span class="mains-badge">High</span>MSME is a near-certain recurring GS-3 theme (has appeared as a direct question before) — this class's data/law update is directly reusable.</td>
+    </tr>
+    <tr>
+      <td class="gs-tag">India vs. China/Vietnam comparison (e-commerce exports, cost of capital)</td>
+      <td>GS-3 (Economy) / GS-2 (IR angle)</td>
+      <td><span class="prelims-badge">Low</span>Comparative figures unlikely as standalone MCQs.</td>
+      <td><span class="mains-badge">Medium</span>Good value-add for a "why India lags in manufacturing competitiveness" answer, as a comparative/global-best-practices paragraph.</td>
+    </tr>
+  </table>
+  <p style="font-family: Arial, sans-serif; font-size: 0.85em; color: #57606a;">Rule of thumb applied across this series: any named Act/scheme/committee with a specific year, number, or figure is Prelims-relevant; any debate, framework, or comparative-model discussion is Mains-relevant (answer structure and analytical content), and the two are usually not mutually exclusive for a well-covered current-affairs topic.</p>
+</section>
+
+<section id="part1">
+  <h2>1. Topic 1: Public examination reform — context &amp; debates</h2>
+  <p><span class="timestamp">2:22</span>Process note: arrive 5-10 min early for the "recall worksheet" — self-test on the previous class to diagnose personal gaps before the lecture starts.</p>
+  <p><span class="timestamp">2:32</span><strong>Today's topic: Public Examinations.</strong> Recommended answer structure:</p>
+  <ul>
+    <li>Introduction → context/debates → legal framework</li>
+    <li>Constitutional aspect of education</li>
+    <li>The Public Examination Act 2024 (amended 2026)</li>
+    <li>Important data → need for reforms → challenges</li>
+    <li>Committee suggestions/expert views → global best practices → conclusion</li>
+  </ul>
+  <div class="exam-tip">Give the <em>suggestion first</em>, then attribute it ("suggested by [name/expert]") — not the name first. Can't recall an expert's name? Write "according to experts," don't guess. A wrong name is worse than no name.</div>
+
+  <h3>The core debate: centralization versus decentralization of exams</h3>
+  <p><span class="timestamp">13:46</span>India is moving toward greater centralization — NEET, UGC-NET, UPSC are the cited examples.</p>
+  <div class="term-box"><strong>Why centralization?</strong> Decentralized (state-level) exams create inconsistent standards/benchmarks across states.
+    <ul>
+      <li>Centralization enforces a uniform national standard</li>
+    </ul>
+  </div>
+  <p><span class="timestamp">39:14–39:35</span><strong>Exam integrity as a distinct challenge:</strong></p>
+  <ul>
+    <li>Paper leaks/malpractice now run by <strong>organized fraud networks / organized crime</strong></li>
+    <li>Exploits insider vulnerabilities</li>
+    <li>Distribution via platforms like Telegram</li>
+    <li>Not isolated individual cheating anymore</li>
+  </ul>
+
+  <h3>The "Cobra effect" — unintended consequences of reform</h3>
+  <div class="term-box"><strong>Cobra effect:</strong> a solution that inadvertently makes the problem worse. Origin story: British bounty for captured cobras to control snakebite deaths → people bred cobras to claim the reward → problem got worse, not better.</div>
+  <p><span class="timestamp">42:49</span>Applied to exams: making NEET/UPSC progressively harder to filter malpractice or reduce coaching dependence risks an unintended side effect — a <em>more elite</em>, less accessible exam, not a fairer one.</p>
+</section>
+
+<section id="part2">
+  <h2>2. Topic 1: Legal framework &amp; the 2026 Amendment Act</h2>
+  <h3>Constitutional and legal framework for education</h3>
+  <ul>
+    <li><strong>42nd Constitutional Amendment Act (1976):</strong> shifted <em>education</em> from the State List to the <strong>Concurrent List</strong>.
+      <ul>
+        <li>Intended to address inconsistent state-level standards</li>
+        <li>Enables uniform national benchmarks</li>
+        <li>Education remains a constitutionally recognized public good</li>
+      </ul>
+    </li>
+    <li><strong>Article 21A:</strong> Right to Education (up to age 14).</li>
+    <li><strong>Article 45 (DPSP):</strong> obligates the state to provide early childhood care and education.</li>
+    <li><strong>Article 46 (DPSP):</strong> obligates the state to promote the educational interests of SCs, STs, and other weaker sections.</li>
+  </ul>
+
+  <h3>Legal nature of the offense &amp; the 2026 Amendment</h3>
+  <div class="data-box">Offense classification: cognizable + non-bailable (bail is not a right) + non-compoundable (parties cannot privately settle/compromise)</div>
+  <p><span class="timestamp">32:27</span>Government viewed the original 2024 Act's punishments as "a little too mild" → 2026 Amendment brings a stricter regime (verified figures in Supplementary research):</p>
+  <ul>
+    <li><strong>2-month investigation deadline</strong> for the SIT/central agency</li>
+    <li>Fast-tracked trial — raises speed/probability of detection and punishment</li>
+    <li>Punishment enhancement and extended debarment for repeat/organized offenders (see verified figures below)</li>
+  </ul>
+
+  <div class="arcs-box">
+    <h4>Malpractice-to-punishment pipeline under the 2026 Amendment</h4>
+    <svg viewBox="0 0 760 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Flow diagram: offense detected, then FIR and arrest, then investigation within two months, then fast-track trial, then punishment">
+      <defs>
+        <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#1d5b8b"/></marker>
+      </defs>
+      <g font-family="Arial, sans-serif" font-size="11.5" fill="#1f2328">
+        <rect x="0" y="30" width="136" height="80" rx="8" fill="#fdf3f3" stroke="#ecd4d4"/>
+        <text x="68" y="58" text-anchor="middle" font-weight="bold" fill="#8b3a3a">Malpractice</text>
+        <text x="68" y="74" text-anchor="middle">detected</text>
+        <text x="68" y="90" text-anchor="middle">(leak / organized</text>
+        <text x="68" y="104" text-anchor="middle">fraud network)</text>
+
+        <line x1="140" y1="70" x2="164" y2="70" stroke="#1d5b8b" stroke-width="2" marker-end="url(#arrow)"/>
+
+        <rect x="168" y="30" width="136" height="80" rx="8" fill="#eef4f0" stroke="#cfe3d6"/>
+        <text x="236" y="58" text-anchor="middle" font-weight="bold" fill="#2f6b4f">FIR &amp; arrest</text>
+        <text x="236" y="74" text-anchor="middle">Cognizable —</text>
+        <text x="236" y="90" text-anchor="middle">no warrant needed;</text>
+        <text x="236" y="104" text-anchor="middle">non-bailable</text>
+
+        <line x1="308" y1="70" x2="332" y2="70" stroke="#1d5b8b" stroke-width="2" marker-end="url(#arrow)"/>
+
+        <rect x="336" y="30" width="136" height="80" rx="8" fill="#e6f1fb" stroke="#bcd8ef"/>
+        <text x="404" y="58" text-anchor="middle" font-weight="bold" fill="#1d5b8b">Investigation</text>
+        <text x="404" y="74" text-anchor="middle">SIT / central agency</text>
+        <text x="404" y="90" text-anchor="middle">must complete</text>
+        <text x="404" y="104" text-anchor="middle">within 2 months</text>
+
+        <line x1="476" y1="70" x2="500" y2="70" stroke="#1d5b8b" stroke-width="2" marker-end="url(#arrow)"/>
+
+        <rect x="504" y="30" width="120" height="80" rx="8" fill="#fff7e6" stroke="#f0dba8"/>
+        <text x="564" y="58" text-anchor="middle" font-weight="bold" fill="#8b5a1d">Fast-track</text>
+        <text x="564" y="74" text-anchor="middle">trial</text>
+        <text x="564" y="90" text-anchor="middle">Special Courts +</text>
+        <text x="564" y="104" text-anchor="middle">Special Prosecutors</text>
+
+        <line x1="628" y1="70" x2="652" y2="70" stroke="#1d5b8b" stroke-width="2" marker-end="url(#arrow)"/>
+
+        <rect x="656" y="18" width="104" height="104" rx="8" fill="#f3f0fb" stroke="#ddd6f0"/>
+        <text x="708" y="42" text-anchor="middle" font-weight="bold" fill="#4a3a8b">Punishment</text>
+        <text x="708" y="60" text-anchor="middle">5-10 yrs jail</text>
+        <text x="708" y="76" text-anchor="middle">₹50L max fine</text>
+        <text x="708" y="92" text-anchor="middle">8-yr debarment</text>
+        <text x="708" y="108" text-anchor="middle">(service providers)</text>
+      </g>
+    </svg>
+    <p class="board-caption">Five-stage pipeline consolidated from the legal-framework discussion above and the verified-figures gap-box below — useful as a visual anchor for the "critically evaluate the Act" answer.</p>
+  </div>
+
+  <h3>Ensuring integrity across the exam lifecycle</h3>
+  <p><span class="timestamp">38:29</span>Exam integrity framed as a <em>whole life-cycle</em> concern — question paper setting → conduct → result publication. Two adjacent concerns:</p>
+  <ul>
+    <li><strong>Data security</strong> — protecting candidates' personal data from breaches</li>
+    <li><strong>Assessment quality</strong> — including subjective-marking consistency issues</li>
+  </ul>
+</section>
+
+<section id="part3">
+  <h2>3. Topic 1: Challenges, committee views &amp; live answer-writing exercise</h2>
+  <h3>Committee recommendations &amp; comparative models</h3>
+  <ul>
+    <li><strong>Radhakrishnan Committee:</strong> flagged over-reliance on the traditional pen-and-paper exam model.
+      <ul>
+        <li>Recommended a shift toward alternative/more resilient assessment formats</li>
+        <li>Instructor did not fully detail the recommended alternative on the board</li>
+      </ul>
+    </li>
+    <li><strong>Proposed 50:50 weightage model:</strong> giving <strong>50% weightage to board exam performance</strong> and <strong>50% weightage to the entrance test</strong>.
+      <ul>
+        <li>Attributed in class to a "former VC" — name not clearly recollected; do not guess the name in an answer, cite "according to experts"</li>
+        <li>Board weightage captures sustained student effort</li>
+        <li>Goal: reduce single-exam-day stakes</li>
+      </ul>
+    </li>
+    <li><strong>China's "Double Reduction" policy</strong> (comparative/global best practice):
+      <ul>
+        <li>Reduces homework burden for grades 1-9</li>
+        <li>Reduces the private-tuition burden on students</li>
+        <li>Offered as a transferable idea for reducing exam-industrial-complex pressure in India's primary/secondary education</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>Further suggestions discussed</h3>
+  <ul>
+    <li>Grant <strong>statutory status</strong> to registered coaching/examination-related societies for better legislative oversight and accountability.</li>
+    <li>Mandatory <strong>pilot testing</strong> before rolling out new exam formats or technology (e.g., any new computer-based testing system) at scale.</li>
+    <li><strong>Round-the-clock psychological support</strong> for students, recognizing exam-related stress as a serious and continuing concern.</li>
+  </ul>
+  <div class="exam-tip">Conclusion-building technique demonstrated in class: link the topic to a larger positive outcome for the concluding line — for education reform, draw the connection to <strong>upward social mobility</strong> and long-term human capital development, which also works as a generic closing move for many GS-2/GS-3 answers.</div>
+
+  <h3>Live answer-writing exercise (timed, in-class)</h3>
+  <div class="quote-card">
+    <div class="q">Critically evaluate the key provisions of the Public Examination (Prevention of Unfair Means) Amendment Act, 2026. Suggest measures to ensure the integrity and credibility of public examinations in India.</div>
+    <div class="attrib">— Practice question set for a timed writing exercise (~51:12 to 56:40 in the recording); two-part structure: (1) critical evaluation of the law, (2) standalone suggestions</div>
+  </div>
+  <p><span class="timestamp">50:43</span>Model conclusion line used: "Safeguarding public examinations requires protecting the entire examination life cycle through a whole-of-government and whole-of-society approach."</p>
+</section>
+
+<section id="part4">
+  <h2>4. Topic 2: Industrial economics — key models &amp; terms</h2>
+  <p>Bridges education/governance to GS-3 economy — industrial policy, firm dynamics, MSME sector. High-yield, frequently-tested Paper 3 theme.</p>
+
+  <h3>Creative destruction &amp; firm entry/exit</h3>
+  <div class="term-box"><strong>Creative destruction (Schumpeter):</strong> growth works by destroying old products/firms while creating new ones. Example: the smartphone destroyed cameras, alarm clocks, calculators — while creating an entirely new industry.</div>
+  <p><span class="timestamp">1:10:40</span>For this model to work, an economy needs:</p>
+  <ul>
+    <li><strong>Unrestricted/frictionless entry</strong> of new firms — drives innovation</li>
+    <li><strong>Unrestricted/frictionless exit</strong> of old, inefficient firms — prevents resource misallocation</li>
+  </ul>
+  <p>New firms → innovation + investment → economic growth and employment generation.</p>
+
+  <h3>"Dwarf" firms — a policy-induced problem</h3>
+  <div class="term-box"><strong>Dwarf firms:</strong> small, often decades-old firms that never grow in scale, kept small deliberately because of policy design.</div>
+  <ul>
+    <li><strong>Cause 1 — perverse incentives:</strong> many government support schemes and concessions apply only to firms below a certain size threshold.
+      <ul>
+        <li>Growing past that threshold means losing benefits, so firms have an incentive to stay small</li>
+      </ul>
+    </li>
+    <li><strong>Cause 2 — compliance burden:</strong> crossing size thresholds triggers a jump in regulatory/compliance obligations.
+      <ul>
+        <li>Again discourages growth</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>"Gazelles," the "missing middle," and the "gazelle gap"</h3>
+  <div class="term-box"><strong>Gazelles:</strong> high-agility young firms (roughly 3-5 years old) that act as <strong>net job creators</strong> (jobs created minus jobs destroyed is strongly positive) — contrasted with large, capital-intensive incumbents that are not net job providers.</div>
+  <div class="term-box"><strong>Missing middle:</strong> the scarcity of mid-sized firms in India's firm-size distribution — most firms are either very small (dwarfs) or very large, with too few in between. Flow-chain used in class: dwarfism → missing middle → low productivity → low economic growth, low employment generation, low export competitiveness.</div>
+  <div class="term-box"><strong>Gazelle gap:</strong> India specifically has too few gazelle-type high-growth young firms for the net new jobs its economy needs.</div>
+  <p><span class="timestamp">1:16:22</span><strong>Lewisian structural transformation:</strong> surplus agricultural labor shifting into higher-productivity manufacturing/industry — the underlying reason MSME/manufacturing growth matters for industrialization.</p>
+
+  <h3>Trade &amp; industrial policy terms</h3>
+  <div class="term-box"><strong>Inverted duty structure:</strong> import duty on raw materials/intermediate goods higher than on the finished product → cheaper to import the finished good than manufacture it domestically. Discourages domestic manufacturing; pushes firms toward becoming traders/importers instead of producers.</div>
+  <div class="term-box"><strong>Export-led growth model (East/Southeast Asian model):</strong> cheap surplus labor in manufacturing → cheaper goods than competitors, especially Western producers. Followed historically by East Asian economies, more recently by ASEAN.</div>
+  <p><span class="timestamp">1:18:13</span><strong>Industry 3.0 and reshoring:</strong></p>
+  <ul>
+    <li>Western countries earlier shifted "pollutant" (high-emission, low-value) industries to developing countries</li>
+    <li>Now trying to bring manufacturing back (reshoring)</li>
+    <li>Tool: <strong>Carbon Border Adjustment Mechanism (CBAM)</strong> — raises cost of carbon-intensive imports to protect domestic industry</li>
+  </ul>
+</section>
+
+<section id="part5">
+  <h2>5. Topic 2: MSME sector — data, classification &amp; MSMED Amendment</h2>
+  <h3>Why MSME matters (introduction-ready framing)</h3>
+  <div class="quote-card">
+    <div class="q">Micro, Small and Medium Enterprises (MSMEs) are the undisputed engine of India's economic growth and employment generation.</div>
+    <div class="attrib">— Suggested model introduction line from class; instructor notes this framing answers "MSME" as a standalone term regardless of the specific angle of the question, and should go in the introduction</div>
+  </div>
+  <p><span class="timestamp">1:08:01</span>Data cited in class (source: PIB) — cross-checked against current PIB releases in Supplementary research below (figures differ slightly from the lecture's spoken numbers):</p>
+  <div class="data-box">
+    MSME contribution (as stated in class, source: PIB):<br>
+    • ~31% of India's GDP<br>
+    • ~35% of manufacturing output<br>
+    • ~46-48% of India's exports<br>
+    • As of August 2026: ~9.16 crore MSMEs registered, employing 40+ crore people
+  </div>
+  <div class="exam-tip">When citing a statistic you are not 100% sure of, write the source (e.g., "PIB") rather than inventing false precision — the instructor's repeated advice across both topics in this class.</div>
+
+  <h3>MSMED (Amendment) Act, 2026 — classification</h3>
+  <p><span class="timestamp">1:23:06</span>MSMEs classified on a <strong>dual/twin criterion</strong> — both <strong>investment</strong> (plant &amp; machinery for manufacturing, or equipment for services) <strong>and turnover</strong>, not investment alone.</p>
+  <table>
+    <tr><th>Scenario</th><th>Investment</th><th>Turnover</th><th>Classification</th></tr>
+    <tr><td>Firm A</td><td>₹2.5 cr</td><td>₹10 cr</td><td>Micro</td></tr>
+    <tr><td>Firm B</td><td>₹2.5 cr</td><td>₹15 cr</td><td>Small</td></tr>
+  </table>
+  <p style="font-family: Arial, sans-serif; font-size: 0.88em; color: #57606a;">Illustrative example from class: identical investment but different turnover produces a different classification — demonstrating why both criteria matter together.</p>
+</section>
+
+<section id="part6">
+  <h2>6. Topic 2: MSME challenges &amp; India vs. China/Vietnam comparison</h2>
+  <h3>The delayed-payment problem</h3>
+  <p><span class="timestamp">1:25:22</span>MSMEs typically lack strong cash flow buffers. Delayed buyer payment directly hits:</p>
+  <ul>
+    <li>Ability to pay wages</li>
+    <li>Ability to purchase raw materials/intermediate goods</li>
+    <li>Disrupts overall operations</li>
+  </ul>
+  <ul>
+    <li>Law requires payment to MSEs within <strong>45 days</strong>, but compliance is weak in practice.</li>
+    <li>Formal dispute-settlement route has historically been slow — cases dragging on for roughly <strong>two years</strong>.
+      <ul>
+        <li>By which point the affected MSME may have already shut down</li>
+      </ul>
+    </li>
+    <li>2026 MSMED Amendment's fixed timelines for mediation/arbitration (see Supplementary research) are the legislative response to exactly this problem.</li>
+  </ul>
+  <div class="term-box"><strong>TReDS (Trade Receivables Discounting System):</strong> a mechanism allowing MSMEs to get paid within 1-2 days by a financial institution (discounted rate) instead of waiting out the buyer's payment cycle (e.g., 60 days). Now mandatory for Central Public Sector Enterprises (CPSEs) to participate in as buyers.</div>
+  <p><span class="timestamp">1:28:35</span><strong>Two-tier dispute resolution ladder:</strong></p>
+  <ul>
+    <li><strong>Mediation</strong> first — informal settlement between the MSME and the large corporate buyer</li>
+    <li>If unresolved, escalate to the more formal, binding <strong>arbitration</strong> mechanism</li>
+  </ul>
+
+  <h3>Why MSME matters beyond GDP — rural development &amp; inclusion angle</h3>
+  <ul>
+    <li>Labor-intensive sub-sectors like <strong>apparel and leather</strong> are cited as examples where MSMEs — unlike capital-intensive large firms — are genuine net job providers.</li>
+    <li>Traditional rural livelihoods (handlooms, handicrafts, family/inherited-skill businesses) sit within the MSME umbrella and support <strong>regional balance</strong>.
+      <ul>
+        <li>Without them, economic activity concentrates in a few large corporate hubs/states</li>
+      </ul>
+    </li>
+    <li>MSMEs can absorb <strong>rural underemployed youth and women</strong>, supporting inclusive growth.
+      <ul>
+        <li>Helps monetize the otherwise unpaid/informal "care economy"</li>
+      </ul>
+    </li>
+    <li>Preventing <strong>distress migration</strong> (as opposed to normal/voluntary migration) is a key stated benefit.
+      <ul>
+        <li>Distress migration is linked in class to risks of bonded-labor exploitation</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>India vs. China vs. Vietnam — comparative data</h3>
+  <table>
+    <tr><th>Indicator</th><th>India</th><th>China</th><th>Vietnam</th></tr>
+    <tr><td>MSME e-commerce exports (annual)</td><td>~$5 billion</td><td>~$300 billion</td><td>—</td></tr>
+    <tr><td>Cost of capital / interest rate for MSMEs</td><td>6.2% – 8.2%</td><td>~3.1%</td><td>~1%</td></tr>
+  </table>
+  <p style="font-family: Arial, sans-serif; font-size: 0.88em; color: #57606a;">India's MSME e-commerce exports concentrate in handicrafts, apparel, jewelry. Instructor's framing: the capital-cost gap is a ready-made explanation for "why China/Vietnam grow faster" in a manufacturing-competitiveness answer — cheaper capital → higher industrial competitiveness.</p>
+
+  <h3>External sector challenge &amp; closing views</h3>
+  <p><span class="timestamp">1:38:30</span><strong>Non-Tariff Barriers (NTBs):</strong> flagged as a live external-sector challenge to Indian MSME exports — specific examples not fully detailed on the board.</p>
+  <div class="quote-card">
+    <div class="q">Amendments to the MSME Act shall incentivize the growth of the sector, enable them to scale up, and become champions of growth.</div>
+    <div class="attrib">— Union Minister for MSME, Shri Jitan Ram Manjhi (as cited in class) — usable as a conclusion-supporting quote</div>
+  </div>
+  <div class="quote-card">
+    <div class="q">To fix unemployment, fix the economy first.</div>
+    <div class="attrib">— <strong>Arun Maira</strong>, economist and former member of the Planning Commission of India (auto-transcript had garbled this as "Aron Mira"; resolved via web search — see Supplementary research below for the source article)</div>
+  </div>
+</section>
+
+<section id="glossary">
+  <h2>Glossary — quick revision</h2>
+  <dl>
+    <div class="glossary-term"><dt>Cognizable / non-bailable / non-compoundable</dt><dd>Legal classification making exam-malpractice offenses serious: police can arrest without a warrant (cognizable), bail is not a matter of right (non-bailable), and the parties cannot privately settle the case (non-compoundable).</dd></div>
+    <div class="glossary-term"><dt>Cobra effect</dt><dd>A reform/incentive that backfires and worsens the very problem it targeted (named after a colonial-era cobra-bounty policy that led to cobra breeding).</dd></div>
+    <div class="glossary-term"><dt>Creative destruction</dt><dd>Schumpeter's concept: economic growth proceeds by new firms/products displacing old ones (e.g., smartphones displacing cameras and calculators).</dd></div>
+    <div class="glossary-term"><dt>Dwarf firms</dt><dd>Small firms that never grow, kept small by policy incentives (size-linked concessions) and compliance-burden thresholds.</dd></div>
+    <div class="glossary-term"><dt>Gazelles</dt><dd>Young (~3-5 year old), high-growth firms that are net creators of jobs.</dd></div>
+    <div class="glossary-term"><dt>Missing middle</dt><dd>Scarcity of mid-sized firms in India's industrial structure, sitting between numerous small "dwarfs" and a few large firms.</dd></div>
+    <div class="glossary-term"><dt>Gazelle gap</dt><dd>India's specific shortfall of high-growth young "gazelle" firms relative to what the economy needs for job creation.</dd></div>
+    <div class="glossary-term"><dt>Inverted duty structure</dt><dd>Import duty on raw materials/inputs higher than on finished goods, which discourages domestic manufacturing.</dd></div>
+    <div class="glossary-term"><dt>CBAM (Carbon Border Adjustment Mechanism)</dt><dd>A trade tool (EU-led) that taxes carbon-intensive imports, used here as an example of developed countries reshoring manufacturing.</dd></div>
+    <div class="glossary-term"><dt>TReDS</dt><dd>Trade Receivables Discounting System — lets MSMEs get paid quickly (1-2 days) by discounting their invoices through a financial institution rather than waiting on the buyer.</dd></div>
+    <div class="glossary-term"><dt>Twin/dual classification criterion</dt><dd>MSME classification under the MSMED Act uses both investment (in plant/machinery or equipment) and turnover together, not either alone.</dd></div>
+  </dl>
+</section>
+
+<section id="arcs">
+  <h2>Revision kit (ARCS)</h2>
+  <div class="arcs-box">
+    <h4>A — Active Recall: self-test before re-reading</h4>
+    <div class="recall-q">
+      <p class="q-text">1. What is the "Cobra effect," and how was it used to explain a risk in exam reform?</p>
+      <details><summary></summary><div class="ans">A well-intentioned policy fix that worsens the original problem — named after a colonial bounty-for-cobras scheme that led people to breed cobras for reward money. Applied to exams: making tests progressively harder to curb malpractice risks making the exam system more elite/exclusionary rather than fairer.</div></details>
+    </div>
+    <div class="recall-q">
+      <p class="q-text">2. What are the key changes in the Public Examinations (Prevention of Unfair Means) Amendment Act, 2026 (verified)?</p>
+      <details><summary></summary><div class="ans">Fast-tracked investigation and trial via Special Fast Track Courts and Special Public Prosecutors; individual punishment raised from 3-5 years to 5-10 years imprisonment; maximum fine raised from ₹10 lakh to ₹50 lakh; service-provider debarment period extended from 4 to 8 years; investigation must complete within 2 months.</div></details>
+    </div>
+    <div class="recall-q">
+      <p class="q-text">3. What is the difference between "dwarf" firms and "gazelles"?</p>
+      <details><summary></summary><div class="ans">Dwarf firms are small firms that stay small deliberately — due to policy incentives tied to size and rising compliance burden at larger scale. Gazelles are young (3-5 year old), high-agility firms that grow fast and are net creators of jobs. India has relatively few gazelles relative to its economy's needs (the "gazelle gap").</div></details>
+    </div>
+    <div class="recall-q">
+      <p class="q-text">4. What is the twin/dual criterion for MSME classification, with an example?</p>
+      <details><summary></summary><div class="ans">Both investment (in plant/machinery for manufacturing, or equipment for services) AND turnover are considered together. Example: two firms with identical ₹2.5 cr investment but different turnover (₹10 cr vs ₹15 cr) fall into different categories (Micro vs Small) because turnover differs.</div></details>
+    </div>
+    <div class="recall-q">
+      <p class="q-text">5. What is TReDS, and what MSME problem does it solve?</p>
+      <details><summary></summary><div class="ans">Trade Receivables Discounting System — solves the delayed-payment/cash-flow problem by letting MSMEs get paid within 1-2 days via invoice discounting through a financial institution, instead of waiting out long buyer payment cycles (e.g., 60 days) or slow dispute-resolution processes (historically ~2 years).</div></details>
+    </div>
+  </div>
+
+  <div class="arcs-box spacing-tracker">
+    <h4>R — Repeat with Spacing: review checklist</h4>
+    <p>Lecture date: Aug 20, 2026. Forgetting is exponential — review at these intervals, not all at once.</p>
+    <table>
+      <tr><th>Review</th><th>Target date</th><th>Done</th></tr>
+      <tr><td>Day 1 (same day, quick skim)</td><td>Aug 20</td><td><input type="checkbox"></td></tr>
+      <tr><td>Day 3</td><td>Aug 23</td><td><input type="checkbox"></td></tr>
+      <tr><td>Day 7</td><td>Aug 27</td><td><input type="checkbox"></td></tr>
+      <tr><td>Day 21</td><td>Sep 10</td><td><input type="checkbox"></td></tr>
+    </table>
+    <p style="font-size:0.85em; color:#57606a;">Each review: close this file, answer the 5 recall questions above from memory first, then reopen to check.</p>
+  </div>
+
+  <div class="arcs-box">
+    <h4>C — Contrast &amp; Chunk: easily confused pairs</h4>
+    <table>
+      <tr><th>Term A</th><th>Term B</th><th>The ONE distinguishing point</th></tr>
+      <tr><td>Cognizable/non-bailable/non-compoundable</td><td>Ordinary bailable offense</td><td>The 2024/2026 exam-malpractice law treats offenses as serious crimes — arrest without warrant, bail not a right, no private settlement</td></tr>
+      <tr><td>Dwarf firms</td><td>Gazelles</td><td>Dwarfs stay small due to policy/compliance disincentives to grow; gazelles are young firms that grow fast and create net new jobs</td></tr>
+      <tr><td>Mediation</td><td>Arbitration</td><td>Mediation = informal, mutual settlement between parties; arbitration = more formal, binding third-party mechanism used when mediation fails</td></tr>
+      <tr><td>Investment-only classification (old MSME rule)</td><td>Twin investment + turnover criterion (current)</td><td>Old rules risked misclassifying firms with identical investment but very different turnover; the dual criterion fixes this</td></tr>
+      <tr><td>Export-led growth (East/Southeast Asia)</td><td>Inverted duty structure (India's problem)</td><td>Export-led growth = cheap labor + manufacturing scale wins export markets; inverted duty structure = India's own tax design discourages domestic manufacturing instead</td></tr>
+    </table>
+    <p style="font-family: Arial, sans-serif; font-size: 0.88em;"><strong>Chunk:</strong> both topics share a common thread — a system meant to serve merit/growth (examinations; industrial policy) gets distorted by perverse incentives (organized cheating networks exploiting a high-stakes centralized exam system; firms deliberately staying small to keep policy benefits), and the fix in both cases combines stronger legal/institutional deterrence (2026 Amendment Act's stricter penalties; MSMED Amendment's fixed dispute timelines) with structural reform (education-format diversification; twin classification criteria) rather than either alone.</p>
+  </div>
+
+  <div class="arcs-box mnemonic-box">
+    <h4>S — Stick with Encoding Tricks</h4>
+    <p><strong>Cobra effect image:</strong> picture cobra farms springing up specifically because of a government reward poster — a vivid reminder that "the incentive structure is the policy," useful for any question about perverse incentives, not just exams.</p>
+    <p><strong>Dwarf vs. gazelle image:</strong> a garden gnome (small, ornamental, never grows) next to a gazelle (young, fast, covers ground quickly) — dwarfs are policy-frozen, gazelles are policy-enabled.</p>
+    <p><strong>TReDS image:</strong> a "fast-pass" lane at a toll booth — instead of waiting in the long queue (60-day payment cycle or 2-year dispute process), the MSME pays a small discount fee to exit immediately with cash in hand.</p>
+  </div>
+</section>
+
+<section id="gaps">
+  <h2>Supplementary research — filling gaps</h2>
+
+  <div class="gap-box">
+    <h4>Public Examinations (Prevention of Unfair Means) Amendment Bill/Act, 2026 — verified provisions</h4>
+    <p>Introduced in the Lok Sabha on 27 July 2026 and passed by the Rajya Sabha by voice vote; it amends the Public Examinations (Prevention of Unfair Means) Act, 2024, covering examinations conducted by UPSC, SSC, Railway Recruitment Boards, IBPS, NTA, central ministries, and other notified authorities. Verified key changes (more precise than the lecture's spoken figures, which were directionally correct): fast-tracked investigation and speedy trial through Special Fast Track Courts, appointment of Special Public Prosecutors, and time-bound disposal of appeals; individual punishment enhanced from 3-5 years to <strong>5-10 years</strong> imprisonment; maximum fine increased from ₹10 lakh to <strong>₹50 lakh</strong>; debarment period for service providers extended from 4 to <strong>8 years</strong>; investigation must be completed within <strong>two months</strong>. The amendments were prompted by continuing incidents of question-paper leaks and organized examination malpractice. Source: <a href="https://prsindia.org/billtrack/the-public-examinations-prevention-of-unfair-means-amendment-bill-2026" target="_blank" rel="noopener">PRS India bill track</a>; <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2292127&amp;reg=48&amp;lang=2" target="_blank" rel="noopener">PIB press release, Rajya Sabha passage</a>.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>MSME contribution to GDP, manufacturing, exports, employment — verified figures</h4>
+    <p>Current verified data (mid-2026) differs slightly from the lecture's spoken numbers, which were close but not exact: MSMEs contribute approximately <strong>30.1-31.1% of India's GDP</strong>; approximately <strong>35.4% of manufacturing output</strong> (lecture's "35%" matches closely); approximately <strong>45.7-48.6% of exports</strong> (lecture's "46-48%" is consistent with this range); employment stands at roughly <strong>38.9 crore people</strong> (lecture stated "40+ crore," a reasonable rounding). On enterprise count, verified sources report <strong>7.85 crore registered MSMEs as of February 2026</strong>, with Udyam Registration Portal plus Udyam Assist Platform registrations crossing <strong>8.7 crore by June 2026</strong> — the lecture's "9.16 crore as of August 2026" figure could not be independently matched to a specific dated PIB release found in this search and should be treated as approximate/unverified pending a more current source check closer to the exam. Source: <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2142170&amp;reg=48&amp;lang=2" target="_blank" rel="noopener">PIB, Union Minister for MSME statement</a>; <a href="https://www.prokerala.com/news/articles/a1780267.html" target="_blank" rel="noopener">MSME sector output/jobs report, June 2026</a>.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>MSMED (Amendment) Act, 2026 — verified provisions beyond what was covered in class</h4>
+    <p>Passed by Parliament in August 2026, amending the Micro, Small and Medium Enterprises Development Act, 2006. Confirms the twin/dual classification criterion (investment in plant/machinery or equipment, and turnover) discussed in class, with limits to be specified by the Central Government. Additional verified provisions not mentioned in the lecture: the Bill gives <strong>permanent statutory status to the Udyam Registration Portal</strong> as a digital, free, voluntary registration platform; introduces <strong>Online Dispute Resolution</strong> for MSEs with fixed timelines — <strong>90 days for mediation</strong>, <strong>30 days</strong> to refer to arbitration after mediation terminates, and <strong>90 days</strong> for arbitral awards after pleadings are complete. This directly and more precisely addresses the "2-year dispute delay" problem the lecture describes qualitatively. Source: <a href="https://taxguru.in/corporate-law/msmed-amendment-bill-2026-passed-strengthen-msme-framework.html" target="_blank" rel="noopener">TaxGuru, MSMED Amendment Bill 2026 summary</a>; <a href="https://conventuslaw.com/report/india-analysing-the-msme-development-amendment-bill-2026-proposed-changes-to-registration-delayed-payments-and-dispute-resolution/" target="_blank" rel="noopener">Conventus Law analysis</a>.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>Unverified/garbled attributions from the auto-transcript — flagged for caution</h4>
+    <ul>
+      <li>The "former VC" suggesting a 50:50 board-exam/entrance-test weightage model.
+        <ul>
+          <li>Name not clearly captured in the transcript (heard as "V Ram Gopal Rahu" / "Ramalah"); a fresh search (Sep 2026) confirms a Ministry of Education high-level committee has floated a 50% board-marks / 50% entrance-score weightage for NEET/JEE admissions, but no specific former-VC originator could be matched to this name — still unresolved.</li>
+          <li>Do not cite a specific name in an exam answer without independent verification; the 50:50 proposal itself is citable as "a Ministry of Education committee has proposed."</li>
+        </ul>
+      </li>
+      <li><strong>Resolved:</strong> the economist quoted as saying "to fix unemployment, fix the economy first" was transcribed as "Aron Mira" — confirmed via web search to be <strong>Arun Maira</strong>, economist and former member of the Planning Commission of India, who authored an article of this exact title (<a href="https://arunmaira.com/f/to-fix-unemployment-fix-the-economy-first" target="_blank" rel="noopener">arunmaira.com</a>). Now cited by name in the quote above.</li>
+      <li>The Radhakrishnan Committee reference on exam-format reform was not detailed in enough depth in the recording to state its specific alternative-format recommendation with confidence; see the verified gap-box below for the confirmed recommendations.</li>
+    </ul>
+  </div>
+
+  <div class="gap-box">
+    <h4>Radhakrishnan Committee — exam-format recommendations, verified</h4>
+    <p>The lecture flagged the committee's alternative-format recommendation without detailing it. Verified findings: the panel is the K. Radhakrishnan Committee (former ISRO chairman), constituted by the Ministry of Education in June 2024 after the NEET-UG paper-leak controversy, to review NTA's functioning; it submitted its report in October 2024 with <strong>101 total recommendations</strong>. Exam-format specifics: a <strong>two-stage exam format for NEET</strong>, modelled on the JEE pattern; online transmission of question papers with paper-based answering wherever feasible; <strong>splitting large exams into shifts or multi-session testing</strong> once candidate numbers exceed roughly two lakh; multi-stage testing for specific skill areas; a <strong>cap on NEET attempts</strong> (replacing unlimited retakes); and limiting subject choices in CUET. Governance-side, it recommended an empowered, accountable NTA Governing Body with three sub-committees (test audit/ethics/transparency; staffing; stakeholder relations), and that NTA's mandate focus primarily on entrance exams rather than recruitment exams. Source: <a href="https://www.business-standard.com/india-news/exam-reforms-k-radhakrishnan-panel-nta-recommendations-paper-leak-126072700556_1.html" target="_blank" rel="noopener">Business Standard, "2024 NTA reforms: why the Radhakrishnan panel was formed &amp; what it proposed"</a>; <a href="https://swarajyamag.com/news-brief/digital-exams-omr-sheet-responses-multi-stage-tests-and-streamlined-cuet-choices-radhakrishnan-panel-recommends-overhaul-after-neet-leak" target="_blank" rel="noopener">Swarajya, panel recommendations summary</a>.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>Non-Tariff Barriers (NTBs) on Indian MSME exports — verified specifics</h4>
+    <p>The lecture flagged NTBs as a live external-sector challenge without detailing examples. Verified specifics: NTBs here means <strong>Non-Tariff Barriers</strong> (not a testing body) — regulatory/technical trade restrictions distinct from tariffs. Main forms hitting Indian MSME exporters: <strong>Technical Barriers to Trade (TBT)</strong> and <strong>Sanitary and Phytosanitary (SPS)</strong> measures — complex testing, certification, and labeling requirements imposed by the EU and UK. Sector-specific examples: chillies, tea, Basmati rice, dairy, poultry, bovine meat, and fish face SPS/TBT checks for EU entry; sesame seeds, black tiger shrimp, medicines, and apparel face similar checks for Japan; food, meat, fish, and dairy for China; and shrimp for the US. Additional friction: rising demand from US/EU buyers for <strong>voluntary certifications</strong> (fair trade, Rainforest Alliance, B-Corp) that many MSMEs lack the capacity to obtain; and inconsistent packaging, labeling, and customs-documentation norms across destination markets. Source: <a href="https://thesecretariat.in/article/despite-ftas-rising-non-tariff-barriers-pose-serious-challenges-for-indian-msmes" target="_blank" rel="noopener">The Secretariat, "Despite FTAs, rising non-tariff barriers pose serious challenges for Indian MSMEs"</a>; <a href="https://www.icrier.org/pdf/wp165.pdf" target="_blank" rel="noopener">ICRIER Working Paper No. 165, "Non-Tariff Barriers and India's Exports"</a>.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>What the lecture doesn't cover, but pairs well for GS-2/GS-3 prep</h4>
+    <ul>
+      <li>The Udyam Registration Portal's specific digital features (self-declaration based, integrated with GSTN and Income Tax databases) as a fuller institutional backdrop for the MSMED Amendment discussion.</li>
+      <li>The Zero Defect Zero Effect (ZED) certification scheme for MSMEs, relevant to any question combining MSME competitiveness with sustainability/environmental themes.</li>
+      <li>India's Production Linked Incentive (PLI) scheme as a contrasting large-firm/manufacturing-scale policy tool, useful for comparing with MSME-focused policy in a "manufacturing competitiveness" question.</li>
+    </ul>
+  </div>
+</section>
+
+</div>
+
+<footer>
+  Notes compiled from an unlisted lecture recording using YouTube's auto-generated transcript. Timestamps are approximate; several names and figures were transcribed imperfectly by auto-captions and are flagged inline for verification against the original lecture or handwritten notes before citing in an exam answer. Supplementary research sections are separately verified via web search and marked accordingly. Click Save (first time will ask you to pick this file) to write your edits directly to disk — no chat needed.
+</footer>
+
+
+<script>
+(function() {
+  var mode = null;
+  var noteCounter = 0;
+
+  var btnHighlight = document.getElementById('btn-highlight');
+  var btnUnderline = document.getElementById('btn-underline');
+  var btnNote = document.getElementById('btn-note');
+  var btnClear = document.getElementById('btn-clear');
+  var btnSave = document.getElementById('btn-save');
+  var statusText = document.getElementById('status-text');
+  var contentRoot = document.getElementById('content-root');
+  var noteBox = document.getElementById('note-input-box');
+  var noteText = document.getElementById('note-text');
+  var pendingNoteTarget = null;
+
+  function setMode(newMode) {
+    mode = mode === newMode ? null : newMode;
+    btnHighlight.classList.toggle('active', mode === 'highlight');
+    btnUnderline.classList.toggle('active', mode === 'underline');
+    btnNote.classList.toggle('active', mode === 'note');
+  }
+
+  btnHighlight.addEventListener('click', function() { setMode('highlight'); });
+  btnUnderline.addEventListener('click', function() { setMode('underline'); });
+  btnNote.addEventListener('click', function() { setMode('note'); });
+
+  function markDirty() {
+    statusText.textContent = 'Unsaved changes';
+    statusText.style.color = '#993c1d';
+  }
+
+  document.addEventListener('mouseup', function(e) {
+    if (mode !== 'highlight' && mode !== 'underline') return;
+    var sel = window.getSelection();
+    if (!sel || sel.isCollapsed || sel.rangeCount === 0) return;
+    var range = sel.getRangeAt(0);
+    if (!contentRoot.contains(range.commonAncestorContainer)) return;
+
+    var wrapper = document.createElement(mode === 'highlight' ? 'mark' : 'u');
+    wrapper.className = mode === 'highlight' ? 'user-highlight' : 'user-underline';
+    try {
+      range.surroundContents(wrapper);
+    } catch (err) {
+      var frag = range.extractContents();
+      wrapper.appendChild(frag);
+      range.insertNode(wrapper);
+    }
+    sel.removeAllRanges();
+    markDirty();
+  });
+
+  contentRoot.addEventListener('click', function(e) {
+    if (mode !== 'note') return;
+    if (e.target.closest('.user-note')) return;
+    pendingNoteTarget = e.target;
+    noteBox.style.display = 'block';
+    var x = Math.min(e.clientX, window.innerWidth - 280);
+    var y = Math.min(e.clientY, window.innerHeight - 140);
+    noteBox.style.left = x + 'px';
+    noteBox.style.top = y + 'px';
+    noteText.value = '';
+    noteText.focus();
+  });
+
+  document.getElementById('note-cancel').addEventListener('click', function() {
+    noteBox.style.display = 'none';
+    pendingNoteTarget = null;
+  });
+
+  document.getElementById('note-add').addEventListener('click', function() {
+    var text = noteText.value.trim();
+    if (!text || !pendingNoteTarget) { noteBox.style.display = 'none'; return; }
+    noteCounter++;
+    var noteDiv = document.createElement('div');
+    noteDiv.className = 'user-note';
+    noteDiv.setAttribute('data-note-id', noteCounter);
+    noteDiv.innerHTML = '<span class="note-label">Your note</span>' +
+      '<button class="del-note" title="Remove note">&times;</button>' +
+      '<span class="note-body"></span>';
+    noteDiv.querySelector('.note-body').textContent = text;
+    noteDiv.querySelector('.del-note').addEventListener('click', function() {
+      noteDiv.remove();
+      markDirty();
+    });
+
+    var target = pendingNoteTarget.closest('li, p, td, div.quote-card, section') || contentRoot;
+    target.parentNode.insertBefore(noteDiv, target.nextSibling);
+
+    noteBox.style.display = 'none';
+    pendingNoteTarget = null;
+    markDirty();
+    setMode('note');
+  });
+
+  btnClear.addEventListener('click', function() {
+    if (!confirm('Remove all your highlights, underlines, and notes on this page?')) return;
+    contentRoot.querySelectorAll('.user-note').forEach(function(n) { n.remove(); });
+    contentRoot.querySelectorAll('mark.user-highlight').forEach(function(m) {
+      var parent = m.parentNode;
+      while (m.firstChild) parent.insertBefore(m.firstChild, m);
+      parent.removeChild(m);
+    });
+    contentRoot.querySelectorAll('u.user-underline').forEach(function(u) {
+      var parent = u.parentNode;
+      while (u.firstChild) parent.insertBefore(u.firstChild, u);
+      parent.removeChild(u);
+    });
+    markDirty();
+  });
+
+  var fallbackHelp = document.getElementById('fallback-help');
+  document.getElementById('fallback-close').addEventListener('click', function() {
+    fallbackHelp.style.display = 'none';
+  });
+
+  var fileHandle = null;
+  var fsaSupported = 'showSaveFilePicker' in window;
+  var THIS_FILENAME = 'notes.html';
+
+  function buildFullHtml() {
+    var doc = document.documentElement.cloneNode(true);
+    var liveContentRoot = doc.querySelector('#content-root');
+    if (liveContentRoot) liveContentRoot.innerHTML = contentRoot.innerHTML;
+    return '<!DOCTYPE html>\n' + doc.outerHTML;
+  }
+
+  async function writeToFile() {
+    var writable = await fileHandle.createWritable();
+    await writable.write(buildFullHtml());
+    await writable.close();
+  }
+
+  btnSave.addEventListener('click', async function() {
+    statusText.textContent = 'Saving…';
+    statusText.style.color = '#57606a';
+    if (!fsaSupported) {
+      fallbackHelp.style.display = 'block';
+      statusText.textContent = 'Direct save not supported in this browser';
+      statusText.style.color = '#993c1d';
+      return;
+    }
+    try {
+      if (!fileHandle) {
+        fileHandle = await window.showSaveFilePicker({
+          suggestedName: THIS_FILENAME,
+          types: [{ description: 'HTML file', accept: { 'text/html': ['.html'] } }]
+        });
+      }
+      var perm = await fileHandle.queryPermission({ mode: 'readwrite' });
+      if (perm !== 'granted') {
+        perm = await fileHandle.requestPermission({ mode: 'readwrite' });
+      }
+      if (perm !== 'granted') {
+        statusText.textContent = 'File permission denied — click Save to retry';
+        statusText.style.color = '#993c1d';
+        fileHandle = null;
+        return;
+      }
+      await writeToFile();
+      statusText.textContent = 'Saved to file just now';
+      statusText.style.color = '#3b6d11';
+    } catch (err) {
+      console.error('SAVE_ERROR', err.name, err.message, err);
+      if (err.name === 'AbortError') {
+        statusText.textContent = 'Save cancelled';
+        statusText.style.color = '#57606a';
+      } else {
+        statusText.textContent = 'Save failed: ' + err.name + ' — click Save to retry';
+        statusText.style.color = '#993c1d';
+        fileHandle = null;
+      }
+    }
+  });
+
+  contentRoot.querySelectorAll('.user-note .del-note').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      btn.closest('.user-note').remove();
+      markDirty();
+    });
+  });
+
+  contentRoot.querySelectorAll('.spacing-tracker input[type="checkbox"]').forEach(function(cb) {
+    cb.addEventListener('change', function() {
+      if (cb.checked) { cb.setAttribute('checked', 'checked'); }
+      else { cb.removeAttribute('checked'); }
+      markDirty();
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

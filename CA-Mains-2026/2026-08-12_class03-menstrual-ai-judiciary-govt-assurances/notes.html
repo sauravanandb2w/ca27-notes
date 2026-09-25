@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CA Mains 2026 — Class 3(26): Menstrual Leave, AI in Courts &amp; Committee on Government Assurances</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: #faf9f6;
+    color: #1f2328;
+    margin: 0;
+    padding: 0 0 80px;
+    line-height: 1.6;
+  }
+  .toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: #ffffff;
+    border-bottom: 2px solid #1d5b8b;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: Arial, sans-serif;
+    flex-wrap: wrap;
+  }
+  .toolbar button {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    padding: 7px 14px;
+    border-radius: 6px;
+    border: 1px solid #d8d2c6;
+    background: #fff;
+    cursor: pointer;
+    color: #1f2328;
+  }
+  .toolbar button:hover { background: #e6f1fb; border-color: #1d5b8b; }
+  .toolbar button.active { background: #1d5b8b; color: #fff; border-color: #1d5b8b; }
+  .toolbar .save-btn { background: #2f6b4f; color: #fff; border-color: #2f6b4f; margin-left: auto; }
+  .toolbar .save-btn:hover { background: #24543e; }
+  .toolbar .status { font-size: 12px; color: #57606a; margin-left: auto; padding-right: 8px; }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 30px 20px; }
+  header { border-bottom: 3px solid #1d5b8b; padding-bottom: 20px; margin-bottom: 30px; }
+  header h1 { font-size: 1.6em; margin: 0 0 6px; color: #1d5b8b; }
+  header .meta { color: #57606a; font-size: 0.95em; font-family: Arial, sans-serif; }
+  section { margin-bottom: 42px; }
+  h2 { font-size: 1.4em; color: #1d5b8b; border-left: 4px solid #1d5b8b; padding-left: 12px; margin-bottom: 14px; }
+  h3 { font-size: 1.12em; margin: 22px 0 8px; }
+  p { margin: 10px 0; }
+  .summary-box { background: #e6f1fb; border-radius: 8px; padding: 18px 22px; font-size: 0.98em; }
+  ul, ol.answers { padding-left: 24px; }
+  li { margin-bottom: 6px; }
+  .timestamp { font-family: 'Courier New', monospace; font-size: 0.78em; color: #57606a; background: #e2ddd4; border-radius: 4px; padding: 1px 6px; margin-right: 6px; }
+  .quote-card { background: #fff; border: 1px solid #e2ddd4; border-left: 4px solid #1d5b8b; border-radius: 6px; padding: 14px 18px; margin: 14px 0; }
+  .quote-card .q { font-style: italic; font-size: 1.05em; }
+  .quote-card .attrib { font-family: Arial, sans-serif; font-size: 0.85em; color: #57606a; margin-top: 6px; }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.95em; background: #fff; }
+  th, td { border: 1px solid #e2ddd4; padding: 8px 12px; text-align: left; vertical-align: top; }
+  th { background: #e6f1fb; font-family: Arial, sans-serif; font-size: 0.88em; }
+  .gap-box { background: #eef4f0; border: 1px solid #cfe3d6; border-radius: 8px; padding: 16px 20px; margin-top: 16px; font-size: 0.95em; }
+  .gap-box h4 { margin: 0 0 8px; color: #2f6b4f; font-family: Arial, sans-serif; font-size: 0.95em; }
+  .exam-tip { background: #fff7e6; border: 1px solid #f0dba8; border-radius: 8px; padding: 14px 20px; margin: 14px 0; font-size: 0.95em; }
+  .exam-tip::before { content: "Exam strategy: "; font-weight: bold; font-family: Arial, sans-serif; }
+  .term-box { background: #fdf3f3; border: 1px solid #ecd4d4; border-radius: 8px; padding: 12px 16px; margin: 10px 0; }
+  .term-box strong { color: #8b3a3a; }
+  .data-box { background: #f3f0fb; border: 1px solid #ddd6f0; border-radius: 8px; padding: 12px 16px; margin: 10px 0; font-family: 'Courier New', monospace; font-size: 0.9em; }
+  footer { margin-top: 60px; border-top: 1px solid #e2ddd4; padding-top: 16px; color: #57606a; font-size: 0.82em; font-family: Arial, sans-serif; }
+  .toc {
+    background: #fff;
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    padding: 16px 22px;
+    margin-bottom: 36px;
+    font-family: Arial, sans-serif;
+    font-size: 0.9em;
+  }
+  .toc h2 { font-size: 1em; margin: 0 0 10px; border: none; padding: 0; color: #1d5b8b; text-transform: uppercase; letter-spacing: 0.04em; }
+  .toc ol { columns: 2; margin: 0; padding-left: 20px; }
+  .toc a { color: #1f2328; text-decoration: none; }
+  .toc a:hover { color: #1d5b8b; text-decoration: underline; }
+  details.collapse-section {
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    background: #fff;
+    margin: 14px 0;
+    padding: 0;
+  }
+  details.collapse-section summary {
+    cursor: pointer;
+    padding: 12px 16px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 0.92em;
+    color: #1d5b8b;
+    list-style: none;
+  }
+  details.collapse-section summary::-webkit-details-marker { display: none; }
+  details.collapse-section summary::before { content: "▸ "; }
+  details.collapse-section[open] summary::before { content: "▾ "; }
+  details.collapse-section .collapse-body { padding: 4px 16px 16px; }
+  .glossary-term {
+    display: flex;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+  }
+  .glossary-term:last-child { border-bottom: none; }
+  .glossary-term dt { font-weight: bold; color: #8b3a3a; min-width: 200px; flex-shrink: 0; font-family: Arial, sans-serif; font-size: 0.9em; }
+  .glossary-term dd { margin: 0; }
+
+  mark.user-highlight { background: #fff176; padding: 1px 2px; border-radius: 2px; }
+  u.user-underline { text-decoration: underline; text-decoration-color: #1d5b8b; text-decoration-thickness: 2px; }
+  .user-note {
+    background: #e6f1fb;
+    border: 1px solid #85b7eb;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin: 8px 0;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #0c447c;
+    position: relative;
+  }
+  .user-note .note-label { font-weight: bold; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; display: block; }
+  .user-note .del-note { position: absolute; top: 6px; right: 8px; cursor: pointer; border: none; background: none; color: #0c447c; font-size: 14px; font-family: Arial, sans-serif; }
+  #note-input-box {
+    position: fixed;
+    display: none;
+    background: #fff;
+    border: 2px solid #1d5b8b;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    z-index: 100;
+    font-family: Arial, sans-serif;
+  }
+  #note-input-box textarea { width: 240px; height: 60px; font-family: Arial, sans-serif; font-size: 13px; border: 1px solid #d8d2c6; border-radius: 4px; padding: 6px; }
+  #note-input-box .note-actions { margin-top: 6px; display: flex; gap: 6px; justify-content: flex-end; }
+  #note-input-box button { font-size: 12px; padding: 5px 10px; border-radius: 4px; border: 1px solid #d8d2c6; background: #fff; cursor: pointer; }
+  #note-input-box button.primary { background: #1d5b8b; color: #fff; border-color: #1d5b8b; }
+  .content-target::selection { background: #ffe082; }
+  .board-caption { font-family: Arial, sans-serif; font-size: 0.82em; color: #57606a; margin-top: -8px; margin-bottom: 14px; }
+  .mermaid { background: #fff; border: 1px solid #e2ddd4; border-radius: 8px; padding: 10px; margin: 14px 0; }
+  .arcs-box {
+    background: #fff;
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 14px 0;
+  }
+  .arcs-box h4 { margin: 0 0 10px; color: #1d5b8b; font-family: Arial, sans-serif; font-size: 0.98em; }
+  .recall-q { margin-bottom: 14px; }
+  .recall-q p.q-text { font-weight: bold; margin: 0 0 6px; }
+  .recall-q details { border: none; margin: 0; }
+  .recall-q summary { font-family: Arial, sans-serif; font-size: 0.82em; color: #1d5b8b; cursor: pointer; list-style: none; padding: 2px 0; }
+  .recall-q summary::-webkit-details-marker { display: none; }
+  .recall-q summary::before { content: "Show answer \25B8 "; }
+  .recall-q details[open] summary::before { content: "Hide answer \25BE "; }
+  .recall-q .ans { background: #eef4f0; border-radius: 6px; padding: 8px 12px; margin-top: 6px; font-size: 0.95em; }
+  .spacing-tracker { font-family: Arial, sans-serif; font-size: 0.92em; }
+  .spacing-tracker table { margin: 8px 0; }
+  .spacing-tracker input[type="checkbox"] { width: 16px; height: 16px; cursor: pointer; }
+  .mnemonic-box { background: #fff7e6; border: 1px solid #f0dba8; border-radius: 8px; padding: 14px 18px; margin: 10px 0; }
+  .mnemonic-box h4 { margin: 0 0 6px; color: #8b5a1d; font-family: Arial, sans-serif; font-size: 0.92em; }
+  .applic-table td.gs-tag { font-family: Arial, sans-serif; font-weight: bold; font-size: 0.85em; white-space: nowrap; }
+  .applic-table .prelims-badge, .applic-table .mains-badge {
+    display: inline-block; font-family: Arial, sans-serif; font-size: 0.72em; font-weight: bold;
+    padding: 2px 8px; border-radius: 10px; margin-right: 4px;
+  }
+  .prelims-badge { background: #eaf3de; color: #3b6d11; }
+  .mains-badge { background: #e6f1fb; color: #1d5b8b; }
+  #fallback-help {
+    position: fixed;
+    display: none;
+    top: 60px;
+    right: 20px;
+    max-width: 320px;
+    background: #fff;
+    border: 2px solid #993c1d;
+    border-radius: 8px;
+    padding: 14px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    z-index: 200;
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <button id="btn-highlight" title="Select text, then click to highlight it">Highlight</button>
+  <button id="btn-underline" title="Select text, then click to underline it">Underline</button>
+  <button id="btn-note" title="Click this, then click anywhere in the notes to drop a note">Add note</button>
+  <button id="btn-clear" title="Remove all your highlights, underlines, and notes">Clear my edits</button>
+  <span class="status" id="status-text">Not connected to file — click Save once to connect</span>
+  <button class="save-btn" id="btn-save">Save</button>
+</div>
+
+<div id="fallback-help">
+  <strong>Your browser can't save directly</strong>
+  <p style="margin:6px 0;">File System Access isn't supported here (common on Safari/Firefox). Use Chrome or Edge to enable direct-save, or use your browser's Save Page As (Ctrl/Cmd+S) to overwrite this file manually after editing.</p>
+  <button id="fallback-close" style="font-size: 12px; padding: 6px 12px; border-radius: 4px; border: 1px solid #993c1d; background: #993c1d; color: #fff; cursor: pointer;">Got it</button>
+</div>
+
+<div id="note-input-box">
+  <textarea id="note-text" placeholder="Type your note..."></textarea>
+  <div class="note-actions">
+    <button id="note-cancel">Cancel</button>
+    <button class="primary" id="note-add">Add</button>
+  </div>
+</div>
+
+<div class="wrap content-target" id="content-root">
+
+<header>
+  <h1>CA Mains 2026 — Class 3(26): Menstrual Leave &amp; Substantive Equality, AI in Courts, Committee on Government Assurances</h1>
+  <div class="meta">
+    <span>Source: unlisted YouTube lecture recording ("forumCA - 3")</span> &middot;
+    <span>Duration: 0:00 – 1:12:36</span> &middot;
+    <span>Track: UPSC GS-2 (Polity/Governance/Social Justice) — Current Affairs Answer Writing</span>
+  </div>
+</header>
+
+<div class="exam-tip" style="margin-bottom: 28px;">This lecture's auto-captions were unusually garbled (fast, heavily accented delivery — common ASR failure mode). Every quote, statistic, and case name below has been cross-checked against independent web research; anything still uncertain is explicitly flagged. Treat this file as a research-corrected version of the class, not a literal transcript.</div>
+
+<nav class="toc">
+  <h2>Contents</h2>
+  <ol>
+    <li><a href="#applicability">Applicability — GS papers, Prelims &amp; Mains</a></li>
+    <li><a href="#part0">Opening fragment: reproductive autonomy (ART/MTP recap)</a></li>
+    <li><a href="#part1">Topic 1: Menstrual leave &amp; substantive equality</a></li>
+    <li><a href="#part2">Topic 1: Debates, data &amp; live exercise</a></li>
+    <li><a href="#part3">Topic 2: AI in the judiciary</a></li>
+    <li><a href="#part4">Topic 2: Debates, safeguards &amp; live exercise</a></li>
+    <li><a href="#part5">Topic 3: Committee on Government Assurances</a></li>
+    <li><a href="#part6">Topic 3: Debates &amp; live exercise</a></li>
+    <li><a href="#glossary">Glossary — quick revision</a></li>
+    <li><a href="#arcs">Revision kit (ARCS)</a></li>
+    <li><a href="#gaps">Supplementary research</a></li>
+  </ol>
+</nav>
+
+<section id="summary">
+  <h2>Executive summary</h2>
+  <div class="summary-box">
+  <p>Third class of the CA Mains 2026 answer-writing series. Opens with a rapid recap of the previous class's live exercise on <strong>reproductive autonomy</strong> (ART Act/MTP Act age and gestation limits) before moving to three main themes:</p>
+  <ul>
+    <li><strong>Topic 1</strong> — menstrual leave as a lens for <strong>substantive equality</strong>: Sandra Fredman's four-dimensional framework (redistribution, recognition, participation, transformation), global precedents (Spain, Japan), and the debate between "benevolent sexism" and genuine accommodation.</li>
+    <li><strong>Topic 2</strong> — the Supreme Court's 2026 draft AI regulations for courts: balancing efficiency gains against algorithmic opacity, accountability, and the "human in the loop" principle, illustrated by real 2024–2026 incidents of AI-hallucinated case citations.</li>
+    <li><strong>Topic 3</strong> — the Committee on Government Assurances: its 1953 origin, classification system, and role in converting "political theater" into binding governance commitments, with current pendency data.</li>
+  </ul>
+  <p>Throughout, the instructor stresses structuring answers within 30 seconds before writing, citing data over vague claims, and never fabricating false precision.</p>
+  </div>
+</section>
+
+<section id="applicability">
+  <h2>Applicability — GS papers, Prelims &amp; Mains</h2>
+  <table class="applic-table">
+    <tr><th>Sub-topic</th><th>GS Paper</th><th>Prelims</th><th>Mains</th></tr>
+    <tr>
+      <td class="gs-tag">Reproductive autonomy (ART/MTP Act recap)</td>
+      <td>GS-1 (Society) / GS-2 (Health policy)</td>
+      <td><span class="prelims-badge">Medium</span>ART/MTP Act provisions and amendment years are factual MCQ material.</td>
+      <td><span class="mains-badge">Medium</span>Useful as a supporting example in a women's health/reproductive-rights answer.</td>
+    </tr>
+    <tr>
+      <td class="gs-tag">Menstrual leave &amp; substantive equality</td>
+      <td>GS-1 (Society) / GS-2 (Social Justice)</td>
+      <td><span class="prelims-badge">Low</span>Policy debate, not typically a factual MCQ.</td>
+      <td><span class="mains-badge">High</span>Substantive equality (Sandra Fredman framework) is strong analytical material for a GS-1/2 gender-policy answer.</td>
+    </tr>
+    <tr>
+      <td class="gs-tag">AI in the judiciary (draft regulations, safeguards)</td>
+      <td>GS-2 (Judiciary/Governance) / GS-3 (Science &amp; Tech)</td>
+      <td><span class="prelims-badge">Medium</span>Regulation names, dates, and named incidents are testable facts.</td>
+      <td><span class="mains-badge">High</span>One of the most consistently asked emerging-tech-in-governance themes across recent cycles.</td>
+    </tr>
+    <tr>
+      <td class="gs-tag">Committee on Government Assurances</td>
+      <td>GS-2 (Polity — Parliament)</td>
+      <td><span class="prelims-badge">Medium</span>A classic static-polity committee — composition/function is fair MCQ territory.</td>
+      <td><span class="mains-badge">Medium</span>Useful as an example of parliamentary accountability mechanisms in a governance answer.</td>
+    </tr>
+  </table>
+  <p style="font-family: Arial, sans-serif; font-size: 0.85em; color: #57606a;">Rule of thumb applied across this series: any named Act/scheme/committee/case with a specific year, number, or figure is Prelims-relevant; any debate, framework, or comparative-model discussion is Mains-relevant (answer structure and analytical content), and the two are usually not mutually exclusive for a well-covered current-affairs topic.</p>
+</section>
+
+<section id="part0">
+  <h2>0. Opening fragment: reproductive autonomy (recap from previous exercise)</h2>
+  <p><span class="timestamp">0:03–3:55</span>The class opens mid-discussion, reviewing a student's answer structure on reproductive autonomy — likely continuing the DNA/paternity and bodily-autonomy theme flagged as "next class" at the end of Class 2. The instructor models a three-phase framing:</p>
+  <ol class="answers">
+    <li><strong>Phase 1 — social factor:</strong> focus on the institution of marriage and the Indian Divorce Act framework rather than the individual.</li>
+    <li><strong>Phase 2 — bodily/decisional autonomy:</strong> focus shifts to the individual's right to make independent reproductive choices, free from unwanted state interference — part of the "decisional privacy" dimension of Article 21.</li>
+    <li><strong>Phase 3 — balancing framework:</strong> weighing traditional social-factor concerns against individual autonomy via a proportionality-style test.</li>
+  </ol>
+  <ul>
+    <li>This dimension can be misused as a tool for harassment or coercion (e.g., in maintenance or custody disputes).</li>
+    <li>Closes with international best-practice suggestions (e.g., Australia, European countries) on reproductive health education.</li>
+  </ul>
+
+  <h3>Legal/statutory framework cited</h3>
+  <ul>
+    <li><strong>Assisted Reproductive Technology (Regulation) Act, 2021 (ART Act):</strong> Section 21(g) restricts ART services to women above 21 and below 50 years, and men above 21 and below 55 years.</li>
+    <li><strong>Medical Termination of Pregnancy (Amendment) Act, 2021 (MTP Act):</strong> raises the upper gestation limit from 20 to 24 weeks for special categories of women (rape/incest survivors, minors, differently-abled women, and other vulnerable categories notified by the government). Beyond 24 weeks, termination is permitted only on the opinion of a State-level Medical Board, mainly in cases of substantial foetal abnormality — there is no absolute upper cap for this category.</li>
+    <li><strong>Pre-Conception and Pre-Natal Diagnostic Techniques (PCPNDT) Act, 1994/2003:</strong> prohibits sex-determination and sex-selective abortion; cited as a socially protective, complementary statute to the ART/MTP framework.</li>
+  </ul>
+  <div class="exam-tip">The lecture frames this as a "rigid statutory threshold vs. reality of reproductive choices" debate — a reusable framing device for any question that pits a bright-line statutory age/time limit against individualized circumstances (late-discovered pregnancies, medical emergencies, genuine fertility-treatment needs delayed by life circumstances).</div>
+</section>
+
+<section id="part1">
+  <h2>1. Topic 1: Menstrual leave &amp; substantive equality</h2>
+  <p>Recommended structure: introduction → framing as substantive vs. formal equality → Sandra Fredman's four dimensions → data → arguments for/against → global comparisons → suggestions → conclusion.</p>
+
+  <h3>Model introduction</h3>
+  <div class="quote-card">
+    <div class="q">Menstrual health is undergoing a transition from being a hushed, unstigmatized private matter to a central issue of constitutional rights, public health, and workplace equality.</div>
+    <div class="attrib">— Instructor's model introduction (note: "hushed" here means moving away from silence/stigma, not toward it — the direction of change is from taboo to rights-based framing)</div>
+  </div>
+
+  <h3>Formal vs. substantive equality</h3>
+  <p><span class="timestamp">24:32</span>Central conceptual move: treating men and women identically (formal equality) is not enough when biological realities differ — the constitutional goal is <strong>substantive equality</strong>, which focuses on fair outcomes, not just equal treatment on paper.</p>
+
+  <h3>Sandra Fredman's four dimensions of substantive equality</h3>
+  <table>
+    <tr><th>Dimension</th><th>Meaning</th><th>Applied to menstrual policy</th></tr>
+    <tr><td>1. Redistribution</td><td>Redress material/economic disadvantage</td><td>Free/subsidized sanitary products; safe, private sanitation infrastructure in schools and workplaces</td></tr>
+    <tr><td>2. Recognition</td><td>Address stigma, stereotyping, and prejudice</td><td>Normalizing menstruation in public discourse; challenging the idea that it is "dirty" or shameful</td></tr>
+    <tr><td>3. Participation</td><td>Ensure full participation in decision-making and public life</td><td>Ensuring menstruation-related stigma does not push women out of school, work, or leadership roles</td></tr>
+    <tr><td>4. Transformation</td><td>Structural/institutional change, not just individual accommodation</td><td>Uniform, comprehensive workplace/school menstrual health policy rather than ad hoc leave</td></tr>
+  </table>
+  <div class="exam-tip">Attribute this framework by name — "Sandra Fredman's four-dimensional model of substantive equality (redistribution, recognition, participation, transformation)" — rather than the lecture's garbled rendering ("distribution... participation... transformation"); this is a genuinely citable, real academic framework used in UK and Indian equality jurisprudence.</div>
+
+  <h3>Key line: dignity is not just an idea</h3>
+  <div class="quote-card">
+    <div class="q">Dignity is not just an idea — it means living without humiliation. Any woman forced to endure a preventable indignity is having her right to life, under Article 21, violated.</div>
+    <div class="attrib">— Instructor's formulation, reusable for any Article 21/dignity-linked question</div>
+  </div>
+</section>
+
+<section id="part2">
+  <h2>2. Topic 1: Debates, data &amp; live exercise</h2>
+
+  <h3>The "benevolent sexism" critique</h3>
+  <details class="collapse-section"><summary>Benevolent sexism (key debate term)</summary><div class="collapse-body">
+    The critique that framing menstrual leave purely around female "weakness" — rather than genuine biological accommodation — risks reinforcing patronizing stereotypes ("we help you because you are weak") instead of practicing genuine equity. The instructor stresses this is a real tension, not a reason to reject leave policies outright, but a reason to frame them carefully (accommodation of biological reality, not condescension).
+  </div></details>
+  <details class="collapse-section"><summary>Statistical/employment discrimination risk</summary><div class="collapse-body">
+    A parallel debate (echoing the Indian Supreme Court's own stated concern in 2023): employers may view women as a "financial burden" under mandatory leave policies, leading to hiring discrimination, denial of promotions, or preference for short-term contracts — precisely the risk the Court flagged in declining to mandate a nationwide policy.
+  </div></details>
+  <details class="collapse-section"><summary>Multiplier effect</summary><div class="collapse-body">
+    Reducing school/work dropout linked to menstrual stigma has compounding benefits: lower dropout → better job opportunities → higher retention → greater economic contribution — framed as a long-term multiplier rather than a short-term cost.
+  </div></details>
+
+  <h3>Key data points</h3>
+  <div class="data-box">
+    Dasra (2014, with USAID and Kiawah Trust): 70% of mothers consider menstruation "dirty," perpetuating a culture of shame.<br>
+    ~23 million girls drop out of school annually in India due to inadequate menstrual hygiene management infrastructure (a subset framed loosely in the lecture as "one in five girls").<br>
+    WHO-cited estimate: ~60% of menstruating individuals in India experience dysmenorrhea (painful periods) but do not disclose it due to stigma/lack of awareness.
+  </div>
+
+  <h3>Global and domestic comparisons</h3>
+  <table>
+    <tr><th>Jurisdiction</th><th>Policy</th><th>Notes</th></tr>
+    <tr><td>Spain</td><td>State-funded menstrual sick leave (effective June 2023) — first in Europe</td><td>Paid from Day 1 via Social Security (60% of contribution base); 3 days/month, extendable to 5 in severe cases; requires medical certification</td></tr>
+    <tr><td>Japan</td><td>Labour Standards Act, 1947, Article 67 ("seiri kyūka")</td><td>Legal right to menstrual leave since 1947, but rarely used/enforced — usage fell from ~26% of women (1965) to under 1% (2017) due to fear of stigma/job insecurity, illustrating a "law on paper vs. law in practice" gap</td></tr>
+    <tr><td>Bihar (India)</td><td>2 days/month for state government employees</td><td>India's earliest state policy, in place since the early 1990s</td></tr>
+    <tr><td>Kerala (India)</td><td>Menstrual leave for students/staff in certain educational institutions (2023)</td><td>Limited to the education sector, not a general labour policy</td></tr>
+    <tr><td>Sikkim High Court (India)</td><td>2–3 days/month for women staff (May 2024)</td><td>Institution-specific, not a state-wide labour law</td></tr>
+  </table>
+
+  <div class="term-box"><strong>Supreme Court of India — <em>Shailendra Mani Tripathi vs. Union of India</em> (2023):</strong>
+    <ul>
+      <li>The Court declined to mandate a nationwide menstrual leave policy via PIL.</li>
+      <li>Reasoning: a compulsory legal mandate could backfire — discouraging employers from hiring women, or denying them leadership roles/promotions on the assumption of frequent absence.</li>
+      <li>Instead directed the Centre to frame a model policy after consulting states and stakeholders, favoring voluntary/state-level action over a binding nationwide mandate.</li>
+    </ul>
+  </div>
+
+  <h3>Suggestions and conclusion</h3>
+  <ul>
+    <li><strong>Whole-of-society approach:</strong> not just government leave policy, but school curricula, male awareness campaigns, and workplace flexibility (e.g., work-from-home options) together.</li>
+    <li>Use CSR (Corporate Social Responsibility) funding to build sanitation infrastructure in schools/workplaces.</li>
+    <li>Avoid an either/or framing between "menstrual leave" and "broader welfare spending" — the instructor explicitly rejects the idea that funding menstrual leave is a wasteful "freebie" instead of a productivity investment (a deliberate callback to the previous class's freebies-vs-welfare framework).</li>
+  </ul>
+  <div class="quote-card">
+    <div class="q">Access to dignity cannot be reduced to a purely technical application of statutory conditions divorced from the factual, lived context of the person seeking it.</div>
+    <div class="attrib">— Instructor's model conclusion line, reusable across reproductive-rights and dignity-linked questions generally</div>
+  </div>
+
+  <h3>Live answer-writing exercise (as taught)</h3>
+  <div class="quote-card">
+    <div class="q">Evaluate India's menstrual hygiene management and suggest measures for a more inclusive approach.</div>
+    <div class="attrib">— Model question used for a timed structuring exercise in class</div>
+  </div>
+  <ol class="answers">
+    <li><strong>Introduction:</strong> lead with the "one in five girls drop out" or Dasra 23-million-dropout statistic, then link to impact: "this systemic neglect of women's biological realities continues to hamper India's human capital development."</li>
+    <li><strong>Body — two affected groups:</strong> (a) school-going girls — social stigma + infrastructure deficit → dropout → lower human capital formation; (b) working women — lack of workplace accommodation → productivity loss, career penalties.</li>
+    <li><strong>Body — government/institutional angle:</strong> Article 21 (dignity), Article 51A(e) (renouncing derogatory practices against women's dignity), state-level policy patchwork (Bihar, Kerala, Sikkim HC), infrastructure deficit data (e.g., a large share of government schools lacking functional girls' toilets).</li>
+    <li><strong>Body — suggestions:</strong> map onto Fredman's four dimensions explicitly — redistribution (subsidized products/infrastructure), recognition (awareness campaigns, male sensitization), participation (retain women in school/workforce), transformation (uniform national/state policy, not ad hoc).</li>
+    <li><strong>Conclusion:</strong> whole-of-society approach; avoid the "benevolent sexism" trap by centering dignity and productivity framing over "protection of the weak" framing.</li>
+  </ol>
+</section>
+
+<section id="part3">
+  <h2>3. Topic 2: AI in the judiciary</h2>
+  <p>Recommended structure: introduction → why AI is being introduced (data-first) → key regulatory development → arguments for → arguments/concerns against → the "human in the loop" principle → global/domestic best practices → conclusion.</p>
+
+  <h3>Model introduction</h3>
+  <div class="quote-card">
+    <div class="q">India's judicial system, burdened by a massive backlog, is increasingly turning to artificial intelligence for efficiency — yet this technological embrace must remain rooted in human empathy and constitutionality.</div>
+    <div class="attrib">— Instructor's model introduction; can open with the backlog statistic instead of this line if a data-first introduction is preferred</div>
+  </div>
+
+  <h3>Key data points (the case for AI adoption)</h3>
+  <div class="data-box">
+    India's judicial backlog: roughly 4.5–5 crore cases pending across all courts (District Courts alone: ~4.6 crore).<br>
+    Judge-to-population ratio: ~15–22 judges per million (estimates vary by methodology/year) against the Law Commission's recommended 50 per million.<br>
+    eCourts Mission Mode Project spending — Phase I (2011–15): ₹935 crore sanctioned / ~₹639 crore spent; Phase II (2015–23): ₹1,670 crore; Phase III (2023–27): ₹7,210 crore sanctioned.
+  </div>
+
+  <h3>The key regulatory development</h3>
+  <div class="term-box"><strong>Draft Regulations for Use of Artificial Intelligence in Courts, 2026:</strong> released by the Supreme Court of India's AI Committee on 3 June 2026 for public consultation (deadline later extended to 15 July 2026).
+    <ul>
+      <li><strong>Permitted:</strong> AI may assist with legal research, drafting, scheduling, transcription, translation of judgments, citation verification, and case/record management.</li>
+      <li><strong>Barred:</strong> AI <strong>cannot</strong> be used to decide cases, determine bail eligibility, assess witness credibility, or otherwise influence judicial deliberation.</li>
+      <li><strong>Disclosure:</strong> lawyers must disclose AI use when filing pleadings/documents/evidence.</li>
+      <li><strong>Oversight:</strong> every AI system deployed in courts is subject to annual technical, legal, and ethical audits, overseen by a proposed full-time apex body of Supreme Court/High Court judges, government representatives, and AI experts.</li>
+    </ul>
+  </div>
+
+  <h3>Why this matters right now: real hallucination incidents</h3>
+  <ul>
+    <li><strong>December 2024:</strong> the Income Tax Appellate Tribunal's Bengaluru bench issued an order citing three Supreme Court judgments and one Madras High Court ruling that did not exist — traced to unverified ChatGPT use by a tax department representative.</li>
+    <li><strong>October 2025:</strong> the Bombay High Court quashed a ₹27.91 crore income-tax assessment after finding the National Faceless Assessment Centre had relied on three non-existent judicial decisions.</li>
+    <li><strong>September 2025:</strong> a Delhi High Court petition was withdrawn after opposing counsel exposed fabricated citations, including invented paragraphs falsely attributed to the real case <em>Raj Narain vs. Indira Nehru Gandhi</em>.</li>
+    <li><strong>27 February 2026:</strong> a Supreme Court bench (Justices P.S. Narasimha and Alok Aradhe) held that relying on non-existent/fake AI-generated judgments is professional <strong>misconduct</strong> with disciplinary consequences, not merely an innocent error.</li>
+  </ul>
+  <div class="exam-tip">This "hallucination is a feature, not a bug" framing (an AI model will confidently generate a plausible-sounding but fake citation because it is designed to produce fluent text, not verified fact) is a strong, quotable line for any AI-and-law question — attribute it generically to AI-ethics literature rather than any single named source unless you can verify a specific citation.</div>
+</section>
+
+<section id="part4">
+  <h2>4. Topic 2: Debates, safeguards &amp; live exercise</h2>
+
+  <h3>Core debates</h3>
+  <table>
+    <tr><th>Debate</th><th>Pro-AI position</th><th>Concern</th></tr>
+    <tr><td>Innovation vs. independence</td><td>AI automates administrative/scheduling tasks, freeing judicial time</td><td>Risk of judicial independence eroding if AI subtly shapes outcomes over time</td></tr>
+    <tr><td>Efficiency vs. algorithmic justice</td><td>AI can flag case patterns, assist risk-scoring for administrative triage</td><td>"Black box" problem — no explanation for how an AI reached a risk score; undermines reasoned decision-making, a core judicial value</td></tr>
+    <tr><td>Access vs. digital divide</td><td>AI-enabled translation/simplification can widen access to justice, especially in a linguistically diverse country</td><td>Those without digital literacy/access may be further disadvantaged</td></tr>
+    <tr><td>Technology import vs. self-reliance</td><td>Frontier AI tools accelerate case management immediately</td><td>Nearly all frontier AI is imported — raises data sovereignty and long-term dependency concerns</td></tr>
+  </table>
+
+  <h3>Key safeguard principles (from the draft regulations, as discussed)</h3>
+  <ul>
+    <li><strong>Human in the loop:</strong> "India has consciously approached technology as an aid to human reasoning, rather than as a substitute for independent judicial thought" — technology must augment, not replace, human discernment.</li>
+    <li><strong>Absolute accountability:</strong> any AI-assisted decision's accountability rests exclusively with the responsible human (judge/court staff), not the technology or its developers.</li>
+    <li><strong>Ethical impact assessment:</strong> before adoption, an AI system must undergo an assessment evaluating bias risk and vulnerabilities.</li>
+    <li><strong>Right to opt out:</strong> litigants should retain a right to opt out of AI-mediated processes where feasible — AI-driven systems "must not reduce people's problems to ticket numbers."</li>
+  </ul>
+  <div class="quote-card">
+    <div class="q">The law, after all, is not an algorithm — it is a reflection of human conscience, shaped by empathy, moral reasoning, and an understanding of context that machines cannot replicate.</div>
+    <div class="attrib">— Instructor's model line, strong for an introduction or conclusion on this topic (note: transcript rendered this as "the law is not alum" / "not me altogether" — corrected here to the clearly intended sense)</div>
+  </div>
+
+  <h3>Global/domestic best practices (contextual, not exhaustively verified from the lecture)</h3>
+  <ul>
+    <li>Courts internationally increasingly restrict AI to administrative/support functions (scheduling, translation, transcription, legal research) while explicitly excluding core adjudicative decision-making — mirroring India's draft regulations.</li>
+    <li>Mandatory AI-use disclosure by lawyers (as in India's draft rules) is emerging as a common safeguard against uncritical reliance on AI-generated legal research.</li>
+  </ul>
+
+  <h3>Live answer-writing exercise (as taught)</h3>
+  <div class="quote-card">
+    <div class="q">"The law is not an algorithm, but a reflection of human conscience." In light of this statement, examine the use of Artificial Intelligence in the Indian judiciary.</div>
+    <div class="attrib">— Model question used for a timed structuring exercise in class; instructor's guidance: spend the first 30 seconds structuring your answer before writing, even if it costs you some early time</div>
+  </div>
+  <ol class="answers">
+    <li><strong>Introduction:</strong> either the backlog-and-AI-adoption data point, or open directly with the "law is not an algorithm" quote and unpack it.</li>
+    <li><strong>Body — the case for AI:</strong> efficiency (case management, scheduling, translation), access (linguistic diversity), research assistance.</li>
+    <li><strong>Body — the case for caution:</strong> black-box/algorithmic opacity, accountability gap, hallucinated citations (cite the 2024–2026 incidents above as concrete evidence), digital divide, import-dependency.</li>
+    <li><strong>Body — the safeguard framework:</strong> human-in-the-loop, absolute accountability, ethical impact assessment, right to opt out, mandatory AI-use disclosure — map directly onto the draft 2026 regulations.</li>
+    <li><strong>Conclusion:</strong> technology must augment, not replace, judicial discernment — the heart of justice must remain human.</li>
+  </ol>
+</section>
+
+<section id="part5">
+  <h2>5. Topic 3: Committee on Government Assurances</h2>
+  <p>Recommended structure: introduction → origin and function → classification system → data on pendency → issues/debates → suggestions → conclusion.</p>
+
+  <h3>Model introduction</h3>
+  <div class="quote-card">
+    <div class="q">Parliamentary committees function as the workshops of democracy — the Committee on Government Assurances exists precisely to ensure that promises made on the floor of the House do not simply evaporate once the debate ends.</div>
+    <div class="attrib">— Instructor's model introduction</div>
+  </div>
+
+  <h3>Origin and function</h3>
+  <ul>
+    <li>Formed in <strong>1953</strong> (Lok Sabha); a corresponding Rajya Sabha committee also exists. Function: to scrutinize assurances, promises, and undertakings given by Ministers on the floor of the House during discussion of bills, resolutions, motions, or questions, and to report on the extent to which they have been implemented.</li>
+    <li>An assurance is deemed <strong>pending</strong> if not fulfilled within <strong>three months</strong> of being made.</li>
+    <li>A ministerial statement made on the floor of the House carries a <strong>quasi-binding character</strong> — not legally enforceable like a statute, but enforced through the institutional/political mechanism of committee scrutiny and follow-up.</li>
+  </ul>
+
+  <h3>Classification system</h3>
+  <p><span class="timestamp">1:03:18</span>Pending assurances are classified by the Ministry of Parliamentary Affairs into categories (commonly labelled A/B/C in practice) based on which government body/level is responsible for implementation. Tracking cycle:</p>
+  <ul>
+    <li>Classification</li>
+    <li>Communication to the ministry concerned</li>
+    <li>Examination of the ministry's action report</li>
+    <li>Final report to the House</li>
+  </ul>
+
+  <h3>Key data points</h3>
+  <div class="data-box">
+    Approximately 60–66% of assurances made in Lok Sabha and Rajya Sabha were reported pending as of March 2024 (year-over-year figures are broadly similar going back to 2022–23), indicating a persistent, not one-off, implementation gap.
+  </div>
+</section>
+
+<section id="part6">
+  <h2>6. Topic 3: Debates &amp; live exercise</h2>
+
+  <h3>Core debates</h3>
+  <ul>
+    <li><strong>"Specious excuses":</strong> scholars' criticism that ministries often repeatedly request extensions ("we are working on it") without genuine progress, effectively evading the promise rather than fulfilling or formally withdrawing it.</li>
+    <li><strong>No penalty mechanism:</strong> the committee can summon ministers/officials and seek explanations, but has no direct power to penalize non-compliance — its force is reputational/institutional rather than coercive.</li>
+    <li><strong>Institutional memory function:</strong> beyond accountability, the committee also serves as the institutional memory of Parliament, tracking which promises relate to which actions over time — described by the instructor as transforming parliamentary debate "from mere political theatre into binding governance commitments."</li>
+  </ul>
+
+  <h3>Suggestions</h3>
+  <ul>
+    <li>A dedicated online assurance-monitoring/tracking system to allow real-time public visibility into the status of pending assurances (building on existing digital initiatives of the Ministry of Parliamentary Affairs).</li>
+    <li>Time-bound targets and stronger committee powers to summon officials and demand specific, dated action plans rather than open-ended "under consideration" responses.</li>
+  </ul>
+  <div class="quote-card">
+    <div class="q">A parliamentary process meant to act as a watchdog for people's rights becomes hollow if the promises it tracks are perpetually deferred rather than delivered.</div>
+    <div class="attrib">— Instructor's model conclusion line</div>
+  </div>
+
+  <h3>Live answer-writing exercise (as taught)</h3>
+  <div class="quote-card">
+    <div class="q">"[The Committee on Government Assurances] is meant to act as a watchdog for people's rights." In light of the statement, examine the effectiveness of the Committee in holding the government accountable.</div>
+    <div class="attrib">— Model question used for a timed structuring exercise in class</div>
+  </div>
+  <ol class="answers">
+    <li><strong>Introduction:</strong> brief origin/function statement (1953, quasi-binding character of ministerial assurances).</li>
+    <li><strong>Body — how it functions as a watchdog:</strong> classification system, communication-examination-report cycle, power to summon ministries/top officials.</li>
+    <li><strong>Body — where effectiveness falls short:</strong> ~60–66% pendency rate, "specious excuses"/repeated extensions, no direct penalty power, uneven ministry cooperation.</li>
+    <li><strong>Body — why it still matters:</strong> institutional memory function; converts political rhetoric into a trackable, quasi-binding commitment; prevents "empty promises" from vanishing once debate ends.</li>
+    <li><strong>Conclusion:</strong> suggest a stronger, transparent, time-bound tracking mechanism — accountability without visibility and consequence risks becoming symbolic rather than substantive.</li>
+  </ol>
+</section>
+
+<section id="glossary">
+  <h2>Glossary — quick revision (all terms, one screen)</h2>
+  <dl>
+    <div class="glossary-term"><dt>Substantive equality</dt><dd>Focus on fair outcomes, not just identical treatment on paper (contrast: formal equality).</dd></div>
+    <div class="glossary-term"><dt>Fredman's four dimensions</dt><dd>Redistribution, recognition, participation, transformation — Sandra Fredman's framework for substantive equality.</dd></div>
+    <div class="glossary-term"><dt>Benevolent sexism</dt><dd>Framing accommodation around female "weakness" rather than genuine biological accommodation — risks reinforcing stereotypes.</dd></div>
+    <div class="glossary-term"><dt>Seiri kyūka</dt><dd>Japan's 1947 statutory menstrual leave right (Labour Standards Act, Art. 67) — legally present but rarely used in practice.</dd></div>
+    <div class="glossary-term"><dt>Shailendra Mani Tripathi case (2023)</dt><dd>Supreme Court declined to mandate nationwide menstrual leave; directed a model policy via state/stakeholder consultation instead.</dd></div>
+    <div class="glossary-term"><dt>Draft AI Regulations for Courts, 2026</dt><dd>SC AI Committee's draft rules (June 2026): AI permitted for admin/research tasks, barred from core judicial decision-making.</dd></div>
+    <div class="glossary-term"><dt>Human in the loop</dt><dd>Principle that AI must aid, not replace, human judicial reasoning; accountability stays with the human decision-maker.</dd></div>
+    <div class="glossary-term"><dt>AI hallucination</dt><dd>An AI model confidently generating a fluent but factually non-existent case citation/judgment.</dd></div>
+    <div class="glossary-term"><dt>Committee on Government Assurances</dt><dd>Parliamentary committee (1953) tracking implementation of ministerial promises made on the floor of the House.</dd></div>
+    <div class="glossary-term"><dt>Pending assurance</dt><dd>An assurance not fulfilled within 3 months of being made; then classified and tracked by the Ministry of Parliamentary Affairs.</dd></div>
+    <div class="glossary-term"><dt>Quasi-binding character</dt><dd>A ministerial floor statement isn't a law, but is enforced through institutional/committee follow-up, not just political goodwill.</dd></div>
+  </dl>
+</section>
+
+<section id="arcs">
+  <h2>Revision kit (ARCS method)</h2>
+  <p style="font-family: Arial, sans-serif; font-size: 0.88em; color: #57606a;">A—Active Recall, R—Repeat with Spacing, C—Contrast &amp; Chunk, S—Stick with Encoding Tricks. Close the notes above and test yourself before checking answers.</p>
+
+  <div class="arcs-box">
+    <h4>A — Active Recall: self-test (no peeking until you answer)</h4>
+    <div class="recall-q">
+      <p class="q-text">1. What are Sandra Fredman's four dimensions of substantive equality?</p>
+      <details><summary></summary><div class="ans">Redistribution (redress material disadvantage), recognition (address stigma/stereotyping), participation (ensure voice in decision-making), transformation (structural/institutional change, not just individual accommodation).</div></details>
+    </div>
+    <div class="recall-q">
+      <p class="q-text">2. Why did the Supreme Court decline to mandate a nationwide menstrual leave policy in 2023?</p>
+      <details><summary></summary><div class="ans">In Shailendra Mani Tripathi vs. Union of India, the Court feared a mandatory policy could backfire — employers might view women as costlier to hire, denying them leadership roles or promotions. It directed the Centre to frame a model policy via consultation instead of a binding mandate.</div></details>
+    </div>
+    <div class="recall-q">
+      <p class="q-text">3. What can AI NOT be used for under India's Draft AI Regulations for Courts, 2026?</p>
+      <details><summary></summary><div class="ans">AI cannot decide cases, determine bail eligibility, assess witness credibility, or otherwise influence judicial deliberation. It can assist with research, drafting, scheduling, transcription, translation, citation verification, and case/record management.</div></details>
+    </div>
+    <div class="recall-q">
+      <p class="q-text">4. Give one real, verified example of an AI-hallucination incident in an Indian court/tribunal.</p>
+      <details><summary></summary><div class="ans">December 2024: the Bengaluru ITAT bench issued an order citing 3 Supreme Court judgments and 1 Madras HC ruling that did not exist, after a tax department representative used unverified ChatGPT output.</div></details>
+    </div>
+    <div class="recall-q">
+      <p class="q-text">5. When is an assurance made in Parliament classified as "pending," and who tracks it?</p>
+      <details><summary></summary><div class="ans">An assurance is pending if not fulfilled within 3 months of being made. The Ministry of Parliamentary Affairs classifies and tracks it; the Committee on Government Assurances (formed 1953) scrutinizes implementation and can summon ministries/officials.</div></details>
+    </div>
+  </div>
+
+  <div class="arcs-box spacing-tracker">
+    <h4>R — Repeat with Spacing: review checklist</h4>
+    <p>Lecture date: Aug 12, 2026. Forgetting is exponential — review at these intervals, not all at once.</p>
+    <table>
+      <tr><th>Review</th><th>Target date</th><th>Done</th></tr>
+      <tr><td>Day 1 (same day, quick skim)</td><td>Aug 12</td><td><input type="checkbox"></td></tr>
+      <tr><td>Day 3</td><td>Aug 15</td><td><input type="checkbox"></td></tr>
+      <tr><td>Day 7</td><td>Aug 19</td><td><input type="checkbox"></td></tr>
+      <tr><td>Day 21</td><td>Sep 2</td><td><input type="checkbox"></td></tr>
+    </table>
+    <p style="font-size:0.85em; color:#57606a;">Each review: close this file, answer the 5 recall questions above from memory first, then reopen to check.</p>
+  </div>
+
+  <div class="arcs-box">
+    <h4>C — Contrast &amp; Chunk: easily confused pairs</h4>
+    <table>
+      <tr><th>Term A</th><th>Term B</th><th>The ONE distinguishing point</th></tr>
+      <tr><td>Formal equality</td><td>Substantive equality</td><td>Formal = identical treatment on paper; Substantive = fair real-world outcomes, accounting for biological/social differences</td></tr>
+      <tr><td>Recognition (Fredman)</td><td>Redistribution (Fredman)</td><td>Recognition tackles stigma/stereotyping; Redistribution tackles material/economic disadvantage directly</td></tr>
+      <tr><td>Human in the loop</td><td>AI hallucination</td><td>Human-in-the-loop is the safeguard principle; hallucination is the specific failure mode the safeguard exists to catch</td></tr>
+      <tr><td>Pending assurance</td><td>Fulfilled assurance</td><td>Pending = not implemented within 3 months of being made; still tracked by the Committee until closed</td></tr>
+    </table>
+    <p style="font-family: Arial, sans-serif; font-size: 0.88em;"><strong>Chunk:</strong> all three topics share one structure — a well-intentioned rule/promise (leave policy, AI regulation, parliamentary assurance) that risks becoming symbolic unless backed by real institutional follow-through (uniform policy vs. ad hoc leave; human-in-the-loop vs. unchecked AI reliance; binding tracking vs. "specious excuses"). Revise them together under "promise vs. enforcement gap."</p>
+  </div>
+
+  <div class="arcs-box mnemonic-box">
+    <h4>S — Stick with Encoding Tricks</h4>
+    <p><strong>Dual coding:</strong> when revising, picture the Fredman four-dimensions table as a 2x2 grid rather than a list, and picture the AI-in-courts safeguards as a checklist gate an AI tool must pass through before it can enter a courtroom.</p>
+    <p><strong>Image for the promise-vs-enforcement-gap chunk:</strong> picture a promise as a cheque — a leave policy, an AI safeguard, or a parliamentary assurance is only as good as whether the "bank" (institutional follow-through) actually honours it when presented, echoing the "dishonoured cheque" image used for a different topic in Class 1.</p>
+  </div>
+</section>
+
+<section id="gaps">
+  <h2>Supplementary research — filling gaps</h2>
+
+  <div class="gap-box">
+    <h4>Menstrual leave — verified corrections to the raw lecture</h4>
+    <ul>
+      <li>The Dasra (2014) study's headline finding is that 70% of mothers consider menstruation "dirty" — the lecture's "one in five girls drop out" figure is a related but distinct, commonly-cited statistic (sometimes sourced to different NGO surveys); the more precise, frequently-cited figure from the same broad body of research is ~23 million girls dropping out of school annually in India due to inadequate menstrual hygiene management.</li>
+      <li>Spain's law took effect specifically on 1 June 2023, paid via Social Security from Day 1 at 60% of the contribution base, for 3 days/month (extendable to 5).</li>
+      <li>Japan's 1947 right is real and codified (Labour Standards Act, Article 67) but has near-zero practical uptake today (under 1% as of 2017) — a valuable "law vs. practice gap" example.</li>
+      <li>Bihar, not Kerala, was India's first mover on menstrual leave (state government employees, since the early 1990s); Kerala's 2023 measure was specific to students/staff in certain educational institutions.</li>
+    </ul>
+  </div>
+
+  <div class="gap-box">
+    <h4>Supreme Court's 2023 menstrual leave PIL — verified case name</h4>
+    <p>The case is <strong>Shailendra Mani Tripathi vs. Union of India</strong> (2023).</p>
+    <ul>
+      <li>The then-Chief Justice of India, hearing the PIL, expressed concern that a compulsory nationwide mandate could have the unintended effect of discouraging employers from hiring women.</li>
+      <li>Directed the matter to the Union Government to frame a policy after consulting states and other stakeholders — the Court explicitly favoured a consultative, non-mandatory route.</li>
+    </ul>
+  </div>
+
+  <div class="gap-box">
+    <h4>Draft AI Regulations for Courts, 2026 — verified timeline and scope</h4>
+    <p>Released by the Supreme Court's AI Committee on 3 June 2026 for public feedback (initial deadline 20 June 2026, later extended to 15 July 2026).</p>
+    <ul>
+      <li>Applies to all Indian courts including subordinate courts, district tribunals, and statutory adjudicatory bodies.</li>
+      <li>Proposes a full-time apex body (comprising Supreme Court and High Court judges, government representatives, and AI experts) to approve AI systems and set standards.</li>
+      <li>Mandatory annual technical/legal/ethical audits for every deployed AI system.</li>
+      <li>Stated foundation: "human primacy, institutional accountability, and the irreducible role of the judge."</li>
+    </ul>
+  </div>
+
+  <div class="gap-box">
+    <h4>AI hallucination incidents — verified, with dates</h4>
+    <ul>
+      <li>Dec 2024 — Income Tax Appellate Tribunal, Bengaluru bench: order cited 3 non-existent SC judgments + 1 non-existent Madras HC ruling (unverified ChatGPT use).</li>
+      <li>Oct 2025 — Bombay High Court quashed a ₹27.91 crore tax assessment after finding 3 non-existent judicial decisions relied on by the National Faceless Assessment Centre.</li>
+      <li>Sep 2025 — Delhi High Court: petition withdrawn after opposing counsel exposed fabricated citations, including invented content falsely attributed to the real case <em>Raj Narain vs. Indira Nehru Gandhi</em>.</li>
+      <li>27 Feb 2026 — Supreme Court (Justices P.S. Narasimha and Alok Aradhe) ruled that citing AI-generated fake judgments is professional misconduct with disciplinary consequences.</li>
+      <li>2 Jul 2026 — Supreme Court reaffirmed: citing AI-generated fake precedents constitutes advocate misconduct.</li>
+    </ul>
+  </div>
+
+  <div class="gap-box">
+    <h4>Committee on Government Assurances — verified data and classification</h4>
+    <p>Formed in 1953 in the Lok Sabha (a parallel Rajya Sabha committee also exists).</p>
+    <ul>
+      <li>Independent research confirms the ~60–66% pendency figure cited in the lecture is broadly consistent with reporting from 2024–2025.</li>
+      <li>One widely cited figure states 699 assurances made in the Rajya Sabha alone remain undelivered as of recent reporting, alongside separate Lok Sabha-side pendency data in the 60%+ range.</li>
+      <li>The classification into categories (by responsible implementing authority) and the three-month pending threshold are both independently confirmed via Rajya Sabha's own procedural documentation.</li>
+    </ul>
+  </div>
+
+  <div class="gap-box">
+    <h4>What the lecture doesn't cover, but pairs well for GS-2 prep</h4>
+    <ul>
+      <li>The Digital Personal Data Protection Act, 2023 and its (still-limited) intersection with AI accountability in judicial/administrative data use.</li>
+      <li>Comparative menstrual leave debates in South Korea, Taiwan, and Indonesia — useful for a "global comparison" paragraph beyond Spain/Japan.</li>
+      <li>The Ministry of Parliamentary Affairs' e-Vidhan/digital assurance-tracking initiatives, if any specific portal name is confirmed before citing.</li>
+      <li>NITI Aayog's "Responsible AI for All" strategy documents, for a broader India-AI-governance frame beyond just the judiciary.</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  Notes compiled from an unlisted lecture recording using YouTube's auto-generated transcript. This lecture's auto-captions were unusually garbled; every fact, quote, and case name has been independently verified or explicitly flagged for further verification before citing in an exam answer. Supplementary research sections are separately verified via web search and marked accordingly. Click Save (first time will ask you to pick this file) to write your edits directly to disk — no chat needed.
+</footer>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11.15.0/dist/mermaid.min.js" integrity="sha384-yQ4mmBBT+vhTAwjFH0toJXNYJ6O4usWnt6EPIdWwrRvx2V/n5lXuDZQwQFeSFydF" crossorigin="anonymous"></script>
+<script>
+(function() {
+  var mode = null;
+  var noteCounter = 0;
+
+  var btnHighlight = document.getElementById('btn-highlight');
+  var btnUnderline = document.getElementById('btn-underline');
+  var btnNote = document.getElementById('btn-note');
+  var btnClear = document.getElementById('btn-clear');
+  var btnSave = document.getElementById('btn-save');
+  var statusText = document.getElementById('status-text');
+  var contentRoot = document.getElementById('content-root');
+  var noteBox = document.getElementById('note-input-box');
+  var noteText = document.getElementById('note-text');
+  var pendingNoteTarget = null;
+
+  function setMode(newMode) {
+    mode = mode === newMode ? null : newMode;
+    btnHighlight.classList.toggle('active', mode === 'highlight');
+    btnUnderline.classList.toggle('active', mode === 'underline');
+    btnNote.classList.toggle('active', mode === 'note');
+  }
+
+  btnHighlight.addEventListener('click', function() { setMode('highlight'); });
+  btnUnderline.addEventListener('click', function() { setMode('underline'); });
+  btnNote.addEventListener('click', function() { setMode('note'); });
+
+  function markDirty() {
+    statusText.textContent = 'Unsaved changes';
+    statusText.style.color = '#993c1d';
+  }
+
+  document.addEventListener('mouseup', function(e) {
+    if (mode !== 'highlight' && mode !== 'underline') return;
+    var sel = window.getSelection();
+    if (!sel || sel.isCollapsed || sel.rangeCount === 0) return;
+    var range = sel.getRangeAt(0);
+    if (!contentRoot.contains(range.commonAncestorContainer)) return;
+
+    var wrapper = document.createElement(mode === 'highlight' ? 'mark' : 'u');
+    wrapper.className = mode === 'highlight' ? 'user-highlight' : 'user-underline';
+    try {
+      range.surroundContents(wrapper);
+    } catch (err) {
+      var frag = range.extractContents();
+      wrapper.appendChild(frag);
+      range.insertNode(wrapper);
+    }
+    sel.removeAllRanges();
+    markDirty();
+  });
+
+  contentRoot.addEventListener('click', function(e) {
+    if (mode !== 'note') return;
+    if (e.target.closest('.user-note')) return;
+    pendingNoteTarget = e.target;
+    noteBox.style.display = 'block';
+    var x = Math.min(e.clientX, window.innerWidth - 280);
+    var y = Math.min(e.clientY, window.innerHeight - 140);
+    noteBox.style.left = x + 'px';
+    noteBox.style.top = y + 'px';
+    noteText.value = '';
+    noteText.focus();
+  });
+
+  document.getElementById('note-cancel').addEventListener('click', function() {
+    noteBox.style.display = 'none';
+    pendingNoteTarget = null;
+  });
+
+  document.getElementById('note-add').addEventListener('click', function() {
+    var text = noteText.value.trim();
+    if (!text || !pendingNoteTarget) { noteBox.style.display = 'none'; return; }
+    noteCounter++;
+    var noteDiv = document.createElement('div');
+    noteDiv.className = 'user-note';
+    noteDiv.setAttribute('data-note-id', noteCounter);
+    noteDiv.innerHTML = '<span class="note-label">Your note</span>' +
+      '<button class="del-note" title="Remove note">&times;</button>' +
+      '<span class="note-body"></span>';
+    noteDiv.querySelector('.note-body').textContent = text;
+    noteDiv.querySelector('.del-note').addEventListener('click', function() {
+      noteDiv.remove();
+      markDirty();
+    });
+
+    var target = pendingNoteTarget.closest('li, p, td, div.quote-card, section') || contentRoot;
+    target.parentNode.insertBefore(noteDiv, target.nextSibling);
+
+    noteBox.style.display = 'none';
+    pendingNoteTarget = null;
+    markDirty();
+    setMode('note');
+  });
+
+  btnClear.addEventListener('click', function() {
+    if (!confirm('Remove all your highlights, underlines, and notes on this page?')) return;
+    contentRoot.querySelectorAll('.user-note').forEach(function(n) { n.remove(); });
+    contentRoot.querySelectorAll('mark.user-highlight').forEach(function(m) {
+      var parent = m.parentNode;
+      while (m.firstChild) parent.insertBefore(m.firstChild, m);
+      parent.removeChild(m);
+    });
+    contentRoot.querySelectorAll('u.user-underline').forEach(function(u) {
+      var parent = u.parentNode;
+      while (u.firstChild) parent.insertBefore(u.firstChild, u);
+      parent.removeChild(u);
+    });
+    markDirty();
+  });
+
+  var fallbackHelp = document.getElementById('fallback-help');
+  document.getElementById('fallback-close').addEventListener('click', function() {
+    fallbackHelp.style.display = 'none';
+  });
+
+  var fileHandle = null;
+  var fsaSupported = 'showSaveFilePicker' in window;
+  var THIS_FILENAME = 'notes.html';
+
+  function buildFullHtml() {
+    var doc = document.documentElement.cloneNode(true);
+    var liveContentRoot = doc.querySelector('#content-root');
+    if (liveContentRoot) liveContentRoot.innerHTML = contentRoot.innerHTML;
+    return '<!DOCTYPE html>\n' + doc.outerHTML;
+  }
+
+  async function writeToFile() {
+    var writable = await fileHandle.createWritable();
+    await writable.write(buildFullHtml());
+    await writable.close();
+  }
+
+  btnSave.addEventListener('click', async function() {
+    statusText.textContent = 'Saving…';
+    statusText.style.color = '#57606a';
+    if (!fsaSupported) {
+      fallbackHelp.style.display = 'block';
+      statusText.textContent = 'Direct save not supported in this browser';
+      statusText.style.color = '#993c1d';
+      return;
+    }
+    try {
+      if (!fileHandle) {
+        fileHandle = await window.showSaveFilePicker({
+          suggestedName: THIS_FILENAME,
+          types: [{ description: 'HTML file', accept: { 'text/html': ['.html'] } }]
+        });
+      }
+      var perm = await fileHandle.queryPermission({ mode: 'readwrite' });
+      if (perm !== 'granted') {
+        perm = await fileHandle.requestPermission({ mode: 'readwrite' });
+      }
+      if (perm !== 'granted') {
+        statusText.textContent = 'File permission denied — click Save to retry';
+        statusText.style.color = '#993c1d';
+        fileHandle = null;
+        return;
+      }
+      await writeToFile();
+      statusText.textContent = 'Saved to file just now';
+      statusText.style.color = '#3b6d11';
+    } catch (err) {
+      console.error('SAVE_ERROR', err.name, err.message, err);
+      if (err.name === 'AbortError') {
+        statusText.textContent = 'Save cancelled';
+        statusText.style.color = '#57606a';
+      } else {
+        statusText.textContent = 'Save failed: ' + err.name + ' — click Save to retry';
+        statusText.style.color = '#993c1d';
+        fileHandle = null;
+      }
+    }
+  });
+
+  if (window.mermaid) {
+    mermaid.initialize({ startOnLoad: true, securityLevel: 'strict' });
+  }
+
+  contentRoot.querySelectorAll('.user-note .del-note').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      btn.closest('.user-note').remove();
+      markDirty();
+    });
+  });
+
+  contentRoot.querySelectorAll('.spacing-tracker input[type="checkbox"]').forEach(function(cb) {
+    cb.addEventListener('change', function() {
+      if (cb.checked) { cb.setAttribute('checked', 'checked'); }
+      else { cb.removeAttribute('checked'); }
+      markDirty();
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

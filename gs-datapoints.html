@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CA27 — GS Paper-wise Data Points (PIB &amp; Govt Sources)</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: #faf9f6;
+    color: #1f2328;
+    margin: 0;
+    padding: 0 0 80px;
+    line-height: 1.6;
+  }
+  .toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: #ffffff;
+    border-bottom: 2px solid #1d5b8b;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: Arial, sans-serif;
+    flex-wrap: wrap;
+  }
+  .toolbar input[type="search"] {
+    flex: 1;
+    max-width: 320px;
+    padding: 7px 12px;
+    border-radius: 6px;
+    border: 1px solid #d8d2c6;
+    font-size: 13px;
+  }
+  .toolbar button {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    padding: 7px 14px;
+    border-radius: 6px;
+    border: 1px solid #d8d2c6;
+    background: #fff;
+    cursor: pointer;
+    color: #1f2328;
+  }
+  .toolbar button:hover { background: #e6f1fb; border-color: #1d5b8b; }
+  .toolbar button.active { background: #1d5b8b; color: #fff; border-color: #1d5b8b; }
+  .toolbar .save-btn { background: #2f6b4f; color: #fff; border-color: #2f6b4f; margin-left: auto; }
+  .toolbar .save-btn:hover { background: #24543e; }
+  .toolbar .status { font-size: 12px; color: #57606a; padding-right: 8px; }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 30px 20px; }
+  header { border-bottom: 3px solid #1d5b8b; padding-bottom: 20px; margin-bottom: 24px; }
+  header h1 { font-size: 1.7em; margin: 0 0 6px; color: #1d5b8b; }
+  header .meta { color: #57606a; font-size: 0.95em; font-family: Arial, sans-serif; }
+  .filter-bar {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    margin-bottom: 26px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .filter-bar button {
+    padding: 6px 14px;
+    border-radius: 16px;
+    border: 1px solid #d8d2c6;
+    background: #fff;
+    cursor: pointer;
+    color: #1f2328;
+    font-size: 12.5px;
+  }
+  .filter-bar button.active { background: #1d5b8b; color: #fff; border-color: #1d5b8b; }
+  section.gs-block { margin-bottom: 50px; }
+  section.gs-block > h2 {
+    font-size: 1.35em;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 8px;
+    margin-bottom: 4px;
+  }
+  #gs1 > h2 { background: #3b6d11; }
+  #gs2 > h2 { background: #1d5b8b; }
+  #gs3 > h2 { background: #854f0b; }
+  #gs4 > h2 { background: #8b3a3a; }
+  .gs-desc { font-family: Arial, sans-serif; font-size: 0.82em; color: #57606a; margin: 6px 0 18px; }
+  .subtopic-block { margin-bottom: 28px; }
+  details.subtopic-collapse {
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    background: #fff;
+    margin-bottom: 16px;
+    padding: 0;
+  }
+  details.subtopic-collapse > summary {
+    cursor: pointer;
+    padding: 12px 16px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 1em;
+    color: #1d5b8b;
+    list-style: none;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  details.subtopic-collapse > summary::-webkit-details-marker { display: none; }
+  details.subtopic-collapse > summary::before { content: "▸ "; }
+  details.subtopic-collapse[open] > summary::before { content: "▾ "; }
+  details.subtopic-collapse > summary .entry-date {
+    font-weight: normal;
+    font-size: 0.78em;
+    color: #57606a;
+    font-family: Arial, sans-serif;
+  }
+  details.subtopic-collapse .collapse-body { padding: 4px 20px 18px; }
+  details.subtopic-collapse .collapse-body > h3:first-child { display: none; }
+  .gs-count { font-family: Arial, sans-serif; font-size: 0.75em; color: #fff; opacity: 0.85; margin-left: 8px; font-weight: normal; }
+  h3 { font-size: 1.1em; margin: 20px 0 8px; color: #1d5b8b; border-left: 4px solid #1d5b8b; padding-left: 10px; }
+  h4 { font-size: 0.98em; margin: 14px 0 6px; color: #2f2f6b; }
+  p { margin: 8px 0; }
+  ul { padding-left: 22px; margin: 8px 0; }
+  li { margin-bottom: 5px; }
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 0.92em; background: #fff; }
+  th, td { border: 1px solid #e2ddd4; padding: 7px 11px; text-align: left; vertical-align: top; }
+  th { background: #e6f1fb; font-family: Arial, sans-serif; font-size: 0.85em; }
+  .data-box { background: #f3f0fb; border: 1px solid #ddd6f0; border-radius: 8px; padding: 10px 16px; margin: 8px 0; font-family: 'Courier New', monospace; font-size: 0.88em; }
+  .fact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 10px 0; }
+  .fact-card { background: #fff; border: 1px solid #e2ddd4; border-left: 4px solid #854f0b; border-radius: 8px; padding: 10px 12px; }
+  .fact-card .num { font-family: Arial, sans-serif; font-weight: bold; font-size: 1.15em; color: #854f0b; display: block; line-height: 1.2; }
+  .fact-card .ctx { font-family: Arial, sans-serif; font-size: 0.78em; color: #57606a; display: block; margin-top: 2px; }
+  .mnemonic-list { background: #fff7e6; border: 1px solid #f0dba8; border-radius: 8px; padding: 10px 16px; margin: 8px 0; font-family: Arial, sans-serif; font-size: 0.9em; }
+  .mnemonic-list ul { margin: 4px 0; padding-left: 20px; }
+  .mermaid { background: #fff; border: 1px solid #e2ddd4; border-radius: 8px; padding: 10px; margin: 10px 0; }
+  .src-tag { display: block; font-family: Arial, sans-serif; font-size: 0.72em; color: #8b3a3a; margin: -4px 0 10px; font-style: italic; }
+  .src-tag::before { content: "Cite: "; font-weight: bold; font-style: normal; }
+  .quote-card { background: #fff; border: 1px solid #e2ddd4; border-left: 4px solid #1d5b8b; border-radius: 6px; padding: 10px 16px; margin: 8px 0; }
+  .quote-card .q { font-style: italic; font-size: 1em; }
+  .quote-card .attrib { font-family: Arial, sans-serif; font-size: 0.82em; color: #57606a; margin-top: 5px; }
+  .source-box { background: #eef4f0; border: 1px solid #cfe3d6; border-radius: 8px; padding: 10px 16px; margin: 8px 0; font-size: 0.88em; font-family: Arial, sans-serif; }
+  .source-box a { color: #2f6b4f; }
+  .empty-state {
+    background: #fff7e6;
+    border: 1px solid #f0dba8;
+    border-radius: 8px;
+    padding: 16px 20px;
+    font-family: Arial, sans-serif;
+    font-size: 0.92em;
+    color: #57606a;
+  }
+  mark.user-highlight { background: #fff176; padding: 1px 2px; border-radius: 2px; }
+  u.user-underline { text-decoration: underline; text-decoration-color: #1d5b8b; text-decoration-thickness: 2px; }
+  .user-note {
+    background: #e6f1fb;
+    border: 1px solid #85b7eb;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin: 8px 0;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #0c447c;
+    position: relative;
+  }
+  .user-note .note-label { font-weight: bold; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; display: block; }
+  .user-note .del-note { position: absolute; top: 6px; right: 8px; cursor: pointer; border: none; background: none; color: #0c447c; font-size: 14px; font-family: Arial, sans-serif; }
+  #note-input-box {
+    position: fixed;
+    display: none;
+    background: #fff;
+    border: 2px solid #1d5b8b;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    z-index: 100;
+    font-family: Arial, sans-serif;
+  }
+  #note-input-box textarea { width: 240px; height: 60px; font-family: Arial, sans-serif; font-size: 13px; border: 1px solid #d8d2c6; border-radius: 4px; padding: 6px; }
+  #note-input-box .note-actions { margin-top: 6px; display: flex; gap: 6px; justify-content: flex-end; }
+  #note-input-box button { font-size: 12px; padding: 5px 10px; border-radius: 4px; border: 1px solid #d8d2c6; background: #fff; cursor: pointer; }
+  #note-input-box button.primary { background: #1d5b8b; color: #fff; border-color: #1d5b8b; }
+  .content-target::selection { background: #ffe082; }
+  .hidden-by-filter { display: none !important; }
+  footer { margin-top: 60px; border-top: 1px solid #e2ddd4; padding-top: 16px; color: #57606a; font-size: 0.82em; font-family: Arial, sans-serif; }
+  #fallback-help {
+    position: fixed;
+    display: none;
+    top: 60px;
+    right: 20px;
+    max-width: 320px;
+    background: #fff;
+    border: 2px solid #993c1d;
+    border-radius: 8px;
+    padding: 14px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    z-index: 200;
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <input type="search" id="search-box" placeholder="Search all GS data points...">
+  <button id="btn-expand-all" title="Expand every entry">Expand all</button>
+  <button id="btn-collapse-all" title="Collapse every entry">Collapse all</button>
+  <button id="btn-highlight" title="Select text, then click to highlight it">Highlight</button>
+  <button id="btn-underline" title="Select text, then click to underline it">Underline</button>
+  <button id="btn-note" title="Click this, then click anywhere to drop a note">Add note</button>
+  <button id="btn-clear" title="Remove all your highlights, underlines, and notes">Clear my edits</button>
+  <span class="status" id="status-text">Not connected to file — click Save once to connect</span>
+  <button class="save-btn" id="btn-save">Save</button>
+</div>
+
+<div id="fallback-help">
+  <strong>Your browser can't save directly</strong>
+  <p style="margin:6px 0;">File System Access isn't supported here (common on Safari/Firefox). Use Chrome or Edge to enable direct-save, or use Ctrl/Cmd+S to overwrite this file manually after editing.</p>
+  <button id="fallback-close" style="font-size: 12px; padding: 6px 12px; border-radius: 4px; border: 1px solid #993c1d; background: #993c1d; color: #fff; cursor: pointer;">Got it</button>
+</div>
+
+<div id="note-input-box">
+  <textarea id="note-text" placeholder="Type your note..."></textarea>
+  <div class="note-actions">
+    <button id="note-cancel">Cancel</button>
+    <button class="primary" id="note-add">Add</button>
+  </div>
+</div>
+
+<div class="wrap content-target" id="content-root">
+
+<header>
+  <h1>GS Paper-wise Data Points — PIB &amp; Government Sources</h1>
+  <div class="meta">Facts, schemes, statistics, and reports pulled from PIB releases and other government articles you share, classified by GS paper. See <a href="index.html" style="color:#1d5b8b;">lecture index</a> and <a href="data-points.html" style="color:#1d5b8b;">lecture data points</a> for classroom-derived material — this page is exclusively for standalone govt-source current affairs.</div>
+</header>
+
+<div class="filter-bar" id="filter-bar">
+  <button class="filter-btn active" data-filter="all">All papers</button>
+  <button class="filter-btn" data-filter="gs1">GS1 — History, Society, Geography</button>
+  <button class="filter-btn" data-filter="gs2">GS2 — Polity, Governance, IR, Social Justice</button>
+  <button class="filter-btn" data-filter="gs3">GS3 — Economy, Tech, Environment, Security</button>
+  <button class="filter-btn" data-filter="gs4">GS4 — Ethics</button>
+</div>
+
+<section class="gs-block" id="gs1" data-gs="gs1">
+  <h2>GS Paper 1 — Indian Heritage &amp; Culture, History, Geography, Society<span class="gs-count" id="count-gs1"></span></h2>
+  <div class="gs-desc">Art &amp; culture, modern/ancient/medieval Indian history, world history, Indian society, geography (physical/human/economic).</div>
+
+  <details class="subtopic-collapse" data-topic="elephant-culture">
+    <summary>Elephants in Indian culture (World Elephant Day) <span class="entry-date">12 Aug 2026</span></summary>
+    <div class="collapse-body">
+    <h3>Elephants in Indian culture (World Elephant Day, 12 Aug)</h3>
+    <div class="mnemonic-list">
+      <strong>4 regions, 4 associations — memorize as a set:</strong>
+      <ul>
+        <li><strong>North:</strong> Ganesha — wisdom, obstacle removal</li>
+        <li><strong>South:</strong> Temple elephants — rituals, festivals</li>
+        <li><strong>Royal:</strong> Authority/prestige emblem (pan-India, historical)</li>
+        <li><strong>Northeast:</strong> Ganesha as deity-manifestation; elephants = elders/wisdom symbols</li>
+      </ul>
+    </div>
+    <div class="source-box"><strong>Full source:</strong> PIB Backgrounder, "World Elephant Day," Ministry of Environment, Forest and Climate Change, posted 12 Aug 2026, Explainer ID 159528. <a href="https://www.pib.gov.in/PressNoteDetails.aspx?id=159528&amp;NoteId=159528&amp;ModuleId=3&amp;reg=3&amp;lang=1" target="_blank">View release →</a></div>
+    </div>
+  </details>
+</section>
+
+<section class="gs-block" id="gs2" data-gs="gs2">
+  <h2>GS Paper 2 — Governance, Constitution, Polity, Social Justice, IR<span class="gs-count" id="count-gs2"></span></h2>
+  <div class="gs-desc">Indian Constitution, polity, governance, social justice/welfare schemes, international relations, bilateral/multilateral bodies.</div>
+  <div class="empty-state">No entries yet. Send a PIB release or govt article relevant to GS2, and it will be added here with source, date, and verified facts.</div>
+</section>
+
+<section class="gs-block" id="gs3" data-gs="gs3">
+  <h2>GS Paper 3 — Economy, Science &amp; Tech, Environment, Security<span class="gs-count" id="count-gs3"></span></h2>
+  <div class="gs-desc">Indian economy, agriculture, industry, infrastructure, science &amp; technology, environment/ecology/biodiversity, disaster management, internal security.</div>
+
+  <details class="subtopic-collapse" data-topic="elephant-conservation">
+    <summary>World Elephant Day 2026 — Project Elephant &amp; conservation architecture <span class="entry-date">12 Aug 2026</span></summary>
+    <div class="collapse-body">
+    <h3>World Elephant Day 2026 — Project Elephant &amp; conservation architecture</h3>
+
+    <div class="fact-grid">
+      <div class="fact-card"><span class="num">60%</span><span class="ctx">of world's wild Asian elephants are in India</span></div>
+      <div class="fact-card"><span class="num">22,446</span><span class="ctx">India's elephant count (SAIEE 2021–25, DNA-census)</span></div>
+      <div class="fact-card"><span class="num">33</span><span class="ctx">Elephant Reserves</span></div>
+      <div class="fact-card"><span class="num">150</span><span class="ctx">elephant corridors identified</span></div>
+      <div class="fact-card"><span class="num">80,777 km²</span><span class="ctx">Reserve area (+8,610 km² since 2014)</span></div>
+      <div class="fact-card"><span class="num">100–3,000 km²</span><span class="ctx">elephant home-range size</span></div>
+    </div>
+    <span class="src-tag">SAIEE (Synchronous All India Population Estimation of Elephants) 2021–25, MoEFCC / PIB Backgrounder, 12 Aug 2026</span>
+
+    <h4>Flow: keystone species → conservation mechanism</h4>
+    <pre class="mermaid">
+flowchart LR
+    A["Elephant = keystone species<br/>(seed dispersal, nutrient cycling,<br/>forest connectivity)"] --> B["Project Elephant (MoEFCC)<br/>funds States"]
+    B --> C["3 pillars: Reserves +<br/>Corridors + Tech monitoring"]
+    C --> D["Reduces habitat fragmentation<br/>+ human-elephant conflict"]
+    </pre>
+
+    <h4>Corridors — quick numbers</h4>
+    <div class="fact-grid">
+      <div class="fact-card"><span class="num">14 states</span><span class="ctx">have validated corridors</span></div>
+      <div class="fact-card"><span class="num">West Bengal</span><span class="ctx">most corridors — 26 (17%+ of total)</span></div>
+      <div class="fact-card"><span class="num">19 / 6</span><span class="ctx">inter-state / India–Nepal transboundary corridors</span></div>
+      <div class="fact-card"><span class="num">40%</span><span class="ctx">of corridors show increased elephant use</span></div>
+    </div>
+    <span class="src-tag">"Elephant Corridors of India, 2023" — Wildlife Institute of India, cited in MoEFCC / PIB Backgrounder, 12 Aug 2026</span>
+
+    <h4>Railway mitigation — before/after</h4>
+    <div class="fact-grid">
+      <div class="fact-card"><span class="num">26 → 12</span><span class="ctx">train-hit elephant deaths, 2013 → 2024 (&gt;50% ↓)</span></div>
+      <div class="fact-card"><span class="num">705</span><span class="ctx">structures recommended (underpasses/ramps/bridges)</span></div>
+      <div class="fact-card"><span class="num">AI-DAS</span><span class="ctx">Distributed Acoustic Sensing — real-time loco-pilot alerts</span></div>
+    </div>
+    <span class="src-tag">MoEFCC / Ministry of Railways joint survey data, per PIB Backgrounder, 12 Aug 2026</span>
+
+    <h4>Captive elephants — 3 safeguards to remember</h4>
+    <div class="mnemonic-list">
+      <strong>App + Rule + Committee:</strong>
+      <ul>
+        <li><strong>Gajah Suchana</strong> app — DNA/ownership database, ID verification</li>
+        <li><strong>Captive Elephant (Transfer/Transport) Rules, 2024</strong> — regulates movement</li>
+        <li><strong>High-Powered Committee</strong> (Supreme Court order dated 3 Mar 2023) — clears interstate transfers</li>
+      </ul>
+    </div>
+    <span class="src-tag">Wildlife (Protection) Act, 1972 framework; Captive Elephant (Transfer or Transport) Rules, 2024 — per MoEFCC / PIB Backgrounder, 12 Aug 2026</span>
+
+    <h4>Conflict compensation — ex-gratia ladder</h4>
+    <div class="fact-grid">
+      <div class="fact-card"><span class="num">₹10 lakh</span><span class="ctx">death / permanent incapacitation</span></div>
+      <div class="fact-card"><span class="num">₹2 lakh</span><span class="ctx">grievous injury</span></div>
+      <div class="fact-card"><span class="num">₹25,000</span><span class="ctx">minor injury (max treatment cost)</span></div>
+    </div>
+    <span class="src-tag">Centrally Sponsored Schemes "Project Tiger and Elephant" &amp; "Development of Wildlife Habitats" — per MoEFCC / PIB Backgrounder, 12 Aug 2026</span>
+
+    <div class="exam-tip" style="background:#fff7e6; border:1px solid #f0dba8; border-radius:8px; padding:10px 14px; font-family:Arial,sans-serif; font-size:0.85em;"><strong>Exam angle:</strong> keystone-species/ecological-connectivity, human-wildlife conflict, or conservation-tech (AI/DNA) question. Pair with Project Tiger for a comparative flagship-scheme answer.</div>
+    <div class="source-box"><strong>Full source:</strong> PIB Backgrounder, "World Elephant Day," Ministry of Environment, Forest and Climate Change, posted 12 Aug 2026 (updated 15 Aug 2026), Explainer ID 159528. <a href="https://www.pib.gov.in/PressNoteDetails.aspx?id=159528&amp;NoteId=159528&amp;ModuleId=3&amp;reg=3&amp;lang=1" target="_blank">View release →</a></div>
+    </div>
+  </details>
+
+  <details class="subtopic-collapse" data-topic="digital-public-infrastructure">
+    <summary>Digital Public Infrastructure (DPI) — Independence Day 2026 factsheet <span class="entry-date">12 Aug 2026</span></summary>
+    <div class="collapse-body">
+    <h3>Digital Public Infrastructure (DPI) — 80 years of Independence factsheet</h3>
+
+    <div class="fact-grid">
+      <div class="fact-card"><span class="num">12–14%</span><span class="ctx">Digital Economy's share of India's GDP (→20% projected in a decade)</span></div>
+      <div class="fact-card"><span class="num">5th</span><span class="ctx">largest digitalised economy globally; 4th-highest ranked G20 economy</span></div>
+    </div>
+    <span class="src-tag">State of India's Digital Economy Report 2026 (ICRIER), cited in PIB Factsheet, 12 Aug 2026</span>
+
+    <h4>Flow: DPI stack — from identity to delivery</h4>
+    <pre class="mermaid">
+flowchart LR
+    A["Aadhaar<br/>(digital identity)"] --> B["DBT + UPI<br/>(money/benefit movement)"]
+    B --> C["DigiLocker + UMANG<br/>(document + service access)"]
+    C --> D["Citizen receives service<br/>faster, paperless, transparent"]
+    </pre>
+
+    <h4>Electronics &amp; semiconductor manufacturing</h4>
+    <div class="fact-grid">
+      <div class="fact-card"><span class="num">₹1.9L cr → ₹13.11L cr</span><span class="ctx">electronics production, 2014-15 → 2025-26 (7-fold)</span></div>
+      <div class="fact-card"><span class="num">₹38,000 cr → ₹4.24L cr</span><span class="ctx">electronics exports, same period (11-fold); 3rd-largest export sector</span></div>
+      <div class="fact-card"><span class="num">25 lakh</span><span class="ctx">jobs in electronics; ~30% women</span></div>
+      <div class="fact-card"><span class="num">₹1.27L cr</span><span class="ctx">Semicon 2.0 outlay (Union Cabinet); 12 units worth ₹1.64L cr under ISM 1.0, 3 in commercial production</span></div>
+    </div>
+    <span class="src-tag">Ministry of Electronics &amp; IT releases, cited in PIB Factsheet "Empowering Governance through Digital Infrastructure," 12 Aug 2026</span>
+
+    <h4>Mobile phones — the standout number</h4>
+    <div class="mnemonic-list">
+      <strong>153rd → 1st:</strong> mobile phones went from India's 153rd largest export item (FY15) to its <strong>largest export product</strong> (FY26).
+      <ul>
+        <li>Production: ₹18,000 cr → ₹6.27L cr (33-fold, 2014-15 to 2025-26)</li>
+        <li>Exports: ₹1,500 cr → ₹2.59L cr (165-fold, same period)</li>
+        <li>12 lakh jobs in mobile manufacturing; ~70% women</li>
+      </ul>
+    </div>
+    <span class="src-tag">Ministry of Electronics &amp; IT / Ministry of Commerce releases, cited in PIB Factsheet, 12 Aug 2026</span>
+
+    <h4>Telecom &amp; connectivity — 2014 vs. now (June 2026)</h4>
+    <div class="fact-grid">
+      <div class="fact-card"><span class="num">93.3cr → 134.8+cr</span><span class="ctx">telephone connections</span></div>
+      <div class="fact-card"><span class="num">75.23% → 94.31%</span><span class="ctx">tele-density</span></div>
+      <div class="fact-card"><span class="num">25.15cr → 109.2+cr</span><span class="ctx">internet subscribers (Mar 2026)</span></div>
+      <div class="fact-card"><span class="num">₹308 → ₹7.51</span><span class="ctx">cost per GB wireless data</span></div>
+      <div class="fact-card"><span class="num">13.67 → 132.00 Mbps</span><span class="ctx">avg mobile broadband speed (Ookla, Mar'22→Dec'25)</span></div>
+      <div class="fact-card"><span class="num">99.9%</span><span class="ctx">districts with 5G; 5.63 lakh 5G BTS (Jun 2026)</span></div>
+    </div>
+    <span class="src-tag">Ministry of Communications releases, cited in PIB Factsheet, 12 Aug 2026</span>
+    <div class="mnemonic-list"><strong>Bharat 6G Vision:</strong> targets India among global 6G leaders by <strong>2030</strong> (indigenous R&amp;D, IP, standards).</div>
+
+    <h4>UPI — world's largest real-time payment system</h4>
+    <div class="fact-grid">
+      <div class="fact-card"><span class="num">~50%</span><span class="ctx">of global real-time payment volume is UPI</span></div>
+      <div class="fact-card"><span class="num">24,161.69 cr</span><span class="ctx">transactions worth ₹314.23L cr, FY 2025-26</span></div>
+      <div class="fact-card"><span class="num">55.49 cr / 6.5 cr / 731</span><span class="ctx">users / merchants / banks connected</span></div>
+      <div class="fact-card"><span class="num">85%</span><span class="ctx">share of India's digital payment volume</span></div>
+      <div class="fact-card"><span class="num">11 countries</span><span class="ctx">UPI accepted abroad (e.g. Singapore, UAE, France, Mauritius)</span></div>
+    </div>
+    <span class="src-tag">Ministry of Finance releases, cited in PIB Factsheet, 12 Aug 2026</span>
+
+    <h4>Digital commerce — ONDC vs. GeM (side by side)</h4>
+    <table>
+      <tr><th>Metric</th><th>ONDC</th><th>GeM</th></tr>
+      <tr><td>What it is</td><td>Open network — buyers ↔ sellers across platforms</td><td>Government e-Marketplace — public procurement</td></tr>
+      <tr><td>Scale (June 2026)</td><td>20 cr buyers, 5 lakh sellers, 1,000 cities</td><td>₹18.4L cr cumulative GMV (₹5L cr in FY26)</td></tr>
+      <tr><td>Inclusion angle</td><td>eSaras/Indiahandmade integration for SHGs, weavers, artisans</td><td>SWAYATT — women/youth-led enterprises: ₹83,323 cr + ₹54,005.8 cr order value (FY26)</td></tr>
+    </table>
+    <span class="src-tag">Ministry of Commerce &amp; Industry / PIB Backgrounder releases, cited in PIB Factsheet, 12 Aug 2026</span>
+
+    <h4>G2C e-governance — 5 platforms, one memory row</h4>
+    <div class="fact-grid">
+      <div class="fact-card"><span class="num">DigiLocker</span><span class="ctx">72cr+ users, 934+cr documents (31 Jul 2026)</span></div>
+      <div class="fact-card"><span class="num">UMANG</span><span class="ctx">166→2,585 services; 4.6cr→798cr transactions (2017→Jul 2026)</span></div>
+      <div class="fact-card"><span class="num">Aadhaar</span><span class="ctx">0.42cr (2010-11) → 145cr+ generated (Jul 2026)</span></div>
+      <div class="fact-card"><span class="num">CSC</span><span class="ctx">5.16 lakh+ functional centres (Jun 2026)</span></div>
+      <div class="fact-card"><span class="num">DBT</span><span class="ctx">₹52 lakh cr+ transferred, 318 schemes, 56 Ministries</span></div>
+    </div>
+    <span class="src-tag">PIB Backgrounder "The Digital India," cited in PIB Factsheet, 12 Aug 2026</span>
+
+    <h4>Education &amp; skilling platforms</h4>
+    <div class="fact-grid">
+      <div class="fact-card"><span class="num">DIKSHA</span><span class="ctx">2.35cr registered, 3.58 lakh daily active (10 Aug 2026)</span></div>
+      <div class="fact-card"><span class="num">SWAYAM</span><span class="ctx">20,000+ courses, 6.5cr+ enrollments</span></div>
+      <div class="fact-card"><span class="num">APAAR</span><span class="ctx">33.74 cr+ digital academic IDs (Jun 2026)</span></div>
+      <div class="fact-card"><span class="num">SIDH</span><span class="ctx">20.1 million registrations, 1 million+ opportunities generated</span></div>
+      <div class="fact-card"><span class="num">NIELIT</span><span class="ctx">31.92 lakh trained (last 3 FYs), 56 centres</span></div>
+    </div>
+    <span class="src-tag">Ministry of Education / Skill India releases, cited in PIB Factsheet, 12 Aug 2026</span>
+
+    <h4>Public Examinations (Prevention of Unfair Means) Amendment Bill, 2026</h4>
+    <table>
+      <tr><th>Offender category</th><th>Penalty</th></tr>
+      <tr><td>Individual offender</td><td>5–10 years imprisonment + fine up to ₹50 lakh</td></tr>
+      <tr><td>Service provider</td><td>Fine up to ₹5 crore + 8-year ban</td></tr>
+      <tr><td>Organised syndicate</td><td>7–10 years imprisonment + min. fine ₹10 crore</td></tr>
+    </table>
+    <div class="mnemonic-list"><strong>Time-bound justice:</strong> investigation ≤2 months → trial ≤3 months from chargesheet → HC appeal ≤3 months from admission.</div>
+    <span class="src-tag">Public Examinations (Prevention of Unfair Means) Amendment Bill, 2026 — introduced in Lok Sabha, 31 Jul 2026; cited in PIB Factsheet, 12 Aug 2026</span>
+
+    <div class="exam-tip" style="background:#fff7e6; border:1px solid #f0dba8; border-radius:8px; padding:10px 14px; font-family:Arial,sans-serif; font-size:0.85em;"><strong>Exam angle:</strong> DPI-as-public-good essay/GS3 question; "JAM trinity evolution" angle (Aadhaar→DBT→UPI); digital-divide critique (rural 4G/BharatNet coverage vs. urban 5G); GeM/ONDC as MSME/SHG inclusion case study.</div>
+    <div class="source-box"><strong>Full source:</strong> PIB Factsheet, "Empowering Governance through Digital Infrastructure," posted 12 Aug 2026, Factsheet ID 150840. <a href="https://www.pib.gov.in/FactsheetDetails.aspx?id=150840&amp;NoteId=150840&amp;ModuleId=16&amp;reg=3&amp;lang=1" target="_blank">View release →</a></div>
+    </div>
+  </details>
+</section>
+
+<section class="gs-block" id="gs4" data-gs="gs4">
+  <h2>GS Paper 4 — Ethics, Integrity &amp; Aptitude<span class="gs-count" id="count-gs4"></span></h2>
+  <div class="gs-desc">Ethics and human interface, attitude, aptitude/foundational values for civil service, emotional intelligence, probity in governance.</div>
+  <div class="empty-state">No entries yet — GS4 rarely maps to PIB releases directly, but committee reports on governance ethics, RTI, Lokpal, or civil service conduct rules would go here.</div>
+</section>
+
+<footer>
+  Populated on request from PIB releases and other government-source articles you provide. Each entry is added under its most appropriate GS paper (standard UPSC mapping) with source name/date and a link where available. Click Save to write your edits (highlights/notes) directly to disk.
+</footer>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11.15.0/dist/mermaid.min.js" integrity="sha384-yQ4mmBBT+vhTAwjFH0toJXNYJ6O4usWnt6EPIdWwrRvx2V/n5lXuDZQwQFeSFydF" crossorigin="anonymous"></script>
+<script>
+(function() {
+  var mode = null;
+  var noteCounter = 0;
+
+  var btnHighlight = document.getElementById('btn-highlight');
+  var btnUnderline = document.getElementById('btn-underline');
+  var btnNote = document.getElementById('btn-note');
+  var btnClear = document.getElementById('btn-clear');
+  var btnSave = document.getElementById('btn-save');
+  var statusText = document.getElementById('status-text');
+  var contentRoot = document.getElementById('content-root');
+  var noteBox = document.getElementById('note-input-box');
+  var noteText = document.getElementById('note-text');
+  var pendingNoteTarget = null;
+
+  function setMode(newMode) {
+    mode = mode === newMode ? null : newMode;
+    btnHighlight.classList.toggle('active', mode === 'highlight');
+    btnUnderline.classList.toggle('active', mode === 'underline');
+    btnNote.classList.toggle('active', mode === 'note');
+  }
+
+  btnHighlight.addEventListener('click', function() { setMode('highlight'); });
+  btnUnderline.addEventListener('click', function() { setMode('underline'); });
+  btnNote.addEventListener('click', function() { setMode('note'); });
+
+  function markDirty() {
+    statusText.textContent = 'Unsaved changes';
+    statusText.style.color = '#993c1d';
+  }
+
+  document.addEventListener('mouseup', function(e) {
+    if (mode !== 'highlight' && mode !== 'underline') return;
+    var sel = window.getSelection();
+    if (!sel || sel.isCollapsed || sel.rangeCount === 0) return;
+    var range = sel.getRangeAt(0);
+    if (!contentRoot.contains(range.commonAncestorContainer)) return;
+
+    var wrapper = document.createElement(mode === 'highlight' ? 'mark' : 'u');
+    wrapper.className = mode === 'highlight' ? 'user-highlight' : 'user-underline';
+    try {
+      range.surroundContents(wrapper);
+    } catch (err) {
+      var frag = range.extractContents();
+      wrapper.appendChild(frag);
+      range.insertNode(wrapper);
+    }
+    sel.removeAllRanges();
+    markDirty();
+  });
+
+  contentRoot.addEventListener('click', function(e) {
+    if (mode !== 'note') return;
+    if (e.target.closest('.user-note')) return;
+    pendingNoteTarget = e.target;
+    noteBox.style.display = 'block';
+    var x = Math.min(e.clientX, window.innerWidth - 280);
+    var y = Math.min(e.clientY, window.innerHeight - 140);
+    noteBox.style.left = x + 'px';
+    noteBox.style.top = y + 'px';
+    noteText.value = '';
+    noteText.focus();
+  });
+
+  document.getElementById('note-cancel').addEventListener('click', function() {
+    noteBox.style.display = 'none';
+    pendingNoteTarget = null;
+  });
+
+  document.getElementById('note-add').addEventListener('click', function() {
+    var text = noteText.value.trim();
+    if (!text || !pendingNoteTarget) { noteBox.style.display = 'none'; return; }
+    noteCounter++;
+    var noteDiv = document.createElement('div');
+    noteDiv.className = 'user-note';
+    noteDiv.setAttribute('data-note-id', noteCounter);
+    noteDiv.innerHTML = '<span class="note-label">Your note</span>' +
+      '<button class="del-note" title="Remove note">&times;</button>' +
+      '<span class="note-body"></span>';
+    noteDiv.querySelector('.note-body').textContent = text;
+    noteDiv.querySelector('.del-note').addEventListener('click', function() {
+      noteDiv.remove();
+      markDirty();
+    });
+
+    var target = pendingNoteTarget.closest('li, p, td, div.quote-card, div.source-box, section') || contentRoot;
+    target.parentNode.insertBefore(noteDiv, target.nextSibling);
+
+    noteBox.style.display = 'none';
+    pendingNoteTarget = null;
+    markDirty();
+    setMode('note');
+  });
+
+  btnClear.addEventListener('click', function() {
+    if (!confirm('Remove all your highlights, underlines, and notes on this page?')) return;
+    contentRoot.querySelectorAll('.user-note').forEach(function(n) { n.remove(); });
+    contentRoot.querySelectorAll('mark.user-highlight').forEach(function(m) {
+      var parent = m.parentNode;
+      while (m.firstChild) parent.insertBefore(m.firstChild, m);
+      parent.removeChild(m);
+    });
+    contentRoot.querySelectorAll('u.user-underline').forEach(function(u) {
+      var parent = u.parentNode;
+      while (u.firstChild) parent.insertBefore(u.firstChild, u);
+      parent.removeChild(u);
+    });
+    markDirty();
+  });
+
+  var fallbackHelp = document.getElementById('fallback-help');
+  document.getElementById('fallback-close').addEventListener('click', function() {
+    fallbackHelp.style.display = 'none';
+  });
+
+  var filterButtons = document.querySelectorAll('.filter-btn');
+  var gsBlocks = document.querySelectorAll('.gs-block');
+  filterButtons.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      filterButtons.forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      var filter = btn.getAttribute('data-filter');
+      gsBlocks.forEach(function(block) {
+        var gs = block.getAttribute('data-gs');
+        block.classList.toggle('hidden-by-filter', filter !== 'all' && gs !== filter);
+      });
+    });
+  });
+
+  var allDetails = document.querySelectorAll('details.subtopic-collapse');
+  document.getElementById('btn-expand-all').addEventListener('click', function() {
+    allDetails.forEach(function(d) { d.open = true; });
+  });
+  document.getElementById('btn-collapse-all').addEventListener('click', function() {
+    allDetails.forEach(function(d) { d.open = false; });
+  });
+
+  function updateGsCounts() {
+    document.querySelectorAll('.gs-block').forEach(function(block) {
+      var gs = block.getAttribute('data-gs');
+      var n = block.querySelectorAll('details.subtopic-collapse').length;
+      var countEl = document.getElementById('count-' + gs);
+      if (countEl) countEl.textContent = n === 1 ? ' (1 entry)' : ' (' + n + ' entries)';
+    });
+  }
+  updateGsCounts();
+
+  var searchBox = document.getElementById('search-box');
+  searchBox.addEventListener('input', function() {
+    var q = searchBox.value.trim().toLowerCase();
+    var candidates = contentRoot.querySelectorAll('li, p, td, div.quote-card, div.source-box, div.data-box, div.fact-card, tr');
+    var reopened = [];
+    candidates.forEach(function(el) {
+      if (!q) { el.style.display = ''; return; }
+      var match = el.textContent.toLowerCase().indexOf(q) !== -1;
+      el.style.display = match ? '' : 'none';
+      if (match) {
+        var parentDetails = el.closest('details.subtopic-collapse');
+        if (parentDetails && !parentDetails.open) {
+          parentDetails.open = true;
+          reopened.push(parentDetails);
+        }
+      }
+    });
+  });
+
+  var fileHandle = null;
+  var fsaSupported = 'showSaveFilePicker' in window;
+  var THIS_FILENAME = 'gs-datapoints.html';
+
+  function buildFullHtml() {
+    var doc = document.documentElement.cloneNode(true);
+    var liveContentRoot = doc.querySelector('#content-root');
+    if (liveContentRoot) liveContentRoot.innerHTML = contentRoot.innerHTML;
+    return '<!DOCTYPE html>\n' + doc.outerHTML;
+  }
+
+  async function writeToFile() {
+    var writable = await fileHandle.createWritable();
+    await writable.write(buildFullHtml());
+    await writable.close();
+  }
+
+  btnSave.addEventListener('click', async function() {
+    statusText.textContent = 'Saving…';
+    statusText.style.color = '#57606a';
+    if (!fsaSupported) {
+      fallbackHelp.style.display = 'block';
+      statusText.textContent = 'Direct save not supported in this browser';
+      statusText.style.color = '#993c1d';
+      return;
+    }
+    try {
+      if (!fileHandle) {
+        fileHandle = await window.showSaveFilePicker({
+          suggestedName: THIS_FILENAME,
+          types: [{ description: 'HTML file', accept: { 'text/html': ['.html'] } }]
+        });
+      }
+      var perm = await fileHandle.queryPermission({ mode: 'readwrite' });
+      if (perm !== 'granted') {
+        perm = await fileHandle.requestPermission({ mode: 'readwrite' });
+      }
+      if (perm !== 'granted') {
+        statusText.textContent = 'File permission denied — click Save to retry';
+        statusText.style.color = '#993c1d';
+        fileHandle = null;
+        return;
+      }
+      await writeToFile();
+      statusText.textContent = 'Saved to file just now';
+      statusText.style.color = '#3b6d11';
+    } catch (err) {
+      console.error('SAVE_ERROR', err.name, err.message, err);
+      if (err.name === 'AbortError') {
+        statusText.textContent = 'Save cancelled';
+        statusText.style.color = '#57606a';
+      } else {
+        statusText.textContent = 'Save failed: ' + err.name + ' — click Save to retry';
+        statusText.style.color = '#993c1d';
+        fileHandle = null;
+      }
+    }
+  });
+
+  contentRoot.querySelectorAll('.user-note .del-note').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      btn.closest('.user-note').remove();
+      markDirty();
+    });
+  });
+
+  if (window.mermaid) {
+    mermaid.initialize({ startOnLoad: true, securityLevel: 'strict' });
+  }
+})();
+</script>
+
+</body>
+</html>

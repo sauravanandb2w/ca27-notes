@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class 9(27): Registered Unrecognised Political Parties (RUPPs) &amp; VB-G RAM G (MGNREGA Replacement)</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: #faf9f6;
+    color: #1f2328;
+    margin: 0;
+    padding: 0 0 80px;
+    line-height: 1.6;
+  }
+  .toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: #ffffff;
+    border-bottom: 2px solid #1d5b8b;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: Arial, sans-serif;
+    flex-wrap: wrap;
+  }
+  .toolbar button {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    padding: 7px 14px;
+    border-radius: 6px;
+    border: 1px solid #d8d2c6;
+    background: #fff;
+    cursor: pointer;
+    color: #1f2328;
+  }
+  .toolbar button:hover { background: #e6f1fb; border-color: #1d5b8b; }
+  .toolbar button.active { background: #1d5b8b; color: #fff; border-color: #1d5b8b; }
+  .toolbar .save-btn { background: #2f6b4f; color: #fff; border-color: #2f6b4f; margin-left: auto; }
+  .toolbar .save-btn:hover { background: #24543e; }
+  .toolbar .status { font-size: 12px; color: #57606a; margin-left: auto; padding-right: 8px; }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 30px 20px; }
+  header { border-bottom: 3px solid #1d5b8b; padding-bottom: 20px; margin-bottom: 30px; }
+  header h1 { font-size: 1.6em; margin: 0 0 6px; color: #1d5b8b; }
+  header .meta { color: #57606a; font-size: 0.95em; font-family: Arial, sans-serif; }
+  section { margin-bottom: 42px; }
+  h2 { font-size: 1.4em; color: #1d5b8b; border-left: 4px solid #1d5b8b; padding-left: 12px; margin-bottom: 14px; }
+  h3 { font-size: 1.12em; margin: 22px 0 8px; }
+  p { margin: 10px 0; }
+  .summary-box { background: #e6f1fb; border-radius: 8px; padding: 18px 22px; font-size: 0.98em; }
+  ul, ol.answers { padding-left: 24px; }
+  li { margin-bottom: 6px; }
+  .timestamp { font-family: 'Courier New', monospace; font-size: 0.78em; color: #57606a; background: #e2ddd4; border-radius: 4px; padding: 1px 6px; margin-right: 6px; }
+  .quote-card { background: #fff; border: 1px solid #e2ddd4; border-left: 4px solid #1d5b8b; border-radius: 6px; padding: 14px 18px; margin: 14px 0; }
+  .quote-card .q { font-style: italic; font-size: 1.05em; }
+  .quote-card .attrib { font-family: Arial, sans-serif; font-size: 0.85em; color: #57606a; margin-top: 6px; }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.95em; background: #fff; }
+  th, td { border: 1px solid #e2ddd4; padding: 8px 12px; text-align: left; vertical-align: top; }
+  th { background: #e6f1fb; font-family: Arial, sans-serif; font-size: 0.88em; }
+  .gap-box { background: #eef4f0; border: 1px solid #cfe3d6; border-radius: 8px; padding: 16px 20px; margin-top: 16px; font-size: 0.95em; }
+  .gap-box h4 { margin: 0 0 8px; color: #2f6b4f; font-family: Arial, sans-serif; font-size: 0.95em; }
+  .exam-tip { background: #fff7e6; border: 1px solid #f0dba8; border-radius: 8px; padding: 14px 20px; margin: 14px 0; font-size: 0.95em; }
+  .exam-tip::before { content: "Exam strategy: "; font-weight: bold; font-family: Arial, sans-serif; }
+  .term-box { background: #fdf3f3; border: 1px solid #ecd4d4; border-radius: 8px; padding: 12px 16px; margin: 10px 0; }
+  .term-box strong { color: #8b3a3a; }
+  .data-box { background: #f3f0fb; border: 1px solid #ddd6f0; border-radius: 8px; padding: 12px 16px; margin: 10px 0; font-family: 'Courier New', monospace; font-size: 0.9em; }
+  footer { margin-top: 60px; border-top: 1px solid #e2ddd4; padding-top: 16px; color: #57606a; font-size: 0.82em; font-family: Arial, sans-serif; }
+  .toc {
+    background: #fff;
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    padding: 16px 22px;
+    margin-bottom: 36px;
+    font-family: Arial, sans-serif;
+    font-size: 0.9em;
+  }
+  .toc h2 { font-size: 1em; margin: 0 0 10px; border: none; padding: 0; color: #1d5b8b; text-transform: uppercase; letter-spacing: 0.04em; }
+  .toc ol { columns: 2; margin: 0; padding-left: 20px; }
+  .toc a { color: #1f2328; text-decoration: none; }
+  .toc a:hover { color: #1d5b8b; text-decoration: underline; }
+  details.collapse-section {
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    background: #fff;
+    margin: 14px 0;
+    padding: 0;
+  }
+  details.collapse-section summary {
+    cursor: pointer;
+    padding: 12px 16px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 0.92em;
+    color: #1d5b8b;
+    list-style: none;
+  }
+  details.collapse-section summary::-webkit-details-marker { display: none; }
+  details.collapse-section summary::before { content: "▸ "; }
+  details.collapse-section[open] summary::before { content: "▾ "; }
+  details.collapse-section .collapse-body { padding: 4px 16px 16px; }
+  .glossary-term {
+    display: flex;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+  }
+  .glossary-term:last-child { border-bottom: none; }
+  .glossary-term dt { font-weight: bold; color: #8b3a3a; min-width: 220px; flex-shrink: 0; font-family: Arial, sans-serif; font-size: 0.9em; }
+  .glossary-term dd { margin: 0; }
+
+  mark.user-highlight { background: #fff176; padding: 1px 2px; border-radius: 2px; }
+  u.user-underline { text-decoration: underline; text-decoration-color: #1d5b8b; text-decoration-thickness: 2px; }
+  .user-note {
+    background: #e6f1fb;
+    border: 1px solid #85b7eb;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin: 8px 0;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #0c447c;
+    position: relative;
+  }
+  .user-note .note-label { font-weight: bold; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; display: block; }
+  .user-note .del-note { position: absolute; top: 6px; right: 8px; cursor: pointer; border: none; background: none; color: #0c447c; font-size: 14px; font-family: Arial, sans-serif; }
+  #note-input-box {
+    position: fixed;
+    display: none;
+    background: #fff;
+    border: 2px solid #1d5b8b;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    z-index: 100;
+    font-family: Arial, sans-serif;
+  }
+  #note-input-box textarea { width: 240px; height: 60px; font-family: Arial, sans-serif; font-size: 13px; border: 1px solid #d8d2c6; border-radius: 4px; padding: 6px; }
+  #note-input-box .note-actions { margin-top: 6px; display: flex; gap: 6px; justify-content: flex-end; }
+  #note-input-box button { font-size: 12px; padding: 5px 10px; border-radius: 4px; border: 1px solid #d8d2c6; background: #fff; cursor: pointer; }
+  #note-input-box button.primary { background: #1d5b8b; color: #fff; border-color: #1d5b8b; }
+  .content-target::selection { background: #ffe082; }
+  .board-caption { font-family: Arial, sans-serif; font-size: 0.82em; color: #57606a; margin-top: -8px; margin-bottom: 14px; }
+  .arcs-box {
+    background: #fff;
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 14px 0;
+  }
+  .arcs-box h4 { margin: 0 0 10px; color: #1d5b8b; font-family: Arial, sans-serif; font-size: 0.98em; }
+  .recall-q { margin-bottom: 14px; }
+  .recall-q p.q-text { font-weight: bold; margin: 0 0 6px; }
+  .recall-q details { border: none; margin: 0; }
+  .recall-q summary { font-family: Arial, sans-serif; font-size: 0.82em; color: #1d5b8b; cursor: pointer; list-style: none; padding: 2px 0; }
+  .recall-q summary::-webkit-details-marker { display: none; }
+  .recall-q summary::before { content: "Show answer \25B8 "; }
+  .recall-q details[open] summary::before { content: "Hide answer \25BE "; }
+  .recall-q .ans { background: #eef4f0; border-radius: 6px; padding: 8px 12px; margin-top: 6px; font-size: 0.95em; }
+  .spacing-tracker { font-family: Arial, sans-serif; font-size: 0.92em; }
+  .spacing-tracker table { margin: 8px 0; }
+  .spacing-tracker input[type="checkbox"] { width: 16px; height: 16px; cursor: pointer; }
+  .mnemonic-box { background: #fff7e6; border: 1px solid #f0dba8; border-radius: 8px; padding: 14px 18px; margin: 10px 0; }
+  .mnemonic-box h4 { margin: 0 0 6px; color: #8b5a1d; font-family: Arial, sans-serif; font-size: 0.92em; }
+  .applic-table td.gs-tag { font-family: Arial, sans-serif; font-weight: bold; font-size: 0.85em; white-space: nowrap; }
+  .applic-table .prelims-badge, .applic-table .mains-badge {
+    display: inline-block; font-family: Arial, sans-serif; font-size: 0.72em; font-weight: bold;
+    padding: 2px 8px; border-radius: 10px; margin-right: 4px;
+  }
+  .prelims-badge { background: #eaf3de; color: #3b6d11; }
+  .mains-badge { background: #e6f1fb; color: #1d5b8b; }
+  #fallback-help {
+    position: fixed;
+    display: none;
+    top: 60px;
+    right: 20px;
+    max-width: 320px;
+    background: #fff;
+    border: 2px solid #993c1d;
+    border-radius: 8px;
+    padding: 14px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    z-index: 200;
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <button id="btn-highlight" title="Select text, then click to highlight it">Highlight</button>
+  <button id="btn-underline" title="Select text, then click to underline it">Underline</button>
+  <button id="btn-note" title="Click this, then click anywhere in the notes to drop a note">Add note</button>
+  <button id="btn-clear" title="Remove all your highlights, underlines, and notes">Clear my edits</button>
+  <span class="status" id="status-text">Not connected to file — click Save once to connect</span>
+  <button class="save-btn" id="btn-save">Save</button>
+</div>
+
+<div id="fallback-help">
+  <strong>Your browser can't save directly</strong>
+  <p style="margin:6px 0;">File System Access isn't supported here (common on Safari/Firefox). Use Chrome or Edge to enable direct-save, or use your browser's Save Page As (Ctrl/Cmd+S) to overwrite this file manually after editing.</p>
+  <button id="fallback-close" style="font-size: 12px; padding: 6px 12px; border-radius: 4px; border: 1px solid #993c1d; background: #993c1d; color: #fff; cursor: pointer;">Got it</button>
+</div>
+
+<div id="note-input-box">
+  <textarea id="note-text" placeholder="Type your note..."></textarea>
+  <div class="note-actions">
+    <button id="note-cancel">Cancel</button>
+    <button class="primary" id="note-add">Add</button>
+  </div>
+</div>
+
+<div class="wrap content-target" id="content-root">
+
+<header>
+  <h1>Class 9(27) — Registered Unrecognised Political Parties (RUPPs) &amp; VB-G RAM G (MGNREGA Replacement)</h1>
+  <div class="meta">
+    <span>Source: unlisted YouTube lecture recording ("class 9"), uploader Saurav Anand</span> &middot;
+    <span>Duration: 0:00 – 1:33:03 (full session — instructor ended early)</span> &middot;
+    <span>Track: UPSC GS-2 (Polity, Elections, Governance) / GS-3 (Rural Development) — Current Affairs Answer Writing</span>
+  </div>
+</header>
+
+<div class="gap-box">
+  <h4>Note on the deferred PM-AASHA exercise from Class 8</h4>
+  <p>Class 8's instructor had explicitly deferred a PM-AASHA live answer-writing exercise ("You can come, we'll discuss in next class").</p>
+  <p>This transcript was checked carefully for that exercise. It does <strong>not</strong> appear anywhere in Class 9.</p>
+  <p>Class 9 opens directly with a new topic (Registered Unrecognised Political Parties) and never returns to PM-AASHA.</p>
+  <p>The instructor also ends the session early (~1:33:03) and explicitly defers a different, unrelated topic ("exchange entitlement decline") to the next class instead.</p>
+  <p>Treat the PM-AASHA answer-writing exercise as still outstanding — it may resurface in Class 10 or have been addressed in a separate session not covered by this recording.</p>
+</div>
+
+<nav class="toc">
+  <h2>Contents</h2>
+  <ol>
+    <li><a href="#applicability">Applicability — GS papers, Prelims &amp; Mains</a></li>
+    <li><a href="#part1">Topic 1: RUPPs — concepts, benefits &amp; the registration process</a></li>
+    <li><a href="#part2">Topic 1: Data, debates &amp; the deregistration limitation</a></li>
+    <li><a href="#part3">Topic 1: Suggestions &amp; live answer-writing exercise</a></li>
+    <li><a href="#part4">Topic 2: VB-G RAM G — from MGNREGA to a new rural employment law</a></li>
+    <li><a href="#part5">Topic 2: Key features, fund-sharing &amp; special provisions</a></li>
+    <li><a href="#part6">Topic 2: Debates, data, case law &amp; live answer-writing exercise</a></li>
+    <li><a href="#glossary">Glossary — quick revision</a></li>
+    <li><a href="#arcs">Revision kit (ARCS)</a></li>
+    <li><a href="#gaps">Supplementary research</a></li>
+  </ol>
+</nav>
+
+<section id="summary">
+  <h2>Executive summary</h2>
+  <div class="summary-box">
+  <p>Ninth class of the CA Mains 2027 series. Does not open with the PM-AASHA exercise deferred from Class 8 (see gap-box above) — instead opens with a fresh election-law topic, covers a second GS-3 topic on rural employment reform, and includes two full live timed answer-writing exercises. The instructor ends the session early.</p>
+  <p><strong>Topic 1 — Registered Unrecognised Political Parties, RUPPs (0:00 – 46:00, with live answer writing):</strong></p>
+  <ul>
+    <li>Concept of a political party, registration process under Section 29A of the Representation of the People Act, 1951</li>
+    <li>Distinction between recognized political parties, RUPPs, and the benefits gap between them</li>
+    <li>Context: a media investigation on six Gujarat-based RUPPs receiving disproportionate donations</li>
+    <li>The Election Commission's deregistration limitation — Indian National Congress (I) v. Institute of Social Welfare (2002)</li>
+    <li>Law Commission's 255th Report and the ECI's 2016 Memorandum of Electoral Reforms suggestions</li>
+    <li>Full live timed answer-writing exercise on the regulatory vacuum created by ECI's inability to deregister RUPPs</li>
+  </ul>
+  <p><strong>Topic 2 — VB-G RAM G, replacing MGNREGA (47:29 – 1:33:03, with live answer writing):</strong></p>
+  <ul>
+    <li>Constitutional basis (Articles 41, 43, Entry 23 Concurrent List, Article 21 right to livelihood)</li>
+    <li>Structural shifts in India's rural employment landscape (poverty decline, migration, gig economy, asset ownership)</li>
+    <li>Key differences from MGNREGA: 125-day guarantee, lean-season focus, four thematic priority areas, normative allocation, 60:40/90:10 cost-sharing, special Gram Rozgar Guarantee cards</li>
+    <li>Debates: continuous employment vs. bargaining power, demand-driven vs. normative allocation, centralization vs. unfunded mandate</li>
+    <li>Case law: Aruna Roy petition observations on MGNREGA as a "salutary scheme"; Tamil Nadu's Kalaignar's 150-day scheme as a state-level expansion example</li>
+    <li>Live timed answer-writing exercise on whether the shift to normative allocation dilutes the right to work</li>
+  </ul>
+  <p style="font-family: Arial, sans-serif; font-size: 0.88em; color: #57606a;">Instructor's repeated advice: for a "consequences of a loophole" answer, draw a flow diagram rather than listing prose points. When a question conflates a right-to-work debate with a scheme-comparison debate, keep the constitutional-status discussion separate from the pros-and-cons comparison table.</p>
+  </div>
+</section>
+
+<section id="applicability">
+  <h2>Applicability — GS papers, Prelims &amp; Mains</h2>
+  <table class="applic-table">
+    <tr><th>Sub-topic</th><th>GS Paper</th><th>Prelims</th><th>Mains</th></tr>
+    <tr>
+      <td class="gs-tag">RUPPs, Section 29A &amp; deregistration limits</td>
+      <td>GS-2 (Polity, Elections)</td>
+      <td><span class="prelims-badge">High</span>Section numbers (29A, 29C), the 2002 case's three grounds, and current RUPP counts are direct MCQ material.</td>
+      <td><span class="mains-badge">High</span>A live, current-affairs-driven electoral-reform theme with a fresh media investigation as context — strong differentiator.</td>
+    </tr>
+    <tr>
+      <td class="gs-tag">VB-G RAM G — rural employment reform</td>
+      <td>GS-2 (Governance) / GS-3 (Rural Development, Employment)</td>
+      <td><span class="prelims-badge">High</span>Days of guarantee, fund-sharing ratios, thematic areas, and special card categories are classic scheme-based MCQ fodder.</td>
+      <td><span class="mains-badge">High</span>A brand-new 2026 Act replacing a 20-year-old flagship scheme is a near-certain Mains theme; directly tests right-to-work and federalism debates.</td>
+    </tr>
+  </table>
+  <p style="font-family: Arial, sans-serif; font-size: 0.85em; color: #57606a;">Rule of thumb applied across this series: any named Act/case/institution/formula with a specific year or figure is Prelims-relevant; any debate, theoretical framework, or comparative-model discussion is Mains-relevant.</p>
+</section>
+
+<section id="part1">
+  <h2>1. Topic 1: RUPPs — concepts, benefits &amp; the registration process</h2>
+  <p><span class="timestamp">0:33</span>Class opens directly with the topic of registered unrecognised political parties (RUPPs).</p>
+  <p><span class="timestamp">2:02</span>Instructor's framing: election-related questions are a recurring current-affairs theme in UPSC Mains — whether on simultaneous elections, election petitions, or right to vote — so this topic follows the same current-affairs pattern.</p>
+
+  <h3>Suggested answer structure for any RUPP-type question</h3>
+  <ul>
+    <li>Introduction and context</li>
+    <li>Key benefits (recognized party vs. RUPP comparison)</li>
+    <li>Constitutional and legal framework</li>
+    <li>Data</li>
+    <li>Debate</li>
+    <li>Significance</li>
+    <li>Challenges/concerns</li>
+    <li>Important cases</li>
+    <li>Suggestions and way forward</li>
+  </ul>
+
+  <h3>Introduction framing suggested in class</h3>
+  <ul>
+    <li>Right to form associations is a fundamental right under Article 19(1)(c) of the Constitution.
+      <ul>
+        <li>Its unchecked application in the political arena has led to a proliferation of RUPPs</li>
+        <li>Many RUPPs exist only on paper</li>
+      </ul>
+    </li>
+    <li>A better way to start an answer: link the constitutional dimension directly to the specific RUPP problem, rather than stating the right in isolation.</li>
+  </ul>
+
+  <h3>Context cited (media investigation)</h3>
+  <div class="data-box">
+    Media investigation finding: six RUPPs, all based in Gujarat, received donations of around Rs 1,700 crore in FY 2023-24<br>
+    Last year, the Election Commission of India delisted around 800 RUPPs
+  </div>
+
+  <h3>Key terms</h3>
+  <div class="term-box">
+    <strong>Political party (definition used in class):</strong>
+    <ul>
+      <li>A voluntary association of people with a common ideology, formed to secure government power</li>
+      <li>An organized group of people who profess to share the same political views</li>
+      <li>Acts as a political unit to control the government</li>
+      <li>The mechanism through which it pursues this objective is contesting elections</li>
+    </ul>
+  </div>
+  <ul>
+    <li><strong>Registration is mandatory for a voluntary association to contest elections in India.</strong>
+      <ul>
+        <li>Section 29A of the Representation of the People Act, 1951 governs this registration process</li>
+        <li>Lays down the procedure, conditions, and documentation required</li>
+      </ul>
+    </li>
+    <li><strong>Registration process:</strong>
+      <ul>
+        <li>Register the voluntary association with the Election Commission within 30 days of formation</li>
+        <li>Issue a public notice in newspapers (two national and two local dailies) so the public is aware a new political party has formed</li>
+        <li>If any objection is raised (e.g. a name clash with an existing party), the Election Commission scrutinizes it</li>
+        <li>Registration is finally granted after scrutiny clears any objections</li>
+      </ul>
+    </li>
+    <li><strong>India's political landscape:</strong>
+      <ul>
+        <li>Contrasted with the USA, where there are broadly only two major parties (Democrats and Republicans)</li>
+        <li>India has more than 2,800 registered political parties</li>
+        <li>Entry into forming and registering a political party in India is comparatively easy</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>Recognized political party vs. RUPP</h3>
+  <ul>
+    <li>Every newly formed political party starts as a registered but unrecognized political party.</li>
+    <li>If it contests elections and secures a specified percentage of votes or seats, it can be declared a recognized political party (state or national level).</li>
+    <li>Parties that contest but do not meet that vote/seat threshold remain RUPPs.</li>
+    <li>A RUPP can therefore be:
+      <ul>
+        <li>A completely new political party</li>
+        <li>A party that contested elections but did not meet the recognition parameters</li>
+        <li>A party that never contested any election at all</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>Benefits comparison — recognized parties vs. RUPPs</h3>
+  <table>
+    <tr><th>Feature</th><th>Recognized political party</th><th>RUPP</th></tr>
+    <tr><td>Election symbol</td><td>Permanent reserved symbol (especially for national parties)</td><td>No reserved symbol; only a common symbol available once a vote-share threshold is met in a prior election</td></tr>
+    <tr><td>Broadcasting rights</td><td>Allotted air time/slots on national media</td><td>No such facility</td></tr>
+    <tr><td>Star campaigners</td><td>Up to 40 star campaigners allowed</td><td>Limited to 20 star campaigners</td></tr>
+    <tr><td>Allocation of land</td><td>Subsidized land for party offices in capital cities</td><td>No such facility</td></tr>
+    <tr><td>Electoral rolls</td><td>Receives two copies</td><td>No such entitlement</td></tr>
+    <tr><td>Tax exemption</td><td>Enjoys tax exemption on donations</td><td>Also enjoys tax exemption on donations — this shared benefit is the core of the funding-misuse problem</td></tr>
+  </table>
+  <p>Instructor's framing: despite the gap in privileges above, RUPPs still retain the single biggest benefit — tax exemption — which is precisely why the group matters for scrutiny.</p>
+
+  <h3>Constitutional and legal framework</h3>
+  <ul>
+    <li><strong>Article 19(1)(c):</strong> guarantees the fundamental right to form associations and unions (including cooperatives) — the constitutional route for forming political parties.</li>
+    <li><strong>Section 29A, RPA 1951:</strong> governs registration of political parties — procedure, conditions, documentation.</li>
+    <li><strong>Section 29C, RPA 1951:</strong> mandates annual reporting to the Election Commission of contributions above Rs 20,000.</li>
+    <li><strong>Section 12, Income Tax Act, 2025:</strong> exempts contributions received by registered political parties from income tax, subject to conditions:
+      <ul>
+        <li>Donations above Rs 2,000 must be paid other than in cash (cheque, DD, UPI, etc.)</li>
+        <li>Annual audit of books/accounts is required</li>
+      </ul>
+    </li>
+  </ul>
+  <div class="exam-tip">The Rs 20,000 disclosure threshold (Section 29C) and the Rs 2,000 cash-donation threshold (IT Act Section 12) are the two specific regulatory loopholes to name explicitly in any "how is money laundered through RUPPs" answer.</div>
+</section>
+
+<section id="part2">
+  <h2>2. Topic 1: Data, debates &amp; the deregistration limitation</h2>
+
+  <h3>Key data cited in class</h3>
+  <div class="data-box">
+    Six RUPPs (Gujarat-based) received donations of around Rs 1,700 crore in FY 2023-24<br>
+    This exceeds the combined donations received by even nationally recognized political parties, excluding the BJP<br>
+    Of over 2,800 RUPPs, only around 750 fielded candidates in the 2024 general election<br>
+    Per Association for Democratic Reforms (ADR) 2025 report: only around 26% of RUPPs made their annual financial reports available in the public domain for FY 2022-23<br>
+    That means roughly 75% of RUPPs are not updating bookkeeping/financial records at all
+  </div>
+
+  <h3>Core debate: freedom of association vs. financial integrity</h3>
+  <ul>
+    <li><strong>In favour of low entry barriers:</strong>
+      <ul>
+        <li>Registering political parties is a fundamental right under Article 19(1)(c)</li>
+        <li>This is important for political pluralism</li>
+        <li>A minimal entry barrier lets diverse ideological voices and new socio-political movements participate</li>
+        <li>This deepens electoral and political democracy overall</li>
+      </ul>
+    </li>
+    <li><strong>The challenge — system abuse:</strong>
+      <ul>
+        <li>The same low-barrier system is exploited for tax evasion</li>
+        <li>Also exploited for a broader lack of financial integrity</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>Significance / positives of the RUPP framework</h3>
+  <ul>
+    <li><strong>Vehicle for political pluralism:</strong> new socio-political movements and leaders can enter public life with minimal entry restrictions.</li>
+    <li><strong>Financial incentives encourage formal political giving:</strong> tax exemptions encourage donors to give through a formal, traceable channel rather than informally.</li>
+    <li><strong>Time for organizational growth:</strong> a newly formed party gets time to build cadre and public support based on its ideology before contesting a major election.</li>
+  </ul>
+
+  <h3>Challenges — how RUPPs are misused</h3>
+  <ul>
+    <li><strong>Tax evasion and money laundering mechanism (illustrative example from class):</strong>
+      <ul>
+        <li>A donor contributes money (e.g. Rs 10 crore) to a RUPP functioning like a shell entity</li>
+        <li>The donation is tax-exempt for the donor</li>
+        <li>The RUPP records the amount as "expenditure" in its books
+          <ul>
+            <li>In reality, it returns most of that amount as cash to the donor</li>
+            <li>The RUPP keeps a percentage cut before returning the cash</li>
+          </ul>
+        </li>
+        <li>The returned cash, now effectively laundered, is used by the donor for other purposes</li>
+        <li>Alternatively, the RUPP is used for "placing and layering" — splitting large sums into many small sub-Rs-20,000 donations across different names to avoid the disclosure requirement</li>
+      </ul>
+    </li>
+  </ul>
+  <svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="rupp-diag-title" style="width:100%; max-width:700px; display:block; margin:10px auto; background:#fff; border:1px solid #e2ddd4; border-radius:8px;">
+    <title id="rupp-diag-title">RUPP donation-laundering flow diagram</title>
+    <defs>
+      <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M0,0 L10,5 L0,10 z" fill="#1d5b8b"></path>
+      </marker>
+      <marker id="arrowRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M0,0 L10,5 L0,10 z" fill="#8b3a3a"></path>
+      </marker>
+    </defs>
+    <!-- Donor box -->
+    <rect x="20" y="30" width="150" height="60" rx="6" fill="#e6f1fb" stroke="#1d5b8b"></rect>
+    <text x="95" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1f2328">Donor</text>
+    <text x="95" y="72" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.5" fill="#57606a">e.g. Rs 10 cr, tax-exempt</text>
+    <!-- Arrow donor -> RUPP -->
+    <line x1="170" y1="60" x2="268" y2="60" stroke="#1d5b8b" stroke-width="2" marker-end="url(#arrow)"></line>
+    <!-- RUPP box -->
+    <rect x="270" y="20" width="180" height="80" rx="6" fill="#fdf3f3" stroke="#8b3a3a"></rect>
+    <text x="360" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1f2328">RUPP (shell entity)</text>
+    <text x="360" y="62" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.5" fill="#57606a">records amount as</text>
+    <text x="360" y="76" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.5" fill="#57606a">"expenditure" in books</text>
+    <!-- Arrow RUPP -> Donor (return, curved below) -->
+    <path d="M360,100 C360,150 170,150 95,100" fill="none" stroke="#8b3a3a" stroke-width="2" marker-end="url(#arrowRed)"></path>
+    <text x="227" y="142" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.5" fill="#8b3a3a">cash returned (minus RUPP's cut) — now laundered</text>
+    <!-- Branch: placing and layering -->
+    <line x1="360" y1="100" x2="360" y2="130" stroke="#1d5b8b" stroke-width="2"></line>
+    <line x1="360" y1="130" x2="530" y2="130" stroke="#1d5b8b" stroke-width="2" marker-end="url(#arrow)"></line>
+    <rect x="470" y="150" width="200" height="70" rx="6" fill="#eef4f0" stroke="#2f6b4f"></rect>
+    <text x="570" y="172" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#1f2328">"Placing &amp; layering"</text>
+    <text x="570" y="188" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#57606a">split into many sub-Rs-20,000</text>
+    <text x="570" y="202" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#57606a">donations, different names —</text>
+    <text x="570" y="216" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#57606a">avoids Sec 29C disclosure</text>
+    <text x="360" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#57606a">(alternative to the direct cash-return route above)</text>
+  </svg>
+  <p class="board-caption">Diagram: the two illustrative money-laundering routes discussed in class — direct cash-return, and placing/layering via sub-threshold donations.</p>
+  <ul>
+    <li><strong>Opacity in financial disclosures:</strong> only ~26% of RUPPs publicly disclose annual financial reports (ADR 2025 data, above).</li>
+    <li><strong>Burden on election management:</strong>
+      <ul>
+        <li>Many RUPPs field only a handful of nominal candidates purely to remain listed as a "participating" political party</li>
+        <li>This still requires the full administrative machinery (ballot/EVM listing, etc.) without any genuine intent to contest</li>
+      </ul>
+    </li>
+    <li><strong>Exploitation of regulatory loopholes:</strong>
+      <ul>
+        <li>The Rs 20,000 disclosure threshold under Section 29C</li>
+        <li>The Rs 2,000 cash-donation threshold under the Income Tax Act</li>
+        <li>Fielding nominal candidates to avoid delisting</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>The Election Commission's deregistration limitation</h3>
+  <ul>
+    <li>The Election Commission has the power to <strong>register</strong> a political party, but not a general power to <strong>deregister</strong> one.</li>
+    <li>Deregistration power exists only in three specific circumstances, per the Supreme Court in <strong>Indian National Congress (I) v. Institute of Social Welfare (2002)</strong>:
+      <ul>
+        <li>Registration was obtained by fraud (e.g. by submitting fraudulent documents)</li>
+        <li>The party's constitution was amended in violation of the mandatory undertaking under Section 29A(5) to bear true faith and allegiance to the Constitution of India</li>
+        <li>The party has been declared an unlawful association by the government under law</li>
+      </ul>
+    </li>
+    <li><strong>Delisting is not deregistration:</strong>
+      <ul>
+        <li>Delisting is a purely administrative exercise — removing a party's name from the published list of political parties</li>
+        <li>It does not amount to cancellation of the party's registration itself</li>
+        <li>Consequence: a delisted party loses the privileges associated with active listing (as discussed above)</li>
+      </ul>
+    </li>
+    <li>A delisted or deregistered party can seek representation before the Election Commission, or approach a court, as a remedy.</li>
+  </ul>
+  <div class="exam-tip">Mnemonic for the three deregistration grounds: Fraud, Non-allegiance (unconstitutional amendment to party constitution), Unlawful association (declared by government) — "FNU."</div>
+</section>
+
+<section id="part3">
+  <h2>3. Topic 1: Suggestions &amp; live answer-writing exercise</h2>
+
+  <h3>Recommendations from institutional sources</h3>
+  <ul>
+    <li><strong>Law Commission's 255th Report:</strong> recommended granting the Election Commission an explicit statutory power to deregister a political party if it fails to contest elections for 10 consecutive years.</li>
+    <li><strong>Election Commission of India's Memorandum on Electoral Reforms, 2016:</strong> proposed amending Section 29A of the RPA 1951 to grant the ECI explicit deregistration power.</li>
+  </ul>
+
+  <h3>Additional suggestions discussed in class</h3>
+  <ul>
+    <li>Statutory amendment to the RPA, per the ECI's own memorandum of electoral reforms (treat this as the first-preference suggestion).</li>
+    <li>Introduce a vote-percentage threshold (e.g. at least 1% vote share) as a precondition for claiming tax exemption — links the benefit to genuine electoral participation.</li>
+    <li>Inter-agency data integration between the Election Commission, Central Board of Direct Taxes, Enforcement Directorate, and Financial Intelligence Unit, to cross-check tax-exemption claims against money-laundering red flags.</li>
+    <li>Lower the disclosure threshold below the current Rs 20,000 level, and make political donations fully digital instead of allowing cash transactions, to preserve an audit trail.</li>
+    <li>Tighten registration requirements generally.</li>
+    <li>Bring political parties under the Right to Information Act.
+      <ul>
+        <li>The Central Information Commission (CIC) has already ruled that political parties are "public authorities" under the RTI Act</li>
+        <li>Political parties have refused to comply with this CIC ruling</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>Political culture framing (India-specific analytical lens)</h3>
+  <ul>
+    <li>Three original political-culture types discussed (attributed to a scholar not clearly named in the transcript — see Supplementary research):
+      <ul>
+        <li><strong>Modern political culture:</strong> the language of the Constitution, law, parliamentary debate, and judiciary</li>
+        <li><strong>Traditional political culture:</strong> religion, caste, and social hierarchy shaping political behaviour</li>
+        <li><strong>Saintly political culture:</strong> the Gandhian model — political action without expectation of personal gain, in service of society</li>
+      </ul>
+    </li>
+    <li>A fourth, modern addition discussed in class: <strong>instrumental political culture</strong> — using politics purely as an instrument to achieve some other (often illegitimate) objective.
+      <ul>
+        <li>Instructor's framing: RUPP misuse for tax evasion/money laundering is precisely this instrumental political culture at work</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>Live answer-writing exercise (timed, in-class)</h3>
+  <div class="quote-card">
+    <div class="q">The inability of the Election Commission of India to deregister political parties has created a regulatory vacuum, particularly with respect to Registered Unrecognised Political Parties. Discuss this and suggest suitable reforms to strengthen the regulation and accountability of political parties in India.</div>
+    <div class="attrib">— Practice question set for a timed writing exercise (~35:22 to 41:06 in the recording)</div>
+  </div>
+  <p><span class="timestamp">41:38</span>Suggested structure discussed in class:</p>
+  <ul>
+    <li><strong>Introduction:</strong> cite either the Gujarat donation data or the media investigation as an opening hook.</li>
+    <li><strong>Constitutional root:</strong> Article 19(1)(c) right to form associations, operationalized via Section 29A of the RPA — voluntary association &rarr; RUPP &rarr; recognized political party pathway.</li>
+    <li><strong>The regulatory vacuum, explained via three specific gaps:</strong>
+      <ul>
+        <li>Section 29A allows only registration, with no deregistration power — reinforced by the Supreme Court's 2002 INC verdict (a judicial limitation)</li>
+        <li>Section 29C's Rs 20,000 disclosure threshold loophole</li>
+        <li>Income Tax Act Section 12's Rs 2,000 cash-donation threshold loophole</li>
+        <li>Plus: tax exemption is available even to newly registered RUPPs with no track record</li>
+      </ul>
+    </li>
+    <li><strong>Consequences (draw as a flow diagram, not prose):</strong> loophole exploitation &rarr; money laundering / "letter-pad" (proxy/postbox) political parties.</li>
+    <li><strong>Suggestions:</strong> lead with the Law Commission's 255th Report and the ECI's own 2016 memorandum, then layer in the other reform suggestions above.</li>
+    <li><strong>Conclusion — must be forward-looking, not a "toothless tiger" cliché:</strong>
+      <ul>
+        <li>Frame around returning to a "saintly political culture" (Gandhian) — politics as an instrument for democratic objectives, not personal/illicit gain</li>
+        <li>A conclusion should offer administrative-style way-forward suggestions, not merely restate criticism</li>
+      </ul>
+    </li>
+  </ul>
+  <div class="exam-tip">Instructor's explicit caution: a conclusion cannot simply restate that the system is a "toothless tiger" after already having criticized it at length — end with concrete, forward-looking suggestions instead.</div>
+</section>
+
+<section id="part4">
+  <h2>4. Topic 2: VB-G RAM G — from MGNREGA to a new rural employment law</h2>
+  <p><span class="timestamp">47:29</span>Second topic: Viksit Bharat – Guarantee for Rozgar and Ajeevika Mission (Gramin), abbreviated VB-G RAM G, referenced informally in class as "VBGRamG."</p>
+  <p><span class="timestamp">48:24</span>Suggested introduction framing: "While MGNREGA served as a foundational social protection framework for two decades, its limitations necessitated legislative reform. Hence government enacted the VB-G RAM G Act to align with the vision of Viksit Bharat 2047."</p>
+  <ul>
+    <li>Alternative introduction approach suggested: open with VB-G RAM G itself as bringing a paradigm shift in India's rural employment landscape, then mention MGNREGA as the predecessor being replaced.</li>
+    <li>Currency hook: the Act was passed in 2025, but officially replaced MGNREGA from 1 July 2026 onwards.</li>
+  </ul>
+
+  <h3>Constitutional basis</h3>
+  <ul>
+    <li><strong>Article 41 (DPSP):</strong> obligates the state to secure the right to work.</li>
+    <li><strong>Article 43 (DPSP):</strong> obligates the state to secure a living wage and decent working conditions.</li>
+    <li><strong>Entry 23, Concurrent List:</strong> covers social security, social insurance, employment, and unemployment — the specific legislative entry under which MGNREGA (and now VB-G RAM G) was enacted.</li>
+    <li><strong>Article 21 — right to livelihood:</strong>
+      <ul>
+        <li>The Supreme Court held the right to life includes the right to livelihood, in <strong>Olga Tellis v. Bombay Municipal Corporation (1985)</strong></li>
+        <li>This gives a rural employment program a fundamental-right dimension, layered on top of its DPSP basis</li>
+      </ul>
+    </li>
+    <li><strong>Fundamental right vs. DPSP debate:</strong>
+      <ul>
+        <li>The state's economic capacity and level of development constrain how far "right to work" can be treated as an enforceable fundamental right</li>
+        <li>This tension was directly raised in observations during a Supreme Court hearing on an Aruna Roy-filed petition (during the MGNREGA-to-VB-G-RAM-G transition period) — see case law below</li>
+        <li>Present legal status: right to work remains a DPSP obligation (Article 41), not a fundamental right</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>Structural shifts in India's rural employment landscape</h3>
+  <ul>
+    <li><strong>Significant reduction in poverty:</strong>
+      <ul>
+        <li>NITI Aayog estimate: multi-dimensional poverty fell from 29% (2013-14) to 11.2% (2022-23)</li>
+        <li>More than 24 crore people lifted out of poverty over this period</li>
+        <li>Attributed to government welfare measures: housing schemes (PMAY-type), toilet/sanitation missions, the National Food Security Act, and other welfare programs</li>
+      </ul>
+    </li>
+    <li><strong>Diversification of rural household income:</strong>
+      <ul>
+        <li>Previously, rural households depended mainly on agriculture or the rural employment guarantee scheme</li>
+        <li>Now, increased internal migration provides an alternative income source
+          <ul>
+            <li>The Economic Survey highlights very high internal migration in India</li>
+            <li>Notably, language was expected to be a migration barrier but the Survey found it is not a significant barrier in practice</li>
+          </ul>
+        </li>
+        <li>Migration generates both financial remittances (direct income) and "social remittances" (knowhow, skill development, improved standard of living)</li>
+        <li>Growing gig-economy and logistics-sector penetration is shifting rural employment from farm to non-farm opportunities</li>
+        <li>Increased rural asset ownership (mobile phones, two-wheelers, televisions) signals rising living standards</li>
+        <li>Unconditional cash transfers ("freebies") are also cited as a factor reshaping the rural employment landscape</li>
+      </ul>
+    </li>
+  </ul>
+  <div class="exam-tip">For any "changing rural employment landscape" answer, use this five-point cluster: poverty decline, migration/remittances, gig economy, rising asset ownership, and cash transfers — then connect it to why a scheme redesign (VB-G RAM G) became necessary.</div>
+</section>
+
+<section id="part5">
+  <h2>5. Topic 2: Key features, fund-sharing &amp; special provisions</h2>
+
+  <h3>Two objectives of VB-G RAM G</h3>
+  <ul>
+    <li>Guarantee rural wage employment and thereby income security.</li>
+    <li>Create durable assets / capital formation in rural areas — a clear shift in emphasis compared to MGNREGA.</li>
+  </ul>
+
+  <h3>Key feature-by-feature comparison with MGNREGA</h3>
+  <table>
+    <tr><th>Feature</th><th>MGNREGA</th><th>VB-G RAM G</th></tr>
+    <tr>
+      <td>Days of guaranteed employment</td>
+      <td>100 days per household per year</td>
+      <td>125 days per household per year</td>
+    </tr>
+    <tr>
+      <td>Seasonal timing / job allocation logic</td>
+      <td>No specific seasonal restriction; allocation could occur in the peak agricultural season too — creating "lean vs. peak" ambiguity</td>
+      <td>Explicitly a lean-season scheme
+        <ul><li>States can notify up to 60 "peak agricultural season" days when the scheme's job guarantee does not apply</li><li>During the peak season, labourers are expected to instead access better-paying agricultural work in the open market</li></ul>
+      </td>
+    </tr>
+    <tr>
+      <td>Thematic/priority areas</td>
+      <td>No specific priority-area framework</td>
+      <td>Four thematic priority areas:
+        <ul>
+          <li>Water security (pond regeneration, check dams, groundwater recharge, irrigation channels)</li>
+          <li>Rural infrastructure (roads, waste management)</li>
+          <li>Livelihood-related infrastructure (skill development centres, agri markets, cold storage/agri value-chain facilities)</li>
+          <li>Disaster mitigation (cyclone/flood shelters, forest-fire management)</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>Wage fund-sharing (Centre:State)</td>
+      <td>100% of wages borne by the Centre</td>
+      <td>60:40 for general-category states; 90:10 for special-category (northeastern/Himalayan) states</td>
+    </tr>
+    <tr>
+      <td>Fund allocation model</td>
+      <td>Demand-driven, open-ended — states could exceed the initial budget if demand rose, later reflected in revised estimates</td>
+      <td>Normative allocation — a fixed, formula/parameter-based budget is set upfront for each state (comparable to a Finance Commission-style allocation model)</td>
+    </tr>
+    <tr>
+      <td>Work-provision timeline</td>
+      <td>Work to be provided within a specified period after demand (parallel unemployment-allowance safeguard existed)</td>
+      <td>Work must be provided within 15 days</td>
+    </tr>
+    <tr>
+      <td>Unemployment allowance conditionality</td>
+      <td>Available, but conditioned on the worker physically presenting themselves for work after applying — failure to present meant disentitlement</td>
+      <td>Retained, but the disentitlement condition for failing to present is removed</td>
+    </tr>
+    <tr>
+      <td>Digital ecosystem</td>
+      <td>Limited digital tracking</td>
+      <td>Expanded — biometric authentication, real-time worksite monitoring, geotagging</td>
+    </tr>
+  </table>
+
+  <h3>Additional governance and social provisions</h3>
+  <ul>
+    <li>Gram Sabhas must conduct social audits at least once every six months.</li>
+    <li>Special colour-coded <strong>Gram Rozgar Guarantee cards</strong> introduced for vulnerable groups:
+      <ul>
+        <li>Single women</li>
+        <li>Persons with disabilities</li>
+        <li>Elderly persons above 60 years</li>
+        <li>Released bonded labourers</li>
+        <li>Transgender persons</li>
+      </ul>
+    </li>
+    <li>Card holders can be prioritized and offered customized/tailored work sites suited to their needs.</li>
+    <li>A National Steering Committee monitors how the normative allocation is distributed across states.</li>
+  </ul>
+</section>
+
+<section id="part6">
+  <h2>6. Topic 2: Debates, data, case law &amp; live answer-writing exercise</h2>
+
+  <h3>Debate 1 — continuous employment vs. farm-labour bargaining power</h3>
+  <ul>
+    <li><strong>Under MGNREGA:</strong>
+      <ul>
+        <li>During the peak agricultural season, a labourer had a genuine choice — continue MGNREGA work or move to better-paying private farm labour</li>
+        <li>This choice gave unskilled workers better bargaining power and thus better wages</li>
+        <li>Without this option, the only fallback for many unskilled workers historically was bonded labour</li>
+      </ul>
+    </li>
+    <li><strong>Under VB-G RAM G:</strong>
+      <ul>
+        <li>The scheme deliberately withdraws work during the 60-day peak season</li>
+        <li>This pushes all available labour into the open peak-season market simultaneously — a labour surplus</li>
+        <li>Labour surplus lowers bargaining power, which lowers wages</li>
+        <li>Net effect: a worker who previously got a better MGNREGA-linked bargaining position during peak season may now get less</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>Debate 2 — open-ended (demand-driven) vs. normative allocation</h3>
+  <ul>
+    <li><strong>MGNREGA's demand-driven model:</strong>
+      <ul>
+        <li>Not budgeted/capped — work allocated whenever villages demanded it</li>
+        <li>Responsive to actual rural distress — rising demand for MGNREGA work signalled a real underlying problem in the rural economy</li>
+      </ul>
+    </li>
+    <li><strong>VB-G RAM G's normative allocation model:</strong>
+      <ul>
+        <li>Funds distributed based on a fixed formula, not demand — it is budgeted</li>
+        <li>Advantage: poorer regions can be guaranteed more funds by design, addressing regional inequity</li>
+        <li>Under the old demand-driven model, a "Matthew effect" existed
+          <ul>
+            <li>States with greater administrative capacity captured disproportionately more allocation</li>
+            <li>These tended to be wealthier, more proactive states</li>
+          </ul>
+        </li>
+        <li>Trade-off: normative allocation offers predictability over responsiveness to real-time distress signals</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>Debate 3 — centralization, unfunded mandate &amp; wage suppression</h3>
+  <ul>
+    <li><strong>MGNREGA:</strong> centrally mandated and centrally funded (100% of wages) — a "center-mandated, center-funded" model.</li>
+    <li><strong>VB-G RAM G:</strong> centrally mandated, but only partially funded (60% wages from the Centre in general states) — an "unfunded mandate" problem (the term is linked in class to Professor Sudha's/"Sondesai's" work on this concept — see Supplementary research for the name uncertainty).
+      <ul>
+        <li>States must now find the remaining 40% themselves, raising state fiscal burden</li>
+        <li>If a state cannot pay its share promptly, the Centre may ultimately have to provide it as a grant — still creating fiscal exposure for the Centre in practice</li>
+      </ul>
+    </li>
+    <li><strong>Wage-suppression risk:</strong>
+      <ul>
+        <li>The Centre notifies a base wage rate that may be lower than a state's own notified minimum wage</li>
+        <li>Since the base rate is centrally set, it can suppress effective wages relative to a state's minimum wage floor</li>
+        <li>Suggested fix: index the base wage rate to the Consumer Price Index (CPI) so it rises with inflation</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>Key data cited in class</h3>
+  <div class="data-box">
+    Economic Survey data: MGNREGA demand declined by around 53% between FY 2020-21 and FY 2025-26<br>
+    Rural unemployment decreased from 3.3% to 2.5% between 2021 and 2023-24<br>
+    MGNREGA allocation for FY 2025-26: Rs 86,000 crore (transition-year figure)<br>
+    Household participation in FY 2025-26: 5.78 crore households<br>
+    World Bank study ("Does India's Employment Guarantee Scheme Guarantee Employment?"): proportion of MGNREGA job applicants actually getting work — only ~22% in Bihar, ~48% in Uttar Pradesh, ~56% national average
+  </div>
+
+  <h3>Implementation-gap concerns (carried over as a general critique, not VB-G RAM G-specific)</h3>
+  <ul>
+    <li>Expenditure often does not match physical progress on the ground — an implementation gap.</li>
+    <li>Digital evasion: ghost beneficiaries recorded via manipulated attendance photos, or machines used in place of labourers while full wages are still claimed.</li>
+    <li>Contractor-Panchayat collusion: a nexus siphoning off allocated funds, indicating corruption risk even at the grassroots level.</li>
+  </ul>
+
+  <h3>Pros and cons of the VB-G RAM G shift</h3>
+  <ul>
+    <li><strong>Pros:</strong>
+      <ul>
+        <li>Better fiscal discipline via a budgeted, normative allocation</li>
+        <li>Removal of the disentitlement clause helps vulnerable workers who could not physically present themselves for procedural reasons</li>
+        <li>Stronger durable-asset creation focus and technological transparency (biometric/facial recognition, DPI-based systems)</li>
+        <li>More statutory backing overall</li>
+      </ul>
+    </li>
+    <li><strong>Cons:</strong>
+      <ul>
+        <li>Shift from an open-ended, bottom-up, demand-driven approach to a more centralized, top-down, capped approach — a potential dilution of the practical experience of a "right to work"</li>
+        <li>Unfunded mandate — increased state fiscal burden</li>
+        <li>Lower bargaining power for workers during the peak season (discussed above)</li>
+        <li>Techno-solutionism risk — digital exclusion for workers who cannot be reliably authenticated digitally</li>
+        <li>Wage suppression risk via a centrally notified base rate lower than a state's minimum wage</li>
+        <li>Overall centralization of a scheme that previously had more state-level flexibility</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>Case law and comparative example</h3>
+  <div class="term-box">
+    <strong>Aruna Roy petition — Supreme Court observations (during the MGNREGA-to-VB-G-RAM-G transition period):</strong>
+    <ul>
+      <li>Case concerned pending MGNREGA wage payments and compensation for delays</li>
+      <li>Court observed that MGNREGA was a "salutary scheme" — very effective, doing a wonderful job in rural India</li>
+      <li>Court held MGNREGA is neither a freebie nor an exploitation of rural workers</li>
+      <li>Court separately questioned whether the statutory guarantee of rural employment can be equated with the fundamental right to life and dignity under Article 21, noting the Constitution does not recognize a fundamental right to work</li>
+    </ul>
+  </div>
+  <div class="term-box">
+    <strong>Tamil Nadu's expanded scheme (state-level comparative example):</strong>
+    <ul>
+      <li>Tamil Nadu introduced an additional 25 days of guaranteed work (referenced in class as a "150-day scheme"), on top of the base 125 days</li>
+      <li>Brings total guaranteed days to 150 — a further state-level expansion beyond the central VB-G RAM G floor</li>
+    </ul>
+  </div>
+
+  <h3>Suggestions / way forward</h3>
+  <ul>
+    <li>Provide a transition compensation grant to states facing increased fiscal burden from the 40% wage-sharing requirement — modeled on the GST compensation-grant approach.</li>
+    <li>Implement a worksite manual-exception protocol: if a worker is physically present but biometric/facial-recognition authentication fails, still record and pay them, to avoid unjust digital exclusion.</li>
+    <li>Advance seasonal work calendars: consult the Gram Sabha ahead of the peak season and release the labour calendar in advance, so workers can plan continuously between scheme work and market work.</li>
+    <li>Strengthen grassroots administrative capacity using the scheme's ~9% administrative-expenditure allocation, for training and technical capability building.</li>
+    <li>Address rural wage stagnation by raising the centrally notified base wage rate, ideally indexed to CPI.</li>
+  </ul>
+
+  <h3>Live answer-writing exercise (timed, in-class)</h3>
+  <div class="quote-card">
+    <div class="q">The shift from the demand-driven MGNREGA to the normative-allocation-based VB-G RAM G marks a significant shift in rural employment policy. Examine whether this transition amounts to a dilution of the right to work.</div>
+    <div class="attrib">— Practice question set for a timed writing exercise (~1:24:04 to 1:29:53 in the recording)</div>
+  </div>
+  <p><span class="timestamp">1:29:53</span>Suggested structure discussed in class:</p>
+  <ul>
+    <li><strong>Introduction:</strong> reuse the MGNREGA-to-VB-G-RAM-G framing already used for the topic's opening.</li>
+    <li><strong>Right-to-work status:</strong> a DPSP under Article 41, not a fundamental right — as the Court noted in the Aruna Roy petition, given state capacity/development constraints.</li>
+    <li><strong>Effect of VB-G RAM G on right to work — present both sides:</strong>
+      <ul>
+        <li>Positive: enhanced livelihood guarantee (125 vs. 100 days), unemployment-allowance retention, durable-asset creation</li>
+        <li>Negative: federal/fiscal burden from the unfunded mandate, lower bargaining power during the peak-season gap</li>
+      </ul>
+    </li>
+    <li><strong>Suggestions:</strong> reuse the way-forward points above.</li>
+    <li><strong>Conclusion:</strong> reference the Aruna Roy petition's characterization of the predecessor scheme as "salutary," "not a freebie," and "not exploitation" — argue the new scheme should retain and build on those positive elements rather than dilute them.</li>
+  </ul>
+  <div class="exam-tip">Instructor's caution on this answer: keep the "is it a fundamental right" constitutional-status discussion analytically separate from the "pros vs. cons of the specific policy shift" comparison — do not blend the two into a single undifferentiated paragraph.</div>
+  <div class="gap-box">
+    <h4>Note on scope — session ended early</h4>
+    <p>The instructor explicitly ended the class early at ~1:32:07 ("So that's it for today, we completed early").</p>
+    <p>A further topic, "exchange entitlement decline" (referencing M.S. Swaminathan's writing on Panchayat-level corruption), was intentionally deferred to the next class.</p>
+    <p>Class 10 (MMDR Amendment Act &amp; SCO) checked for this topic and confirmed it does not appear anywhere in that transcript either. "Exchange entitlement decline" therefore also appears dropped/superseded, similar to the PM-AASHA situation below.</p>
+    <p>The PM-AASHA live answer-writing exercise deferred from Class 8 was not addressed in this session at all — it does not appear anywhere in this transcript. Its status remains outstanding going into Class 10.</p>
+  </div>
+</section>
+
+<section id="glossary">
+  <h2>Glossary — quick revision</h2>
+  <dl>
+    <div class="glossary-term"><dt>RUPP</dt><dd>Registered Unrecognised Political Party — a party registered with the Election Commission under Section 29A but which has not met the vote/seat threshold for national or state recognition (or has never contested elections at all).</dd></div>
+    <div class="glossary-term"><dt>Section 29A, RPA 1951</dt><dd>Governs the registration of political parties — procedure, conditions, and documentation; allows registration but not deregistration.</dd></div>
+    <div class="glossary-term"><dt>Section 29C, RPA 1951</dt><dd>Mandates annual reporting to the Election Commission of political contributions above Rs 20,000 — a disclosure threshold widely seen as a loophole below that amount.</dd></div>
+    <div class="glossary-term"><dt>Delisting vs. deregistration</dt><dd>Delisting is a purely administrative removal from the published list of parties (reversible, no legal cancellation); deregistration is complete legal cancellation of registration, available only on three Supreme Court-recognized grounds.</dd></div>
+    <div class="glossary-term"><dt>Indian National Congress (I) v. Institute of Social Welfare (2002)</dt><dd>Supreme Court held the ECI cannot deregister a party except for (i) fraud in registration, (ii) a party constitution amendment violating the Section 29A(5) allegiance undertaking, or (iii) the party being declared unlawful by the government.</dd></div>
+    <div class="glossary-term"><dt>Instrumental political culture</dt><dd>A modern addition to India's traditional/modern/saintly political-culture typology — politics used purely as an instrument to achieve an unrelated (often illegitimate) objective, such as tax evasion via a RUPP.</dd></div>
+    <div class="glossary-term"><dt>VB-G RAM G</dt><dd>Viksit Bharat – Guarantee for Rozgar and Ajeevika Mission (Gramin) Act — replaced MGNREGA from 1 July 2026; 125-day rural employment guarantee with a lean-season focus, normative allocation, and four thematic priority areas.</dd></div>
+    <div class="glossary-term"><dt>Normative allocation</dt><dd>A fixed, formula/parameter-based budget set in advance for each state (Finance Commission-style), replacing MGNREGA's open-ended, demand-driven allocation model.</dd></div>
+    <div class="glossary-term"><dt>Unfunded mandate</dt><dd>A central law imposing an obligation (125 days' guaranteed employment) on states without fully funding it — the Centre bears 60% (90% for special-category states) of wages, leaving states to fund the remainder.</dd></div>
+    <div class="glossary-term"><dt>Matthew effect (rural-scheme context)</dt><dd>Under a demand-driven allocation model, states with greater pre-existing administrative capacity captured disproportionately more funding — "the rich get richer" dynamic that normative allocation is partly designed to correct.</dd></div>
+  </dl>
+</section>
+
+<section id="arcs">
+  <h2>Revision kit (ARCS)</h2>
+  <div class="arcs-box">
+    <h4>A — Active Recall: self-test before re-reading</h4>
+    <div class="recall-q">
+      <p class="q-text">1. What are the three grounds on which the Election Commission can deregister a political party, per the 2002 Supreme Court ruling?</p>
+      <details><summary></summary><div class="ans">Per Indian National Congress (I) v. Institute of Social Welfare (2002): (i) registration obtained by fraud, (ii) the party's constitution amended in violation of the Section 29A(5) allegiance undertaking to the Constitution, or (iii) the party declared an unlawful association by the government. Outside these three grounds, the ECI can only "delist" a party administratively, not deregister it.</div></details>
+    </div>
+    <div class="recall-q">
+      <p class="q-text">2. Why does RUPP misuse persist despite Section 29C's disclosure requirement?</p>
+      <details><summary></summary><div class="ans">Section 29C only mandates disclosure of contributions above Rs 20,000 to the Election Commission; donations at or below that threshold require no reporting. Combined with the Income Tax Act's Rs 2,000 cash-donation threshold, this creates two regulatory loopholes that let donors split large sums into smaller, undisclosed, or cash contributions — enabling tax evasion and money laundering via RUPPs.</div></details>
+    </div>
+    <div class="recall-q">
+      <p class="q-text">3. What are the four thematic priority areas introduced under VB-G RAM G that did not exist under MGNREGA?</p>
+      <details><summary></summary><div class="ans">Water security (pond regeneration, check dams, groundwater recharge, irrigation channels); rural infrastructure (roads, waste management); livelihood-related infrastructure (skill centres, agri markets, cold storage/value-chain facilities); and disaster mitigation (cyclone/flood shelters, forest-fire management).</div></details>
+    </div>
+    <div class="recall-q">
+      <p class="q-text">4. How does the cost-sharing pattern for wages differ between MGNREGA and VB-G RAM G?</p>
+      <details><summary></summary><div class="ans">Under MGNREGA, the Centre bore 100% of the unskilled wage bill. Under VB-G RAM G, the wage cost is now shared 60:40 (Centre:State) for general-category states, and 90:10 for special-category northeastern/Himalayan states — creating a new state fiscal burden described in class as an "unfunded mandate."</div></details>
+    </div>
+    <div class="recall-q">
+      <p class="q-text">5. What did the Supreme Court observe about MGNREGA in the Aruna Roy petition, and what question did it leave open?</p>
+      <details><summary></summary><div class="ans">The Court observed that MGNREGA was a "salutary scheme" — effective and doing a wonderful job in rural India — and was neither a freebie nor an exploitation of rural workers. It separately questioned (without resolving in the workers' favour) whether the statutory guarantee of rural employment can be equated with the fundamental right to life and dignity under Article 21, noting the Constitution does not recognize a fundamental right to work.</div></details>
+    </div>
+  </div>
+
+  <div class="arcs-box spacing-tracker">
+    <h4>R — Repeat with Spacing: review checklist</h4>
+    <p>Lecture date: Sep 10, 2026 (approximate — see naming note). Forgetting is exponential — review at these intervals, not all at once.</p>
+    <table>
+      <tr><th>Review</th><th>Target date</th><th>Done</th></tr>
+      <tr><td>Day 1 (same day, quick skim)</td><td>Sep 10</td><td><input type="checkbox"></td></tr>
+      <tr><td>Day 3</td><td>Sep 13</td><td><input type="checkbox"></td></tr>
+      <tr><td>Day 7</td><td>Sep 17</td><td><input type="checkbox"></td></tr>
+      <tr><td>Day 21</td><td>Oct 1</td><td><input type="checkbox"></td></tr>
+    </table>
+    <p style="font-size:0.85em; color:#57606a;">Each review: close this file, answer the 5 recall questions above from memory first, then reopen to check.</p>
+  </div>
+
+  <div class="arcs-box">
+    <h4>C — Contrast &amp; Chunk: easily confused pairs</h4>
+    <table>
+      <tr><th>Term A</th><th>Term B</th><th>The ONE distinguishing point</th></tr>
+      <tr><td>Delisting</td><td>Deregistration</td><td>Delisting is an administrative removal from the published party list (reversible, no legal effect on registration status); deregistration is complete legal cancellation of registration, available only on three narrow Supreme Court-recognized grounds</td></tr>
+      <tr><td>Recognized political party</td><td>RUPP</td><td>Recognized status requires meeting a specified vote/seat threshold in an election; a RUPP is any registered party that has not met (or never attempted) that threshold, yet both still enjoy tax exemption</td></tr>
+      <tr><td>MGNREGA</td><td>VB-G RAM G</td><td>MGNREGA was demand-driven, open-ended, and 100%-Centre-funded for wages; VB-G RAM G is normative-allocation-based, budgeted, and cost-shared 60:40/90:10 with states</td></tr>
+      <tr><td>Demand-driven allocation</td><td>Normative allocation</td><td>Demand-driven responds to actual rural distress signals but risks a "Matthew effect" favouring administratively stronger states; normative allocation guarantees poorer states a fixed share but sacrifices responsiveness to real-time need</td></tr>
+      <tr><td>Right to livelihood (Article 21, Olga Tellis)</td><td>Right to work (Article 41, DPSP)</td><td>Olga Tellis recognized livelihood as part of the Article 21 right to life (a fundamental right, though qualified); right to work itself remains only a Directive Principle, not judicially enforced as a fundamental right, per the Aruna Roy petition observations</td></tr>
+    </table>
+    <p style="font-family: Arial, sans-serif; font-size: 0.88em;"><strong>Chunk:</strong> both topics in this class share a structural pattern — a low-entry-barrier or high-flexibility system (easy party registration; demand-driven MGNREGA) gets exploited or strained over time, prompting a reform (deregistration proposals; VB-G RAM G) that trades away some of the original openness for greater control, accountability, or fiscal discipline, at the cost of a new set of side-effects (regulatory vacuum persists; unfunded mandate and lower bargaining power emerge).</p>
+  </div>
+
+  <div class="arcs-box mnemonic-box">
+    <h4>S — Stick with Encoding Tricks</h4>
+    <p><strong>RUPP funnel image:</strong> a wide funnel labelled "Article 19(1)(c)" pouring in thousands of associations; most settle as RUPPs in the funnel's wide middle section; only a few vote-share winners squeeze through the narrow "recognized party" spout at the bottom. A tap at the very top (deregistration) is missing — so nothing that enters the funnel can ever be fully drained back out, only temporarily strained through a "delisting" sieve.</p>
+    <p><strong>VB-G RAM G "125 vs 100, minus 60" image:</strong> MGNREGA's clock shows 100 days, fully wound by the Centre (100% funded). VB-G RAM G's clock shows 125 days, but the winding key is now shared — the Centre turns it 60% of the way (90% in hill states), and the state must turn the rest, or the clock stops (unfunded mandate).</p>
+    <p><strong>FNU mnemonic:</strong> the three deregistration grounds — Fraud, Non-allegiance (unconstitutional party-constitution amendment), Unlawful association.</p>
+  </div>
+</section>
+
+<section id="gaps">
+  <h2>Supplementary research — filling gaps</h2>
+
+  <div class="gap-box">
+    <h4>Indian National Congress (I) v. Institute of Social Welfare (2002) — verified, nuance added</h4>
+    <p>Confirmed: decided 10 May 2002. The Supreme Court held the Election Commission has no general power to deregister a political party under the Representation of the People Act, 1951. Deregistration is permissible only where: (i) registration was obtained by fraud/forgery, (ii) the party amended its constitution in a manner inconsistent with the Section 29A(5) undertaking of allegiance to the Constitution, or (iii) the party has been declared unlawful. The lecture's framing (three grounds) matches this, though the second ground is more precisely a constitutional-amendment violation than a general "non-allegiance" declaration by the party itself. Source: <a href="https://indiankanoon.org/doc/1158072/" target="_blank" rel="noopener">Indian Kanoon, full judgment</a>; <a href="https://www.drishtiias.com/daily-updates/daily-news-analysis/power-of-eci-to-deregister-political-party" target="_blank" rel="noopener">Drishti IAS summary</a>.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>Section 29A, RPA 1951 — verified</h4>
+    <p>Confirmed: allows any association or body of citizens calling itself a political party to apply for registration with the Election Commission. Requires an application within 30 days of formation, including party particulars, membership details, and office-bearer names; requires publication of the proposed party name in two national and two local daily newspapers, with a 30-day objection window before the Commission decides. Source: <a href="https://www.pib.gov.in/newsite/PrintRelease.aspx?relid=196237&reg=48&lang=2" target="_blank" rel="noopener">PIB — Political Parties Registration Tracking Management System</a>; <a href="https://indiankanoon.org/doc/24930122/" target="_blank" rel="noopener">Indian Kanoon, Section 29A text</a>.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>Law Commission's 255th Report — verified</h4>
+    <p>Confirmed: the Law Commission of India's 255th Report (2015) recommended amending the RPA 1951 to give the Election Commission explicit statutory power to deregister a political party that fails to contest assembly or parliamentary elections for 10 consecutive years. The Election Commission echoed a similar recommendation in its 2016 Memorandum of Electoral Reforms. As of 2025-26 reporting, this recommendation has not yet been enacted into law. Source: <a href="https://superkalam.com/current-affairs/articles/why-the-election-commission-cannot-deregister-political-parties" target="_blank" rel="noopener">Superkalam — ECI deregistration explainer</a>; <a href="https://pwonlyias.com/current-affairs/derecognition-and-deregistration-of-political-parties/" target="_blank" rel="noopener">PWOnlyIAS — Derecognition and deregistration explainer</a>.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>Six Gujarat RUPPs — Rs 1,700 crore donation figure — verified, party names identified</h4>
+    <p>Confirmed via multiple 2026 reports: six Gujarat-based RUPPs — Aam Janmat Party, Bharatiya National Janata Dal, Garib Kalyan Party, New India United Party, Satyawadi Rakshak Party, and Swatantrata Abhivyakti Party — received donations of around Rs 1,700 crore in FY 2023-24, exceeding the combined Rs 1,480 crore received by five nationally recognized parties (excluding BJP) in the same period. The parties fielded only around 15 candidates combined in the 2024 general election. Aam Janmat Party alone reportedly received around Rs 620 crore. Source: <a href="https://www.nationalheraldindia.com/amp/story/politics/rs-1500-crore-in-donations-15-candidates-the-curious-case-of-six-gujarat-parties" target="_blank" rel="noopener">National Herald</a>; <a href="https://newskarnataka.com/india/six-gujarat-parties-raise-rs-1700-crore-despite-limited-poll-presence/07092026/" target="_blank" rel="noopener">Newskarnataka</a>.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>VB-G RAM G Act — verified, key figures confirmed</h4>
+    <p>Confirmed: the Viksit Bharat – Guarantee for Rozgar and Ajeevika Mission (Gramin) Act, 2025 came into force 1 July 2026, replacing MGNREGA. Statutory 125-day employment guarantee (up from 100 days). Fund-sharing pattern for wages, materials, and administrative costs: 60:40 (Centre:State) for general states, 90:10 for northeastern/Himalayan states — a change from MGNREGA's near-100%-Centre-funded wage bill. State-wise normative allocation set annually using the 16th Finance Commission's horizontal devolution formula; spending beyond this ceiling becomes a state liability. Interim base wage floor of Rs 300/day introduced. Source: <a href="https://vajiramandravi.com/current-affairs/vb-g-ram-g-mgnregs-rural-employment-scheme-changes/" target="_blank" rel="noopener">Vajiram &amp; Ravi</a>; <a href="https://www.outlookbusiness.com/economy-and-policy/no-relief-for-states-centre-retains-6040-funding-formula-for-rural-employment-scheme" target="_blank" rel="noopener">Outlook Business</a>; <a href="https://prsindia.org/billtrack/the-viksit-bharat-%E2%80%93-guarantee-for-rozgar-and-ajeevika-mission-gramin-vb-%E2%80%93-g-ram-g-bill-2025" target="_blank" rel="noopener">PRS Legislative Research</a>.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>Olga Tellis v. Bombay Municipal Corporation (1985) — verified</h4>
+    <p>Confirmed: decided 10 July 1985 by a five-judge bench. Held that the right to life under Article 21 includes the right to livelihood, since "no person can live without the means of living." Notably, the Court still upheld the Municipality's power to evict pavement/slum dwellers on procedural grounds, softened only by directions for humane treatment — a nuance worth noting if this case is cited for more than the bare "right to livelihood" holding. Source: <a href="https://en.wikipedia.org/wiki/Olga_Tellis_v._Bombay_Municipal_Corporation" target="_blank" rel="noopener">Case overview</a>; <a href="https://indiankanoon.org/doc/709776/" target="_blank" rel="noopener">Indian Kanoon, full judgment</a>.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>Aruna Roy petition on MGNREGA — verified, direction of holding confirmed</h4>
+    <p>Confirmed: Supreme Court observations (2026, during the MGNREGA-to-VB-G-RAM-G transition) described MGNREGA as effective, a "good, effective welfare scheme," and rejected the framing of it as a freebie or exploitation of rural workers. The Court separately questioned whether a statutory rural-employment guarantee can be equated with the Article 21 fundamental right to life/dignity, noting the Constitution does not recognize a fundamental right to work — this is a live, not fully settled, judicial observation rather than a final declaration either way. Source: <a href="https://www.etvbharat.com/en/bharat/supreme-court-cautions-wage-floor-may-cut-jobs-questions-equating-rural-work-with-right-to-life-enn26082105521" target="_blank" rel="noopener">ETV Bharat</a>; <a href="https://www.barandbench.com/news/litigation/should-right-to-work-be-made-fundamental-right-supreme-court-on-plea-for-minimum-wage-in-rural-employment-schemes" target="_blank" rel="noopener">Bar and Bench</a>.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>MGNREGA demand decline, FY 2020-21 to FY 2025-26 — verified, 53% figure confirmed</h4>
+    <p>Confirmed via Economic Survey 2025-26: person-days of work generated under MGNREGA fell from a pandemic peak of 3,890 million in 2020-21 to about 1,837.7 million in 2025-26 (up to 31 December 2025) — a drop of just over 53%. This resolves the instructor's in-class self-correction between "56%" and "53%" in favour of 53%. Source: <a href="https://m.thewire.in/article/government/mgnregs-witnessed-fall-in-workdays-in-2025-26-consistent-decline-seen-across-key-employment-indicators-report" target="_blank" rel="noopener">The Wire, citing Economic Survey 2025-26</a>; <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2220800&reg=48&lang=2" target="_blank" rel="noopener">PIB — Economic Survey 2025-26</a>.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>World Bank MGNREGA study — verified, national &amp; Bihar figures confirmed</h4>
+    <p>Study identified: Dutta, Murgai, Ravallion &amp; van de Walle, "Does India's Employment Guarantee Scheme Guarantee Employment?" (World Bank Policy Research Working Paper 6003, 2012; also published in EPW) and the related "Right to Work? Assessing India's Employment Guarantee Scheme in Bihar." Confirmed findings: nationally, about 44% of households wanting NREGA work did not get it — i.e. roughly 56% did, matching the class's "~56% national average" figure. In Bihar, the rationing rate was around 79% — i.e. roughly 21% got work, closely matching the class's "~22% in Bihar" figure. The Uttar Pradesh figure (class cited ~48%) could not be tied to the exact same survey round in the sources checked — treat it as directionally plausible but verify against the original paper's state-wise table before citing precisely. Source: <a href="https://documents1.worldbank.org/curated/en/464991468051015810/pdf/WPS6003.pdf" target="_blank" rel="noopener">World Bank Policy Research Working Paper 6003 (PDF)</a>.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>Unverified/garbled attributions and figures from the auto-transcript — flagged for caution</h4>
+    <ul>
+      <li>The original scholar credited with the modern/traditional/saintly political-culture typology was not clearly named by the auto-transcript (a student in the recording supplies a name inaudibly) — do not cite a specific scholar's name for this typology without independent verification.</li>
+      <li>The economist referenced for the "unfunded mandate" concept was transcribed unclearly as "Professor Son Desai" or "Sondesai" — a fresh web search could not match this with confidence to a specific named economist (it found only general commentary on VB-G RAM G's fiscal-federalism concerns, e.g. by Jean Drèze, but not tied to this specific term or name) — attribute generically ("economists have described this as an unfunded mandate") rather than naming a specific person in an exam answer.</li>
+      <li>The Tamil Nadu scheme referenced in class as adding "25 more days" to reach "150 days" of guaranteed work could not be confirmed via a fresh web search. Available reporting confirms only that Tamil Nadu, like all states, moved to the national 125-day VB-G RAM G guarantee (funded 60:40, Centre:State) from 1 July 2026 — itself a 25-day increase over MGNREGA's 100 days. No independent source confirms a further Tamil-Nadu-specific top-up to 150 days; the "150-day" figure may be a conflation of the national 100-to-125 increase with a separate state top-up. Verify against an official Tamil Nadu government notification before citing "150 days" specifically in an exam answer.</li>
+    </ul>
+  </div>
+</section>
+
+</div>
+
+<footer>
+  Notes compiled from an unlisted lecture recording using YouTube's auto-generated transcript. Timestamps are approximate; several names and figures were transcribed imperfectly by auto-captions and are flagged inline for verification against the original lecture or handwritten notes before citing in an exam answer. Supplementary research sections are separately verified via web search and marked accordingly. Click Save (first time will ask you to pick this file) to write your edits directly to disk — no chat needed.
+</footer>
+
+
+<script>
+(function() {
+  var mode = null;
+  var noteCounter = 0;
+
+  var btnHighlight = document.getElementById('btn-highlight');
+  var btnUnderline = document.getElementById('btn-underline');
+  var btnNote = document.getElementById('btn-note');
+  var btnClear = document.getElementById('btn-clear');
+  var btnSave = document.getElementById('btn-save');
+  var statusText = document.getElementById('status-text');
+  var contentRoot = document.getElementById('content-root');
+  var noteBox = document.getElementById('note-input-box');
+  var noteText = document.getElementById('note-text');
+  var pendingNoteTarget = null;
+
+  function setMode(newMode) {
+    mode = mode === newMode ? null : newMode;
+    btnHighlight.classList.toggle('active', mode === 'highlight');
+    btnUnderline.classList.toggle('active', mode === 'underline');
+    btnNote.classList.toggle('active', mode === 'note');
+  }
+
+  btnHighlight.addEventListener('click', function() { setMode('highlight'); });
+  btnUnderline.addEventListener('click', function() { setMode('underline'); });
+  btnNote.addEventListener('click', function() { setMode('note'); });
+
+  function markDirty() {
+    statusText.textContent = 'Unsaved changes';
+    statusText.style.color = '#993c1d';
+  }
+
+  document.addEventListener('mouseup', function(e) {
+    if (mode !== 'highlight' && mode !== 'underline') return;
+    var sel = window.getSelection();
+    if (!sel || sel.isCollapsed || sel.rangeCount === 0) return;
+    var range = sel.getRangeAt(0);
+    if (!contentRoot.contains(range.commonAncestorContainer)) return;
+
+    var wrapper = document.createElement(mode === 'highlight' ? 'mark' : 'u');
+    wrapper.className = mode === 'highlight' ? 'user-highlight' : 'user-underline';
+    try {
+      range.surroundContents(wrapper);
+    } catch (err) {
+      var frag = range.extractContents();
+      wrapper.appendChild(frag);
+      range.insertNode(wrapper);
+    }
+    sel.removeAllRanges();
+    markDirty();
+  });
+
+  contentRoot.addEventListener('click', function(e) {
+    if (mode !== 'note') return;
+    if (e.target.closest('.user-note')) return;
+    pendingNoteTarget = e.target;
+    noteBox.style.display = 'block';
+    var x = Math.min(e.clientX, window.innerWidth - 280);
+    var y = Math.min(e.clientY, window.innerHeight - 140);
+    noteBox.style.left = x + 'px';
+    noteBox.style.top = y + 'px';
+    noteText.value = '';
+    noteText.focus();
+  });
+
+  document.getElementById('note-cancel').addEventListener('click', function() {
+    noteBox.style.display = 'none';
+    pendingNoteTarget = null;
+  });
+
+  document.getElementById('note-add').addEventListener('click', function() {
+    var text = noteText.value.trim();
+    if (!text || !pendingNoteTarget) { noteBox.style.display = 'none'; return; }
+    noteCounter++;
+    var noteDiv = document.createElement('div');
+    noteDiv.className = 'user-note';
+    noteDiv.setAttribute('data-note-id', noteCounter);
+    noteDiv.innerHTML = '<span class="note-label">Your note</span>' +
+      '<button class="del-note" title="Remove note">&times;</button>' +
+      '<span class="note-body"></span>';
+    noteDiv.querySelector('.note-body').textContent = text;
+    noteDiv.querySelector('.del-note').addEventListener('click', function() {
+      noteDiv.remove();
+      markDirty();
+    });
+
+    var target = pendingNoteTarget.closest('li, p, td, div.quote-card, section') || contentRoot;
+    target.parentNode.insertBefore(noteDiv, target.nextSibling);
+
+    noteBox.style.display = 'none';
+    pendingNoteTarget = null;
+    markDirty();
+    setMode('note');
+  });
+
+  btnClear.addEventListener('click', function() {
+    if (!confirm('Remove all your highlights, underlines, and notes on this page?')) return;
+    contentRoot.querySelectorAll('.user-note').forEach(function(n) { n.remove(); });
+    contentRoot.querySelectorAll('mark.user-highlight').forEach(function(m) {
+      var parent = m.parentNode;
+      while (m.firstChild) parent.insertBefore(m.firstChild, m);
+      parent.removeChild(m);
+    });
+    contentRoot.querySelectorAll('u.user-underline').forEach(function(u) {
+      var parent = u.parentNode;
+      while (u.firstChild) parent.insertBefore(u.firstChild, u);
+      parent.removeChild(u);
+    });
+    markDirty();
+  });
+
+  var fallbackHelp = document.getElementById('fallback-help');
+  document.getElementById('fallback-close').addEventListener('click', function() {
+    fallbackHelp.style.display = 'none';
+  });
+
+  var fileHandle = null;
+  var fsaSupported = 'showSaveFilePicker' in window;
+  var THIS_FILENAME = 'notes.html';
+
+  function buildFullHtml() {
+    var doc = document.documentElement.cloneNode(true);
+    var liveContentRoot = doc.querySelector('#content-root');
+    if (liveContentRoot) liveContentRoot.innerHTML = contentRoot.innerHTML;
+    return '<!DOCTYPE html>\n' + doc.outerHTML;
+  }
+
+  async function writeToFile() {
+    var writable = await fileHandle.createWritable();
+    await writable.write(buildFullHtml());
+    await writable.close();
+  }
+
+  btnSave.addEventListener('click', async function() {
+    statusText.textContent = 'Saving…';
+    statusText.style.color = '#57606a';
+    if (!fsaSupported) {
+      fallbackHelp.style.display = 'block';
+      statusText.textContent = 'Direct save not supported in this browser';
+      statusText.style.color = '#993c1d';
+      return;
+    }
+    try {
+      if (!fileHandle) {
+        fileHandle = await window.showSaveFilePicker({
+          suggestedName: THIS_FILENAME,
+          types: [{ description: 'HTML file', accept: { 'text/html': ['.html'] } }]
+        });
+      }
+      var perm = await fileHandle.queryPermission({ mode: 'readwrite' });
+      if (perm !== 'granted') {
+        perm = await fileHandle.requestPermission({ mode: 'readwrite' });
+      }
+      if (perm !== 'granted') {
+        statusText.textContent = 'File permission denied — click Save to retry';
+        statusText.style.color = '#993c1d';
+        fileHandle = null;
+        return;
+      }
+      await writeToFile();
+      statusText.textContent = 'Saved to file just now';
+      statusText.style.color = '#3b6d11';
+    } catch (err) {
+      console.error('SAVE_ERROR', err.name, err.message, err);
+      if (err.name === 'AbortError') {
+        statusText.textContent = 'Save cancelled';
+        statusText.style.color = '#57606a';
+      } else {
+        statusText.textContent = 'Save failed: ' + err.name + ' — click Save to retry';
+        statusText.style.color = '#993c1d';
+        fileHandle = null;
+      }
+    }
+  });
+
+  contentRoot.querySelectorAll('.user-note .del-note').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      btn.closest('.user-note').remove();
+      markDirty();
+    });
+  });
+
+  contentRoot.querySelectorAll('.spacing-tracker input[type="checkbox"]').forEach(function(cb) {
+    cb.addEventListener('change', function() {
+      if (cb.checked) { cb.setAttribute('checked', 'checked'); }
+      else { cb.removeAttribute('checked'); }
+      markDirty();
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
