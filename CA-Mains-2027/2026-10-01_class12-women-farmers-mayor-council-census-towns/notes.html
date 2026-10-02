@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class 12(27): Feminization of Agriculture, Mayor-in-Council Urban Governance, Census Towns &amp; Hidden Urbanization</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: #faf9f6;
+    color: #1f2328;
+    margin: 0;
+    padding: 0 0 80px;
+    line-height: 1.6;
+  }
+  .toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: #ffffff;
+    border-bottom: 2px solid #1d5b8b;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: Arial, sans-serif;
+    flex-wrap: wrap;
+  }
+  .toolbar button {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    padding: 7px 14px;
+    border-radius: 6px;
+    border: 1px solid #d8d2c6;
+    background: #fff;
+    cursor: pointer;
+    color: #1f2328;
+  }
+  .toolbar button:hover { background: #e6f1fb; border-color: #1d5b8b; }
+  .toolbar button.active { background: #1d5b8b; color: #fff; border-color: #1d5b8b; }
+  .toolbar .save-btn { background: #2f6b4f; color: #fff; border-color: #2f6b4f; margin-left: auto; }
+  .toolbar .save-btn:hover { background: #24543e; }
+  .toolbar .status { font-size: 12px; color: #57606a; margin-left: auto; padding-right: 8px; }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 30px 20px; }
+  header { border-bottom: 3px solid #1d5b8b; padding-bottom: 20px; margin-bottom: 30px; }
+  header h1 { font-size: 1.6em; margin: 0 0 6px; color: #1d5b8b; }
+  header .meta { color: #57606a; font-size: 0.95em; font-family: Arial, sans-serif; }
+  section { margin-bottom: 42px; }
+  h2 { font-size: 1.4em; color: #1d5b8b; border-left: 4px solid #1d5b8b; padding-left: 12px; margin-bottom: 14px; }
+  h3 { font-size: 1.12em; margin: 22px 0 8px; }
+  p { margin: 10px 0; }
+  .summary-box { background: #e6f1fb; border-radius: 8px; padding: 18px 22px; font-size: 0.98em; }
+  ul, ol.answers { padding-left: 24px; }
+  li { margin-bottom: 6px; }
+  .timestamp { font-family: 'Courier New', monospace; font-size: 0.78em; color: #57606a; background: #e2ddd4; border-radius: 4px; padding: 1px 6px; margin-right: 6px; }
+  .quote-card { background: #fff; border: 1px solid #e2ddd4; border-left: 4px solid #1d5b8b; border-radius: 6px; padding: 14px 18px; margin: 14px 0; }
+  .quote-card .q { font-style: italic; font-size: 1.05em; }
+  .quote-card .attrib { font-family: Arial, sans-serif; font-size: 0.85em; color: #57606a; margin-top: 6px; }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.95em; background: #fff; }
+  th, td { border: 1px solid #e2ddd4; padding: 8px 12px; text-align: left; vertical-align: top; }
+  th { background: #e6f1fb; font-family: Arial, sans-serif; font-size: 0.88em; }
+  .gap-box { background: #eef4f0; border: 1px solid #cfe3d6; border-radius: 8px; padding: 16px 20px; margin-top: 16px; font-size: 0.95em; }
+  .gap-box h4 { margin: 0 0 8px; color: #2f6b4f; font-family: Arial, sans-serif; font-size: 0.95em; }
+  .exam-tip { background: #fff7e6; border: 1px solid #f0dba8; border-radius: 8px; padding: 14px 20px; margin: 14px 0; font-size: 0.95em; }
+  .exam-tip::before { content: "Exam strategy: "; font-weight: bold; font-family: Arial, sans-serif; }
+  .term-box { background: #fdf3f3; border: 1px solid #ecd4d4; border-radius: 8px; padding: 12px 16px; margin: 10px 0; }
+  .term-box strong { color: #8b3a3a; }
+  .data-box { background: #f3f0fb; border: 1px solid #ddd6f0; border-radius: 8px; padding: 12px 16px; margin: 10px 0; font-family: 'Courier New', monospace; font-size: 0.9em; }
+  footer { margin-top: 60px; border-top: 1px solid #e2ddd4; padding-top: 16px; color: #57606a; font-size: 0.82em; font-family: Arial, sans-serif; }
+  .toc {
+    background: #fff;
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    padding: 16px 22px;
+    margin-bottom: 36px;
+    font-family: Arial, sans-serif;
+    font-size: 0.9em;
+  }
+  .toc h2 { font-size: 1em; margin: 0 0 10px; border: none; padding: 0; color: #1d5b8b; text-transform: uppercase; letter-spacing: 0.04em; }
+  .toc ol { columns: 2; margin: 0; padding-left: 20px; }
+  .toc a { color: #1f2328; text-decoration: none; }
+  .toc a:hover { color: #1d5b8b; text-decoration: underline; }
+  details.collapse-section {
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    background: #fff;
+    margin: 14px 0;
+    padding: 0;
+  }
+  details.collapse-section summary {
+    cursor: pointer;
+    padding: 12px 16px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 0.92em;
+    color: #1d5b8b;
+    list-style: none;
+  }
+  details.collapse-section summary::-webkit-details-marker { display: none; }
+  details.collapse-section summary::before { content: "▸ "; }
+  details.collapse-section[open] summary::before { content: "▾ "; }
+  details.collapse-section .collapse-body { padding: 4px 16px 16px; }
+  .glossary-term {
+    display: flex;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+  }
+  .glossary-term:last-child { border-bottom: none; }
+  .glossary-term dt { font-weight: bold; color: #8b3a3a; min-width: 220px; flex-shrink: 0; font-family: Arial, sans-serif; font-size: 0.9em; }
+  .glossary-term dd { margin: 0; }
+
+  mark.user-highlight { background: #fff176; padding: 1px 2px; border-radius: 2px; }
+  u.user-underline { text-decoration: underline; text-decoration-color: #1d5b8b; text-decoration-thickness: 2px; }
+  .user-note {
+    background: #e6f1fb;
+    border: 1px solid #85b7eb;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin: 8px 0;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #0c447c;
+    position: relative;
+  }
+  .user-note .note-label { font-weight: bold; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; display: block; }
+  .user-note .del-note { position: absolute; top: 6px; right: 8px; cursor: pointer; border: none; background: none; color: #0c447c; font-size: 14px; font-family: Arial, sans-serif; }
+  #note-input-box {
+    position: fixed;
+    display: none;
+    background: #fff;
+    border: 2px solid #1d5b8b;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    z-index: 100;
+    font-family: Arial, sans-serif;
+  }
+  #note-input-box textarea { width: 240px; height: 60px; font-family: Arial, sans-serif; font-size: 13px; border: 1px solid #d8d2c6; border-radius: 4px; padding: 6px; }
+  #note-input-box .note-actions { margin-top: 6px; display: flex; gap: 6px; justify-content: flex-end; }
+  #note-input-box button { font-size: 12px; padding: 5px 10px; border-radius: 4px; border: 1px solid #d8d2c6; background: #fff; cursor: pointer; }
+  #note-input-box button.primary { background: #1d5b8b; color: #fff; border-color: #1d5b8b; }
+  .content-target::selection { background: #ffe082; }
+  .board-caption { font-family: Arial, sans-serif; font-size: 0.82em; color: #57606a; margin-top: -8px; margin-bottom: 14px; }
+  .arcs-box {
+    background: #fff;
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 14px 0;
+  }
+  .arcs-box h4 { margin: 0 0 10px; color: #1d5b8b; font-family: Arial, sans-serif; font-size: 0.98em; }
+  .recall-q { margin-bottom: 14px; }
+  .recall-q p.q-text { font-weight: bold; margin: 0 0 6px; }
+  .recall-q details { border: none; margin: 0; }
+  .recall-q summary { font-family: Arial, sans-serif; font-size: 0.82em; color: #1d5b8b; cursor: pointer; list-style: none; padding: 2px 0; }
+  .recall-q summary::-webkit-details-marker { display: none; }
+  .recall-q summary::before { content: "Show answer \25B8 "; }
+  .recall-q details[open] summary::before { content: "Hide answer \25BE "; }
+  .recall-q .ans { background: #eef4f0; border-radius: 6px; padding: 8px 12px; margin-top: 6px; font-size: 0.95em; }
+  .spacing-tracker { font-family: Arial, sans-serif; font-size: 0.92em; }
+  .spacing-tracker table { margin: 8px 0; }
+  .spacing-tracker input[type="checkbox"] { width: 16px; height: 16px; cursor: pointer; }
+  .mnemonic-box { background: #fff7e6; border: 1px solid #f0dba8; border-radius: 8px; padding: 14px 18px; margin: 10px 0; }
+  .mnemonic-box h4 { margin: 0 0 6px; color: #8b5a1d; font-family: Arial, sans-serif; font-size: 0.92em; }
+  .applic-table td.gs-tag { font-family: Arial, sans-serif; font-weight: bold; font-size: 0.85em; white-space: nowrap; }
+  .applic-table .prelims-badge, .applic-table .mains-badge {
+    display: inline-block; font-family: Arial, sans-serif; font-size: 0.72em; font-weight: bold;
+    padding: 2px 8px; border-radius: 10px; margin-right: 4px;
+  }
+  .prelims-badge { background: #eaf3de; color: #3b6d11; }
+  .mains-badge { background: #e6f1fb; color: #1d5b8b; }
+  #fallback-help {
+    position: fixed;
+    display: none;
+    top: 60px;
+    right: 20px;
+    max-width: 320px;
+    background: #fff;
+    border: 2px solid #993c1d;
+    border-radius: 8px;
+    padding: 14px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    z-index: 200;
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <button id="btn-highlight" title="Select text, then click to highlight it">Highlight</button>
+  <button id="btn-underline" title="Select text, then click to underline it">Underline</button>
+  <button id="btn-note" title="Click this, then click anywhere in the notes to drop a note">Add note</button>
+  <button id="btn-clear" title="Remove all your highlights, underlines, and notes">Clear my edits</button>
+  <span class="status" id="status-text">Not connected to file — click Save once to connect</span>
+  <button class="save-btn" id="btn-save">Save</button>
+</div>
+
+<div id="fallback-help">
+  <strong>Your browser can't save directly</strong>
+  <p style="margin:6px 0;">File System Access isn't supported here (common on Safari/Firefox). Use Chrome or Edge to enable direct-save, or use your browser's Save Page As (Ctrl/Cmd+S) to overwrite this file manually after editing.</p>
+  <button id="fallback-close" style="font-size: 12px; padding: 6px 12px; border-radius: 4px; border: 1px solid #993c1d; background: #993c1d; color: #fff; cursor: pointer;">Got it</button>
+</div>
+
+<div id="note-input-box">
+  <textarea id="note-text" placeholder="Type your note..."></textarea>
+  <div class="note-actions">
+    <button id="note-cancel">Cancel</button>
+    <button class="primary" id="note-add">Add</button>
+  </div>
+</div>
+
+<div class="wrap content-target" id="content-root">
+
+<header>
+  <h1>Class 12(27) — Feminization of Agriculture, Mayor-in-Council Urban Governance, Census Towns &amp; Hidden Urbanization</h1>
+  <div class="meta">
+    <span>Source: unlisted YouTube lecture recording ("class 12"), uploader Saurav Anand</span> &middot;
+    <span>Substantive content: 0:00 &ndash; 2:12:34 (full upload runs 2:23:19; the final ~11 minutes after the last live-answer review appear to be silence/outro with no further captioned speech)</span> &middot;
+    <span>Track: UPSC GS-1 (Society, Urbanization) / GS-2 (Polity, Federalism, Governance, Social Justice) / GS-3 (Agriculture) — Current Affairs with three live Mains answer-writing exercises</span>
+  </div>
+</header>
+
+<div class="gap-box">
+  <h4>Note on the two still-outstanding deferrals from earlier classes</h4>
+  <p><strong>PM-AASHA live exercise (deferred from Class 8, not covered in Classes 9, 10, 10-A, or 11):</strong> checked carefully across this entire transcript. Does not appear anywhere in this session either.</p>
+  <p><strong>"Exchange entitlement decline" (deferred from Class 9, linked to M.S. Swaminathan's writing on Panchayat-level corruption; not covered in Class 10, 10-A, or 11):</strong> also checked carefully. Does not appear in this session. Note: this class does reference Dr. M.S. Swaminathan twice (the National Policy for Farmers 2007's activity-linked farmer definition, and his "4 C's" framework for women's control over agriculture) — but neither reference is the "exchange entitlement decline" concept, which remains a distinct, still-undiscussed idea.</p>
+  <p>Class 12 instead opens with a brief recap of Class 11's education answer-writing exercise, then covers three new topics: feminization of agriculture (the longest topic, with a live answer-writing exercise), the Mayor-in-Council model of urban governance following a new NITI Aayog report (with a second live answer-writing exercise), and census towns/hidden urbanization (with a third live answer-writing exercise). Both deferred items remain outstanding — track PM-AASHA and exchange entitlement decline explicitly going into Class 13.</p>
+</div>
+
+<nav class="toc">
+  <h2>Contents</h2>
+  <ol>
+    <li><a href="#applicability">Applicability — GS papers, Prelims &amp; Mains</a></li>
+    <li><a href="#part1">1. Recap — Class 11 education answer-writing review</a></li>
+    <li><a href="#part2">2. Feminization of agriculture — concepts &amp; the farmer-definition debate</a></li>
+    <li><a href="#part3">3. Feminization of agriculture — data, drivers &amp; the low-equilibrium trap</a></li>
+    <li><a href="#part4">4. Feminization of agriculture — policy responses, global models &amp; way forward</a></li>
+    <li><a href="#part5">5. Live answer-writing — feminization of agriculture</a></li>
+    <li><a href="#part6">6. Mayor-in-Council — current municipal structure &amp; constitutional basis</a></li>
+    <li><a href="#part7">7. Mayor-in-Council — NITI Aayog report: problems &amp; data</a></li>
+    <li><a href="#part8">8. Mayor-in-Council — suggestions, global models &amp; challenges</a></li>
+    <li><a href="#part9">9. Live answer-writing — Mayor-in-Council</a></li>
+    <li><a href="#part10">10. Census towns — concepts &amp; constitutional classification</a></li>
+    <li><a href="#part11">11. Census towns — data, issues, state initiatives &amp; way forward</a></li>
+    <li><a href="#part12">12. Live answer-writing — census towns</a></li>
+    <li><a href="#glossary">Glossary — quick revision</a></li>
+    <li><a href="#arcs">Revision kit (ARCS)</a></li>
+    <li><a href="#gaps">Supplementary research</a></li>
+  </ol>
+</nav>
+
+<section id="summary">
+  <h2>Executive summary</h2>
+  <div class="summary-box">
+  <p>A dense 2h12m of substantive content (video runs 2h23m total). Opens with a short recap, then three distinct topics, two ending in a live Mains answer-writing exercise with instructor review (a third live question is set right at the very end, without time for in-class review).</p>
+  <ul>
+    <li><strong>Recap (0:00 &ndash; 6:30):</strong> instructor reviews students' homework answers on Class 11's "education in the Concurrent List" question — not new content, just technique feedback.</li>
+    <li><strong>Feminization of agriculture (6:31 &ndash; 1:03:00):</strong>
+      <ul>
+        <li>Concepts: feminization of agricultural labor (negative/invisibilized) vs feminization of agricultural management (positive/empowering); land-linked vs activity-linked definitions of "farmer"; the "low equilibrium trap."</li>
+        <li>Context: UN's 2026 International Year of the Woman Farmer; Maharashtra's Women Farmers Empowerment Act, 2026 (first state to grant farmer recognition independent of land ownership, via a Woman Farmer Certificate).</li>
+        <li>Live answer-writing exercise on structural barriers faced by women in agriculture and the significance of activity-based recognition.</li>
+      </ul>
+    </li>
+    <li><strong>Mayor-in-Council / urban governance (1:06:15 &ndash; 1:48:21):</strong>
+      <ul>
+        <li>Context: NITI Aayog's April 2026 report "Moving Towards Effective City Government: A Framework for Million-Plus Cities."</li>
+        <li>Concepts: bureaucratic centralization (vs the promised democratic decentralization), residual claimant model, cabinet-style governance, unified service delivery.</li>
+        <li>Live answer-writing exercise on the gap between the 74th Constitutional Amendment's promise of participatory democracy and bureaucrat-run Indian cities.</li>
+      </ul>
+    </li>
+    <li><strong>Census towns &amp; hidden urbanization (1:48:21 &ndash; 2:12:34):</strong>
+      <ul>
+        <li>Context: Ministry of Housing and Urban Affairs' draft report "Census Criteria for Defining Urban Areas," placed before a Parliamentary Standing Committee, arguing for replacing the obsolete 1981 classification criteria.</li>
+        <li>Concepts: statutory town vs census town; rural-urban continuum vs rural-urban binary; peri-urban area; sub-urbanization; the UN's DEGURBA (Degree of Urbanization) framework.</li>
+        <li>Live answer-writing exercise (set at the very end, 2:11:16 onward) on the governance vacuum created by census towns remaining unnotified as statutory urban bodies.</li>
+      </ul>
+    </li>
+  </ul>
+  <p style="font-family: Arial, sans-serif; font-size: 0.88em; color: #57606a;">Instructor's repeated meta-advice this session: write content-first, not page-count-first; always box/highlight 1-2 "consequence" lines so the examiner sees you addressing both the positive and negative side of any debate; use whatever framework (e.g. "recognize, reduce, redistribute") you've learned in one topic across other current-affairs topics too.</p>
+  </div>
+</section>
+
+<section id="applicability">
+  <h2>Applicability — GS papers, Prelims &amp; Mains</h2>
+  <table class="applic-table">
+    <tr><th>Sub-topic</th><th>GS Paper</th><th>Prelims</th><th>Mains</th></tr>
+    <tr>
+      <td class="gs-tag">Feminization of agriculture &amp; the farmer-definition debate</td>
+      <td>GS-1 (Society) / GS-3 (Agriculture) / GS-2 (Social Justice)</td>
+      <td><span class="prelims-badge">High</span>Scheme names, percentages (64%, 14%, 23%, 24%), and the Maharashtra Act's specific features are exact-fact MCQ material.</td>
+      <td><span class="mains-badge">High</span>A live, current (2026) gender-and-agriculture theme; this session's own live question is a reusable template.</td>
+    </tr>
+    <tr>
+      <td class="gs-tag">Mayor-in-Council model / NITI Aayog "Effective City Government" report</td>
+      <td>GS-2 (Polity, Federalism, Local Governance)</td>
+      <td><span class="prelims-badge">High</span>Article numbers (243Q, 243R, 243U), report data (4/18 functions, 46-47 cities, 60% GDP), and the report's release details are classic statement-based MCQ material.</td>
+      <td><span class="mains-badge">High</span>A recurring Mains theme (urban federalism, 74th CAA implementation gap); this session's own live question is a reusable template.</td>
+    </tr>
+    <tr>
+      <td class="gs-tag">Census towns, hidden urbanization &amp; the DEGURBA framework</td>
+      <td>GS-1 (Geography, Urbanization) / GS-2 (Governance)</td>
+      <td><span class="prelims-badge">High</span>Definitions (statutory town vs census town), the 1981 criteria, and DEGURBA/derba terminology are classic Prelims fodder, especially topical given the live Ministry report.</td>
+      <td><span class="mains-badge">High</span>A live, high-salience topic given the Ministry's draft report currently before a Parliamentary Standing Committee; this session's own live question is a reusable template.</td>
+    </tr>
+  </table>
+  <p style="font-family: Arial, sans-serif; font-size: 0.85em; color: #57606a;">Rule of thumb applied across this series: any named Act/report/scheme/formula with a specific year or figure is Prelims-relevant; any debate, theoretical framework, or comparative-model discussion is Mains-relevant.</p>
+</section>
+
+<section id="part1">
+  <h2>1. Recap — Class 11 education answer-writing review</h2>
+  <p><span class="timestamp">0:00</span>Instructor opened by reviewing student-submitted answers to Class 11's live Mains question: <em>"Education's inclusion in the Concurrent List is intended to promote cooperative federalism, but it has increasingly become an area of Union-State friction. Examine this in the context of recent disagreements."</em></p>
+  <ul>
+    <li>Suggested structure walked through live:
+      <ul>
+        <li>Context: the Justice Kurian Joseph Committee (Tamil Nadu) suggesting a shift of education back to the State List, reigniting the Centre-state debate.</li>
+        <li>Background: education's 1976 shift (42nd Constitutional Amendment Act) from the State List to the Concurrent List, with a few positive framings (national integration, uniform standards) to equate with "cooperative federalism."</li>
+        <li>Areas of friction (five listed): (1) coercive/conditional CSS funding (e.g. PM SHRI, Samagra Shiksha) opposed by states like Tamil Nadu; (2) an expenditure-responsibility mismatch — states bear ~75% of spending burden, while the Union's own budget share for education fell from 4.6% to 2.5% (instructor dated this "2013-14 to 2023-24" in class, though see Class 11's file for the verified 2025-26 figure); (3) the NEP three-language formula; (4) opposition to UGC norms; (5) Vice-Chancellor/higher-education appointment disputes.</li>
+        <li>Centralization concerns: NEET as a "single point of failure" (citing exam-leak issues); school rationalization reducing the number of schools; the quality-versus-quantity debate (ASER report, India running ~5x as many schools as China yet still facing learning-outcome challenges).</li>
+        <li>Suggested conclusion hooks: education as a vehicle for social mobility; Article 21A (Right to Education); the "liberty model vs control model" framing attributed in class to a former Vice Chancellor.</li>
+      </ul>
+    </li>
+  </ul>
+  <p style="font-family: Arial, sans-serif; font-size: 0.85em; color: #57606a;">This recap does not introduce new facts beyond Class 11's file — see that file's Part 10-12 for full constitutional/case-law detail on education in the Concurrent List.</p>
+</section>
+
+<section id="part2">
+  <h2>2. Feminization of agriculture — concepts &amp; the farmer-definition debate</h2>
+  <p><span class="timestamp">6:31</span>Instructor announced the planned structure: introduction and context, concept and data, drivers and structural barriers, case studies (domestic and global), suggestions, and conclusion.</p>
+
+  <h3>Context that opened the topic</h3>
+  <ul>
+    <li>The United Nations has designated 2026 as the International Year of the Woman Farmer.
+      <ul>
+        <li>Resolution proposed by the United States, supported by the FAO, adopted by the UN General Assembly in 2024 — confirmed in Supplementary research.</li>
+      </ul>
+    </li>
+    <li>India's agrarian economy presents a paradox: farming is increasingly driven by women (feminization of agriculture), but the legal/administrative system does not recognize them as farmers — producing, alongside feminization, a parallel "feminization of poverty."</li>
+    <li>Immediate trigger: Maharashtra's Women Farmers Empowerment Bill, 2026, making Maharashtra the first Indian state to grant independent statutory recognition to women as farmers, irrespective of land ownership, via a Woman Farmer Certificate.</li>
+  </ul>
+
+  <h3>Defining "feminization of agriculture" — two dimensions</h3>
+  <div class="term-box">
+    <strong>Feminization of agricultural labor (negative connotation):</strong>
+    <ul>
+      <li>More women working as agricultural laborers/workers, without holding any land titles.</li>
+      <li>Because they lack land titles, they work mainly as unpaid family labor, or are underpaid relative to men.</li>
+      <li>Result: "invisibilization" of women's labor — since their work is not recognized or made visible, no targeted schemes or benefits follow.</li>
+      <li>Instructor's framing: this is the dominant, problematic pattern actually seen in India.</li>
+    </ul>
+  </div>
+  <div class="term-box">
+    <strong>Feminization of agricultural management (positive connotation):</strong>
+    <ul>
+      <li>Women become decision-makers and control the land itself — i.e. they gain agency.</li>
+      <li>This form is visible and widely treated as empowerment, not a problem.</li>
+      <li>Instructor's summary line: "Men hold the titles here; women do the work. [We need] women to hold the titles or control."</li>
+    </ul>
+  </div>
+
+  <h3>The farmer-definition debate — three competing models</h3>
+  <ul>
+    <li><strong>Model 1 — Administrative/land-linked definition:</strong>
+      <ul>
+        <li>A farmer is defined as a landholding person, based on "record of rights" (ownership-based eligibility).</li>
+        <li>Presently used for most major schemes, e.g. PM-KISAN's direct benefit transfer.</li>
+        <li>Key flaw: excludes tenant farmers and sharecroppers — the people actually doing the farming.</li>
+        <li>Digital Agriculture Mission (farmer ID, farmland ID/geo-tagging, crop-sown registry) still largely follows this land-ownership-linked model, though it does build in a flexibility: if a state's own law permits, tenant farmers/sharecroppers can be onboarded too.</li>
+      </ul>
+    </li>
+    <li><strong>Model 2 — Legislative/activity-linked definition (narrow mandate):</strong>
+      <ul>
+        <li>Used in the Protection of Plant Varieties and Farmers' Rights Act, 2001 — but with a very limited mandate (protecting farmers' rights over seeds/plant varieties from being appropriated by large companies, not general welfare).</li>
+        <li>Here, "farmer" is defined by activity: someone who grows crops, supervises cultivation, and protects plant varieties — not by land ownership.</li>
+      </ul>
+    </li>
+    <li><strong>Model 3 — Activity-based recognition (the recommended reform):</strong>
+      <ul>
+        <li>Recommended by the National Policy for Farmers, 2007 (chaired by Dr. M.S. Swaminathan under the National Commission on Farmers) — defines "farmer" by the agricultural activity performed, not land title.</li>
+        <li>Maharashtra's 2026 Act adopts exactly this model, using the National Policy for Farmers' definitions of "farmer" and "agriculture" (crop husbandry, animal husbandry, poultry, fishery, agroforestry, vermiculture, mushroom cultivation, primary processing).</li>
+        <li>Since agriculture is a State List subject, this activity-linked shift can only be enacted state-by-state (no uniform pan-India definition is possible without each state legislating); other states are urged to treat Maharashtra as a best-practice model.</li>
+      </ul>
+    </li>
+  </ul>
+  <div class="exam-tip">If asked to "evaluate" the activity-linked model (not just explain it), always box 1-2 implementation-problem lines even while explaining it — e.g. verification difficulty (revenue department must certify activity-based claims) and the resulting risk of exclusion/inclusion errors. Examiners specifically reward seeing both sides of a reform.</div>
+</section>
+
+<section id="part3">
+  <h2>3. Feminization of agriculture — data, drivers &amp; the low-equilibrium trap</h2>
+  <p><span class="timestamp">21:37</span>Instructor moved to hydrological-style data points before building out the causal chain of structural barriers.</p>
+
+  <h3>Core data points</h3>
+  <div class="data-box">
+    PLFS: 64% of working women are engaged in agriculture (their primary employment).<br>
+    Agriculture Census 2015-16: women operate only around 14% of agricultural landholdings.<br>
+    2025 workforce estimate cited in class: ~110 million women and ~127 million men employed in agriculture (near gender parity by headcount, ~46-47% women).<br>
+    Over 41% of female agricultural workers are unpaid.<br>
+    Nationally, only around 23% of PM-KISAN beneficiaries are women.<br>
+    A study cited in class found a 24% productivity gap between women-managed and men-managed farms, attributed to resource access (not operational capability).
+  </div>
+
+  <h3>Drivers of feminization (why women are taking up agriculture)</h3>
+  <ul>
+    <li>Male out-migration to non-farm work, especially construction — itself driven by agriculture becoming less remunerative ("distress-driven feminization").</li>
+    <li>Very limited alternative livelihood opportunities for rural women.</li>
+    <li>Agriculture functioning as a household safety net / subsistence fallback for food security.</li>
+    <li>Social acceptance of farm work for women (contrasted with "domestication of women" confining them to unpaid care/domestic work).</li>
+    <li>Instructor's core framing: in India's case, feminization of agriculture is <strong>distress-driven, not opportunity-driven</strong> — the critical reading (feminization of distress) dominates over the optimistic reading (feminization of agricultural management/empowerment).</li>
+  </ul>
+
+  <h3>Structural barriers</h3>
+  <ul>
+    <li><strong>Patrilineal inheritance:</strong> land titles pass down the male line by custom, so women structurally lack legal land titles.</li>
+    <li><strong>Financial exclusion:</strong> commercial banks lend against land titles as collateral; without titles, women lack institutional credit.</li>
+    <li><strong>Resource-starvation productivity gap:</strong> the 24% yield gap is due to lack of access to resources (credit, inputs, machinery) — not any operational-capability difference.</li>
+    <li><strong>Masculinized mechanization:</strong>
+      <ul>
+        <li>Farm machinery is traditionally designed for male users/heavy use.</li>
+        <li>Combined with land fragmentation (which itself limits mechanization generally), this keeps female-dominated farm work manual and low-productivity.</li>
+      </ul>
+    </li>
+    <li><strong>Market/institutional access:</strong> without assured market access (the APMC system's intended role), produce is sold at a lower-than-fair price, depressing income further.</li>
+    <li><strong>Triple burden:</strong> domestic work, care work, and farm work together — raised by the instructor via a classroom anecdote about household gender roles during Mains preparation itself.</li>
+  </ul>
+
+  <h3>The low-equilibrium trap — vicious vs virtuous cycle</h3>
+  <p>Instructor built this cycle live as the central "why" for the whole topic; see the diagram below for the full structure.</p>
+
+  <svg viewBox="0 0 760 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Vicious cycle of the low equilibrium trap in Indian agriculture, and the activity-linked reform that breaks it into a virtuous cycle">
+    <defs>
+      <marker id="arrowA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M 0 0 L 10 5 L 0 10 z" fill="#8b3a3a"></path>
+      </marker>
+      <marker id="arrowB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M 0 0 L 10 5 L 0 10 z" fill="#2f6b4f"></path>
+      </marker>
+    </defs>
+    <g font-family="Arial, sans-serif" font-size="11.5">
+      <text x="10" y="18" font-weight="bold" fill="#8b3a3a" font-size="13">Vicious cycle — the low equilibrium trap (land-linked model)</text>
+
+      <rect x="10" y="30" width="200" height="60" rx="8" fill="#fdf3f3" stroke="#8b3a3a" stroke-width="1.5"></rect>
+      <text x="110" y="55" text-anchor="middle" font-weight="bold" fill="#8b3a3a">Patrilineal inheritance</text>
+      <text x="110" y="72" text-anchor="middle" fill="#57606a" font-size="10">(land title male-held)</text>
+
+      <line x1="210" y1="60" x2="245" y2="60" stroke="#8b3a3a" stroke-width="2" marker-end="url(#arrowA)"></line>
+
+      <rect x="250" y="30" width="200" height="60" rx="8" fill="#fdf3f3" stroke="#8b3a3a" stroke-width="1.5"></rect>
+      <text x="350" y="55" text-anchor="middle" font-weight="bold" fill="#8b3a3a">Women lack legal title</text>
+      <text x="350" y="72" text-anchor="middle" fill="#57606a" font-size="10">(no record of rights)</text>
+
+      <line x1="450" y1="60" x2="485" y2="60" stroke="#8b3a3a" stroke-width="2" marker-end="url(#arrowA)"></line>
+
+      <rect x="490" y="30" width="250" height="60" rx="8" fill="#fdf3f3" stroke="#8b3a3a" stroke-width="1.5"></rect>
+      <text x="615" y="48" text-anchor="middle" font-weight="bold" fill="#8b3a3a">Excluded from schemes</text>
+      <text x="615" y="64" text-anchor="middle" font-weight="bold" fill="#8b3a3a">&amp; institutional credit</text>
+      <text x="615" y="80" text-anchor="middle" fill="#57606a" font-size="10">(PM-KISAN only 23% women)</text>
+
+      <line x1="615" y1="90" x2="615" y2="115" stroke="#8b3a3a" stroke-width="2" marker-end="url(#arrowA)"></line>
+
+      <rect x="490" y="120" width="250" height="60" rx="8" fill="#fdf3f3" stroke="#8b3a3a" stroke-width="1.5"></rect>
+      <text x="615" y="145" text-anchor="middle" font-weight="bold" fill="#8b3a3a">Socioeconomic vulnerability</text>
+      <text x="615" y="162" text-anchor="middle" fill="#57606a" font-size="10">&amp; continued dependence</text>
+
+      <line x1="490" y1="150" x2="455" y2="150" stroke="#8b3a3a" stroke-width="2" marker-end="url(#arrowA)"></line>
+
+      <rect x="250" y="120" width="200" height="60" rx="8" fill="#fdf3f3" stroke="#8b3a3a" stroke-width="1.5"></rect>
+      <text x="350" y="145" text-anchor="middle" font-weight="bold" fill="#8b3a3a">Low investment</text>
+      <text x="350" y="162" text-anchor="middle" fill="#57606a" font-size="10">in agriculture</text>
+
+      <line x1="250" y1="150" x2="215" y2="150" stroke="#8b3a3a" stroke-width="2" marker-end="url(#arrowA)"></line>
+
+      <rect x="10" y="120" width="200" height="60" rx="8" fill="#fdf3f3" stroke="#8b3a3a" stroke-width="1.5"></rect>
+      <text x="110" y="145" text-anchor="middle" font-weight="bold" fill="#8b3a3a">Low productivity</text>
+      <text x="110" y="162" text-anchor="middle" fill="#57606a" font-size="10">(24% gap, resource-driven)</text>
+
+      <line x1="110" y1="120" x2="110" y2="95" stroke="#8b3a3a" stroke-width="2" stroke-dasharray="3,3"></line>
+      <text x="118" y="105" fill="#57606a" font-size="9.5">loops back &#8594; reinforces vulnerability</text>
+
+      <line x1="10" y1="340" x2="750" y2="340" stroke="#d8d2c6" stroke-width="1"></line>
+
+      <text x="10" y="365" font-weight="bold" fill="#2f6b4f" font-size="13">Virtuous cycle — reform via activity-linked recognition</text>
+
+      <rect x="10" y="375" width="190" height="55" rx="8" fill="#eef4f0" stroke="#2f6b4f" stroke-width="1.5"></rect>
+      <text x="105" y="398" text-anchor="middle" font-weight="bold" fill="#2f6b4f">Activity-linked</text>
+      <text x="105" y="414" text-anchor="middle" font-weight="bold" fill="#2f6b4f">recognition</text>
+
+      <line x1="200" y1="402" x2="230" y2="402" stroke="#2f6b4f" stroke-width="2" marker-end="url(#arrowB)"></line>
+
+      <rect x="235" y="375" width="190" height="55" rx="8" fill="#eef4f0" stroke="#2f6b4f" stroke-width="1.5"></rect>
+      <text x="330" y="398" text-anchor="middle" font-weight="bold" fill="#2f6b4f">Access to schemes</text>
+      <text x="330" y="414" text-anchor="middle" font-weight="bold" fill="#2f6b4f">&amp; institutional credit</text>
+
+      <line x1="425" y1="402" x2="455" y2="402" stroke="#2f6b4f" stroke-width="2" marker-end="url(#arrowB)"></line>
+
+      <rect x="460" y="375" width="130" height="55" rx="8" fill="#eef4f0" stroke="#2f6b4f" stroke-width="1.5"></rect>
+      <text x="525" y="398" text-anchor="middle" font-weight="bold" fill="#2f6b4f">More</text>
+      <text x="525" y="414" text-anchor="middle" font-weight="bold" fill="#2f6b4f">investment</text>
+
+      <line x1="590" y1="402" x2="620" y2="402" stroke="#2f6b4f" stroke-width="2" marker-end="url(#arrowB)"></line>
+
+      <rect x="625" y="375" width="125" height="55" rx="8" fill="#eef4f0" stroke="#2f6b4f" stroke-width="1.5"></rect>
+      <text x="687" y="398" text-anchor="middle" font-weight="bold" fill="#2f6b4f">More agency /</text>
+      <text x="687" y="414" text-anchor="middle" font-weight="bold" fill="#2f6b4f">land titles</text>
+    </g>
+  </svg>
+  <p class="board-caption">Fig. — top: the vicious "low equilibrium trap" under the land-linked model (patrilineal inheritance &rarr; no legal title &rarr; exclusion from schemes/credit &rarr; vulnerability &rarr; low investment &rarr; low productivity &rarr; reinforces vulnerability). Bottom: the reform path — replacing the entry point with activity-linked recognition breaks the loop into a virtuous cycle ending in more agency and, eventually, land titles themselves (intergenerational equity).</p>
+
+  <div class="exam-tip">This vicious-to-virtuous cycle pair is a ready-made diagram for any "evaluate the significance of activity-based recognition" question — draw it as two linked loops, exactly as the instructor did on the board.</div>
+</section>
+
+<section id="part4">
+  <h2>4. Feminization of agriculture — policy responses, global models &amp; way forward</h2>
+  <p><span class="timestamp">43:54</span>Instructor moved to existing policy responses before the live answer-writing exercise.</p>
+
+  <h3>Domestic policy responses</h3>
+  <ul>
+    <li><strong>Mahila Kisan Sashaktikaran Pariyojana (MKSP):</strong> under the National Rural Livelihood Mission (NRLM), Ministry of Rural Development; aims to enhance rural women's productive participation in agriculture via community cadres — krishi sakhis (agri-extension), pashu sakhis (livestock), and bank sakhis (credit access).</li>
+    <li><strong>Namo Drone Didi:</strong> trains women Self-Help Groups to operate agricultural drones (e.g. for spraying liquid fertilizer) — directly targets the "masculinized mechanization" problem.</li>
+    <li><strong>A scheme cited in class (name transcribed only partially as "DAI"):</strong> enables rural women, through SHG networks, to participate in high-value agriculture and earn over Rs 1 lakh annually — treat the exact scheme name as unverified pending further check (see Supplementary research).</li>
+    <li><strong>Maharashtra's Women Farmers Empowerment Act, 2026:</strong> grants independent recognition as farmers irrespective of land ownership, via a Woman Farmer Certificate.</li>
+  </ul>
+
+  <h3>Regional variation — a "societal advantage" effect</h3>
+  <ul>
+    <li>Meghalaya was cited in class as having a very high (~70%) share of women among PM-KISAN beneficiaries, attributed to the region's matrilineal inheritance custom (transcribed imperfectly in the auto-captions as "material inheritance" — almost certainly a mis-transcription of "matrilineal," consistent with the matrilineal Khasi/Garo/Jaintia tradition in Meghalaya; see Supplementary research).</li>
+    <li>Kerala's Kudumbashree was cited as a comparable policy-driven (rather than custom-driven) model achieving a high share of women beneficiaries (cited in class as ~44%) through group-farming/SHG-linked structures — this specific percentage was not independently verified this session (see Supplementary research gap box).</li>
+  </ul>
+
+  <h3>International example</h3>
+  <div class="term-box">
+    <strong>Vietnam's 2003/2004 Land Law — joint land titling:</strong>
+    <ul>
+      <li>Mandates that family-held land titles (Land Tenure Certificates) carry both spouses' names.</li>
+      <li>World Bank-supported pilots began in 2002-03; made universal for all new titles from 2004 onward.</li>
+      <li>Associated with improved women's access to credit and greater female labour-force participation (though not the sole causal factor).</li>
+    </ul>
+  </div>
+
+  <h3>Dr. M.S. Swaminathan's "4 C's" framework</h3>
+  <ul>
+    <li><strong>Conservation:</strong> women's historical role as conservators of plant varieties, seeds, and overall biodiversity.</li>
+    <li><strong>Cultivation:</strong> women provide the bulk of manual labor for cultivation and weeding activities.</li>
+    <li><strong>Consumption:</strong> women control intra-household nutrition decision-making — important for tackling hidden hunger/malnutrition.</li>
+    <li><strong>Commercialization:</strong> giving women control here is key to increasing their direct financial income.</li>
+  </ul>
+
+  <h3>Way forward — the "recognize, reduce, redistribute" framework</h3>
+  <ul>
+    <li><strong>Recognize:</strong> shift to activity-linked recognition (the Maharashtra model).</li>
+    <li><strong>Reduce:</strong> deploy women-friendly technology/machines to reduce the drudgery of manual farm labor.</li>
+    <li><strong>Redistribute:</strong> promote joint land titling (the Vietnam model — both husband's and wife's names on inheritance/titles).</li>
+    <li><strong>Supplementary suggestion:</strong> gender budgeting — allocate a specific percentage of agricultural scheme funds specifically for women-focused interventions.</li>
+  </ul>
+  <div class="exam-tip">Instructor flagged this "recognize, reduce, redistribute" (originally a "3 R's"/"unpaid care work" framework used for the care-economy topic) as a reusable template across multiple current-affairs answers, not just this one — note it once, reuse it everywhere relevant.</div>
+</section>
+
+<section id="part5">
+  <h2>5. Live answer-writing — feminization of agriculture</h2>
+  <p><span class="timestamp">52:34</span>Instructor set a Mains-style question for students to write in class (writing window roughly 52:50&ndash;58:27; review roughly 58:27&ndash;1:03:00).</p>
+
+  <div class="quote-card">
+    <p class="q">"Despite accounting for nearly half of India's agricultural workforce, women remain largely invisible in the agrarian economy. Examine the structural barriers faced by women in agriculture, and evaluate the significance of activity-based recognition of farmers."</p>
+  </div>
+
+  <h3>Expected structure, as reviewed live</h3>
+  <ol class="answers">
+    <li><strong>Data-led introduction:</strong> open directly with the 64% PLFS figure, then define feminization of agriculture.</li>
+    <li><strong>The invisibilization flowchart:</strong> land-linked model &rarr; no legal title &rarr; excluded from schemes &rarr; vulnerability (see Part 3's diagram).</li>
+    <li><strong>Structural barriers:</strong> 3-4 points (patrilineal inheritance, financial exclusion, masculinized mechanization, market access).</li>
+    <li><strong>The need for activity-based recognition:</strong> as the core reform.</li>
+    <li><strong>Consequence box:</strong> name the resulting phenomenon explicitly — "distress-driven feminization," not "opportunity-driven feminization."</li>
+    <li><strong>Reform &amp; legislation:</strong> activity-linked schemes/legislation, citing the Maharashtra Women Farmers Empowerment Act, 2026 as the model, issuing Woman Farmer Certificates; draw the virtuous cycle here.</li>
+    <li><strong>Way forward:</strong> must explicitly evaluate — not just describe — the activity-linked model, naming its implementation problems (agriculture being a State subject limits uniform adoption; verification of activity-based claims is bureaucratically difficult; risk of exclusion/inclusion errors).</li>
+    <li><strong>Conclusion:</strong> the 4 C's / "recognize, reduce, redistribute" framework.</li>
+  </ol>
+
+  <div class="exam-tip">General technique note repeated by the instructor during review: never write an "intro...conclusion" as if it were a movie's narrative arc. Plan the full structure (including where a diagram/flowchart will go) before writing. Judge your answer's adequacy by content coverage (how many of the 15-16 sub-points you can genuinely support), not by page count — "fitting into two pages" is training your preparation around the wrong metric.</div>
+</section>
+
+<section id="part6">
+  <h2>6. Mayor-in-Council — current municipal structure &amp; constitutional basis</h2>
+  <p><span class="timestamp">1:06:15</span>Instructor introduced the topic via a second live question (set before the explanatory content, then developed through the class): NITI Aayog's April 2026 report "Moving Towards Effective City Government: A Framework for Million-Plus Cities," recommending a directly-elected Mayor-in-Council model.</p>
+
+  <h3>Constitutional basis of present municipal structure</h3>
+  <ul>
+    <li><strong>74th Constitutional Amendment Act:</strong> laid the framework for democratic decentralization to urban local bodies — but states have been reluctant to devolve powers, leaving mayors as largely ceremonial heads while bureaucrats control executive power.</li>
+    <li><strong>Article 243Q:</strong> empowers the governor to notify an area as a Nagar Panchayat (rural-urban transition area), a Municipal Council (small urban area), or a Municipal Corporation (larger urban area) — the basis for "statutory towns" (see Part 10).</li>
+    <li><strong>Article 243R:</strong> governs the composition of municipalities — mandates that all seats are filled by direct election from territorial constituencies (wards).</li>
+    <li><strong>Article 243U:</strong> fixes the duration of municipalities at 5 years.</li>
+    <li>Municipal corporations in India are urban local government bodies, created by an Act of the state legislature (whether for Delhi, Mumbai, or any other city).</li>
+  </ul>
+
+  <h3>Present structural framework of a municipal corporation</h3>
+  <ul>
+    <li><strong>Council:</strong> composed of directly-elected councilors (from wards); the mayor heads the council but is typically selected for a short, renewable 1-2 year term — a largely ceremonial post.</li>
+    <li><strong>Standing committees:</strong> set up because the full council is too large for day-to-day administration; each committee is assigned a specific functional area (public works, education, water, etc.) — functioning somewhat like mini-ministries.</li>
+    <li><strong>Municipal commissioner:</strong> the de facto chief executive officer, appointed by the state government and typically a career civil servant; reports to the state, not the elected council.</li>
+    <li><strong>Ward committees:</strong> constituted in highly populated areas to further decentralize decision-making.</li>
+  </ul>
+  <div class="term-box">
+    <strong>Net effect — "bureaucratic centralization" instead of democratic decentralization:</strong>
+    <ul>
+      <li>The mayor is a powerless ceremonial head; the municipal commissioner is the actual implementing authority but answers to the state government, not the elected council.</li>
+      <li>Instructor's framing: the present formula for good governance is "ease of living + ease of doing business," both of which require people's participation/accountability — exactly what this bureaucratic-centralization structure undermines.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="part7">
+  <h2>7. Mayor-in-Council — NITI Aayog report: problems &amp; data</h2>
+  <p><span class="timestamp">1:14:03</span>Instructor walked through NITI Aayog's key arguments and supporting data.</p>
+
+  <h3>Key problems identified by the report</h3>
+  <ul>
+    <li><strong>Limited devolution:</strong> on average, only 4 out of 18 functions are actually devolved to city governments, producing powerless city administrations unable to directly plan and manage their own affairs.</li>
+    <li><strong>Ineffective leadership:</strong> real power sits with the state-appointed municipal commissioner; mayors have unstable, short tenures (1-2 years, renewable) that prevent any longer-term vision.</li>
+    <li><strong>Weak municipal finance:</strong>
+      <ul>
+        <li>Own tax revenue is declining as a share of total municipal receipts.</li>
+        <li>This financial dependence on state/central grants undermines the ability to plan and manage local needs — producing poor governance.</li>
+        <li>Root cause: no independent tax powers; property tax (the major own-revenue source) is rarely revised to reflect present land prices, because councilors' physical proximity to constituents makes them reluctant to impose politically unpopular tax increases.</li>
+      </ul>
+    </li>
+    <li><strong>Urban spatial outgrowth:</strong> rapid expansion into peri-urban areas outside a city government's notified jurisdiction means tax growth potential is missed (area falls either outside the city's area, or the city can't effectively reach/service it).</li>
+    <li><strong>Fragmented service delivery:</strong> too many parastatal bodies (parallel state-level agencies for water, transport, etc.) running services independently of the municipal corporation, producing coordination problems.</li>
+    <li><strong>Lack of skilled staff:</strong> dependence on temporary staff deputed from other departments, producing poor project execution.</li>
+  </ul>
+
+  <h3>Key data from the report</h3>
+  <div class="data-box">
+    Demographic weight: 46 (NITI Aayog's own figure: 47) million-plus municipal corporations accommodate ~30% of India's urban population but occupy only ~10% of urban area.<br>
+    Economic weight: these million-plus cities collectively contribute ~60% of national GDP.<br>
+    Own tax revenue as a share of total municipal receipts: ~43% in FY17, declining to ~29.6% (class figure; RBI's underlying data shows ~30%) by FY23/24.<br>
+    Under the AMRUT program, credit ratings were conducted for 468 Urban Local Bodies; only 162 (class figure; some sources cite 163) achieved investment-grade status.<br>
+    Municipal bond market: only ~25 municipal bonds issued across India between 2017 and 2025, raising ~Rs 3,500 crore combined — contrasted in the report with China issuing 252 government bonds in a single month (August 2025), raising $142 billion.
+  </div>
+
+  <div class="exam-tip">The "demographic weight vs economic weight vs financial weight" three-part data structure (high population + high GDP contribution, but low revenue share) is a strong, reusable way to frame any "cities deserve more fiscal autonomy" argument.</div>
+</section>
+
+<section id="part8">
+  <h2>8. Mayor-in-Council — suggestions, global models &amp; challenges</h2>
+  <p><span class="timestamp">1:29:41</span>Instructor moved to the report's reform suggestions and comparative global models.</p>
+
+  <h3>Key suggestions</h3>
+  <ul>
+    <li><strong>Empowered leadership — the Mayor-in-Council model:</strong>
+      <ul>
+        <li>Mayor to be directly elected, with a tenure co-terminus with the council's (i.e. a fixed, non-renewable-mid-term tenure tied to the council's own term), making the mayor the real executive head to whom the municipal commissioner would report.</li>
+        <li>To be run as cabinet-style governance: the mayor allocates portfolios among councilors, each functioning like a mini-ministry (health, public works, education, finance, etc.).</li>
+      </ul>
+    </li>
+    <li><strong>Unified service delivery:</strong> any agency delivering a municipal service must function under the administrative control of the municipal corporation — directly addressing the parastatal-fragmentation problem.</li>
+    <li><strong>Six priority service-delivery areas:</strong> water supply, transportation, sanitation, solid waste management, urban planning, and fire services — recommended to be brought firmly under municipal corporation control.</li>
+    <li><strong>Strengthen municipal finance:</strong> set up State Finance Commissions (SFCs) on time, and follow their recommendations; submit an Action Taken Report (ATR) to the state assembly to ensure accountability for SFC suggestions.</li>
+  </ul>
+
+  <h3>Global comparative models</h3>
+  <div class="term-box">
+    <strong>USA — "strong mayor" system:</strong>
+    <ul>
+      <li>Mayors directly elected by citizens, with strong administrative and budgetary control (e.g. New York).</li>
+    </ul>
+  </div>
+  <div class="term-box">
+    <strong>East Asian countries — "residual claimant" model:</strong>
+    <ul>
+      <li>Local authorities retain a direct claim on a defined share/percentage of locally-generated revenue (e.g. tax collected within the city), rather than remitting the entire amount to higher tiers of government.</li>
+      <li>This residual claim gives municipal bodies a direct financial incentive to invest in infrastructure that grows the local economy and tax base — a self-reinforcing incentive structure largely absent in India's present system, where almost all collected revenue (GST, corporate tax, income tax) flows to the Centre and states.</li>
+    </ul>
+  </div>
+  <div class="term-box">
+    <strong>Singapore:</strong>
+    <ul>
+      <li>Transitioned from overcrowded, unmanaged urban settlements in the 1960s through comprehensive master planning, land-use zoning, and integrated infrastructure development.</li>
+    </ul>
+  </div>
+
+  <h3>Arguments for Mayor-in-Council</h3>
+  <ul>
+    <li>Direct accountability through direct election should translate into more responsible, growth-oriented city governance.</li>
+    <li>A residual-claimant-style incentive would push local bodies to prioritize local prosperity.</li>
+    <li>Political pipeline benefit: strong local leadership could become a stepping stone into national political leadership.</li>
+  </ul>
+
+  <h3>Challenges / counter-arguments</h3>
+  <ul>
+    <li>State government reluctance to cede power to directly-elected mayors.</li>
+    <li>Inconsistent adoption across states: Chhattisgarh and Madhya Pradesh restored direct mayoral election, while Tamil Nadu, Himachal Pradesh, and Rajasthan discontinued it — producing a fragmented, inconsistent national picture.</li>
+    <li>Legislative stagnation: a private member's bill proposing a pan-India Mayor-in-Council system did not progress.</li>
+    <li>Persistent institutional fragmentation (overlapping authority) and frequently delayed local body elections in many states.</li>
+    <li><strong>The "fiscal doom loop":</strong> weak municipal revenue &rarr; weak public service delivery &rarr; alienation of tax-paying citizens (who may evade tax or relocate) &rarr; further weakens revenue — a self-reinforcing cycle, illustrated in class via the image of a wealthy citizen paying to build a private "access route" rather than relying on civic infrastructure.</li>
+  </ul>
+
+  <div class="quote-card">
+    <p class="q">"The 74th Constitutional Amendment promised participatory democracy, but Indian cities are effectively run by unelected bureaucrats."</p>
+    <p class="attrib">The live question set immediately after this section — see Part 9.</p>
+  </div>
+</section>
+
+<section id="part9">
+  <h2>9. Live answer-writing — Mayor-in-Council</h2>
+  <p><span class="timestamp">1:40:10</span>Instructor set the Mains-style question for students to write in class (writing window roughly 1:40:10&ndash;1:45:48; review roughly 1:45:48&ndash;1:48:21).</p>
+
+  <div class="quote-card">
+    <p class="q">"The 74th Constitutional Amendment promised participatory democracy, but Indian cities are effectively run by unelected bureaucrats. Analyze this statement in the context of the demand for a Mayor-in-Council system."</p>
+  </div>
+
+  <h3>Expected structure, as reviewed live</h3>
+  <ol class="answers">
+    <li><strong>Introduction:</strong> open with the NITI Aayog report recommending the Mayor-in-Council model.</li>
+    <li><strong>74th Amendment — promise vs reality:</strong> promise of devolved functions and participatory democracy vs the reality of only 4/18 functions devolved and a bureaucrat-run executive (bureaucratic centralization).</li>
+    <li><strong>Significance of cities:</strong> cite demographic weight and economic weight data (Part 7).</li>
+    <li><strong>Explain the Mayor-in-Council system itself.</strong></li>
+    <li><strong>Positives and negatives</strong> of the proposal (Part 8's arguments/challenges).</li>
+    <li><strong>Way forward:</strong> the instructor noted students could only briefly mention challenges here, since India has no direct implementation experience yet to draw on.</li>
+  </ol>
+</section>
+
+<section id="part10">
+  <h2>10. Census towns — concepts &amp; constitutional classification</h2>
+  <p><span class="timestamp">1:48:21</span>Instructor introduced the topic's structure: introduction and context, important terms/concepts, constitutional/legal framework, data, challenges, case studies, and way forward.</p>
+
+  <h3>Context that opened the topic</h3>
+  <ul>
+    <li>India's "demographic landscape" of census towns represents a paradox: settlements that have functionally and demographically transformed into urban centers, but remain legally classified as rural.</li>
+    <li>In the news because the Union Ministry of Housing and Urban Affairs presented a draft report, "Census Criteria for Defining Urban Areas," before the Parliamentary Standing Committee on Housing and Urban Affairs.</li>
+    <li>The Ministry's key argument: India needs to replace the obsolete 1981 criteria used to classify urban areas.</li>
+  </ul>
+
+  <h3>Statutory town vs census town</h3>
+  <table>
+    <tr><th>Statutory town</th><th>Census town</th></tr>
+    <tr>
+      <td>An urban area formally notified under a statute/law (under Article 243Q, the Governor issues a notification declaring it a Nagar Panchayat, Municipal Council, or Municipal Corporation).</td>
+      <td>A purely demographic/statistical classification set by the Census — not based on any law or formal notification; identified only for counting purposes.</td>
+    </tr>
+    <tr>
+      <td>Governed by an elected urban local body (municipal corporation/council/panchayat) with urban powers and access to urban-specific schemes.</td>
+      <td>Despite urban characteristics, continues to be governed by the rural local body (Gram Panchayat) it legally remains under — producing a governance mismatch.</td>
+    </tr>
+  </table>
+
+  <h3>Census town criteria (1981 definition, still in use)</h3>
+  <div class="data-box">
+    A settlement must meet ALL three criteria to be classified a census town:<br>
+    1. Minimum population of 5,000.<br>
+    2. At least 75% of the male main working population engaged in non-agricultural activities (instructor flagged this as a gender-biased criterion, since it ignores female workforce participation entirely).<br>
+    3. A population density of at least 400 persons per square kilometre.
+  </div>
+
+  <h3>Key concepts</h3>
+  <ul>
+    <li><strong>Hidden urbanization:</strong> places and people that are urban in character (by function and demography) but are not officially recognized as urban — India's official urban share is ~31-32% per the 2011 Census, but alternative tools (e.g. the Economic Survey's use of the DEGURBA framework) suggest a figure as high as ~63%; the gap between the two is precisely this hidden urbanization.</li>
+    <li><strong>UN's DEGURBA (Degree of Urbanization) framework:</strong> a globally standardized spatial classification methodology, using satellite-based population-density grids, enabling uniform cross-country measurement of urbanization (rather than each country using its own ad hoc definition).</li>
+    <li><strong>Rural-urban continuum (vs rural-urban binary):</strong>
+      <ul>
+        <li>The traditional "binary" model rigidly classifies every area as 100% rural or 100% urban.</li>
+        <li>The continuum model recognizes transitional settlements with mixed rural-and-urban characteristics.</li>
+        <li>Example cited: Kerala's "ribbon-like urban conurbation" — a narrow, continuous ribbon of mixed residential/commercial development along both sides of a road, with no clear rural-urban break.</li>
+      </ul>
+    </li>
+    <li><strong>Peri-urban area:</strong> the contiguous zone on the immediate outer fringes/periphery of a major metropolitan area.</li>
+    <li><strong>Sub-urbanization:</strong> growth of small towns/settlements driven by their own local economic activity, not as a spillover/byproduct of a nearby metropolis — examples cited: Tiruppur (textiles) and Sivakasi (firecrackers).</li>
+    <li><strong>Congestion diseconomies:</strong> the point at which a city's usual agglomeration benefits (lower costs, easier access to everything) are overwhelmed by overpopulation/congestion, so that density starts actively costing more time, money, and mental well-being instead of saving it.</li>
+  </ul>
+</section>
+
+<section id="part11">
+  <h2>11. Census towns — data, issues, state initiatives &amp; way forward</h2>
+  <p><span class="timestamp">2:01:54</span>Instructor presented supporting data before moving to issues, state-level responses, and the way forward.</p>
+
+  <h3>Data</h3>
+  <div class="data-box">
+    Official (2011 Census) urban share: ~31-32% of India's population.<br>
+    Economic Survey's DEGURBA-based estimate: ~63% urban.<br>
+    Number of census towns: grew from 1,362 (2001 Census) to 3,894 (2011 Census) — class figures of "~1,300 to 3,700+" closely match this verified range.<br>
+    World Bank projection: India's urban population will reach 40% of total population by 2036.<br>
+    World Bank estimate: India needs around $55 billion per year in urban infrastructure investment.
+  </div>
+
+  <h3>Issues arising from non-notification</h3>
+  <ul>
+    <li><strong>Governance mismatch:</strong> an area that is functionally/demographically urban continues to be governed by a rural body (Gram Panchayat), which lacks urban planning powers and capacity.</li>
+    <li><strong>Unplanned urbanization:</strong> stress on both social infrastructure (health, education) and physical infrastructure (sanitation, water).</li>
+    <li><strong>Fiscal starvation:</strong> a Gram Panchayat-governed "hidden" urban area cannot access urban-specific central/state funding (e.g. AMRUT-type schemes), while also risking the loss of rural-specific entitlements (e.g. MGNREGA-type funds) if it is formally reclassified — creating a perverse disincentive.</li>
+    <li><strong>Political resistance to municipalization:</strong>
+      <ul>
+        <li>Wealthier residents resist reclassification because urban status would increase their tax burden.</li>
+        <li>Poorer residents resist too, fearing loss of rural-scheme benefits (e.g. MGNREGA-linked entitlements).</li>
+      </ul>
+    </li>
+    <li><strong>Outdated, one-size-fits-all 1981 criteria:</strong> the 75%-male-non-agricultural-workforce test is gender-biased (ignores female non-agricultural work entirely), and a single uniform national population-density threshold disadvantages structurally different regions (e.g. hilly areas with naturally lower density).</li>
+    <li><strong>Environmental degradation</strong> from unplanned/unregulated peripheral urban growth.</li>
+  </ul>
+
+  <h3>Case studies / recent state and judicial action</h3>
+  <ul>
+    <li><strong>Supreme Court, August 2025:</strong> directed the Uttar Pradesh government to consider converting Noida (then governed as an industrial township, without any elected local self-government) into a Municipal Corporation, following a Special Investigation Team's critical assessment of the Noida Authority's land-allotment practices and weak oversight.</li>
+    <li><strong>Telangana's CURE Act, 2026 (Core Urban Region Integrated Governance):</strong>
+      <ul>
+        <li>Establishes a single integrated governance framework for Hyderabad and its peripheral metropolitan region (covering the Greater Hyderabad, Cyberabad, and Malkajgiri corporations), replacing the earlier GHMC Act, 1955.</li>
+        <li>Aims to bring uniform regulations/standards across both the core metropolitan area and the contiguous peri-urban region.</li>
+      </ul>
+    </li>
+    <li><strong>Odisha's rural-urban transition model — "build first, notify later":</strong> provides basic urban facilities (drainage, piped water, master plans) to a transitioning settlement before formal urban notification, specifically to defuse the political resistance that otherwise arises from "notify first, build later" (the instructor's description of India's usual, reverse sequencing).</li>
+    <li><strong>16th Finance Commission:</strong> introduced a "peri-urban/urbanization premium," earmarking Rs 10,000 crore to financially assist states in merging urbanizing villages (census towns) into adjoining urban local bodies.</li>
+    <li><strong>Naksha program:</strong> the urban-area equivalent of the SVAMITVA program (which digitizes land records in rural areas) — focuses on digitizing land records in urban/urbanizing areas.</li>
+  </ul>
+
+  <h3>Way forward</h3>
+  <ul>
+    <li>Mandatory notification under Article 243Q once a settlement meets demographic/functional urban criteria (removing the present discretion that allows indefinite non-notification).</li>
+    <li>State-level rural-urban transition policies, following Odisha's "build first, notify later" sequencing.</li>
+    <li>Adopt a uniform, globally-consistent framework for measuring urbanization — i.e. the DEGURBA model — rather than the outdated 1981 criteria.</li>
+    <li>Prioritize geospatial digitization of land records (the Naksha program) as a foundational enabler for any future reclassification.</li>
+  </ul>
+</section>
+
+<section id="part12">
+  <h2>12. Live answer-writing — census towns</h2>
+  <p><span class="timestamp">2:11:16</span>Instructor set a third Mains-style question right at the end of the session. No in-class writing window or review was captured in this transcript before the recording ends (2:12:34) — treat this as a self-practice question.</p>
+
+  <div class="quote-card">
+    <p class="q">"Rapid economic growth alongside static classification has created a governance vacuum in India's urbanizing periphery. Examine the implications of census towns remaining unnotified as statutory urban bodies."</p>
+  </div>
+
+  <div class="exam-tip">Since this question was not reviewed live, structure it using the full Part 10-11 framework: concepts (statutory vs census town) &rarr; constitutional basis (Article 243Q) &rarr; data (hidden urbanization gap, 1,362 &rarr; 3,894 census towns) &rarr; issues (governance mismatch, fiscal starvation, political resistance) &rarr; case studies (Noida SC directive, Telangana CURE Act, Odisha model) &rarr; way forward (mandatory notification, DEGURBA adoption, Naksha digitization).</div>
+</section>
+
+<section id="glossary">
+  <h2>Glossary — quick revision</h2>
+  <dl>
+    <div class="glossary-term"><dt>Feminization of agricultural labor</dt><dd>More women working as unpaid/underpaid agricultural laborers without land titles — the "invisibilized," problem-connotation form of feminization.</dd></div>
+    <div class="glossary-term"><dt>Feminization of agricultural management</dt><dd>Women gaining decision-making control/agency over farmland — the visible, empowerment-connotation form of feminization.</dd></div>
+    <div class="glossary-term"><dt>Land-linked vs activity-linked definition</dt><dd>Defining "farmer" by land ownership/title (excludes tenants/sharecroppers) vs by the farming activity actually performed (the reform direction, per the National Policy for Farmers 2007 and Maharashtra's 2026 Act).</dd></div>
+    <div class="glossary-term"><dt>Low equilibrium trap</dt><dd>The self-reinforcing vicious cycle where lack of land title &rarr; exclusion from schemes/credit &rarr; vulnerability &rarr; low investment &rarr; low productivity &rarr; reinforces vulnerability.</dd></div>
+    <div class="glossary-term"><dt>Woman Farmer Certificate</dt><dd>Document introduced by Maharashtra's Women Farmers Empowerment Act, 2026, formally recognizing a woman as a farmer independent of land ownership.</dd></div>
+    <div class="glossary-term"><dt>Bureaucratic centralization</dt><dd>The outcome where real municipal executive power sits with the state-appointed municipal commissioner rather than the elected (but ceremonial) mayor — the opposite of the 74th Amendment's intended democratic decentralization.</dd></div>
+    <div class="glossary-term"><dt>Mayor-in-Council</dt><dd>NITI Aayog's recommended reform: a directly-elected mayor, co-terminus with the council's tenure, acting as the real executive head in a cabinet-style governance structure.</dd></div>
+    <div class="glossary-term"><dt>Residual claimant model</dt><dd>An East Asian fiscal-federalism practice where local bodies retain a direct claim on a share of locally-generated revenue, incentivizing them to invest in local growth.</dd></div>
+    <div class="glossary-term"><dt>Parastatal bodies</dt><dd>State-level agencies (water boards, transport corporations, development authorities) delivering urban services in parallel to, and uncoordinated with, the municipal corporation.</dd></div>
+    <div class="glossary-term"><dt>Fiscal doom loop</dt><dd>Weak municipal revenue &rarr; weak service delivery &rarr; tax-payer alienation/exit &rarr; further weakened revenue.</dd></div>
+    <div class="glossary-term"><dt>Statutory town</dt><dd>An urban area formally notified under law (Article 243Q) as a Nagar Panchayat, Municipal Council, or Municipal Corporation.</dd></div>
+    <div class="glossary-term"><dt>Census town</dt><dd>A settlement meeting the Census's demographic/statistical urban criteria (population, non-agricultural workforce share, density) but not formally notified as urban, and so still governed as rural.</dd></div>
+    <div class="glossary-term"><dt>DEGURBA (Degree of Urbanization)</dt><dd>UN's globally standardized, satellite population-density-grid-based methodology for classifying urban/rural areas consistently across countries.</dd></div>
+    <div class="glossary-term"><dt>Hidden urbanization</dt><dd>The gap between a country's officially recognized urban population share and its functionally/demographically urban share as measured by alternative tools like DEGURBA.</dd></div>
+    <div class="glossary-term"><dt>Rural-urban continuum</dt><dd>A classification model recognizing transitional settlements with mixed rural-urban characteristics, as opposed to a rigid rural-urban binary.</dd></div>
+    <div class="glossary-term"><dt>Peri-urban area</dt><dd>The contiguous zone on the immediate outer periphery of a major metropolitan area.</dd></div>
+    <div class="glossary-term"><dt>Sub-urbanization</dt><dd>Growth of a small town/settlement driven by its own local economic base (e.g. Tiruppur-textiles, Sivakasi-firecrackers), not as a spillover of a nearby metropolis.</dd></div>
+    <div class="glossary-term"><dt>Congestion diseconomies</dt><dd>The point past which a city's agglomeration benefits are outweighed by overcrowding costs (time, money, mental strain).</dd></div>
+  </dl>
+</section>
+
+<section id="arcs">
+  <h2>Revision kit (ARCS)</h2>
+
+  <div class="arcs-box">
+    <h4>A — Active recall questions</h4>
+    <div class="recall-q">
+      <p class="q-text">1. What are the three competing models for defining "farmer" discussed in class, and which one does Maharashtra's 2026 Act adopt?</p>
+      <details><summary></summary><div class="ans">Land-linked/administrative (ownership-based, used for PM-KISAN); legislative/activity-linked with a narrow mandate (Protection of Plant Varieties and Farmers' Rights Act, 2001); and activity-based recognition per the National Policy for Farmers, 2007. Maharashtra's 2026 Act adopts the third (activity-based) model.</div></details>
+    </div>
+    <div class="recall-q">
+      <p class="q-text">2. Name the six service-delivery areas NITI Aayog recommends bringing under direct municipal corporation control.</p>
+      <details><summary></summary><div class="ans">Water supply, transportation, sanitation, solid waste management, urban planning, and fire services.</div></details>
+    </div>
+    <div class="recall-q">
+      <p class="q-text">3. What is the key difference between a statutory town and a census town?</p>
+      <details><summary></summary><div class="ans">A statutory town is formally notified under law (Article 243Q) and governed by an elected urban local body; a census town meets the Census's demographic criteria but has no statutory basis and remains governed as rural (by a Gram Panchayat).</div></details>
+    </div>
+    <div class="recall-q">
+      <p class="q-text">4. What are the three 1981 criteria a settlement must meet (all three) to be classified a census town?</p>
+      <details><summary></summary><div class="ans">Minimum population of 5,000; at least 75% of the male main working population in non-agricultural activity; population density of at least 400 persons/sq km.</div></details>
+    </div>
+  </div>
+
+  <div class="arcs-box">
+    <h4>R — Recurring comparison table</h4>
+    <table>
+      <tr><th>Concept A</th><th>Concept B</th><th>Key distinction</th></tr>
+      <tr><td>Feminization of agricultural labor</td><td>Feminization of agricultural management</td><td>Labor = women working without land/agency (negative, invisibilized); management = women controlling land/decisions (positive, empowering)</td></tr>
+      <tr><td>Land-linked farmer definition</td><td>Activity-linked farmer definition</td><td>Land-linked excludes tenants/sharecroppers by requiring ownership; activity-linked recognizes anyone performing the farming activity, regardless of title</td></tr>
+      <tr><td>Mayor-in-Council (proposed)</td><td>Present council-commissioner model</td><td>Mayor-in-Council makes the directly-elected mayor the real executive; present model gives real executive power to the state-appointed, unelected municipal commissioner</td></tr>
+      <tr><td>Statutory town</td><td>Census town</td><td>Statutory town is notified under law and urban-governed; census town is a demographic-only classification, still rural-governed</td></tr>
+      <tr><td>Rural-urban binary</td><td>Rural-urban continuum</td><td>Binary forces a 100%-rural-or-100%-urban classification; continuum recognizes transitional, mixed-character settlements</td></tr>
+    </table>
+  </div>
+
+  <div class="arcs-box mnemonic-box">
+    <h4>S — Stick with Encoding Tricks</h4>
+    <p><strong>The low-equilibrium trap as a locked door with no key ever issued:</strong> picture a woman handed a farm to work but never handed the house key (land title, blocked by patrilineal inheritance); without the key she can't enter the bank (credit/schemes); without money from the bank she can't fix the house (investment); a broken house produces less value (productivity); and a less valuable house convinces everyone she never deserved a key in the first place (reinforced vulnerability) — the only way to break in is to issue a new kind of key based on who's actually living there, not whose name was on the old deed (activity-linked recognition).</p>
+    <p><strong>Mayor-in-Council vs present model as a shop with a sign-board owner who isn't the manager:</strong> the present municipal corporation is a shop with a nameplate "Mayor" above the door (ceremonial, short-term), but the person actually holding the cash register, hiring staff, and reporting to the landlord (state government) is the municipal commissioner. The Mayor-in-Council reform hands the cash register to the nameplate — the person voters actually chose.</p>
+    <p><strong>Statutory town vs census town as a promotion that never gets the paperwork signed:</strong> a census town is like an employee who has been doing a manager's job for years (urban in function/demography) but whose offer letter was never updated (no Article 243Q notification) — so they keep getting paid, and governed, at the old (rural) grade.</p>
+  </div>
+</section>
+
+<section id="gaps">
+  <h2>Supplementary research — filling gaps</h2>
+
+  <div class="gap-box">
+    <h4>UN International Year of the Woman Farmer, 2026 — verified</h4>
+    <p>Confirmed: the UN General Assembly declared 2026 the International Year of the Woman Farmer, following a resolution proposed by the United States and supported by the FAO, unanimously adopted in 2024. FAO, IFAD, and WFP are coordinating related activities; the global launch took place at FAO headquarters in December 2025. Source: <a href="https://www.fao.org/woman-farmer-2026/en" target="_blank" rel="noopener">FAO, Woman Farmer 2026</a>; <a href="https://www.usda.gov/about-usda/news/press-releases/2024/05/02/us-paves-way-un-declare-2026-international-year-woman-farmer" target="_blank" rel="noopener">USDA press release</a>.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>Maharashtra Women Farmers Empowerment Act, 2026 — verified</h4>
+    <p>Confirmed: Maharashtra became the first Indian state to enact the Women Farmers Empowerment Act, 2026, introducing a Woman Farmer Certificate (obtainable via Gram Sabha/Nagar Panchayat) that formally recognizes women as farmers without requiring land ownership. The Act adopts the "farmer" and "agriculture" definitions from the National Policy for Farmers, 2007, matching the lecture exactly. Source: <a href="https://www.drishtiias.com/state-pcs-current-affairs/maharashtra-women-farmers-mpowerment-act-2026" target="_blank" rel="noopener">Drishti IAS</a>; <a href="https://www.tribuneindia.com/news/top-headlines/a-first-mrashtra-clears-draft-bill-to-legally-recognise-women-farmers/" target="_blank" rel="noopener">The Tribune</a>.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>PLFS 64% women-in-agriculture figure, Agriculture Census 14% operational holdings, PM-KISAN 23% women beneficiaries, 24% productivity gap — all verified</h4>
+    <p>Confirmed: PLFS data places female worker concentration in agriculture at ~62.9-64% across recent rounds, closely matching the lecture. Confirmed: Agriculture Census 2015-16 found women operate only ~13.96% (near-exact match to the lecture's "~14%") of operational holdings and ~11.72% of operated area. Confirmed: PM-KISAN women-beneficiary share is cited at "more than 23%" nationally, matching the lecture exactly. Confirmed: a 24% land-productivity gap between female- and male-managed farms (FAO 2023 assessment; India-specific estimates put the economic cost at Rs 1.2-2 lakh crore/year) is attributed to resource access (land, credit, seeds, extension services), not operational capability — matching the lecture's framing exactly. Source: <a href="https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID=1911142" target="_blank" rel="noopener">PIB/PLFS 2021-22</a>; <a href="https://agrospectrumindia.com/reports-white-papers/24/34647/half-of-indias-women-farmers-are-not-classified-as-farmers-a-gap-costing-rs-1-22-lakh-cr-a-year-arya-ag-report.html" target="_blank" rel="noopener">Arya.ag report via AgroSpectrum</a>; <a href="https://www.business-standard.com/economy/news/equal-access-for-women-can-lift-india-s-farm-output-by-2-trillion-report-126081900806_1.html" target="_blank" rel="noopener">Business Standard</a>.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>Vietnam's 2003/2004 Land Law joint titling — verified</h4>
+    <p>Confirmed: Vietnam's 2003 Land Law defined Land Tenure Certificates as joint assets of both spouses, with World Bank-supported pilots from 2002-03 in Nghe An province, extended to 20 provinces by 2003-04, and made universal for all new certificates from the Land Law 2004 onward — closely matching the lecture's "2003 land law... joint titles" description. Source: <a href="https://www.worldbank.org/en/news/feature/2010/03/15/vietnams-land-law-raises-status-income-security-wives" target="_blank" rel="noopener">World Bank feature</a>.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>"Material inheritance" in Meghalaya — likely a transcription error for "matrilineal," flagged for caution</h4>
+    <p>The auto-transcript rendered the instructor's description of Meghalaya's inheritance custom (explaining its reportedly high ~70% share of women PM-KISAN beneficiaries) only as "material inheritance." This is almost certainly a mis-transcription of "matrilineal inheritance" — Meghalaya's Khasi, Garo, and Jaintia communities are well-documented as following matrilineal inheritance customs, which would directly explain a higher female beneficiary share. The specific "70%" figure itself was not independently verified this session and should be checked against official PM-KISAN state-wise gender data before citing in an exam answer.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>Kerala Kudumbashree "~44% beneficiaries" figure — not independently verified this session</h4>
+    <p>The lecture's specific claim that Kudumbashree achieves ~44% women beneficiaries (in an unspecified scheme context) could not be matched to a precise, directly comparable published statistic in the time available. Kudumbashree's broader scale is well documented (e.g. historical data showing tens of thousands of hectares under collective women-led cultivation), but the exact "~44%" figure should be treated as unverified pending a dedicated check against a Kudumbashree or state government source.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>NITI Aayog "Moving Towards Effective City Government" report — verified, with one minor figure discrepancy</h4>
+    <p>Confirmed: NITI Aayog released this report on 25 April 2026, with Union Minister Manohar Lal Khattar releasing it; the report's headline findings (only 4 of 18 functions under full city-government control; recommendation of directly-elected mayors with fixed tenure and an empowered Mayor-in-Council system; bringing water supply, sanitation, and public transport under city government; parastatal integration) all match the lecture closely. One minor discrepancy: the report itself cites <strong>47</strong> million-plus cities contributing 60% of GDP, while the lecture states "46" — likely a rounding/recall slip in class; both figures are close enough not to materially affect any answer. Source: <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2255581" target="_blank" rel="noopener">PIB press release</a>; <a href="https://www.tribuneindia.com/news/top-headlines/niti-aayog-backs-directly-elected-mayors-with-fixed-5-yr-term-full-executive-powers/" target="_blank" rel="noopener">The Tribune</a>.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>Municipal own-tax revenue decline (43% to ~30%) and ULB credit ratings (468 rated, ~162-163 investment grade) — verified, with minor figure variance</h4>
+    <p>Confirmed: municipal own-tax revenue fell from 43% of total municipal revenue in FY17 to approximately 30% (RBI's Report on Municipal Finances; the lecture's "29.6% in FY23" is consistent with, though not an exact citation match to, this RBI data series, which some summaries report as of FY24). Confirmed: as of around 2020, credit ratings were assigned to 468 Urban Local Bodies, with approximately 162-163 (sources vary by one or two units) achieving investment-grade status — matching the lecture's "468 rated / 162 investment grade" essentially exactly. Source: <a href="https://www.studyiq.com/articles/municipal-corporations-tax-revenue-share-rise-in-recent-years/" target="_blank" rel="noopener">StudyIQ, citing RBI data</a>; municipal bond market research (ICRA, March 2025).</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>China vs India municipal bond issuance (252 bonds/$142 billion in August 2025 vs 25 bonds/Rs 3,500 crore over 2017-2025) — not independently re-verified this session</h4>
+    <p>The India-side figures (~25 municipal bonds, ~Rs 3,500 crore, 2017-2025) are broadly consistent with independently known patterns in India's nascent municipal bond market, but the specific China comparison (252 bonds, $142 billion, August 2025 alone) was cited only as presented in class/the NITI Aayog report and was not independently cross-checked against a primary Chinese government-bond data source in the time available. Treat this specific comparison as plausible but unverified pending a dedicated check.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>Census towns 1,362 (2001) to 3,894 (2011), DEGURBA 63% urban estimate, World Bank 40% urban by 2036 and $55bn/year — verified</h4>
+    <p>Confirmed: the number of census towns rose from 1,362 in 2001 to 3,894 in 2011 — matching the lecture's "~1,300 to 3,700+" figures (the lecture's figures are a rounded approximation of the exact verified numbers). Confirmed: India's Economic Survey (most recently 2025-26) has used the UN's DEGURBA (Degree of Urbanization) methodology, based on satellite population-density grids, to estimate India was already ~63% urban as far back as 2015 — closely matching the lecture. Confirmed: the World Bank's 2022 report on India's urban infrastructure financing projects 40% of India's population will be urban by 2036 (600 million people) and estimates a financing need of ~$840 billion over 15 years (~$55 billion/year) — both figures match the lecture exactly. Source: <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2219926" target="_blank" rel="noopener">PIB, Economic Survey 2025-26 urbanisation chapter</a>; <a href="https://www.worldbank.org/en/news/press-release/2022/11/14/india-s-urban-infrastructure-needs-to-cross-840-billion-over-next-15-years-new-world-bank-report" target="_blank" rel="noopener">World Bank press release</a>.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>Supreme Court's August 2025 Noida direction — verified</h4>
+    <p>Confirmed: in August 2025, a Supreme Court bench (Justices Surya Kant and Joymalya Bagchi) directed the Uttar Pradesh government to consider converting Noida into a Municipal Corporation, noting it was the only major Indian city without an elected local government, following a Special Investigation Team's critical findings on the Noida Authority's land-allotment practices. Source: <a href="https://m.thewire.in/article/urban/why-industrial-townships-like-noida-are-lacking-citizen-centric-governance" target="_blank" rel="noopener">The Wire</a>.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>Telangana's CURE Act, 2026 — verified, with a status caution</h4>
+    <p>Confirmed: Telangana's Core Urban Region (Integrated Governance) Bill, 2026 ("CURE Bill") was released in draft for public consultation on 5 July 2026 and passed by the Telangana Legislative Assembly on 12 September 2026, intended to replace the Greater Hyderabad Municipal Corporation Act, 1955, and create integrated governance across the Greater Hyderabad, Cyberabad, and Malkajgiri corporations — matching the lecture's description. Note: at the time of this lecture, the Bill had been passed by the Assembly but formal "Act" status (Governor's assent) was not independently confirmed this session — treat as "Bill/recently passed legislation" rather than a fully notified Act unless confirmed otherwise closer to the exam. Source: <a href="https://www.thenewsminute.com/telangana/explained-telanganas-cure-bill-seeks-to-reshape-governance-in-hyderabad" target="_blank" rel="noopener">The News Minute</a>; <a href="https://telanganatoday.com/telangana-assembly-clears-cure-bill-amid-mlas-concerns" target="_blank" rel="noopener">Telangana Today</a>.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>16th Finance Commission's Rs 10,000 crore peri-urban/urbanization premium — verified</h4>
+    <p>Confirmed: the 16th Finance Commission (covering 2026-31) recommended a Rs 10,000 crore "urbanisation premium" as a one-time grant to incentivize states to merge peri-urban/census-town villages into adjoining Urban Local Bodies (for ULBs with population over 1 lakh) and to formulate a Rural-to-Urban Transition Policy — matching the lecture. Source: <a href="https://prsindia.org/policy/report-summaries/report-of-the-16th-finance-commission-for-2026-31" target="_blank" rel="noopener">PRS Legislative Research</a>.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>Unverified/garbled scheme name from the auto-transcript — flagged for caution</h4>
+    <p>A scheme enabling rural women (via SHG networks) to participate in high-value agriculture and earn over Rs 1 lakh annually was referenced in class but transcribed only as something resembling "DAI" — the exact scheme name could not be confidently identified or verified this session. Treat this specific scheme name as unconfirmed; the underlying description is directionally consistent with several real high-value-agriculture/SHG livelihood schemes, but do not cite a specific name in an exam answer without further verification.</p>
+  </div>
+
+</section>
+
+</div>
+
+<footer>
+  Notes compiled from an unlisted lecture recording using YouTube's auto-generated transcript. Timestamps are approximate; several names and figures were transcribed imperfectly by auto-captions and are flagged inline for verification against the original lecture or handwritten notes before citing in an exam answer. Supplementary research sections are separately verified via web search and marked accordingly. Click Save (first time will ask you to pick this file) to write your edits directly to disk — no chat needed.
+</footer>
+
+<script>
+(function() {
+  var mode = null;
+  var noteCounter = 0;
+
+  var btnHighlight = document.getElementById('btn-highlight');
+  var btnUnderline = document.getElementById('btn-underline');
+  var btnNote = document.getElementById('btn-note');
+  var btnClear = document.getElementById('btn-clear');
+  var btnSave = document.getElementById('btn-save');
+  var statusText = document.getElementById('status-text');
+  var contentRoot = document.getElementById('content-root');
+  var noteBox = document.getElementById('note-input-box');
+  var noteText = document.getElementById('note-text');
+  var pendingNoteTarget = null;
+
+  function setMode(newMode) {
+    mode = mode === newMode ? null : newMode;
+    btnHighlight.classList.toggle('active', mode === 'highlight');
+    btnUnderline.classList.toggle('active', mode === 'underline');
+    btnNote.classList.toggle('active', mode === 'note');
+  }
+
+  btnHighlight.addEventListener('click', function() { setMode('highlight'); });
+  btnUnderline.addEventListener('click', function() { setMode('underline'); });
+  btnNote.addEventListener('click', function() { setMode('note'); });
+
+  function markDirty() {
+    statusText.textContent = 'Unsaved changes';
+    statusText.style.color = '#993c1d';
+  }
+
+  document.addEventListener('mouseup', function(e) {
+    if (mode !== 'highlight' && mode !== 'underline') return;
+    var sel = window.getSelection();
+    if (!sel || sel.isCollapsed || sel.rangeCount === 0) return;
+    var range = sel.getRangeAt(0);
+    if (!contentRoot.contains(range.commonAncestorContainer)) return;
+
+    var wrapper = document.createElement(mode === 'highlight' ? 'mark' : 'u');
+    wrapper.className = mode === 'highlight' ? 'user-highlight' : 'user-underline';
+    try {
+      range.surroundContents(wrapper);
+    } catch (err) {
+      var frag = range.extractContents();
+      wrapper.appendChild(frag);
+      range.insertNode(wrapper);
+    }
+    sel.removeAllRanges();
+    markDirty();
+  });
+
+  contentRoot.addEventListener('click', function(e) {
+    if (mode !== 'note') return;
+    if (e.target.closest('.user-note')) return;
+    pendingNoteTarget = e.target;
+    noteBox.style.display = 'block';
+    var x = Math.min(e.clientX, window.innerWidth - 280);
+    var y = Math.min(e.clientY, window.innerHeight - 140);
+    noteBox.style.left = x + 'px';
+    noteBox.style.top = y + 'px';
+    noteText.value = '';
+    noteText.focus();
+  });
+
+  document.getElementById('note-cancel').addEventListener('click', function() {
+    noteBox.style.display = 'none';
+    pendingNoteTarget = null;
+  });
+
+  document.getElementById('note-add').addEventListener('click', function() {
+    var text = noteText.value.trim();
+    if (!text || !pendingNoteTarget) { noteBox.style.display = 'none'; return; }
+    noteCounter++;
+    var noteDiv = document.createElement('div');
+    noteDiv.className = 'user-note';
+    noteDiv.setAttribute('data-note-id', noteCounter);
+    noteDiv.innerHTML = '<span class="note-label">Your note</span>' +
+      '<button class="del-note" title="Remove note">&times;</button>' +
+      '<span class="note-body"></span>';
+    noteDiv.querySelector('.note-body').textContent = text;
+    noteDiv.querySelector('.del-note').addEventListener('click', function() {
+      noteDiv.remove();
+      markDirty();
+    });
+
+    var target = pendingNoteTarget.closest('li, p, td, div.quote-card, section') || contentRoot;
+    target.parentNode.insertBefore(noteDiv, target.nextSibling);
+
+    noteBox.style.display = 'none';
+    pendingNoteTarget = null;
+    markDirty();
+    setMode('note');
+  });
+
+  btnClear.addEventListener('click', function() {
+    if (!confirm('Remove all your highlights, underlines, and notes on this page?')) return;
+    contentRoot.querySelectorAll('.user-note').forEach(function(n) { n.remove(); });
+    contentRoot.querySelectorAll('mark.user-highlight').forEach(function(m) {
+      var parent = m.parentNode;
+      while (m.firstChild) parent.insertBefore(m.firstChild, m);
+      parent.removeChild(m);
+    });
+    contentRoot.querySelectorAll('u.user-underline').forEach(function(u) {
+      var parent = u.parentNode;
+      while (u.firstChild) parent.insertBefore(u.firstChild, u);
+      parent.removeChild(u);
+    });
+    markDirty();
+  });
+
+  var fallbackHelp = document.getElementById('fallback-help');
+  document.getElementById('fallback-close').addEventListener('click', function() {
+    fallbackHelp.style.display = 'none';
+  });
+
+  var fileHandle = null;
+  var fsaSupported = 'showSaveFilePicker' in window;
+  var THIS_FILENAME = 'notes.html';
+
+  function buildFullHtml() {
+    var doc = document.documentElement.cloneNode(true);
+    var liveContentRoot = doc.querySelector('#content-root');
+    if (liveContentRoot) liveContentRoot.innerHTML = contentRoot.innerHTML;
+    return '<!DOCTYPE html>\n' + doc.outerHTML;
+  }
+
+  async function writeToFile() {
+    var writable = await fileHandle.createWritable();
+    await writable.write(buildFullHtml());
+    await writable.close();
+  }
+
+  btnSave.addEventListener('click', async function() {
+    statusText.textContent = 'Saving…';
+    statusText.style.color = '#57606a';
+    if (!fsaSupported) {
+      fallbackHelp.style.display = 'block';
+      statusText.textContent = 'Direct save not supported in this browser';
+      statusText.style.color = '#993c1d';
+      return;
+    }
+    try {
+      if (!fileHandle) {
+        fileHandle = await window.showSaveFilePicker({
+          suggestedName: THIS_FILENAME,
+          types: [{ description: 'HTML file', accept: { 'text/html': ['.html'] } }]
+        });
+      }
+      var perm = await fileHandle.queryPermission({ mode: 'readwrite' });
+      if (perm !== 'granted') {
+        perm = await fileHandle.requestPermission({ mode: 'readwrite' });
+      }
+      if (perm !== 'granted') {
+        statusText.textContent = 'File permission denied — click Save to retry';
+        statusText.style.color = '#993c1d';
+        fileHandle = null;
+        return;
+      }
+      await writeToFile();
+      statusText.textContent = 'Saved to file just now';
+      statusText.style.color = '#3b6d11';
+    } catch (err) {
+      console.error('SAVE_ERROR', err.name, err.message, err);
+      if (err.name === 'AbortError') {
+        statusText.textContent = 'Save cancelled';
+        statusText.style.color = '#57606a';
+      } else {
+        statusText.textContent = 'Save failed: ' + err.name + ' — click Save to retry';
+        statusText.style.color = '#993c1d';
+        fileHandle = null;
+      }
+    }
+  });
+
+  contentRoot.querySelectorAll('.user-note .del-note').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      btn.closest('.user-note').remove();
+      markDirty();
+    });
+  });
+
+  contentRoot.querySelectorAll('.spacing-tracker input[type="checkbox"]').forEach(function(cb) {
+    cb.addEventListener('change', function() {
+      if (cb.checked) { cb.setAttribute('checked', 'checked'); }
+      else { cb.removeAttribute('checked'); }
+      markDirty();
+    });
+  });
+})();
+</script>
+</body>
+</html>
