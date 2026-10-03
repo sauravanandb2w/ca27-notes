@@ -124,6 +124,49 @@
     border-radius: 8px;
     padding: 2px 8px;
   }
+  .card-topics li:has(input:checked) {
+    background: #eaf3de;
+    border-color: #b9d79a;
+    color: #3b6d11;
+    text-decoration: line-through;
+  }
+  .card-topics label { display: flex; align-items: center; gap: 5px; cursor: pointer; }
+  .card-topics input[type="checkbox"] { margin: 0; cursor: pointer; }
+  .save-bar {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: #fff;
+    border-bottom: 1px solid #e2ddd4;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 14px;
+    font-family: Arial, sans-serif;
+    font-size: 0.85em;
+  }
+  .save-bar #save-status { color: #57606a; }
+  .save-bar button {
+    background: #2f2f6b;
+    color: #fff;
+    border: none;
+    padding: 6px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .save-bar button:hover { background: #22224d; }
+  .fallback-help {
+    display: none;
+    background: #fdf3e0;
+    border-bottom: 1px solid #e8d6a8;
+    padding: 10px 20px;
+    font-family: Arial, sans-serif;
+    font-size: 0.85em;
+    color: #6b4f15;
+  }
+  .fallback-help button { margin-left: 10px; }
   .lecture-folder {
     font-family: Arial, sans-serif;
     font-size: 0.78em;
@@ -143,6 +186,14 @@
 </style>
 </head>
 <body>
+<div class="save-bar" id="save-bar">
+  <span id="save-status">Not connected to file — click Save once to connect</span>
+  <button id="btn-save">Save</button>
+</div>
+<div id="fallback-help" class="fallback-help">
+  Direct file saving needs Chrome or Edge. In other browsers, use your browser's "Save Page As" (HTML only) after checking boxes, or note which topics you've covered and update manually later.
+  <button id="fallback-close">Got it</button>
+</div>
 <div class="wrap">
 
 <header>
@@ -174,9 +225,9 @@
       <span class="lecture-title">
         <a href="CA-Mains-2026/2026-08-11_class01-gender-morality-bail/notes.html">Class 1(26) — Gender Politics of the Constitution, Constitutional Morality &amp; Bail Jurisprudence</a>
         <ul class="card-topics">
-          <li>Gender Politics of the Constitution</li>
-          <li>Constitutional Morality</li>
-          <li>Bail Jurisprudence</li>
+          <li><label><input type="checkbox" id="topic-1"> Gender Politics of the Constitution</label></li>
+          <li><label><input type="checkbox" id="topic-2"> Constitutional Morality</label></li>
+          <li><label><input type="checkbox" id="topic-3"> Bail Jurisprudence</label></li>
         </ul>
         <span class="tag tag-ca">Current Affairs</span>
       </span>
@@ -188,10 +239,10 @@
       <span class="lecture-title">
         <a href="CA-Mains-2026/2026-08-11_class02-freebies-strays-privacy-dna/notes.html">Class 2(26) — Freebies vs. Welfare, Stray Dogs &amp; Public Safety, Right to be Forgotten, DNA Testing</a>
         <ul class="card-topics">
-          <li>Freebies vs. Welfare</li>
-          <li>Stray Dogs &amp; Public Safety</li>
-          <li>Right to be Forgotten</li>
-          <li>DNA Testing</li>
+          <li><label><input type="checkbox" id="topic-4"> Freebies vs. Welfare</label></li>
+          <li><label><input type="checkbox" id="topic-5"> Stray Dogs &amp; Public Safety</label></li>
+          <li><label><input type="checkbox" id="topic-6"> Right to be Forgotten</label></li>
+          <li><label><input type="checkbox" id="topic-7"> DNA Testing</label></li>
         </ul>
         <span class="tag tag-ca">Current Affairs</span>
       </span>
@@ -203,9 +254,9 @@
       <span class="lecture-title">
         <a href="CA-Mains-2026/2026-08-12_class03-menstrual-ai-judiciary-govt-assurances/notes.html">Class 3(26) — Menstrual Leave &amp; Substantive Equality, AI in Courts, Committee on Government Assurances</a>
         <ul class="card-topics">
-          <li>Menstrual Leave &amp; Substantive Equality</li>
-          <li>AI in Courts</li>
-          <li>Committee on Government Assurances</li>
+          <li><label><input type="checkbox" id="topic-8"> Menstrual Leave &amp; Substantive Equality</label></li>
+          <li><label><input type="checkbox" id="topic-9"> AI in Courts</label></li>
+          <li><label><input type="checkbox" id="topic-10"> Committee on Government Assurances</label></li>
         </ul>
         <span class="tag tag-ca">Current Affairs</span>
       </span>
@@ -225,9 +276,9 @@
         <a href="CA-Mains-2027/2026-08-10_class01-strait-of-hormuz/notes.html">Class 1(27) — Strait of Hormuz Crisis: Geopolitics, Doctrines &amp; India's Vulnerabilities</a>
         <a href="CA-Mains-2027/2026-08-10_class01-strait-of-hormuz/one-pager.html" class="onepager-link">1-pager</a>
         <ul class="card-topics">
-          <li>Strait of Hormuz Crisis</li>
-          <li>Geopolitics &amp; Doctrines</li>
-          <li>India's Vulnerabilities</li>
+          <li><label><input type="checkbox" id="topic-11"> Strait of Hormuz Crisis</label></li>
+          <li><label><input type="checkbox" id="topic-12"> Geopolitics &amp; Doctrines</label></li>
+          <li><label><input type="checkbox" id="topic-13"> India's Vulnerabilities</label></li>
         </ul>
         <span class="tag tag-ca">Current Affairs</span>
       </span>
@@ -240,8 +291,8 @@
         <a href="CA-Mains-2027/2026-08-13_class02-care-economy-agri-marketing/notes.html">Class 2(27) — Care Economy &amp; Unpaid Domestic Work, Agricultural Marketing</a>
         <a href="CA-Mains-2027/2026-08-13_class02-care-economy-agri-marketing/one-pager.html" class="onepager-link">1-pager</a>
         <ul class="card-topics">
-          <li>Care Economy &amp; Unpaid Domestic Work</li>
-          <li>Agricultural Marketing</li>
+          <li><label><input type="checkbox" id="topic-14"> Care Economy &amp; Unpaid Domestic Work</label></li>
+          <li><label><input type="checkbox" id="topic-15"> Agricultural Marketing</label></li>
         </ul>
         <span class="tag tag-ca">Current Affairs</span>
       </span>
@@ -254,8 +305,8 @@
         <a href="CA-Mains-2027/2026-08-14_class03-ai-judiciary-pds/notes.html">Class 3(27) — Artificial Intelligence in Judiciary &amp; Public Distribution System (SARTHAK-PDS)</a>
         <a href="CA-Mains-2027/2026-08-14_class03-ai-judiciary-pds/one-pager.html" class="onepager-link">1-pager</a>
         <ul class="card-topics">
-          <li>Artificial Intelligence in Judiciary</li>
-          <li>Public Distribution System (SARTHAK-PDS)</li>
+          <li><label><input type="checkbox" id="topic-16"> Artificial Intelligence in Judiciary</label></li>
+          <li><label><input type="checkbox" id="topic-17"> Public Distribution System (SARTHAK-PDS)</label></li>
         </ul>
         <span class="tag tag-ca">Current Affairs</span>
       </span>
@@ -268,8 +319,8 @@
         <a href="CA-Mains-2027/2026-08-20_class04-public-exams-msme/notes.html">Class 4(27) — Public Examinations (Prevention of Unfair Means) Amendment Act 2026 &amp; MSME Sector</a>
         <a href="CA-Mains-2027/2026-08-20_class04-public-exams-msme/one-pager.html" class="onepager-link">1-pager</a>
         <ul class="card-topics">
-          <li>Public Examinations (Prevention of Unfair Means) Amendment Act 2026</li>
-          <li>MSME Sector</li>
+          <li><label><input type="checkbox" id="topic-18"> Public Examinations (Prevention of Unfair Means) Amendment Act 2026</label></li>
+          <li><label><input type="checkbox" id="topic-19"> MSME Sector</label></li>
         </ul>
         <span class="tag tag-ca">Current Affairs</span>
       </span>
@@ -282,8 +333,8 @@
         <a href="CA-Mains-2027/2026-08-26_class05-msme-mecca-pact/notes.html">Class 5(27) — MSME Sector (contd.) &amp; the Mecca Joint Defense Agreement 2026</a>
         <a href="CA-Mains-2027/2026-08-26_class05-msme-mecca-pact/one-pager.html" class="onepager-link">1-pager</a>
         <ul class="card-topics">
-          <li>MSME Sector (contd.)</li>
-          <li>Mecca Joint Defense Agreement 2026</li>
+          <li><label><input type="checkbox" id="topic-20"> MSME Sector (contd.)</label></li>
+          <li><label><input type="checkbox" id="topic-21"> Mecca Joint Defense Agreement 2026</label></li>
         </ul>
         <span class="tag tag-ca">Current Affairs</span>
       </span>
@@ -296,8 +347,8 @@
         <a href="CA-Mains-2027/2026-08-26_class06-freebies-msp/notes.html">Class 6(27) — Freebies vs. Welfare (Answer Writing) &amp; Minimum Support Price (MSP)</a>
         <a href="CA-Mains-2027/2026-08-26_class06-freebies-msp/one-pager.html" class="onepager-link">1-pager</a>
         <ul class="card-topics">
-          <li>Freebies vs. Welfare (Answer Writing)</li>
-          <li>Minimum Support Price (MSP)</li>
+          <li><label><input type="checkbox" id="topic-22"> Freebies vs. Welfare (Answer Writing)</label></li>
+          <li><label><input type="checkbox" id="topic-23"> Minimum Support Price (MSP)</label></li>
         </ul>
         <span class="tag tag-ca">Current Affairs</span>
       </span>
@@ -314,9 +365,9 @@
         <a href="CA-Mains-2027/2026-09-06_class07-right-to-protest/notes.html">Class 7(27) — Right to Protest, Section 17A of the Prevention of Corruption Act &amp; Judicial Appointments (Collegium)</a>
         <a href="CA-Mains-2027/2026-09-06_class07-right-to-protest/one-pager.html" class="onepager-link">1-pager</a>
         <ul class="card-topics">
-          <li>Right to Protest</li>
-          <li>Section 17A of the Prevention of Corruption Act</li>
-          <li>Judicial Appointments (Collegium — intro)</li>
+          <li><label><input type="checkbox" id="topic-24"> Right to Protest</label></li>
+          <li><label><input type="checkbox" id="topic-25"> Section 17A of the Prevention of Corruption Act</label></li>
+          <li><label><input type="checkbox" id="topic-26"> Judicial Appointments (Collegium — intro)</label></li>
         </ul>
         <span class="tag tag-ca">Current Affairs</span>
       </span>
@@ -329,9 +380,9 @@
         <a href="CA-Mains-2027/2026-09-08_class08-judicial-tribunals-pmaasha/notes.html">Class 8(27) — Judicial Appointments Continued (UK/USA Models), Tribunal Reforms Act 2026 &amp; PM-AASHA</a>
         <a href="CA-Mains-2027/2026-09-08_class08-judicial-tribunals-pmaasha/one-pager.html" class="onepager-link">1-pager</a>
         <ul class="card-topics">
-          <li>Judicial Appointments Continued (UK/USA Models)</li>
-          <li>Tribunal Reforms Act 2026</li>
-          <li>PM-AASHA (intro)</li>
+          <li><label><input type="checkbox" id="topic-27"> Judicial Appointments Continued (UK/USA Models)</label></li>
+          <li><label><input type="checkbox" id="topic-28"> Tribunal Reforms Act 2026</label></li>
+          <li><label><input type="checkbox" id="topic-29"> PM-AASHA (intro)</label></li>
         </ul>
         <span class="tag tag-ca">Current Affairs</span>
       </span>
@@ -344,8 +395,8 @@
         <a href="CA-Mains-2027/2026-09-10_class09-rupps-vbgramg/notes.html">Class 9(27) — Registered Unrecognised Political Parties (RUPPs) &amp; VB-G RAM G (MGNREGA Replacement)</a>
         <a href="CA-Mains-2027/2026-09-10_class09-rupps-vbgramg/one-pager.html" class="onepager-link">1-pager</a>
         <ul class="card-topics">
-          <li>Registered Unrecognised Political Parties (RUPPs)</li>
-          <li>VB-G RAM G (MGNREGA Replacement)</li>
+          <li><label><input type="checkbox" id="topic-30"> Registered Unrecognised Political Parties (RUPPs)</label></li>
+          <li><label><input type="checkbox" id="topic-31"> VB-G RAM G (MGNREGA Replacement)</label></li>
         </ul>
         <span class="tag tag-ca">Current Affairs</span>
       </span>
@@ -358,8 +409,8 @@
         <a href="CA-Mains-2027/2026-09-17_class10-mmdr-sco/notes.html">Class 10(27) — MMDR Amendment Act 2026 (Mineral Fiscal Federalism) &amp; Shanghai Cooperation Organisation — 25 Years</a>
         <a href="CA-Mains-2027/2026-09-17_class10-mmdr-sco/one-pager.html" class="onepager-link">1-pager</a>
         <ul class="card-topics">
-          <li>MMDR Amendment Act 2026 (Mineral Fiscal Federalism)</li>
-          <li>Shanghai Cooperation Organisation — 25 Years</li>
+          <li><label><input type="checkbox" id="topic-32"> MMDR Amendment Act 2026 (Mineral Fiscal Federalism)</label></li>
+          <li><label><input type="checkbox" id="topic-33"> Shanghai Cooperation Organisation — 25 Years</label></li>
         </ul>
         <span class="tag tag-ca">Current Affairs</span>
       </span>
@@ -372,11 +423,11 @@
         <a href="CA-Mains-2027/2026-09-18_class10a-bbnj-psl-critminerals/notes.html">Class 10-A(27) — BBNJ/High Seas Treaty, RBI Priority Sector Lending Norms, DRDO Scramjet &amp; Critical Minerals (Coking Coal), Greenland Geopolitics</a>
         <a href="CA-Mains-2027/2026-09-18_class10a-bbnj-psl-critminerals/one-pager.html" class="onepager-link">1-pager</a>
         <ul class="card-topics">
-          <li>BBNJ / High Seas Treaty</li>
-          <li>RBI Priority Sector Lending Norms</li>
-          <li>DRDO Scramjet</li>
-          <li>Critical Minerals (Coking Coal)</li>
-          <li>Greenland Geopolitics</li>
+          <li><label><input type="checkbox" id="topic-34"> BBNJ / High Seas Treaty</label></li>
+          <li><label><input type="checkbox" id="topic-35"> RBI Priority Sector Lending Norms</label></li>
+          <li><label><input type="checkbox" id="topic-36"> DRDO Scramjet</label></li>
+          <li><label><input type="checkbox" id="topic-37"> Critical Minerals (Coking Coal)</label></li>
+          <li><label><input type="checkbox" id="topic-38"> Greenland Geopolitics</label></li>
         </ul>
         <span class="tag tag-ca">Current Affairs</span>
       </span>
@@ -389,9 +440,9 @@
         <a href="CA-Mains-2027/2026-09-22_class11-riverwater-corridors-education/notes.html">Class 11(27) — Interstate River Water Disputes, Integrated Industrial Corridor Development (DFC) &amp; Education in the Concurrent List</a>
         <a href="CA-Mains-2027/2026-09-22_class11-riverwater-corridors-education/one-pager.html" class="onepager-link">1-pager</a>
         <ul class="card-topics">
-          <li>Interstate River Water Disputes</li>
-          <li>Integrated Industrial Corridor Development (DFC)</li>
-          <li>Education in the Concurrent List</li>
+          <li><label><input type="checkbox" id="topic-39"> Interstate River Water Disputes</label></li>
+          <li><label><input type="checkbox" id="topic-40"> Integrated Industrial Corridor Development (DFC)</label></li>
+          <li><label><input type="checkbox" id="topic-41"> Education in the Concurrent List</label></li>
         </ul>
         <span class="tag tag-ca">Current Affairs</span>
       </span>
@@ -408,9 +459,9 @@
         <a href="CA-Mains-2027/2026-10-01_class12-women-farmers-mayor-council-census-towns/notes.html">Class 12(27) — Feminization of Agriculture, Mayor-in-Council Urban Governance &amp; Census Towns</a>
         <a href="CA-Mains-2027/2026-10-01_class12-women-farmers-mayor-council-census-towns/one-pager.html" class="onepager-link">1-pager</a>
         <ul class="card-topics">
-          <li>Feminization of Agriculture</li>
-          <li>Mayor-in-Council Urban Governance</li>
-          <li>Census Towns</li>
+          <li><label><input type="checkbox" id="topic-42"> Feminization of Agriculture</label></li>
+          <li><label><input type="checkbox" id="topic-43"> Mayor-in-Council Urban Governance</label></li>
+          <li><label><input type="checkbox" id="topic-44"> Census Towns</label></li>
         </ul>
         <span class="tag tag-ca">Current Affairs</span>
       </span>
@@ -423,8 +474,8 @@
         <a href="CA-Mains-2027/2026-10-03_class13-self-help-groups-brics-summit/notes.html">Class 13(27) — Self-Help Groups &amp; PRI-SHG Convergence, BRICS New Delhi Declaration 2026</a>
         <a href="CA-Mains-2027/2026-10-03_class13-self-help-groups-brics-summit/one-pager.html" class="onepager-link">1-pager</a>
         <ul class="card-topics">
-          <li>Self-Help Groups &amp; PRI-SHG Convergence</li>
-          <li>BRICS New Delhi Declaration 2026</li>
+          <li><label><input type="checkbox" id="topic-45"> Self-Help Groups &amp; PRI-SHG Convergence</label></li>
+          <li><label><input type="checkbox" id="topic-46"> BRICS New Delhi Declaration 2026</label></li>
         </ul>
         <span class="tag tag-ca">Current Affairs</span>
       </span>
@@ -465,6 +516,79 @@
         group.style.display = anyVisible ? 'block' : 'none';
       });
     });
+  });
+})();
+
+(function() {
+  document.querySelectorAll('.card-topics input[type="checkbox"]').forEach(function(cb) {
+    cb.addEventListener('change', function() {
+      if (cb.checked) { cb.setAttribute('checked', 'checked'); }
+      else { cb.removeAttribute('checked'); }
+    });
+  });
+
+  var fileHandle = null;
+  var fsaSupported = 'showSaveFilePicker' in window;
+  var THIS_FILENAME = 'index.html';
+  var statusText = document.getElementById('save-status');
+  var btnSave = document.getElementById('btn-save');
+  var fallbackHelp = document.getElementById('fallback-help');
+
+  document.getElementById('fallback-close').addEventListener('click', function() {
+    fallbackHelp.style.display = 'none';
+  });
+
+  function buildFullHtml() {
+    var doc = document.documentElement.cloneNode(true);
+    return '<!DOCTYPE html>\n' + doc.outerHTML;
+  }
+
+  async function writeToFile() {
+    var writable = await fileHandle.createWritable();
+    await writable.write(buildFullHtml());
+    await writable.close();
+  }
+
+  btnSave.addEventListener('click', async function() {
+    statusText.textContent = 'Saving…';
+    statusText.style.color = '#57606a';
+    if (!fsaSupported) {
+      fallbackHelp.style.display = 'block';
+      statusText.textContent = 'Direct save not supported in this browser';
+      statusText.style.color = '#993c1d';
+      return;
+    }
+    try {
+      if (!fileHandle) {
+        fileHandle = await window.showSaveFilePicker({
+          suggestedName: THIS_FILENAME,
+          types: [{ description: 'HTML file', accept: { 'text/html': ['.html'] } }]
+        });
+      }
+      var perm = await fileHandle.queryPermission({ mode: 'readwrite' });
+      if (perm !== 'granted') {
+        perm = await fileHandle.requestPermission({ mode: 'readwrite' });
+      }
+      if (perm !== 'granted') {
+        statusText.textContent = 'File permission denied — click Save to retry';
+        statusText.style.color = '#993c1d';
+        fileHandle = null;
+        return;
+      }
+      await writeToFile();
+      statusText.textContent = 'Saved to file just now';
+      statusText.style.color = '#3b6d11';
+    } catch (err) {
+      console.error('SAVE_ERROR', err.name, err.message, err);
+      if (err.name === 'AbortError') {
+        statusText.textContent = 'Save cancelled';
+        statusText.style.color = '#57606a';
+      } else {
+        statusText.textContent = 'Save failed: ' + err.name + ' — click Save to retry';
+        statusText.style.color = '#993c1d';
+        fileHandle = null;
+      }
+    }
   });
 })();
 </script>
