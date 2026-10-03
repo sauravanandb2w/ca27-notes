@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class 13(27): Self-Help Groups, PRI-SHG Convergence &amp; the BRICS New Delhi Declaration 2026</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: #faf9f6;
+    color: #1f2328;
+    margin: 0;
+    padding: 0 0 80px;
+    line-height: 1.6;
+  }
+  .toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: #ffffff;
+    border-bottom: 2px solid #1d5b8b;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: Arial, sans-serif;
+    flex-wrap: wrap;
+  }
+  .toolbar button {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    padding: 7px 14px;
+    border-radius: 6px;
+    border: 1px solid #d8d2c6;
+    background: #fff;
+    cursor: pointer;
+    color: #1f2328;
+  }
+  .toolbar button:hover { background: #e6f1fb; border-color: #1d5b8b; }
+  .toolbar button.active { background: #1d5b8b; color: #fff; border-color: #1d5b8b; }
+  .toolbar .save-btn { background: #2f6b4f; color: #fff; border-color: #2f6b4f; margin-left: auto; }
+  .toolbar .save-btn:hover { background: #24543e; }
+  .toolbar .status { font-size: 12px; color: #57606a; margin-left: auto; padding-right: 8px; }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 30px 20px; }
+  header { border-bottom: 3px solid #1d5b8b; padding-bottom: 20px; margin-bottom: 30px; }
+  header h1 { font-size: 1.6em; margin: 0 0 6px; color: #1d5b8b; }
+  header .meta { color: #57606a; font-size: 0.95em; font-family: Arial, sans-serif; }
+  section { margin-bottom: 42px; }
+  h2 { font-size: 1.4em; color: #1d5b8b; border-left: 4px solid #1d5b8b; padding-left: 12px; margin-bottom: 14px; }
+  h3 { font-size: 1.12em; margin: 22px 0 8px; }
+  p { margin: 10px 0; }
+  .summary-box { background: #e6f1fb; border-radius: 8px; padding: 18px 22px; font-size: 0.98em; }
+  ul, ol.answers { padding-left: 24px; }
+  li { margin-bottom: 6px; }
+  .timestamp { font-family: 'Courier New', monospace; font-size: 0.78em; color: #57606a; background: #e2ddd4; border-radius: 4px; padding: 1px 6px; margin-right: 6px; }
+  .quote-card { background: #fff; border: 1px solid #e2ddd4; border-left: 4px solid #1d5b8b; border-radius: 6px; padding: 14px 18px; margin: 14px 0; }
+  .quote-card .q { font-style: italic; font-size: 1.05em; }
+  .quote-card .attrib { font-family: Arial, sans-serif; font-size: 0.85em; color: #57606a; margin-top: 6px; }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.95em; background: #fff; }
+  th, td { border: 1px solid #e2ddd4; padding: 8px 12px; text-align: left; vertical-align: top; }
+  th { background: #e6f1fb; font-family: Arial, sans-serif; font-size: 0.88em; }
+  .gap-box { background: #eef4f0; border: 1px solid #cfe3d6; border-radius: 8px; padding: 16px 20px; margin-top: 16px; font-size: 0.95em; }
+  .gap-box h4 { margin: 0 0 8px; color: #2f6b4f; font-family: Arial, sans-serif; font-size: 0.95em; }
+  .exam-tip { background: #fff7e6; border: 1px solid #f0dba8; border-radius: 8px; padding: 14px 20px; margin: 14px 0; font-size: 0.95em; }
+  .exam-tip::before { content: "Exam strategy: "; font-weight: bold; font-family: Arial, sans-serif; }
+  .term-box { background: #fdf3f3; border: 1px solid #ecd4d4; border-radius: 8px; padding: 12px 16px; margin: 10px 0; }
+  .term-box strong { color: #8b3a3a; }
+  .data-box { background: #f3f0fb; border: 1px solid #ddd6f0; border-radius: 8px; padding: 12px 16px; margin: 10px 0; font-family: 'Courier New', monospace; font-size: 0.9em; }
+  footer { margin-top: 60px; border-top: 1px solid #e2ddd4; padding-top: 16px; color: #57606a; font-size: 0.82em; font-family: Arial, sans-serif; }
+  .toc {
+    background: #fff;
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    padding: 16px 22px;
+    margin-bottom: 36px;
+    font-family: Arial, sans-serif;
+    font-size: 0.9em;
+  }
+  .toc h2 { font-size: 1em; margin: 0 0 10px; border: none; padding: 0; color: #1d5b8b; text-transform: uppercase; letter-spacing: 0.04em; }
+  .toc ol { columns: 2; margin: 0; padding-left: 20px; }
+  .toc a { color: #1f2328; text-decoration: none; }
+  .toc a:hover { color: #1d5b8b; text-decoration: underline; }
+  details.collapse-section {
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    background: #fff;
+    margin: 14px 0;
+    padding: 0;
+  }
+  details.collapse-section summary {
+    cursor: pointer;
+    padding: 12px 16px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 0.92em;
+    color: #1d5b8b;
+    list-style: none;
+  }
+  details.collapse-section summary::-webkit-details-marker { display: none; }
+  details.collapse-section summary::before { content: "▸ "; }
+  details.collapse-section[open] summary::before { content: "▾ "; }
+  details.collapse-section .collapse-body { padding: 4px 16px 16px; }
+  .glossary-term {
+    display: flex;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+  }
+  .glossary-term:last-child { border-bottom: none; }
+  .glossary-term dt { font-weight: bold; color: #8b3a3a; min-width: 220px; flex-shrink: 0; font-family: Arial, sans-serif; font-size: 0.9em; }
+  .glossary-term dd { margin: 0; }
+
+  mark.user-highlight { background: #fff176; padding: 1px 2px; border-radius: 2px; }
+  u.user-underline { text-decoration: underline; text-decoration-color: #1d5b8b; text-decoration-thickness: 2px; }
+  .user-note {
+    background: #e6f1fb;
+    border: 1px solid #85b7eb;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin: 8px 0;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #0c447c;
+    position: relative;
+  }
+  .user-note .note-label { font-weight: bold; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; display: block; }
+  .user-note .del-note { position: absolute; top: 6px; right: 8px; cursor: pointer; border: none; background: none; color: #0c447c; font-size: 14px; font-family: Arial, sans-serif; }
+  #note-input-box {
+    position: fixed;
+    display: none;
+    background: #fff;
+    border: 2px solid #1d5b8b;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    z-index: 100;
+    font-family: Arial, sans-serif;
+  }
+  #note-input-box textarea { width: 240px; height: 60px; font-family: Arial, sans-serif; font-size: 13px; border: 1px solid #d8d2c6; border-radius: 4px; padding: 6px; }
+  #note-input-box .note-actions { margin-top: 6px; display: flex; gap: 6px; justify-content: flex-end; }
+  #note-input-box button { font-size: 12px; padding: 5px 10px; border-radius: 4px; border: 1px solid #d8d2c6; background: #fff; cursor: pointer; }
+  #note-input-box button.primary { background: #1d5b8b; color: #fff; border-color: #1d5b8b; }
+  .content-target::selection { background: #ffe082; }
+  .board-caption { font-family: Arial, sans-serif; font-size: 0.82em; color: #57606a; margin-top: -8px; margin-bottom: 14px; }
+  .arcs-box {
+    background: #fff;
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 14px 0;
+  }
+  .arcs-box h4 { margin: 0 0 10px; color: #1d5b8b; font-family: Arial, sans-serif; font-size: 0.98em; }
+  .recall-q { margin-bottom: 14px; }
+  .recall-q p.q-text { font-weight: bold; margin: 0 0 6px; }
+  .recall-q details { border: none; margin: 0; }
+  .recall-q summary { font-family: Arial, sans-serif; font-size: 0.82em; color: #1d5b8b; cursor: pointer; list-style: none; padding: 2px 0; }
+  .recall-q summary::-webkit-details-marker { display: none; }
+  .recall-q summary::before { content: "Show answer \25B8 "; }
+  .recall-q details[open] summary::before { content: "Hide answer \25BE "; }
+  .recall-q .ans { background: #eef4f0; border-radius: 6px; padding: 8px 12px; margin-top: 6px; font-size: 0.95em; }
+  .spacing-tracker { font-family: Arial, sans-serif; font-size: 0.92em; }
+  .spacing-tracker table { margin: 8px 0; }
+  .spacing-tracker input[type="checkbox"] { width: 16px; height: 16px; cursor: pointer; }
+  .mnemonic-box { background: #fff7e6; border: 1px solid #f0dba8; border-radius: 8px; padding: 14px 18px; margin: 10px 0; }
+  .mnemonic-box h4 { margin: 0 0 6px; color: #8b5a1d; font-family: Arial, sans-serif; font-size: 0.92em; }
+  .applic-table td.gs-tag { font-family: Arial, sans-serif; font-weight: bold; font-size: 0.85em; white-space: nowrap; }
+  .applic-table .prelims-badge, .applic-table .mains-badge {
+    display: inline-block; font-family: Arial, sans-serif; font-size: 0.72em; font-weight: bold;
+    padding: 2px 8px; border-radius: 10px; margin-right: 4px;
+  }
+  .prelims-badge { background: #eaf3de; color: #3b6d11; }
+  .mains-badge { background: #e6f1fb; color: #1d5b8b; }
+  #fallback-help {
+    position: fixed;
+    display: none;
+    top: 60px;
+    right: 20px;
+    max-width: 320px;
+    background: #fff;
+    border: 2px solid #993c1d;
+    border-radius: 8px;
+    padding: 14px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    z-index: 200;
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <button id="btn-highlight" title="Select text, then click to highlight it">Highlight</button>
+  <button id="btn-underline" title="Select text, then click to underline it">Underline</button>
+  <button id="btn-note" title="Click this, then click anywhere in the notes to drop a note">Add note</button>
+  <button id="btn-clear" title="Remove all your highlights, underlines, and notes">Clear my edits</button>
+  <span class="status" id="status-text">Not connected to file — click Save once to connect</span>
+  <button class="save-btn" id="btn-save">Save</button>
+</div>
+
+<div id="fallback-help">
+  <strong>Your browser can't save directly</strong>
+  <p style="margin:6px 0;">File System Access isn't supported here (common on Safari/Firefox). Use Chrome or Edge to enable direct-save, or use your browser's Save Page As (Ctrl/Cmd+S) to overwrite this file manually after editing.</p>
+  <button id="fallback-close" style="font-size: 12px; padding: 6px 12px; border-radius: 4px; border: 1px solid #993c1d; background: #993c1d; color: #fff; cursor: pointer;">Got it</button>
+</div>
+
+<div id="note-input-box">
+  <textarea id="note-text" placeholder="Type your note..."></textarea>
+  <div class="note-actions">
+    <button id="note-cancel">Cancel</button>
+    <button class="primary" id="note-add">Add</button>
+  </div>
+</div>
+
+<div class="wrap content-target" id="content-root">
+
+<header>
+  <h1>Class 13(27) — Self-Help Groups &amp; PRI-SHG Convergence, the BRICS New Delhi Declaration 2026</h1>
+  <div class="meta">
+    <span>Source: unlisted YouTube lecture recording ("class 13"), uploader Saurav Anand</span> &middot;
+    <span>Substantive content: 0:00 &ndash; 2:09:05 (full upload runs 2h11m19s; the final ~2 minutes after the live question is set appear to be the writing window beginning, with no further captioned instructor speech)</span> &middot;
+    <span>Track: UPSC GS-2 (Governance, Social Justice, International Relations) / GS-3 (Economy, Inclusive Growth) — Current Affairs with two live Mains answer-writing exercises (one reviewed live, one set as self-practice)</span>
+  </div>
+</header>
+
+<div class="gap-box">
+  <h4>Note on the two still-outstanding deferrals from earlier classes</h4>
+  <p><strong>PM-AASHA live exercise (deferred from Class 8, not covered in Classes 9, 10, 10-A, 11, or 12):</strong> checked carefully across this entire transcript. Does not appear anywhere in this session either.</p>
+  <p><strong>"Exchange entitlement decline" (deferred from Class 9, not covered in Classes 10, 10-A, 11, or 12):</strong> also checked carefully. Does not appear in this session.</p>
+  <p>Class 13 opens with a brief review of Class 12's last (self-practice) live question on census towns, then covers two new topics: Self-Help Groups and PRI-SHG convergence (the longest topic, with a live answer-writing exercise reviewed in class), and the BRICS New Delhi Declaration following the 18th BRICS Summit (with a second live answer-writing exercise set right at the end, without time for in-class review). Both deferred items remain outstanding — track PM-AASHA and exchange entitlement decline explicitly going into Class 14.</p>
+</div>
+
+<nav class="toc">
+  <h2>Contents</h2>
+  <ol>
+    <li><a href="#applicability">Applicability — GS papers, Prelims &amp; Mains</a></li>
+    <li><a href="#part1">1. Recap — Class 12's census-towns live answer, reviewed</a></li>
+    <li><a href="#part2">2. Self-Help Groups — core defining features &amp; the Panch Sutra</a></li>
+    <li><a href="#part3">3. SHGs — conceptual toolkit: development, social capital, social engineering, social business</a></li>
+    <li><a href="#part4">4. SHGs — the empowerment framework &amp; polycentric governance</a></li>
+    <li><a href="#part5">5. SHGs — evolution: from poverty alleviation to the graduation approach</a></li>
+    <li><a href="#part6">6. SHGs — data &amp; the vicious/virtuous cycle</a></li>
+    <li><a href="#part7">7. SHGs — challenges &amp; the Allahabad High Court ration-shop case</a></li>
+    <li><a href="#part8">8. PRI-SHG convergence — collaborative governance framework</a></li>
+    <li><a href="#part9">9. Kudumbashree, JEEViKA &amp; emerging financing models</a></li>
+    <li><a href="#part10">10. Live answer-writing — PRI-SHG convergence</a></li>
+    <li><a href="#part11">11. BRICS — the New Delhi Declaration: context &amp; data</a></li>
+    <li><a href="#part12">12. BRICS — the five structural debates</a></li>
+    <li><a href="#part13">13. BRICS financial architecture — NDB/CRA vs the Bretton Woods twins</a></li>
+    <li><a href="#part14">14. De-dollarization &amp; the New Delhi Declaration's key commitments</a></li>
+    <li><a href="#part15">15. Way forward &amp; live answer-writing — BRICS, NDB &amp; CRA</a></li>
+    <li><a href="#glossary">Glossary — quick revision</a></li>
+    <li><a href="#arcs">Revision kit (ARCS)</a></li>
+    <li><a href="#gaps">Supplementary research</a></li>
+  </ol>
+</nav>
+
+<section id="summary">
+  <h2>Executive summary</h2>
+  <div class="summary-box">
+  <p>A dense 2h09m of substantive content. Opens with a short review, then two distinct topics — the first (SHGs) ending in a live Mains answer-writing exercise with instructor review, the second (BRICS) ending in a live question set right at the very end with no time left for review.</p>
+  <ul>
+    <li><strong>Recap (0:00 &ndash; 3:38):</strong> instructor reviews students' homework answers on Class 12's final, self-practice live question on census towns — not new content, just technique feedback.</li>
+    <li><strong>Self-Help Groups &amp; PRI-SHG convergence (3:38 &ndash; 1:25:10):</strong>
+      <ul>
+        <li>Concepts: self-governed/peer-controlled/informal/homogeneous group characteristics; NABARD's Panch Sutra; social collateral; empowerment's "power to / power with / power within" framework; social capital vs social engineering vs social business; polycentric governance and Elinor Ostrom's commons-governance principles.</li>
+        <li>Context: a 2025 NITI Aayog evaluation of the National Rural Livelihood Mission (NRLM/DAY-NRLM).</li>
+        <li>Live answer-writing exercise on how PRI-SHG convergence advances participatory and gender-sensitive local governance.</li>
+      </ul>
+    </li>
+    <li><strong>BRICS — New Delhi Declaration (1:26:29 &ndash; 2:09:05):</strong>
+      <ul>
+        <li>Context: the 18th BRICS Summit, held in New Delhi, September 2026, adopting the New Delhi Declaration.</li>
+        <li>Concepts: five structural debates within BRICS (reform vs revisionism; hyperexpansion vs cohesion; Washington vs Beijing consensus; platform of partnership vs pyramid of privilege; structural heterogeneity/energy-cartel risk); the "Bretton Woods twins vs Pretoria twins" framework (World Bank/IMF vs NDB/CRA) and the gap between each institution's founding promises and its actual performance; the de-dollarization debate.</li>
+        <li>Live answer-writing exercise (set at 2:08:20 onward) on how far the NDB and CRA can serve as alternatives to the World Bank and IMF — set right at the end, no in-class review captured.</li>
+      </ul>
+    </li>
+  </ul>
+  <p style="font-family: Arial, sans-serif; font-size: 0.88em; color: #57606a;">Instructor's repeated meta-advice this session: always define a concept before analyzing it (e.g. first define "empowerment," "social engineering," "development," before applying them); build vicious-cycle/virtuous-cycle pairs as a reusable Mains-answer device; separate "what was promised" from "what actually happened" when evaluating any institution or reform.</p>
+  </div>
+</section>
+
+<section id="applicability">
+  <h2>Applicability — GS papers, Prelims &amp; Mains</h2>
+  <table class="applic-table">
+    <tr><th>Sub-topic</th><th>GS Paper</th><th>Prelims</th><th>Mains</th></tr>
+    <tr>
+      <td class="gs-tag">Self-Help Groups, Panch Sutra &amp; PRI-SHG convergence</td>
+      <td>GS-2 (Governance, Social Justice) / GS-3 (Inclusive Growth, Poverty)</td>
+      <td><span class="prelims-badge">High</span>NABARD's Panch Sutra, scheme names (DAY-NRLM, MKSP-type programs), and evaluation figures (92 lakh SHGs, 1.2 crore SHGs) are exact-fact MCQ material.</td>
+      <td><span class="mains-badge">High</span>A recurring Mains theme (collaborative/polycentric governance, women's empowerment); this session's own live question is a reusable template.</td>
+    </tr>
+    <tr>
+      <td class="gs-tag">BRICS, the New Delhi Declaration &amp; NDB/CRA performance</td>
+      <td>GS-2 (International Relations, Global Governance) / GS-3 (Economy)</td>
+      <td><span class="prelims-badge">High</span>Summit dates, member/partner counts, and NDB/CRA data points are classic statement-based MCQ material, especially topical given India's 2026 chairship.</td>
+      <td><span class="mains-badge">High</span>A live, high-salience topic given India hosted the summit; this session's own live question (NDB/CRA vs World Bank/IMF) is a reusable template.</td>
+    </tr>
+  </table>
+  <p style="font-family: Arial, sans-serif; font-size: 0.85em; color: #57606a;">Rule of thumb applied across this series: any named Act/report/scheme/summit with a specific year or figure is Prelims-relevant; any debate, theoretical framework, or comparative-model discussion is Mains-relevant.</p>
+</section>
+
+<section id="part1">
+  <h2>1. Recap — Class 12's census-towns live answer, reviewed</h2>
+  <p><span class="timestamp">0:00</span>Instructor opened by reviewing student-submitted answers to Class 12's final live question (set as self-practice at the very end of that session, with no in-class review at the time): <em>"Rapid economic growth alongside static classification has created a governance vacuum in India's urbanizing periphery. Examine the fiscal and administrative implications of census towns remaining unnotified."</em></p>
+  <ul>
+    <li>Suggested structure walked through live:
+      <ul>
+        <li>Opening options: either context-led (Ministry of Housing and Urban Affairs' draft report) or a standard definitional introduction — either is acceptable.</li>
+        <li>State the problem with data: hidden urbanization gap (official ~31-32% vs DEGURBA-based ~63% urban).</li>
+        <li>Explain what a census town actually is: urban in function and demography, but still governed by a Gram Panchayat.</li>
+        <li>Implications/issues, matched directly to the question's "fiscal and administrative" framing:
+          <ul>
+            <li>Unplanned urbanization.</li>
+            <li>Exclusion from urban infrastructure schemes (e.g. AMRUT-type schemes) despite being functionally urban.</li>
+            <li>Inability to levy municipal-type own-tax revenue.</li>
+            <li>Outdated 1981 classification criteria.</li>
+            <li>No access to municipal bonds.</li>
+          </ul>
+        </li>
+        <li>Suggestions: Odisha's "build first, notify later" rural-urban transition model, explicitly contrasted with India's usual reverse sequencing ("notify first, build later") which breeds political resistance.</li>
+        <li>Way forward: a uniform (UN/DEGURBA-style) model for measuring the level of urbanization, rather than the outdated 1981 criteria.</li>
+        <li>Instructor's critique of a specific student answer: naming "administrative outcome" as a negative is good, but it must then be <em>countered</em> by explaining the opposite political-economy pressure too (e.g. how municipalization politicizes rural-welfare-scheme eligibility) — stating only one side of a consequence is an incomplete answer.</li>
+      </ul>
+    </li>
+  </ul>
+  <p style="font-family: Arial, sans-serif; font-size: 0.85em; color: #57606a;">This recap does not introduce new facts beyond Class 12's file — see that file's Parts 10-12 for full detail on census towns, DEGURBA, and the 1981 criteria.</p>
+</section>
+
+<section id="part2">
+  <h2>2. Self-Help Groups — core defining features &amp; the Panch Sutra</h2>
+  <p><span class="timestamp">3:38</span>Instructor announced the planned structure: introduction and context, important terms/concepts, data analysis of the SHG mission, vicious/virtuous cycle, challenges, PRI-SHG linkages/collaborative governance, case studies and other initiatives, social stock exchange and social impact bonds, way forward.</p>
+
+  <h3>Why this topic, and why framed broadly</h3>
+  <ul>
+    <li>UPSC increasingly asks about SHGs through broader governance lenses — collaborative governance, participatory governance, polycentric governance — rather than as an isolated scheme-dimension question.</li>
+    <li>Instructor's framing devices for an introduction (either works, pick one):
+      <ul>
+        <li>Philosophy-based: SHGs operate on the core philosophy of "one for all, and all for one," representing a tried-and-tested grassroots movement transforming rural livelihoods.</li>
+        <li>Quote-based (reusable as a conclusion too): "SHGs are an untapped powerhouse of enterprise, and highly potential vehicles to deliver social good."</li>
+      </ul>
+    </li>
+    <li>Immediate trigger/context: a 2025 NITI Aayog evaluation of the National Rural Livelihood Mission (NRLM/DAY-NRLM) found it significantly improved rural household incomes and strengthened women's empowerment — all data discussed in this session is drawn from that evaluation unless otherwise noted.</li>
+  </ul>
+
+  <h3>Core defining features of an SHG</h3>
+  <div class="term-box">
+    <strong>Self-governed:</strong>
+    <ul>
+      <li>Members run the organization themselves — a democratic governance model.</li>
+      <li>Operates on a "one member, one vote" principle, promoting internal democracy.</li>
+    </ul>
+  </div>
+  <div class="term-box">
+    <strong>Peer-controlled (the basis of "social collateral"):</strong>
+    <ul>
+      <li>Members share a similar socioeconomic background; financial discipline is enforced from inside the group, not by any outside authority.</li>
+      <li>The core problem SHGs solve: the poor lack physical collateral (e.g. land) that banks require for loans, so without SHGs they are pushed toward moneylenders, debt traps, and sometimes bonded labor.</li>
+      <li>Peer monitoring substitutes for physical collateral — this is "social collateral."</li>
+      <li>The SHG Bank Linkage Programme (SHG-BLP) is built on this logic: banks lend to SHGs because peer monitoring (not land) ensures repayment discipline, addressing banks' fear of adverse selection (reflected otherwise in instruments like a CIBIL score, which itself requires prior access to credit).</li>
+    </ul>
+  </div>
+  <div class="term-box">
+    <strong>Small in size (generally 10-20 members):</strong>
+    <ul>
+      <li>Keeps membership mutually familiar, ensuring accountability and preventing free-riding/default.</li>
+    </ul>
+  </div>
+  <div class="term-box">
+    <strong>Informal:</strong>
+    <ul>
+      <li>Not a legally registered entity — this gives flexibility (fewer legal complexities) but is also the root of a later-discussed legal vulnerability (see Part 7's Allahabad High Court case).</li>
+    </ul>
+  </div>
+  <div class="term-box">
+    <strong>Socioeconomically homogeneous:</strong>
+    <ul>
+      <li>A homogeneous membership base is considered the ideal model, since it helps prevent elite capture (heterogeneous groups risk a few members dominating decisions).</li>
+    </ul>
+  </div>
+
+  <h3>NABARD's Panch Sutra — five fundamental operational principles</h3>
+  <div class="data-box">
+    1. Regular group meetings.<br>
+    2. Regular savings by every member.<br>
+    3. Regular internal lending (inter-loaning) of the pooled corpus to members in need.<br>
+    4. Timely repayment of loans.<br>
+    5. Up-to-date, transparent book-keeping.
+  </div>
+  <p>Instructor's framing: regular inter-loaning matters because poverty is driven partly by "accidents of birth and accidents of life" — SHGs provide an internal emergency-support mechanism for exactly such shocks.</p>
+
+  <div class="exam-tip">If a question asks you to "explain the institutional design of SHGs," structure your answer around these core features (self-governed, peer-controlled, small, informal, homogeneous) plus the Panch Sutra — this is a ready-made, examiner-friendly checklist.</div>
+</section>
+
+<section id="part3">
+  <h2>3. SHGs — conceptual toolkit: development, social capital, social engineering, social business</h2>
+  <p><span class="timestamp">17:18</span>Instructor paused to build out several conceptual distinctions before returning to SHG-specific content — flagged as reusable across many other GS-2/GS-3 topics, not just this one.</p>
+
+  <h3>Definition of "development" — Joseph Stiglitz's four-fold capital framework</h3>
+  <ul>
+    <li>Instructor attributed to Nobel laureate economist Joseph Stiglitz the idea that development should be measured as the enhancement of four capital stocks together, not GDP growth alone:
+      <ul>
+        <li><strong>Material (physical) capital:</strong> GDP growth — but growth alone can occur by harming the environment or without inclusive growth, so it is only one dimension.</li>
+        <li><strong>Natural capital:</strong> a clean environment, biodiversity protection.</li>
+        <li><strong>Human capital:</strong> better education, skilling, job opportunities, livelihoods.</li>
+        <li><strong>Social capital:</strong> social harmony, mutual trust, interpersonal/trusted networks.</li>
+      </ul>
+    </li>
+    <li>Instructor's exam-writing advice: never define "development" in an answer using only a generic "quantity and quality" line — use this proper four-capital definition instead.</li>
+  </ul>
+
+  <h3>Social capital vs. social engineering vs. social business</h3>
+  <div class="term-box">
+    <strong>Social capital:</strong>
+    <ul>
+      <li>Networks, interpersonal relationships, and mutual trust that make collective action easier.</li>
+      <li>Grows organically from inside a group (e.g. an SHG) rather than being imposed from outside.</li>
+    </ul>
+  </div>
+  <div class="term-box">
+    <strong>Social engineering:</strong>
+    <ul>
+      <li>A deliberate, top-down, planned use of state power/policy to reshape a social structure or pattern.</li>
+      <li>India's SHG movement, as a NABARD-driven initiative, is itself an instance of social engineering — but social engineering alone is not sufficient; without organically-grown social capital, an SHG initiative may start but fail to achieve its objectives.</li>
+      <li>Instructor's aside: "social engineering" is also used negatively in cybersecurity (e.g. psychological-manipulation scams, including "digital arrest" fraud) — context determines whether the term is positive (deliberate welfare redesign) or negative (manipulation).</li>
+    </ul>
+  </div>
+  <div class="term-box">
+    <strong>Social business:</strong>
+    <ul>
+      <li>A self-sustaining, non-dividend enterprise focused on solving a social problem — profit is made but reinvested into expanding the cause, not distributed to shareholders (contrasted with ordinary business, whose sole duty is profit for shareholders).</li>
+      <li>SHGs are not, in the literal sense, "social businesses" — an SHG's thrift-and-credit activity is self-help (for its own members), not an activity undertaken for an external social cause.</li>
+      <li>However, an SHG federation that matures and registers as a formal entity may go on to run an actual social business — Kerala's Kudumbashree was cited as the clearest example (see Part 9).</li>
+    </ul>
+  </div>
+
+  <div class="exam-tip">This three-way distinction (social capital / social engineering / social business) is a strong way to show conceptual precision in any governance or empowerment answer — define each briefly before stating which one(s) apply to your case.</div>
+</section>
+
+<section id="part4">
+  <h2>4. SHGs — the empowerment framework &amp; polycentric governance</h2>
+  <p><span class="timestamp">28:30</span>Instructor built out the "empowerment" concept, then linked it to state retreat and polycentric governance.</p>
+
+  <h3>Three dimensions of (women's) empowerment</h3>
+  <div class="term-box">
+    <strong>Power to:</strong>
+    <ul>
+      <li>The capacity of a woman to control her own life/decisions — essentially agency (e.g. financial empowerment that lets her make a decision).</li>
+    </ul>
+  </div>
+  <div class="term-box">
+    <strong>Power with:</strong>
+    <ul>
+      <li>Collective power — women negotiating/bargaining collectively with the state or the market (an individual woman alone cannot extract the same concessions a collective can).</li>
+    </ul>
+  </div>
+  <div class="term-box">
+    <strong>Power within:</strong>
+    <ul>
+      <li>The cognitive/psychological dimension — self-confidence, dignity, self-worth, and "strategic gender consciousness" (knowing one has rights and deciding to claim them).</li>
+      <li>Instructor's summary: power to and power with are material dimensions; power within is the cognitive dimension — true empowerment requires reaching this stage, where a woman starts questioning and challenging unjust social structures herself (e.g. eventually entering political leadership — "feminization of political leadership").</li>
+    </ul>
+  </div>
+
+  <h3>State retreat and the rise of community-based organizations</h3>
+  <ul>
+    <li>Post-1990s, with the New Economic Policy's liberalization, the state's role shifted from direct provider to facilitator/regulator ("state retreat" / "rolling back of the state").</li>
+    <li>Community-based organizations (SHGs, NGOs) were increasingly used to deliver welfare in the state's place — directly contributing to the growth and promotion of the SHG movement.</li>
+  </ul>
+
+  <h3>Polycentric governance</h3>
+  <ul>
+    <li>Several centers of authority address the same problem, but each makes decisions within its own level/area — contrasted with a monocentric (fully centralized) model.</li>
+    <li>Linked explicitly in class to Elinor Ostrom's work on governing common-pool resources (previously discussed, per the instructor, in the context of the right-to-protest topic and the "tragedy of the commons"):
+      <ul>
+        <li>Tragedy of the commons: without ownership responsibility, every user over-extracts from a shared resource, degrading it for all.</li>
+        <li>Ostrom's alternative: common-pool resources can be sustainably governed through locally-designed rules — one of her eight design principles, "nested enterprises" (layered, multi-level self-governance), was specifically highlighted in class as mirroring the PRI-SHG model discussed later in this session.</li>
+      </ul>
+    </li>
+    <li>Instructor's framing: progression from monocentric to polycentric governance is itself a marker of deepening democracy — just as protest (discussed in an earlier class) deepens rather than threatens democratic institutions.</li>
+  </ul>
+</section>
+
+<section id="part5">
+  <h2>5. SHGs — evolution: from poverty alleviation to the graduation approach</h2>
+  <p><span class="timestamp">38:13</span>Instructor walked through the SHG movement's four-phase evolution.</p>
+
+  <svg viewBox="0 0 760 230" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Four-phase evolution of the SHG movement in India from the 1980s to the present">
+    <g font-family="Arial, sans-serif" font-size="11.5">
+      <rect x="10" y="20" width="175" height="80" rx="8" fill="#e6f1fb" stroke="#1d5b8b" stroke-width="1.5"></rect>
+      <text x="97" y="42" text-anchor="middle" font-weight="bold" fill="#1d5b8b">Phase 1 — 1980s</text>
+      <text x="97" y="60" text-anchor="middle" fill="#1f2328" font-size="10.5">NABARD-driven,</text>
+      <text x="97" y="74" text-anchor="middle" fill="#1f2328" font-size="10.5">NGO-promoted</text>
+      <text x="97" y="90" text-anchor="middle" fill="#57606a" font-size="10">goal: poverty alleviation</text>
+
+      <line x1="185" y1="60" x2="212" y2="60" stroke="#1d5b8b" stroke-width="2"></line>
+      <polygon points="212,55 222,60 212,65" fill="#1d5b8b"></polygon>
+
+      <rect x="225" y="20" width="175" height="80" rx="8" fill="#e6f1fb" stroke="#1d5b8b" stroke-width="1.5"></rect>
+      <text x="312" y="42" text-anchor="middle" font-weight="bold" fill="#1d5b8b">Phase 2 — SHG-BLP</text>
+      <text x="312" y="60" text-anchor="middle" fill="#1f2328" font-size="10.5">SHG Bank Linkage</text>
+      <text x="312" y="74" text-anchor="middle" fill="#1f2328" font-size="10.5">Programme launched</text>
+      <text x="312" y="90" text-anchor="middle" fill="#57606a" font-size="10">goal: microfinance framework</text>
+
+      <line x1="400" y1="60" x2="427" y2="60" stroke="#1d5b8b" stroke-width="2"></line>
+      <polygon points="427,55 437,60 427,65" fill="#1d5b8b"></polygon>
+
+      <rect x="440" y="20" width="155" height="80" rx="8" fill="#e6f1fb" stroke="#1d5b8b" stroke-width="1.5"></rect>
+      <text x="517" y="42" text-anchor="middle" font-weight="bold" fill="#1d5b8b">Phase 3 — late 1990s</text>
+      <text x="517" y="60" text-anchor="middle" fill="#1f2328" font-size="10.5">SGSY: self-employment</text>
+      <text x="517" y="74" text-anchor="middle" fill="#1f2328" font-size="10.5">strategy, microenterprises</text>
+      <text x="517" y="90" text-anchor="middle" fill="#57606a" font-size="10">later renamed/restructured</text>
+
+      <line x1="595" y1="60" x2="622" y2="60" stroke="#1d5b8b" stroke-width="2"></line>
+      <polygon points="622,55 632,60 622,65" fill="#1d5b8b"></polygon>
+
+      <rect x="635" y="20" width="115" height="80" rx="8" fill="#eef4f0" stroke="#2f6b4f" stroke-width="1.5"></rect>
+      <text x="692" y="42" text-anchor="middle" font-weight="bold" fill="#2f6b4f">Phase 4 — present</text>
+      <text x="692" y="60" text-anchor="middle" fill="#1f2328" font-size="10.5">NRLM; shift to</text>
+      <text x="692" y="74" text-anchor="middle" fill="#1f2328" font-size="10.5">National Helpline Groups</text>
+      <text x="692" y="90" text-anchor="middle" fill="#57606a" font-size="10">goal: poverty eradication</text>
+
+      <rect x="10" y="140" width="330" height="70" rx="8" fill="#fdf3f3" stroke="#8b3a3a" stroke-width="1.5"></rect>
+      <text x="175" y="160" text-anchor="middle" font-weight="bold" fill="#8b3a3a">Poverty alleviation (old goal)</text>
+      <text x="175" y="178" text-anchor="middle" fill="#1f2328" font-size="10.5">Reduce severity of poverty —</text>
+      <text x="175" y="194" text-anchor="middle" fill="#1f2328" font-size="10.5">but creates dependency; risk of falling back on scheme withdrawal</text>
+
+      <line x1="340" y1="175" x2="400" y2="175" stroke="#2f6b4f" stroke-width="2"></line>
+      <polygon points="400,170 410,175 400,180" fill="#2f6b4f"></polygon>
+
+      <rect x="420" y="140" width="330" height="70" rx="8" fill="#eef4f0" stroke="#2f6b4f" stroke-width="1.5"></rect>
+      <text x="585" y="160" text-anchor="middle" font-weight="bold" fill="#2f6b4f">Poverty eradication via "graduation approach" (new goal)</text>
+      <text x="585" y="178" text-anchor="middle" fill="#1f2328" font-size="10.5">Build skill + asset so the person</text>
+      <text x="585" y="194" text-anchor="middle" fill="#1f2328" font-size="10.5">exits poverty permanently, without relapse</text>
+    </g>
+  </svg>
+  <p class="board-caption">Fig. — the four-phase evolution of India's SHG movement, and the underlying shift in objective from poverty alleviation (temporary relief, dependency risk) to poverty eradication via the graduation approach (permanent exit through skill and asset-building).</p>
+
+  <h3>The "graduation approach" explained</h3>
+  <ul>
+    <li>"Graduation" means a person exits a support program permanently because they now have a skill/asset base, so they do not fall back below the poverty line even if that specific scheme is withdrawn.</li>
+    <li>Contrasted with schemes that create dependency: when a dependency-creating scheme stops, beneficiaries fall back into poverty (inclusion/exclusion errors), because nothing durable (skill, asset) was built.</li>
+    <li>Government's method: community resource persons (CRPs) — e.g. krishi sakhis, pashu sakhis, bank sakhis, ASHAs — are deployed through SHGs to handhold, skill, and create livelihood opportunities, not merely disburse a scheme benefit.</li>
+    <li>Instructor's aside: absolute poverty eradication is academically achievable (unlike relative poverty, which persists in any economy by definition); this is the "new welfarism" shift toward addressing multidimensional poverty.</li>
+  </ul>
+</section>
+
+<section id="part6">
+  <h2>6. SHGs — data &amp; the vicious/virtuous cycle</h2>
+  <p><span class="timestamp">44:45</span>Instructor presented the NRLM evaluation's key data points, then built the vicious-cycle/virtuous-cycle pair live.</p>
+
+  <h3>Core data points (from the 2025 NITI Aayog NRLM evaluation and Economic Survey)</h3>
+  <div class="data-box">
+    DAY-NRLM has mobilized more than 10 crore rural households into almost 92 lakh SHGs (cumulative).<br>
+    Average household income of beneficiaries increased by 49% per the evaluation cited in class.<br>
+    58% of women reported enhanced confidence.<br>
+    SHG-linked credit was found to be largely utilized for livelihood generation, not consumption (important for asset creation and the graduation approach).<br>
+    Economic Survey data cited in class: India hosts 1.2 crore SHGs, of which 88% are all-women groups.<br>
+    Bank loan repayment rate of SHGs: more than 96%.
+  </div>
+
+  <h3>The vicious cycle of deprivation (without SHG intervention)</h3>
+  <ul>
+    <li>Gender inequality &rarr; neglect of health and education &rarr; early marriage &rarr; no livelihood opportunities and unpaid work &rarr; no agency/bargaining power &rarr; intergenerational inequality (the next generation repeats the same cycle) &rarr; entrenched poverty.</li>
+  </ul>
+
+  <h3>The virtuous cycle (with SHG intervention)</h3>
+  <ul>
+    <li>Thrift and savings (via the SHG) &rarr; social collateral built through peer monitoring &rarr; access to institutional credit &rarr; better livelihood opportunities &rarr; agency (power to/with/within) &rarr; more opportunities and savings &rarr; addresses intergenerational inequity, builds the capability approach (substantive freedom), and feeds into participatory governance.</li>
+  </ul>
+
+  <div class="exam-tip">Exactly as with Class 12's feminization-of-agriculture topic, draw this as two linked loops (vicious vs virtuous) — the instructor explicitly reused this device across both sessions as a general-purpose technique for any empowerment/inclusion question.</div>
+</section>
+
+<section id="part7">
+  <h2>7. SHGs — challenges &amp; the Allahabad High Court ration-shop case</h2>
+  <p><span class="timestamp">51:50</span>Instructor listed the key challenges facing the SHG model.</p>
+  <ul>
+    <li><strong>Gendered vocations:</strong> SHG interventions often push women into low-margin, home-based, stereotypically "feminine" work (e.g. papad-making) rather than higher-value activities.</li>
+    <li><strong>Systemic barriers:</strong> social discrimination, wage disparity, and lack of family support.</li>
+    <li><strong>Elite capture:</strong> a few members dominate group decision-making.</li>
+    <li><strong>High microfinance institution (MFI) interest rates:</strong> reckless lending models by some MFIs impose a financial stress on SHG members.</li>
+    <li><strong>Organizational shortcomings:</strong> poor bookkeeping, non-adherence to the Panch Sutra, lack of leadership rotation, unstandardized products, weak marketing, infrastructure deficits, and limited professionalism.</li>
+  </ul>
+
+  <h3>Case: Allahabad High Court, 2020 — SHGs and fair-price (ration) shops</h3>
+  <div class="term-box">
+    <strong>Allahabad High Court quashed a 2020 Uttar Pradesh government order:</strong>
+    <ul>
+      <li>The order had directed preference to SHGs in the allotment of fair-price (ration) shops.</li>
+      <li>The Court held that SHGs are a legally weak entity for purposes of fixing accountability (informal, unregistered).</li>
+      <li>The Court held that granting such a preference risked creating a monopoly for a legally weak entity and would be counterproductive for public distribution system (PDS) service delivery.</li>
+    </ul>
+  </div>
+  <div class="exam-tip">This case is a ready-made "limitation of informality" example for any answer evaluating whether SHGs should take on formal public-service-delivery roles — pair it with the "informal = legal vulnerability" feature from Part 2.</div>
+</section>
+
+<section id="part8">
+  <h2>8. PRI-SHG convergence — collaborative governance framework</h2>
+  <p><span class="timestamp">55:03</span>Instructor introduced PRI-SHG convergence as the key institutional-reform concept for this topic.</p>
+
+  <h3>Definition</h3>
+  <ul>
+    <li>A collaborative governance framework that links constitutional bodies (Panchayati Raj Institutions, PRIs) with grassroots collectives (SHGs) to foster gender-sensitive development and address multidimensional poverty.</li>
+    <li>Under this model: PRIs leverage SHGs as implementation partners and social auditors; SHGs, in turn, use the Gram Sabha to institutionalize their Village Poverty Reduction Plans (VPRPs) into the Gram Panchayat Development Plan (GPDP).</li>
+  </ul>
+
+  <h3>Why convergence is needed — the local-level trust-deficit problem</h3>
+  <ul>
+    <li>Four problems at the present local level, per the instructor:
+      <ul>
+        <li>Election compulsions — short-term orientation driven by electoral cycles.</li>
+        <li>Bureaucratic centralization — bureaucracy focuses on output quantity, not outcomes, and tends to concentrate control.</li>
+        <li>Dysfunctional local institutions — the classic "3F problem": inadequate funds, functions, and functionaries.</li>
+        <li>Weak/absent accountability.</li>
+      </ul>
+    </li>
+    <li>All four contribute to an overall trust deficit, which in turn drives higher authorities toward further centralization (more parastatal bodies bypassing local institutions) rather than trust-based governance — a second, self-reinforcing vicious cycle.</li>
+    <li>PRI-SHG convergence is positioned as the way to rebuild trust-based governance and, through it, deepen participatory democracy.</li>
+  </ul>
+
+  <h3>Division of roles</h3>
+  <table>
+    <tr><th>Panchayati Raj Institutions (PRIs)</th><th>Self-Help Groups (SHGs)</th></tr>
+    <tr>
+      <td>Overall policy formulation; passing/sanctioning Gram Sabha development plans; fund/finance allocation.</td>
+      <td>Prepare village-level poverty reduction plans (VPRPs), since SHGs know ground-level issues best.</td>
+    </tr>
+    <tr>
+      <td>Policycentric coordination across levels.</td>
+      <td>Community mobilization, implementation support, and social audit (accountability function).</td>
+    </tr>
+  </table>
+
+  <h3>Key operational mechanisms of convergence</h3>
+  <ul>
+    <li><strong>Joint planning:</strong> VPRP integrated into the GPDP.</li>
+    <li><strong>Shared asset management:</strong> e.g. village water and sanitation committees.</li>
+    <li><strong>Social audit:</strong> SHGs provide the accountability check on implementation.</li>
+    <li>Enabling conditions flagged as necessary: untied funds (so SHG-PRI collaboration isn't restricted to narrow scheme conditions), dedicated professional community resource persons, and an outcome (not just output) focus.</li>
+  </ul>
+
+  <h3>Worked example — Jharkhand's Birsa Harit Gram Yojana</h3>
+  <ul>
+    <li>Cited in class as a horticulture-focused convergence model: the Gram Sabha identifies land and beneficiaries; wage support for land preparation is provided through MGNREGA; community support comes via SHGs; technical support (e.g. geo-tagging, weather data) comes from civil-society partners; marketing support comes from agencies and private entities.</li>
+    <li>Instructor's summary label: a state + SHG + civil society + private collaboration model.</li>
+  </ul>
+</section>
+
+<section id="part9">
+  <h2>9. Kudumbashree, JEEViKA &amp; emerging financing models</h2>
+  <p><span class="timestamp">1:05:03</span>Instructor moved to Kerala's Kudumbashree as the flagship case study, then Bihar's JEEViKA, then two emerging financing models.</p>
+
+  <h3>Kudumbashree's three-tier structure</h3>
+  <ul>
+    <li><strong>Neighbourhood Groups (NHGs):</strong> the basic/primary unit — small SHG-type units of roughly 10-20 members, operating at the neighborhood level.</li>
+    <li><strong>Area Development Societies (ADS):</strong> the intermediate tier, formed at the ward level, composed of elected coordinators from NHGs.</li>
+    <li><strong>Community Development Societies (CDS):</strong> the apex tier, working directly with the Panchayat, composed of members drawn from ADS; takes broader policy decisions and, once registered as a formal entity, can run actual social businesses.</li>
+  </ul>
+  <div class="exam-tip">Everyone cites Kudumbashree in a women's-empowerment answer, but few explain why it works — naming the NHG &rarr; ADS &rarr; CDS structure explicitly (and that CDS formally registers, enabling social business) is what differentiates a strong answer from a generic name-drop.</div>
+
+  <h3>JEEViKA (Bihar Rural Livelihoods Project)</h3>
+  <ul>
+    <li>Mobilized 1.5 crore households into more than 1 million SHGs (class figures).</li>
+    <li>Maintains an outstanding loan repayment rate of 99% — cited as remarkable given it operates among some of the poorest communities, reinforcing the social-collateral logic from Part 2.</li>
+  </ul>
+
+  <h3>Social Stock Exchange</h3>
+  <ul>
+    <li>A platform connecting donors to profit or non-profit social organizations.</li>
+    <li>Funding instrument: zero-coupon, zero-principal bonds — no interest, no principal repayment; the money is effectively a donation routed through the exchange.</li>
+    <li>Advantage for social enterprises: they do not need to independently search for an investor each time; they list their activity on the exchange and attract a donor; implementation can then run through SHGs.</li>
+  </ul>
+
+  <h3>Social Impact Bonds ("pay for success")</h3>
+  <ul>
+    <li>A "pay for success" contract structure involving three roles:
+      <ul>
+        <li><strong>Investor:</strong> funds a specific activity upfront.</li>
+        <li><strong>Service delivery entity:</strong> an NGO or (increasingly) a registered SHG, which actually delivers the service (e.g. a drinking-water project).</li>
+        <li><strong>Independent/neutral auditor (third entity):</strong> verifies whether the intended outcome was actually achieved (not just the output).</li>
+      </ul>
+    </li>
+    <li>Government pays the investor only if the auditor confirms a successful outcome — hence "pay for success."</li>
+    <li>Rationale: in a state-retreat context where service delivery is outsourced, this model ensures actual societal-level outcomes are verified before public money changes hands, rather than paying regardless of impact.</li>
+  </ul>
+
+  <h3>Way forward for SHGs</h3>
+  <ul>
+    <li>Transition from small, home-based microenterprises to larger producer collectives.</li>
+    <li>Monitor and regulate microfinance institution networks (to curb predatory high-interest lending).</li>
+    <li>Institutionalize the Panch Sutra and enforce rotation of office-bearers, to prevent elite capture.</li>
+    <li>Provide cluster-based common infrastructure (e.g. shared cold storage for food-processing SHGs) to reduce costs.</li>
+    <li>Institutionalize care-work infrastructure, to reduce women's double/triple burden.</li>
+    <li>Make integration of SHGs' Village Poverty Reduction Plans into Gram Panchayat Development Plans mandatory (not optional), again to guard against elite capture of local planning.</li>
+  </ul>
+</section>
+
+<section id="part10">
+  <h2>10. Live answer-writing — PRI-SHG convergence</h2>
+  <p><span class="timestamp">1:15:14</span>Instructor set a Mains-style question for students to write in class (writing window roughly 1:17:05&ndash;1:20:08; review roughly 1:20:08&ndash;1:25:10).</p>
+
+  <div class="quote-card">
+    <p class="q">"The convergence of Panchayati Raj Institutions and Self-Help Groups moves local governance from a top-down mechanism to a participatory, gender-sensitive framework." Discuss.</p>
+  </div>
+
+  <h3>Expected structure, as reviewed live</h3>
+  <ol class="answers">
+    <li><strong>Introduction:</strong> quote-based ("SHGs are an untapped powerhouse...") or philosophy-based, then link to the significance of PRI-SHG convergence for participatory governance and gender-sensitive development.</li>
+    <li><strong>Present challenge/situation:</strong> dysfunctional local institutions &rarr; trust deficit &rarr; further centralization (the vicious cycle from Part 8).</li>
+    <li><strong>How SHGs help:</strong> collaborative governance promotes trust-based governance and deepens democracy.</li>
+    <li><strong>Mechanisms of collaboration:</strong> joint planning (VPRP + GPDP), shared/collaborative asset management (community resources), accountability via social audit — illustrated with the NHG-ADS-CDS/Kerala poverty-alleviation example.</li>
+    <li><strong>Gender-sensitive framework dimension:</strong> women-focused policies, gender budgeting, feminization of political leadership.</li>
+    <li><strong>Challenges:</strong> need for untied funds, and the need for civil-society/private-sector participation alongside state and SHG actors.</li>
+    <li><strong>Way forward:</strong> polycentric governance, the graduation approach via SHG-PRI collaboration, new financing methods (social impact bonds, social stock exchange), citing Jharkhand's Birsa Harit Gram Yojana as a working multi-stakeholder model.</li>
+  </ol>
+  <div class="exam-tip">Instructor's specific note on this question: a full evolution/history-of-SHGs section is <em>not</em> required here — the question is about present-day collaborative governance mechanics, not the movement's origin story. Match your content to exactly what the question asks, not everything you know about the topic.</div>
+</section>
+
+<section id="part11">
+  <h2>11. BRICS — the New Delhi Declaration: context &amp; data</h2>
+  <p><span class="timestamp">1:26:29</span>Instructor announced the structure: introduction and context, data, debates, financial architecture (NDB, CRA, de-dollarization), issues/challenges, the New Delhi Declaration's key points, and way forward.</p>
+
+  <h3>Context</h3>
+  <ul>
+    <li>The 18th BRICS Summit was held in New Delhi in September 2026, under India's BRICS chairship, adopting the New Delhi Declaration.</li>
+    <li>Instructor's exam-writing advice: do not open a BRICS answer by listing/expanding all member countries "like an attendance sheet" — use the demographic/economic weight data instead, and cite the summit + declaration as context.</li>
+    <li>Significance of the New Delhi Declaration's adoption: securing consensus among all member states (a structurally heterogeneous grouping) required significant diplomatic capital, and is framed in class as a diplomatic success for India's foreign policy — reusable as an example in any "India and the Global South" or "India's diplomacy" answer.</li>
+  </ul>
+
+  <h3>Core data (BRICS, post-expansion to "BRICS Plus")</h3>
+  <div class="data-box">
+    Demographic weight: nearly half of the world's population &mdash; approximately 49.5%.<br>
+    Economic weight: approximately 40% of global GDP (PPP terms) &mdash; contrasted with the G7, whose PPP-term share fell from ~38% (2010) to ~28% while BRICS's share rose from ~25% to ~40% over the same period; in nominal terms, the G7 still dominates.<br>
+    Trade weight: approximately 25% of global merchandise trade.<br>
+    Agricultural weight (class figure, not independently verified this session): approximately 42% of global agricultural food output.<br>
+    New Development Bank (NDB): cumulative approvals of 139 projects worth approximately $39 billion (class figures); India alone received 35 projects worth approximately $10 billion.
+  </div>
+</section>
+
+<section id="part12">
+  <h2>12. BRICS — the five structural debates</h2>
+  <p><span class="timestamp">1:30:02</span>Instructor framed BRICS through five paired debates — a reusable structure for any "evaluate BRICS" or "is BRICS the voice of the Global South" Mains question.</p>
+
+  <h3>1. Non-western reform vs. anti-western revisionism</h3>
+  <ul>
+    <li>India, Brazil, South Africa want BRICS to remain a non-western (not anti-western) platform focused on reforming existing global-governance structures.</li>
+    <li>China and Russia are seen as using BRICS more for revisionism — actively replacing, not just reforming, the existing global order.</li>
+    <li>Three-way typology introduced: status-quoist (developed/western countries, content with existing structures), reformist (most Global South democracies, including India), revisionist (seeking wholesale replacement).</li>
+  </ul>
+
+  <h3>2. Hyperexpansion vs. institutional cohesion</h3>
+  <ul>
+    <li>BRICS grew from a small, cohesive plurilateral grouping ("BRICS") to "BRICS Plus" with roughly eleven members/partners.</li>
+    <li>Trade-off: greater global weight (per the data in Part 11) vs. reduced institutional cohesion.</li>
+    <li>Linked to a broader global shift from multilateralism (difficult consensus-building, resisted by status-quo powers who don't want their power balance altered) toward minilateralism (small groupings formed around one specific task).</li>
+  </ul>
+
+  <h3>3. Washington Consensus vs. Beijing Consensus</h3>
+  <ul>
+    <li>Washington Consensus: market-led economic model, underlying the Bretton Woods institutions (World Bank/IMF).</li>
+    <li>Beijing Consensus: state-led economic model, which China promotes via a "hub and spoke" structure (China as hub, partner countries as spokes) — associated in class with a "dam and steel"-style/Belt and Road infrastructure-export approach.</li>
+    <li>India's stated position: not opposed to the Washington Consensus itself (which created the Bretton Woods institutions) — India wants reform of that system, not a shift to a fully state-dominated Beijing Consensus model.</li>
+  </ul>
+
+  <h3>4. Platform of partnership vs. pyramid of privilege</h3>
+  <ul>
+    <li><strong>Pyramid of privilege (the present global order, per India's critique at the summit):</strong> a small group of industrialized western countries sits at the apex of global institutions (UNSC, World Bank, IMF), enjoying privileges from historical first-mover advantage, acting as rule-makers while the Global South is reduced to rule-takers subject to sanctions/conditionalities.</li>
+    <li>Resulting asymmetry, in the instructor's words: "the Global South sits in the front row of global crises, but the back row of global decision-making."</li>
+    <li><strong>Platform of partnership (the proposed alternative):</strong> a flat structure where every country has an equal voice, centered on human development, with the Global South also becoming rule-shapers — especially on emerging-issue rule-making (AI, climate change, terrorism).</li>
+  </ul>
+
+  <h3>5. Structural heterogeneity, "rhetorical bloc" risk &amp; energy-cartelization concern</h3>
+  <ul>
+    <li><strong>Structural heterogeneity:</strong> BRICS members differ fundamentally in polity, economy, and society (and carry bilateral frictions — e.g. India-China, Russia-China historically), raising doubts about whether such a diverse bloc can project a credible, unified Global South voice.</li>
+    <li><strong>"Rhetorical bloc of grievance" critique:</strong> BRICS risks being merely a talking shop; countered by the view that expansion has made it a genuine platform for South-South cooperation.</li>
+    <li><strong>Energy-cartelization risk:</strong> with the addition of energy-rich members (Saudi Arabia, Iran, alongside Russia), BRICS risks becoming a major global energy bloc; if used by members as a cartel, this would work against India's interest in a multipolar (non-monopolistic) energy order, similar to India's objections to OPEC-style cartelization.</li>
+  </ul>
+
+  <div class="exam-tip">Instructor's aside, for context rather than citation: BRICS (like the Quad) originated from an informal/analytical proposal (a Goldman Sachs-style thesis for BRICS; a Shinzo Abe speech for the Quad) rather than a founding treaty — useful background for understanding why both groupings lack a hard institutional/legal foundation, but do not cite this origin story as a formal fact in an answer.</div>
+</section>
+
+<section id="part13">
+  <h2>13. BRICS financial architecture — NDB/CRA vs the Bretton Woods twins</h2>
+  <p><span class="timestamp">1:40:09</span>Instructor introduced the "Bretton Woods twins vs Pretoria twins" framework, then systematically contrasted each institution's founding promise against its actual performance.</p>
+
+  <h3>The parallel institutional design</h3>
+  <table>
+    <tr><th>Bretton Woods twins (1944-45)</th><th>BRICS's "Pretoria twins" (created 2014-15)</th></tr>
+    <tr><td>World Bank — long-term developmental finance.</td><td>New Development Bank (NDB) — same stated objective, long-term developmental finance.</td></tr>
+    <tr><td>IMF — short-term emergency finance during a fiscal/monetary crisis.</td><td>Contingent Reserve Arrangement (CRA) — same stated objective, emergency liquidity support.</td></tr>
+  </table>
+  <p>BRICS's founding promise: a model free of the Bretton Woods institutions' two core problems — political conditionalities, and western-dominated governance via skewed voting rights/veto power (e.g. India's 1990s IMF loan came with Structural Adjustment Programme conditionalities, triggering the New Economic Policy's liberalization and the state retreat discussed in Part 4).</p>
+
+  <h3>NDB — promise vs. reality</h3>
+  <table>
+    <tr><th>Promise</th><th>Reality, per the instructor</th></tr>
+    <tr>
+      <td>Equal governance, no western dominance — each founding member holds an equal 20% voting share (a deliberately flat structure, vs. the Bretton Woods institutions' contribution-weighted/veto-skewed voting).</td>
+      <td>Genuinely delivered on this specific governance design point.</td>
+    </tr>
+    <tr>
+      <td>Local-currency-denominated financing, reducing dollar dependence.</td>
+      <td>In its first decade, roughly half of NDB's bonds were dollar-denominated — investors are sought from dollar-based markets, making the de-dollarization promise difficult to keep in practice.</td>
+    </tr>
+    <tr>
+      <td>Shield founding members from western geopolitical pressure.</td>
+      <td>NDB froze operations with founding member Russia after Western sanctions — because its own investor base and dollar-denominated bonds made continued operations with a sanctioned country commercially unviable.</td>
+    </tr>
+    <tr>
+      <td>Counter the dominance of western credit-rating agencies (the "Big Three": S&amp;P, Moody's, Fitch), which BRICS members (including India) have criticized.</td>
+      <td>NDB/BRICS remain dependent on these same agencies to get their own bonds rated for investment, since no independent alternative rating mechanism was built.</td>
+    </tr>
+    <tr>
+      <td>Match the scale of World Bank lending.</td>
+      <td>Scale deficit: NDB's cumulative lending (~$39 billion since 2015) is a small fraction of the World Bank's own roughly $100 billion in annual lending alone.</td>
+    </tr>
+  </table>
+
+  <h3>CRA — promise vs. reality</h3>
+  <ul>
+    <li>Promise: provide emergency liquidity without IMF-style conditionalities.</li>
+    <li>Reality: the CRA mechanism has gone essentially unused in a decade. Instructor's specific example: South Africa faced a macroeconomic crisis but did not draw on the CRA.</li>
+    <li>Reason: the CRA only permits unconditional access up to 30% of a member's committed quota; any amount above that is released only if the country is already under an IMF program with IMF conditionalities attached — defeating the original "no conditionality" promise.</li>
+    <li>Deeper structural reason: the CRA lacks independent surveillance capacity, monitoring mechanisms, and a research wing — all things the IMF built over 80 years of institutional development — so a country seeking serious emergency support still has stronger practical reasons to approach the IMF directly.</li>
+  </ul>
+
+  <div class="exam-tip">For any "assess NDB/CRA as an alternative to World Bank/IMF" question (exactly this session's live question — see Part 15), structure your evaluation promise-by-promise as in the two tables above, rather than giving a generic "yes/no" verdict — this format directly rewards nuanced "to what extent" analysis.</div>
+</section>
+
+<section id="part14">
+  <h2>14. De-dollarization &amp; the New Delhi Declaration's key commitments</h2>
+  <p><span class="timestamp">1:51:47</span>Instructor explained why de-dollarization remains aspirational, then listed the New Delhi Declaration's substantive commitments.</p>
+
+  <h3>Why the dollar remains dominant</h3>
+  <ul>
+    <li>Market-determined and fully convertible — not controlled by state fiat the way some rival currencies are.</li>
+    <li>Backed by a robust US economic system and (a now largely symbolic, but reputation-reinforcing) large US gold reserve.</li>
+    <li>Dollar dominance has declined somewhat since the 1990s (more local-currency trade now occurs) but remains the trusted global reference currency.</li>
+  </ul>
+
+  <h3>Why BRICS itself is internally divided on de-dollarization</h3>
+  <ul>
+    <li>India specifically does not want full de-dollarization, because stepping back from the dollar would increase China's relative currency influence (yuan internationalization) — and the yuan carries its own "two-currency dilemma" (market-determined offshore in Hong Kong, state-controlled onshore in mainland China), making it an imperfect substitute anyway.</li>
+    <li>India also fears China deepening dominance through its hub-and-spoke, "project export" model (China exports entire infrastructure projects/equity stakes, not just goods) — contrasted with India's own trade-deficit-driven need to export goods/services, not projects.</li>
+    <li>Sanctions-exposure risk: repeatedly emphasizing de-dollarization in official declarations itself invites more scrutiny/secondary sanctions risk from the US — so BRICS has deliberately toned down/omitted strong de-dollarization language in its declarations to avoid inviting direct retaliation.</li>
+  </ul>
+
+  <h3>New Delhi Declaration — key substantive commitments (selected)</h3>
+  <ul>
+    <li>Comprehensive UN Security Council reform (though China remains the key obstacle to India's own UNSC entry ambitions, despite being a co-signatory).</li>
+    <li>Bretton Woods (World Bank/IMF) quota reform — still largely resisted by the US and European members who dominate those quotas.</li>
+    <li>Advancing local-currency settlement among members — complicated by India's large trade deficit with China (limited genuine two-way settlement options).</li>
+    <li>Strengthening the NDB and CRA.</li>
+    <li>WTO dispute-settlement mechanism reform, given the WTO's dispute mechanism is presently stalled — alongside support for plurilateral trade arrangements as a workaround.</li>
+    <li>Rejecting unilateral sanctions and non-tariff barriers (e.g. carbon border adjustment mechanisms).</li>
+    <li>Zero tolerance on terrorism (though China has previously used technical holds to block India-backed terrorism-related sanctions at the UN, given its support for Pakistan).</li>
+    <li>Support for a two-state solution in the Middle East.</li>
+    <li>A new India-proposed agriculture/food-security initiative (introduced as part of India's 2026 chairship) covering agro-inputs (e.g. fertilizer), genetic resources (e.g. better/shared seed varieties), and an information-sharing network among members.</li>
+    <li>Climate commitments reaffirming Common But Differentiated Responsibilities (CBDR) — flagged in class as a principle the US has sought to dilute post-Paris Agreement, especially by pointing to China and India as the largest current emitters.</li>
+    <li>Commitments on safe Digital Public Infrastructure (DPI) and global AI governance.</li>
+  </ul>
+</section>
+
+<section id="part15">
+  <h2>15. Way forward &amp; live answer-writing — BRICS, NDB &amp; CRA</h2>
+  <p><span class="timestamp">2:04:14</span>Instructor closed with quotes, the declaration's way-forward points, and then set the session's final live question.</p>
+
+  <div class="quote-card">
+    <p class="q">"In a fragmented global order, the nations that prosper will not be those in rigid blocs, but connector economies capable of acting as a trusted link across competing powers."</p>
+    <p class="attrib">Cited in class as a framing for India's ideal position between competing blocs.</p>
+  </div>
+  <div class="quote-card">
+    <p class="q">"In a fractured world of interdependence without trust, India's best strategy is to avoid binary allegiances but use Quad, G20, and BRICS to project its tech diplomacy."</p>
+    <p class="attrib">Attributed in class to Shashi Tharoor.</p>
+  </div>
+  <ul>
+    <li>Prime Minister's call (cited in class): transform the Global South from a "rule taker" to a "rule shaper."</li>
+    <li>External Affairs Minister's framing (cited in class, repeated from Part 12): BRICS as "non-western, not anti-western."</li>
+  </ul>
+
+  <h3>Way forward, per the Declaration/instructor</h3>
+  <ul>
+    <li>Adopt minilateral coalitions for sector-specific cooperation (minilateralism: the smallest group needed to achieve one specific objective).</li>
+    <li>Institute macroeconomic surveillance modeled on ASEAN+3's AMRO (ASEAN+3 Macroeconomic Research Office), which monitors regional financial stability — directly addressing the CRA's surveillance-capacity gap identified in Part 13.</li>
+    <li>Increase intra-BRICS trade and dismantle non-tariff barriers among members.</li>
+    <li>Deploy supply-chain resilience frameworks.</li>
+  </ul>
+
+  <div class="quote-card">
+    <p class="q">"To what extent can the BRICS' NDB and CRA serve as an alternative to the World Bank and IMF? Assess their performance and limitations."</p>
+    <p class="attrib">Set at 2:08:20 — writing window began immediately; no in-class review captured before the transcript ends at 2:09:05. Treat as a self-practice question.</p>
+  </div>
+  <div class="exam-tip">Since this question was not reviewed live, structure it using the full Part 13-14 framework: institutional design (Bretton Woods twins vs Pretoria twins table) &rarr; promise-vs-reality comparison for NDB &rarr; promise-vs-reality comparison for CRA &rarr; de-dollarization constraint &rarr; way forward (AMRO-style surveillance, scale-up, local-currency settlement where genuinely feasible).</div>
+</section>
+
+<section id="glossary">
+  <h2>Glossary — quick revision</h2>
+  <dl>
+    <div class="glossary-term"><dt>Social collateral</dt><dd>Peer monitoring within a small, homogeneous SHG substituting for physical collateral (e.g. land) in accessing institutional credit.</dd></div>
+    <div class="glossary-term"><dt>Panch Sutra</dt><dd>NABARD's five fundamental operational principles for SHGs: regular meetings, regular savings, regular inter-loaning, timely repayment, up-to-date bookkeeping.</dd></div>
+    <div class="glossary-term"><dt>Power to / power with / power within</dt><dd>Three dimensions of empowerment — individual agency/decision-making; collective bargaining power with the state/market; internal psychological dignity and gender consciousness.</dd></div>
+    <div class="glossary-term"><dt>Social engineering (governance sense)</dt><dd>A deliberate, top-down, planned use of state power/policy to reshape a social structure — distinct from its negative cybersecurity-fraud usage.</dd></div>
+    <div class="glossary-term"><dt>Social business</dt><dd>A self-sustaining, non-dividend enterprise that reinvests profit into a social cause rather than distributing it to shareholders.</dd></div>
+    <div class="glossary-term"><dt>Graduation approach</dt><dd>A poverty-eradication method that builds durable skill/asset capacity so a beneficiary permanently exits poverty, rather than relapsing when a scheme is withdrawn (as under a pure poverty-alleviation model).</dd></div>
+    <div class="glossary-term"><dt>Polycentric governance</dt><dd>Governance with multiple, layered centers of authority each deciding within its own level — contrasted with a fully centralized (monocentric) model; linked to Elinor Ostrom's "nested enterprises" design principle for commons governance.</dd></div>
+    <div class="glossary-term"><dt>PRI-SHG convergence</dt><dd>A collaborative governance framework linking Panchayati Raj Institutions with SHGs for joint planning, shared asset management, and social audit, to deliver participatory, gender-sensitive local governance.</dd></div>
+    <div class="glossary-term"><dt>Kudumbashree's NHG-ADS-CDS structure</dt><dd>Neighbourhood Groups (primary unit) &rarr; Area Development Societies (ward-level, intermediate) &rarr; Community Development Societies (Panchayat-level apex, can register and run social business).</dd></div>
+    <div class="glossary-term"><dt>Social Stock Exchange</dt><dd>A platform connecting donors to profit/non-profit social organizations via zero-coupon, zero-principal (purely donative) bonds.</dd></div>
+    <div class="glossary-term"><dt>Social Impact Bond ("pay for success")</dt><dd>A contract where an investor funds a service-delivery entity (e.g. an NGO/SHG), an independent auditor verifies the outcome, and government pays the investor only if the outcome is verified as successful.</dd></div>
+    <div class="glossary-term"><dt>Bretton Woods twins vs Pretoria twins</dt><dd>World Bank/IMF (1944-45) vs BRICS's New Development Bank/Contingent Reserve Arrangement (2014-15) — parallel institutional pairs with the same stated objectives (long-term development finance; short-term crisis liquidity) but different founding promises.</dd></div>
+    <div class="glossary-term"><dt>Pyramid of privilege vs platform of partnership</dt><dd>The present hierarchical global order (western countries as rule-makers, Global South as rule-takers) vs. the proposed flat, human-development-centered alternative where every country is a rule-shaper.</dd></div>
+    <div class="glossary-term"><dt>Minilateralism</dt><dd>The smallest possible grouping of countries formed to achieve one specific, narrow objective — contrasted with broad multilateralism.</dd></div>
+  </dl>
+</section>
+
+<section id="arcs">
+  <h2>Revision kit (ARCS)</h2>
+
+  <div class="arcs-box">
+    <h4>A — Active recall questions</h4>
+    <div class="recall-q">
+      <p class="q-text">1. What are NABARD's five Panch Sutra principles for SHGs?</p>
+      <details><summary></summary><div class="ans">Regular meetings; regular savings; regular inter-loaning; timely repayment; up-to-date bookkeeping.</div></details>
+    </div>
+    <div class="recall-q">
+      <p class="q-text">2. What is the key difference between "poverty alleviation" and "poverty eradication via the graduation approach"?</p>
+      <details><summary></summary><div class="ans">Alleviation reduces the severity of poverty but risks dependency and relapse once a scheme withdraws; the graduation approach builds durable skill/asset capacity so the beneficiary exits poverty permanently.</div></details>
+    </div>
+    <div class="recall-q">
+      <p class="q-text">3. What did the Allahabad High Court rule in 2020 regarding SHGs and fair-price shops?</p>
+      <details><summary></summary><div class="ans">It quashed a UP government order preferring SHGs for ration-shop allotment, holding that SHGs are a legally weak entity for accountability purposes and that such preference would be counterproductive for PDS service delivery.</div></details>
+    </div>
+    <div class="recall-q">
+      <p class="q-text">4. Name the three tiers of Kudumbashree's organizational structure.</p>
+      <details><summary></summary><div class="ans">Neighbourhood Groups (NHG) &rarr; Area Development Societies (ADS) &rarr; Community Development Societies (CDS).</div></details>
+    </div>
+    <div class="recall-q">
+      <p class="q-text">5. What promise did the NDB make regarding currency, and what actually happened?</p>
+      <details><summary></summary><div class="ans">NDB promised local-currency-denominated financing to reduce dollar dependence; in practice, roughly half its bonds in its first decade were dollar-denominated, since its investor base is dollar-market-based.</div></details>
+    </div>
+    <div class="recall-q">
+      <p class="q-text">6. Why has the CRA gone largely unused despite being designed for emergency liquidity support?</p>
+      <details><summary></summary><div class="ans">Unconditional access is capped at 30% of a member's quota; anything above requires an IMF program with IMF conditionalities, defeating the "no conditionality" promise; the CRA also lacks independent surveillance/monitoring capacity.</div></details>
+    </div>
+  </div>
+
+  <div class="arcs-box">
+    <h4>R — Recurring comparison table</h4>
+    <table>
+      <tr><th>Concept A</th><th>Concept B</th><th>Key distinction</th></tr>
+      <tr><td>Social capital</td><td>Social engineering</td><td>Social capital grows organically from inside a group (trust, networks); social engineering is a deliberate, top-down, state-driven effort to create that structure</td></tr>
+      <tr><td>Poverty alleviation</td><td>Poverty eradication (graduation approach)</td><td>Alleviation reduces severity but risks dependency/relapse; eradication builds durable capacity for a permanent exit</td></tr>
+      <tr><td>Monocentric governance</td><td>Polycentric governance</td><td>Monocentric concentrates all authority in one center; polycentric distributes authority across multiple levels, each deciding within its own domain</td></tr>
+      <tr><td>Washington Consensus</td><td>Beijing Consensus</td><td>Washington = market-led (Bretton Woods model); Beijing = state-led (hub-and-spoke infrastructure-export model)</td></tr>
+      <tr><td>Pyramid of privilege</td><td>Platform of partnership</td><td>Pyramid = hierarchical, western rule-makers vs Global South rule-takers; platform = flat, every country a rule-shaper</td></tr>
+      <tr><td>NDB (World Bank analogue)</td><td>CRA (IMF analogue)</td><td>NDB = long-term developmental finance; CRA = short-term emergency/crisis liquidity — both promised freedom from western conditionality/dominance, with mixed real-world results</td></tr>
+    </table>
+  </div>
+
+  <div class="arcs-box mnemonic-box">
+    <h4>S — Stick with Encoding Tricks</h4>
+    <p><strong>The SHG vicious-to-virtuous cycle as a locked-savings-box with no key, then two keys:</strong> picture a girl with no title to any land (patrilineal-style exclusion), no health/education investment, married off early, trapped in unpaid work with no voice (vicious cycle). Now hand her an SHG passbook: she saves a little each week (thrift), the group vouches for her instead of a bank asking for land papers (social collateral), the bank finally opens a credit line (institutional credit), she starts a small trade (livelihood), and for the first time she has a say at home and in the Gram Sabha (power to/with/within) — the virtuous cycle.</p>
+    <p><strong>Bretton Woods twins vs Pretoria twins as two sets of siblings raised with the same promises:</strong> the older siblings (World Bank, IMF, born 1944-45) grew up rich and strict, attaching conditions to every favor. The younger siblings (NDB, CRA, born 2014-15) promised to be different — no conditions, no favoritism — but ended up borrowing the older siblings' money (dollar bonds), following the older siblings' rules when a friend got into trouble (Russia sanctions), and still asking the older siblings for a credit reference (rating agencies) whenever they needed to look trustworthy.</p>
+    <p><strong>Pyramid of privilege vs platform of partnership as a stadium vs a roundtable:</strong> a pyramid/stadium has a VIP box at the top (the West) and bleachers at the bottom (the Global South) — those at the top set the rules for everyone below. A platform/roundtable has no "top" — everyone, including the Global South, gets to propose the next rule.</p>
+  </div>
+</section>
+
+<section id="gaps">
+  <h2>Supplementary research — filling gaps</h2>
+
+  <div class="gap-box">
+    <h4>DAY-NRLM mobilization figures (10 crore households, 92 lakh SHGs) — verified</h4>
+    <p>Confirmed: DAY-NRLM has cumulatively mobilized approximately 10.08 crore women into 92.30 lakh SHGs, closely matching the lecture's "10 crore households... 92 lakh SHGs." A 2025 NITI Aayog-linked evaluation did find DAY-NRLM contributed to higher incomes, improved financial inclusion, and greater women's confidence, matching the lecture's framing. However, the lecture's specific "49% income increase" figure could not be matched to a precise published statistic — independent evaluations found more modest and varying figures instead: a NITI Aayog assessment (2023) found SHG members had ~19% higher monthly household income than comparable non-members, while a 2025 3ie impact evaluation across 23,000 households in nine states found income gains of ~9.5% overall (12-33% in mature community-institution clusters). Treat the lecture's "49%" figure as an upper-bound/possibly-rounded class citation requiring further verification before use in an exam answer. Source: <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2181702" target="_blank" rel="noopener">PIB, DAY-NRLM</a>; <a href="https://anantamias.com/nrlm-shg-list/" target="_blank" rel="noopener">Anantam IAS summary of NITI Aayog/3ie evaluations</a>.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>Economic Survey figures — 1.2 crore SHGs, 88% all-women, 96% loan repayment — verified</h4>
+    <p>Confirmed: the Economic Survey 2022-23 recorded approximately 1.2 crore (12 million) SHGs in India, of which 88% are all-women groups, with a bank loan repayment rate exceeding 96% — matching the lecture exactly. Source: <a href="https://www.downtoearth.org.in/economy/economic-survey-2022-23-special-mention-of-women-self-help-groups-will-it-translate-to-largesse-87404" target="_blank" rel="noopener">Down To Earth, Economic Survey 2022-23 coverage</a>.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>Allahabad High Court 2020 ration-shop ruling — verified</h4>
+    <p>Confirmed: a single bench of the Allahabad High Court (Justice Attau Rahman Masoodi) quashed a July 2020 Uttar Pradesh government order preferring SHGs in fair-price (ration) shop allotment, holding that SHGs have a "weak legal identity" for fixing accountability and that the preference would be counterproductive for the Public Distribution System — matching the lecture closely. Source: <a href="https://www.livelaw.in/news-updates/high-court-news-delhi-bombay-karnataka-kerala-allahabad-calcutta-punjab-174921" target="_blank" rel="noopener">LiveLaw coverage</a>.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>Kudumbashree's NHG-ADS-CDS structure — verified</h4>
+    <p>Confirmed: Kudumbashree's three-tier structure consists of Neighbourhood Groups (NHGs, 10-20 women, primary unit), Area Development Societies (ADS, ward-level, composed of elected NHG coordinators), and Community Development Societies (CDS, the apex body linking to the local self-government institution) — matching the lecture exactly. Source: <a href="https://kudumbashreestory.in/index.php/what%E2%80%99s-kudumbashree/community-network/community-development-society-cds" target="_blank" rel="noopener">Kudumbashree Story, official CDS page</a>; <a href="https://en.wikipedia.org/wiki/Kudumbashree" target="_blank" rel="noopener">Wikipedia, Kudumbashree</a>.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>JEEViKA Bihar figures (1.5 crore households, 1 million+ SHGs, 99% repayment) — broadly verified, with minor figure variance</h4>
+    <p>Recent (2025) reporting places JEEViKA at approximately 1.35-1.4 crore "Jeevika Didis" across roughly 11.4 lakh SHGs, with a loan repayment rate of approximately 99-99.5% — the lecture's "1.5 crore households... more than 1 million SHGs... 99% repayment" is directionally consistent and close in magnitude, though not an exact match to the most recent figures (JEEViKA's numbers have grown over time, so the discrepancy may reflect different reporting years). Source: <a href="https://yourstory.com/2025/07/inside-jeevika-bihar-silent-financial-engine-powering-rural-women-development" target="_blank" rel="noopener">YourStory, 2025</a>.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>Joseph Stiglitz's four-capital development framework — verified</h4>
+    <p>Confirmed: Stiglitz's Commission on the Measurement of Economic Performance and Social Progress (2009) identifies natural, physical (material), human, and social capital as the four capital stocks relevant to sustainable well-being/development — matching the lecture's framework, though the lecture's specific ordering/labels are a classroom paraphrase rather than a verbatim Commission quote. Source: <a href="https://community-wealth.org/sites/clone.community-wealth.org/files/downloads/report-stiglitz.pdf" target="_blank" rel="noopener">Stiglitz-Sen-Fitoussi Commission report</a>.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>Elinor Ostrom's "nested enterprises" design principle — verified</h4>
+    <p>Confirmed: Ostrom's eight design principles for governing common-pool resources include, as the eighth, "nested enterprises" — organizing larger common-pool-resource governance in multiple layers of nested institutions, with small local units at the base — matching the lecture's linkage of this principle to polycentric/PRI-SHG-style layered governance. Source: <a href="https://wiki.p2pfoundation.net/Elinor_Ostrom%E2%80%99s_Eight_Commons_Governance_Design_Principles" target="_blank" rel="noopener">P2P Foundation summary of Ostrom's principles</a>.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>NABARD's Panch Sutra — verified</h4>
+    <p>Confirmed: NABARD's Panch Sutra for SHGs comprises regular group meetings, regular savings, internal lending based on member demand, timely loan repayment, and maintenance of proper books of accounts — matching the lecture's five principles exactly. Source: <a href="https://gender.study/credit-and-finance/nabard-guidelines-sustainable-self-help-groups/" target="_blank" rel="noopener">NABARD SHG guidelines summary</a>.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>Jharkhand's Birsa Harit Gram Yojana — directionally verified, full multi-stakeholder claim not independently confirmed</h4>
+    <p>Confirmed: Birsa Harit Gram Yojana is a Jharkhand Rural Development Department horticulture-plantation scheme run in convergence with MGNREGA, providing free fruit-bearing saplings with wages paid through MGNREGA labor. However, the lecture's specific description of a full multi-stakeholder convergence chain (Gram Sabha identifying land/beneficiaries, SHG community support, civil-society technical support via geo-tagging, marketing via agencies like APEDA/private exporters) could not be independently confirmed as the scheme's documented operating model in the time available — treat the broad scheme identity as confirmed, but the specific multi-actor convergence description as a classroom simplification pending further check. Source: <a href="https://theprint.in/india/app-to-track-birsa-harit-gram-yojna-in-75000-acres-of-fallow-land-in-jharkhand/1480814/" target="_blank" rel="noopener">The Print</a>.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>18th BRICS Summit, New Delhi Declaration (September 2026) — verified</h4>
+    <p>Confirmed: the 18th BRICS Summit was held at Bharat Mandapam, New Delhi, on 12-13 September 2026 under India's BRICS chairship, adopting the New Delhi Declaration (a 140-paragraph consensus document) on 12 September 2026, covering global-governance reform, trade/finance, climate, technology, health, agriculture, and terrorism — matching the lecture's context closely. Source: <a href="https://en.wikipedia.org/wiki/18th_BRICS_summit" target="_blank" rel="noopener">Wikipedia, 18th BRICS summit</a>; <a href="https://www.drishtiias.com/daily-updates/daily-news-analysis/18th-brics-summit-2026-adoption-of-the-new-delhi-declaration" target="_blank" rel="noopener">Drishti IAS</a>.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>BRICS demographic/economic/trade data — verified, agricultural-output figure unverified</h4>
+    <p>Confirmed: BRICS (post-expansion) accounts for approximately 49.5% of world population and approximately 40% of global GDP in PPP terms, matching the lecture exactly; global trade share is reported around 25-26%, closely matching the lecture's 25%. The lecture's specific "~42% of global agricultural food output" figure could not be independently matched to a precise published source in the time available — treat as a plausible but unverified class citation. Source: <a href="https://www.businesstoday.in/latest/economy/story/brics-countries-have-a-huge-share-of-the-worlds-population-how-big-the-bloc-really-is-554898-2026-09-11" target="_blank" rel="noopener">Business Today</a>.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>NDB cumulative lending figures — verified with minor variance, India-specific figure flagged</h4>
+    <p>NDB's cumulative approvals are reported at 139 projects, but recent sources cite total approved financing of approximately $42.9 billion (vs. the lecture's "$39 billion") — a minor variance likely reflecting different reporting dates. India-specific figures also vary by source and date: the lecture's "35 projects, $10 billion" could not be matched exactly; one recent source instead cites approximately 28 India projects worth nearly $10 billion. Treat the project-count figures as approximate/date-sensitive rather than exact for exam purposes; the broad magnitude ($39-43 billion total, ~$10 billion to India) is consistent across sources. Source: <a href="https://www.ndb.int/projects/" target="_blank" rel="noopener">NDB official projects page</a>; <a href="https://www.ndb.int/wp-content/uploads/2025/12/NDB_AnnualReport2024_10Dec25.pdf" target="_blank" rel="noopener">NDB Annual Report 2024</a>.</p>
+  </div>
+
+</section>
+
+</div>
+
+<footer>
+  Notes compiled from an unlisted lecture recording using YouTube's auto-generated transcript. Timestamps are approximate; several names and figures were transcribed imperfectly by auto-captions and are flagged inline for verification against the original lecture or handwritten notes before citing in an exam answer. Supplementary research sections are separately verified via web search and marked accordingly. Click Save (first time will ask you to pick this file) to write your edits directly to disk — no chat needed.
+</footer>
+
+<script>
+(function() {
+  var mode = null;
+  var noteCounter = 0;
+
+  var btnHighlight = document.getElementById('btn-highlight');
+  var btnUnderline = document.getElementById('btn-underline');
+  var btnNote = document.getElementById('btn-note');
+  var btnClear = document.getElementById('btn-clear');
+  var btnSave = document.getElementById('btn-save');
+  var statusText = document.getElementById('status-text');
+  var contentRoot = document.getElementById('content-root');
+  var noteBox = document.getElementById('note-input-box');
+  var noteText = document.getElementById('note-text');
+  var pendingNoteTarget = null;
+
+  function setMode(newMode) {
+    mode = mode === newMode ? null : newMode;
+    btnHighlight.classList.toggle('active', mode === 'highlight');
+    btnUnderline.classList.toggle('active', mode === 'underline');
+    btnNote.classList.toggle('active', mode === 'note');
+  }
+
+  btnHighlight.addEventListener('click', function() { setMode('highlight'); });
+  btnUnderline.addEventListener('click', function() { setMode('underline'); });
+  btnNote.addEventListener('click', function() { setMode('note'); });
+
+  function markDirty() {
+    statusText.textContent = 'Unsaved changes';
+    statusText.style.color = '#993c1d';
+  }
+
+  document.addEventListener('mouseup', function(e) {
+    if (mode !== 'highlight' && mode !== 'underline') return;
+    var sel = window.getSelection();
+    if (!sel || sel.isCollapsed || sel.rangeCount === 0) return;
+    var range = sel.getRangeAt(0);
+    if (!contentRoot.contains(range.commonAncestorContainer)) return;
+
+    var wrapper = document.createElement(mode === 'highlight' ? 'mark' : 'u');
+    wrapper.className = mode === 'highlight' ? 'user-highlight' : 'user-underline';
+    try {
+      range.surroundContents(wrapper);
+    } catch (err) {
+      var frag = range.extractContents();
+      wrapper.appendChild(frag);
+      range.insertNode(wrapper);
+    }
+    sel.removeAllRanges();
+    markDirty();
+  });
+
+  contentRoot.addEventListener('click', function(e) {
+    if (mode !== 'note') return;
+    if (e.target.closest('.user-note')) return;
+    pendingNoteTarget = e.target;
+    noteBox.style.display = 'block';
+    var x = Math.min(e.clientX, window.innerWidth - 280);
+    var y = Math.min(e.clientY, window.innerHeight - 140);
+    noteBox.style.left = x + 'px';
+    noteBox.style.top = y + 'px';
+    noteText.value = '';
+    noteText.focus();
+  });
+
+  document.getElementById('note-cancel').addEventListener('click', function() {
+    noteBox.style.display = 'none';
+    pendingNoteTarget = null;
+  });
+
+  document.getElementById('note-add').addEventListener('click', function() {
+    var text = noteText.value.trim();
+    if (!text || !pendingNoteTarget) { noteBox.style.display = 'none'; return; }
+    noteCounter++;
+    var noteDiv = document.createElement('div');
+    noteDiv.className = 'user-note';
+    noteDiv.setAttribute('data-note-id', noteCounter);
+    noteDiv.innerHTML = '<span class="note-label">Your note</span>' +
+      '<button class="del-note" title="Remove note">&times;</button>' +
+      '<span class="note-body"></span>';
+    noteDiv.querySelector('.note-body').textContent = text;
+    noteDiv.querySelector('.del-note').addEventListener('click', function() {
+      noteDiv.remove();
+      markDirty();
+    });
+
+    var target = pendingNoteTarget.closest('li, p, td, div.quote-card, section') || contentRoot;
+    target.parentNode.insertBefore(noteDiv, target.nextSibling);
+
+    noteBox.style.display = 'none';
+    pendingNoteTarget = null;
+    markDirty();
+    setMode('note');
+  });
+
+  btnClear.addEventListener('click', function() {
+    if (!confirm('Remove all your highlights, underlines, and notes on this page?')) return;
+    contentRoot.querySelectorAll('.user-note').forEach(function(n) { n.remove(); });
+    contentRoot.querySelectorAll('mark.user-highlight').forEach(function(m) {
+      var parent = m.parentNode;
+      while (m.firstChild) parent.insertBefore(m.firstChild, m);
+      parent.removeChild(m);
+    });
+    contentRoot.querySelectorAll('u.user-underline').forEach(function(u) {
+      var parent = u.parentNode;
+      while (u.firstChild) parent.insertBefore(u.firstChild, u);
+      parent.removeChild(u);
+    });
+    markDirty();
+  });
+
+  var fallbackHelp = document.getElementById('fallback-help');
+  document.getElementById('fallback-close').addEventListener('click', function() {
+    fallbackHelp.style.display = 'none';
+  });
+
+  var fileHandle = null;
+  var fsaSupported = 'showSaveFilePicker' in window;
+  var THIS_FILENAME = 'notes.html';
+
+  function buildFullHtml() {
+    var doc = document.documentElement.cloneNode(true);
+    var liveContentRoot = doc.querySelector('#content-root');
+    if (liveContentRoot) liveContentRoot.innerHTML = contentRoot.innerHTML;
+    return '<!DOCTYPE html>\n' + doc.outerHTML;
+  }
+
+  async function writeToFile() {
+    var writable = await fileHandle.createWritable();
+    await writable.write(buildFullHtml());
+    await writable.close();
+  }
+
+  btnSave.addEventListener('click', async function() {
+    statusText.textContent = 'Saving…';
+    statusText.style.color = '#57606a';
+    if (!fsaSupported) {
+      fallbackHelp.style.display = 'block';
+      statusText.textContent = 'Direct save not supported in this browser';
+      statusText.style.color = '#993c1d';
+      return;
+    }
+    try {
+      if (!fileHandle) {
+        fileHandle = await window.showSaveFilePicker({
+          suggestedName: THIS_FILENAME,
+          types: [{ description: 'HTML file', accept: { 'text/html': ['.html'] } }]
+        });
+      }
+      var perm = await fileHandle.queryPermission({ mode: 'readwrite' });
+      if (perm !== 'granted') {
+        perm = await fileHandle.requestPermission({ mode: 'readwrite' });
+      }
+      if (perm !== 'granted') {
+        statusText.textContent = 'File permission denied — click Save to retry';
+        statusText.style.color = '#993c1d';
+        fileHandle = null;
+        return;
+      }
+      await writeToFile();
+      statusText.textContent = 'Saved to file just now';
+      statusText.style.color = '#3b6d11';
+    } catch (err) {
+      console.error('SAVE_ERROR', err.name, err.message, err);
+      if (err.name === 'AbortError') {
+        statusText.textContent = 'Save cancelled';
+        statusText.style.color = '#57606a';
+      } else {
+        statusText.textContent = 'Save failed: ' + err.name + ' — click Save to retry';
+        statusText.style.color = '#993c1d';
+        fileHandle = null;
+      }
+    }
+  });
+
+  contentRoot.querySelectorAll('.user-note .del-note').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      btn.closest('.user-note').remove();
+      markDirty();
+    });
+  });
+
+  contentRoot.querySelectorAll('.spacing-tracker input[type="checkbox"]').forEach(function(cb) {
+    cb.addEventListener('change', function() {
+      if (cb.checked) { cb.setAttribute('checked', 'checked'); }
+      else { cb.removeAttribute('checked'); }
+      markDirty();
+    });
+  });
+})();
+</script>
+</body>
+</html>
