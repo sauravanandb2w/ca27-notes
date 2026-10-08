@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class 5(26): Delimitation Debate, Anti-Defection Law &amp; Trade Unions in the Platform Economy</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: #faf9f6;
+    color: #1f2328;
+    margin: 0;
+    padding: 0 0 80px;
+    line-height: 1.6;
+  }
+  .toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: #ffffff;
+    border-bottom: 2px solid #1d5b8b;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: Arial, sans-serif;
+    flex-wrap: wrap;
+  }
+  .toolbar button {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    padding: 7px 14px;
+    border-radius: 6px;
+    border: 1px solid #d8d2c6;
+    background: #fff;
+    cursor: pointer;
+    color: #1f2328;
+  }
+  .toolbar button:hover { background: #e6f1fb; border-color: #1d5b8b; }
+  .toolbar button.active { background: #1d5b8b; color: #fff; border-color: #1d5b8b; }
+  .toolbar .save-btn { background: #2f6b4f; color: #fff; border-color: #2f6b4f; margin-left: auto; }
+  .toolbar .save-btn:hover { background: #24543e; }
+  .toolbar .status { font-size: 12px; color: #57606a; margin-left: auto; padding-right: 8px; }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 30px 20px; }
+  header { border-bottom: 3px solid #1d5b8b; padding-bottom: 20px; margin-bottom: 30px; }
+  header h1 { font-size: 1.6em; margin: 0 0 6px; color: #1d5b8b; }
+  header .meta { color: #57606a; font-size: 0.95em; font-family: Arial, sans-serif; }
+  section { margin-bottom: 42px; }
+  h2 { font-size: 1.4em; color: #1d5b8b; border-left: 4px solid #1d5b8b; padding-left: 12px; margin-bottom: 14px; }
+  h3 { font-size: 1.12em; margin: 22px 0 8px; }
+  p { margin: 10px 0; }
+  .summary-box { background: #e6f1fb; border-radius: 8px; padding: 18px 22px; font-size: 0.98em; }
+  ul, ol.answers { padding-left: 24px; }
+  li { margin-bottom: 6px; }
+  .timestamp { font-family: 'Courier New', monospace; font-size: 0.78em; color: #57606a; background: #e2ddd4; border-radius: 4px; padding: 1px 6px; margin-right: 6px; }
+  .quote-card { background: #fff; border: 1px solid #e2ddd4; border-left: 4px solid #1d5b8b; border-radius: 6px; padding: 14px 18px; margin: 14px 0; }
+  .quote-card .q { font-style: italic; font-size: 1.05em; }
+  .quote-card .attrib { font-family: Arial, sans-serif; font-size: 0.85em; color: #57606a; margin-top: 6px; }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.95em; background: #fff; }
+  th, td { border: 1px solid #e2ddd4; padding: 8px 12px; text-align: left; vertical-align: top; }
+  th { background: #e6f1fb; font-family: Arial, sans-serif; font-size: 0.88em; }
+  .gap-box { background: #eef4f0; border: 1px solid #cfe3d6; border-radius: 8px; padding: 16px 20px; margin-top: 16px; font-size: 0.95em; }
+  .gap-box h4 { margin: 0 0 8px; color: #2f6b4f; font-family: Arial, sans-serif; font-size: 0.95em; }
+  .exam-tip { background: #fff7e6; border: 1px solid #f0dba8; border-radius: 8px; padding: 14px 20px; margin: 14px 0; font-size: 0.95em; }
+  .exam-tip::before { content: "Exam strategy: "; font-weight: bold; font-family: Arial, sans-serif; }
+  .term-box { background: #fdf3f3; border: 1px solid #ecd4d4; border-radius: 8px; padding: 12px 16px; margin: 10px 0; }
+  .term-box strong { color: #8b3a3a; }
+  .data-box { background: #f3f0fb; border: 1px solid #ddd6f0; border-radius: 8px; padding: 12px 16px; margin: 10px 0; font-family: 'Courier New', monospace; font-size: 0.9em; }
+  footer { margin-top: 60px; border-top: 1px solid #e2ddd4; padding-top: 16px; color: #57606a; font-size: 0.82em; font-family: Arial, sans-serif; }
+  .toc {
+    background: #fff;
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    padding: 16px 22px;
+    margin-bottom: 36px;
+    font-family: Arial, sans-serif;
+    font-size: 0.9em;
+  }
+  .toc h2 { font-size: 1em; margin: 0 0 10px; border: none; padding: 0; color: #1d5b8b; text-transform: uppercase; letter-spacing: 0.04em; }
+  .toc ol { columns: 2; margin: 0; padding-left: 20px; }
+  .toc a { color: #1f2328; text-decoration: none; }
+  .toc a:hover { color: #1d5b8b; text-decoration: underline; }
+  details.collapse-section {
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    background: #fff;
+    margin: 14px 0;
+    padding: 0;
+  }
+  details.collapse-section summary {
+    cursor: pointer;
+    padding: 12px 16px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 0.92em;
+    color: #1d5b8b;
+    list-style: none;
+  }
+  details.collapse-section summary::-webkit-details-marker { display: none; }
+  details.collapse-section summary::before { content: "▸ "; }
+  details.collapse-section[open] summary::before { content: "▾ "; }
+  details.collapse-section .collapse-body { padding: 4px 16px 16px; }
+  .glossary-term {
+    display: flex;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+  }
+  .glossary-term:last-child { border-bottom: none; }
+  .glossary-term dt { font-weight: bold; color: #8b3a3a; min-width: 220px; flex-shrink: 0; font-family: Arial, sans-serif; font-size: 0.9em; }
+  .glossary-term dd { margin: 0; }
+
+  mark.user-highlight { background: #fff176; padding: 1px 2px; border-radius: 2px; }
+  u.user-underline { text-decoration: underline; text-decoration-color: #1d5b8b; text-decoration-thickness: 2px; }
+  .user-note {
+    background: #e6f1fb;
+    border: 1px solid #85b7eb;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin: 8px 0;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #0c447c;
+    position: relative;
+  }
+  .user-note .note-label { font-weight: bold; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; display: block; }
+  .user-note .del-note { position: absolute; top: 6px; right: 8px; cursor: pointer; border: none; background: none; color: #0c447c; font-size: 14px; font-family: Arial, sans-serif; }
+  #note-input-box {
+    position: fixed;
+    display: none;
+    background: #fff;
+    border: 2px solid #1d5b8b;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    z-index: 100;
+    font-family: Arial, sans-serif;
+  }
+  #note-input-box textarea { width: 240px; height: 60px; font-family: Arial, sans-serif; font-size: 13px; border: 1px solid #d8d2c6; border-radius: 4px; padding: 6px; }
+  #note-input-box .note-actions { margin-top: 6px; display: flex; gap: 6px; justify-content: flex-end; }
+  #note-input-box button { font-size: 12px; padding: 5px 10px; border-radius: 4px; border: 1px solid #d8d2c6; background: #fff; cursor: pointer; }
+  #note-input-box button.primary { background: #1d5b8b; color: #fff; border-color: #1d5b8b; }
+  .content-target::selection { background: #ffe082; }
+  .board-caption { font-family: Arial, sans-serif; font-size: 0.82em; color: #57606a; margin-top: -8px; margin-bottom: 14px; }
+  .arcs-box {
+    background: #fff;
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 14px 0;
+  }
+  .arcs-box h4 { margin: 0 0 10px; color: #1d5b8b; font-family: Arial, sans-serif; font-size: 0.98em; }
+  .recall-q { margin-bottom: 14px; }
+  .recall-q p.q-text { font-weight: bold; margin: 0 0 6px; }
+  .recall-q details { border: none; margin: 0; }
+  .recall-q summary { font-family: Arial, sans-serif; font-size: 0.82em; color: #1d5b8b; cursor: pointer; list-style: none; padding: 2px 0; }
+  .recall-q summary::-webkit-details-marker { display: none; }
+  .recall-q summary::before { content: "Show answer \25B8 "; }
+  .recall-q details[open] summary::before { content: "Hide answer \25BE "; }
+  .recall-q .ans { background: #eef4f0; border-radius: 6px; padding: 8px 12px; margin-top: 6px; font-size: 0.95em; }
+  .spacing-tracker { font-family: Arial, sans-serif; font-size: 0.92em; }
+  .spacing-tracker table { margin: 8px 0; }
+  .spacing-tracker input[type="checkbox"] { width: 16px; height: 16px; cursor: pointer; }
+  .mnemonic-box { background: #fff7e6; border: 1px solid #f0dba8; border-radius: 8px; padding: 14px 18px; margin: 10px 0; }
+  .mnemonic-box h4 { margin: 0 0 6px; color: #8b5a1d; font-family: Arial, sans-serif; font-size: 0.92em; }
+  .applic-table td.gs-tag { font-family: Arial, sans-serif; font-weight: bold; font-size: 0.85em; white-space: nowrap; }
+  .applic-table .prelims-badge, .applic-table .mains-badge {
+    display: inline-block; font-family: Arial, sans-serif; font-size: 0.72em; font-weight: bold;
+    padding: 2px 8px; border-radius: 10px; margin-right: 4px;
+  }
+  .prelims-badge { background: #eaf3de; color: #3b6d11; }
+  .mains-badge { background: #e6f1fb; color: #1d5b8b; }
+  #fallback-help {
+    position: fixed;
+    display: none;
+    top: 60px;
+    right: 20px;
+    max-width: 320px;
+    background: #fff;
+    border: 2px solid #993c1d;
+    border-radius: 8px;
+    padding: 14px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    z-index: 200;
+  }
+  .mcq-card { background: #fff; border: 1px solid #e2ddd4; border-left: 4px solid #1d5b8b; border-radius: 8px; padding: 16px 20px; margin: 14px 0; }
+  .mcq-card .q-num { font-family: Arial, sans-serif; font-weight: bold; color: #1d5b8b; font-size: 0.82em; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 6px; }
+  .mcq-card .q-text { font-weight: bold; margin-bottom: 10px; }
+  .mcq-card .options { display: flex; flex-direction: column; gap: 6px; margin-bottom: 10px; }
+  .mcq-card .option { font-family: Arial, sans-serif; font-size: 0.92em; padding: 6px 10px; border-radius: 6px; background: #faf9f6; border: 1px solid #e2ddd4; }
+  .mcq-card .option.correct { background: #eaf3de; border-color: #b9d79a; color: #3b6d11; font-weight: bold; }
+  .mcq-card .answer-box { font-family: Arial, sans-serif; font-size: 0.88em; background: #eef4f0; border-radius: 6px; padding: 8px 12px; }
+  .mcq-card .answer-label { font-weight: bold; color: #2f6b4f; }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <button id="btn-highlight" title="Select text, then click to highlight it">Highlight</button>
+  <button id="btn-underline" title="Select text, then click to underline it">Underline</button>
+  <button id="btn-note" title="Click this, then click anywhere in the notes to drop a note">Add note</button>
+  <button id="btn-clear" title="Remove all your highlights, underlines, and notes">Clear my edits</button>
+  <span class="status" id="status-text">Not connected to file — click Save once to connect</span>
+  <button class="save-btn" id="btn-save">Save</button>
+</div>
+
+<div id="fallback-help">
+  <strong>Your browser can't save directly</strong>
+  <p style="margin:6px 0;">File System Access isn't supported here (common on Safari/Firefox). Use Chrome or Edge to enable direct-save, or use your browser's Save Page As (Ctrl/Cmd+S) to overwrite this file manually after editing.</p>
+  <button id="fallback-close" style="font-size: 12px; padding: 6px 12px; border-radius: 4px; border: 1px solid #993c1d; background: #993c1d; color: #fff; cursor: pointer;">Got it</button>
+</div>
+
+<div id="note-input-box">
+  <textarea id="note-text" placeholder="Type your note..."></textarea>
+  <div class="note-actions">
+    <button id="note-cancel">Cancel</button>
+    <button class="primary" id="note-add">Add</button>
+  </div>
+</div>
+
+<div class="wrap content-target" id="content-root">
+
+<header>
+  <h1>CA Mains 2026 — Class 5(26): Delimitation Debate, Anti-Defection Law &amp; Trade Unions in the Platform Economy</h1>
+  <div class="meta">
+    <span>Source: unlisted YouTube lecture recording ("class 5 CAVA26")</span> &middot;
+    <span>Duration: 0:00 – 1:34:19</span> &middot;
+    <span>Track: UPSC GS-2 (Polity/Governance) &amp; GS-3 (Labour/Economy) — Current Affairs Answer Writing</span>
+  </div>
+</header>
+
+<nav class="toc">
+  <h2>Contents</h2>
+  <ol>
+    <li><a href="#applicability">Applicability — GS papers, Prelims &amp; Mains</a></li>
+    <li><a href="#part1">Topic 1: Delimitation — the core debate</a></li>
+    <li><a href="#part2">Topic 1: Data, judgments, quotes &amp; global models</a></li>
+    <li><a href="#part3">Topic 1: Model answer structure</a></li>
+    <li><a href="#part4">Topic 2: Anti-Defection Law — mechanics &amp; the merger loophole</a></li>
+    <li><a href="#part5">Topic 2: Debates, data, judgments &amp; quotes</a></li>
+    <li><a href="#part6">Topic 2: Model answer structure</a></li>
+    <li><a href="#part7">Topic 3: Trade unions, labour codes &amp; the platform economy</a></li>
+    <li><a href="#part8">Topic 3: Debates, examples &amp; the way forward</a></li>
+    <li><a href="#part9">Topic 3: Model answer structure</a></li>
+    <li><a href="#mcqs">Practice MCQs (self-authored, Prelims-style)</a></li>
+    <li><a href="#glossary">Glossary — quick revision</a></li>
+    <li><a href="#arcs">Revision kit (ARCS)</a></li>
+    <li><a href="#gaps">Supplementary research</a></li>
+  </ol>
+</nav>
+
+<section id="summary">
+  <h2>Executive summary</h2>
+  <div class="summary-box">
+  <p>Fifth class of the CA Mains 2026 answer-writing series (continuing the "cava2026" recordings used for classes 1–3), covering three exam-relevant themes in sequence, each built on the standard introduction → context/data → debates → judgments/quotes → models → suggestions → conclusion format:</p>
+  <ul>
+    <li><strong>Topic 1</strong> — the delimitation debate: the freeze on Lok Sabha seats since the 1971 census, the impending end of that freeze in 2026, the failed 131st Constitution Amendment Bill (proposed ~850 seats), the EAC-PM working paper on targeted splitting, and the north–south "democratic parity vs. demographic penalty" fault line.</li>
+    <li><strong>Topic 2</strong> — the Anti-Defection Law (Tenth Schedule): its 52nd Amendment (1985) origin, the 91st Amendment's removal of the one-third split protection while retaining the two-thirds merger exception, the conjunctive-vs-disjunctive reading of that merger clause (the live "merger loophole"), and the recurring stability-vs-dissent debate.</li>
+    <li><strong>Topic 3</strong> — trade unions, the four new Labour Codes, and the platform/gig economy: declining unionisation (6.3%), the rise of algorithmic "management," the old-regime-vs-new-regime comparison (negotiating unions, strike notice, retrenchment thresholds), and the "ease of doing business vs. ease of laboring" tension.</li>
+  </ul>
+  <p>As in earlier classes, the instructor periodically pauses to run live answer-structuring exercises with students — these are captured below as "Model answer structure" sub-sections for each topic.</p>
+  </div>
+</section>
+
+<section id="applicability">
+  <h2>Applicability — GS papers, Prelims &amp; Mains</h2>
+  <table class="applic-table">
+    <tr><th>Sub-topic</th><th>GS Paper</th><th>Prelims</th><th>Mains</th></tr>
+    <tr>
+      <td class="gs-tag">Delimitation (constitutional provisions, amendments, commission)</td>
+      <td>GS-2 (Polity)</td>
+      <td><span class="prelims-badge">High</span>Named articles (81, 82, 170), amendment numbers, and the Delimitation Commission Act are classic MCQ fodder.</td>
+      <td><span class="mains-badge">High</span>Live 2026 current-affairs issue — the freeze's expiry makes this a near-certain Mains theme this cycle.</td>
+    </tr>
+    <tr>
+      <td class="gs-tag">Anti-Defection Law (Tenth Schedule, amendments, case law)</td>
+      <td>GS-2 (Polity)</td>
+      <td><span class="prelims-badge">High</span>Schedule number, amendment years (52nd, 91st), and named cases are frequently tested directly.</td>
+      <td><span class="mains-badge">High</span>Recurring GS-2 governance theme, repeatedly refreshed by real defection/merger episodes.</td>
+    </tr>
+    <tr>
+      <td class="gs-tag">Trade unions, labour codes, platform/gig economy</td>
+      <td>GS-2 (Social Justice) / GS-3 (Economy, Employment)</td>
+      <td><span class="prelims-badge">Medium</span>The four Labour Codes' names and key numeric thresholds (notice periods, retrenchment limits) are MCQ-testable.</td>
+      <td><span class="mains-badge">High</span>High-value, multi-angle theme — can be asked as a pure labour-codes question or reframed around gig workers/informal associations.</td>
+    </tr>
+  </table>
+  <p style="font-family: Arial, sans-serif; font-size: 0.85em; color: #57606a;">Instructor's framing note (repeated from earlier classes): a named Act/amendment/case/figure with a specific year or number is Prelims-relevant; a debate, comparative model, or answer-structuring technique is Mains-relevant — most current-affairs topics carry both.</p>
+</section>
+
+<section id="part1">
+  <h2>1. Topic 1: Delimitation — the core debate</h2>
+  <p><span class="timestamp">2:26</span>Model framing line (reusable introduction pattern): delimitation — the geographical carving of electoral constituencies — "is not merely an administrative exercise, but a deeply political one," forming the bedrock of parliamentary democracy by seeking to ensure the constitutional promise of "one person, one vote, one value."</p>
+  <div class="exam-tip">Reusable introduction template: name the mechanism, state it is "not merely administrative/technical but deeply political," then tie it to the specific constitutional value it promises (here, "one person, one vote, one value"). This pattern generalises to any institutional-design question.</div>
+
+  <h3>Context pegs (current affairs hooks)</h3>
+  <ul>
+    <li><span class="timestamp">3:13</span>A <strong>131st Constitution Amendment Bill</strong> (alongside a companion delimitation bill) was introduced to expand Lok Sabha seats from the present 543 to around 850 — but the push failed because a constitutional amendment of this kind needs a two-thirds majority, which the bill could not secure.</li>
+    <li><span class="timestamp">3:47</span>Implementation of the <strong>106th Constitution Amendment Act</strong> (the women's reservation law, "Nari Shakti Vandan Adhiniyam") is contingent on delimitation being carried out first.</li>
+    <li><span class="timestamp">4:01</span>The <strong>Economic Advisory Council to the PM (EAC-PM)</strong> released a working paper proposing a <em>targeted</em> splitting of constituencies rather than a uniform, population-only split.</li>
+  </ul>
+
+  <h3>What delimitation legally involves</h3>
+  <p><span class="timestamp">4:19</span>Delimitation is the act of drawing political boundaries and involves three distinct steps: (1) fixing the total number of seats in the Lok Sabha; (2) calculating how many seats each state gets; and (3) drawing the boundaries of each constituency.</p>
+  <div class="exam-tip">If a question simply asks "what is delimitation," a one-line definition plus this three-part breakdown (total seats → seats per state → constituency boundaries), boxed for visual clarity, is the recommended format — don't over-elaborate a pure definitional ask.</div>
+
+  <h3>Constitutional and legal architecture</h3>
+  <ul>
+    <li><strong>Article 81</strong> caps Lok Sabha strength (around 550 elected members under the current formula) and requires that, as far as practicable, the ratio between seats and state population be uniform across states.</li>
+    <li><strong>Article 82</strong> requires readjustment of constituencies after every census.</li>
+    <li><strong>42nd Amendment Act (1976)</strong> froze the total number of seats and their inter-state allocation at 1971-census levels — a freeze justified at the time as protection for states that had pursued population control.</li>
+    <li><strong>84th Amendment Act (2001)</strong> extended this freeze to 2026, while permitting redrawing of constituency boundaries within a state (not inter-state reallocation) on the basis of the 2001 census.</li>
+    <li><strong>87th Amendment Act (2003)</strong> gave effect to the actual redrawing of boundaries using 2001 census data, without changing the number of seats or their state-wise distribution.</li>
+    <li><strong>Article 329(a)</strong> bars courts from questioning the validity of any law relating to delimitation of constituencies.</li>
+    <li><strong>Article 330A / 332A</strong> (inserted by the 106th Amendment Act, 2023) reserve seats for women in the Lok Sabha and state assemblies respectively — but this reservation is explicitly linked to the first delimitation exercise carried out after the next census following that Act's commencement.</li>
+    <li><strong>Delimitation Commission Act, 2002</strong> establishes an independent Delimitation Commission to carry out the boundary-drawing exercise; its orders have the force of law.</li>
+  </ul>
+  <p class="board-caption">The freeze, as a timeline (reusable diagram for a delimitation answer):</p>
+  <pre class="mermaid">
+flowchart LR
+    A["42nd Amendment (1976):<br/>seats frozen at<br/>1971-census levels"] --> B["84th Amendment (2001):<br/>freeze extended to 2026"]
+    B --> C["87th Amendment (2003):<br/>boundaries redrawn using<br/>2001 census, seats unchanged"]
+    C --> D["2026: freeze expires —<br/>131st CAB (failed) proposed<br/>~850 seats"]
+  </pre>
+
+  <h3>Why the freeze matters now</h3>
+  <p><span class="timestamp">7:34</span>Because the next delimitation will not be based on the outdated 1971 population distribution, there is pressure to increase total seats to correct under-representation — but this directly triggers a north–south political fault line, since the southern states that pursued population control stand to see their relative seat share shrink if seats are redistributed purely on current population.</p>
+
+  <h3>The four key debates</h3>
+  <details class="collapse-section" open><summary>Debate 1 — Democratic parity vs. "demographic penalty"</summary><div class="collapse-body">
+    Representation is a core democratic value, and India's largest constituencies now have populations exceeding many small countries — one MP in some constituencies represents roughly 25–30 lakh voters, against an original design benchmark of about 7.5 lakh people per MP. This fuels demand to expand seats. But states that implemented population-control measures (mainly southern states) argue that increasing seats on a current-population basis would penalise them for complying with national policy — a "demographic penalty" for past good performance.
+  </div></details>
+  <details class="collapse-section"><summary>Debate 2 — Uniform (population-only) split vs. targeted/multi-factor splitting</summary><div class="collapse-body">
+    One option is splitting constituencies purely by population. The EAC-PM's working paper instead proposes weighting multiple factors (economic performance/GDP contribution, linguistic and community profile, voter-turnout patterns) rather than population alone — intended to avoid a pure "demographic penalty" outcome and preserve federal trust.
+  </div></details>
+  <details class="collapse-section"><summary>Debate 3 — Under-representation vs. malapportionment</summary><div class="collapse-body">
+    These are treated in the lecture as two distinct problems, not synonyms: <strong>under-representation</strong> is a scale problem affecting virtually all constituencies — each MP now represents far more people than originally intended, degrading an MP's ability to know, serve, and be held accountable by constituents. <strong>Malapportionment</strong> is a distributional-equality problem affecting mainly the most populous states — a state's share of Lok Sabha seats does not match its share of national population (e.g., an MP from a high-population northern state represents several times more people than an MP from a smaller southern state).
+  </div></details>
+  <details class="collapse-section"><summary>Debate 4 — Representation (Lok Sabha) vs. federal balance (Rajya Sabha)</summary><div class="collapse-body">
+    Expanding the Lok Sabha alone, without a corresponding change to the Rajya Sabha (where seats are not population-weighted in the same way), risks a power imbalance between the two houses in joint sittings, where Lok Sabha's numerical strength would dominate even more heavily than today. The US Senate (equal representation per state, regardless of population) is cited as a contrasting model where the upper house retains real federal weight — a balance India's bicameral design does not currently replicate.
+  </div></details>
+
+  <h3>The "knowing, serving, answering" framework</h3>
+  <p>A reusable three-part lens (from the under-representation debate) for why representative scale matters: (1) <strong>Knowing</strong> — an MP with an excessively large constituency cannot stay familiar with local social, economic, and welfare conditions; (2) <strong>Serving</strong> — legislative duties (in Parliament) and facilitative duties (meeting constituents, aiding access to government services) both suffer at scale; (3) <strong>Answering</strong> — accountability breaks down because constituents cannot meaningfully evaluate an MP's performance or even get face time with them.</p>
+  <div class="term-box"><strong>Knowing–Serving–Answering framework:</strong> use this triad whenever a question links representative scale (delimitation, local-body ward size, etc.) to accountability failure.</div>
+</section>
+
+<section id="part2">
+  <h2>2. Topic 1: Data, judgments, quotes &amp; global models</h2>
+
+  <h3>Key data points (cite exact figures in the answer)</h3>
+  <div class="data-box">
+    Lok Sabha strength fixed at 543 based on the 1971 census (population then: ~54 crore; current population: ~144 crore). The (failed) expansion plan proposed ~850 seats, of which roughly a third (~270+) would have been reserved for women under the women's reservation law. The EAC-PM working paper instead proposed expansion to around 824 seats, with about 170 of the existing constituencies split — some two-way, some three-way — rather than splitting every constituency uniformly.
+  </div>
+  <div class="data-box">
+    Per the EAC-PM working paper (as cited in the lecture — verify exact figures against the published paper before citing in Mains): the combined Lok Sabha seat share of Telangana and Tamil Nadu is projected to stay roughly stable (~23.7% to ~23.6%) under the proposed multi-factor model, against a sharper fall (to roughly ~20%) if seats were instead reallocated purely on 2011-census population. The paper also projects a turnout increase of up to ~2.3% from the redesign.
+  </div>
+  <div class="exam-tip">Lead a delimitation answer with data, not definitions: "Lok Sabha strength has stood at 543 since the 1971 census, when India's population was ~54 crore — it is now ~144 crore," immediately establishes the scale of the under-representation problem.</div>
+
+  <h3>Judgments</h3>
+  <details class="collapse-section" open><summary>Key cases (verify exact citations before use)</summary><div class="collapse-body">
+  <table>
+    <tr><th>Case</th><th>What it stands for</th></tr>
+    <tr><td>Meghraj Kothari v. Delimitation Commission (1967)</td><td>Supreme Court held that delimitation orders have the force of law and, per Article 329(a), cannot be called into question in any court — the stated rationale being to prevent delimitation from becoming a perpetual ground for electoral litigation.</td></tr>
+    <tr><td>2024 clarification (bench/case name unclear in transcript — verify before citing)</td><td>Reportedly clarified that constitutional courts retain a narrow power of judicial review over Delimitation Commission orders where those orders are "manifestly arbitrary" — a qualification on the otherwise broad Article 329(a) bar.</td></tr>
+  </table>
+  </div></details>
+
+  <h3>Scholarly framework — under-representation vs. malapportionment</h3>
+  <p><span class="timestamp">11:31</span>An economist (name transcribed unclearly as "Sudhi Jalan"/"Sudi Jabalin" — likely a reference to Milan Vaishnav's work for the Carnegie Endowment for International Peace on India's "emerging crisis of representation"; verify exact authorship before citing) frames the two problems precisely: under-representation as the scale problem (constituencies have grown far beyond the original per-MP population benchmark), and malapportionment as the equality problem (a state's seat share diverging from its population share) — illustrated with a comparison of an MP in Kerala representing roughly 1.75 million people against an MP in Bihar representing roughly 3.1 million.</p>
+  <div class="quote-card">
+    <div class="q">Southern states have equal rights in this house as northern states.</div>
+    <div class="attrib">— Cited in the lecture as a Union minister's remark on the delimitation debate (speaker's name not clearly captured in the transcript — verify before citing)</div>
+  </div>
+  <div class="quote-card">
+    <div class="q">The question is not whether "one person, one vote" is a valid principle — the real question is whether it is the only valid principle relevant to this case.</div>
+    <div class="attrib">— Cited in the lecture as a counter to a purely population-based view of delimitation, arguing the federal principle must be weighed alongside electoral parity (attribution unclear in transcript — verify before citing)</div>
+  </div>
+  <div class="quote-card">
+    <div class="q">Democracy is about fair voice, not just raw numbers — federal stability matters as much as electoral arithmetic.</div>
+    <div class="attrib">— Attributed in the lecture to a scholar transcribed as "Professor Santosh Meoka" (name unclear — verify before citing)</div>
+  </div>
+  <div class="quote-card">
+    <div class="q">Politics is the art of the possible, the attainable — the art of the next best.</div>
+    <div class="attrib">— A maxim commonly attributed to Otto von Bismarck, used in the lecture to argue that delimitation reform should aim for a practically attainable compromise rather than a theoretically perfect solution</div>
+  </div>
+
+  <h3>Comparative/global models</h3>
+  <details class="collapse-section"><summary>United States — the Connecticut ("Great") Compromise</summary><div class="collapse-body">
+    At the 1787 Constitutional Convention, large states (the Virginia Plan) wanted representation purely by population; small states (the New Jersey Plan) wanted equal representation per state. The Connecticut Compromise resolved this by giving the House of Representatives population-based seats while the Senate gives every state exactly two seats regardless of population — preserving small-state federal power in the upper chamber. Notably, the US has never increased the total number of House seats (fixed since 1929) despite large population growth, relying instead on other mechanisms (and, per the lecture, technology) to manage representative workload.
+  </div></details>
+  <details class="collapse-section"><summary>European Union — degressive proportionality</summary><div class="collapse-body">
+    The European Parliament allocates seats using "degressive proportionality": smaller member states are deliberately given slightly more seats than strict population-proportionality would allow, so that larger states cannot simply dominate the chamber by numbers — a deliberate federal-balance correction mechanism, offered in the lecture as a possible reference model for India's own seat-allocation debate.
+  </div></details>
+</section>
+
+<section id="part3">
+  <h2>3. Topic 1: Model answer structure (as taught)</h2>
+  <div class="quote-card">
+    <div class="q">Distinguish between under-representation and malapportionment in India's electoral system. Evaluate the viability of expanding the Lok Sabha to 850 seats to address these issues.</div>
+    <div class="attrib">— Model question used for the live structuring exercise in class</div>
+  </div>
+  <ol class="answers">
+    <li><strong>Introduction:</strong> lead with the data (543 seats fixed since the 1971 census against a near-tripled population), then state the "one person, one vote, one value" constitutional promise as the value under strain.</li>
+    <li><strong>Body — define and distinguish:</strong> under-representation (a scale problem affecting nearly all constituencies — the "knowing, serving, answering" breakdown) vs. malapportionment (an equality problem concentrated in the most populous states — unequal value of votes across states).</li>
+    <li><strong>Body — why this has resurfaced now:</strong> the 1971-census freeze (42nd/84th/87th Amendments), ending in 2026, and the 131st Constitution Amendment Bill's failed attempt to expand to ~850 seats.</li>
+    <li><strong>Body — evaluate viability:</strong> positives (corrects demographic imbalance, enables fuller women's reservation roll-out, improves governance accountability, EAC-PM's projected turnout gains) weighed against concerns (southern "demographic penalty" fear, federal/Rajya Sabha imbalance, two-thirds majority and political consensus requirements, implementation timelines, gerrymandering risk).</li>
+    <li><strong>Conclusion:</strong> a workable path likely requires a multi-factor (not purely population-based) model — along EAC-PM or EU degressive-proportionality lines — built through political consensus rather than a unilateral population-only formula.</li>
+  </ol>
+  <div class="exam-tip">Reusable four-part skeleton for any "distinguish X and Y, then evaluate a proposed reform" question: define-and-distinguish → why-now (current-affairs trigger) → evaluate (positives vs. concerns) → conclusion favouring a calibrated/hybrid approach over an extreme position.</div>
+</section>
+
+<section id="part4">
+  <h2>4. Topic 2: Anti-Defection Law — mechanics &amp; the merger loophole</h2>
+  <div class="exam-tip">Recommended answer format for this topic (repeated instructor guidance): introduction/context → legal framework → the specific mechanism/loophole being tested → debates → judgments/quotes → comparative models → suggestions → conclusion.</div>
+
+  <h3>Context pegs (current affairs hooks)</h3>
+  <p><span class="timestamp">37:47</span>The Tenth Schedule ("Anti-Defection Law," ADL) is framed as "one of the most critical constitutional interventions aimed at addressing the systemic malady of political opportunism." Recent triggers cited: reports of a large group of MPs merging into a newly formed party ("National Citizens Party," as referenced in the lecture), a separate group of opposition MLAs voting against their party whip on a confidence motion, and legislators from one party merging into another using the two-thirds merger exemption — all raising fresh "two-thirds merger" controversies.</p>
+
+  <h3>Legal framework and evolution</h3>
+  <ul>
+    <li><strong>52nd Constitution Amendment Act (1985)</strong> inserted the Tenth Schedule, disqualifying legislators on grounds of defection — intended to ensure representative accountability and government stability, and to curb the large-scale floor-crossing epidemic of the late 1960s/early 1970s.</li>
+    <li><strong>91st Constitution Amendment Act (2003)</strong> omitted <strong>paragraph 3</strong> of the Tenth Schedule, which had earlier protected a one-third "split" of a legislature party from disqualification — removing that loophole entirely — while <strong>retaining paragraph 4</strong>, which protects a two-thirds merger of a legislature party from disqualification.</li>
+    <li><strong>Article 190(3)(b)</strong> requires that a Speaker cannot arbitrarily accept a legislator's resignation — the Speaker must independently satisfy themselves that the resignation is voluntary and genuine, not a device to pre-empt a disqualification proceeding.</li>
+  </ul>
+  <div class="term-box"><strong>Paragraph 3 vs. Paragraph 4:</strong> paragraph 3 (one-third split protection) was deleted by the 91st Amendment — a one-third split no longer protects defectors. Paragraph 4 (two-thirds merger protection) survives — if two-thirds of a party's legislators merge into another party, they are not disqualified.</div>
+
+  <h3>The live "merger loophole" — conjunctive vs. disjunctive reading</h3>
+  <p>Paragraph 4's protection, properly read, requires a two-step process: (1) the <em>original political party</em> (the organisational wing, outside the legislature) formally decides to merge with another party; and (2) at least two-thirds of that party's <em>legislature party</em> (the elected members, inside the House) accept the merger. A political-party-level merger happening outside the House does not, by itself, protect legislators inside the House — nor does an inside-the-House "merger" by MLAs/MPs automatically count unless the outside organisational party has also merged.</p>
+  <ul>
+    <li><strong>Conjunctive reading</strong> (both steps required together): the organisational party must formally merge, <em>and</em> two-thirds of the legislature party must accept that merger — this is the textually correct reading, reflected in the Supreme Court's approach in the <em>Subhash Desai</em> case (2023, Maharashtra political crisis) and referred for further examination to a larger bench.</li>
+    <li><strong>Disjunctive reading</strong> (the loophole): if two-thirds of a party's legislators simply vote together to join another party — without any actual merger of the organisational party outside the House — this is treated as a "deemed merger," shielding them from disqualification even though no real inter-party merger occurred. This is the interpretation several Speakers have in practice applied when deciding defection petitions.</li>
+  </ul>
+  <div class="exam-tip">Trap: paragraph 4 is not "any two-thirds split is protected" — on a correct (conjunctive) reading, the protection requires an actual merger of the original political party, not merely two-thirds of legislators acting together. The gap between this textual requirement and how Speakers have sometimes applied it in practice is the live reform debate.</div>
+  <p class="board-caption">The merger-loophole logic (reusable diagram for an ADL answer):</p>
+  <pre class="mermaid">
+flowchart TD
+    A["Para 4: two-thirds<br/>merger exception"] --> B{"Has the ORIGINAL<br/>political party (outside<br/>the House) also merged?"}
+    B -- "Yes, and 2/3 of<br/>legislature party accept" --> C["Conjunctive reading:<br/>genuine merger — no<br/>disqualification"]
+    B -- "No — only legislators<br/>inside the House act<br/>together" --> D["Disjunctive reading<br/>('deemed merger'):<br/>the live loophole"]
+  </pre>
+</section>
+
+<section id="part5">
+  <h2>5. Topic 2: Debates, data, judgments &amp; quotes</h2>
+
+  <h3>Core debates</h3>
+  <details class="collapse-section" open><summary>Stability vs. accountability / dissent</summary><div class="collapse-body">
+    The ADL's stated aim is government stability, but critics argue it achieves this by suppressing legitimate dissent — an MP or MLA cannot vote against the party whip on policy grounds without risking disqualification, even where independent judgment might better serve constituents.
+  </div></details>
+  <details class="collapse-section"><summary>Speaker as adjudicator vs. independent tribunal</summary><div class="collapse-body">
+    The Speaker — typically a member of the ruling party or coalition — is the decision-making authority on disqualification petitions, raising a structural conflict-of-interest concern; some reformers argue defection disputes should instead go to an independent tribunal or the Election Commission.
+  </div></details>
+  <details class="collapse-section"><summary>Anti-defection vs. anti-opportunism in practice</summary><div class="collapse-body">
+    The law's design assumes defections are principled splits; in practice, many episodes are framed as being driven by political opportunism (inducements, central/state government formation battles) rather than genuine ideological disagreement.
+  </div></details>
+  <details class="collapse-section"><summary>Party whip vs. individual free will</summary><div class="collapse-body">
+    Once a party issues a whip, a legislator has effectively no free will on that vote — raising a deeper tension between party discipline and individual representative judgment.
+  </div></details>
+
+  <h3>Data</h3>
+  <div class="data-box">
+    Between 1967 and 1972, India saw roughly 2,000 cases of defection among around 4,000 total state legislators nationwide — more than half of all legislators switched sides at least once in this period (cited in the lecture as drawn from work by a scholar referenced as "Vinesh Kumar"; verify exact name before citing). Per PRS Legislative Research data (as cited in the lecture), roughly 26 disqualification cases arose in Parliament between 1985 and 2009 — frequency sharply declining after the law's initial years, a pattern the lecture uses to argue the law "worked" initially but has been increasingly circumvented since.
+  </div>
+
+  <h3>Judgments</h3>
+  <details class="collapse-section" open><summary>Key cases (verify exact citations before use)</summary><div class="collapse-body">
+  <table>
+    <tr><th>Case</th><th>What it stands for</th></tr>
+    <tr><td>Likely Kihoto Hollohan v. Zachillhu (1992) — transcribed in the lecture as a "1994 case"; verify exact citation</td><td>Upheld the constitutional validity of the Tenth Schedule, while holding that the Speaker functions as a tribunal when deciding disqualification petitions, and that such decisions are subject to judicial review (on limited grounds such as mala fide action, perversity, or violation of natural justice) rather than being wholly immune from court scrutiny.</td></tr>
+    <tr><td>Likely Rajendra Singh Rana v. Swami Prasad Maurya (2007) — referenced in the lecture by a garbled name; verify exact citation</td><td>Held that the legislature party and the organisational political party are distinguishable concepts for Tenth Schedule purposes — directly relevant to the merger-loophole analysis above.</td></tr>
+    <tr><td>Subhash Desai v. State of Maharashtra (2023)</td><td>Arising from the Maharashtra political crisis; the Supreme Court examined (and referred to a larger bench) the correct reading of the paragraph 4 merger exception, and separately reinforced that a Speaker cannot treat a resignation as automatically voluntary/genuine without independent verification.</td></tr>
+    <tr><td>Speaker-timeline case (name transcribed as "Speaker Hana"/"Speaker H," c. 2020 — likely Keisham Meghachandra Singh v. Speaker, Manipur Legislative Assembly; verify before citing)</td><td>Supreme Court directed that Speakers should ordinarily decide disqualification petitions within a reasonable period (around three months), addressing the problem of Speakers indefinitely delaying decisions to shield defecting legislators.</td></tr>
+  </table>
+  </div></details>
+
+  <h3>Reform recommendations</h3>
+  <ul>
+    <li><strong>Law Commission, 170th Report:</strong> recommended narrowing disqualification to only voluntary resignation or defiance of a whip specifically on a confidence/no-confidence motion, rather than every whipped vote.</li>
+    <li><strong>National Commission to Review the Working of the Constitution (NCRWC), 2002:</strong> recommended that defectors be barred from holding public office (minister, etc.) for the remainder of the term for which they were elected.</li>
+    <li><strong>Himachal Pradesh Legislative Assembly (Allowances and Pension of Members) Amendment Act:</strong> cited in the lecture as a state-level reform penalising disqualified defectors by denying them pension benefits.</li>
+  </ul>
+
+  <h3>Quotes</h3>
+  <div class="quote-card">
+    <div class="q">The robes of the Speaker do change and elevate the man.</div>
+    <div class="attrib">— Attributed in the lecture to a former Lok Sabha Speaker (name transcribed as "G.V. Prasad Kumar" — verify before citing)</div>
+  </div>
+  <div class="quote-card">
+    <div class="q">Loyalty is not to the principles of a political party — loyalty is only to power. The biggest casualty in this process is democracy.</div>
+    <div class="attrib">— Attributed in the lecture to a former Chief Justice of India (name transcribed as "N.V. Ramana" — verify exact wording/attribution before citing)</div>
+  </div>
+  <div class="quote-card">
+    <div class="q">Defections in India are not spontaneous acts of individual greed, but a form of engineered "inventory management."</div>
+    <div class="attrib">— Attributed in the lecture to a scholar transcribed as "Professor Gillesbernis"/"Gilles Verniers" (name unclear — verify before citing; the phrase "inventory management" for defection-engineering is a distinctive framing worth independent verification)</div>
+  </div>
+  <div class="quote-card">
+    <div class="q">The anti-defection law has outlived its utility — either the existing loopholes should be plugged, or the Act should be scrapped altogether.</div>
+    <div class="attrib">— Attributed in the lecture to a former Lok Sabha Speaker (name transcribed as "Somnath Chatterjee" or similar — verify before citing)</div>
+  </div>
+
+  <h3>Comparative practice</h3>
+  <p>The lecture notes that the US, UK, Canada, and Australia impose no formal anti-defection restrictions on their legislators, while several Commonwealth and developing-world legislatures (Bangladesh, Kenya, South Africa are cited) maintain strict anti-defection regimes broadly similar to India's — suggesting India's approach sits closer to the stricter end of a global spectrum rather than being an outlier in isolation.</p>
+</section>
+
+<section id="part6">
+  <h2>6. Topic 2: Model answer structure (as taught)</h2>
+  <div class="quote-card">
+    <div class="q">"Elected representatives are increasingly treating their mandate as a transferable asset." In light of this statement, examine the efficacy of the Tenth Schedule in preventing defection.</div>
+    <div class="attrib">— Model question used for the live structuring exercise in class</div>
+  </div>
+  <ol class="answers">
+    <li><strong>Introduction:</strong> the 52nd Amendment's (1985) original purpose — curbing the pre-1985 defection epidemic (~2,000 cases of defection among ~4,000 legislators, 1967–72) — framed against today's "transferable asset" critique.</li>
+    <li><strong>Body — explain the statement:</strong> what treating a mandate as a "transferable asset" means (legislators switching allegiance post-election, outside voter control) and its effect — a representation deficit and weakened democratic accountability.</li>
+    <li><strong>Body — evaluate efficacy:</strong> initial success (defection frequency fell sharply per PRS data) vs. current erosion — the paragraph 3 vs. paragraph 4 history, the "resignation and re-contest" workaround, the merger-loophole's conjunctive/disjunctive reading problem, and the Speaker's structural conflict of interest as adjudicator.</li>
+    <li><strong>Body — judicial correctives:</strong> Kihoto Hollohan (Speaker's quasi-judicial role is reviewable), the Speaker-timeline case (decide "within a reasonable period"), and Subhash Desai (scrutiny of resignations and the merger clause).</li>
+    <li><strong>Conclusion:</strong> the law was a meaningful "step in the right direction" but requires reform (Law Commission 170th Report / NCRWC-style suggestions — narrower disqualification triggers, an independent adjudicator, post-defection office bars) rather than either status-quo complacency or outright repeal.</li>
+  </ol>
+  <div class="exam-tip">Reusable skeleton for any "X law/institution: evaluate its efficacy" question: original purpose → initial success (data) → current erosion (mechanism-level loopholes) → judicial correctives → balanced reform-oriented conclusion.</div>
+</section>
+
+<section id="part7">
+  <h2>7. Topic 3: Trade unions, labour codes &amp; the platform economy</h2>
+  <div class="exam-tip">Recommended format (repeated instructor guidance): introduction → context/news → key terms → constitutional/legal framework → data → old-vs-new regime comparison → debates → suggestions → conclusion.</div>
+
+  <h3>Model introduction</h3>
+  <div class="quote-card">
+    <div class="q">Trade unions do not merely play the role of protecting workers' rights — they serve as institutional safety valves that channel worker grievances through democratic dialogue, preventing systemic explosions.</div>
+    <div class="attrib">— Instructor's model introduction for this topic, paraphrased</div>
+  </div>
+
+  <h3>Context pegs (current affairs hooks)</h3>
+  <ul>
+    <li>The Union government's operationalisation of the <strong>four new Labour Codes</strong> triggered opposition protest, with major trade unions observing a "black day."</li>
+    <li>A nationwide strike by gig/platform workers was held against prevailing platform economic models, alongside large-scale worker protests in several industrial belts.</li>
+    <li>Instructor's exam-strategy note: this year's GS paper is likely to carry a question on "formal and informal associations" — such a question could be answered either through the classical trade-union lens (this section) or through the gig-worker/informal-association lens, depending on the exact wording.</li>
+  </ul>
+
+  <h3>Key terms</h3>
+  <div class="term-box"><strong>Trade union:</strong> a collective association formed by workers to protect their rights, ensure a fair <em>living</em> wage (not merely a minimum wage), and improve workplace conditions through collective bargaining — acting as a mechanism to balance the inherent power inequality between capital and labour.</div>
+  <div class="term-box"><strong>Platform economy:</strong> an arrangement where tasks or services are mediated through a digital platform connecting service providers to consumers, typically via short-term or freelance contracts, and governed not by a human manager but by an <strong>algorithmic ("organic"/automated) management</strong> system — removing the traditional three-party structure of employer–employee–union (and the state) in favour of a platform–worker relationship with no human "in the loop."</div>
+
+  <h3>Constitutional and legal framework</h3>
+  <ul>
+    <li><strong>Article 19(1)(c):</strong> fundamental right to form associations or unions.</li>
+    <li><strong>Article 43 (DPSP):</strong> directs the State to secure a living wage for workers.</li>
+    <li><strong>Articles 21 and 23:</strong> right to life with dignity, and prohibition of forced labour, respectively.</li>
+    <li><strong>Labour</strong> sits in the Concurrent List, meaning both Parliament and state legislatures could earlier legislate on it (producing significant inter-state variation) — now substantially unified/codified under the four Labour Codes: the <strong>Code on Wages</strong>, the <strong>Industrial Relations Code</strong>, the <strong>Code on Social Security</strong>, and the <strong>Occupational Safety, Health and Working Conditions Code</strong>.</li>
+    <li><strong>Comparative note:</strong> Canada is cited as having passed a dedicated platform/gig-workers protection act.</li>
+  </ul>
+
+  <h3>Key data (cite exact figures in the answer)</h3>
+  <div class="data-box">
+    India's overall unionisation rate (public and private combined) is only about 6.3%. The informal workforce exceeds 80% of total employment. Per Centre for Policy Research (CPR)-type data cited in the lecture, the contract-worker share of the formal workforce rose from roughly 22% (2001) to roughly 40% (2021/22) — nearly doubling over two decades that coincided with more liberal economic/labour-market policies.
+  </div>
+  <div class="data-box">
+    Per NITI Aayog, India's gig workforce is estimated at around 12 million, projected to reach around 23 million. Average gig earnings are cited at roughly ₹75/hour. The e-Shram portal has over 30 crore registered unorganised-sector workers. Per a cited NSSO-type survey (2023), roughly 70% of food-delivery gig workers work near their hometowns and 32% were unemployed before joining a platform. Per the Fairwork India Report (2024), none of the 11 major platforms surveyed formally recognised an elected worker body (i.e., no platform recognised a functioning trade union). Per the State of Working India report, graduate unemployment is nearing 40%, against only about 1.7 million new salaried jobs created annually against roughly 5 million new graduates each year — risking a shift from "demographic dividend" to "demographic disappointment."
+  </div>
+
+  <h3>Old regime vs. new Labour Codes — key changes</h3>
+  <table>
+    <tr><th>Dimension</th><th>Old regime</th><th>New regime (post-Codes)</th></tr>
+    <tr><td>Union recognition</td><td>No quantitative membership threshold required to represent employees</td><td>Introduces a "negotiating union" needing 51% membership to negotiate alone; if no union crosses 51%, a multi-union "negotiating council" represents workers instead</td></tr>
+    <tr><td>Right to strike (notice)</td><td>14 days' notice required, and only for public-utility services</td><td>60 days' notice required, extended to all industries; mass casual leave can be treated as an illegal strike</td></tr>
+    <tr><td>Retrenchment (prior government permission threshold)</td><td>Applied to establishments with 100+ workers</td><td>Threshold raised to 300+ workers — increasing "hire and fire" flexibility for a much larger set of employers</td></tr>
+    <tr><td>Contractual/fixed-term work</td><td>More tightly restricted</td><td>Fixed-term employment is now broadly and explicitly recognised in law</td></tr>
+  </table>
+  <div class="exam-tip">Use this four-row comparison table directly in any Labour Codes answer — it compresses the single highest-value factual content for this topic into an easily memorable, examiner-friendly format.</div>
+</section>
+
+<section id="part8">
+  <h2>8. Topic 3: Debates, examples &amp; the way forward</h2>
+
+  <h3>Core debates (framed as X vs. Y pairs)</h3>
+  <details class="collapse-section" open><summary>Ease of doing business vs. ease of laboring</summary><div class="collapse-body">
+    Rationalisation/simplification of labour law, marketed as improving the ease of doing business, is argued by critics to simultaneously favour capital at the expense of labour rights and protections ("ease of laboring").
+  </div></details>
+  <details class="collapse-section"><summary>Union as "safety valve" vs. union as "obstacle"/"labour aristocracy"</summary><div class="collapse-body">
+    Trade unions argue they channel grievances into democratic negotiation rather than unrest; capital/entrepreneurial critics frame unions as anti-growth barriers, or as a "labour aristocracy" protecting only a small, already-privileged segment of formal-sector workers.
+  </div></details>
+  <details class="collapse-section"><summary>Algorithmic management/surveillance vs. collective bargaining</summary><div class="collapse-body">
+    Platform work increasingly substitutes algorithmic management and digital surveillance for human-negotiated, union-mediated terms of work.
+  </div></details>
+  <details class="collapse-section"><summary>"Employment" vs. "partnership"/"entrepreneurship"</summary><div class="collapse-body">
+    Gig workers typically seek recognition as employees (with attendant protections); platforms instead classify them as independent contractors or "partners" to avoid employer obligations.
+  </div></details>
+  <details class="collapse-section"><summary>Flexibility vs. forced participation</summary><div class="collapse-body">
+    Gig work is marketed as offering flexible, voluntary work arrangements, but workers often have no genuinely comparable alternative employment, making the "flexibility" effectively compelled.
+  </div></details>
+  <details class="collapse-section"><summary>Convenience (for consumers) vs. concerns (for workers)</summary><div class="collapse-body">
+    Fast, convenient delivery/ride services for consumers are built on workers bearing significant personal physical risk (e.g., time-pressured road travel).
+  </div></details>
+  <details class="collapse-section"><summary>Regulation vs. deregulation</summary><div class="collapse-body">
+    Industry voices argue platforms create large volumes of jobs and should face lighter regulation; unions counter that regulatory silence has enabled worker exploitation to continue unchecked.
+  </div></details>
+  <details class="collapse-section"><summary>Upward mobility vs. stagnation</summary><div class="collapse-body">
+    Platforms claim to offer upward mobility; most gig workers instead face stagnation due to a lack of skilling opportunities — though a smaller cohort of high-skill freelance/"gig" professionals (cited example: Berlin) genuinely experience high earnings and mobility, making this a bifurcated rather than uniform outcome.
+  </div></details>
+
+  <h3>Structural problems</h3>
+  <ul>
+    <li><strong>Dual-class system of contractualisation:</strong> permanent and contract employees performing identical tasks are paid differently and receive unequal social-security benefits — producing what some scholars term a "disposable, non-unionisable majority" of workers.</li>
+    <li><strong>Wage/"supply surplus" concealment (algorithmic wage discrimination):</strong> platforms use behavioural data (e.g., a driver's known willingness to accept certain fares) to pay the minimum amount a given worker is likely to still accept, rather than a transparent, uniform rate.</li>
+    <li><strong>"AI-washing":</strong> companies attribute layoffs or adverse restructuring to "AI" or automation, when the underlying driver may be ordinary cost-cutting or work-exploitation — tracking a broader "safety valve" concern outlined above.</li>
+    <li><strong>Institutional neglect:</strong> the tripartite <em>Indian Labour Conference</em> — the main forum for negotiating labour standards — reportedly has not been convened for roughly the last 12 years; scheme workers (e.g., Anganwadi and ASHA workers) remain classified as "honorary" rather than as workers with full labour-law protection.</li>
+    <li><strong>Psychosocial and physical vulnerability:</strong> gig workers face both economic insecurity and physical risk, without the relational/organisational support structures traditional workplaces (however imperfectly) provide.</li>
+  </ul>
+
+  <h3>Quotes</h3>
+  <div class="quote-card">
+    <div class="q">These labour codes prioritise ease of doing business over ease of laboring.</div>
+    <div class="attrib">— Attributed in the lecture to a labour-rights/social activist (name transcribed unclearly — verify before citing)</div>
+  </div>
+  <div class="quote-card">
+    <div class="q">Government silence has enabled platform companies to continue exploitation unchecked.</div>
+    <div class="attrib">— Attributed in the lecture to a workers' union body referenced as "TGPWU" (Telangana Gig and Platform Workers Union, or similarly named organisation — verify exact name before citing)</div>
+  </div>
+
+  <h3>Positive examples (models worth citing)</h3>
+  <ul>
+    <li>A Kerala-based, worker-owned cooperative (name unclear in the transcript — possibly a reference to a Kerala auto/taxi cooperative venture; verify exact name before citing) is cited as running a zero-commission, app-based taxi service with a turnover of roughly ₹1,400 crore — offered as a working cooperative-ownership alternative to the extractive platform model.</li>
+    <li><strong>Denmark's 3F union</strong> successfully negotiated algorithmic transparency commitments with platform employers.</li>
+    <li><strong>Germany's IG Metall union</strong> has engaged in training workers on AI implementation in the workplace, rather than resisting automation outright.</li>
+  </ul>
+
+  <h3>Suggestions / way forward</h3>
+  <ul>
+    <li>Ratification and domestic alignment with relevant <strong>ILO</strong> conventions/standards on platform and gig work.</li>
+    <li>"Human-in-the-loop" requirements for consequential algorithmic management decisions (pay-setting, deactivation/termination).</li>
+    <li>A <strong>universal minimum/living wage floor</strong> extending to gig and contract workers, not only formal-sector employees.</li>
+    <li>Regular convening of tripartite bodies like the Indian Labour Conference, and extension of full worker status (rather than "honorary" status) to scheme workers such as Anganwadi/ASHA workers.</li>
+  </ul>
+</section>
+
+<section id="part9">
+  <h2>9. Topic 3: Model answer structure (as taught)</h2>
+  <div class="quote-card">
+    <div class="q">Trade unions are not just mechanisms for wage bargaining — they act as a critical safety valve in a democracy. In light of this statement, analyse the recent wave of unorganised-worker protests in India.</div>
+    <div class="attrib">— Model question used for the live structuring exercise in class</div>
+  </div>
+  <ol class="answers">
+    <li><strong>Introduction:</strong> the "institutional safety valve" framing — unions channel grievances into democratic dialogue rather than unrest — set against the recent Labour Codes "black day" protests and gig-worker strikes.</li>
+    <li><strong>Body — explain the statement:</strong> what "safety valve" means functionally (social-trust building, democratic-dialogue channelling, algorithmic accountability for new-economy workers) beyond pure wage bargaining.</li>
+    <li><strong>Body — why unorganised/gig workers are protesting now:</strong> near-zero unionisation among platform workers (Fairwork India Report: 0 of 11 platforms recognise an elected worker body), the old-vs-new Labour Code shifts (300-worker retrenchment threshold, 60-day strike notice), algorithmic wage concealment, and the dual-class contractualisation problem.</li>
+    <li><strong>Body — balance the debate:</strong> ease-of-doing-business vs. ease-of-laboring; regulation vs. deregulation; flexibility-marketing vs. effectively-forced participation.</li>
+    <li><strong>Conclusion:</strong> positive models (Kerala's cooperative platform, Denmark's 3F, Germany's IG Metall) point toward a reform path combining human-in-the-loop safeguards, ILO-aligned minimum standards, and revived tripartite institutions — rather than either unregulated platform growth or blanket resistance to the new economy.</li>
+  </ol>
+  <div class="exam-tip">Reusable skeleton for "institution X is a safety valve — analyse a recent wave of protest" questions: restate the functional claim → link it to the specific current-affairs trigger → balance the debate with named X-vs-Y pairs → conclude with named comparative models/suggestions.</div>
+</section>
+
+<section id="mcqs">
+  <h2>10. Practice MCQs (self-authored, Prelims-style)</h2>
+  <p style="font-family: Arial, sans-serif; font-size: 0.85em; color: #57606a;">These MCQs are original questions written from the facts covered in this class — not reproduced from any source — to drill the Prelims-relevant numbers, articles, and case names above.</p>
+
+  <div class="mcq-card">
+    <div class="q-num">Q1</div>
+    <div class="q-text">The freeze on the total number of Lok Sabha seats and their inter-state allocation, originally based on the 1971 census, was extended to 2026 by which constitutional amendment?</div>
+    <div class="options">
+      <div class="option">(A) 42nd Amendment Act, 1976</div>
+      <div class="option correct">(B) 84th Amendment Act, 2001</div>
+      <div class="option">(C) 87th Amendment Act, 2003</div>
+      <div class="option">(D) 91st Amendment Act, 2003</div>
+    </div>
+    <div class="answer-box"><span class="answer-label">Answer: (B).</span> The 42nd Amendment (1976) first froze seats at 1971-census levels; the 84th Amendment (2001) extended that freeze to 2026; the 87th Amendment (2003) allowed redrawing of boundaries using 2001 census data without changing seat numbers.</div>
+  </div>
+
+  <div class="mcq-card">
+    <div class="q-num">Q2</div>
+    <div class="q-text">Which article of the Constitution bars courts from questioning the validity of any law relating to the delimitation of constituencies?</div>
+    <div class="options">
+      <div class="option">(A) Article 81</div>
+      <div class="option">(B) Article 82</div>
+      <div class="option correct">(C) Article 329(a)</div>
+      <div class="option">(D) Article 170</div>
+    </div>
+    <div class="answer-box"><span class="answer-label">Answer: (C).</span> Article 329(a) bars judicial questioning of delimitation laws. Article 81 caps Lok Sabha strength; Article 82 mandates readjustment after each census; Article 170 is the analogous provision for state assemblies.</div>
+  </div>
+
+  <div class="mcq-card">
+    <div class="q-num">Q3</div>
+    <div class="q-text">In the Meghraj Kothari v. Delimitation Commission case, the Supreme Court held that:</div>
+    <div class="options">
+      <div class="option">(A) Delimitation orders can be challenged in High Courts but not in the Supreme Court</div>
+      <div class="option correct">(B) Delimitation orders have the force of law and cannot be questioned in any court</div>
+      <div class="option">(C) The Delimitation Commission must be reconstituted after every general election</div>
+      <div class="option">(D) Women's reservation must apply from the first delimitation after 1971</div>
+    </div>
+    <div class="answer-box"><span class="answer-label">Answer: (B).</span> The 1967 ruling held delimitation orders carry the force of law and are immune from challenge, consistent with the Article 329(a) bar.</div>
+  </div>
+
+  <div class="mcq-card">
+    <div class="q-num">Q4</div>
+    <div class="q-text">Which paragraph of the Tenth Schedule — removed by the 91st Constitution Amendment Act, 2003 — had earlier protected a one-third "split" of a legislature party from disqualification?</div>
+    <div class="options">
+      <div class="option">(A) Paragraph 2</div>
+      <div class="option correct">(B) Paragraph 3</div>
+      <div class="option">(C) Paragraph 4</div>
+      <div class="option">(D) Paragraph 5</div>
+    </div>
+    <div class="answer-box"><span class="answer-label">Answer: (B).</span> Paragraph 3 (one-third split protection) was omitted by the 91st Amendment, 2003. Paragraph 4 (two-thirds merger protection) was retained.</div>
+  </div>
+
+  <div class="mcq-card">
+    <div class="q-num">Q5</div>
+    <div class="q-text">Under a correct (conjunctive) reading of paragraph 4 of the Tenth Schedule, protection from disqualification on a "merger" requires:</div>
+    <div class="options">
+      <div class="option">(A) Only that two-thirds of the legislature party agree to act together</div>
+      <div class="option">(B) Only that the original political party announces a merger, regardless of legislators' consent</div>
+      <div class="option correct">(C) Both a merger of the original political party and acceptance of that merger by two-thirds of the legislature party</div>
+      <div class="option">(D) Approval of the merger by the Election Commission alone</div>
+    </div>
+    <div class="answer-box"><span class="answer-label">Answer: (C).</span> The conjunctive reading (applied in the Subhash Desai case) requires both the organisational party's merger and two-thirds legislature-party acceptance; a "deemed merger" based only on legislators acting together (without an actual party merger) reflects the looser, disjunctive reading that critics call a loophole.</div>
+  </div>
+
+  <div class="mcq-card">
+    <div class="q-num">Q6</div>
+    <div class="q-text">The Tenth Schedule to the Constitution was inserted by which amendment?</div>
+    <div class="options">
+      <div class="option">(A) 44th Amendment Act, 1978</div>
+      <div class="option correct">(B) 52nd Amendment Act, 1985</div>
+      <div class="option">(C) 61st Amendment Act, 1989</div>
+      <div class="option">(D) 91st Amendment Act, 2003</div>
+    </div>
+    <div class="answer-box"><span class="answer-label">Answer: (B).</span> The 52nd Amendment Act, 1985 inserted the Tenth Schedule (the Anti-Defection Law).</div>
+  </div>
+
+  <div class="mcq-card">
+    <div class="q-num">Q7</div>
+    <div class="q-text">Under India's new Industrial Relations Code, a "negotiating union" that wishes to negotiate with an employer on its own (without a negotiating council) must have the support of what minimum share of workers?</div>
+    <div class="options">
+      <div class="option">(A) 33%</div>
+      <div class="option">(B) 40%</div>
+      <div class="option correct">(C) 51%</div>
+      <div class="option">(D) 66%</div>
+    </div>
+    <div class="answer-box"><span class="answer-label">Answer: (C).</span> A union needs 51% membership among workers to be recognised as the sole negotiating union; otherwise, a multi-union negotiating council represents workers.</div>
+  </div>
+
+  <div class="mcq-card">
+    <div class="q-num">Q8</div>
+    <div class="q-text">Under the old industrial-relations regime, prior government permission for retrenchment was required for establishments employing at least how many workers — a threshold since raised to 300 under the new Industrial Relations Code?</div>
+    <div class="options">
+      <div class="option">(A) 50</div>
+      <div class="option correct">(B) 100</div>
+      <div class="option">(C) 200</div>
+      <div class="option">(D) 250</div>
+    </div>
+    <div class="answer-box"><span class="answer-label">Answer: (B).</span> The earlier Industrial Disputes Act threshold was 100 workers; the new Industrial Relations Code raises it to 300, widening the set of employers who can retrench without prior government permission.</div>
+  </div>
+
+  <div class="mcq-card">
+    <div class="q-num">Q9</div>
+    <div class="q-text">Which Directive Principle of State Policy directs the State to secure a "living wage" for workers?</div>
+    <div class="options">
+      <div class="option">(A) Article 39</div>
+      <div class="option correct">(B) Article 43</div>
+      <div class="option">(C) Article 45</div>
+      <div class="option">(D) Article 48</div>
+    </div>
+    <div class="answer-box"><span class="answer-label">Answer: (B).</span> Article 43 (DPSP) directs the State toward securing a living wage and decent conditions of work.</div>
+  </div>
+
+  <div class="mcq-card">
+    <div class="q-num">Q10</div>
+    <div class="q-text">As per the European Parliament's seat-allocation approach cited as a comparative model in this class, "degressive proportionality" means:</div>
+    <div class="options">
+      <div class="option">(A) Every member state gets exactly the same number of seats regardless of population</div>
+      <div class="option correct">(B) Smaller states get proportionally more seats than strict population-based allocation would give them, to prevent domination by larger states</div>
+      <div class="option">(C) Seats are allocated purely in proportion to each state's population, with no adjustment</div>
+      <div class="option">(D) Larger states receive a fixed bonus of seats irrespective of population</div>
+    </div>
+    <div class="answer-box"><span class="answer-label">Answer: (B).</span> Degressive proportionality deliberately over-represents smaller states relative to pure population share, as a federal-balance correction — contrasted in the lecture with a pure population-only split.</div>
+  </div>
+</section>
+
+<section id="glossary">
+  <h2>Glossary — quick revision (all terms, one screen)</h2>
+  <dl>
+    <div class="glossary-term"><dt>Delimitation</dt><dd>The act of drawing political boundaries — fixing total seats, allocating seats to states, and drawing constituency boundaries.</dd></div>
+    <div class="glossary-term"><dt>The freeze (1971 census)</dt><dd>42nd (1976)/84th (2001)/87th (2003) Amendments froze Lok Sabha seat numbers/allocation at 1971-census levels, extended to 2026.</dd></div>
+    <div class="glossary-term"><dt>Under-representation</dt><dd>Scale problem: constituencies have grown far beyond the original per-MP population benchmark, degrading "knowing, serving, answering."</dd></div>
+    <div class="glossary-term"><dt>Malapportionment</dt><dd>Equality problem: a state's seat share diverges from its population share, concentrated in the most populous states.</dd></div>
+    <div class="glossary-term"><dt>Knowing–Serving–Answering</dt><dd>Framework linking representative scale to accountability: can an MP know constituents' problems, serve them, and be held answerable?</dd></div>
+    <div class="glossary-term"><dt>Connecticut (Great) Compromise</dt><dd>US 1787 solution: population-based House, equal-per-state Senate — balancing large- and small-state interests.</dd></div>
+    <div class="glossary-term"><dt>Degressive proportionality</dt><dd>EU Parliament principle: smaller states get more-than-population-share seats to prevent large-state domination.</dd></div>
+    <div class="glossary-term"><dt>Tenth Schedule / Anti-Defection Law (ADL)</dt><dd>Inserted by the 52nd Amendment (1985); disqualifies legislators for defection, aiming at stability and accountability.</dd></div>
+    <div class="glossary-term"><dt>Paragraph 3 (repealed)</dt><dd>Former one-third split protection; omitted by the 91st Amendment, 2003.</dd></div>
+    <div class="glossary-term"><dt>Paragraph 4 (merger exception)</dt><dd>Two-thirds merger protection, still in force — subject of the conjunctive-vs-disjunctive reading debate.</dd></div>
+    <div class="glossary-term"><dt>Conjunctive vs. disjunctive reading (para 4)</dt><dd>Conjunctive: requires both an actual party merger and 2/3 legislator acceptance. Disjunctive: treats 2/3 legislators acting together alone as a "deemed merger" (the loophole).</dd></div>
+    <div class="glossary-term"><dt>Negotiating union / negotiating council</dt><dd>New Industrial Relations Code concepts: a union with 51% membership negotiates alone; otherwise a multi-union council negotiates.</dd></div>
+    <div class="glossary-term"><dt>Algorithmic/"organic" management</dt><dd>Platform work governed by automated systems rather than a human manager — no "human in the loop."</dd></div>
+    <div class="glossary-term"><dt>Dual-class contractualisation</dt><dd>Permanent and contract workers doing identical work receive unequal pay/benefits — producing a "disposable, non-unionisable majority."</dd></div>
+    <div class="glossary-term"><dt>Wage/supply-surplus concealment</dt><dd>Platforms pay workers the minimum they are likely to still accept, based on behavioural data, rather than a transparent rate.</dd></div>
+    <div class="glossary-term"><dt>AI-washing</dt><dd>Attributing layoffs/restructuring to "AI" to obscure ordinary cost-cutting or labour exploitation.</dd></div>
+    <div class="glossary-term"><dt>Ease of doing business vs. ease of laboring</dt><dd>Core labour-code tension: simplification for employers may come at the cost of worker protections.</dd></div>
+  </dl>
+</section>
+
+<section id="arcs">
+  <h2>Revision kit (ARCS method)</h2>
+  <p style="font-family: Arial, sans-serif; font-size: 0.88em; color: #57606a;">A—Active Recall, R—Repeat with Spacing, C—Contrast &amp; Chunk, S—Stick with Encoding Tricks. Close the notes above and test yourself before checking answers.</p>
+
+  <div class="arcs-box">
+    <h4>A — Active Recall: self-test (no peeking until you answer)</h4>
+    <div class="recall-q">
+      <p class="q-text">1. What three distinct steps does "delimitation" legally involve?</p>
+      <details><summary></summary><div class="ans">Fixing the total number of seats; calculating how many seats each state gets; drawing the boundaries of each constituency.</div></details>
+    </div>
+    <div class="recall-q">
+      <p class="q-text">2. What is the difference between under-representation and malapportionment?</p>
+      <details><summary></summary><div class="ans">Under-representation: a scale problem affecting nearly all constituencies (MPs represent far more people than originally intended). Malapportionment: an equality problem where a state's seat share doesn't match its population share, concentrated in the most populous states.</div></details>
+    </div>
+    <div class="recall-q">
+      <p class="q-text">3. What changed between paragraph 3 and paragraph 4 of the Tenth Schedule after the 91st Amendment?</p>
+      <details><summary></summary><div class="ans">Paragraph 3 (one-third split protection) was omitted entirely. Paragraph 4 (two-thirds merger protection) was retained — and remains the subject of the conjunctive-vs-disjunctive "merger loophole" debate.</div></details>
+    </div>
+    <div class="recall-q">
+      <p class="q-text">4. What does India's Fairwork India Report (2024) find about platform worker representation?</p>
+      <details><summary></summary><div class="ans">None of the 11 major platforms surveyed formally recognised an elected worker body — i.e., effectively zero union recognition across major gig platforms.</div></details>
+    </div>
+    <div class="recall-q">
+      <p class="q-text">5. How did the retrenchment permission threshold change under the new Industrial Relations Code?</p>
+      <details><summary></summary><div class="ans">Raised from 100 workers (old Industrial Disputes Act) to 300 workers — meaning far more employers can now retrench without needing prior government permission.</div></details>
+    </div>
+  </div>
+
+  <div class="arcs-box spacing-tracker">
+    <h4>R — Repeat with Spacing: review checklist</h4>
+    <p>Lecture processed: Oct 8, 2026. Forgetting is exponential — review at these intervals, not all at once.</p>
+    <table>
+      <tr><th>Review</th><th>Target date</th><th>Done</th></tr>
+      <tr><td>Day 1 (same day, quick skim)</td><td>Oct 8</td><td><input type="checkbox"></td></tr>
+      <tr><td>Day 3</td><td>Oct 11</td><td><input type="checkbox"></td></tr>
+      <tr><td>Day 7</td><td>Oct 15</td><td><input type="checkbox"></td></tr>
+      <tr><td>Day 21</td><td>Oct 29</td><td><input type="checkbox"></td></tr>
+    </table>
+    <p style="font-size:0.85em; color:#57606a;">Each review: close this file, answer the 5 recall questions above from memory first, then reopen to check.</p>
+  </div>
+
+  <div class="arcs-box">
+    <h4>C — Contrast &amp; Chunk: easily confused pairs</h4>
+    <table>
+      <tr><th>Term A</th><th>Term B</th><th>The ONE distinguishing point</th></tr>
+      <tr><td>Under-representation</td><td>Malapportionment</td><td>Under-representation = scale problem (all constituencies); malapportionment = equality problem (seat share vs. population share, mainly populous states)</td></tr>
+      <tr><td>Paragraph 3 (Tenth Schedule)</td><td>Paragraph 4 (Tenth Schedule)</td><td>Para 3 (one-third split) was repealed by the 91st Amendment; Para 4 (two-thirds merger) still stands</td></tr>
+      <tr><td>Conjunctive reading (para 4)</td><td>Disjunctive reading (para 4)</td><td>Conjunctive needs an actual party merger + 2/3 acceptance; disjunctive treats 2/3 legislators acting together alone as enough (the loophole)</td></tr>
+      <tr><td>Negotiating union</td><td>Negotiating council</td><td>Union needs 51% membership to negotiate alone; council represents workers when no single union crosses that threshold</td></tr>
+    </table>
+    <p style="font-family: Arial, sans-serif; font-size: 0.88em;"><strong>Chunk:</strong> group each topic into the same five-part shape for recall — (1) what changed/context, (2) legal framework, (3) data, (4) debates, (5) judgments/models/suggestions.</p>
+  </div>
+
+  <div class="arcs-box mnemonic-box">
+    <h4>S — Stick with Encoding Tricks</h4>
+    <p><strong>Dual coding:</strong> re-look at the three flowcharts (delimitation freeze timeline; merger-loophole logic) every time you review, instead of re-reading the paragraph versions.</p>
+    <p><strong>Image for the merger loophole:</strong> picture two separate doors — one labelled "Party" (outside) and one labelled "Legislators" (inside the House). The law requires BOTH doors to open together for safe passage (conjunctive); the loophole is legislators sneaking through their door alone while the Party door stays shut (disjunctive).</p>
+  </div>
+</section>
+
+<section id="gaps">
+  <h2>Supplementary research — filling gaps</h2>
+
+  <div class="gap-box">
+    <h4>Kihoto Hollohan v. Zachillhu (1992) — verified citation</h4>
+    <p>This is the landmark Supreme Court Constitution Bench ruling upholding the constitutional validity of the Tenth Schedule, while reading down the finality clause (paragraph 6) to hold that a Speaker's decision on disqualification is a quasi-judicial tribunal function, subject to judicial review on limited grounds (mala fides, perversity, violation of constitutional mandates, or breach of natural justice) rather than being fully immune from court scrutiny. The lecture's reference to a "1994 case" with this holding is very likely this 1992 judgment transcribed inaccurately — verify before citing in an exam answer.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>The 91st Amendment Act, 2003 — precise changes</h4>
+    <p>Independent verification confirms the 91st Amendment inserted Article 361B (disqualified members barred from holding remunerative political office until re-election or the end of the original term) and omitted paragraph 3 of the Tenth Schedule (the one-third split exemption), while leaving paragraph 4 (two-thirds merger exemption) intact. It also capped the size of Councils of Ministers at 15% of a legislature's total membership, partly to reduce the incentive to defect in exchange for a ministerial berth.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>Subhash Desai v. State of Maharashtra (2023) — context</h4>
+    <p>Arising from the 2022 Shiv Sena/Maharashtra political split, the Supreme Court held the Governor's decision to call for a floor test was not justified on the facts, and that the Speaker had erred in recognising a faction's whip without adequately verifying the "true" political party — while leaving the deeper question of the correct interpretation of the Tenth Schedule's merger provisions (paragraph 4) for examination by a larger bench, a reference that remains significant for the conjunctive-vs-disjunctive debate discussed in this class.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>EAC-PM working paper on delimitation — verify exact figures before citing</h4>
+    <p>The Economic Advisory Council to the PM has published working-paper analysis proposing delimitation models that weight multiple factors beyond raw population to protect southern/smaller states' relative political weight. The specific seat totals, split counts, and percentage-share projections cited in the lecture (around 824 seats, ~170 constituencies split, ~23.6–23.7% combined Telangana–Tamil Nadu share) should be cross-checked against the EAC-PM's actual published numbers before being used verbatim in a Mains answer, since coaching-class transcription of such figures can drift from the primary source.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>The four Labour Codes — names and implementation status</h4>
+    <p>The four codes are: the Code on Wages, 2019; the Industrial Relations Code, 2020; the Code on Social Security, 2020; and the Occupational Safety, Health and Working Conditions Code, 2020. They consolidate 29 earlier central labour laws. Implementation was staggered across states and the centre over several years after passage; confirm the precise effective-date status closer to the exam, since the "operationalisation" current-affairs peg referenced in this lecture is a live, evolving fact.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>Fairwork India Report — verified source</h4>
+    <p>The Fairwork project (an international research network, with the Indian chapter associated with the Centre for IT and Public Policy, IIIT-Bangalore, and partner institutions) annually scores major gig/platform employers in India against fair-work principles including fair pay, fair conditions, fair contracts, fair management, and fair representation — the "fair representation" score is typically where most platforms score zero or near-zero, consistent with the lecture's claim that none of the major platforms surveyed recognised an elected worker body.</p>
+  </div>
+
+  <div class="gap-box">
+    <h4>What the lecture doesn't cover, but pairs well for GS-2/GS-3 prep</h4>
+    <ul>
+      <li>The Women's Reservation Act's (106th Amendment, 2023) precise census/delimitation sequencing condition, for a fuller answer linking Topic 1 (delimitation) to gender representation.</li>
+      <li>NCRWC's full 2002 report recommendations on the Tenth Schedule beyond the single point cited in this lecture, for a deeper ADL reform answer.</li>
+      <li>The Code on Social Security's specific gig/platform-worker welfare board provisions (aggregator cess, welfare fund), as a direct legal mechanism answer to the "how should gig workers be protected" question.</li>
+      <li>Cross-reference the latest PLFS (Periodic Labour Force Survey) data for the most current, officially sourced unionisation and informal-employment figures, rather than relying solely on the lecture's cited estimates.</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  Notes compiled from an unlisted lecture recording ("class 5 CAVA26") using YouTube's auto-generated transcript. Timestamps are approximate; several proper nouns (scholar names, case citations, organisation names) were transcribed imperfectly by auto-captions and are flagged inline for verification against the original lecture or official sources before citing in an exam answer. Supplementary research sections are separately verified via general knowledge and marked accordingly — cross-check live figures (EAC-PM paper, labour-code implementation status) closer to the exam. Practice MCQs are original questions authored from the lecture's underlying facts, not reproduced from any source. Click Save (first time will ask you to pick this file) to write your edits directly to disk — no chat needed.
+</footer>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11.15.0/dist/mermaid.min.js" integrity="sha384-yQ4mmBBT+vhTAwjFH0toJXNYJ6O4usWnt6EPIdWwrRvx2V/n5lXuDZQwQFeSFydF" crossorigin="anonymous"></script>
+<script>
+(function() {
+  var mode = null;
+  var noteCounter = 0;
+
+  var btnHighlight = document.getElementById('btn-highlight');
+  var btnUnderline = document.getElementById('btn-underline');
+  var btnNote = document.getElementById('btn-note');
+  var btnClear = document.getElementById('btn-clear');
+  var btnSave = document.getElementById('btn-save');
+  var statusText = document.getElementById('status-text');
+  var contentRoot = document.getElementById('content-root');
+  var noteBox = document.getElementById('note-input-box');
+  var noteText = document.getElementById('note-text');
+  var pendingNoteTarget = null;
+
+  function setMode(newMode) {
+    mode = mode === newMode ? null : newMode;
+    btnHighlight.classList.toggle('active', mode === 'highlight');
+    btnUnderline.classList.toggle('active', mode === 'underline');
+    btnNote.classList.toggle('active', mode === 'note');
+  }
+
+  btnHighlight.addEventListener('click', function() { setMode('highlight'); });
+  btnUnderline.addEventListener('click', function() { setMode('underline'); });
+  btnNote.addEventListener('click', function() { setMode('note'); });
+
+  function markDirty() {
+    statusText.textContent = 'Unsaved changes';
+    statusText.style.color = '#993c1d';
+  }
+
+  document.addEventListener('mouseup', function(e) {
+    if (mode !== 'highlight' && mode !== 'underline') return;
+    var sel = window.getSelection();
+    if (!sel || sel.isCollapsed || sel.rangeCount === 0) return;
+    var range = sel.getRangeAt(0);
+    if (!contentRoot.contains(range.commonAncestorContainer)) return;
+
+    var wrapper = document.createElement(mode === 'highlight' ? 'mark' : 'u');
+    wrapper.className = mode === 'highlight' ? 'user-highlight' : 'user-underline';
+    try {
+      range.surroundContents(wrapper);
+    } catch (err) {
+      var frag = range.extractContents();
+      wrapper.appendChild(frag);
+      range.insertNode(wrapper);
+    }
+    sel.removeAllRanges();
+    markDirty();
+  });
+
+  contentRoot.addEventListener('click', function(e) {
+    if (mode !== 'note') return;
+    if (e.target.closest('.user-note')) return;
+    pendingNoteTarget = e.target;
+    noteBox.style.display = 'block';
+    var x = Math.min(e.clientX, window.innerWidth - 280);
+    var y = Math.min(e.clientY, window.innerHeight - 140);
+    noteBox.style.left = x + 'px';
+    noteBox.style.top = y + 'px';
+    noteText.value = '';
+    noteText.focus();
+  });
+
+  document.getElementById('note-cancel').addEventListener('click', function() {
+    noteBox.style.display = 'none';
+    pendingNoteTarget = null;
+  });
+
+  document.getElementById('note-add').addEventListener('click', function() {
+    var text = noteText.value.trim();
+    if (!text || !pendingNoteTarget) { noteBox.style.display = 'none'; return; }
+    noteCounter++;
+    var noteDiv = document.createElement('div');
+    noteDiv.className = 'user-note';
+    noteDiv.setAttribute('data-note-id', noteCounter);
+    noteDiv.innerHTML = '<span class="note-label">Your note</span>' +
+      '<button class="del-note" title="Remove note">&times;</button>' +
+      '<span class="note-body"></span>';
+    noteDiv.querySelector('.note-body').textContent = text;
+    noteDiv.querySelector('.del-note').addEventListener('click', function() {
+      noteDiv.remove();
+      markDirty();
+    });
+
+    var target = pendingNoteTarget.closest('li, p, td, div.quote-card, section') || contentRoot;
+    target.parentNode.insertBefore(noteDiv, target.nextSibling);
+
+    noteBox.style.display = 'none';
+    pendingNoteTarget = null;
+    markDirty();
+    setMode('note');
+  });
+
+  btnClear.addEventListener('click', function() {
+    if (!confirm('Remove all your highlights, underlines, and notes on this page?')) return;
+    contentRoot.querySelectorAll('.user-note').forEach(function(n) { n.remove(); });
+    contentRoot.querySelectorAll('mark.user-highlight').forEach(function(m) {
+      var parent = m.parentNode;
+      while (m.firstChild) parent.insertBefore(m.firstChild, m);
+      parent.removeChild(m);
+    });
+    contentRoot.querySelectorAll('u.user-underline').forEach(function(u) {
+      var parent = u.parentNode;
+      while (u.firstChild) parent.insertBefore(u.firstChild, u);
+      parent.removeChild(u);
+    });
+    markDirty();
+  });
+
+  var fallbackHelp = document.getElementById('fallback-help');
+  document.getElementById('fallback-close').addEventListener('click', function() {
+    fallbackHelp.style.display = 'none';
+  });
+
+  var fileHandle = null;
+  var fsaSupported = 'showSaveFilePicker' in window;
+  var THIS_FILENAME = 'notes.html';
+
+  function buildFullHtml() {
+    var doc = document.documentElement.cloneNode(true);
+    var liveContentRoot = doc.querySelector('#content-root');
+    if (liveContentRoot) liveContentRoot.innerHTML = contentRoot.innerHTML;
+    return '<!DOCTYPE html>\n' + doc.outerHTML;
+  }
+
+  async function writeToFile() {
+    var writable = await fileHandle.createWritable();
+    await writable.write(buildFullHtml());
+    await writable.close();
+  }
+
+  btnSave.addEventListener('click', async function() {
+    statusText.textContent = 'Saving…';
+    statusText.style.color = '#57606a';
+    if (!fsaSupported) {
+      fallbackHelp.style.display = 'block';
+      statusText.textContent = 'Direct save not supported in this browser';
+      statusText.style.color = '#993c1d';
+      return;
+    }
+    try {
+      if (!fileHandle) {
+        fileHandle = await window.showSaveFilePicker({
+          suggestedName: THIS_FILENAME,
+          types: [{ description: 'HTML file', accept: { 'text/html': ['.html'] } }]
+        });
+      }
+      var perm = await fileHandle.queryPermission({ mode: 'readwrite' });
+      if (perm !== 'granted') {
+        perm = await fileHandle.requestPermission({ mode: 'readwrite' });
+      }
+      if (perm !== 'granted') {
+        statusText.textContent = 'File permission denied — click Save to retry';
+        statusText.style.color = '#993c1d';
+        fileHandle = null;
+        return;
+      }
+      await writeToFile();
+      statusText.textContent = 'Saved to file just now';
+      statusText.style.color = '#3b6d11';
+    } catch (err) {
+      console.error('SAVE_ERROR', err.name, err.message, err);
+      if (err.name === 'AbortError') {
+        statusText.textContent = 'Save cancelled';
+        statusText.style.color = '#57606a';
+      } else {
+        statusText.textContent = 'Save failed: ' + err.name + ' — click Save to retry';
+        statusText.style.color = '#993c1d';
+        fileHandle = null;
+      }
+    }
+  });
+
+  contentRoot.querySelectorAll('.user-note .del-note').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      btn.closest('.user-note').remove();
+      markDirty();
+    });
+  });
+
+  contentRoot.querySelectorAll('.spacing-tracker input[type="checkbox"]').forEach(function(cb) {
+    cb.addEventListener('change', function() {
+      if (cb.checked) { cb.setAttribute('checked', 'checked'); }
+      else { cb.removeAttribute('checked'); }
+      markDirty();
+    });
+  });
+
+  if (window.mermaid) {
+    mermaid.initialize({ startOnLoad: true, securityLevel: 'strict' });
+  }
+})();
+</script>
+
+</body>
+</html>
