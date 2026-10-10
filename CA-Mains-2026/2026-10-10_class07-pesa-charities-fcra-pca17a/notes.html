@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class 7(26): PESA, Charities &amp; FCRA, Section 17A PCA</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: #faf9f6;
+    color: #1f2328;
+    margin: 0;
+    padding: 0 0 80px;
+    line-height: 1.6;
+  }
+  .toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: #ffffff;
+    border-bottom: 2px solid #1d5b8b;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: Arial, sans-serif;
+    flex-wrap: wrap;
+  }
+  .toolbar button {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    padding: 7px 14px;
+    border-radius: 6px;
+    border: 1px solid #d8d2c6;
+    background: #fff;
+    cursor: pointer;
+    color: #1f2328;
+  }
+  .toolbar button:hover { background: #e6f1fb; border-color: #1d5b8b; }
+  .toolbar button.active { background: #1d5b8b; color: #fff; border-color: #1d5b8b; }
+  .toolbar .save-btn { background: #2f6b4f; color: #fff; border-color: #2f6b4f; margin-left: auto; }
+  .toolbar .save-btn:hover { background: #24543e; }
+  .toolbar .status { font-size: 12px; color: #57606a; margin-left: auto; padding-right: 8px; }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 30px 20px; }
+  header { border-bottom: 3px solid #1d5b8b; padding-bottom: 20px; margin-bottom: 30px; }
+  header h1 { font-size: 1.6em; margin: 0 0 6px; color: #1d5b8b; }
+  header .meta { color: #57606a; font-size: 0.95em; font-family: Arial, sans-serif; }
+  section { margin-bottom: 42px; }
+  h2 { font-size: 1.4em; color: #1d5b8b; border-left: 4px solid #1d5b8b; padding-left: 12px; margin-bottom: 14px; }
+  h3 { font-size: 1.12em; margin: 22px 0 8px; }
+  p { margin: 10px 0; }
+  .summary-box { background: #e6f1fb; border-radius: 8px; padding: 18px 22px; font-size: 0.98em; }
+  ul, ol.answers { padding-left: 24px; }
+  li { margin-bottom: 6px; }
+  .timestamp { font-family: 'Courier New', monospace; font-size: 0.78em; color: #57606a; background: #e2ddd4; border-radius: 4px; padding: 1px 6px; margin-right: 6px; }
+  .quote-card { background: #fff; border: 1px solid #e2ddd4; border-left: 4px solid #1d5b8b; border-radius: 6px; padding: 14px 18px; margin: 14px 0; }
+  .quote-card .q { font-style: italic; font-size: 1.05em; }
+  .quote-card .attrib { font-family: Arial, sans-serif; font-size: 0.85em; color: #57606a; margin-top: 6px; }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.95em; background: #fff; }
+  th, td { border: 1px solid #e2ddd4; padding: 8px 12px; text-align: left; vertical-align: top; }
+  th { background: #e6f1fb; font-family: Arial, sans-serif; font-size: 0.88em; }
+  .gap-box { background: #eef4f0; border: 1px solid #cfe3d6; border-radius: 8px; padding: 16px 20px; margin-top: 16px; font-size: 0.95em; }
+  .gap-box h4 { margin: 0 0 8px; color: #2f6b4f; font-family: Arial, sans-serif; font-size: 0.95em; }
+  .exam-tip { background: #fff7e6; border: 1px solid #f0dba8; border-radius: 8px; padding: 14px 20px; margin: 14px 0; font-size: 0.95em; }
+  .exam-tip::before { content: "Exam strategy: "; font-weight: bold; font-family: Arial, sans-serif; }
+  .term-box { background: #fdf3f3; border: 1px solid #ecd4d4; border-radius: 8px; padding: 12px 16px; margin: 10px 0; }
+  .term-box strong { color: #8b3a3a; }
+  .data-box { background: #f3f0fb; border: 1px solid #ddd6f0; border-radius: 8px; padding: 12px 16px; margin: 10px 0; font-family: 'Courier New', monospace; font-size: 0.9em; }
+  footer { margin-top: 60px; border-top: 1px solid #e2ddd4; padding-top: 16px; color: #57606a; font-size: 0.82em; font-family: Arial, sans-serif; }
+  .toc {
+    background: #fff;
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    padding: 16px 22px;
+    margin-bottom: 36px;
+    font-family: Arial, sans-serif;
+    font-size: 0.9em;
+  }
+  .toc h2 { font-size: 1em; margin: 0 0 10px; border: none; padding: 0; color: #1d5b8b; text-transform: uppercase; letter-spacing: 0.04em; }
+  .toc ol { columns: 2; margin: 0; padding-left: 20px; }
+  .toc a { color: #1f2328; text-decoration: none; }
+  .toc a:hover { color: #1d5b8b; text-decoration: underline; }
+  details.collapse-section {
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    background: #fff;
+    margin: 14px 0;
+    padding: 0;
+  }
+  details.collapse-section summary {
+    cursor: pointer;
+    padding: 12px 16px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 0.92em;
+    color: #1d5b8b;
+    list-style: none;
+  }
+  details.collapse-section summary::-webkit-details-marker { display: none; }
+  details.collapse-section summary::before { content: "▸ "; }
+  details.collapse-section[open] summary::before { content: "▾ "; }
+  details.collapse-section .collapse-body { padding: 4px 16px 16px; }
+  .glossary-term {
+    display: flex;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+  }
+  .glossary-term:last-child { border-bottom: none; }
+  .glossary-term dt { font-weight: bold; color: #8b3a3a; min-width: 220px; flex-shrink: 0; font-family: Arial, sans-serif; font-size: 0.9em; }
+  .glossary-term dd { margin: 0; }
+
+  mark.user-highlight { background: #fff176; padding: 1px 2px; border-radius: 2px; }
+  u.user-underline { text-decoration: underline; text-decoration-color: #1d5b8b; text-decoration-thickness: 2px; }
+  .user-note {
+    background: #e6f1fb;
+    border: 1px solid #85b7eb;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin: 8px 0;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #0c447c;
+    position: relative;
+  }
+  .user-note .note-label { font-weight: bold; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; display: block; }
+  .user-note .del-note { position: absolute; top: 6px; right: 8px; cursor: pointer; border: none; background: none; color: #0c447c; font-size: 14px; font-family: Arial, sans-serif; }
+  #note-input-box {
+    position: fixed;
+    display: none;
+    background: #fff;
+    border: 2px solid #1d5b8b;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    z-index: 100;
+    font-family: Arial, sans-serif;
+  }
+  #note-input-box textarea { width: 240px; height: 60px; font-family: Arial, sans-serif; font-size: 13px; border: 1px solid #d8d2c6; border-radius: 4px; padding: 6px; }
+  #note-input-box .note-actions { margin-top: 6px; display: flex; gap: 6px; justify-content: flex-end; }
+  #note-input-box button { font-size: 12px; padding: 5px 10px; border-radius: 4px; border: 1px solid #d8d2c6; background: #fff; cursor: pointer; }
+  #note-input-box button.primary { background: #1d5b8b; color: #fff; border-color: #1d5b8b; }
+  .content-target::selection { background: #ffe082; }
+  .board-caption { font-family: Arial, sans-serif; font-size: 0.82em; color: #57606a; margin-top: -8px; margin-bottom: 14px; }
+  .arcs-box {
+    background: #fff;
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 14px 0;
+  }
+  .arcs-box h4 { margin: 0 0 10px; color: #1d5b8b; font-family: Arial, sans-serif; font-size: 0.98em; }
+  .recall-q { margin-bottom: 14px; }
+  .recall-q p.q-text { font-weight: bold; margin: 0 0 6px; }
+  .recall-q details { border: none; margin: 0; }
+  .recall-q summary { font-family: Arial, sans-serif; font-size: 0.82em; color: #1d5b8b; cursor: pointer; list-style: none; padding: 2px 0; }
+  .recall-q summary::-webkit-details-marker { display: none; }
+  .recall-q summary::before { content: "Show answer \25B8 "; }
+  .recall-q details[open] summary::before { content: "Hide answer \25BE "; }
+  .recall-q .ans { background: #eef4f0; border-radius: 6px; padding: 8px 12px; margin-top: 6px; font-size: 0.95em; }
+  .spacing-tracker { font-family: Arial, sans-serif; font-size: 0.92em; }
+  .spacing-tracker table { margin: 8px 0; }
+  .spacing-tracker input[type="checkbox"] { width: 16px; height: 16px; cursor: pointer; }
+  .mnemonic-box { background: #fff7e6; border: 1px solid #f0dba8; border-radius: 8px; padding: 14px 18px; margin: 10px 0; }
+  .mnemonic-box h4 { margin: 0 0 6px; color: #8b5a1d; font-family: Arial, sans-serif; font-size: 0.92em; }
+  .applic-table td.gs-tag { font-family: Arial, sans-serif; font-weight: bold; font-size: 0.85em; white-space: nowrap; }
+  .applic-table .prelims-badge, .applic-table .mains-badge {
+    display: inline-block; font-family: Arial, sans-serif; font-size: 0.72em; font-weight: bold;
+    padding: 2px 8px; border-radius: 10px; margin-right: 4px;
+  }
+  .prelims-badge { background: #eaf3de; color: #3b6d11; }
+  .mains-badge { background: #e6f1fb; color: #1d5b8b; }
+  #fallback-help {
+    position: fixed;
+    display: none;
+    top: 60px;
+    right: 20px;
+    max-width: 320px;
+    background: #fff;
+    border: 2px solid #993c1d;
+    border-radius: 8px;
+    padding: 14px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    z-index: 200;
+  }
+  .mcq-card { background: #fff; border: 1px solid #e2ddd4; border-left: 4px solid #1d5b8b; border-radius: 8px; padding: 16px 20px; margin: 14px 0; }
+  .mcq-card .q-num { font-family: Arial, sans-serif; font-weight: bold; color: #1d5b8b; font-size: 0.82em; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 6px; }
+  .mcq-card .q-text { font-weight: bold; margin-bottom: 10px; }
+  .mcq-card .options { display: flex; flex-direction: column; gap: 6px; margin-bottom: 10px; }
+  .mcq-card .option { font-family: Arial, sans-serif; font-size: 0.92em; padding: 6px 10px; border-radius: 6px; background: #faf9f6; border: 1px solid #e2ddd4; }
+  .mcq-card .option.correct { background: #eaf3de; border-color: #b9d79a; color: #3b6d11; font-weight: bold; }
+  .mcq-card .answer-box { font-family: Arial, sans-serif; font-size: 0.88em; background: #eef4f0; border-radius: 6px; padding: 8px 12px; }
+  .mcq-card .answer-label { font-weight: bold; color: #2f6b4f; }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <button id="btn-highlight" title="Select text, then click to highlight it">Highlight</button>
+  <button id="btn-underline" title="Select text, then click to underline it">Underline</button>
+  <button id="btn-note" title="Click this, then click anywhere in the notes to drop a note">Add note</button>
+  <button id="btn-clear" title="Remove all your highlights, underlines, and notes">Clear my edits</button>
+  <span class="status" id="status-text">Not connected to file — click Save once to connect</span>
+  <button class="save-btn" id="btn-save">Save</button>
+</div>
+
+<div id="fallback-help">
+  <strong>Your browser can't save directly</strong>
+  <p style="margin:6px 0;">File System Access isn't supported here (common on Safari/Firefox). Use Chrome or Edge to enable direct-save, or use your browser's Save Page As (Ctrl/Cmd+S) to overwrite this file manually after editing.</p>
+  <button id="fallback-close" style="font-size: 12px; padding: 6px 12px; border-radius: 4px; border: 1px solid #993c1d; background: #993c1d; color: #fff; cursor: pointer;">Got it</button>
+</div>
+
+<div id="note-input-box">
+  <textarea id="note-text" placeholder="Type your note..."></textarea>
+  <div class="note-actions">
+    <button id="note-cancel">Cancel</button>
+    <button class="primary" id="note-add">Add</button>
+  </div>
+</div>
+
+<div class="wrap content-target" id="content-root">
+
+<header>
+  <h1>CA Mains 2026 — Class 7(26): PESA &amp; Tribal Self-Governance, Charities/NGOs &amp; the FCRA Amendment Bill 2026, Section 17A of the Prevention of Corruption Act</h1>
+  <div class="meta">
+    <span>Source: unlisted YouTube lecture recording ("class 7 cava26")</span> &middot;
+    <span>Duration: 0:00 – 2:24:33</span> &middot;
+    <span>Track: UPSC GS-2 (Polity / Governance / Social Justice) — Current Affairs Answer Writing</span>
+  </div>
+</header>
+
+<nav class="toc">
+  <h2>Contents</h2>
+  <ol>
+    <li><a href="#applicability">Applicability — GS papers, Prelims &amp; Mains</a></li>
+    <li><a href="#part0">Answer review: trade unions as a safety valve</a></li>
+    <li><a href="#part1">Topic 1: PESA — framework &amp; provisions</a></li>
+    <li><a href="#part2">Topic 1: PESA — debates, challenges, judgments</a></li>
+    <li><a href="#part3">Topic 1: Model answer structure</a></li>
+    <li><a href="#part4">Topic 2: Charities, donors &amp; NGOs — concepts &amp; data</a></li>
+    <li><a href="#part5">Topic 2: Debates (California consensus &amp; more)</a></li>
+    <li><a href="#part6">Topic 2: FCRA Amendment Bill 2026</a></li>
+    <li><a href="#part7">Topic 2: Model answer structure</a></li>
+    <li><a href="#part8">Topic 3: Section 17A, PCA — evolution &amp; split verdict</a></li>
+    <li><a href="#part9">Topic 3: Data, debates, views, way forward</a></li>
+    <li><a href="#mcqs">Practice MCQs (self-authored)</a></li>
+    <li><a href="#glossary">Glossary — quick revision</a></li>
+    <li><a href="#arcs">Revision kit (ARCS)</a></li>
+    <li><a href="#gaps">Supplementary research</a></li>
+  </ol>
+</nav>
+
+<section id="summary">
+  <h2>Executive summary</h2>
+  <div class="summary-box">
+  <p>Seventh class of the CA Mains 2026 series — back with the polity faculty, and the last polity/governance class before the social-justice block. After reviewing the Class 5 trade-union answer, three topics are taught in the standard format (intro → context → framework → data → debates → judgments/views → suggestions → conclusion):</p>
+  <ul>
+    <li><strong>PESA, 1996</strong> — Gram Sabha empowerment in Fifth Schedule areas; Jharkhand's long-delayed rules; the consultation-vs-consent debate (Niyamgiri), and how the law is bypassed (parallel bodies, CAMPA, the "urbanisation loophole").</li>
+    <li><strong>Charities, donors &amp; NGOs</strong> — how India gives (household and CSR data), the "California consensus" of tech-billionaire philanthropy, programmatic vs. flexible funding, "impact vs. effect", and the FCRA Amendment Bill 2026 (deemed cessation, designated authority).</li>
+    <li><strong>Section 17A, Prevention of Corruption Act</strong> — the prior-approval rule's evolution from the Single Directive through Vineet Narain and Subramanian Swamy, and the January 2026 split verdict (Justice Nagarathna vs. Justice Viswanathan).</li>
+  </ul>
+  <p>Instructor's recurring message: read every topic in answer format — have an intro, keywords, data, a body skeleton and a conclusion ready — and think about where else each data point can be reused.</p>
+  </div>
+</section>
+
+<section id="applicability">
+  <h2>Applicability — GS papers, Prelims &amp; Mains</h2>
+  <table class="applic-table">
+    <tr><th>Sub-topic</th><th>GS Paper</th><th>Prelims</th><th>Mains</th></tr>
+    <tr>
+      <td class="gs-tag">PESA &amp; tribal self-governance</td>
+      <td>GS-2 (Polity, Social Justice) / GS-1 (Society)</td>
+      <td><span class="prelims-badge">High</span>Article 243M(4)(b), Bhuria Committee, Gram Sabha powers over minor minerals and minor forest produce, Samatha/Niyamgiri.</td>
+      <td><span class="mains-badge">High</span>Pairs with FRA, LWE, tribal alienation and decentralisation questions.</td>
+    </tr>
+    <tr>
+      <td class="gs-tag">Charities, NGOs, FCRA</td>
+      <td>GS-2 (Governance — role of NGOs/SHGs, civil society)</td>
+      <td><span class="prelims-badge">Medium</span>FCRA provisions, Social Stock Exchange, ZCZP instruments, CSR 2% rule.</td>
+      <td><span class="mains-badge">High</span>Instructor rates a charity/donor question as highly probable this year; "role of NGOs" is a syllabus line.</td>
+    </tr>
+    <tr>
+      <td class="gs-tag">Section 17A PCA &amp; anti-corruption</td>
+      <td>GS-2 (Governance) / GS-4 (Ethics — probity)</td>
+      <td><span class="prelims-badge">Medium</span>Section 17A vs. 19, Vineet Narain, Subramanian Swamy, Lokpal.</td>
+      <td><span class="mains-badge">High</span>Live split verdict pending before a larger bench.</td>
+    </tr>
+  </table>
+</section>
+
+<section id="part0">
+  <h2>0. Answer review: trade unions as a safety valve (from Class 5)</h2>
+  <div class="quote-card">
+    <div class="q">Trade unions are not just mechanisms for wage bargaining — they act as a critical safety valve in a democracy. In light of this, analyse the recent wave of unorganised-worker protests.</div>
+    <div class="attrib">— Class 5 practice question, reviewed at the start of this class</div>
+  </div>
+  <ol class="answers">
+    <li><strong>Open with data</strong>: India's labour force exceeds 60 crore but only ~6% is unionised; 80%+ work informally without rights protection.</li>
+    <li><strong>Explain the safety valve</strong> with a two-path diagram: grievance → institutional channel (union, collective bargaining) → dialogue; vs. grievance → no channel → protests turn violent → democratic rupture. The second path is the unorganised sector's reality.</li>
+    <li><strong>Issues</strong> from the Class 5 notes (labour codes, algorithmic management, contractualisation).</li>
+    <li><strong>Best practices</strong> — domestic first (worker cooperatives such as the Kerala example), then global (Germany's IG Metall, Denmark's 3F).</li>
+    <li><strong>Suggestions</strong> — revive tripartite consultation (Indian Labour Conference); conclude with a quote.</li>
+  </ol>
+  <div class="exam-tip">Instructor's preference: start with data, end with a quote. Always cite a domestic best practice before a foreign one.</div>
+</section>
+
+<section id="part1">
+  <h2>1. Topic 1: PESA — framework &amp; provisions</h2>
+  <h3>Model introduction</h3>
+  <p>Write the full form at least once: the <strong>Panchayats (Extension to the Scheduled Areas) Act, 1996</strong> is a landmark law designed to deepen democratic decentralisation and protect tribal rights by empowering the Gram Sabha.</p>
+  <div class="quote-card">
+    <div class="q">"Mava Nate Mava Raj" — our village, our rule.</div>
+    <div class="attrib">— Gond-language slogan of tribal self-determination; usable to open or close a PESA answer</div>
+  </div>
+
+  <h3>Context pegs</h3>
+  <ul>
+    <li><span class="timestamp">6:36</span><strong>Jharkhand's PESA rules</strong> — approved by the state cabinet in December 2025 and notified in early January 2026, nearly three decades after the Act. The lecture uses this as a textbook case of delay in delivering rights, and criticises the rules' drafting as litigation-prone.</li>
+    <li>A tribal civil-society forum filed a contempt petition in the High Court over non-implementation.</li>
+    <li><strong>Chhattisgarh</strong> — protests in the Hasdeo region against private coal mining in forest "no-go" areas.</li>
+    <li><strong>Odisha</strong> — protests at Sijimali against bauxite mining in hills the community holds sacred.</li>
+  </ul>
+
+  <h3>Why PESA was needed</h3>
+  <p>Historical exploitation (especially in the colonial period), centralised administration that overrode customs, and the absence of empowered grassroots democracy in tribal areas led the <strong>Bhuria Committee</strong> (1994–95) to recommend extending Panchayati Raj to Scheduled Areas. PESA followed in 1996.</p>
+  <div class="term-box"><strong>Article 243M(4)(b):</strong> empowers Parliament to extend Part IX (Panchayats) to Fifth Schedule areas with exceptions and modifications — the constitutional basis for PESA.</div>
+
+  <h3>Key provisions</h3>
+  <table>
+    <tr><th>Provision</th><th>What it does</th></tr>
+    <tr><td>Conformity with custom</td><td>State laws on panchayats must be consistent with customary law, social and religious practices, and traditional management of community resources.</td></tr>
+    <tr><td>Reservation</td><td>Seats reserved in proportion to population, but STs must have at least 50% of seats; all chairperson posts reserved for STs (the "politics of presence" idea from Class 1).</td></tr>
+    <tr><td>Gram Sabha's cultural role</td><td>Safeguard traditions, cultural identity, community resources and customary dispute resolution.</td></tr>
+    <tr><td>Minor minerals</td><td>Prior recommendation of the Gram Sabha/panchayat mandatory for prospecting licences and mining leases/auctions.</td></tr>
+    <tr><td>Natural resources</td><td>Ownership of minor forest produce; management of water bodies.</td></tr>
+    <tr><td>Social regulation</td><td>Power to enforce prohibition or regulate intoxicants; prevent land alienation and restore unlawfully alienated land.</td></tr>
+  </table>
+  <p>Three underlying aims: prevent marginalisation; ensure genuine decentralisation through an empowered Gram Sabha; stop the influx of non-tribals and the resulting land alienation.</p>
+</section>
+
+<section id="part2">
+  <h2>2. Topic 1: PESA — debates, challenges, judgments</h2>
+  <h3>Debates</h3>
+  <details class="collapse-section" open><summary>Modern state vs. customary tribal law</summary><div class="collapse-body">
+    Formal state institutions have not been harmonised with traditional structures in Fifth Schedule areas; the state often treats tribals as an obstacle to development rather than partners in it.
+  </div></details>
+  <details class="collapse-section"><summary>Development vs. autonomy</summary><div class="collapse-body">
+    Full Gram Sabha autonomy is seen by some as an obstacle to growth, because tribal areas sit on major mineral reserves. Niyamgiri is cited both ways — as a triumph of consent, and as an example of projects being blocked.
+  </div></details>
+  <details class="collapse-section"><summary>Consultation vs. consent</summary><div class="collapse-body">
+    Consultation = seek the Gram Sabha's opinion, then proceed anyway. Consent = the Gram Sabha's "no" is a binding veto. States generally treat it as consultation. A 2016–17 study in Jharkhand's Khunti district (as cited) found about 65% of people whose land was acquired said they were never even consulted.
+  </div></details>
+  <details class="collapse-section"><summary>Empowerment vs. entanglement</summary><div class="collapse-body">
+    Does PESA empower, or trap communities in legal hurdles? Critics argue some rules are drafted so ambiguously that disputes go to court, producing delays that effectively bypass the Gram Sabha.
+  </div></details>
+  <details class="collapse-section"><summary>Identity vs. material rights</summary><div class="collapse-body">
+    Politicisation of tribal identity vs. delivering material rights — livelihoods, minor forest produce, community assets.
+  </div></details>
+
+  <h3>Arguments for PESA</h3>
+  <ul>
+    <li>Constitutional guarantee; democratic decentralisation; empowered Gram Sabha; protection of community resources.</li>
+    <li>Together with the <strong>Forest Rights Act, 2006</strong>, the two pillars of a rights-based approach to tribal welfare.</li>
+    <li>Reduces tribal alienation — a root cause of left-wing extremism.</li>
+  </ul>
+
+  <h3>Challenges (how PESA is subverted)</h3>
+  <ol class="answers">
+    <li><strong>Bypassing for mining/industry</strong> — Gram Sabha decisions treated as mere consultation, or skipped.</li>
+    <li><strong>Delayed and weak rules</strong> — Jharkhand took decades; vague drafting invites litigation.</li>
+    <li><strong>Capacity deficit</strong> — many representatives have limited literacy and cannot fully use funds and powers.</li>
+    <li><strong>Parallel bodies</strong> — Joint Forest Management Committees, controlled by forest officials, bureaucratise decisions.</li>
+    <li><strong>CAMPA (Compensatory Afforestation Fund Act, 2016)</strong> — afforestation planned by the forest bureaucracy without Gram Sabha consultation or tribal representation; "land banks" of degraded forest can take tribal land; top-down.</li>
+    <li><strong>The urbanisation loophole</strong> — if a Gram Sabha opposes a project, the area is reclassified as urban (e.g., a nagar panchayat), taking it outside PESA. The lecture cites a dispute in Chhattisgarh's Surajpur district.</li>
+    <li>Organisations claiming to defend tribal culture often stay silent on these issues.</li>
+  </ol>
+
+  <h3>Judgments</h3>
+  <table>
+    <tr><th>Case</th><th>What it stands for</th></tr>
+    <tr><td>Samatha v. State of Andhra Pradesh (1997)</td><td>Tribal land in Scheduled Areas cannot be leased/transferred to non-tribals, including private mining companies.</td></tr>
+    <tr><td>BALCO Employees' Union v. Union of India (2002)</td><td>Expressed reservations about Samatha and permitted BALCO's mining operations, reasoning the matter was governed by Madhya Pradesh law — a dilution.</td></tr>
+    <tr><td>Orissa Mining Corporation v. MoEF (Niyamgiri, 2013)</td><td>Gram Sabhas must decide on religious/cultural rights affected by mining; the Gram Sabhas rejected the bauxite project — effectively treating consultation as consent.</td></tr>
+  </table>
+
+  <h3>Views and committees</h3>
+  <ul>
+    <li><strong>B.D. Sharma</strong> (former SC/ST Commissioner): PESA was meant to undo historical injustice but is hindered by an outsider-biased bureaucracy.</li>
+    <li><strong>Planning Commission expert group (2008)</strong>: found violations by officials who view tribal autonomy as an impediment.</li>
+    <li>A committee (name unclear in the transcript) recommended an absolute "right to say no" to land acquisition and land-for-land compensation.</li>
+  </ul>
+
+  <h3>Way forward</h3>
+  <ul>
+    <li>Harmonise PESA, FRA and CAMPA; make Gram Sabha <strong>consent</strong>, not consultation, the standard.</li>
+    <li>Borrow from the Sixth Schedule: more substantive autonomy, not just representation.</li>
+    <li>Capacity-building for Gram Sabhas.</li>
+    <li>With LWE declining, robust PESA and FRA implementation is the foundation of a <strong>post-LWE strategy</strong>; otherwise alienation returns.</li>
+    <li>Conclude with <strong>"Jal, Jangal, Zameen"</strong> — water, forest, land.</li>
+  </ul>
+</section>
+
+<section id="part3">
+  <h2>3. Topic 1: Model answer structure</h2>
+  <div class="quote-card">
+    <div class="q">PESA 1996 was envisioned as a new social contract for tribal self-governance, yet it remains affected by governance paradoxes. Examine.</div>
+    <div class="attrib">— Practice question set in class</div>
+  </div>
+  <ol class="answers">
+    <li><strong>Intro</strong>: PESA as a "constitution within the constitution" protecting jal–jangal–zameen; Bhuria Committee origin.</li>
+    <li><strong>The new social contract</strong> (diagram): Gram Sabha empowerment + customary law + administrative autonomy + resource control → dignity, empowerment, sustainable development.</li>
+    <li><strong>Positives</strong> with examples — Niyamgiri and consent.</li>
+    <li><strong>Paradoxes</strong> — bureaucratic bypass, consultation without consent, parallel bodies, CAMPA, urbanisation loophole, delayed rules (4–5 points with examples).</li>
+    <li><strong>Suggestions</strong> — consent-based approach, capacity-building; cite B.D. Sharma or the 2008 expert group.</li>
+    <li><strong>Conclusion</strong> — the Gond slogan or "Jal, Jangal, Zameen".</li>
+  </ol>
+  <div class="exam-tip">Instructor's feedback: many students finished in four minutes — speed is good, but the answer must still show the "social contract → impact → paradox" logic, not just list provisions.</div>
+</section>
+
+<section id="part4">
+  <h2>4. Topic 2: Charities, donors &amp; NGOs — concepts &amp; data</h2>
+  <h3>Model introductions (pick one)</h3>
+  <div class="quote-card">
+    <div class="q">Charities, donors and NGOs form the bedrock of a thriving civil society, bridging the gap between state capacity and grassroots development.</div>
+    <div class="attrib">— Option 1</div>
+  </div>
+  <div class="quote-card">
+    <div class="q">India possesses a deeply ingrained cultural ethos of everyday generosity, grounded in daan, seva and Gandhian trusteeship.</div>
+    <div class="attrib">— Option 2</div>
+  </div>
+
+  <h3>Context pegs</h3>
+  <ul>
+    <li>The <strong>FCRA Amendment Bill, 2026</strong> — sweeping changes; put on hold after criticism (see Section 6).</li>
+    <li>Governance disputes in large trusts, including the Tata Trusts.</li>
+    <li>New funding instruments: the <strong>Social Stock Exchange</strong> and <strong>social impact bonds</strong>.</li>
+  </ul>
+
+  <h3>Key concepts</h3>
+  <ul>
+    <li><strong>Philanthropy/charity</strong>: voluntary action and donation of resources for the public good.</li>
+    <li><strong>Noblesse oblige</strong>: the moral duty of the wealthy to give.</li>
+    <li><strong>CSR</strong>: companies meeting profit/size thresholds must spend at least 2% of average net profit of the preceding three years on social activities (Companies Act, 2013).</li>
+    <li><strong>Social Stock Exchange</strong>: registered non-profits can raise funds by issuing <strong>Zero Coupon Zero Principal (ZCZP)</strong> instruments.</li>
+    <li><strong>Article 19(1)(c)</strong>: right to form associations.</li>
+    <li>Know the differences: <strong>donor</strong> (anyone who gives), <strong>charity</strong> (narrower, relief-oriented), <strong>NGO</strong> (broad — advocacy, rights-based, service delivery), <strong>philanthropy</strong> (strategic, long-term giving).</li>
+  </ul>
+
+  <h3>Data</h3>
+  <div class="data-box">
+    How India Gives 2025–26 (Ashoka University, as cited): Indian households give roughly US$6 billion a year; about 68% of Indians give; only ~15% of household giving reaches formal non-profits; the largest share (~46%) goes to religious institutions.<br>
+    CSR spending is about ₹25,000+ crore a year, but roughly 70% is routed through corporate-run foundations rather than independent small NGOs.<br>
+    Since 2015, FCRA registrations of more than 18,000 NGOs have been cancelled (analysis of MHA data).<br>
+    India Nonprofit Report 2025 (survey of ~400 NGOs): 91% run on annual budgets under ₹10 crore; over 70% report funding deficits.<br>
+    A MoSPI-cited estimate: civil-society organisations generate ~27 lakh jobs plus ~34 lakh full-time volunteers.<br>
+    Geographical concentration: five states (Maharashtra, Gujarat, Uttar Pradesh, Tamil Nadu, Karnataka) hold ~60% of registered non-profits; aspirational districts account for only ~5%.
+  </div>
+  <div class="exam-tip">Reuse this data beyond NGO questions — inclusive growth, poverty, regional disparity, savings behaviour. "Aspirational districts hold only 5% of NPOs" fits any regional-disparity answer.</div>
+</section>
+
+<section id="part5">
+  <h2>5. Topic 2: Debates</h2>
+  <h3>California consensus vs. institution-building</h3>
+  <div class="term-box"><strong>California consensus:</strong> a modern approach to philanthropy driven by tech billionaires, seeking rapid, measurable social change through technology and data, often bypassing the state.</div>
+  <table>
+    <tr><th>Dimension</th><th>Washington consensus</th><th>California consensus</th></tr>
+    <tr><td>Domain</td><td>Development economics — neoliberalism, free markets</td><td>Private foundations, tech billionaires</td></tr>
+    <tr><td>Mechanism</td><td>Top-down conditionalities</td><td>Top-down, outcome-tied programme funding</td></tr>
+    <tr><td>Theory of change</td><td>Market liberalisation</td><td>Technological innovation and data</td></tr>
+    <tr><td>Measure</td><td>GDP growth</td><td>Measurable outcomes / metrics</td></tr>
+    <tr><td>View of the state</td><td>Roll it back</td><td>Bypass it</td></tr>
+  </table>
+  <p>Contrast with the <strong>traditional model</strong>: years of grassroots institution-building and social capital, driven by volunteers. Related consensuses to know: Washington (1990s), Beijing (state-led), London.</p>
+  <p><strong>Problems</strong> with the California consensus: an <strong>accountability deficit</strong> (foundations answer to no one), a <strong>coordination deficit</strong> (many donors, little coordination), and a <strong>democratic legitimacy deficit</strong> (e.g., a foundation deciding which seed or medicine is "better" without stakeholder consent).</p>
+
+  <h3>Other debates</h3>
+  <details class="collapse-section" open><summary>State control vs. autonomy</summary><div class="collapse-body">How much regulation is needed before it cripples non-profits — the debate underlying FCRA.</div></details>
+  <details class="collapse-section"><summary>Programmatic vs. flexible funding</summary><div class="collapse-body">Programmatic money is tied to a specific short-term project; NGOs lose flexibility and must chase a new donor for each programme. Flexible (core) funding supports the whole organisation.</div></details>
+  <details class="collapse-section"><summary>Traditional vs. new-age funding</summary><div class="collapse-body">Traditional: foundations backing grassroots NGOs and volunteers. New-age: crowdfunding, social impact bonds, social stock exchanges, micro-donations at app checkout.</div></details>
+  <details class="collapse-section"><summary>Charity vs. for-profit pivot</summary><div class="collapse-body">Organisations starting as non-profits and converting to for-profit structures when charity models can't fund ambitions — the lecture cites the dispute between Elon Musk and OpenAI.</div></details>
+  <details class="collapse-section"><summary>Charity vs. workers' rights</summary><div class="collapse-body">Charities that champion the vulnerable may not protect their own staff and volunteers; hence arguments to treat them as an "industry" under labour law.</div></details>
+  <details class="collapse-section"><summary>Ethics of aid — "perform your pain"</summary><div class="collapse-body">Beneficiaries, mostly women, are pushed to publicly perform their suffering in appeal videos to raise money — commodification, a gender bias, and added trauma.</div></details>
+
+  <h3>Impact vs. effect</h3>
+  <p><strong>Anurag Behar</strong> (CEO, Azim Premji Foundation) distinguishes measuring <em>impact</em> from measuring <em>effect</em>. "Impact" implies a single intervention caused the change, and pushes NGOs to produce impressive reports over real work. "Effect" asks what an intervention contributed, acknowledging that social change is collective (SHGs, anganwadi and ASHA workers, the state all contribute).</p>
+</section>
+
+<section id="part6">
+  <h2>6. Topic 2: FCRA Amendment Bill 2026</h2>
+  <p>The <strong>Foreign Contribution (Regulation) Act</strong> regulates the acceptance and use of foreign contributions by individuals, associations and companies. The bill's stated aim: protect national security and stop foreign funds being misused for unlawful activities.</p>
+  <h3>Key changes proposed</h3>
+  <table>
+    <tr><th>Provision</th><th>What it does</th></tr>
+    <tr><td>Deemed cessation</td><td>Registration automatically ends if renewal isn't applied for, is denied, or isn't granted before expiry.</td></tr>
+    <tr><td>Designated authority</td><td>A government-notified authority manages the foreign contributions and assets created from them once registration ends.</td></tr>
+    <tr><td>Centralised enforcement</td><td>Investigations need prior approval of the central government (to avoid fragmented probes).</td></tr>
+    <tr><td>Wider prohibitions</td><td>Extended to anyone producing or broadcasting news and current-affairs content.</td></tr>
+    <tr><td>Expanded liability</td><td>Beyond office-bearers to trustees, partners and governing-body members.</td></tr>
+  </table>
+  <h3>For</h3>
+  <ul><li>National security; preventing asset-stripping (the designated authority keeps assets in public use); strict compliance timelines.</li></ul>
+  <h3>Against</h3>
+  <ul>
+    <li><strong>No prior judicial appeal</strong> — registration ends first, appeal comes after → <strong>operational paralysis</strong>; against natural justice.</li>
+    <li>Possible violation of fundamental rights — association, religious freedom, property.</li>
+    <li><strong>Procedural paralysis</strong> — cessation can follow from bureaucratic delay in processing renewal, not misconduct.</li>
+    <li><strong>Chilling effect</strong> on civil society and free speech.</li>
+  </ul>
+
+  <h3>Quotes and best practices</h3>
+  <div class="quote-card">
+    <div class="q">If a free society cannot help the many who are poor, it cannot save the few who are rich.</div>
+    <div class="attrib">— John F. Kennedy, inaugural address (1961)</div>
+  </div>
+  <ul>
+    <li>A sociologist (name unclear) argues the California consensus has shifted activism from passion to technocracy, starving grassroots organisations.</li>
+    <li>Social Stock Exchange; retail crowdfunding — Keralites crowdfunded tens of crores to pay "blood money" for a compatriot on death row abroad.</li>
+    <li><strong>Goonj</strong> — collects reusable goods (not just money) for rural communities.</li>
+  </ul>
+</section>
+
+<section id="part7">
+  <h2>7. Topic 2: Model answer structure</h2>
+  <div class="quote-card">
+    <div class="q">Civil society organisations are often described as the third pillar of development. Discuss how stringent foreign funding regulations impact welfare services for marginalised people in India.</div>
+    <div class="attrib">— Practice question set in class</div>
+  </div>
+  <ol class="answers">
+    <li><strong>Intro</strong> (keep short): a three-pillar diagram — government, market, civil society — holding up "development"; CSOs ensure last-mile delivery, grassroots development, accountability and advocacy, community trust and mobilisation. One or two NGO examples.</li>
+    <li><strong>Why regulation</strong>: 18,000+ cancellations since 2015 indicate misconduct, tax evasion and irregularities → stringent rules like the FCRA Amendment Bill 2026.</li>
+    <li><strong>Impact on the marginalised</strong>: aspirational districts already have only ~5% of NPOs; schemes delivered through NGOs suffer; group-wise effects — women (shelter homes, trafficking survivors), children in conflict with law, SC/STs, migrants (wage rights), undertrials, RTI and environmental advocacy.</li>
+    <li><strong>Balance</strong>: scrutiny is legitimate for national security.</li>
+    <li><strong>Way forward</strong>: light-touch regulation, new models (Social Stock Exchange), plus regulating new risks (impact-chasing, "perform your pain", diversion of crowdfunded money).</li>
+  </ol>
+  <div class="exam-tip">Take 30 seconds to sketch a structure before writing. Notes knowledge often fails to reach the paper because students don't re-tailor it to the question's demand (here: <em>marginalised people</em>).</div>
+</section>
+
+<section id="part8">
+  <h2>8. Topic 3: Section 17A, PCA — evolution &amp; split verdict</h2>
+  <h3>Model introduction</h3>
+  <p>The Prevention of Corruption Act, 1988 is the primary statutory shield safeguarding India's democratic and administrative framework from corruption.</p>
+  <h3>Context</h3>
+  <p>The Supreme Court's <strong>split verdict</strong> (January 2026, <em>Centre for Public Interest Litigation v. Union of India</em>) on Section 17A highlights the permanent tension between empowering anti-corruption agencies and protecting honest civil servants.</p>
+
+  <h3>Key provisions</h3>
+  <ul>
+    <li>The PCA consolidates anti-corruption law and defines <strong>public servant</strong> broadly — government employees, MPs/MLAs, and judges.</li>
+    <li><strong>Section 17A</strong> (inserted 2018): investigators need prior approval of the competent government before any inquiry or investigation into an offence relating to <em>recommendations made or decisions taken</em> in discharge of official duties.</li>
+    <li>Reading between the lines: "recommendations and decisions" are made by senior officials, while juniors implement — so the protection mainly covers the top, raising an Article 14 concern.</li>
+    <li>Rationale: tackle <strong>policy paralysis</strong> caused by the "play-it-safe syndrome" of officials afraid to sign files.</li>
+    <li><strong>Section 19</strong>: sanction to <em>prosecute</em> after investigation — the final safeguard against trials for bona fide actions. (17A = before investigation; 19 = before prosecution.)</li>
+  </ul>
+
+  <h3>Evolution of prior approval (draw as a timeline)</h3>
+  <pre class="mermaid">
+flowchart LR
+    A["Single Directive<br/>(executive instructions:<br/>CBI needs govt approval)"] --> B["Vineet Narain (1997):<br/>SC strikes down<br/>Single Directive"]
+    B --> C["Sec 6A DSPE Act (2003):<br/>approval for Joint<br/>Secretary and above"]
+    C --> D["Subramanian Swamy (2014):<br/>6A struck down —<br/>violates Article 14"]
+    D --> E["Sec 17A PCA (2018):<br/>approval for decisions/<br/>recommendations — no rank"]
+    E --> F["Jan 2026 split verdict →<br/>larger bench"]
+  </pre>
+  <p>This sequence is also an example of the judiciary–executive tussle.</p>
+
+  <h3>The split verdict</h3>
+  <table>
+    <tr><th>Justice B.V. Nagarathna</th><th>Justice K.V. Viswanathan</th></tr>
+    <tr><td>Unconstitutional — violates Article 14 by shielding senior decision-makers but not lower-level implementers.</td><td>Valid — needed to prevent policy paralysis.</td></tr>
+    <tr><td>"Old wine in a new bottle" — revives what Vineet Narain and Subramanian Swamy struck down.</td><td>Constructive approach: read it down so approval decisions are taken by independent bodies such as the Lokpal/Lokayukta, not the political executive.</td></tr>
+    <tr><td>Conflict of interest: the sanctioning authority may itself be involved — against natural justice.</td><td>Mirrors the Law Commission's 254th Report suggestion.</td></tr>
+  </table>
+</section>
+
+<section id="part9">
+  <h2>9. Topic 3: Data, debates, views, way forward</h2>
+  <div class="data-box">
+    Corruption Perceptions Index: India ranked around 91st out of ~182 countries (as cited — verify the latest edition).<br>
+    CVC annual report: 7,000+ corruption cases investigated by the CBI pending in courts, including 379 pending for over 20 years.<br>
+    CBI registered ~502 PCA cases in 2024 involving ~859 public servants, of whom ~221 were gazetted officers (as cited).
+  </div>
+  <h3>Debates</h3>
+  <ul>
+    <li>Protecting the honest vs. protecting the corrupt.</li>
+    <li>Executive control vs. independent scrutiny (political executive vs. Lokpal).</li>
+    <li>Accountability vs. administrative paralysis.</li>
+    <li><strong>Judicial interpretation vs. judicial legislation</strong> — substituting the Lokpal for the government arguably goes beyond reading down.</li>
+  </ul>
+  <h3>For and against Section 17A</h3>
+  <ul>
+    <li><strong>For</strong>: gatekeeping filters frivolous complaints — the problem is <em>who</em> gatekeeps, not gatekeeping itself.</li>
+    <li><strong>Against</strong>: Article 14 violation; conflict of interest; destroys the <strong>element of surprise</strong> — an official tipped off by a sanction request can destroy evidence.</li>
+  </ul>
+  <h3>Views and quotes</h3>
+  <div class="quote-card">
+    <div class="q">If honest public servants are not given a basic assurance that their decisions will not face frivolous complaints, it is the nation that will suffer.</div>
+    <div class="attrib">— Justice K.V. Viswanathan (paraphrased)</div>
+  </div>
+  <div class="quote-card">
+    <div class="q">Section 17A, in substance, protects the corrupt rather than the honest.</div>
+    <div class="attrib">— Justice B.V. Nagarathna (paraphrased)</div>
+  </div>
+  <div class="quote-card">
+    <div class="q">Be you ever so high, the law is above you.</div>
+    <div class="attrib">— Thomas Fuller, quoted by Lord Denning; widely cited by Indian courts</div>
+  </div>
+  <ul>
+    <li>An economist's phrase (attributed in the lecture to Kaushik Basu — verify): the <strong>"Sanskritisation of corruption"</strong> — its social acceptance.</li>
+    <li><strong>Santhanam Committee (1964)</strong> — strengthening anti-corruption law; led to the CVC.</li>
+    <li><strong>Vohra Committee (1993)</strong> — the politician–bureaucrat–criminal nexus (the Adarsh Housing scam as an example of political–bureaucratic nexus).</li>
+    <li><strong>Law Commission, 254th Report</strong> — approval for launching investigation should lie with independent bodies like the Lokpal.</li>
+    <li>India hosted a steering committee meeting of the <strong>GlobE Network</strong> (Global Operational Network of Anti-Corruption Law Enforcement Authorities); India is party to the <strong>UN Convention against Corruption</strong>.</li>
+    <li>Illustrations from the news: a ₹500 bribery case closed after 36 years; a Bihar case where seized bribe cash was claimed to have been eaten by rats.</li>
+  </ul>
+  <h3>Way forward</h3>
+  <ul>
+    <li>Independent screening via Lokpal/Lokayukta (Justice Viswanathan; 254th Report).</li>
+    <li><strong>Deterrence through speed</strong> — fast-track courts for swift disposal.</li>
+    <li>Transparent procurement (blockchain, digital systems); whistleblower protection.</li>
+  </ul>
+  <div class="quote-card">
+    <div class="q">The pursuit of anti-corruption measures must not result in policy paralysis. Analyse in the context of Section 17A of the PCA and the recent judicial verdict.</div>
+    <div class="attrib">— Practice question; skeleton reviewed at the start of Class 8: quote → PCA → 17A → evolution diagram → balance → concerns → Lokpal-based filter → conclusion (GlobE / "steel frame")</div>
+  </div>
+</section>
+
+<section id="mcqs">
+  <h2>10. Practice MCQs (self-authored, Prelims-style)</h2>
+  <p style="font-family: Arial, sans-serif; font-size: 0.85em; color: #57606a;">Original questions written from the facts in this class.</p>
+
+  <div class="mcq-card">
+    <div class="q-num">Q1</div>
+    <div class="q-text">Which constitutional provision enables Parliament to extend Part IX to Fifth Schedule areas, forming the basis of PESA?</div>
+    <div class="options">
+      <div class="option">(A) Article 244(2)</div>
+      <div class="option correct">(B) Article 243M(4)(b)</div>
+      <div class="option">(C) Article 243ZC</div>
+      <div class="option">(D) Article 275(1)</div>
+    </div>
+    <div class="answer-box"><span class="answer-label">Answer: (B).</span> Article 243M(4)(b). Article 243ZC is the analogous provision for municipalities.</div>
+  </div>
+
+  <div class="mcq-card">
+    <div class="q-num">Q2</div>
+    <div class="q-text">Under PESA, the share of seats reserved for Scheduled Tribes in panchayats in Scheduled Areas must be:</div>
+    <div class="options">
+      <div class="option">(A) Exactly in proportion to population, with no minimum</div>
+      <div class="option correct">(B) Not less than one-half of total seats</div>
+      <div class="option">(C) One-third of total seats</div>
+      <div class="option">(D) Decided by the Governor</div>
+    </div>
+    <div class="answer-box"><span class="answer-label">Answer: (B).</span> At least 50%, and all chairperson posts reserved for STs.</div>
+  </div>
+
+  <div class="mcq-card">
+    <div class="q-num">Q3</div>
+    <div class="q-text">In which case did the Supreme Court hold that tribal land in Scheduled Areas cannot be leased to non-tribal private mining companies?</div>
+    <div class="options">
+      <div class="option correct">(A) Samatha v. State of Andhra Pradesh</div>
+      <div class="option">(B) BALCO Employees' Union v. Union of India</div>
+      <div class="option">(C) Vineet Narain v. Union of India</div>
+      <div class="option">(D) Subramanian Swamy v. Director, CBI</div>
+    </div>
+    <div class="answer-box"><span class="answer-label">Answer: (A).</span> Samatha (1997); BALCO (2002) later diluted it.</div>
+  </div>
+
+  <div class="mcq-card">
+    <div class="q-num">Q4</div>
+    <div class="q-text">Zero Coupon Zero Principal (ZCZP) instruments are associated with:</div>
+    <div class="options">
+      <div class="option">(A) RBI's sovereign gold bonds</div>
+      <div class="option correct">(B) Fundraising by non-profits on the Social Stock Exchange</div>
+      <div class="option">(C) CSR expenditure accounting</div>
+      <div class="option">(D) FCRA registration renewal</div>
+    </div>
+    <div class="answer-box"><span class="answer-label">Answer: (B).</span> Registered NPOs list ZCZP instruments on the SSE segment; donors get no interest or principal back.</div>
+  </div>
+
+  <div class="mcq-card">
+    <div class="q-num">Q5</div>
+    <div class="q-text">Section 17A of the Prevention of Corruption Act requires prior approval:</div>
+    <div class="options">
+      <div class="option">(A) Before prosecuting any public servant</div>
+      <div class="option correct">(B) Before inquiry/investigation into offences relating to recommendations made or decisions taken in official duties</div>
+      <div class="option">(C) Only for officers of Joint Secretary rank and above</div>
+      <div class="option">(D) Only for MPs and MLAs</div>
+    </div>
+    <div class="answer-box"><span class="answer-label">Answer: (B).</span> Sanction to prosecute is Section 19. The rank-based rule (C) was Section 6A of the DSPE Act, struck down in 2014.</div>
+  </div>
+
+  <div class="mcq-card">
+    <div class="q-num">Q6</div>
+    <div class="q-text">Section 6A of the Delhi Special Police Establishment Act was struck down in Subramanian Swamy v. Director, CBI (2014) mainly because it:</div>
+    <div class="options">
+      <div class="option">(A) Violated federalism</div>
+      <div class="option correct">(B) Created an unreasonable classification by rank, violating Article 14</div>
+      <div class="option">(C) Conflicted with the Lokpal Act</div>
+      <div class="option">(D) Exceeded Parliament's legislative competence</div>
+    </div>
+    <div class="answer-box"><span class="answer-label">Answer: (B).</span> Protecting only Joint Secretary-and-above officers was held to violate equality.</div>
+  </div>
+
+  <div class="mcq-card">
+    <div class="q-num">Q7</div>
+    <div class="q-text">The committee that recommended extending Panchayati Raj to Scheduled Areas, leading to PESA, was headed by:</div>
+    <div class="options">
+      <div class="option">(A) L.M. Singhvi</div>
+      <div class="option correct">(B) Dilip Singh Bhuria</div>
+      <div class="option">(C) Balwant Rai Mehta</div>
+      <div class="option">(D) U.N. Dhebar</div>
+    </div>
+    <div class="answer-box"><span class="answer-label">Answer: (B).</span> The Bhuria Committee (1994–95).</div>
+  </div>
+
+  <div class="mcq-card">
+    <div class="q-num">Q8</div>
+    <div class="q-text">The Santhanam Committee (1964) is best known for recommending the creation of:</div>
+    <div class="options">
+      <div class="option">(A) The Lokpal</div>
+      <div class="option correct">(B) The Central Vigilance Commission</div>
+      <div class="option">(C) The Enforcement Directorate</div>
+      <div class="option">(D) The CBI's Economic Offences Wing</div>
+    </div>
+    <div class="answer-box"><span class="answer-label">Answer: (B).</span> The CVC was set up in 1964 on its recommendation.</div>
+  </div>
+</section>
+
+<section id="glossary">
+  <h2>Glossary — quick revision</h2>
+  <dl>
+    <div class="glossary-term"><dt>PESA</dt><dd>Panchayats (Extension to the Scheduled Areas) Act, 1996 — Gram Sabha empowerment in Fifth Schedule areas.</dd></div>
+    <div class="glossary-term"><dt>Consultation vs. consent</dt><dd>Seeking the Gram Sabha's view vs. treating its "no" as a binding veto.</dd></div>
+    <div class="glossary-term"><dt>Urbanisation loophole</dt><dd>Reclassifying a Scheduled Area as urban to escape PESA after Gram Sabha opposition.</dd></div>
+    <div class="glossary-term"><dt>Post-LWE strategy</dt><dd>Using PESA and FRA implementation to prevent renewed tribal alienation after LWE declines.</dd></div>
+    <div class="glossary-term"><dt>Noblesse oblige</dt><dd>The moral duty of the wealthy to give.</dd></div>
+    <div class="glossary-term"><dt>California consensus</dt><dd>Tech-billionaire philanthropy seeking rapid, measurable, tech-driven change, often bypassing the state.</dd></div>
+    <div class="glossary-term"><dt>Programmatic funding</dt><dd>Money tied to a specific short-term project rather than the organisation.</dd></div>
+    <div class="glossary-term"><dt>Impact vs. effect</dt><dd>Claiming sole causation vs. acknowledging a contribution to collective change (Anurag Behar).</dd></div>
+    <div class="glossary-term"><dt>"Perform your pain"</dt><dd>Beneficiaries forced to publicly display suffering to attract aid.</dd></div>
+    <div class="glossary-term"><dt>Deemed cessation (FCRA Bill)</dt><dd>Automatic end of registration if renewal is not obtained in time.</dd></div>
+    <div class="glossary-term"><dt>Designated authority (FCRA Bill)</dt><dd>Government body that takes over foreign-funded assets after cessation.</dd></div>
+    <div class="glossary-term"><dt>Section 17A vs. 19 PCA</dt><dd>Approval to investigate vs. sanction to prosecute.</dd></div>
+    <div class="glossary-term"><dt>Single Directive</dt><dd>Executive instructions requiring govt approval for CBI probes; struck down in Vineet Narain (1997).</dd></div>
+    <div class="glossary-term"><dt>Play-it-safe syndrome</dt><dd>Officials avoiding decisions for fear of investigation — causing policy paralysis.</dd></div>
+    <div class="glossary-term"><dt>Element of surprise</dt><dd>Lost when a sanction request alerts the suspect official.</dd></div>
+  </dl>
+</section>
+
+<section id="arcs">
+  <h2>Revision kit (ARCS method)</h2>
+  <div class="arcs-box">
+    <h4>A — Active Recall</h4>
+    <div class="recall-q">
+      <p class="q-text">1. Name four ways PESA is bypassed in practice.</p>
+      <details><summary></summary><div class="ans">Treating consent as consultation; parallel bodies (JFMCs); CAMPA land banks/top-down afforestation; the urbanisation loophole; delayed/vague rules.</div></details>
+    </div>
+    <div class="recall-q">
+      <p class="q-text">2. What are the three deficits of the California consensus?</p>
+      <details><summary></summary><div class="ans">Accountability, coordination, democratic legitimacy.</div></details>
+    </div>
+    <div class="recall-q">
+      <p class="q-text">3. Give the five main changes in the FCRA Amendment Bill 2026.</p>
+      <details><summary></summary><div class="ans">Deemed cessation; designated authority for assets; centralised enforcement; prohibition extended to news/current-affairs producers; expanded liability of key functionaries.</div></details>
+    </div>
+    <div class="recall-q">
+      <p class="q-text">4. Trace prior approval for corruption probes from the Single Directive to Section 17A.</p>
+      <details><summary></summary><div class="ans">Single Directive → Vineet Narain (1997) strikes it down → Sec 6A DSPE (2003, JS and above) → Subramanian Swamy (2014) strikes 6A down → Sec 17A PCA (2018) → split verdict (Jan 2026).</div></details>
+    </div>
+    <div class="recall-q">
+      <p class="q-text">5. What did each judge hold in the 17A split verdict?</p>
+      <details><summary></summary><div class="ans">Nagarathna: unconstitutional (Art 14, conflict of interest, "old wine in new bottle"). Viswanathan: valid but approval to come from independent bodies like the Lokpal/Lokayukta.</div></details>
+    </div>
+  </div>
+
+  <div class="arcs-box spacing-tracker">
+    <h4>R — Repeat with Spacing</h4>
+    <p>Lecture processed: Oct 10, 2026.</p>
+    <table>
+      <tr><th>Review</th><th>Target date</th><th>Done</th></tr>
+      <tr><td>Day 1</td><td>Oct 10</td><td><input type="checkbox"></td></tr>
+      <tr><td>Day 3</td><td>Oct 13</td><td><input type="checkbox"></td></tr>
+      <tr><td>Day 7</td><td>Oct 17</td><td><input type="checkbox"></td></tr>
+      <tr><td>Day 21</td><td>Oct 31</td><td><input type="checkbox"></td></tr>
+    </table>
+  </div>
+
+  <div class="arcs-box">
+    <h4>C — Contrast &amp; Chunk</h4>
+    <table>
+      <tr><th>Term A</th><th>Term B</th><th>The ONE distinguishing point</th></tr>
+      <tr><td>Samatha (1997)</td><td>BALCO (2002)</td><td>No leasing of tribal land to non-tribals vs. dilution permitting BALCO mining</td></tr>
+      <tr><td>Washington consensus</td><td>California consensus</td><td>Roll back the state via markets vs. bypass the state via tech philanthropy</td></tr>
+      <tr><td>Impact</td><td>Effect</td><td>"We caused it" vs. "we contributed to it"</td></tr>
+      <tr><td>Section 6A DSPE</td><td>Section 17A PCA</td><td>Rank-based protection vs. function-based (decisions/recommendations)</td></tr>
+    </table>
+  </div>
+
+  <div class="arcs-box mnemonic-box">
+    <h4>S — Stick with Encoding Tricks</h4>
+    <p><strong>"Jal, Jangal, Zameen"</strong> = the three things PESA protects — use it as intro or conclusion.</p>
+    <p><strong>17A ladder:</strong> "Single → Struck → Six-A → Struck → Seventeen-A → Split" (S-S-6-S-17-S).</p>
+  </div>
+</section>
+
+<section id="gaps">
+  <h2>Supplementary research — filling gaps</h2>
+  <div class="gap-box">
+    <h4>Jharkhand PESA rules — verified</h4>
+    <p>The Jharkhand cabinet approved the rules on 23 December 2025; they were formally notified on 2 January 2026, covering roughly 16,000 villages and 2,074 panchayats in the state's Fifth Schedule areas — making Jharkhand one of the last major Fifth Schedule states to operationalise PESA.</p>
+  </div>
+  <div class="gap-box">
+    <h4>Section 17A split verdict — verified</h4>
+    <p>Delivered in January 2026 in <em>Centre for Public Interest Litigation v. Union of India</em>. Justice B.V. Nagarathna held 17A unconstitutional; Justice K.V. Viswanathan upheld it but read it down so that sanction decisions are taken by independent bodies such as the Lokpal or Lokayukta. The matter goes to a larger bench.</p>
+  </div>
+  <div class="gap-box">
+    <h4>FCRA Amendment Bill 2026 — verified</h4>
+    <p>PRS's legislative brief confirms the deemed-cessation and designated-authority provisions. The designated authority (under MHA) has civil-court powers; foreign contributions and assets provisionally vest in it on cancellation/cessation and permanently vest if fresh registration isn't obtained; religious character of places of worship must be maintained. Check the bill's status before the exam — the lecture said it was on hold.</p>
+  </div>
+  <div class="gap-box">
+    <h4>Figures and names to verify</h4>
+    <ul>
+      <li>CPI rank: the lecture's "91/182" — check the latest Transparency International edition.</li>
+      <li>"How India Gives" and India Nonprofit Report figures — confirm against the reports.</li>
+      <li>The Kerala blood-money crowdfunding amount — reported figures differ from the lecture's ₹47 crore.</li>
+      <li>The committee recommending "absolute right to say no" and land-for-land compensation — name unclear in captions.</li>
+      <li>"Sanskritisation of corruption" attribution.</li>
+    </ul>
+  </div>
+  <div class="gap-box">
+    <h4>What pairs well</h4>
+    <ul>
+      <li>FRA 2006 — instructor says nothing new: Gram Sabha role, community resources, bureaucratisation (a tribal's first contact with the state is often an armed forest guard).</li>
+      <li>Lokpal and Lokayukta Act, 2013 — revise for the 17A answer.</li>
+      <li>Next class: social-justice block begins.</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  Notes compiled from an unlisted lecture recording ("class 7 cava26") using YouTube's auto-generated transcript; part of the transcript around the charity topic was missing. Several names were transcribed imperfectly and are flagged for verification. Practice MCQs are original questions written from the lecture's facts. Click Save (first time will ask you to pick this file) to write your edits directly to disk.
+</footer>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11.15.0/dist/mermaid.min.js" integrity="sha384-yQ4mmBBT+vhTAwjFH0toJXNYJ6O4usWnt6EPIdWwrRvx2V/n5lXuDZQwQFeSFydF" crossorigin="anonymous"></script>
+<script>
+(function() {
+  var mode = null;
+  var noteCounter = 0;
+
+  var btnHighlight = document.getElementById('btn-highlight');
+  var btnUnderline = document.getElementById('btn-underline');
+  var btnNote = document.getElementById('btn-note');
+  var btnClear = document.getElementById('btn-clear');
+  var btnSave = document.getElementById('btn-save');
+  var statusText = document.getElementById('status-text');
+  var contentRoot = document.getElementById('content-root');
+  var noteBox = document.getElementById('note-input-box');
+  var noteText = document.getElementById('note-text');
+  var pendingNoteTarget = null;
+
+  function setMode(newMode) {
+    mode = mode === newMode ? null : newMode;
+    btnHighlight.classList.toggle('active', mode === 'highlight');
+    btnUnderline.classList.toggle('active', mode === 'underline');
+    btnNote.classList.toggle('active', mode === 'note');
+  }
+
+  btnHighlight.addEventListener('click', function() { setMode('highlight'); });
+  btnUnderline.addEventListener('click', function() { setMode('underline'); });
+  btnNote.addEventListener('click', function() { setMode('note'); });
+
+  function markDirty() {
+    statusText.textContent = 'Unsaved changes';
+    statusText.style.color = '#993c1d';
+  }
+
+  document.addEventListener('mouseup', function(e) {
+    if (mode !== 'highlight' && mode !== 'underline') return;
+    var sel = window.getSelection();
+    if (!sel || sel.isCollapsed || sel.rangeCount === 0) return;
+    var range = sel.getRangeAt(0);
+    if (!contentRoot.contains(range.commonAncestorContainer)) return;
+
+    var wrapper = document.createElement(mode === 'highlight' ? 'mark' : 'u');
+    wrapper.className = mode === 'highlight' ? 'user-highlight' : 'user-underline';
+    try {
+      range.surroundContents(wrapper);
+    } catch (err) {
+      var frag = range.extractContents();
+      wrapper.appendChild(frag);
+      range.insertNode(wrapper);
+    }
+    sel.removeAllRanges();
+    markDirty();
+  });
+
+  contentRoot.addEventListener('click', function(e) {
+    if (mode !== 'note') return;
+    if (e.target.closest('.user-note')) return;
+    pendingNoteTarget = e.target;
+    noteBox.style.display = 'block';
+    var x = Math.min(e.clientX, window.innerWidth - 280);
+    var y = Math.min(e.clientY, window.innerHeight - 140);
+    noteBox.style.left = x + 'px';
+    noteBox.style.top = y + 'px';
+    noteText.value = '';
+    noteText.focus();
+  });
+
+  document.getElementById('note-cancel').addEventListener('click', function() {
+    noteBox.style.display = 'none';
+    pendingNoteTarget = null;
+  });
+
+  document.getElementById('note-add').addEventListener('click', function() {
+    var text = noteText.value.trim();
+    if (!text || !pendingNoteTarget) { noteBox.style.display = 'none'; return; }
+    noteCounter++;
+    var noteDiv = document.createElement('div');
+    noteDiv.className = 'user-note';
+    noteDiv.setAttribute('data-note-id', noteCounter);
+    noteDiv.innerHTML = '<span class="note-label">Your note</span>' +
+      '<button class="del-note" title="Remove note">&times;</button>' +
+      '<span class="note-body"></span>';
+    noteDiv.querySelector('.note-body').textContent = text;
+    noteDiv.querySelector('.del-note').addEventListener('click', function() {
+      noteDiv.remove();
+      markDirty();
+    });
+
+    var target = pendingNoteTarget.closest('li, p, td, div.quote-card, section') || contentRoot;
+    target.parentNode.insertBefore(noteDiv, target.nextSibling);
+
+    noteBox.style.display = 'none';
+    pendingNoteTarget = null;
+    markDirty();
+    setMode('note');
+  });
+
+  btnClear.addEventListener('click', function() {
+    if (!confirm('Remove all your highlights, underlines, and notes on this page?')) return;
+    contentRoot.querySelectorAll('.user-note').forEach(function(n) { n.remove(); });
+    contentRoot.querySelectorAll('mark.user-highlight').forEach(function(m) {
+      var parent = m.parentNode;
+      while (m.firstChild) parent.insertBefore(m.firstChild, m);
+      parent.removeChild(m);
+    });
+    contentRoot.querySelectorAll('u.user-underline').forEach(function(u) {
+      var parent = u.parentNode;
+      while (u.firstChild) parent.insertBefore(u.firstChild, u);
+      parent.removeChild(u);
+    });
+    markDirty();
+  });
+
+  var fallbackHelp = document.getElementById('fallback-help');
+  document.getElementById('fallback-close').addEventListener('click', function() {
+    fallbackHelp.style.display = 'none';
+  });
+
+  var fileHandle = null;
+  var fsaSupported = 'showSaveFilePicker' in window;
+  var THIS_FILENAME = 'notes.html';
+
+  function buildFullHtml() {
+    var doc = document.documentElement.cloneNode(true);
+    var liveContentRoot = doc.querySelector('#content-root');
+    if (liveContentRoot) liveContentRoot.innerHTML = contentRoot.innerHTML;
+    return '<!DOCTYPE html>\n' + doc.outerHTML;
+  }
+
+  async function writeToFile() {
+    var writable = await fileHandle.createWritable();
+    await writable.write(buildFullHtml());
+    await writable.close();
+  }
+
+  btnSave.addEventListener('click', async function() {
+    statusText.textContent = 'Saving…';
+    statusText.style.color = '#57606a';
+    if (!fsaSupported) {
+      fallbackHelp.style.display = 'block';
+      statusText.textContent = 'Direct save not supported in this browser';
+      statusText.style.color = '#993c1d';
+      return;
+    }
+    try {
+      if (!fileHandle) {
+        fileHandle = await window.showSaveFilePicker({
+          suggestedName: THIS_FILENAME,
+          types: [{ description: 'HTML file', accept: { 'text/html': ['.html'] } }]
+        });
+      }
+      var perm = await fileHandle.queryPermission({ mode: 'readwrite' });
+      if (perm !== 'granted') {
+        perm = await fileHandle.requestPermission({ mode: 'readwrite' });
+      }
+      if (perm !== 'granted') {
+        statusText.textContent = 'File permission denied — click Save to retry';
+        statusText.style.color = '#993c1d';
+        fileHandle = null;
+        return;
+      }
+      await writeToFile();
+      statusText.textContent = 'Saved to file just now';
+      statusText.style.color = '#3b6d11';
+    } catch (err) {
+      console.error('SAVE_ERROR', err.name, err.message, err);
+      if (err.name === 'AbortError') {
+        statusText.textContent = 'Save cancelled';
+        statusText.style.color = '#57606a';
+      } else {
+        statusText.textContent = 'Save failed: ' + err.name + ' — click Save to retry';
+        statusText.style.color = '#993c1d';
+        fileHandle = null;
+      }
+    }
+  });
+
+  contentRoot.querySelectorAll('.user-note .del-note').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      btn.closest('.user-note').remove();
+      markDirty();
+    });
+  });
+
+  contentRoot.querySelectorAll('.spacing-tracker input[type="checkbox"]').forEach(function(cb) {
+    cb.addEventListener('change', function() {
+      if (cb.checked) { cb.setAttribute('checked', 'checked'); }
+      else { cb.removeAttribute('checked'); }
+      markDirty();
+    });
+  });
+
+  if (window.mermaid) {
+    mermaid.initialize({ startOnLoad: true, securityLevel: 'strict' });
+  }
+})();
+</script>
+
+</body>
+</html>
