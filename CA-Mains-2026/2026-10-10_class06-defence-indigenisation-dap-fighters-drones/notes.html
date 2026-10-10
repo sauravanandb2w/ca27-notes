@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class 6(26): Defence Indigenisation, DAP &amp; Modern Warfare Systems</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: #faf9f6;
+    color: #1f2328;
+    margin: 0;
+    padding: 0 0 80px;
+    line-height: 1.6;
+  }
+  .toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: #ffffff;
+    border-bottom: 2px solid #1d5b8b;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: Arial, sans-serif;
+    flex-wrap: wrap;
+  }
+  .toolbar button {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    padding: 7px 14px;
+    border-radius: 6px;
+    border: 1px solid #d8d2c6;
+    background: #fff;
+    cursor: pointer;
+    color: #1f2328;
+  }
+  .toolbar button:hover { background: #e6f1fb; border-color: #1d5b8b; }
+  .toolbar button.active { background: #1d5b8b; color: #fff; border-color: #1d5b8b; }
+  .toolbar .save-btn { background: #2f6b4f; color: #fff; border-color: #2f6b4f; margin-left: auto; }
+  .toolbar .save-btn:hover { background: #24543e; }
+  .toolbar .status { font-size: 12px; color: #57606a; margin-left: auto; padding-right: 8px; }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 30px 20px; }
+  header { border-bottom: 3px solid #1d5b8b; padding-bottom: 20px; margin-bottom: 30px; }
+  header h1 { font-size: 1.6em; margin: 0 0 6px; color: #1d5b8b; }
+  header .meta { color: #57606a; font-size: 0.95em; font-family: Arial, sans-serif; }
+  section { margin-bottom: 42px; }
+  h2 { font-size: 1.4em; color: #1d5b8b; border-left: 4px solid #1d5b8b; padding-left: 12px; margin-bottom: 14px; }
+  h3 { font-size: 1.12em; margin: 22px 0 8px; }
+  p { margin: 10px 0; }
+  .summary-box { background: #e6f1fb; border-radius: 8px; padding: 18px 22px; font-size: 0.98em; }
+  ul, ol.answers { padding-left: 24px; }
+  li { margin-bottom: 6px; }
+  .timestamp { font-family: 'Courier New', monospace; font-size: 0.78em; color: #57606a; background: #e2ddd4; border-radius: 4px; padding: 1px 6px; margin-right: 6px; }
+  .quote-card { background: #fff; border: 1px solid #e2ddd4; border-left: 4px solid #1d5b8b; border-radius: 6px; padding: 14px 18px; margin: 14px 0; }
+  .quote-card .q { font-style: italic; font-size: 1.05em; }
+  .quote-card .attrib { font-family: Arial, sans-serif; font-size: 0.85em; color: #57606a; margin-top: 6px; }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.95em; background: #fff; }
+  th, td { border: 1px solid #e2ddd4; padding: 8px 12px; text-align: left; vertical-align: top; }
+  th { background: #e6f1fb; font-family: Arial, sans-serif; font-size: 0.88em; }
+  .gap-box { background: #eef4f0; border: 1px solid #cfe3d6; border-radius: 8px; padding: 16px 20px; margin-top: 16px; font-size: 0.95em; }
+  .gap-box h4 { margin: 0 0 8px; color: #2f6b4f; font-family: Arial, sans-serif; font-size: 0.95em; }
+  .exam-tip { background: #fff7e6; border: 1px solid #f0dba8; border-radius: 8px; padding: 14px 20px; margin: 14px 0; font-size: 0.95em; }
+  .exam-tip::before { content: "Exam strategy: "; font-weight: bold; font-family: Arial, sans-serif; }
+  .term-box { background: #fdf3f3; border: 1px solid #ecd4d4; border-radius: 8px; padding: 12px 16px; margin: 10px 0; }
+  .term-box strong { color: #8b3a3a; }
+  .data-box { background: #f3f0fb; border: 1px solid #ddd6f0; border-radius: 8px; padding: 12px 16px; margin: 10px 0; font-family: 'Courier New', monospace; font-size: 0.9em; }
+  footer { margin-top: 60px; border-top: 1px solid #e2ddd4; padding-top: 16px; color: #57606a; font-size: 0.82em; font-family: Arial, sans-serif; }
+  .toc {
+    background: #fff;
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    padding: 16px 22px;
+    margin-bottom: 36px;
+    font-family: Arial, sans-serif;
+    font-size: 0.9em;
+  }
+  .toc h2 { font-size: 1em; margin: 0 0 10px; border: none; padding: 0; color: #1d5b8b; text-transform: uppercase; letter-spacing: 0.04em; }
+  .toc ol { columns: 2; margin: 0; padding-left: 20px; }
+  .toc a { color: #1f2328; text-decoration: none; }
+  .toc a:hover { color: #1d5b8b; text-decoration: underline; }
+  details.collapse-section {
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    background: #fff;
+    margin: 14px 0;
+    padding: 0;
+  }
+  details.collapse-section summary {
+    cursor: pointer;
+    padding: 12px 16px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 0.92em;
+    color: #1d5b8b;
+    list-style: none;
+  }
+  details.collapse-section summary::-webkit-details-marker { display: none; }
+  details.collapse-section summary::before { content: "▸ "; }
+  details.collapse-section[open] summary::before { content: "▾ "; }
+  details.collapse-section .collapse-body { padding: 4px 16px 16px; }
+  .glossary-term {
+    display: flex;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+  }
+  .glossary-term:last-child { border-bottom: none; }
+  .glossary-term dt { font-weight: bold; color: #8b3a3a; min-width: 220px; flex-shrink: 0; font-family: Arial, sans-serif; font-size: 0.9em; }
+  .glossary-term dd { margin: 0; }
+
+  mark.user-highlight { background: #fff176; padding: 1px 2px; border-radius: 2px; }
+  u.user-underline { text-decoration: underline; text-decoration-color: #1d5b8b; text-decoration-thickness: 2px; }
+  .user-note {
+    background: #e6f1fb;
+    border: 1px solid #85b7eb;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin: 8px 0;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #0c447c;
+    position: relative;
+  }
+  .user-note .note-label { font-weight: bold; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; display: block; }
+  .user-note .del-note { position: absolute; top: 6px; right: 8px; cursor: pointer; border: none; background: none; color: #0c447c; font-size: 14px; font-family: Arial, sans-serif; }
+  #note-input-box {
+    position: fixed;
+    display: none;
+    background: #fff;
+    border: 2px solid #1d5b8b;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    z-index: 100;
+    font-family: Arial, sans-serif;
+  }
+  #note-input-box textarea { width: 240px; height: 60px; font-family: Arial, sans-serif; font-size: 13px; border: 1px solid #d8d2c6; border-radius: 4px; padding: 6px; }
+  #note-input-box .note-actions { margin-top: 6px; display: flex; gap: 6px; justify-content: flex-end; }
+  #note-input-box button { font-size: 12px; padding: 5px 10px; border-radius: 4px; border: 1px solid #d8d2c6; background: #fff; cursor: pointer; }
+  #note-input-box button.primary { background: #1d5b8b; color: #fff; border-color: #1d5b8b; }
+  .content-target::selection { background: #ffe082; }
+  .board-caption { font-family: Arial, sans-serif; font-size: 0.82em; color: #57606a; margin-top: -8px; margin-bottom: 14px; }
+  .arcs-box {
+    background: #fff;
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 14px 0;
+  }
+  .arcs-box h4 { margin: 0 0 10px; color: #1d5b8b; font-family: Arial, sans-serif; font-size: 0.98em; }
+  .recall-q { margin-bottom: 14px; }
+  .recall-q p.q-text { font-weight: bold; margin: 0 0 6px; }
+  .recall-q details { border: none; margin: 0; }
+  .recall-q summary { font-family: Arial, sans-serif; font-size: 0.82em; color: #1d5b8b; cursor: pointer; list-style: none; padding: 2px 0; }
+  .recall-q summary::-webkit-details-marker { display: none; }
+  .recall-q summary::before { content: "Show answer \25B8 "; }
+  .recall-q details[open] summary::before { content: "Hide answer \25BE "; }
+  .recall-q .ans { background: #eef4f0; border-radius: 6px; padding: 8px 12px; margin-top: 6px; font-size: 0.95em; }
+  .spacing-tracker { font-family: Arial, sans-serif; font-size: 0.92em; }
+  .spacing-tracker table { margin: 8px 0; }
+  .spacing-tracker input[type="checkbox"] { width: 16px; height: 16px; cursor: pointer; }
+  .mnemonic-box { background: #fff7e6; border: 1px solid #f0dba8; border-radius: 8px; padding: 14px 18px; margin: 10px 0; }
+  .mnemonic-box h4 { margin: 0 0 6px; color: #8b5a1d; font-family: Arial, sans-serif; font-size: 0.92em; }
+  .applic-table td.gs-tag { font-family: Arial, sans-serif; font-weight: bold; font-size: 0.85em; white-space: nowrap; }
+  .applic-table .prelims-badge, .applic-table .mains-badge {
+    display: inline-block; font-family: Arial, sans-serif; font-size: 0.72em; font-weight: bold;
+    padding: 2px 8px; border-radius: 10px; margin-right: 4px;
+  }
+  .prelims-badge { background: #eaf3de; color: #3b6d11; }
+  .mains-badge { background: #e6f1fb; color: #1d5b8b; }
+  #fallback-help {
+    position: fixed;
+    display: none;
+    top: 60px;
+    right: 20px;
+    max-width: 320px;
+    background: #fff;
+    border: 2px solid #993c1d;
+    border-radius: 8px;
+    padding: 14px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    z-index: 200;
+  }
+  .mcq-card { background: #fff; border: 1px solid #e2ddd4; border-left: 4px solid #1d5b8b; border-radius: 8px; padding: 16px 20px; margin: 14px 0; }
+  .mcq-card .q-num { font-family: Arial, sans-serif; font-weight: bold; color: #1d5b8b; font-size: 0.82em; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 6px; }
+  .mcq-card .q-text { font-weight: bold; margin-bottom: 10px; }
+  .mcq-card .options { display: flex; flex-direction: column; gap: 6px; margin-bottom: 10px; }
+  .mcq-card .option { font-family: Arial, sans-serif; font-size: 0.92em; padding: 6px 10px; border-radius: 6px; background: #faf9f6; border: 1px solid #e2ddd4; }
+  .mcq-card .option.correct { background: #eaf3de; border-color: #b9d79a; color: #3b6d11; font-weight: bold; }
+  .mcq-card .answer-box { font-family: Arial, sans-serif; font-size: 0.88em; background: #eef4f0; border-radius: 6px; padding: 8px 12px; }
+  .mcq-card .answer-label { font-weight: bold; color: #2f6b4f; }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <button id="btn-highlight" title="Select text, then click to highlight it">Highlight</button>
+  <button id="btn-underline" title="Select text, then click to underline it">Underline</button>
+  <button id="btn-note" title="Click this, then click anywhere in the notes to drop a note">Add note</button>
+  <button id="btn-clear" title="Remove all your highlights, underlines, and notes">Clear my edits</button>
+  <span class="status" id="status-text">Not connected to file — click Save once to connect</span>
+  <button class="save-btn" id="btn-save">Save</button>
+</div>
+
+<div id="fallback-help">
+  <strong>Your browser can't save directly</strong>
+  <p style="margin:6px 0;">File System Access isn't supported here (common on Safari/Firefox). Use Chrome or Edge to enable direct-save, or use your browser's Save Page As (Ctrl/Cmd+S) to overwrite this file manually after editing.</p>
+  <button id="fallback-close" style="font-size: 12px; padding: 6px 12px; border-radius: 4px; border: 1px solid #993c1d; background: #993c1d; color: #fff; cursor: pointer;">Got it</button>
+</div>
+
+<div id="note-input-box">
+  <textarea id="note-text" placeholder="Type your note..."></textarea>
+  <div class="note-actions">
+    <button id="note-cancel">Cancel</button>
+    <button class="primary" id="note-add">Add</button>
+  </div>
+</div>
+
+<div class="wrap content-target" id="content-root">
+
+<header>
+  <h1>CA Mains 2026 — Class 6(26): Defence Indigenisation, Defence Acquisition Procedure &amp; Modern Warfare Systems (Fifth-Gen Fighters, Drones)</h1>
+  <div class="meta">
+    <span>Source: unlisted YouTube lecture recording ("class 6 CAVA26")</span> &middot;
+    <span>Duration: 0:00 – 1:48:00</span> &middot;
+    <span>Track: UPSC GS-3 (Internal Security / Defence Technology / Economy) — Current Affairs Answer Writing</span>
+  </div>
+</header>
+
+<nav class="toc">
+  <h2>Contents</h2>
+  <ol>
+    <li><a href="#applicability">Applicability — GS papers, Prelims &amp; Mains</a></li>
+    <li><a href="#part1">How to prepare defence for Mains</a></li>
+    <li><a href="#part2">Core data &amp; committees</a></li>
+    <li><a href="#part3">Indigenisation: concept &amp; strategic vocabulary</a></li>
+    <li><a href="#part4">Indigenisation: significance</a></li>
+    <li><a href="#part5">Indigenisation: challenges</a></li>
+    <li><a href="#part6">Indigenisation: schemes &amp; solutions</a></li>
+    <li><a href="#part7">Practice answer: defence exports &amp; competitiveness</a></li>
+    <li><a href="#part8">Defence Acquisition Procedure (DAP 2020 → draft 2026)</a></li>
+    <li><a href="#part9">Warfare terminology toolkit</a></li>
+    <li><a href="#part10">Fifth-generation fighters</a></li>
+    <li><a href="#part11">Drones &amp; drone swarms</a></li>
+    <li><a href="#mcqs">Practice MCQs (self-authored)</a></li>
+    <li><a href="#glossary">Glossary — quick revision</a></li>
+    <li><a href="#arcs">Revision kit (ARCS)</a></li>
+    <li><a href="#gaps">Supplementary research</a></li>
+  </ol>
+</nav>
+
+<section id="summary">
+  <h2>Executive summary</h2>
+  <div class="summary-box">
+  <p>Sixth class of the CA Mains 2026 series — the first of the defence block, taught by a different faculty member from the polity classes. The block is split in two: (1) <strong>policy and production</strong> (indigenisation, DRDO, DAP, DPSUs, exports) and (2) <strong>specific systems</strong> linked to recent conflicts (fifth-gen fighters, drones, directed-energy weapons, air/ballistic-missile defence).</p>
+  <ul>
+    <li><strong>Indigenisation</strong> is defined as technological sovereignty — moving from "know-how" (screwdriver assembly of black boxes) to "know-why" (design and IP ownership). Significance is organised into four reusable buckets: human capital, technological sovereignty, economic multiplier, strategic deterrence/autonomy.</li>
+    <li><strong>Challenges</strong> mirror those buckets (STEM gaps, know-how without IP, low GERD, immature industrial base) plus defence-specific ones: L1 bias, shallow offsets, private-sector deterrence, public-sector monopoly.</li>
+    <li><strong>Solutions</strong>: four fixed schemes (iDEX, TDF, SRIJAN portal, Positive Indigenisation Lists) plus defence corridors, the Strategic Partnership model, and export-led production.</li>
+    <li><strong>DAP</strong>: DAP 2020's contributions (offsets, procurement hierarchy with Buy-IDDM on top, PIL, emergency procurement) and problems (vendor lock-in, shallow offsets, L1 syndrome, GSQR trap); the draft DAP 2026 shifts the goal from "Make in India" to "Owned by India".</li>
+    <li><strong>Systems</strong>: a terminology toolkit (deterrence by denial/punishment, escalation dominance, escalate-to-de-escalate, network-centric warfare, distributed lethality), then fifth-gen fighters and drones — written as "2–3 lines on how it works, then reusable significance points".</li>
+  </ul>
+  </div>
+</section>
+
+<section id="applicability">
+  <h2>Applicability — GS papers, Prelims &amp; Mains</h2>
+  <table class="applic-table">
+    <tr><th>Sub-topic</th><th>GS Paper</th><th>Prelims</th><th>Mains</th></tr>
+    <tr>
+      <td class="gs-tag">Defence indigenisation, schemes, exports</td>
+      <td>GS-3 (Security / Economy / S&amp;T)</td>
+      <td><span class="prelims-badge">High</span>Scheme names (iDEX, TDF, SRIJAN, PIL), corridors, production/export figures.</td>
+      <td><span class="mains-badge">High</span>Near-annual GS-3 theme; framework below fits indigenisation, private sector, exports, DPSU and DRDO questions.</td>
+    </tr>
+    <tr>
+      <td class="gs-tag">Defence Acquisition Procedure</td>
+      <td>GS-3 (Security)</td>
+      <td><span class="prelims-badge">Medium</span>Buy-IDDM, emergency procurement limit, indigenous-content thresholds.</td>
+      <td><span class="mains-badge">High</span>Draft DAP 2026 makes this a live question this cycle.</td>
+    </tr>
+    <tr>
+      <td class="gs-tag">Fifth-gen fighters, drones, air/missile defence</td>
+      <td>GS-3 (S&amp;T / Security)</td>
+      <td><span class="prelims-badge">Medium</span>Platform names (AMCA, CATS Warrior), stealth/supercruise features.</td>
+      <td><span class="mains-badge">Medium–High</span>Recent conflicts make system-specific questions plausible; significance points are reusable across systems.</td>
+    </tr>
+  </table>
+</section>
+
+<section id="part1">
+  <h2>1. How to prepare defence for Mains</h2>
+  <ul>
+    <li><span class="timestamp">0:51</span>Prepare a topic <strong>as a whole</strong>, not every sub-component — the best return in S&amp;T/defence comes from a framework you can bend to any question, since the exact question is unpredictable (the instructor's example: a previous-year question on fusion was answerable from a whole-topic preparation).</li>
+    <li><span class="timestamp">2:48</span>Most significance points (strategic deterrence, autonomy, escalation control, economy, jobs, technological sovereignty) are <strong>valid across all systems</strong>. Only 2–3 lines change: a brief "what it is / how it works" for the specific system (e.g., "stealth, twin-engine fifth-gen fighter" vs. "single-engine delta-wing fighter").</li>
+    <li><span class="timestamp">3:53</span>For a system question, add one line on how it works (e.g., BMD: adversary launch → radar tracking → command-and-control → interceptor fired), then move to significance and challenges.</li>
+    <li><span class="timestamp">25:29</span><strong>Write in keywords.</strong> With ~150 words and ~10 points, each point gets 10–15 words — keyword-led points carry more content than long sentences.</li>
+  </ul>
+  <div class="exam-tip">Build one master skeleton (human capital → technology → economy → strategy) and reuse it for indigenisation, exports, DPSUs, DRDO, fighters, drones and BMD — swap only the 2–3 system-specific lines.</div>
+</section>
+
+<section id="part2">
+  <h2>2. Core data &amp; committees</h2>
+  <div class="data-box">
+    Defence production: ~₹1.5 lakh crore — roughly 3× the 2014-15 level (~₹46,000 crore). Use "three times in a decade" rather than memorising both numbers.<br>
+    Imports (SIPRI): India is the world's 2nd-largest arms importer (Ukraine 1st); roughly 9% of global imports over the last decade; Russia remains the largest supplier (lecture: ~40%).<br>
+    GERD (gross expenditure on R&amp;D, % of GDP — total R&amp;D, not defence only): Israel ~6, USA ~3, China ~2.5–2.7, India ~0.6–0.65. In PPP terms the US and China each spend ~US$1 trillion.
+  </div>
+  <div class="exam-tip">Draw the GERD comparison as a quick bar chart (Israel 6 → US 3 → China 2.7 → India 0.6). It works as a "finance" challenge in any S&amp;T answer, not just defence.</div>
+  <p style="font-family: Arial, sans-serif; font-size: 0.85em; color: #57606a;">Verified: the transcript's "2 billion" is wrong. Per DST's R&amp;D Statistics at a Glance 2022-23, India's GERD was ~PPP$57.9 billion in 2020-21 (0.64% of GDP), up from PPP$50.3 billion in 2014-15. Private industry contributed only ~36% of GERD.</p>
+
+  <h3>Committees to name in answers</h3>
+  <table>
+    <tr><th>Area</th><th>Committee (as best identified)</th><th>Use in answer</th></tr>
+    <tr><td>DRDO reform</td><td>Prof. K. VijayRaghavan committee (9 members; report July 2024)</td><td>DRDO to focus on R&amp;D, not production or product management; a PM-chaired Defence Technology Council to set the technology roadmap; project-based workforce with accountability. DRDO agreed to roughly 60% of the major reforms; implementation has been slow.</td></tr>
+    <tr><td>Procurement / offsets</td><td>Kelkar Committee (2005, Dr. Vijay Kelkar) — transcribed as "Vijkerk"</td><td>Offset clause for contracts of ₹300 crore and above; private firms as co-producers, including of strategic systems.</td></tr>
+    <tr><td>Strategic Partnership model</td><td>Dhirendra Singh Committee (2015, set up by Manohar Parrikar) — transcribed as "Singer"</td><td>Select Indian private firms as "strategic partners" acting as prime integrators on par with DPSUs, across six segments (aircraft, warships, armoured vehicles, complex weapons, surveillance, critical materials).</td></tr>
+    <tr><td>Indigenisation</td><td>Dr. A.P.J. Abdul Kalam-led self-reliance review (1990s)</td><td>Long-standing target of raising indigenous content.</td></tr>
+    <tr><td>Post-Kargil</td><td>Kargil Review Committee (K. Subrahmanyam)</td><td>Need for a dedicated, long-term procurement and capability-planning structure.</td></tr>
+  </table>
+  <p style="font-family: Arial, sans-serif; font-size: 0.85em; color: #57606a;">Committee names were garbled in auto-captions; the DRDO, Kelkar and Dhirendra Singh entries have since been verified against published sources.</p>
+</section>
+
+<section id="part3">
+  <h2>3. Indigenisation: concept &amp; strategic vocabulary</h2>
+  <p><span class="timestamp">11:05</span>India already manufactures many systems (Su-30MKI, BrahMos, Arjun, etc.), but often with imported critical components. The difference between manufacturing and indigenisation is the key word <strong>technological sovereignty</strong>.</p>
+  <div class="term-box"><strong>Defence indigenisation:</strong> having complete design, development and production knowledge, thereby attaining technological sovereignty over critical systems and components.</div>
+
+  <h3>Know-how vs. know-why</h3>
+  <ul>
+    <li><strong>Know-how</strong> = following given steps (licensed production, CKD kits, "screwdriver assembly"). Components remain <strong>black boxes</strong>.</li>
+    <li><strong>Know-why</strong> = understanding why every component and step is designed as it is — design and IP ownership.</li>
+    <li>Analogy used in class: assembling flat-pack furniture from instructions is know-how; it doesn't mean you can design furniture. India can assemble the Su-30MKI but took decades to field the LCA.</li>
+  </ul>
+  <div class="exam-tip">Two reusable transition phrases: "from know-how to know-why" and "from screwdriver assembly to IP and design knowledge". Use them in significance, challenges and solutions alike.</div>
+
+  <h3>Why black boxes are dangerous</h3>
+  <ul>
+    <li><strong>Geopolitical coercion</strong> — if critical supplies sit with one power, that power can pressure you. India's fleet is deliberately diversified (largely Russian/French; limited US platforms) so no single supplier controls it.</li>
+    <li><strong>Supply-chain vulnerability</strong> — (a) genuine disruption (e.g., Russian supply delays after the Ukraine war); (b) <strong>supplier leverage</strong> — the instructor's example: US weapons dependent on Chinese inputs limited US tariff pressure on China.</li>
+    <li>Both erode <strong>strategic deterrence</strong>.</li>
+  </ul>
+
+  <h3>The three Cs of strategic deterrence</h3>
+  <table>
+    <tr><th>C</th><th>Meaning</th><th>India's position (per lecture)</th></tr>
+    <tr><td>Capability</td><td>Ability to respond</td><td>Good against both Pakistan and China.</td></tr>
+    <tr><td>Credibility</td><td>Ability to <em>sustain</em> a war</td><td>Strong in short, high-intensity conflict; weaker than China in a protracted war, which only an indigenous industrial base can sustain.</td></tr>
+    <tr><td>Communication</td><td>Signals (missile tests, exercises, doctrines) the adversary perceives as true</td><td>Effective; India has no declared defence white paper/long-term doctrine yet.</td></tr>
+  </table>
+  <p>Protracted-war logic: high-intensity conflict can run on borrowed weapons; a long war is won by the side that can replenish and repair at home. With ~60% of India's inventory of Russian origin, good ties with Russia currently underwrite India's credibility in a long war.</p>
+
+  <h3>Strategic autonomy and sovereign supply chains</h3>
+  <p>Non-alignment can be sustained diplomatically, but in a conflict it holds only if supply lines are not dependent on one power. Militarily, <strong>strategic autonomy requires sovereignty of supply chains</strong>.</p>
+
+  <h3>Techno-nationalism</h3>
+  <div class="term-box"><strong>Techno-nationalism:</strong> using technology as an instrument of geopolitical power (e.g., reported Indian missile sales to countries in Turkey's neighbourhood shifting regional balances). Distinct from technological sovereignty, which is control over your own critical technology.</div>
+</section>
+
+<section id="part4">
+  <h2>4. Indigenisation: significance</h2>
+  <p>Four buckets — reusable for <em>any</em> defence answer:</p>
+  <table>
+    <tr><th>Bucket</th><th>Keyword points</th></tr>
+    <tr><td>Human capital</td><td>Highly skilled STEM workforce; checks brain drain.</td></tr>
+    <tr><td>Technological sovereignty</td><td>Know-why; indigenous design and IP; defence as <strong>anchor customer</strong> giving early market access to frontier tech (hypersonics, microwaves, drones); bridges the <strong>valley of death</strong> (prototype-to-production gap).</td></tr>
+    <tr><td>Economic multiplier</td><td>Direct and indirect jobs; indigenous defence industrial base (DPSU integrators with tier-1/tier-2 vendors — a platform like the LCA pulls in hundreds of component suppliers); exports; dual-use <strong>civilian spillover</strong> (lasers, internet, nuclear began as defence tech).</td></tr>
+    <tr><td>Strategic deterrence / autonomy</td><td>Sovereign supply chains; <strong>magazine depth</strong>; deterrence by denial and punishment; <strong>geoeconomic statecraft</strong> via exports; calibrating the Indo-Pacific balance of power.</td></tr>
+  </table>
+  <details class="collapse-section" open><summary>Valley of death</summary><div class="collapse-body">
+    Many Indian innovations stall between prototype and production for want of funding, a market, or skilled manpower. Assured defence demand closes that gap — e.g., large planned drone procurement signals a market and draws finance into the drone industry.
+  </div></details>
+  <details class="collapse-section"><summary>Magazine depth</summary><div class="collapse-body">
+    The depth of a stockpile. Example used: reports that the US would need years to restore air-defence interceptor stocks after expending them in Ukraine and a high-intensity conflict with Iran. An indigenous base lets you replenish.
+  </div></details>
+  <details class="collapse-section"><summary>Geoeconomic statecraft &amp; balance of power</summary><div class="collapse-body">
+    Defence platforms have 30–40 year life cycles. Exporting them (BrahMos to the Philippines) creates long-term dependence on India for spares and support — economic gain turned into geopolitical leverage. Arming South China Sea states with missiles and drones also helps offset China's numerical advantage.
+  </div></details>
+</section>
+
+<section id="part5">
+  <h2>5. Indigenisation: challenges</h2>
+  <p>The first four mirror the significance buckets; the rest are defence-specific.</p>
+  <ol class="answers">
+    <li><strong>Human capital</strong> — limited STEM graduates, limited employability, brain drain.</li>
+    <li><strong>Technology</strong> — know-how without know-why; lack of IP; the valley of death.</li>
+    <li><strong>Finance</strong> — GERD ~0.6% of GDP (draw the chart).</li>
+    <li><strong>Immature industrial base</strong> — gaps in AESA radars, advanced metallurgy, engines, hypersonics.</li>
+    <li><strong>Procurement policy</strong> — <strong>L1 bias</strong> and <strong>offset problems</strong> (see below).</li>
+    <li><strong>Private-sector deterrence</strong> — very high R&amp;D cost and no certainty of orders; the instructor cites the F-35 programme's near-trillion-dollar lifetime cost and the LCA's three decades as risks no private firm can carry alone; failed private naval ventures as cautionary examples.</li>
+    <li><strong>Public-sector monopoly</strong> — roughly 77–80% of defence production by the public sector; inefficiency and project delays.</li>
+  </ol>
+  <div class="term-box"><strong>L1 bias:</strong> contracts go to the lowest bidder. Vendors strip down equipment and dilute requirements to win, so India gets suboptimal hardware and little technology transfer. Rafale vs. Eurofighter is used as the illustration of choosing the L1 bid over a possibly more capable or more ToT-generous option.</div>
+  <div class="term-box"><strong>Offsets:</strong> a foreign vendor must reinvest a percentage of a large contract in India. In practice offsets often became shallow component work — screwdriver assembly — rather than deep technology transfer.</div>
+  <div class="exam-tip">Whenever procurement appears in a challenge, write "L1 bias" explicitly — the instructor treats it as a must-have keyword.</div>
+</section>
+
+<section id="part6">
+  <h2>6. Indigenisation: schemes &amp; solutions</h2>
+  <h3>The four fixed schemes (valid in any defence solution)</h3>
+  <table>
+    <tr><th>Scheme</th><th>What it does</th><th>Keyword in answer</th></tr>
+    <tr><td><strong>iDEX</strong> (Innovations for Defence Excellence, MoD)</td><td>Defence bodies post problem statements; startups, MSMEs, individuals propose solutions; winners get grant funding.</td><td>Innovation — crowdsourcing + funding; bridges valley of death.</td></tr>
+    <tr><td><strong>TDF</strong> (Technology Development Fund, MoD, run by DRDO)</td><td>Funds more scientific/technical problems and gives access to DRDO labs and test ranges (e.g., a private firm testing a long-range system on DRDO ranges).</td><td>Finance + facilities.</td></tr>
+    <tr><td><strong>SRIJAN portal</strong></td><td>MoD lists imported items/components; Indian firms that meet specs can claim and supply them. 14,000+ items listed (per lecture).</td><td>Import substitution ("wish list").</td></tr>
+    <tr><td><strong>Positive Indigenisation Lists</strong></td><td>Listed items must be procured domestically — an import embargo. 5,000+ items (per lecture).</td><td>Mandatory indigenous procurement → order visibility → de-risks private R&amp;D and manufacturing.</td></tr>
+  </table>
+  <div class="exam-tip">Shortcut: innovation → iDEX; finance → TDF; promoting domestic industry → PIL / SRIJAN. Three solution points done before you write anything else.</div>
+
+  <h3>Further solutions</h3>
+  <ul>
+    <li><strong>Institutional reform</strong> — implement the DRDO reform committee (lean, focused, well-funded); model DRDO on a frontier-tech research agency like DARPA.</li>
+    <li><strong>Defence industrial corridors</strong> (Uttar Pradesh, Tamil Nadu) — industrial agglomeration, common shared facilities, plug-and-play, export-oriented zones.</li>
+    <li><strong>Strategic Partnership model</strong> — foreign OEMs partner with select Indian firms that become prime integrators with full design and manufacturing knowledge. Example: licensed Scorpene production at Mazagon Dock building toward an indigenous submarine design; HAL's licensed production history feeding LCA design.</li>
+    <li><strong>Export-led production</strong> — open firms to the global market; set norms for technology export and make international quality certification standard so products are export-ready by default. Examples: Pinaka, BrahMos; the ATAGS artillery gun, exported to Armenia and since ordered by the Indian Army (307 guns, March 2025).</li>
+    <li><strong>Triple Helix model</strong> — government–academia–industry synergy; iDEX and TDF are early versions. A standard conclusion for any S&amp;T answer.</li>
+    <li><strong>Industry capability ladder</strong> (quote in handout) — firms move from "build to print" (follow exact instructions) to "build to requirement" (given only requirements, they design, manufacture, test and deliver).</li>
+  </ul>
+</section>
+
+<section id="part7">
+  <h2>7. Practice answer: defence exports &amp; competitiveness</h2>
+  <div class="quote-card">
+    <div class="q">How can promoting defence exports make India's defence industry competitive?</div>
+    <div class="attrib">— Practice question set in class (paraphrased)</div>
+  </div>
+  <p><span class="timestamp">1:07:36</span>Instructor's feedback: most students wrote "significance of defence exports" — which loses the first marks. The question asks about <em>competitiveness</em>. Read the 15 words, pick the 2–3 key words, and answer those.</p>
+  <ol class="answers">
+    <li><strong>Market</strong> — access to a ~US$2.5 trillion-plus global defence market instead of one domestic buyer.</li>
+    <li><strong>Private sector</strong> — most exporters are private firms, so exports grow them.</li>
+    <li><strong>Technology</strong> — export revenue is reinvested in R&amp;D → technological sovereignty.</li>
+    <li><strong>Talent</strong> — money and technology attract skilled people.</li>
+    <li><strong>Economies of scale</strong> — larger volumes cut unit costs → more sales.</li>
+    <li><strong>Solutions</strong>: quality certification norms, defence diplomacy, dedicated export verticals in DPSUs, foreign offices (e.g., HAL abroad), export finance via Exim Bank lines of credit.</li>
+  </ol>
+  <div class="exam-tip">The examiner rewards what was asked, not what you know. Translate the question's key words into a mini-framework before writing.</div>
+</section>
+
+<section id="part8">
+  <h2>8. Defence Acquisition Procedure (DAP 2020 → draft DAP 2026)</h2>
+  <h3>Why procurement needed reform</h3>
+  <ul>
+    <li>Contracts are large, create long-term dependence, and have a history of corruption scandals — L1 bidding was adopted partly to curb corruption, but created its own distortions.</li>
+    <li>After Kargil, capability gaps (e.g., hurried fitting of laser-guided munitions) led the review committee to recommend a dedicated procurement structure. DAP 2020 is the current framework.</li>
+  </ul>
+
+  <h3>DAP 2020 — contributions</h3>
+  <ol class="answers">
+    <li><strong>Offsets</strong> — channel a percentage of big contracts into Indian industry, with ToT and manufacturing transfer → builds the supply chain.</li>
+    <li><strong>Procurement hierarchy</strong> — five categories by indigenous content, with <strong>Buy (Indian-IDDM)</strong> (Indigenously Designed, Developed and Manufactured) the most preferred.</li>
+    <li><strong>Positive Indigenisation Lists</strong> — import embargo, order visibility, de-risking private firms.</li>
+    <li><strong>Rapid capability induction</strong> — <strong>emergency procurement</strong> up to ₹300 crore lets the forces bypass the full procedure (e.g., urgent drones, munitions, interceptors).</li>
+  </ol>
+
+  <h3>DAP 2020 — problems</h3>
+  <ol class="answers">
+    <li><strong>Import dependence via vendor lock-in / OEM dependence</strong> — even 50% indigenous content leaves critical technology with the OEM for decades.</li>
+    <li><strong>Shallow offsets</strong> — sub-component assembly instead of deep ToT.</li>
+    <li><strong>L1 syndrome</strong> — suboptimal hardware, hidden life-cycle costs.</li>
+    <li><strong>GSQR trap</strong> (General Staff Qualitative Requirements) — utopian requirements that no domestic supplier can meet, producing single-vendor situations or foreign purchases.</li>
+    <li><strong>Private-sector deterrence</strong> — adversarial contracting: penalties applied strictly to private firms but rarely to delayed public projects.</li>
+  </ol>
+
+  <h3>Draft DAP 2026 — key shifts (still a draft)</h3>
+  <p style="font-family: Arial, sans-serif; font-size: 0.85em; color: #57606a;">Status (verified): MoD released the draft on 10–11 Feb 2026, with comments open until 3 Mar 2026. It was meant to take effect on 1 Apr 2026 but had not been notified as of Aug 2026, so DAP 2020 remains the operative framework. Write "draft DAP 2026 proposes…".</p>
+  <ul>
+    <li><strong>"Owned by India"</strong> — beyond Make in India: hardware, software, IP and core technology owned by Indian entities.</li>
+    <li><strong>Software rights</strong> — recognises software as a weapon; complete indigenous control over software (prompted by cases of denied source-code access).</li>
+    <li><strong>Rationalised hierarchy</strong> — five categories to four, with preference to Buy (Indian-IDDM); indigenous content raised from 50% to 60%.</li>
+    <li><strong>Spiral development model</strong> — accept a basic product with fundamental capabilities, then upgrade iteratively instead of demanding top-tier specs from day one.</li>
+    <li><strong>Civil–military fusion</strong> — assured orders for iDEX/TDF winners (minimum prototype and production orders), crowdsourced invention, a level playing field for private players.</li>
+    <li><strong>Export promotion</strong> — adopt global defence manufacturing standards so products are certified for export by default (analogy: earlier BS-VI adoption would have made Indian cars export-ready).</li>
+  </ul>
+  <div class="exam-tip">The spiral model answers the air force's legitimate concern (it cannot field an inferior aircraft against China/Pakistan) and the industry's (it cannot leap straight to the frontier) — present both sides before recommending it.</div>
+</section>
+
+<section id="part9">
+  <h2>9. Warfare terminology toolkit</h2>
+  <table>
+    <tr><th>Term</th><th>Meaning</th><th>Example / use</th></tr>
+    <tr><td>Deterrence by denial</td><td>Deny the adversary the capacity to strike you — the <strong>shield</strong></td><td>Air defence, BMD; striking an air base's runway so aircraft cannot take off (precision measured by CEP)</td></tr>
+    <tr><td>Deterrence by punishment</td><td>Make the cost of escalation prohibitive — the <strong>sword</strong></td><td>Retaliatory strike capability; fighters and drones serve both roles</td></tr>
+    <tr><td>Air superiority</td><td>Complete dominance over the adversary's airspace</td><td>Fifth-gen fighters</td></tr>
+    <tr><td>Escalation dominance</td><td>Dominating the adversary at every level of conflict</td><td>Having a response at each rung</td></tr>
+    <tr><td>Escalate to de-escalate</td><td>Escalate first to force the adversary to back down</td><td>Pakistan's tactical nuclear weapons/"full-spectrum deterrence" against India's Cold Start doctrine</td></tr>
+    <tr><td>Network-centric warfare</td><td>Sensors, shooters and command integrated into one real-time picture</td><td>Integrated air command; even old guns become effective when networked</td></tr>
+    <tr><td>Distributed lethality / emergent intelligence</td><td>Lethality spread across many networked units that self-assign roles</td><td>Drone swarms; mesh, self-healing networks</td></tr>
+  </table>
+  <details class="collapse-section"><summary>Cold Start vs. full-spectrum deterrence</summary><div class="collapse-body">
+    After Pakistan's nuclear tests, India's approach (Cold Start) was a rapid, limited conventional thrust to seize territory and force negotiations. Pakistan's response was tactical (short-range) nuclear weapons — threatening nuclear use even in a limited conventional conflict, potentially on its own territory. This is "full-spectrum deterrence" — escalate-to-de-escalate. Ballistic missile defence partly restores India's deterrence against this.
+  </div></details>
+</section>
+
+<section id="part10">
+  <h2>10. Fifth-generation fighters</h2>
+  <div class="term-box"><strong>Fifth-gen fighter:</strong> a modern fighter capable of network-centric warfare, with stealth, supercruise, sensor fusion and an adaptive engine. Examples: F-35, Su-57, J-20.</div>
+  <h3>Features (keywords)</h3>
+  <ul>
+    <li>Network-centric warfare and <strong>sensor fusion</strong> — all onboard sensors fused by AI into one picture, which in turn feeds the network.</li>
+    <li><strong>Stealth</strong> — radar-absorbent material and aerodynamic shaping.</li>
+    <li><strong>Supercruise</strong> — sustained supersonic flight without afterburner.</li>
+    <li><strong>Adaptive engine</strong>; AESA radar (already present in 4.5-gen).</li>
+  </ul>
+  <h3>Why India needs one now</h3>
+  <ul>
+    <li><strong>Capability gap</strong> — the indigenous AMCA (Advanced Medium Combat Aircraft) is about a decade away.</li>
+    <li><strong>Two-front threat</strong> — China operates J-20/J-35; Pakistan is reportedly acquiring J-35. Risk of losing strategic deterrence for a decade.</li>
+  </ul>
+  <h3>Significance (reusable for any air platform)</h3>
+  <ol class="answers">
+    <li>Network-centric warfare.</li>
+    <li><strong>Counter A2/AD</strong> (anti-access/area denial) — a tiny radar cross-section lets it penetrate long-range air defences and compress the defender's reaction time.</li>
+    <li><strong>Escalation dominance</strong> — fielding superior platforms.</li>
+    <li><strong>Human–machine teaming</strong> (AI takes over tasks like evasive manoeuvres) and <strong>manned–unmanned teaming</strong> (one jet controls a pack of drones; e.g., HAL's CATS Warrior).</li>
+    <li><strong>Electronic warfare</strong> — engines with surplus power support dedicated suites to suppress enemy air defences and communications: spectrum dominance.</li>
+  </ol>
+</section>
+
+<section id="part11">
+  <h2>11. Drones &amp; drone swarms</h2>
+  <p>All fifth-gen significance points apply (NCW, suppression of air defences, escalation dominance, MUM-T). Drone-specific points:</p>
+  <ol class="answers">
+    <li><strong>Asymmetric warfare</strong> — a ~$2,000 drone can force a ~$2 million interceptor; attackers deplete the defender's magazine depth.</li>
+    <li><strong>Drone swarming</strong> — distributed lethality, plus the <strong>swarm trilemma</strong> below.</li>
+    <li><strong>Persistent ISR</strong> — continuous intelligence, surveillance and reconnaissance over terrain like the Himalaya that human patrols cannot cover.</li>
+    <li><strong>Battlefield logistics</strong> — supply to high-altitude posts (e.g., Siachen); <strong>distributed logistics</strong> that cannot be cut by destroying one bridge or tunnel.</li>
+    <li><strong>Dual-use applications</strong>.</li>
+  </ol>
+  <details class="collapse-section" open><summary>The drone-swarm trilemma</summary><div class="collapse-body">
+    A defender facing swarms can avoid at most two of three traps:
+    <ul>
+      <li><strong>Economic trap</strong> — cost dynamics favour the attacker.</li>
+      <li><strong>Tactical trap</strong> — keep firing and your magazine runs dry; then the attacker hits your launchers.</li>
+      <li><strong>Asset trap</strong> — conserve interceptors and you lose some assets.</li>
+    </ul>
+    Per the lecture, India avoided the trap in its recent conflict by using cheap gun-based systems within an integrated air-defence network against drones, keeping costs from favouring the attacker and preserving escalation dominance.
+  </div></details>
+  <p style="font-family: Arial, sans-serif; font-size: 0.85em; color: #57606a;">Instructor's note: ballistic missile defence (recently declared operational, per the lecture) and nuclear topics continue next class, with a 15-minute revision of BMD challenges and solutions.</p>
+</section>
+
+<section id="mcqs">
+  <h2>12. Practice MCQs (self-authored, Prelims-style)</h2>
+  <p style="font-family: Arial, sans-serif; font-size: 0.85em; color: #57606a;">Original questions written from the facts in this class.</p>
+
+  <div class="mcq-card">
+    <div class="q-num">Q1</div>
+    <div class="q-text">Under the Defence Acquisition Procedure 2020, which procurement category has the highest priority?</div>
+    <div class="options">
+      <div class="option">(A) Buy (Global)</div>
+      <div class="option">(B) Buy (Global – Manufacture in India)</div>
+      <div class="option correct">(C) Buy (Indian-IDDM)</div>
+      <div class="option">(D) Buy and Make (Indian)</div>
+    </div>
+    <div class="answer-box"><span class="answer-label">Answer: (C).</span> Buy (Indian-IDDM) — Indigenously Designed, Developed and Manufactured — sits at the top of the hierarchy.</div>
+  </div>
+
+  <div class="mcq-card">
+    <div class="q-num">Q2</div>
+    <div class="q-text">Which initiative works as an import embargo, requiring listed items to be procured only from domestic sources?</div>
+    <div class="options">
+      <div class="option">(A) SRIJAN portal</div>
+      <div class="option correct">(B) Positive Indigenisation Lists</div>
+      <div class="option">(C) Technology Development Fund</div>
+      <div class="option">(D) iDEX</div>
+    </div>
+    <div class="answer-box"><span class="answer-label">Answer: (B).</span> PILs are mandatory; SRIJAN is a voluntary import-substitution listing; TDF and iDEX fund innovation.</div>
+  </div>
+
+  <div class="mcq-card">
+    <div class="q-num">Q3</div>
+    <div class="q-text">The Technology Development Fund for defence is executed by:</div>
+    <div class="options">
+      <div class="option">(A) Hindustan Aeronautics Limited</div>
+      <div class="option correct">(B) Defence Research and Development Organisation</div>
+      <div class="option">(C) Department of Science and Technology</div>
+      <div class="option">(D) NITI Aayog</div>
+    </div>
+    <div class="answer-box"><span class="answer-label">Answer: (B).</span> TDF is a Ministry of Defence programme executed by DRDO, which also opens its labs and test facilities to participants.</div>
+  </div>
+
+  <div class="mcq-card">
+    <div class="q-num">Q4</div>
+    <div class="q-text">"Deterrence by denial" in defence strategy refers to:</div>
+    <div class="options">
+      <div class="option">(A) Threatening disproportionate retaliation after an attack</div>
+      <div class="option correct">(B) Making an adversary's attack likely to fail, so it is not attempted</div>
+      <div class="option">(C) Denying diplomatic recognition to an adversary</div>
+      <div class="option">(D) Refusing to export weapons to hostile states</div>
+    </div>
+    <div class="answer-box"><span class="answer-label">Answer: (B).</span> Denial is the "shield" (air defence, BMD); punishment is the "sword" (retaliation that makes escalation too costly).</div>
+  </div>
+
+  <div class="mcq-card">
+    <div class="q-num">Q5</div>
+    <div class="q-text">Which of the following is NOT a defining feature of a fifth-generation fighter?</div>
+    <div class="options">
+      <div class="option">(A) Stealth via radar-absorbent material and shaping</div>
+      <div class="option">(B) Supercruise</div>
+      <div class="option">(C) Sensor fusion</div>
+      <div class="option correct">(D) Mandatory twin-seat cockpit</div>
+    </div>
+    <div class="answer-box"><span class="answer-label">Answer: (D).</span> Fifth-gen fighters are typically single-seat; stealth, supercruise, sensor fusion and network-centric capability define the class.</div>
+  </div>
+
+  <div class="mcq-card">
+    <div class="q-num">Q6</div>
+    <div class="q-text">India's two defence industrial corridors are located in:</div>
+    <div class="options">
+      <div class="option">(A) Gujarat and Maharashtra</div>
+      <div class="option correct">(B) Uttar Pradesh and Tamil Nadu</div>
+      <div class="option">(C) Karnataka and Telangana</div>
+      <div class="option">(D) Andhra Pradesh and Odisha</div>
+    </div>
+    <div class="answer-box"><span class="answer-label">Answer: (B).</span> The corridors in Uttar Pradesh and Tamil Nadu aim at agglomeration, shared facilities and export orientation.</div>
+  </div>
+
+  <div class="mcq-card">
+    <div class="q-num">Q7</div>
+    <div class="q-text">"Escalate to de-escalate", as discussed in class, is most closely associated with:</div>
+    <div class="options">
+      <div class="option">(A) India's no-first-use nuclear posture</div>
+      <div class="option correct">(B) Pakistan's tactical nuclear weapons and full-spectrum deterrence</div>
+      <div class="option">(C) NATO's collective defence clause</div>
+      <div class="option">(D) China's no-first-use declaration</div>
+    </div>
+    <div class="answer-box"><span class="answer-label">Answer: (B).</span> Pakistan threatens nuclear escalation even in limited conventional conflict to counter India's conventional superiority (Cold Start).</div>
+  </div>
+
+  <div class="mcq-card">
+    <div class="q-num">Q8</div>
+    <div class="q-text">The "valley of death" in technology development refers to:</div>
+    <div class="options">
+      <div class="option">(A) Loss of skilled personnel to foreign firms</div>
+      <div class="option correct">(B) The gap between a working prototype and full-scale production</div>
+      <div class="option">(C) Obsolescence of platforms after 30–40 years</div>
+      <div class="option">(D) Failure of basic research to produce prototypes</div>
+    </div>
+    <div class="answer-box"><span class="answer-label">Answer: (B).</span> Many prototypes die for want of funding, market or skilled manpower; assured defence demand helps bridge the gap.</div>
+  </div>
+</section>
+
+<section id="glossary">
+  <h2>Glossary — quick revision</h2>
+  <dl>
+    <div class="glossary-term"><dt>Technological sovereignty</dt><dd>Complete design, development and production knowledge of critical systems and components.</dd></div>
+    <div class="glossary-term"><dt>Know-how vs. know-why</dt><dd>Following assembly steps vs. understanding and owning the design.</dd></div>
+    <div class="glossary-term"><dt>Screwdriver assembly</dt><dd>Assembling imported black-box components without design knowledge.</dd></div>
+    <div class="glossary-term"><dt>Three Cs of deterrence</dt><dd>Capability (respond), credibility (sustain war), communication (credible signals).</dd></div>
+    <div class="glossary-term"><dt>Magazine depth</dt><dd>Depth of a weapons stockpile; determines endurance in conflict.</dd></div>
+    <div class="glossary-term"><dt>Anchor customer</dt><dd>Defence as first buyer of frontier tech, giving early market access.</dd></div>
+    <div class="glossary-term"><dt>Valley of death</dt><dd>Prototype-to-production gap.</dd></div>
+    <div class="glossary-term"><dt>Geoeconomic statecraft</dt><dd>Defence exports creating long-term dependence and leverage.</dd></div>
+    <div class="glossary-term"><dt>Techno-nationalism</dt><dd>Technology used as an instrument of geopolitical power.</dd></div>
+    <div class="glossary-term"><dt>L1 bias</dt><dd>Lowest-bidder rule producing stripped-down equipment and weak ToT.</dd></div>
+    <div class="glossary-term"><dt>Offsets</dt><dd>Mandatory reinvestment of part of a foreign contract in India; often shallow in practice.</dd></div>
+    <div class="glossary-term"><dt>Buy (Indian-IDDM)</dt><dd>Top DAP category — indigenously designed, developed and manufactured.</dd></div>
+    <div class="glossary-term"><dt>GSQR trap</dt><dd>Over-ambitious qualitative requirements that exclude domestic suppliers.</dd></div>
+    <div class="glossary-term"><dt>Vendor lock-in</dt><dd>Long-term dependence on an OEM for spares and upgrades.</dd></div>
+    <div class="glossary-term"><dt>Spiral development</dt><dd>Induct a basic capable product, then upgrade in iterations.</dd></div>
+    <div class="glossary-term"><dt>Civil–military fusion</dt><dd>Private industry integrated with defence via assured orders and incentives.</dd></div>
+    <div class="glossary-term"><dt>Triple Helix</dt><dd>Government–academia–industry synergy.</dd></div>
+    <div class="glossary-term"><dt>Deterrence by denial / punishment</dt><dd>Shield (attack will fail) / sword (retaliation will be too costly).</dd></div>
+    <div class="glossary-term"><dt>Escalation dominance</dt><dd>Superiority at every rung of conflict.</dd></div>
+    <div class="glossary-term"><dt>A2/AD</dt><dd>Anti-access/area denial — layered defences keeping forces out.</dd></div>
+    <div class="glossary-term"><dt>MUM-T</dt><dd>Manned–unmanned teaming — one jet directing drones.</dd></div>
+    <div class="glossary-term"><dt>Drone-swarm trilemma</dt><dd>Economic, tactical, asset traps — a defender can avoid at most two.</dd></div>
+  </dl>
+</section>
+
+<section id="arcs">
+  <h2>Revision kit (ARCS method)</h2>
+  <p style="font-family: Arial, sans-serif; font-size: 0.88em; color: #57606a;">A—Active Recall, R—Repeat with Spacing, C—Contrast &amp; Chunk, S—Stick with Encoding Tricks.</p>
+
+  <div class="arcs-box">
+    <h4>A — Active Recall</h4>
+    <div class="recall-q">
+      <p class="q-text">1. What are the four buckets of significance for any defence answer?</p>
+      <details><summary></summary><div class="ans">Human capital, technological sovereignty, economic multiplier, strategic deterrence/autonomy.</div></details>
+    </div>
+    <div class="recall-q">
+      <p class="q-text">2. Which scheme maps to innovation, finance and domestic industry respectively?</p>
+      <details><summary></summary><div class="ans">iDEX (innovation), TDF (finance + facilities), PIL/SRIJAN (domestic industry / import substitution).</div></details>
+    </div>
+    <div class="recall-q">
+      <p class="q-text">3. Name four problems of DAP 2020.</p>
+      <details><summary></summary><div class="ans">Vendor lock-in/OEM dependence, shallow offsets, L1 syndrome, GSQR trap (plus private-sector deterrence).</div></details>
+    </div>
+    <div class="recall-q">
+      <p class="q-text">4. What are the key shifts in draft DAP 2026?</p>
+      <details><summary></summary><div class="ans">"Owned by India", software rights, four categories with IDDM preference and 60% indigenous content, spiral development, civil–military fusion with assured orders, global standards for exports.</div></details>
+    </div>
+    <div class="recall-q">
+      <p class="q-text">5. What is the drone-swarm trilemma?</p>
+      <details><summary></summary><div class="ans">Economic trap (cost favours attacker), tactical trap (magazine runs dry), asset trap (conserve interceptors and lose assets) — avoid two at most.</div></details>
+    </div>
+  </div>
+
+  <div class="arcs-box spacing-tracker">
+    <h4>R — Repeat with Spacing</h4>
+    <p>Lecture processed: Oct 10, 2026.</p>
+    <table>
+      <tr><th>Review</th><th>Target date</th><th>Done</th></tr>
+      <tr><td>Day 1</td><td>Oct 10</td><td><input type="checkbox"></td></tr>
+      <tr><td>Day 3</td><td>Oct 13</td><td><input type="checkbox"></td></tr>
+      <tr><td>Day 7</td><td>Oct 17</td><td><input type="checkbox"></td></tr>
+      <tr><td>Day 21</td><td>Oct 31</td><td><input type="checkbox"></td></tr>
+    </table>
+  </div>
+
+  <div class="arcs-box">
+    <h4>C — Contrast &amp; Chunk</h4>
+    <table>
+      <tr><th>Term A</th><th>Term B</th><th>The ONE distinguishing point</th></tr>
+      <tr><td>Technological sovereignty</td><td>Techno-nationalism</td><td>Control over your own critical tech vs. using tech as a geopolitical weapon</td></tr>
+      <tr><td>SRIJAN portal</td><td>Positive Indigenisation List</td><td>Voluntary import-substitution listing vs. mandatory import embargo</td></tr>
+      <tr><td>iDEX</td><td>TDF</td><td>Crowdsourced problem-solving with grants vs. funding plus DRDO facilities for technical problems</td></tr>
+      <tr><td>Deterrence by denial</td><td>Deterrence by punishment</td><td>Shield vs. sword</td></tr>
+      <tr><td>Human–machine teaming</td><td>Manned–unmanned teaming</td><td>AI assisting the pilot vs. a jet commanding drones</td></tr>
+    </table>
+  </div>
+
+  <div class="arcs-box mnemonic-box">
+    <h4>S — Stick with Encoding Tricks</h4>
+    <p><strong>"H-T-E-S"</strong> for significance: Human capital, Technology, Economy, Strategy — the same four headings become challenges (flip them) and solutions.</p>
+    <p><strong>Flat-pack furniture</strong> = know-how. Designing the cupboard = know-why.</p>
+  </div>
+</section>
+
+<section id="gaps">
+  <h2>Supplementary research — filling gaps</h2>
+  <div class="gap-box">
+    <h4>Figures to verify before citing</h4>
+    <ul>
+      <li><strong>Defence production</strong>: India reported a record of roughly ₹1.5 lakh crore in FY 2024-25, about three times 2014-15. Use the latest MoD figure.</li>
+      <li><strong>SIPRI import share and Russia's share</strong>: SIPRI's figures differ by five-year window; Russia's share of India's imports has been falling. Quote the latest SIPRI window rather than the lecture's "40%".</li>
+      <li><strong>iDEX grant amounts</strong>: the lecture's ranges were not clear; iDEX offers base grants, with a higher-tier "iDEX Prime" for larger projects. Check current limits.</li>
+      <li><strong>SRIJAN and PIL counts</strong> change frequently; quote the latest.</li>
+    </ul>
+  </div>
+  <div class="gap-box">
+    <h4>ATAGS — verified update to the lecture</h4>
+    <p>The lecture said India hadn't ordered ATAGS yet. That's out of date: on 26 March 2025 the MoD signed contracts worth about ₹6,900 crore with Bharat Forge (184 guns, 60%) and Tata Advanced Systems (123 guns) for 307 ATAGS plus 327 gun-towing vehicles. ATAGS is a 155 mm/52-calibre towed howitzer with a range of up to 48 km. Present it as "exported to Armenia and now ordered by the Indian Army".</p>
+  </div>
+  <div class="gap-box">
+    <h4>Draft DAP 2026 — verified status</h4>
+    <p>Draft released 10–11 February 2026; stakeholder comments until 3 March 2026. It was expected to take effect from 1 April 2026, but as of August 2026 it was still under review, and DAP 2020 remains operative. The draft's headline proposals (fewer categories, indigenous content moving toward 60%, "Owned by India") match the lecture. Re-check before the exam in case it is notified with changes.</p>
+  </div>
+  <div class="gap-box">
+    <h4>What pairs well for GS-3 prep</h4>
+    <ul>
+      <li>Defence Production and Export Promotion Policy targets (production and export goals).</li>
+      <li>The FDI cap in defence (raised to 74% automatic route, higher with approval).</li>
+      <li>Agnipath and theatre commands, for a broader defence-reform answer.</li>
+      <li>Next class: ballistic missile defence and nuclear topics.</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  Notes compiled from an unlisted lecture recording ("class 6 CAVA26") using YouTube's auto-generated transcript. Timestamps are approximate; several names (committees, systems, scholars) were transcribed imperfectly and are flagged for verification. Practice MCQs are original questions written from the lecture's underlying facts. Click Save (first time will ask you to pick this file) to write your edits directly to disk.
+</footer>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11.15.0/dist/mermaid.min.js" integrity="sha384-yQ4mmBBT+vhTAwjFH0toJXNYJ6O4usWnt6EPIdWwrRvx2V/n5lXuDZQwQFeSFydF" crossorigin="anonymous"></script>
+<script>
+(function() {
+  var mode = null;
+  var noteCounter = 0;
+
+  var btnHighlight = document.getElementById('btn-highlight');
+  var btnUnderline = document.getElementById('btn-underline');
+  var btnNote = document.getElementById('btn-note');
+  var btnClear = document.getElementById('btn-clear');
+  var btnSave = document.getElementById('btn-save');
+  var statusText = document.getElementById('status-text');
+  var contentRoot = document.getElementById('content-root');
+  var noteBox = document.getElementById('note-input-box');
+  var noteText = document.getElementById('note-text');
+  var pendingNoteTarget = null;
+
+  function setMode(newMode) {
+    mode = mode === newMode ? null : newMode;
+    btnHighlight.classList.toggle('active', mode === 'highlight');
+    btnUnderline.classList.toggle('active', mode === 'underline');
+    btnNote.classList.toggle('active', mode === 'note');
+  }
+
+  btnHighlight.addEventListener('click', function() { setMode('highlight'); });
+  btnUnderline.addEventListener('click', function() { setMode('underline'); });
+  btnNote.addEventListener('click', function() { setMode('note'); });
+
+  function markDirty() {
+    statusText.textContent = 'Unsaved changes';
+    statusText.style.color = '#993c1d';
+  }
+
+  document.addEventListener('mouseup', function(e) {
+    if (mode !== 'highlight' && mode !== 'underline') return;
+    var sel = window.getSelection();
+    if (!sel || sel.isCollapsed || sel.rangeCount === 0) return;
+    var range = sel.getRangeAt(0);
+    if (!contentRoot.contains(range.commonAncestorContainer)) return;
+
+    var wrapper = document.createElement(mode === 'highlight' ? 'mark' : 'u');
+    wrapper.className = mode === 'highlight' ? 'user-highlight' : 'user-underline';
+    try {
+      range.surroundContents(wrapper);
+    } catch (err) {
+      var frag = range.extractContents();
+      wrapper.appendChild(frag);
+      range.insertNode(wrapper);
+    }
+    sel.removeAllRanges();
+    markDirty();
+  });
+
+  contentRoot.addEventListener('click', function(e) {
+    if (mode !== 'note') return;
+    if (e.target.closest('.user-note')) return;
+    pendingNoteTarget = e.target;
+    noteBox.style.display = 'block';
+    var x = Math.min(e.clientX, window.innerWidth - 280);
+    var y = Math.min(e.clientY, window.innerHeight - 140);
+    noteBox.style.left = x + 'px';
+    noteBox.style.top = y + 'px';
+    noteText.value = '';
+    noteText.focus();
+  });
+
+  document.getElementById('note-cancel').addEventListener('click', function() {
+    noteBox.style.display = 'none';
+    pendingNoteTarget = null;
+  });
+
+  document.getElementById('note-add').addEventListener('click', function() {
+    var text = noteText.value.trim();
+    if (!text || !pendingNoteTarget) { noteBox.style.display = 'none'; return; }
+    noteCounter++;
+    var noteDiv = document.createElement('div');
+    noteDiv.className = 'user-note';
+    noteDiv.setAttribute('data-note-id', noteCounter);
+    noteDiv.innerHTML = '<span class="note-label">Your note</span>' +
+      '<button class="del-note" title="Remove note">&times;</button>' +
+      '<span class="note-body"></span>';
+    noteDiv.querySelector('.note-body').textContent = text;
+    noteDiv.querySelector('.del-note').addEventListener('click', function() {
+      noteDiv.remove();
+      markDirty();
+    });
+
+    var target = pendingNoteTarget.closest('li, p, td, div.quote-card, section') || contentRoot;
+    target.parentNode.insertBefore(noteDiv, target.nextSibling);
+
+    noteBox.style.display = 'none';
+    pendingNoteTarget = null;
+    markDirty();
+    setMode('note');
+  });
+
+  btnClear.addEventListener('click', function() {
+    if (!confirm('Remove all your highlights, underlines, and notes on this page?')) return;
+    contentRoot.querySelectorAll('.user-note').forEach(function(n) { n.remove(); });
+    contentRoot.querySelectorAll('mark.user-highlight').forEach(function(m) {
+      var parent = m.parentNode;
+      while (m.firstChild) parent.insertBefore(m.firstChild, m);
+      parent.removeChild(m);
+    });
+    contentRoot.querySelectorAll('u.user-underline').forEach(function(u) {
+      var parent = u.parentNode;
+      while (u.firstChild) parent.insertBefore(u.firstChild, u);
+      parent.removeChild(u);
+    });
+    markDirty();
+  });
+
+  var fallbackHelp = document.getElementById('fallback-help');
+  document.getElementById('fallback-close').addEventListener('click', function() {
+    fallbackHelp.style.display = 'none';
+  });
+
+  var fileHandle = null;
+  var fsaSupported = 'showSaveFilePicker' in window;
+  var THIS_FILENAME = 'notes.html';
+
+  function buildFullHtml() {
+    var doc = document.documentElement.cloneNode(true);
+    var liveContentRoot = doc.querySelector('#content-root');
+    if (liveContentRoot) liveContentRoot.innerHTML = contentRoot.innerHTML;
+    return '<!DOCTYPE html>\n' + doc.outerHTML;
+  }
+
+  async function writeToFile() {
+    var writable = await fileHandle.createWritable();
+    await writable.write(buildFullHtml());
+    await writable.close();
+  }
+
+  btnSave.addEventListener('click', async function() {
+    statusText.textContent = 'Saving…';
+    statusText.style.color = '#57606a';
+    if (!fsaSupported) {
+      fallbackHelp.style.display = 'block';
+      statusText.textContent = 'Direct save not supported in this browser';
+      statusText.style.color = '#993c1d';
+      return;
+    }
+    try {
+      if (!fileHandle) {
+        fileHandle = await window.showSaveFilePicker({
+          suggestedName: THIS_FILENAME,
+          types: [{ description: 'HTML file', accept: { 'text/html': ['.html'] } }]
+        });
+      }
+      var perm = await fileHandle.queryPermission({ mode: 'readwrite' });
+      if (perm !== 'granted') {
+        perm = await fileHandle.requestPermission({ mode: 'readwrite' });
+      }
+      if (perm !== 'granted') {
+        statusText.textContent = 'File permission denied — click Save to retry';
+        statusText.style.color = '#993c1d';
+        fileHandle = null;
+        return;
+      }
+      await writeToFile();
+      statusText.textContent = 'Saved to file just now';
+      statusText.style.color = '#3b6d11';
+    } catch (err) {
+      console.error('SAVE_ERROR', err.name, err.message, err);
+      if (err.name === 'AbortError') {
+        statusText.textContent = 'Save cancelled';
+        statusText.style.color = '#57606a';
+      } else {
+        statusText.textContent = 'Save failed: ' + err.name + ' — click Save to retry';
+        statusText.style.color = '#993c1d';
+        fileHandle = null;
+      }
+    }
+  });
+
+  contentRoot.querySelectorAll('.user-note .del-note').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      btn.closest('.user-note').remove();
+      markDirty();
+    });
+  });
+
+  contentRoot.querySelectorAll('.spacing-tracker input[type="checkbox"]').forEach(function(cb) {
+    cb.addEventListener('change', function() {
+      if (cb.checked) { cb.setAttribute('checked', 'checked'); }
+      else { cb.removeAttribute('checked'); }
+      markDirty();
+    });
+  });
+
+  if (window.mermaid) {
+    mermaid.initialize({ startOnLoad: true, securityLevel: 'strict' });
+  }
+})();
+</script>
+
+</body>
+</html>
