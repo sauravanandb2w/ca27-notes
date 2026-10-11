@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class 12(26): Census 2027, Edible Oils, PDS &amp; SARTHAK-PDS, Agricultural Marketing</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: #faf9f6;
+    color: #1f2328;
+    margin: 0;
+    padding: 0 0 80px;
+    line-height: 1.6;
+  }
+  .toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: #ffffff;
+    border-bottom: 2px solid #1d5b8b;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: Arial, sans-serif;
+    flex-wrap: wrap;
+  }
+  .toolbar button {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    padding: 7px 14px;
+    border-radius: 6px;
+    border: 1px solid #d8d2c6;
+    background: #fff;
+    cursor: pointer;
+    color: #1f2328;
+  }
+  .toolbar button:hover { background: #e6f1fb; border-color: #1d5b8b; }
+  .toolbar button.active { background: #1d5b8b; color: #fff; border-color: #1d5b8b; }
+  .toolbar .save-btn { background: #2f6b4f; color: #fff; border-color: #2f6b4f; margin-left: auto; }
+  .toolbar .save-btn:hover { background: #24543e; }
+  .toolbar .status { font-size: 12px; color: #57606a; margin-left: auto; padding-right: 8px; }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 30px 20px; }
+  header { border-bottom: 3px solid #1d5b8b; padding-bottom: 20px; margin-bottom: 30px; }
+  header h1 { font-size: 1.6em; margin: 0 0 6px; color: #1d5b8b; }
+  header .meta { color: #57606a; font-size: 0.95em; font-family: Arial, sans-serif; }
+  section { margin-bottom: 42px; }
+  h2 { font-size: 1.4em; color: #1d5b8b; border-left: 4px solid #1d5b8b; padding-left: 12px; margin-bottom: 14px; }
+  h3 { font-size: 1.12em; margin: 22px 0 8px; }
+  p { margin: 10px 0; }
+  .summary-box { background: #e6f1fb; border-radius: 8px; padding: 18px 22px; font-size: 0.98em; }
+  ul, ol.answers { padding-left: 24px; }
+  li { margin-bottom: 6px; }
+  .timestamp { font-family: 'Courier New', monospace; font-size: 0.78em; color: #57606a; background: #e2ddd4; border-radius: 4px; padding: 1px 6px; margin-right: 6px; }
+  .quote-card { background: #fff; border: 1px solid #e2ddd4; border-left: 4px solid #1d5b8b; border-radius: 6px; padding: 14px 18px; margin: 14px 0; }
+  .quote-card .q { font-style: italic; font-size: 1.05em; }
+  .quote-card .attrib { font-family: Arial, sans-serif; font-size: 0.85em; color: #57606a; margin-top: 6px; }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.95em; background: #fff; }
+  th, td { border: 1px solid #e2ddd4; padding: 8px 12px; text-align: left; vertical-align: top; }
+  th { background: #e6f1fb; font-family: Arial, sans-serif; font-size: 0.88em; }
+  .gap-box { background: #eef4f0; border: 1px solid #cfe3d6; border-radius: 8px; padding: 16px 20px; margin-top: 16px; font-size: 0.95em; }
+  .gap-box h4 { margin: 0 0 8px; color: #2f6b4f; font-family: Arial, sans-serif; font-size: 0.95em; }
+  .exam-tip { background: #fff7e6; border: 1px solid #f0dba8; border-radius: 8px; padding: 14px 20px; margin: 14px 0; font-size: 0.95em; }
+  .exam-tip::before { content: "Exam strategy: "; font-weight: bold; font-family: Arial, sans-serif; }
+  .term-box { background: #fdf3f3; border: 1px solid #ecd4d4; border-radius: 8px; padding: 12px 16px; margin: 10px 0; }
+  .term-box strong { color: #8b3a3a; }
+  .data-box { background: #f3f0fb; border: 1px solid #ddd6f0; border-radius: 8px; padding: 12px 16px; margin: 10px 0; font-family: 'Courier New', monospace; font-size: 0.9em; }
+  footer { margin-top: 60px; border-top: 1px solid #e2ddd4; padding-top: 16px; color: #57606a; font-size: 0.82em; font-family: Arial, sans-serif; }
+  .toc {
+    background: #fff;
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    padding: 16px 22px;
+    margin-bottom: 36px;
+    font-family: Arial, sans-serif;
+    font-size: 0.9em;
+  }
+  .toc h2 { font-size: 1em; margin: 0 0 10px; border: none; padding: 0; color: #1d5b8b; text-transform: uppercase; letter-spacing: 0.04em; }
+  .toc ol { columns: 2; margin: 0; padding-left: 20px; }
+  .toc a { color: #1f2328; text-decoration: none; }
+  .toc a:hover { color: #1d5b8b; text-decoration: underline; }
+  details.collapse-section {
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    background: #fff;
+    margin: 14px 0;
+    padding: 0;
+  }
+  details.collapse-section summary {
+    cursor: pointer;
+    padding: 12px 16px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 0.92em;
+    color: #1d5b8b;
+    list-style: none;
+  }
+  details.collapse-section summary::-webkit-details-marker { display: none; }
+  details.collapse-section summary::before { content: "▸ "; }
+  details.collapse-section[open] summary::before { content: "▾ "; }
+  details.collapse-section .collapse-body { padding: 4px 16px 16px; }
+  .glossary-term {
+    display: flex;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+  }
+  .glossary-term:last-child { border-bottom: none; }
+  .glossary-term dt { font-weight: bold; color: #8b3a3a; min-width: 220px; flex-shrink: 0; font-family: Arial, sans-serif; font-size: 0.9em; }
+  .glossary-term dd { margin: 0; }
+
+  mark.user-highlight { background: #fff176; padding: 1px 2px; border-radius: 2px; }
+  u.user-underline { text-decoration: underline; text-decoration-color: #1d5b8b; text-decoration-thickness: 2px; }
+  .user-note {
+    background: #e6f1fb;
+    border: 1px solid #85b7eb;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin: 8px 0;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #0c447c;
+    position: relative;
+  }
+  .user-note .note-label { font-weight: bold; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; display: block; }
+  .user-note .del-note { position: absolute; top: 6px; right: 8px; cursor: pointer; border: none; background: none; color: #0c447c; font-size: 14px; font-family: Arial, sans-serif; }
+  #note-input-box {
+    position: fixed;
+    display: none;
+    background: #fff;
+    border: 2px solid #1d5b8b;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    z-index: 100;
+    font-family: Arial, sans-serif;
+  }
+  #note-input-box textarea { width: 240px; height: 60px; font-family: Arial, sans-serif; font-size: 13px; border: 1px solid #d8d2c6; border-radius: 4px; padding: 6px; }
+  #note-input-box .note-actions { margin-top: 6px; display: flex; gap: 6px; justify-content: flex-end; }
+  #note-input-box button { font-size: 12px; padding: 5px 10px; border-radius: 4px; border: 1px solid #d8d2c6; background: #fff; cursor: pointer; }
+  #note-input-box button.primary { background: #1d5b8b; color: #fff; border-color: #1d5b8b; }
+  .content-target::selection { background: #ffe082; }
+  .board-caption { font-family: Arial, sans-serif; font-size: 0.82em; color: #57606a; margin-top: -8px; margin-bottom: 14px; }
+  .arcs-box {
+    background: #fff;
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 14px 0;
+  }
+  .arcs-box h4 { margin: 0 0 10px; color: #1d5b8b; font-family: Arial, sans-serif; font-size: 0.98em; }
+  .recall-q { margin-bottom: 14px; }
+  .recall-q p.q-text { font-weight: bold; margin: 0 0 6px; }
+  .recall-q details { border: none; margin: 0; }
+  .recall-q summary { font-family: Arial, sans-serif; font-size: 0.82em; color: #1d5b8b; cursor: pointer; list-style: none; padding: 2px 0; }
+  .recall-q summary::-webkit-details-marker { display: none; }
+  .recall-q summary::before { content: "Show answer \25B8 "; }
+  .recall-q details[open] summary::before { content: "Hide answer \25BE "; }
+  .recall-q .ans { background: #eef4f0; border-radius: 6px; padding: 8px 12px; margin-top: 6px; font-size: 0.95em; }
+  .spacing-tracker { font-family: Arial, sans-serif; font-size: 0.92em; }
+  .spacing-tracker table { margin: 8px 0; }
+  .spacing-tracker input[type="checkbox"] { width: 16px; height: 16px; cursor: pointer; }
+  .mnemonic-box { background: #fff7e6; border: 1px solid #f0dba8; border-radius: 8px; padding: 14px 18px; margin: 10px 0; }
+  .mnemonic-box h4 { margin: 0 0 6px; color: #8b5a1d; font-family: Arial, sans-serif; font-size: 0.92em; }
+  .applic-table td.gs-tag { font-family: Arial, sans-serif; font-weight: bold; font-size: 0.85em; white-space: nowrap; }
+  .applic-table .prelims-badge, .applic-table .mains-badge {
+    display: inline-block; font-family: Arial, sans-serif; font-size: 0.72em; font-weight: bold;
+    padding: 2px 8px; border-radius: 10px; margin-right: 4px;
+  }
+  .prelims-badge { background: #eaf3de; color: #3b6d11; }
+  .mains-badge { background: #e6f1fb; color: #1d5b8b; }
+  #fallback-help {
+    position: fixed;
+    display: none;
+    top: 60px;
+    right: 20px;
+    max-width: 320px;
+    background: #fff;
+    border: 2px solid #993c1d;
+    border-radius: 8px;
+    padding: 14px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    z-index: 200;
+  }
+  .mcq-card { background: #fff; border: 1px solid #e2ddd4; border-left: 4px solid #1d5b8b; border-radius: 8px; padding: 16px 20px; margin: 14px 0; }
+  .mcq-card .q-num { font-family: Arial, sans-serif; font-weight: bold; color: #1d5b8b; font-size: 0.82em; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 6px; }
+  .mcq-card .q-text { font-weight: bold; margin-bottom: 10px; }
+  .mcq-card .options { display: flex; flex-direction: column; gap: 6px; margin-bottom: 10px; }
+  .mcq-card .option { font-family: Arial, sans-serif; font-size: 0.92em; padding: 6px 10px; border-radius: 6px; background: #faf9f6; border: 1px solid #e2ddd4; }
+  .mcq-card .option.correct { background: #eaf3de; border-color: #b9d79a; color: #3b6d11; font-weight: bold; }
+  .mcq-card .answer-box { font-family: Arial, sans-serif; font-size: 0.88em; background: #eef4f0; border-radius: 6px; padding: 8px 12px; }
+  .mcq-card .answer-label { font-weight: bold; color: #2f6b4f; }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <button id="btn-highlight" title="Select text, then click to highlight it">Highlight</button>
+  <button id="btn-underline" title="Select text, then click to underline it">Underline</button>
+  <button id="btn-note" title="Click this, then click anywhere in the notes to drop a note">Add note</button>
+  <button id="btn-clear" title="Remove all your highlights, underlines, and notes">Clear my edits</button>
+  <span class="status" id="status-text">Not connected to file — click Save once to connect</span>
+  <button class="save-btn" id="btn-save">Save</button>
+</div>
+
+<div id="fallback-help">
+  <strong>Your browser can't save directly</strong>
+  <p style="margin:6px 0;">File System Access isn't supported here (common on Safari/Firefox). Use Chrome or Edge to enable direct-save, or use your browser's Save Page As (Ctrl/Cmd+S) to overwrite this file manually after editing.</p>
+  <button id="fallback-close" style="font-size: 12px; padding: 6px 12px; border-radius: 4px; border: 1px solid #993c1d; background: #993c1d; color: #fff; cursor: pointer;">Got it</button>
+</div>
+
+<div id="note-input-box">
+  <textarea id="note-text" placeholder="Type your note..."></textarea>
+  <div class="note-actions">
+    <button id="note-cancel">Cancel</button>
+    <button class="primary" id="note-add">Add</button>
+  </div>
+</div>
+
+<div class="wrap content-target" id="content-root">
+
+<header>
+  <h1>CA Mains 2026 — Class 12(26): Census 2027, Edible Oil Security, PDS &amp; SARTHAK-PDS, Agricultural Marketing &amp; e-NAM</h1>
+  <div class="meta">
+    <span>Source: unlisted YouTube lecture recording ("class 12 CAVA26")</span> &middot;
+    <span>Duration: 0:00 – 1:54:57</span> &middot;
+    <span>Track: UPSC GS-2 (Governance, Social Justice) / GS-3 (Agriculture, Food Security) — Current Affairs Answer Writing</span>
+  </div>
+</header>
+
+<nav class="toc">
+  <h2>Contents</h2>
+  <ol>
+    <li><a href="#applicability">Applicability — GS papers, Prelims &amp; Mains</a></li>
+    <li><a href="#part0">Answer review: behavioural health — answer the demand</a></li>
+    <li><a href="#part1">Topic 1: Census 2027 — framework &amp; data</a></li>
+    <li><a href="#part2">Topic 1: Digital census, caste census, challenges</a></li>
+    <li><a href="#part3">Topic 2: Edible oil security</a></li>
+    <li><a href="#part4">Topic 3: PDS &amp; SARTHAK-PDS</a></li>
+    <li><a href="#part5">Topic 4: Agricultural marketing &amp; e-NAM</a></li>
+    <li><a href="#part6">Topic 4: Challenges, models, policy framework</a></li>
+    <li><a href="#mcqs">Practice MCQs (self-authored)</a></li>
+    <li><a href="#glossary">Glossary — quick revision</a></li>
+    <li><a href="#arcs">Revision kit (ARCS)</a></li>
+    <li><a href="#gaps">Supplementary research</a></li>
+  </ol>
+</nav>
+
+<section id="summary">
+  <h2>Executive summary</h2>
+  <div class="summary-box">
+  <p>Twelfth class — the polity faculty wraps up social issues and begins GS-3 agriculture. After a pointed review of the behavioural-health answer (students spending two pages on the statement and missing the demand), four topics:</p>
+  <ul>
+    <li><strong>Census 2027</strong> — the "mother of all counts" after a 15-year gap: two phases, the extended de facto method, first fully digital census with self-enumeration, caste enumeration, and enumerator/trust challenges.</li>
+    <li><strong>Edible oil security</strong> — 50%+ import dependence, the "two oil problem", the food-vs-fuel debate (Indonesia's B50), domestic refining under strain, NMEO-Oilseeds and Oil Palm.</li>
+    <li><strong>PDS and SARTHAK-PDS</strong> — the ₹25,530 crore umbrella scheme integrating logistics and digital PDS; leakages (~28%), excess FCI stocks, technology fixes.</li>
+    <li><strong>Agricultural marketing and e-NAM</strong> — 10 years of e-NAM, post-harvest losses, crop-neutral policy, branded FPO models, and the draft National Policy Framework on Agricultural Marketing.</li>
+  </ul>
+  <p>Instructor's GS-3 rule: <strong>start economy/agriculture answers with data</strong>, use economic vocabulary and cite scholars in the body.</p>
+  </div>
+</section>
+
+<section id="applicability">
+  <h2>Applicability — GS papers, Prelims &amp; Mains</h2>
+  <table class="applic-table">
+    <tr><th>Sub-topic</th><th>GS Paper</th><th>Prelims</th><th>Mains</th></tr>
+    <tr><td class="gs-tag">Census 2027</td><td>GS-1 (Population) / GS-2 (Governance)</td><td><span class="prelims-badge">High</span>Entry 69 Union List, Census Act 1948, ORGI, two phases.</td><td><span class="mains-badge">High</span>Data integrity, caste census, digital census.</td></tr>
+    <tr><td class="gs-tag">Edible oil security</td><td>GS-3 (Agriculture, Food security)</td><td><span class="prelims-badge">High</span>NMEO-OP/NMEO-Oilseeds, import sources, palm yield.</td><td><span class="mains-badge">High</span>Food vs. fuel; import dependence.</td></tr>
+    <tr><td class="gs-tag">PDS &amp; SARTHAK-PDS</td><td>GS-3 (PDS) / GS-2 (Welfare)</td><td><span class="prelims-badge">High</span>Outlay, buffer norms, ONORC, ePoS.</td><td><span class="mains-badge">High</span>Technology vs. leakages (instructor's top pick).</td></tr>
+    <tr><td class="gs-tag">Agri marketing &amp; e-NAM</td><td>GS-3 (Agricultural marketing)</td><td><span class="prelims-badge">Medium</span>e-NAM (2016), negotiable warehouse receipts, GrAMs.</td><td><span class="mains-badge">High</span>From procurement to enabling markets.</td></tr>
+  </table>
+</section>
+
+<section id="part0">
+  <h2>0. Answer review: behavioural health — answer the demand</h2>
+  <p>The question asked for a <strong>multi-pronged strategy</strong>. Many answers spent two pages explaining the statement and gave the strategy a few lines — scoring ~1 mark against ~4–5 for an answer that proved the need briefly with data and then focused on the strategy.</p>
+  <ol class="answers">
+    <li>Intro: Omran's epidemiological transition (nature-made → man-made diseases).</li>
+    <li>Define behavioural health threats in a box (lifestyle disease, digital addiction, academic burnout, UPF/HFSS).</li>
+    <li>Why consumer change alone fails — a short diagram: corporate profit motive → addictive design (digital or UPF) → dopamine loop → distorted consumer choice → need for state action. Back it with data (60% of deaths from NCDs; ~10% of adults with mental disorders).</li>
+    <li><strong>Multi-pronged strategy</strong> — the main body. Two ways to structure it: a <em>PICKAET</em> list (policy, institutions, collaboration, knowledge, awareness, economy, technology), or <strong>concentric circles</strong> — state (soda taxes in Mexico/Chile/Saudi; Australia's age-gating; Indian states' proposals) → community (peer-buddy models) → media and civil society → individual awareness.</li>
+    <li>Cite what has worked elsewhere — examples, not your own invented ideas, earn marks.</li>
+  </ol>
+  <div class="exam-tip">Explain a quoted statement in one or two sentences or one diagram, then spend most of the answer on what the question actually asks.</div>
+</section>
+
+<section id="part1">
+  <h2>1. Topic 1: Census 2027 — framework &amp; data</h2>
+  <h3>Model introduction</h3>
+  <p>The census is the bedrock of democratic governance — the <strong>"mother of all counts"</strong> that informs India's developmental trajectory, welfare and representation. Or simply: after a 15-year gap, India has begun Census 2027.</p>
+  <h3>Context and phases</h3>
+  <ul>
+    <li><strong>Phase 1 — house-listing and housing census (HLO)</strong>: April–September 2026, staggered by state; counts buildings and households (~33 questions).</li>
+    <li><strong>Phase 2 — population enumeration (PE)</strong>: February 2027 (September 2026 for snow-bound areas); detailed demographic and socio-economic data, including religion and <strong>caste</strong>.</li>
+    <li>India's 8th census since independence (16th overall); constitutionally mandated.</li>
+  </ul>
+  <h3>Extended de facto method</h3>
+  <ul>
+    <li>People are counted where they are found during the enumeration window, combined with the usual-residence (de jure) logic: residents present during the ~20-day period before the visit are counted at that household; usual members who are away are not double-counted.</li>
+    <li>For census purposes, a household is defined by a common kitchen — one municipal house with two families on separate kitchens counts as two census houses.</li>
+    <li>NRIs are counted only if present during the period.</li>
+  </ul>
+  <h3>Legal and administrative framework</h3>
+  <ul>
+    <li><strong>Entry 69, Union List</strong> — census is a Union subject.</li>
+    <li><strong>Census Act, 1948</strong> — every resident is legally bound to answer census questions.</li>
+    <li>Conducted by the <strong>Office of the Registrar General and Census Commissioner, India</strong> (Ministry of Home Affairs).</li>
+    <li>First fully <strong>digital census</strong>: enumerators use smartphones; <strong>self-enumeration</strong> online generates an SE ID shared with the enumerator.</li>
+  </ul>
+  <h3>Data</h3>
+  <div class="data-box">
+    Budget: ₹11,718 crore (Cabinet, December 2025).<br>
+    Workforce: ~30–34 lakh enumerators and supervisors, mostly school teachers; enumerators receive an honorarium (lecture: ~₹25,000).<br>
+    SECC 2011 recorded ~46 lakh distinct caste names — a data-integrity warning for the caste count.<br>
+    UNFPA: India's population ~146 crore (2025).
+  </div>
+  <h3>Why the census is needed</h3>
+  <ul>
+    <li><strong>Outdated data</strong> — a 15-year gap.</li>
+    <li><strong>Welfare delivery</strong> — many are excluded from schemes based on 2011 figures.</li>
+    <li><strong>Delimitation</strong> — "one person, one vote, one value"; women's reservation.</li>
+    <li><strong>Social justice</strong> — data to address inequality and reservation.</li>
+    <li><strong>Fiscal federalism and urban planning</strong>.</li>
+  </ul>
+</section>
+
+<section id="part2">
+  <h2>2. Topic 1: Digital census, caste census, challenges</h2>
+  <h3>Digital census — for and against</h3>
+  <table>
+    <tr><th>For</th><th>Against</th></tr>
+    <tr><td>Efficiency; real-time monitoring via the Census Management and Monitoring System portal; faster processing and release</td><td>Technology constraints: enumerators' own phones, a crash-prone app (reported low ratings), poor rural connectivity</td></tr>
+    <tr><td>Self-enumeration protects privacy</td><td>Digital literacy gaps — self-enumeration works for few; in practice someone else often fills it in</td></tr>
+    <tr><td>Better accuracy and coverage (remote areas)</td><td>Data errors; <strong>respondent fatigue</strong> (33 questions) and deliberately wrong answers from fear of losing benefits</td></tr>
+    <tr><td>Counts PVTGs separately for the first time; tries to capture internal migrants and transgender persons</td><td>Data security; <strong>data sanitisation</strong> — pressure to record, say, toilets that don't exist</td></tr>
+  </table>
+  <h3>Caste census</h3>
+  <ul>
+    <li><strong>For</strong>: "visibility is the first step toward meaningful inclusion"; enables <strong>sub-categorisation</strong> to prevent elite capture; better welfare targeting; evidence-based policy.</li>
+    <li><strong>Against</strong>: caste count vs. a casteless society — counting reinforces ascriptive identities; administrative difficulty (46 lakh names, aliases); politicisation and identity politics.</li>
+  </ul>
+  <h3>Challenges</h3>
+  <ul>
+    <li><strong>Trust deficit</strong> — fear of penalisation; migrants avoiding enumerators.</li>
+    <li><strong>Administrative</strong> — 30+ lakh staff, mostly teachers; last-minute dropouts leave untrained staff; overburdened teachers (elections too) → schools suffer.</li>
+    <li><strong>Enumerator safety</strong> — harassment, gated societies denying entry ("stranger anxiety"), reported assaults.</li>
+    <li><strong>Coverage gaps</strong> — migrants; <strong>methodological</strong> — the rural/urban binary undercounts peri-urban areas.</li>
+  </ul>
+  <h3>Quotes</h3>
+  <div class="quote-card"><div class="q">The census is not just a government job; it is a responsibility of all of us.</div><div class="attrib">— Prime Minister (paraphrased)</div></div>
+  <div class="quote-card"><div class="q">The census is a selfie of the nation — a self-portrait of the people that only their government can paint.</div><div class="attrib">— Sociologist Satish Deshpande (paraphrased)</div></div>
+  <div class="quote-card"><div class="q">It is only if we count caste today that we can hope for a future where it will not count.</div><div class="attrib">— Satish Deshpande (paraphrased)</div></div>
+  <ul>
+    <li><strong>Angus Deaton</strong>: good data is fundamental to good economics.</li>
+    <li>A former UPSC chairperson (name unclear in captions): "reservation for all means reservation for none".</li>
+  </ul>
+  <h3>Models and way forward</h3>
+  <ul>
+    <li>A state built a composite backwardness index to measure marginalisation (state unclear in captions).</li>
+    <li><strong>Austria</strong> moved from questionnaires to a <strong>register-based census</strong> drawing on tax, school, birth/death and building registers — cheaper, can be run any time, avoids respondent-trust problems. India could use its digital public infrastructure similarly.</li>
+    <li>A state conducted its own disability census; the Centre set up a high-level committee on demographic change and illegal migration — which needs baseline data.</li>
+    <li>Way forward: enumerators in pairs in sensitive areas, security for women enumerators, pre-identified vulnerable areas; workload relief for teachers (e.g., temporary staff); drop-down standardisation; independent oversight against data sanitisation; mass-media campaigns for trust.</li>
+  </ul>
+  <div class="quote-card">
+    <div class="q">The credibility of public policy is directly proportional to the integrity of the data it is based upon. In light of Census 2027, discuss the challenges in conducting massive enumeration in India.</div>
+    <div class="attrib">— Practice question. Structure: quote/data → why data integrity matters (briefly — the implicit demand) → challenges with examples (SECC errors, enumerator violence) → suggestions (Austria's register model, DPI).</div>
+  </div>
+</section>
+
+<section id="part3">
+  <h2>3. Topic 2: Edible oil security</h2>
+  <h3>Model introduction (GS-3: start with data)</h3>
+  <p>India's edible oil sector is a critical vulnerability — the country imports more than 50% of its consumption.</p>
+  <h3>Context</h3>
+  <ul>
+    <li>High price volatility; India's <strong>"two oil problem"</strong> (crude oil and edible oil, both import-dependent) exposed by the West Asia conflict; the PM publicly urged lower consumption.</li>
+    <li><strong>Indonesia's B50 biodiesel mandate</strong> (50% blending) tightened palm-oil supply from India's main source.</li>
+  </ul>
+  <h3>Data</h3>
+  <div class="data-box">
+    Imports ~16 million tonnes a year; ~₹87,000 crore in the first half of 2026 (as cited).<br>
+    Economic Survey: import dependence over 50%, though the import share fell from ~63% (2014-15) to ~56% (2023-24).<br>
+    Sources: palm oil — Indonesia, Malaysia; soybean — Brazil, US; sunflower — Russia, Ukraine.<br>
+    Domestic oils: mustard, groundnut, cottonseed, rice bran.<br>
+    Oil palm yields up to ~4 tonnes of oil per hectare — about 10× mustard — but has a 4–6 year gestation.<br>
+    Per-capita consumption rising in both rural and urban areas.
+  </div>
+  <h3>Issues</h3>
+  <ul>
+    <li><strong>Food and nutrition security</strong> — fats are part of tackling hidden hunger; changing diets and processed food raise demand.</li>
+    <li><strong>Import dependence</strong> → forex drain, <strong>imported inflation</strong>, current-account pressure; geopolitical supply risks.</li>
+    <li><strong>Food vs. fuel</strong> — the global biodiesel push diverts supply; supply disruptions plus logistics → high <strong>landed cost</strong> → imported inflation.</li>
+    <li><strong>Low productivity</strong> — yields below global benchmarks; pests (weed attacks on mustard).</li>
+    <li><strong>Oil palm concerns</strong> — long gestation, high investment and water needs, exotic species, biodiversity and deforestation risks (e.g., the Northeast).</li>
+    <li><strong>Policy distortion</strong> — farmers respond to assured price (MSP) and assured market (procurement), which favour rice and wheat — M.S. Swaminathan's "two pillars".</li>
+    <li><strong>Domestic refining</strong> — refineries depend on imported crude oils; when finished/refined oil is imported instead, capacity utilisation falls and refineries close. High domestic prices also make oil-meal by-products (animal feed) uncompetitive.</li>
+    <li><strong>SAFTA loophole</strong> — duty-free refined oil routed via Nepal, undermining rules of origin.</li>
+  </ul>
+  <h3>Views and models</h3>
+  <ul>
+    <li>An economist (name unclear in captions) suggests importing cheaper US corn for biofuel targets so domestic food land isn't diverted — maize acreage is rising because of ethanol demand.</li>
+    <li>Economic Survey 2025-26: an emerging tension between <strong>Atmanirbharta in energy and in food</strong>.</li>
+    <li><strong>Madhya Pradesh's Bhavantar Bhugtan Yojana</strong> — compensates soybean farmers for prices below MSP via DBT.</li>
+    <li>A proposed <strong>regulated corporate leasing model</strong>: corporate investment + farmer land + FPO mediation (bargaining power) + government oversight — suited to long-gestation crops like oil palm.</li>
+  </ul>
+  <h3>Schemes</h3>
+  <ul>
+    <li><strong>National Mission on Edible Oils – Oilseeds</strong> — raise oilseed production, using SHGs and Krishi Sakhis as community service providers.</li>
+    <li><strong>National Mission on Edible Oils – Oil Palm</strong> — add 6.5 lakh hectares and raise crude palm oil output toward 28 lakh tonnes; <strong>viability gap payments</strong> to farmers linked to international crude palm oil prices (farmers sell fresh fruit bunches to processors).</li>
+  </ul>
+  <h3>Way forward</h3>
+  <ul><li>Incentivise crop diversification (assured procurement, Bhavantar-style payments); calibrate ethanol pricing so oilseed land isn't cannibalised; enforce rules of origin; promote non-conventional oils (rice bran); import cheap feedstock for biofuels.</li></ul>
+  <div class="quote-card">
+    <div class="q">Edible oils are increasingly functioning as energy-linked strategic inputs rather than pure food commodities. Examine in the context of the food-versus-fuel debate and its impact on India.</div>
+    <div class="attrib">— Practice question. Points: biofuel mandates (B50), climate/NDC targets, cannibalisation of oilseed area, price linkage with crude oil, supply-chain weaponisation → impacts (food inflation, forex, refinery margins, the two-oil problem, India's "2M" agricultural risks — markets and monsoon).</div>
+  </div>
+</section>
+
+<section id="part4">
+  <h2>4. Topic 3: PDS &amp; SARTHAK-PDS</h2>
+  <h3>Model introduction</h3>
+  <p>The PDS is the backbone of India's food security, delivering subsidised rice and wheat to over 80 crore people — a critical safety net, but with a food-subsidy bill of about ₹2.03 lakh crore (FY 2025-26).</p>
+  <h3>Definition (three elements)</h3>
+  <p>A state intervention to (1) ensure food security, (2) target the poor through subsidised grain, (3) distribute through fair price shops (FPS).</p>
+  <h3>Functioning (draw as a box diagram)</h3>
+  <ul>
+    <li><strong>Centre</strong>: procurement and storage (FCI); transport to state depots.</li>
+    <li><strong>States</strong>: beneficiary identification, ration cards, last-mile distribution via FPS.</li>
+    <li>Technology: Aadhaar-based biometric authentication; ePoS devices; <strong>One Nation One Ration Card</strong> portability.</li>
+  </ul>
+  <h3>SARTHAK-PDS</h3>
+  <p>A ₹25,530 crore umbrella scheme (approved May 2026, to March 2031) merging central assistance for <strong>intra-state transport, handling and FPS dealer margins</strong> with <strong>SMART-PDS</strong> (digital architecture). It addresses three problems:</p>
+  <ul>
+    <li><strong>Logistics</strong> — movement from FCI → state → district → FPS, where leakages occur.</li>
+    <li><strong>Beneficiaries</strong> — ration-card databases, Aadhaar seeding, portability for migrants.</li>
+    <li><strong>Leakages and grievances</strong> — trackable complaints.</li>
+  </ul>
+  <p>Together: foodgrain logistics + FPS viability + beneficiary support — "intelligent governance".</p>
+  <h3>Data</h3>
+  <div class="data-box">
+    SARTHAK-PDS outlay ₹25,530 crore; ~80 crore beneficiaries.<br>
+    FCI stocks (1 Jan 2026, as cited): ~309 lakh tonnes rice (plus unmilled paddy) and ~274 lakh tonnes wheat — far above buffer norms (lecture: rice 76, wheat 138 lakh tonnes).<br>
+    ICRIER: ~28% of PDS grain doesn't reach intended beneficiaries — a loss estimated at ~₹69,000 crore, far more than SARTHAK's outlay.<br>
+    Economic Survey: near-universal Aadhaar seeding (~99.8%) and ePoS (~99.6% of ~5.43 lakh FPS); over 2 crore ineligible beneficiaries removed after verification.
+  </div>
+  <h3>Significance of PDS</h3>
+  <ul>
+    <li>Food security; <strong>equalising consumption</strong> (if it distributes nutritious food, not only cereals); <strong>crisis resilience</strong> (free grain through COVID and after); farmer support via assured procurement.</li>
+  </ul>
+  <h3>Significance of SARTHAK-PDS</h3>
+  <ul>
+    <li>Supply-chain modernisation (digital tracking, AI); leakage control; FPS viability; support for intra-state movement; <strong>cooperative federalism</strong>; optimised stock management (offload excess inventory to markets or exports).</li>
+  </ul>
+  <h3>Challenges</h3>
+  <ul>
+    <li><strong>Fiscal burden</strong> — ₹2 lakh crore+ subsidy, worsened by open-ended procurement and excess stocks stored under tarpaulin ("cover and plinth") and lost to weather and rodents.</li>
+    <li><strong>Administrative capacity</strong> at state, district and block levels.</li>
+    <li><strong>Beneficiary exclusion</strong> — Aadhaar biometric failures for the elderly and disabled (links to the Class 8 digital-access ruling).</li>
+    <li>Storage deficit; leakages (28%); nutritional skew (cereals only → hidden hunger).</li>
+    <li><strong>WTO concerns</strong> — procurement subsidies fall in the Amber Box; complaints that India exceeds its limits.</li>
+  </ul>
+  <h3>Views</h3>
+  <ul>
+    <li><strong>Shanta Kumar Committee</strong> (2015, as cited): scale down PDS coverage, gradually shift to DBT; (lecture) convert ~20% of FPS into nutrition hubs.</li>
+    <li>A scholar (as cited): PDS can be leveraged to equalise basic food consumption across the population.</li>
+    <li><strong>Himanshu and Abhijit Sen</strong>: found a negative relationship between PDS coverage and leakage — wider coverage, lower leakage.</li>
+  </ul>
+  <h3>Best practices and way forward</h3>
+  <ul>
+    <li>Grain ATMs ("Annapurti"); digital integration of ration cards.</li>
+    <li>Capacity building; FCI to offload surplus (also cools market prices); raise FPS dealer margins (lecture: ~₹90 per quintal); expedite the <strong>vehicle location tracking system</strong>.</li>
+  </ul>
+  <div class="quote-card">
+    <div class="q">Examine the role of technology in eliminating leakages and corruption in India's PDS.</div>
+    <div class="attrib">— Practice question (instructor's most likely pick). Structure: data (5.4 lakh FPS, 80 crore people, ICRIER 28%) → leakage diagram at each stage (FCI → state → district → FPS: diversion, inventory loss, corruption) → technology (JAM/DBT, Aadhaar, ePoS, ONORC, VTS, grain ATMs, SARTHAK) → challenges → way forward.</div>
+  </div>
+</section>
+
+<section id="part5">
+  <h2>5. Topic 4: Agricultural marketing &amp; e-NAM</h2>
+  <h3>Model introductions</h3>
+  <div class="quote-card"><div class="q">Despite India being the 7th-largest exporter of agricultural produce, with annual shipments of about ₹5 lakh crore, its domestic marketing ecosystem remains highly fragmented.</div><div class="attrib">— Option 1 (both figures cited by the Union agriculture minister)</div></div>
+  <div class="quote-card"><div class="q">India has moved from food deficit to food surplus, but fragmented marketing infrastructure still causes post-harvest losses of 15–25%.</div><div class="attrib">— Option 2</div></div>
+  <h3>Context</h3>
+  <ul>
+    <li>e-NAM completed 10 years.</li>
+    <li>Price crashes and farmer protests (e.g., onions); ad hoc export bans (rice, sugar); trade-deal pressure to open agriculture and dairy to US products.</li>
+  </ul>
+  <h3>Frameworks (draw)</h3>
+  <ul>
+    <li><strong>Marketing functions</strong>: producer → [exchange (buying/selling) + physical (storage, processing) + facilitating (standardisation, grading, price discovery)] → consumer.</li>
+    <li><strong>Regulation</strong> at three levels: markets (APMC yards), functions (price discovery, grading, payment), functionaries (commission agents, traders).</li>
+  </ul>
+  <h3>e-NAM</h3>
+  <ul>
+    <li>A pan-India electronic trading portal (2016) creating a unified national market; APMCs remain the backend.</li>
+    <li>Benefits: better price discovery, transparency, standardised quality assessment, unified operations (single licence) — more buyers → more competition → better prices.</li>
+    <li>Centre funds APMC hardware and software — toward "One Nation, One Market" (like GST for goods).</li>
+    <li><strong>Gramin Agricultural Markets (GrAMs)</strong> — rural haats as direct marketing points.</li>
+    <li><strong>Negotiable warehouse receipts</strong> — store, pledge for credit, sell when prices improve.</li>
+  </ul>
+  <h3>Data</h3>
+  <div class="data-box">
+    FICCI (as cited): 67–82% of fruit is sold through intermediaries.<br>
+    Post-harvest losses ~₹90,000 crore (NITI); fruits and vegetables 30–35%; only ~10% of output processed; cold-chain capacity meets &lt;15% of need.<br>
+    Exports ~₹5 lakh crore, with West Asia ~20% — concentration risk.<br>
+    Quick commerce/e-commerce growing 30%+.<br>
+    e-NAM (PIB, March 2026): 1,600+ mandis in 23 states/UTs; ~1.8 crore farmers; ~4,724 FPOs registered; rising trade value.<br>
+    Economic Survey 2023-24 (as cited): ~54% of farmers preferred e-NAM; higher prices and lower transaction costs; 80%+ in Gujarat and Telangana reported better prices.
+  </div>
+  <h3>Benefits</h3>
+  <ul><li>Price discovery; lower <strong>frictional costs</strong> (delays, inefficiency, mandi fees); scale and trade volume; integration of FPOs and traders.</li></ul>
+</section>
+
+<section id="part6">
+  <h2>6. Topic 4: Challenges, models, policy framework</h2>
+  <h3>Challenges</h3>
+  <ul>
+    <li>Weak value-chain links to organised retail, exports and branding.</li>
+    <li>Post-harvest losses → distress sales.</li>
+    <li><strong>Crop bias</strong> — production-driven, not market-led; lack of a <strong>crop-neutral agricultural policy</strong>.</li>
+    <li>Middleman exploitation; <strong>policy ad hocism</strong> — sudden stock limits under the Essential Commodities Act deter warehouse investment → price volatility and discounted sales.</li>
+    <li>Fragmented smallholdings; export concentration; non-tariff barriers (SPS standards).</li>
+    <li>Lack of consensus — agriculture is a state subject; the repealed farm laws show the cost.</li>
+  </ul>
+  <h3>Views</h3>
+  <ul>
+    <li>A policymaker: "Grow global farming is not a slogan; it is a strategy for prosperity."</li>
+    <li>NITI document: the next productivity leap will come from <strong>"intelligence per acre"</strong>, not more inputs — from input-intensive to knowledge-intensive farming.</li>
+    <li>A scholar: India's horticulture "has come of age" but is held back by fragmented supply chains, brand invisibility and limited consumer trust.</li>
+    <li>An economist (name unclear): an <strong>optimal export tax</strong> to raise revenue without crashing global prices.</li>
+  </ul>
+  <h3>Models</h3>
+  <ul>
+    <li><strong>Sahyadri Farms</strong> (Maharashtra) — an FPO with ~50,000 members, now a major branded player.</li>
+    <li><strong>Kala Namak rice</strong> (UP) — GI tag + FPOs + QR-code traceability + a dedicated export development foundation: legal identity, scale, trust and institutional support together.</li>
+    <li>A private agritech platform combining physical and digital market infrastructure.</li>
+    <li><strong>Netherlands</strong> — small, yet the world's second-largest agri-food exporter via high-value, tech-driven, climate-resilient glasshouse farming.</li>
+    <li><strong>Peru's quinoa</strong> — farmers rode a global health-food trend; India could do the same with millets.</li>
+    <li>A state platform for MSP purchase through a digital channel, reducing mandi congestion and risk.</li>
+    <li><strong>Bharat-VISTAAR</strong> (as cited) — AI-driven multilingual advisory and market-access platform; the <strong>Digital Agriculture Mission</strong> (DPI for agriculture); the <strong>Agriculture Infrastructure Fund</strong> for post-harvest infrastructure.</li>
+  </ul>
+  <h3>Recommendations</h3>
+  <ul>
+    <li><strong>National Commission on Farmers (Swaminathan)</strong> — a market within ~5 km of farms.</li>
+    <li>More FPO integration; <strong>incremental liberalisation</strong> (e.g., free fruits and vegetables from APMC rules first).</li>
+  </ul>
+  <h3>Draft National Policy Framework on Agricultural Marketing (2024)</h3>
+  <ul>
+    <li>An <strong>empowered committee of state agriculture marketing ministers</strong> on the GST-council model, to build consensus toward a unified market (single licence, single fee).</li>
+    <li>An <strong>"ease of doing agri-trade"</strong> index ranking states on market modernisation.</li>
+    <li>A <strong>price insurance scheme</strong> (like PMFBY) assuring farmers a known income.</li>
+    <li>Critics (farm groups, Punjab) say it echoes the repealed farm laws.</li>
+  </ul>
+  <div class="quote-card"><div class="q">Transforming agriculture from volume to value is one of the most critical imperatives for rural prosperity and macroeconomic stability.</div><div class="attrib">— Suggested conclusion</div></div>
+  <div class="quote-card">
+    <div class="q">Public intervention in agricultural marketing must gradually evolve from physical procurement toward enabling markets. Critically analyse, highlighting the role of digital platforms in this transition.</div>
+    <div class="attrib">— Practice question (homework)</div>
+  </div>
+</section>
+
+<section id="mcqs">
+  <h2>7. Practice MCQs (self-authored, Prelims-style)</h2>
+  <p style="font-family: Arial, sans-serif; font-size: 0.85em; color: #57606a;">Original questions written from the facts in this class.</p>
+  <div class="mcq-card"><div class="q-num">Q1</div><div class="q-text">The census is a subject under:</div><div class="options"><div class="option correct">(A) Entry 69, Union List</div><div class="option">(B) Entry 20, Concurrent List</div><div class="option">(C) State List</div><div class="option">(D) Residuary powers</div></div><div class="answer-box"><span class="answer-label">Answer: (A).</span> Governed by the Census Act, 1948.</div></div>
+  <div class="mcq-card"><div class="q-num">Q2</div><div class="q-text">India's census uses which method of counting?</div><div class="options"><div class="option">(A) Pure de jure</div><div class="option">(B) Pure de facto</div><div class="option correct">(C) Extended de facto</div><div class="option">(D) Register-based</div></div><div class="answer-box"><span class="answer-label">Answer: (C).</span> Austria uses a register-based census.</div></div>
+  <div class="mcq-card"><div class="q-num">Q3</div><div class="q-text">For census purposes, separate households within one building are distinguished mainly by:</div><div class="options"><div class="option">(A) Separate electricity meters</div><div class="option correct">(B) A separate common kitchen</div><div class="option">(C) Separate municipal numbers</div><div class="option">(D) Separate ration cards</div></div><div class="answer-box"><span class="answer-label">Answer: (B).</span></div></div>
+  <div class="mcq-card"><div class="q-num">Q4</div><div class="q-text">India imports most of its palm oil from:</div><div class="options"><div class="option">(A) Brazil and Argentina</div><div class="option correct">(B) Indonesia and Malaysia</div><div class="option">(C) Russia and Ukraine</div><div class="option">(D) USA and Canada</div></div><div class="answer-box"><span class="answer-label">Answer: (B).</span> Soybean oil comes mainly from the Americas; sunflower oil from Russia and Ukraine.</div></div>
+  <div class="mcq-card"><div class="q-num">Q5</div><div class="q-text">The SARTHAK-PDS umbrella scheme (2026) integrates:</div><div class="options"><div class="option">(A) PM-KISAN and PMFBY</div><div class="option correct">(B) Assistance for intra-state transport/handling and FPS margins with SMART-PDS</div><div class="option">(C) ONORC and PM-GKAY only</div><div class="option">(D) NFSA and MGNREGA</div></div><div class="answer-box"><span class="answer-label">Answer: (B).</span> ₹25,530 crore till March 2031.</div></div>
+  <div class="mcq-card"><div class="q-num">Q6</div><div class="q-text">Under WTO rules, India's foodgrain procurement at administered prices is classified under the:</div><div class="options"><div class="option">(A) Green Box</div><div class="option">(B) Blue Box</div><div class="option correct">(C) Amber Box</div><div class="option">(D) Development Box only</div></div><div class="answer-box"><span class="answer-label">Answer: (C).</span> Trade-distorting support.</div></div>
+  <div class="mcq-card"><div class="q-num">Q7</div><div class="q-text">e-NAM was launched in:</div><div class="options"><div class="option">(A) 2014</div><div class="option correct">(B) 2016</div><div class="option">(C) 2019</div><div class="option">(D) 2021</div></div><div class="answer-box"><span class="answer-label">Answer: (B).</span></div></div>
+  <div class="mcq-card"><div class="q-num">Q8</div><div class="q-text">Which state scheme compensates farmers for the gap between market prices and MSP through DBT?</div><div class="options"><div class="option correct">(A) Bhavantar Bhugtan Yojana (Madhya Pradesh)</div><div class="option">(B) Rythu Bandhu (Telangana)</div><div class="option">(C) KALIA (Odisha)</div><div class="option">(D) Krishak Bandhu (West Bengal)</div></div><div class="answer-box"><span class="answer-label">Answer: (A).</span></div></div>
+</section>
+
+<section id="glossary">
+  <h2>Glossary — quick revision</h2>
+  <dl>
+    <div class="glossary-term"><dt>Extended de facto method</dt><dd>Count people where found during the window, with usual-residence adjustments.</dd></div>
+    <div class="glossary-term"><dt>Self-enumeration</dt><dd>Residents fill census data online and share an SE ID.</dd></div>
+    <div class="glossary-term"><dt>Data sanitisation</dt><dd>Pressure to record flattering rather than true data.</dd></div>
+    <div class="glossary-term"><dt>Respondent fatigue</dt><dd>Poor answers from long questionnaires.</dd></div>
+    <div class="glossary-term"><dt>Register-based census</dt><dd>Census compiled from administrative registers.</dd></div>
+    <div class="glossary-term"><dt>Two oil problem</dt><dd>Dependence on imported crude and edible oils.</dd></div>
+    <div class="glossary-term"><dt>Landed cost</dt><dd>Total cost of an import at the destination.</dd></div>
+    <div class="glossary-term"><dt>Imported inflation</dt><dd>Domestic inflation driven by import prices.</dd></div>
+    <div class="glossary-term"><dt>Viability gap payment (oil palm)</dt><dd>Top-up linked to international crude palm oil prices.</dd></div>
+    <div class="glossary-term"><dt>Regulated corporate leasing</dt><dd>Corporate investment + farmer land + FPO + state oversight.</dd></div>
+    <div class="glossary-term"><dt>SARTHAK-PDS</dt><dd>Umbrella scheme merging PDS logistics support and SMART-PDS.</dd></div>
+    <div class="glossary-term"><dt>Amber Box</dt><dd>WTO category of trade-distorting subsidies.</dd></div>
+    <div class="glossary-term"><dt>Crop-neutral policy</dt><dd>Incentives not skewed toward rice and wheat.</dd></div>
+    <div class="glossary-term"><dt>Frictional cost</dt><dd>Delays, fees and inefficiency in selling produce.</dd></div>
+    <div class="glossary-term"><dt>Negotiable warehouse receipt</dt><dd>Tradable/pledgeable proof of stored produce.</dd></div>
+    <div class="glossary-term"><dt>Intelligence per acre</dt><dd>Knowledge-intensive rather than input-intensive farming.</dd></div>
+  </dl>
+</section>
+
+<section id="arcs">
+  <h2>Revision kit (ARCS method)</h2>
+  <div class="arcs-box">
+    <h4>A — Active Recall</h4>
+    <div class="recall-q"><p class="q-text">1. What are the two phases of Census 2027?</p><details><summary></summary><div class="ans">House-listing and housing census (Apr–Sep 2026); population enumeration with caste (Feb 2027).</div></details></div>
+    <div class="recall-q"><p class="q-text">2. Why are domestic edible-oil refineries struggling?</p><details><summary></summary><div class="ans">Imports of finished/refined oil (including via the SAFTA–Nepal route) instead of crude oil cut capacity utilisation; high prices make oil-meal by-products uncompetitive.</div></details></div>
+    <div class="recall-q"><p class="q-text">3. What three problems does SARTHAK-PDS address?</p><details><summary></summary><div class="ans">Logistics (FCI → state → district → FPS), beneficiary management (Aadhaar, portability), leakages/grievances.</div></details></div>
+    <div class="recall-q"><p class="q-text">4. Name three proposals in the draft agri-marketing framework.</p><details><summary></summary><div class="ans">Empowered committee of state ministers (GST model); ease-of-doing-agri-trade index; price insurance scheme.</div></details></div>
+  </div>
+  <div class="arcs-box spacing-tracker">
+    <h4>R — Repeat with Spacing</h4>
+    <p>Lecture processed: Oct 11, 2026.</p>
+    <table>
+      <tr><th>Review</th><th>Target date</th><th>Done</th></tr>
+      <tr><td>Day 1</td><td>Oct 11</td><td><input type="checkbox"></td></tr>
+      <tr><td>Day 3</td><td>Oct 14</td><td><input type="checkbox"></td></tr>
+      <tr><td>Day 7</td><td>Oct 18</td><td><input type="checkbox"></td></tr>
+      <tr><td>Day 21</td><td>Nov 1</td><td><input type="checkbox"></td></tr>
+    </table>
+  </div>
+  <div class="arcs-box">
+    <h4>C — Contrast &amp; Chunk</h4>
+    <table>
+      <tr><th>Term A</th><th>Term B</th><th>The ONE distinguishing point</th></tr>
+      <tr><td>Questionnaire census</td><td>Register-based census</td><td>Ask households vs. compile administrative records</td></tr>
+      <tr><td>Caste count</td><td>Casteless society</td><td>Visibility for inclusion vs. reinforcing identity</td></tr>
+      <tr><td>Physical procurement</td><td>Enabling markets</td><td>State buys grain vs. state builds market infrastructure</td></tr>
+      <tr><td>Shanta Kumar</td><td>Himanshu &amp; Sen</td><td>Shrink PDS, shift to DBT vs. wider coverage lowers leakage</td></tr>
+    </table>
+  </div>
+  <div class="arcs-box mnemonic-box">
+    <h4>S — Stick with Encoding Tricks</h4>
+    <p><strong>Edible oil sources "PIM-SBU-SRU"</strong>: Palm — Indonesia/Malaysia; Soybean — Brazil/US; Sunflower — Russia/Ukraine.</p>
+    <p><strong>Marketing functions "E-P-F"</strong>: Exchange, Physical, Facilitating.</p>
+  </div>
+</section>
+
+<section id="gaps">
+  <h2>Supplementary research — filling gaps</h2>
+  <div class="gap-box">
+    <h4>Census 2027 — verified</h4>
+    <p>Cabinet approved ₹11,718.24 crore on 12 December 2025. HLO runs April–September 2026 (staggered by state; completed in 23 states/UTs by mid-June 2026); PE in February 2027 (September 2026 for snow-bound areas). Self-enumeration generates an SE ID. Caste is captured electronically in the PE phase. About 30 lakh field functionaries.</p>
+  </div>
+  <div class="gap-box">
+    <h4>SARTHAK-PDS — verified</h4>
+    <p>CCEA approved it on 27 May 2026 as an umbrella scheme with ₹25,530 crore central outlay till 31 March 2031, merging central assistance for intra-state movement/handling and FPS dealer margins with SMART-PDS, and revising norms for dealer margins. One source names AI modules (beneficiary registry, grievance redressal, supply-chain tracking) — check the PIB release.</p>
+  </div>
+  <div class="gap-box">
+    <h4>Draft agri-marketing framework — verified</h4>
+    <p>Released late 2024: empowered committee of state agriculture marketing ministers (GST model, rotating chair), single licence/fee, ease-of-doing-agri-trade index, price insurance scheme. Criticised by farm groups and Punjab as echoing the repealed farm laws.</p>
+  </div>
+  <div class="gap-box">
+    <h4>To verify</h4>
+    <ul>
+      <li>FCI stock figures and buffer norms for the relevant date.</li>
+      <li>Names garbled in captions: the economist on US corn, the export-tax proposer, the former UPSC chair quote, the state with the composite backwardness index, the Bharat-VISTAAR platform name.</li>
+      <li>Edible-oil import value for 2026.</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  Notes compiled from an unlisted lecture recording ("class 12 CAVA26") using YouTube's auto-generated transcript. Names transcribed imperfectly are corrected from standard sources or flagged. Practice MCQs are original questions written from the lecture's facts. Click Save (first time will ask you to pick this file) to write your edits directly to disk.
+</footer>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11.15.0/dist/mermaid.min.js" integrity="sha384-yQ4mmBBT+vhTAwjFH0toJXNYJ6O4usWnt6EPIdWwrRvx2V/n5lXuDZQwQFeSFydF" crossorigin="anonymous"></script>
+<script>
+(function() {
+  var mode = null;
+  var noteCounter = 0;
+
+  var btnHighlight = document.getElementById('btn-highlight');
+  var btnUnderline = document.getElementById('btn-underline');
+  var btnNote = document.getElementById('btn-note');
+  var btnClear = document.getElementById('btn-clear');
+  var btnSave = document.getElementById('btn-save');
+  var statusText = document.getElementById('status-text');
+  var contentRoot = document.getElementById('content-root');
+  var noteBox = document.getElementById('note-input-box');
+  var noteText = document.getElementById('note-text');
+  var pendingNoteTarget = null;
+
+  function setMode(newMode) {
+    mode = mode === newMode ? null : newMode;
+    btnHighlight.classList.toggle('active', mode === 'highlight');
+    btnUnderline.classList.toggle('active', mode === 'underline');
+    btnNote.classList.toggle('active', mode === 'note');
+  }
+
+  btnHighlight.addEventListener('click', function() { setMode('highlight'); });
+  btnUnderline.addEventListener('click', function() { setMode('underline'); });
+  btnNote.addEventListener('click', function() { setMode('note'); });
+
+  function markDirty() {
+    statusText.textContent = 'Unsaved changes';
+    statusText.style.color = '#993c1d';
+  }
+
+  document.addEventListener('mouseup', function(e) {
+    if (mode !== 'highlight' && mode !== 'underline') return;
+    var sel = window.getSelection();
+    if (!sel || sel.isCollapsed || sel.rangeCount === 0) return;
+    var range = sel.getRangeAt(0);
+    if (!contentRoot.contains(range.commonAncestorContainer)) return;
+
+    var wrapper = document.createElement(mode === 'highlight' ? 'mark' : 'u');
+    wrapper.className = mode === 'highlight' ? 'user-highlight' : 'user-underline';
+    try {
+      range.surroundContents(wrapper);
+    } catch (err) {
+      var frag = range.extractContents();
+      wrapper.appendChild(frag);
+      range.insertNode(wrapper);
+    }
+    sel.removeAllRanges();
+    markDirty();
+  });
+
+  contentRoot.addEventListener('click', function(e) {
+    if (mode !== 'note') return;
+    if (e.target.closest('.user-note')) return;
+    pendingNoteTarget = e.target;
+    noteBox.style.display = 'block';
+    var x = Math.min(e.clientX, window.innerWidth - 280);
+    var y = Math.min(e.clientY, window.innerHeight - 140);
+    noteBox.style.left = x + 'px';
+    noteBox.style.top = y + 'px';
+    noteText.value = '';
+    noteText.focus();
+  });
+
+  document.getElementById('note-cancel').addEventListener('click', function() {
+    noteBox.style.display = 'none';
+    pendingNoteTarget = null;
+  });
+
+  document.getElementById('note-add').addEventListener('click', function() {
+    var text = noteText.value.trim();
+    if (!text || !pendingNoteTarget) { noteBox.style.display = 'none'; return; }
+    noteCounter++;
+    var noteDiv = document.createElement('div');
+    noteDiv.className = 'user-note';
+    noteDiv.setAttribute('data-note-id', noteCounter);
+    noteDiv.innerHTML = '<span class="note-label">Your note</span>' +
+      '<button class="del-note" title="Remove note">&times;</button>' +
+      '<span class="note-body"></span>';
+    noteDiv.querySelector('.note-body').textContent = text;
+    noteDiv.querySelector('.del-note').addEventListener('click', function() {
+      noteDiv.remove();
+      markDirty();
+    });
+
+    var target = pendingNoteTarget.closest('li, p, td, div.quote-card, section') || contentRoot;
+    target.parentNode.insertBefore(noteDiv, target.nextSibling);
+
+    noteBox.style.display = 'none';
+    pendingNoteTarget = null;
+    markDirty();
+    setMode('note');
+  });
+
+  btnClear.addEventListener('click', function() {
+    if (!confirm('Remove all your highlights, underlines, and notes on this page?')) return;
+    contentRoot.querySelectorAll('.user-note').forEach(function(n) { n.remove(); });
+    contentRoot.querySelectorAll('mark.user-highlight').forEach(function(m) {
+      var parent = m.parentNode;
+      while (m.firstChild) parent.insertBefore(m.firstChild, m);
+      parent.removeChild(m);
+    });
+    contentRoot.querySelectorAll('u.user-underline').forEach(function(u) {
+      var parent = u.parentNode;
+      while (u.firstChild) parent.insertBefore(u.firstChild, u);
+      parent.removeChild(u);
+    });
+    markDirty();
+  });
+
+  var fallbackHelp = document.getElementById('fallback-help');
+  document.getElementById('fallback-close').addEventListener('click', function() {
+    fallbackHelp.style.display = 'none';
+  });
+
+  var fileHandle = null;
+  var fsaSupported = 'showSaveFilePicker' in window;
+  var THIS_FILENAME = 'notes.html';
+
+  function buildFullHtml() {
+    var doc = document.documentElement.cloneNode(true);
+    var liveContentRoot = doc.querySelector('#content-root');
+    if (liveContentRoot) liveContentRoot.innerHTML = contentRoot.innerHTML;
+    return '<!DOCTYPE html>\n' + doc.outerHTML;
+  }
+
+  async function writeToFile() {
+    var writable = await fileHandle.createWritable();
+    await writable.write(buildFullHtml());
+    await writable.close();
+  }
+
+  btnSave.addEventListener('click', async function() {
+    statusText.textContent = 'Saving…';
+    statusText.style.color = '#57606a';
+    if (!fsaSupported) {
+      fallbackHelp.style.display = 'block';
+      statusText.textContent = 'Direct save not supported in this browser';
+      statusText.style.color = '#993c1d';
+      return;
+    }
+    try {
+      if (!fileHandle) {
+        fileHandle = await window.showSaveFilePicker({
+          suggestedName: THIS_FILENAME,
+          types: [{ description: 'HTML file', accept: { 'text/html': ['.html'] } }]
+        });
+      }
+      var perm = await fileHandle.queryPermission({ mode: 'readwrite' });
+      if (perm !== 'granted') {
+        perm = await fileHandle.requestPermission({ mode: 'readwrite' });
+      }
+      if (perm !== 'granted') {
+        statusText.textContent = 'File permission denied — click Save to retry';
+        statusText.style.color = '#993c1d';
+        fileHandle = null;
+        return;
+      }
+      await writeToFile();
+      statusText.textContent = 'Saved to file just now';
+      statusText.style.color = '#3b6d11';
+    } catch (err) {
+      console.error('SAVE_ERROR', err.name, err.message, err);
+      if (err.name === 'AbortError') {
+        statusText.textContent = 'Save cancelled';
+        statusText.style.color = '#57606a';
+      } else {
+        statusText.textContent = 'Save failed: ' + err.name + ' — click Save to retry';
+        statusText.style.color = '#993c1d';
+        fileHandle = null;
+      }
+    }
+  });
+
+  contentRoot.querySelectorAll('.user-note .del-note').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      btn.closest('.user-note').remove();
+      markDirty();
+    });
+  });
+
+  contentRoot.querySelectorAll('.spacing-tracker input[type="checkbox"]').forEach(function(cb) {
+    cb.addEventListener('change', function() {
+      if (cb.checked) { cb.setAttribute('checked', 'checked'); }
+      else { cb.removeAttribute('checked'); }
+      markDirty();
+    });
+  });
+
+  if (window.mermaid) {
+    mermaid.initialize({ startOnLoad: true, securityLevel: 'strict' });
+  }
+})();
+</script>
+
+</body>
+</html>
