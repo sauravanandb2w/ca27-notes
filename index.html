@@ -50,14 +50,6 @@
     color: #1f2328;
   }
   .filter-bar button.active { background: #2f2f6b; color: #fff; border-color: #2f2f6b; }
-  .month-group { margin-bottom: 40px; }
-  .month-group h2 {
-    font-size: 1.3em;
-    color: #2f2f6b;
-    border-bottom: 2px solid #e2ddd4;
-    padding-bottom: 8px;
-    margin-bottom: 16px;
-  }
   .lecture-card {
     display: flex;
     align-items: baseline;
@@ -66,12 +58,6 @@
     border-bottom: 1px solid #e2ddd4;
   }
   .lecture-card:last-child { border-bottom: none; }
-  .lecture-date {
-    font-family: 'Courier New', monospace;
-    font-size: 0.85em;
-    color: #57606a;
-    min-width: 70px;
-  }
   .lecture-title a {
     color: #1f2328;
     text-decoration: none;
@@ -167,21 +153,21 @@
     color: #6b4f15;
   }
   .fallback-help button { margin-left: 10px; }
-  .lecture-folder {
-    font-family: Arial, sans-serif;
-    font-size: 0.78em;
-    color: #888780;
-    margin-left: auto;
-  }
-  .track-group { margin-bottom: 50px; }
-  .track-group > h2 {
-    font-size: 1.6em;
-    color: #fff;
-    background: #2f2f6b;
-    padding: 10px 18px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-  }
+  .track-group { margin-bottom: 28px; border: 1px solid #e2ddd4; border-radius: 10px; background: #fff; overflow: hidden; }
+  .track-group > summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 12px; background: #2f2f6b; color: #fff; padding: 12px 18px; font-size: 1.3em; font-weight: bold; }
+  .track-group > summary::-webkit-details-marker { display: none; }
+  .track-group > summary::before { content: "\25B8"; display: inline-block; transition: transform .15s; }
+  .track-group[open] > summary::before { transform: rotate(90deg); }
+  .track-group > summary .track-name { flex: 1; }
+  .track-group > summary small { font-weight: normal; font-size: 0.65em; opacity: .8; }
+  .track-meta { font-family: Arial, sans-serif; font-size: 0.55em; font-weight: normal; opacity: .9; white-space: nowrap; }
+  .track-body { padding: 4px 18px 8px; }
+  .lecture-card { align-items: flex-start !important; }
+  .class-no { font-family: Arial, sans-serif; font-weight: bold; font-size: 0.9em; color: #2f2f6b; background: #eef0fb; border-radius: 8px; min-width: 48px; text-align: center; padding: 6px 4px; }
+  .chips { display: block; margin-top: 8px; }
+  .chips .tag { margin-left: 0; margin-right: 6px; }
+  .tag-date { background: #f3f1ea; color: #57606a; font-weight: normal; text-transform: none; }
+  .search-box { width: 100%; padding: 8px 12px; border: 1px solid #d8d2c6; border-radius: 8px; font-size: 14px; font-family: Arial, sans-serif; margin-bottom: 14px; }
   footer { margin-top: 60px; border-top: 1px solid #e2ddd4; padding-top: 16px; color: #57606a; font-size: 0.82em; font-family: Arial, sans-serif; }
 </style>
 </head>
@@ -202,11 +188,12 @@
 </header>
 
 <div class="stats">
-  <div class="stat-card"><div class="num" id="stat-total">26</div><div class="label">Lectures logged</div></div>
-  <div class="stat-card"><div class="num" id="stat-months">1</div><div class="label">Month(s) covered</div></div>
-  <div class="stat-card"><div class="num" id="stat-subjects">2</div><div class="label">Exam tracks</div></div>
+  <div class="stat-card"><div class="num" id="stat-total">27</div><div class="label">Lectures logged</div></div>
+  <div class="stat-card"><div class="num" id="stat-topics">0/0</div><div class="label">Topics done</div></div>
+  <div class="stat-card"><div class="num" id="stat-subjects">3</div><div class="label">Series</div></div>
 </div>
 
+<input type="search" class="search-box" id="search" placeholder="Search topics or titles…">
 <div class="filter-bar" id="filter-bar">
   <button class="filter-btn active" data-filter="all">All</button>
   <button class="filter-btn" data-filter="ethics">Ethics / Philosophy</button>
@@ -215,150 +202,135 @@
   <button class="filter-btn" data-filter="economy">Economy</button>
 </div>
 
-<div class="track-group" data-track="2026">
-  <h2>CA Mains 2026</h2>
-  <div class="month-group" data-month="August 2026">
-    <h2>August 2026</h2>
-
+<details class="track-group" data-track="2026" open>
+  <summary><span class="track-name">CA Mains 2026 <small>(CAVA26)</small></span><span class="track-meta">12 classes &middot; <span class="prog"></span></span></summary>
+  <div class="track-body">
     <div class="lecture-card" data-subject="ca">
-      <span class="lecture-date">Aug 11</span>
+      <span class="class-no" title="CA-Mains-2026/2026-08-11_class01-gender-morality-bail/">01</span>
       <span class="lecture-title">
-        <a href="CA-Mains-2026/2026-08-11_class01-gender-morality-bail/notes.html">Class 1(26) — Gender Politics of the Constitution, Constitutional Morality &amp; Bail Jurisprudence</a>
+        <a href="CA-Mains-2026/2026-08-11_class01-gender-morality-bail/notes.html">Gender Politics of the Constitution, Constitutional Morality &amp; Bail Jurisprudence</a>
         <ul class="card-topics">
           <li><label><input type="checkbox" id="topic-1"> Gender Politics of the Constitution</label></li>
           <li><label><input type="checkbox" id="topic-2"> Constitutional Morality</label></li>
           <li><label><input type="checkbox" id="topic-3"> Bail Jurisprudence</label></li>
         </ul>
-        <span class="tag tag-ca">Current Affairs</span>
+        <span class="chips"><span class="tag tag-ca">Current Affairs</span><span class="tag tag-date">Uploaded Aug 11</span></span>
       </span>
-      <span class="lecture-folder">CA-Mains-2026/2026-08-11_class01-gender-morality-bail/</span>
     </div>
 
     <div class="lecture-card" data-subject="ca">
-      <span class="lecture-date">Aug 11</span>
+      <span class="class-no" title="CA-Mains-2026/2026-08-11_class02-freebies-strays-privacy-dna/">02</span>
       <span class="lecture-title">
-        <a href="CA-Mains-2026/2026-08-11_class02-freebies-strays-privacy-dna/notes.html">Class 2(26) — Freebies vs. Welfare, Stray Dogs &amp; Public Safety, Right to be Forgotten, DNA Testing</a>
+        <a href="CA-Mains-2026/2026-08-11_class02-freebies-strays-privacy-dna/notes.html">Freebies vs. Welfare, Stray Dogs &amp; Public Safety, Right to be Forgotten, DNA Testing</a>
         <ul class="card-topics">
           <li><label><input type="checkbox" id="topic-4"> Freebies vs. Welfare</label></li>
           <li><label><input type="checkbox" id="topic-5"> Stray Dogs &amp; Public Safety</label></li>
           <li><label><input type="checkbox" id="topic-6"> Right to be Forgotten</label></li>
           <li><label><input type="checkbox" id="topic-7"> DNA Testing</label></li>
         </ul>
-        <span class="tag tag-ca">Current Affairs</span>
+        <span class="chips"><span class="tag tag-ca">Current Affairs</span><span class="tag tag-date">Uploaded Aug 11</span></span>
       </span>
-      <span class="lecture-folder">CA-Mains-2026/2026-08-11_class02-freebies-strays-privacy-dna/</span>
     </div>
 
     <div class="lecture-card" data-subject="ca">
-      <span class="lecture-date">Aug 12</span>
+      <span class="class-no" title="CA-Mains-2026/2026-08-12_class03-menstrual-ai-judiciary-govt-assurances/">03</span>
       <span class="lecture-title">
-        <a href="CA-Mains-2026/2026-08-12_class03-menstrual-ai-judiciary-govt-assurances/notes.html">Class 3(26) — Menstrual Leave &amp; Substantive Equality, AI in Courts, Committee on Government Assurances</a>
+        <a href="CA-Mains-2026/2026-08-12_class03-menstrual-ai-judiciary-govt-assurances/notes.html">Menstrual Leave &amp; Substantive Equality, AI in Courts, Committee on Government Assurances</a>
         <ul class="card-topics">
           <li><label><input type="checkbox" id="topic-8"> Menstrual Leave &amp; Substantive Equality</label></li>
           <li><label><input type="checkbox" id="topic-9"> AI in Courts</label></li>
           <li><label><input type="checkbox" id="topic-10"> Committee on Government Assurances</label></li>
         </ul>
-        <span class="tag tag-ca">Current Affairs</span>
+        <span class="chips"><span class="tag tag-ca">Current Affairs</span><span class="tag tag-date">Uploaded Aug 12</span></span>
       </span>
-      <span class="lecture-folder">CA-Mains-2026/2026-08-12_class03-menstrual-ai-judiciary-govt-assurances/</span>
     </div>
-  </div>
-
-  <div class="month-group" data-month="October 2026">
-    <h2>October 2026</h2>
 
     <div class="lecture-card" data-subject="ca">
-      <span class="lecture-date">Oct 12</span>
+      <span class="class-no" title="CA-Mains-2026/2026-10-12_class04-privileges-finance-commission-mayors/">04</span>
       <span class="lecture-title">
-        <a href="CA-Mains-2026/2026-10-12_class04-privileges-finance-commission-mayors/notes.html">Class 4(26) — Parliamentary Privileges, the 16th Finance Commission &amp; Fiscal Federalism, City Governance &amp; Empowered Mayors</a>
+        <a href="CA-Mains-2026/2026-10-12_class04-privileges-finance-commission-mayors/notes.html">Parliamentary Privileges, the 16th Finance Commission &amp; Fiscal Federalism, City Governance &amp; Empowered Mayors</a>
         <ul class="card-topics">
           <li><label><input type="checkbox" id="topic-78"> Parliamentary Privileges</label></li>
           <li><label><input type="checkbox" id="topic-79"> 16th Finance Commission &amp; Fiscal Federalism</label></li>
           <li><label><input type="checkbox" id="topic-80"> City Governance &amp; Empowered Mayors</label></li>
         </ul>
-        <span class="tag tag-ca">Current Affairs</span>
+        <span class="chips"><span class="tag tag-ca">Current Affairs</span><span class="tag tag-date">Uploaded Oct 12</span></span>
       </span>
-      <span class="lecture-folder">CA-Mains-2026/2026-10-12_class04-privileges-finance-commission-mayors/</span>
     </div>
 
     <div class="lecture-card" data-subject="ca">
-      <span class="lecture-date">Oct 8</span>
+      <span class="class-no" title="CA-Mains-2026/2026-10-08_class05-delimitation-antidefection-trade-unions/">05</span>
       <span class="lecture-title">
-        <a href="CA-Mains-2026/2026-10-08_class05-delimitation-antidefection-trade-unions/notes.html">Class 5(26) — Delimitation Debate, Anti-Defection Law &amp; Trade Unions in the Platform Economy</a>
+        <a href="CA-Mains-2026/2026-10-08_class05-delimitation-antidefection-trade-unions/notes.html">Delimitation Debate, Anti-Defection Law &amp; Trade Unions in the Platform Economy</a>
         <ul class="card-topics">
           <li><label><input type="checkbox" id="topic-47"> Delimitation Debate</label></li>
           <li><label><input type="checkbox" id="topic-48"> Anti-Defection Law</label></li>
           <li><label><input type="checkbox" id="topic-49"> Trade Unions &amp; Platform Economy</label></li>
         </ul>
-        <span class="tag tag-ca">Current Affairs</span>
+        <span class="chips"><span class="tag tag-ca">Current Affairs</span><span class="tag tag-date">Uploaded Oct 8</span></span>
       </span>
-      <span class="lecture-folder">CA-Mains-2026/2026-10-08_class05-delimitation-antidefection-trade-unions/</span>
     </div>
 
     <div class="lecture-card" data-subject="ca">
-      <span class="lecture-date">Oct 10</span>
+      <span class="class-no" title="CA-Mains-2026/2026-10-10_class06-defence-indigenisation-dap-fighters-drones/">06</span>
       <span class="lecture-title">
-        <a href="CA-Mains-2026/2026-10-10_class06-defence-indigenisation-dap-fighters-drones/notes.html">Class 6(26) — Defence Indigenisation, Defence Acquisition Procedure &amp; Modern Warfare Systems (Fifth-Gen Fighters, Drones)</a>
+        <a href="CA-Mains-2026/2026-10-10_class06-defence-indigenisation-dap-fighters-drones/notes.html">Defence Indigenisation, Defence Acquisition Procedure &amp; Modern Warfare Systems (Fifth-Gen Fighters, Drones)</a>
         <ul class="card-topics">
           <li><label><input type="checkbox" id="topic-50"> Defence Indigenisation</label></li>
           <li><label><input type="checkbox" id="topic-51"> Defence Acquisition Procedure (DAP 2020 / draft 2026)</label></li>
           <li><label><input type="checkbox" id="topic-52"> Fifth-Gen Fighters</label></li>
           <li><label><input type="checkbox" id="topic-53"> Drones &amp; Drone Swarms</label></li>
         </ul>
-        <span class="tag tag-ca">Current Affairs</span>
+        <span class="chips"><span class="tag tag-ca">Current Affairs</span><span class="tag tag-date">Uploaded Oct 10</span></span>
       </span>
-      <span class="lecture-folder">CA-Mains-2026/2026-10-10_class06-defence-indigenisation-dap-fighters-drones/</span>
     </div>
 
     <div class="lecture-card" data-subject="ca">
-      <span class="lecture-date">Oct 10</span>
+      <span class="class-no" title="CA-Mains-2026/2026-10-10_class07-pesa-charities-fcra-pca17a/">07</span>
       <span class="lecture-title">
-        <a href="CA-Mains-2026/2026-10-10_class07-pesa-charities-fcra-pca17a/notes.html">Class 7(26) — PESA &amp; Tribal Self-Governance, Charities/NGOs &amp; FCRA Amendment Bill 2026, Section 17A of the PCA</a>
+        <a href="CA-Mains-2026/2026-10-10_class07-pesa-charities-fcra-pca17a/notes.html">PESA &amp; Tribal Self-Governance, Charities/NGOs &amp; FCRA Amendment Bill 2026, Section 17A of the PCA</a>
         <ul class="card-topics">
           <li><label><input type="checkbox" id="topic-54"> PESA &amp; Tribal Self-Governance</label></li>
           <li><label><input type="checkbox" id="topic-55"> Charities, Donors &amp; NGOs</label></li>
           <li><label><input type="checkbox" id="topic-56"> FCRA Amendment Bill 2026</label></li>
           <li><label><input type="checkbox" id="topic-57"> Section 17A, Prevention of Corruption Act</label></li>
         </ul>
-        <span class="tag tag-ca">Current Affairs</span>
+        <span class="chips"><span class="tag tag-ca">Current Affairs</span><span class="tag tag-date">Uploaded Oct 10</span></span>
       </span>
-      <span class="lecture-folder">CA-Mains-2026/2026-10-10_class07-pesa-charities-fcra-pca17a/</span>
     </div>
 
     <div class="lecture-card" data-subject="ca">
-      <span class="lecture-date">Oct 10</span>
+      <span class="class-no" title="CA-Mains-2026/2026-10-10_class08-disability-ageing-pvtg-unpaid-work/">08</span>
       <span class="lecture-title">
-        <a href="CA-Mains-2026/2026-10-10_class08-disability-ageing-pvtg-unpaid-work/notes.html">Class 8(26) — Disability Rights, Ageing Population, PVTGs &amp; Great Nicobar, Valuing Unpaid Domestic Work</a>
+        <a href="CA-Mains-2026/2026-10-10_class08-disability-ageing-pvtg-unpaid-work/notes.html">Disability Rights, Ageing Population, PVTGs &amp; Great Nicobar, Valuing Unpaid Domestic Work</a>
         <ul class="card-topics">
           <li><label><input type="checkbox" id="topic-58"> Disability Rights (RPwD Act)</label></li>
           <li><label><input type="checkbox" id="topic-59"> Ageing Population</label></li>
           <li><label><input type="checkbox" id="topic-60"> PVTGs &amp; Great Nicobar Project</label></li>
           <li><label><input type="checkbox" id="topic-61"> Unpaid Domestic Work &amp; Care Economy</label></li>
         </ul>
-        <span class="tag tag-ca">Current Affairs</span>
+        <span class="chips"><span class="tag tag-ca">Current Affairs</span><span class="tag tag-date">Uploaded Oct 10</span></span>
       </span>
-      <span class="lecture-folder">CA-Mains-2026/2026-10-10_class08-disability-ageing-pvtg-unpaid-work/</span>
     </div>
 
     <div class="lecture-card" data-subject="ca">
-      <span class="lecture-date">Oct 11</span>
+      <span class="class-no" title="CA-Mains-2026/2026-10-11_class09-vbgramg-skilling-exams-vbsa/">09</span>
       <span class="lecture-title">
-        <a href="CA-Mains-2026/2026-10-11_class09-vbgramg-skilling-exams-vbsa/notes.html">Class 9(26) — MGNREGA to VB-G RAM G, Skill Development, Exam Integrity (NEET &amp; Public Examinations Act), VBSA Bill 2025</a>
+        <a href="CA-Mains-2026/2026-10-11_class09-vbgramg-skilling-exams-vbsa/notes.html">MGNREGA to VB-G RAM G, Skill Development, Exam Integrity (NEET &amp; Public Examinations Act), VBSA Bill 2025</a>
         <ul class="card-topics">
           <li><label><input type="checkbox" id="topic-62"> MGNREGA vs. VB-G RAM G</label></li>
           <li><label><input type="checkbox" id="topic-63"> Skill Development</label></li>
           <li><label><input type="checkbox" id="topic-64"> Exam Integrity &amp; NTA</label></li>
           <li><label><input type="checkbox" id="topic-65"> Viksit Bharat Shiksha Adhishthan Bill</label></li>
         </ul>
-        <span class="tag tag-ca">Current Affairs</span>
+        <span class="chips"><span class="tag tag-ca">Current Affairs</span><span class="tag tag-date">Uploaded Oct 11</span></span>
       </span>
-      <span class="lecture-folder">CA-Mains-2026/2026-10-11_class09-vbgramg-skilling-exams-vbsa/</span>
     </div>
 
     <div class="lecture-card" data-subject="ca">
-      <span class="lecture-date">Oct 11</span>
+      <span class="class-no" title="CA-Mains-2026/2026-10-11_class10-dew-bmd-nuclear-shanti-pfbr/">10</span>
       <span class="lecture-title">
-        <a href="CA-Mains-2026/2026-10-11_class10-dew-bmd-nuclear-shanti-pfbr/notes.html">Class 10(26) — Directed-Energy Weapons, Jet Engines, Submarines, BMD &amp; Nuclear Energy (SHANTI Act, PFBR)</a>
+        <a href="CA-Mains-2026/2026-10-11_class10-dew-bmd-nuclear-shanti-pfbr/notes.html">Directed-Energy Weapons, Jet Engines, Submarines, BMD &amp; Nuclear Energy (SHANTI Act, PFBR)</a>
         <ul class="card-topics">
           <li><label><input type="checkbox" id="topic-66"> Directed-Energy Weapons</label></li>
           <li><label><input type="checkbox" id="topic-67"> Jet Engines &amp; Submarines</label></li>
@@ -366,199 +338,169 @@
           <li><label><input type="checkbox" id="topic-69"> Nuclear Energy &amp; SHANTI Act</label></li>
           <li><label><input type="checkbox" id="topic-70"> PFBR &amp; Three-Stage Programme</label></li>
         </ul>
-        <span class="tag tag-ca">Current Affairs</span>
+        <span class="chips"><span class="tag tag-ca">Current Affairs</span><span class="tag tag-date">Uploaded Oct 11</span></span>
       </span>
-      <span class="lecture-folder">CA-Mains-2026/2026-10-11_class10-dew-bmd-nuclear-shanti-pfbr/</span>
     </div>
 
     <div class="lecture-card" data-subject="ca">
-      <span class="lecture-date">Oct 11</span>
+      <span class="class-no" title="CA-Mains-2026/2026-10-11_class11-school-education-malnutrition-behavioural-health/">11</span>
       <span class="lecture-title">
-        <a href="CA-Mains-2026/2026-10-11_class11-school-education-malnutrition-behavioural-health/notes.html">Class 11(26) — School Education (NITI Report), Double Burden of Malnutrition, Modern Behavioural Health Threats</a>
+        <a href="CA-Mains-2026/2026-10-11_class11-school-education-malnutrition-behavioural-health/notes.html">School Education (NITI Report), Double Burden of Malnutrition, Modern Behavioural Health Threats</a>
         <ul class="card-topics">
           <li><label><input type="checkbox" id="topic-71"> School Education &amp; FLN</label></li>
           <li><label><input type="checkbox" id="topic-72"> Double Burden of Malnutrition</label></li>
           <li><label><input type="checkbox" id="topic-73"> Modern Behavioural Health Threats</label></li>
         </ul>
-        <span class="tag tag-ca">Current Affairs</span>
+        <span class="chips"><span class="tag tag-ca">Current Affairs</span><span class="tag tag-date">Uploaded Oct 11</span></span>
       </span>
-      <span class="lecture-folder">CA-Mains-2026/2026-10-11_class11-school-education-malnutrition-behavioural-health/</span>
     </div>
 
     <div class="lecture-card" data-subject="ca">
-      <span class="lecture-date">Oct 12</span>
+      <span class="class-no" title="CA-Mains-2026/2026-10-12_class12-census-edible-oil-pds-agri-marketing/">12</span>
       <span class="lecture-title">
-        <a href="CA-Mains-2026/2026-10-12_class12-census-edible-oil-pds-agri-marketing/notes.html">Class 12(26) — Census 2027, Edible Oil Security, PDS &amp; SARTHAK-PDS, Agricultural Marketing &amp; e-NAM</a>
+        <a href="CA-Mains-2026/2026-10-12_class12-census-edible-oil-pds-agri-marketing/notes.html">Census 2027, Edible Oil Security, PDS &amp; SARTHAK-PDS, Agricultural Marketing &amp; e-NAM</a>
         <ul class="card-topics">
           <li><label><input type="checkbox" id="topic-74"> Census 2027</label></li>
           <li><label><input type="checkbox" id="topic-75"> Edible Oil Security</label></li>
           <li><label><input type="checkbox" id="topic-76"> PDS &amp; SARTHAK-PDS</label></li>
           <li><label><input type="checkbox" id="topic-77"> Agricultural Marketing &amp; e-NAM</label></li>
         </ul>
-        <span class="tag tag-ca">Current Affairs</span>
+        <span class="chips"><span class="tag tag-ca">Current Affairs</span><span class="tag tag-date">Uploaded Oct 12</span></span>
       </span>
-      <span class="lecture-folder">CA-Mains-2026/2026-10-12_class12-census-edible-oil-pds-agri-marketing/</span>
     </div>
   </div>
-</div>
+</details>
 
-<div class="track-group" data-track="2027">
-  <h2>CA Mains 2027</h2>
-  <div class="month-group" data-month="August 2026">
-    <h2>August 2026</h2>
-
+<details class="track-group" data-track="2027" open>
+  <summary><span class="track-name">CA Mains 2027</span><span class="track-meta">14 classes &middot; <span class="prog"></span></span></summary>
+  <div class="track-body">
     <div class="lecture-card" data-subject="ca">
-      <span class="lecture-date">Aug 10</span>
+      <span class="class-no" title="CA-Mains-2027/2026-08-10_class01-strait-of-hormuz/">01</span>
       <span class="lecture-title">
-        <a href="CA-Mains-2027/2026-08-10_class01-strait-of-hormuz/notes.html">Class 1(27) — Strait of Hormuz Crisis: Geopolitics, Doctrines &amp; India's Vulnerabilities</a>
-        <a href="CA-Mains-2027/2026-08-10_class01-strait-of-hormuz/one-pager.html" class="onepager-link">1-pager</a>
+        <a href="CA-Mains-2027/2026-08-10_class01-strait-of-hormuz/notes.html">Strait of Hormuz Crisis: Geopolitics, Doctrines &amp; India's Vulnerabilities</a> <a href="CA-Mains-2027/2026-08-10_class01-strait-of-hormuz/one-pager.html" class="onepager-link">1-pager</a>
         <ul class="card-topics">
           <li><label><input type="checkbox" id="topic-11"> Strait of Hormuz Crisis</label></li>
           <li><label><input type="checkbox" id="topic-12"> Geopolitics &amp; Doctrines</label></li>
           <li><label><input type="checkbox" id="topic-13"> India's Vulnerabilities</label></li>
         </ul>
-        <span class="tag tag-ca">Current Affairs</span>
+        <span class="chips"><span class="tag tag-ca">Current Affairs</span><span class="tag tag-date">Uploaded Aug 10</span></span>
       </span>
-      <span class="lecture-folder">CA-Mains-2027/2026-08-10_class01-strait-of-hormuz/</span>
     </div>
 
     <div class="lecture-card" data-subject="ca">
-      <span class="lecture-date">Aug 13</span>
+      <span class="class-no" title="CA-Mains-2027/2026-08-13_class02-care-economy-agri-marketing/">02</span>
       <span class="lecture-title">
-        <a href="CA-Mains-2027/2026-08-13_class02-care-economy-agri-marketing/notes.html">Class 2(27) — Care Economy &amp; Unpaid Domestic Work, Agricultural Marketing</a>
-        <a href="CA-Mains-2027/2026-08-13_class02-care-economy-agri-marketing/one-pager.html" class="onepager-link">1-pager</a>
+        <a href="CA-Mains-2027/2026-08-13_class02-care-economy-agri-marketing/notes.html">Care Economy &amp; Unpaid Domestic Work, Agricultural Marketing</a> <a href="CA-Mains-2027/2026-08-13_class02-care-economy-agri-marketing/one-pager.html" class="onepager-link">1-pager</a>
         <ul class="card-topics">
           <li><label><input type="checkbox" id="topic-14"> Care Economy &amp; Unpaid Domestic Work</label></li>
           <li><label><input type="checkbox" id="topic-15"> Agricultural Marketing</label></li>
         </ul>
-        <span class="tag tag-ca">Current Affairs</span>
+        <span class="chips"><span class="tag tag-ca">Current Affairs</span><span class="tag tag-date">Uploaded Aug 13</span></span>
       </span>
-      <span class="lecture-folder">CA-Mains-2027/2026-08-13_class02-care-economy-agri-marketing/</span>
     </div>
 
     <div class="lecture-card" data-subject="ca">
-      <span class="lecture-date">Aug 14</span>
+      <span class="class-no" title="CA-Mains-2027/2026-08-14_class03-ai-judiciary-pds/">03</span>
       <span class="lecture-title">
-        <a href="CA-Mains-2027/2026-08-14_class03-ai-judiciary-pds/notes.html">Class 3(27) — Artificial Intelligence in Judiciary &amp; Public Distribution System (SARTHAK-PDS)</a>
-        <a href="CA-Mains-2027/2026-08-14_class03-ai-judiciary-pds/one-pager.html" class="onepager-link">1-pager</a>
+        <a href="CA-Mains-2027/2026-08-14_class03-ai-judiciary-pds/notes.html">Artificial Intelligence in Judiciary &amp; Public Distribution System (SARTHAK-PDS)</a> <a href="CA-Mains-2027/2026-08-14_class03-ai-judiciary-pds/one-pager.html" class="onepager-link">1-pager</a>
         <ul class="card-topics">
           <li><label><input type="checkbox" id="topic-16"> Artificial Intelligence in Judiciary</label></li>
           <li><label><input type="checkbox" id="topic-17"> Public Distribution System (SARTHAK-PDS)</label></li>
         </ul>
-        <span class="tag tag-ca">Current Affairs</span>
+        <span class="chips"><span class="tag tag-ca">Current Affairs</span><span class="tag tag-date">Uploaded Aug 14</span></span>
       </span>
-      <span class="lecture-folder">CA-Mains-2027/2026-08-14_class03-ai-judiciary-pds/</span>
     </div>
 
     <div class="lecture-card" data-subject="ca">
-      <span class="lecture-date">Aug 20</span>
+      <span class="class-no" title="CA-Mains-2027/2026-08-20_class04-public-exams-msme/">04</span>
       <span class="lecture-title">
-        <a href="CA-Mains-2027/2026-08-20_class04-public-exams-msme/notes.html">Class 4(27) — Public Examinations (Prevention of Unfair Means) Amendment Act 2026 &amp; MSME Sector</a>
-        <a href="CA-Mains-2027/2026-08-20_class04-public-exams-msme/one-pager.html" class="onepager-link">1-pager</a>
+        <a href="CA-Mains-2027/2026-08-20_class04-public-exams-msme/notes.html">Public Examinations (Prevention of Unfair Means) Amendment Act 2026 &amp; MSME Sector</a> <a href="CA-Mains-2027/2026-08-20_class04-public-exams-msme/one-pager.html" class="onepager-link">1-pager</a>
         <ul class="card-topics">
           <li><label><input type="checkbox" id="topic-18"> Public Examinations (Prevention of Unfair Means) Amendment Act 2026</label></li>
           <li><label><input type="checkbox" id="topic-19"> MSME Sector</label></li>
         </ul>
-        <span class="tag tag-ca">Current Affairs</span>
+        <span class="chips"><span class="tag tag-ca">Current Affairs</span><span class="tag tag-date">Uploaded Aug 20</span></span>
       </span>
-      <span class="lecture-folder">CA-Mains-2027/2026-08-20_class04-public-exams-msme/</span>
     </div>
 
     <div class="lecture-card" data-subject="ca">
-      <span class="lecture-date">Aug 26</span>
+      <span class="class-no" title="CA-Mains-2027/2026-08-26_class05-msme-mecca-pact/">05</span>
       <span class="lecture-title">
-        <a href="CA-Mains-2027/2026-08-26_class05-msme-mecca-pact/notes.html">Class 5(27) — MSME Sector (contd.) &amp; the Mecca Joint Defense Agreement 2026</a>
-        <a href="CA-Mains-2027/2026-08-26_class05-msme-mecca-pact/one-pager.html" class="onepager-link">1-pager</a>
+        <a href="CA-Mains-2027/2026-08-26_class05-msme-mecca-pact/notes.html">MSME Sector (contd.) &amp; the Mecca Joint Defense Agreement 2026</a> <a href="CA-Mains-2027/2026-08-26_class05-msme-mecca-pact/one-pager.html" class="onepager-link">1-pager</a>
         <ul class="card-topics">
           <li><label><input type="checkbox" id="topic-20"> MSME Sector (contd.)</label></li>
           <li><label><input type="checkbox" id="topic-21"> Mecca Joint Defense Agreement 2026</label></li>
         </ul>
-        <span class="tag tag-ca">Current Affairs</span>
+        <span class="chips"><span class="tag tag-ca">Current Affairs</span><span class="tag tag-date">Uploaded Aug 26</span></span>
       </span>
-      <span class="lecture-folder">CA-Mains-2027/2026-08-26_class05-msme-mecca-pact/</span>
     </div>
 
     <div class="lecture-card" data-subject="ca">
-      <span class="lecture-date">Aug 26</span>
+      <span class="class-no" title="CA-Mains-2027/2026-08-26_class06-freebies-msp/">06</span>
       <span class="lecture-title">
-        <a href="CA-Mains-2027/2026-08-26_class06-freebies-msp/notes.html">Class 6(27) — Freebies vs. Welfare (Answer Writing) &amp; Minimum Support Price (MSP)</a>
-        <a href="CA-Mains-2027/2026-08-26_class06-freebies-msp/one-pager.html" class="onepager-link">1-pager</a>
+        <a href="CA-Mains-2027/2026-08-26_class06-freebies-msp/notes.html">Freebies vs. Welfare (Answer Writing) &amp; Minimum Support Price (MSP)</a> <a href="CA-Mains-2027/2026-08-26_class06-freebies-msp/one-pager.html" class="onepager-link">1-pager</a>
         <ul class="card-topics">
           <li><label><input type="checkbox" id="topic-22"> Freebies vs. Welfare (Answer Writing)</label></li>
           <li><label><input type="checkbox" id="topic-23"> Minimum Support Price (MSP)</label></li>
         </ul>
-        <span class="tag tag-ca">Current Affairs</span>
+        <span class="chips"><span class="tag tag-ca">Current Affairs</span><span class="tag tag-date">Uploaded Aug 26</span></span>
       </span>
-      <span class="lecture-folder">CA-Mains-2027/2026-08-26_class06-freebies-msp/</span>
     </div>
-  </div>
-
-  <div class="month-group" data-month="September 2026">
-    <h2>September 2026</h2>
 
     <div class="lecture-card" data-subject="ca">
-      <span class="lecture-date">Sep 6</span>
+      <span class="class-no" title="CA-Mains-2027/2026-09-06_class07-right-to-protest/">07</span>
       <span class="lecture-title">
-        <a href="CA-Mains-2027/2026-09-06_class07-right-to-protest/notes.html">Class 7(27) — Right to Protest, Section 17A of the Prevention of Corruption Act &amp; Judicial Appointments (Collegium)</a>
-        <a href="CA-Mains-2027/2026-09-06_class07-right-to-protest/one-pager.html" class="onepager-link">1-pager</a>
+        <a href="CA-Mains-2027/2026-09-06_class07-right-to-protest/notes.html">Right to Protest, Section 17A of the Prevention of Corruption Act &amp; Judicial Appointments (Collegium)</a> <a href="CA-Mains-2027/2026-09-06_class07-right-to-protest/one-pager.html" class="onepager-link">1-pager</a>
         <ul class="card-topics">
           <li><label><input type="checkbox" id="topic-24"> Right to Protest</label></li>
           <li><label><input type="checkbox" id="topic-25"> Section 17A of the Prevention of Corruption Act</label></li>
           <li><label><input type="checkbox" id="topic-26"> Judicial Appointments (Collegium — intro)</label></li>
         </ul>
-        <span class="tag tag-ca">Current Affairs</span>
+        <span class="chips"><span class="tag tag-ca">Current Affairs</span><span class="tag tag-date">Uploaded Sep 6</span></span>
       </span>
-      <span class="lecture-folder">CA-Mains-2027/2026-09-06_class07-right-to-protest/</span>
     </div>
 
     <div class="lecture-card" data-subject="ca">
-      <span class="lecture-date">Sep 8</span>
+      <span class="class-no" title="CA-Mains-2027/2026-09-08_class08-judicial-tribunals-pmaasha/">08</span>
       <span class="lecture-title">
-        <a href="CA-Mains-2027/2026-09-08_class08-judicial-tribunals-pmaasha/notes.html">Class 8(27) — Judicial Appointments Continued (UK/USA Models), Tribunal Reforms Act 2026 &amp; PM-AASHA</a>
-        <a href="CA-Mains-2027/2026-09-08_class08-judicial-tribunals-pmaasha/one-pager.html" class="onepager-link">1-pager</a>
+        <a href="CA-Mains-2027/2026-09-08_class08-judicial-tribunals-pmaasha/notes.html">Judicial Appointments Continued (UK/USA Models), Tribunal Reforms Act 2026 &amp; PM-AASHA</a> <a href="CA-Mains-2027/2026-09-08_class08-judicial-tribunals-pmaasha/one-pager.html" class="onepager-link">1-pager</a>
         <ul class="card-topics">
           <li><label><input type="checkbox" id="topic-27"> Judicial Appointments Continued (UK/USA Models)</label></li>
           <li><label><input type="checkbox" id="topic-28"> Tribunal Reforms Act 2026</label></li>
           <li><label><input type="checkbox" id="topic-29"> PM-AASHA (intro)</label></li>
         </ul>
-        <span class="tag tag-ca">Current Affairs</span>
+        <span class="chips"><span class="tag tag-ca">Current Affairs</span><span class="tag tag-date">Uploaded Sep 8</span></span>
       </span>
-      <span class="lecture-folder">CA-Mains-2027/2026-09-08_class08-judicial-tribunals-pmaasha/</span>
     </div>
 
     <div class="lecture-card" data-subject="ca">
-      <span class="lecture-date">Sep 10</span>
+      <span class="class-no" title="CA-Mains-2027/2026-09-10_class09-rupps-vbgramg/">09</span>
       <span class="lecture-title">
-        <a href="CA-Mains-2027/2026-09-10_class09-rupps-vbgramg/notes.html">Class 9(27) — Registered Unrecognised Political Parties (RUPPs) &amp; VB-G RAM G (MGNREGA Replacement)</a>
-        <a href="CA-Mains-2027/2026-09-10_class09-rupps-vbgramg/one-pager.html" class="onepager-link">1-pager</a>
+        <a href="CA-Mains-2027/2026-09-10_class09-rupps-vbgramg/notes.html">Registered Unrecognised Political Parties (RUPPs) &amp; VB-G RAM G (MGNREGA Replacement)</a> <a href="CA-Mains-2027/2026-09-10_class09-rupps-vbgramg/one-pager.html" class="onepager-link">1-pager</a>
         <ul class="card-topics">
           <li><label><input type="checkbox" id="topic-30"> Registered Unrecognised Political Parties (RUPPs)</label></li>
           <li><label><input type="checkbox" id="topic-31"> VB-G RAM G (MGNREGA Replacement)</label></li>
         </ul>
-        <span class="tag tag-ca">Current Affairs</span>
+        <span class="chips"><span class="tag tag-ca">Current Affairs</span><span class="tag tag-date">Uploaded Sep 10</span></span>
       </span>
-      <span class="lecture-folder">CA-Mains-2027/2026-09-10_class09-rupps-vbgramg/</span>
     </div>
 
     <div class="lecture-card" data-subject="ca">
-      <span class="lecture-date">Sep 17</span>
+      <span class="class-no" title="CA-Mains-2027/2026-09-17_class10-mmdr-sco/">10</span>
       <span class="lecture-title">
-        <a href="CA-Mains-2027/2026-09-17_class10-mmdr-sco/notes.html">Class 10(27) — MMDR Amendment Act 2026 (Mineral Fiscal Federalism) &amp; Shanghai Cooperation Organisation — 25 Years</a>
-        <a href="CA-Mains-2027/2026-09-17_class10-mmdr-sco/one-pager.html" class="onepager-link">1-pager</a>
+        <a href="CA-Mains-2027/2026-09-17_class10-mmdr-sco/notes.html">MMDR Amendment Act 2026 (Mineral Fiscal Federalism) &amp; Shanghai Cooperation Organisation — 25 Years</a> <a href="CA-Mains-2027/2026-09-17_class10-mmdr-sco/one-pager.html" class="onepager-link">1-pager</a>
         <ul class="card-topics">
           <li><label><input type="checkbox" id="topic-32"> MMDR Amendment Act 2026 (Mineral Fiscal Federalism)</label></li>
           <li><label><input type="checkbox" id="topic-33"> Shanghai Cooperation Organisation — 25 Years</label></li>
         </ul>
-        <span class="tag tag-ca">Current Affairs</span>
+        <span class="chips"><span class="tag tag-ca">Current Affairs</span><span class="tag tag-date">Uploaded Sep 17</span></span>
       </span>
-      <span class="lecture-folder">CA-Mains-2027/2026-09-17_class10-mmdr-sco/</span>
     </div>
 
     <div class="lecture-card" data-subject="ca">
-      <span class="lecture-date">Sep 18</span>
+      <span class="class-no" title="CA-Mains-2027/2026-09-18_class10a-bbnj-psl-critminerals/">10-A</span>
       <span class="lecture-title">
-        <a href="CA-Mains-2027/2026-09-18_class10a-bbnj-psl-critminerals/notes.html">Class 10-A(27) — BBNJ/High Seas Treaty, RBI Priority Sector Lending Norms, DRDO Scramjet &amp; Critical Minerals (Coking Coal), Greenland Geopolitics</a>
-        <a href="CA-Mains-2027/2026-09-18_class10a-bbnj-psl-critminerals/one-pager.html" class="onepager-link">1-pager</a>
+        <a href="CA-Mains-2027/2026-09-18_class10a-bbnj-psl-critminerals/notes.html">BBNJ/High Seas Treaty, RBI Priority Sector Lending Norms, DRDO Scramjet &amp; Critical Minerals (Coking Coal), Greenland Geopolitics</a> <a href="CA-Mains-2027/2026-09-18_class10a-bbnj-psl-critminerals/one-pager.html" class="onepager-link">1-pager</a>
         <ul class="card-topics">
           <li><label><input type="checkbox" id="topic-34"> BBNJ / High Seas Treaty</label></li>
           <li><label><input type="checkbox" id="topic-35"> RBI Priority Sector Lending Norms</label></li>
@@ -566,60 +508,81 @@
           <li><label><input type="checkbox" id="topic-37"> Critical Minerals (Coking Coal)</label></li>
           <li><label><input type="checkbox" id="topic-38"> Greenland Geopolitics</label></li>
         </ul>
-        <span class="tag tag-ca">Current Affairs</span>
+        <span class="chips"><span class="tag tag-ca">Current Affairs</span><span class="tag tag-date">Uploaded Sep 18</span></span>
       </span>
-      <span class="lecture-folder">CA-Mains-2027/2026-09-18_class10a-bbnj-psl-critminerals/</span>
     </div>
 
     <div class="lecture-card" data-subject="ca">
-      <span class="lecture-date">Sep 22</span>
+      <span class="class-no" title="CA-Mains-2027/2026-09-22_class11-riverwater-corridors-education/">11</span>
       <span class="lecture-title">
-        <a href="CA-Mains-2027/2026-09-22_class11-riverwater-corridors-education/notes.html">Class 11(27) — Interstate River Water Disputes, Integrated Industrial Corridor Development (DFC) &amp; Education in the Concurrent List</a>
-        <a href="CA-Mains-2027/2026-09-22_class11-riverwater-corridors-education/one-pager.html" class="onepager-link">1-pager</a>
+        <a href="CA-Mains-2027/2026-09-22_class11-riverwater-corridors-education/notes.html">Interstate River Water Disputes, Integrated Industrial Corridor Development (DFC) &amp; Education in the Concurrent List</a> <a href="CA-Mains-2027/2026-09-22_class11-riverwater-corridors-education/one-pager.html" class="onepager-link">1-pager</a>
         <ul class="card-topics">
           <li><label><input type="checkbox" id="topic-39"> Interstate River Water Disputes</label></li>
           <li><label><input type="checkbox" id="topic-40"> Integrated Industrial Corridor Development (DFC)</label></li>
           <li><label><input type="checkbox" id="topic-41"> Education in the Concurrent List</label></li>
         </ul>
-        <span class="tag tag-ca">Current Affairs</span>
+        <span class="chips"><span class="tag tag-ca">Current Affairs</span><span class="tag tag-date">Uploaded Sep 22</span></span>
       </span>
-      <span class="lecture-folder">CA-Mains-2027/2026-09-22_class11-riverwater-corridors-education/</span>
     </div>
-  </div>
-
-  <div class="month-group" data-month="October 2026">
-    <h2>October 2026</h2>
 
     <div class="lecture-card" data-subject="ca">
-      <span class="lecture-date">Oct 1</span>
+      <span class="class-no" title="CA-Mains-2027/2026-10-01_class12-women-farmers-mayor-council-census-towns/">12</span>
       <span class="lecture-title">
-        <a href="CA-Mains-2027/2026-10-01_class12-women-farmers-mayor-council-census-towns/notes.html">Class 12(27) — Feminization of Agriculture, Mayor-in-Council Urban Governance &amp; Census Towns</a>
-        <a href="CA-Mains-2027/2026-10-01_class12-women-farmers-mayor-council-census-towns/one-pager.html" class="onepager-link">1-pager</a>
+        <a href="CA-Mains-2027/2026-10-01_class12-women-farmers-mayor-council-census-towns/notes.html">Feminization of Agriculture, Mayor-in-Council Urban Governance &amp; Census Towns</a> <a href="CA-Mains-2027/2026-10-01_class12-women-farmers-mayor-council-census-towns/one-pager.html" class="onepager-link">1-pager</a>
         <ul class="card-topics">
           <li><label><input type="checkbox" id="topic-42"> Feminization of Agriculture</label></li>
           <li><label><input type="checkbox" id="topic-43"> Mayor-in-Council Urban Governance</label></li>
           <li><label><input type="checkbox" id="topic-44"> Census Towns</label></li>
         </ul>
-        <span class="tag tag-ca">Current Affairs</span>
+        <span class="chips"><span class="tag tag-ca">Current Affairs</span><span class="tag tag-date">Uploaded Oct 1</span></span>
       </span>
-      <span class="lecture-folder">CA-Mains-2027/2026-10-01_class12-women-farmers-mayor-council-census-towns/</span>
     </div>
 
     <div class="lecture-card" data-subject="ca">
-      <span class="lecture-date">Oct 3</span>
+      <span class="class-no" title="CA-Mains-2027/2026-10-03_class13-self-help-groups-brics-summit/">13</span>
       <span class="lecture-title">
-        <a href="CA-Mains-2027/2026-10-03_class13-self-help-groups-brics-summit/notes.html">Class 13(27) — Self-Help Groups &amp; PRI-SHG Convergence, BRICS New Delhi Declaration 2026</a>
-        <a href="CA-Mains-2027/2026-10-03_class13-self-help-groups-brics-summit/one-pager.html" class="onepager-link">1-pager</a>
+        <a href="CA-Mains-2027/2026-10-03_class13-self-help-groups-brics-summit/notes.html">Self-Help Groups &amp; PRI-SHG Convergence, BRICS New Delhi Declaration 2026</a> <a href="CA-Mains-2027/2026-10-03_class13-self-help-groups-brics-summit/one-pager.html" class="onepager-link">1-pager</a>
         <ul class="card-topics">
           <li><label><input type="checkbox" id="topic-45"> Self-Help Groups &amp; PRI-SHG Convergence</label></li>
           <li><label><input type="checkbox" id="topic-46"> BRICS New Delhi Declaration 2026</label></li>
         </ul>
-        <span class="tag tag-ca">Current Affairs</span>
+        <span class="chips"><span class="tag tag-ca">Current Affairs</span><span class="tag tag-date">Uploaded Oct 3</span></span>
       </span>
-      <span class="lecture-folder">CA-Mains-2027/2026-10-03_class13-self-help-groups-brics-summit/</span>
     </div>
   </div>
-</div>
+</details>
+
+<details class="track-group" data-track="budget-es" open>
+  <summary><span class="track-name">Budget &amp; Economic Survey <small>(per financial year)</small></span><span class="track-meta">1 note &middot; <span class="prog"></span></span></summary>
+  <div class="track-body">
+    <div class="lecture-card" data-subject="economy">
+      <span class="class-no" title="Budget-and-Economic-Survey/FY2025-26_economic-survey/">ES<br>25-26</span>
+      <span class="lecture-title">
+        <a href="Budget-and-Economic-Survey/FY2025-26_economic-survey/notes.html">Economic Survey 2025-26 — Chapter-wise Notes: lectures 01–03 + official Survey data (lecture 04 pending)</a>
+        <ul class="card-topics">
+          <li><label><input type="checkbox" id="topic-81"> Ch 1 — State of the economy</label></li>
+          <li><label><input type="checkbox" id="topic-82"> Ch 2 — Fiscal developments</label></li>
+          <li><label><input type="checkbox" id="topic-83"> Ch 3 — Monetary &amp; financial intermediation</label></li>
+          <li><label><input type="checkbox" id="topic-84"> Ch 4 — External sector</label></li>
+          <li><label><input type="checkbox" id="topic-85"> Ch 5 — Inflation</label></li>
+          <li><label><input type="checkbox" id="topic-86"> Ch 6 — Agriculture</label></li>
+          <li><label><input type="checkbox" id="topic-87"> Ch 7 — Services</label></li>
+          <li><label><input type="checkbox" id="topic-88"> Ch 8 — Industry</label></li>
+          <li><label><input type="checkbox" id="topic-89"> Ch 9 — Investment &amp; infrastructure</label></li>
+          <li><label><input type="checkbox" id="topic-90"> Ch 10 — Climate &amp; environment</label></li>
+          <li><label><input type="checkbox" id="topic-91"> Ch 11 — Education &amp; health</label></li>
+          <li><label><input type="checkbox" id="topic-92"> Ch 12 — Employment &amp; skilling</label></li>
+          <li><label><input type="checkbox" id="topic-93"> Rural economy &amp; VB-G RAM G</label></li>
+          <li><label><input type="checkbox" id="topic-94"> Pensions &amp; insurance</label></li>
+          <li><label><input type="checkbox" id="topic-95"> Urbanisation</label></li>
+          <li><label><input type="checkbox" id="topic-96"> AI strategy</label></li>
+          <li><label><input type="checkbox" id="topic-97"> Disciplined Swadeshi</label></li>
+        </ul>
+        <span class="chips"><span class="tag tag-economy">Economy</span><span class="tag tag-date">FY 2025-26</span><span class="tag tag-date">Uploaded Oct 12</span></span>
+      </span>
+    </div>
+  </div>
+</details>
 
 <footer>
   Each lecture folder contains: <code>notes.html</code> (editable notes with highlight/underline/note tools), plus any teacher PDFs, handwritten note scans, or maps you add. Open any notes.html directly in Chrome or Edge to view and edit; click Save inside a notes file to connect it to disk for direct saving.
@@ -631,7 +594,7 @@
 (function() {
   var buttons = document.querySelectorAll('.filter-btn');
   var cards = document.querySelectorAll('.lecture-card');
-  var groups = document.querySelectorAll('.month-group');
+  var groups = document.querySelectorAll('.track-group');
 
   buttons.forEach(function(btn) {
     btn.addEventListener('click', function() {
@@ -650,8 +613,36 @@
         group.querySelectorAll('.lecture-card').forEach(function(c) {
           if (c.style.display !== 'none') anyVisible = true;
         });
-        group.style.display = anyVisible ? 'block' : 'none';
+        group.style.display = anyVisible ? '' : 'none';
       });
+    });
+  });
+})();
+
+(function() {
+  function prog() {
+    var all = document.querySelectorAll('.card-topics input[type="checkbox"]'), done = 0;
+    all.forEach(function(c){ if (c.checked) done++; });
+    document.getElementById('stat-topics').textContent = done + '/' + all.length;
+    document.querySelectorAll('.track-group').forEach(function(g) {
+      var b = g.querySelectorAll('.card-topics input'), d = 0;
+      b.forEach(function(c){ if (c.checked) d++; });
+      g.querySelector('.prog').textContent = d + '/' + b.length + ' topics done';
+    });
+  }
+  document.addEventListener('change', function(e){ if (e.target.matches('.card-topics input')) prog(); });
+  prog();
+  var s = document.getElementById('search');
+  s.addEventListener('input', function() {
+    var q = s.value.trim().toLowerCase();
+    document.querySelectorAll('.lecture-card').forEach(function(c) {
+      c.style.display = (!q || c.textContent.toLowerCase().indexOf(q) > -1) ? 'flex' : 'none';
+    });
+    document.querySelectorAll('.track-group').forEach(function(g) {
+      var any = false;
+      g.querySelectorAll('.lecture-card').forEach(function(c){ if (c.style.display !== 'none') any = true; });
+      g.style.display = any ? '' : 'none';
+      if (q && any) g.open = true;
     });
   });
 })();

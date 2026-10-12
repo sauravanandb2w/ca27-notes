@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Economic Survey 2025-26 — Chapter-wise Notes</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: #faf9f6;
+    color: #1f2328;
+    margin: 0;
+    padding: 0 0 80px;
+    line-height: 1.6;
+  }
+  .toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: #ffffff;
+    border-bottom: 2px solid #1d5b8b;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: Arial, sans-serif;
+    flex-wrap: wrap;
+  }
+  .toolbar button {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    padding: 7px 14px;
+    border-radius: 6px;
+    border: 1px solid #d8d2c6;
+    background: #fff;
+    cursor: pointer;
+    color: #1f2328;
+  }
+  .toolbar button:hover { background: #e6f1fb; border-color: #1d5b8b; }
+  .toolbar button.active { background: #1d5b8b; color: #fff; border-color: #1d5b8b; }
+  .toolbar .save-btn { background: #2f6b4f; color: #fff; border-color: #2f6b4f; margin-left: auto; }
+  .toolbar .save-btn:hover { background: #24543e; }
+  .toolbar .status { font-size: 12px; color: #57606a; margin-left: auto; padding-right: 8px; }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 30px 20px; }
+  header { border-bottom: 3px solid #1d5b8b; padding-bottom: 20px; margin-bottom: 30px; }
+  header h1 { font-size: 1.6em; margin: 0 0 6px; color: #1d5b8b; }
+  header .meta { color: #57606a; font-size: 0.95em; font-family: Arial, sans-serif; }
+  section { margin-bottom: 42px; }
+  h2 { font-size: 1.4em; color: #1d5b8b; border-left: 4px solid #1d5b8b; padding-left: 12px; margin-bottom: 14px; }
+  h3 { font-size: 1.12em; margin: 22px 0 8px; }
+  p { margin: 10px 0; }
+  .summary-box { background: #e6f1fb; border-radius: 8px; padding: 18px 22px; font-size: 0.98em; }
+  ul, ol.answers { padding-left: 24px; }
+  li { margin-bottom: 6px; }
+  .timestamp { font-family: 'Courier New', monospace; font-size: 0.78em; color: #57606a; background: #e2ddd4; border-radius: 4px; padding: 1px 6px; margin-right: 6px; }
+  .quote-card { background: #fff; border: 1px solid #e2ddd4; border-left: 4px solid #1d5b8b; border-radius: 6px; padding: 14px 18px; margin: 14px 0; }
+  .quote-card .q { font-style: italic; font-size: 1.05em; }
+  .quote-card .attrib { font-family: Arial, sans-serif; font-size: 0.85em; color: #57606a; margin-top: 6px; }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.95em; background: #fff; }
+  th, td { border: 1px solid #e2ddd4; padding: 8px 12px; text-align: left; vertical-align: top; }
+  th { background: #e6f1fb; font-family: Arial, sans-serif; font-size: 0.88em; }
+  .gap-box { background: #eef4f0; border: 1px solid #cfe3d6; border-radius: 8px; padding: 16px 20px; margin-top: 16px; font-size: 0.95em; }
+  .gap-box h4 { margin: 0 0 8px; color: #2f6b4f; font-family: Arial, sans-serif; font-size: 0.95em; }
+  .exam-tip { background: #fff7e6; border: 1px solid #f0dba8; border-radius: 8px; padding: 14px 20px; margin: 14px 0; font-size: 0.95em; }
+  .exam-tip::before { content: "Exam strategy: "; font-weight: bold; font-family: Arial, sans-serif; }
+  .term-box { background: #fdf3f3; border: 1px solid #ecd4d4; border-radius: 8px; padding: 12px 16px; margin: 10px 0; }
+  .term-box strong { color: #8b3a3a; }
+  .data-box { background: #f3f0fb; border: 1px solid #ddd6f0; border-radius: 8px; padding: 12px 16px; margin: 10px 0; font-family: 'Courier New', monospace; font-size: 0.9em; }
+  footer { margin-top: 60px; border-top: 1px solid #e2ddd4; padding-top: 16px; color: #57606a; font-size: 0.82em; font-family: Arial, sans-serif; }
+  .toc {
+    background: #fff;
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    padding: 16px 22px;
+    margin-bottom: 36px;
+    font-family: Arial, sans-serif;
+    font-size: 0.9em;
+  }
+  .toc h2 { font-size: 1em; margin: 0 0 10px; border: none; padding: 0; color: #1d5b8b; text-transform: uppercase; letter-spacing: 0.04em; }
+  .toc ol { columns: 2; margin: 0; padding-left: 20px; }
+  .toc a { color: #1f2328; text-decoration: none; }
+  .toc a:hover { color: #1d5b8b; text-decoration: underline; }
+  details.collapse-section {
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    background: #fff;
+    margin: 14px 0;
+    padding: 0;
+  }
+  details.collapse-section summary {
+    cursor: pointer;
+    padding: 12px 16px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 0.92em;
+    color: #1d5b8b;
+    list-style: none;
+  }
+  details.collapse-section summary::-webkit-details-marker { display: none; }
+  details.collapse-section summary::before { content: "▸ "; }
+  details.collapse-section[open] summary::before { content: "▾ "; }
+  details.collapse-section .collapse-body { padding: 4px 16px 16px; }
+  .glossary-term {
+    display: flex;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+  }
+  .glossary-term:last-child { border-bottom: none; }
+  .glossary-term dt { font-weight: bold; color: #8b3a3a; min-width: 220px; flex-shrink: 0; font-family: Arial, sans-serif; font-size: 0.9em; }
+  .glossary-term dd { margin: 0; }
+
+  mark.user-highlight { background: #fff176; padding: 1px 2px; border-radius: 2px; }
+  u.user-underline { text-decoration: underline; text-decoration-color: #1d5b8b; text-decoration-thickness: 2px; }
+  .user-note {
+    background: #e6f1fb;
+    border: 1px solid #85b7eb;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin: 8px 0;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #0c447c;
+    position: relative;
+  }
+  .user-note .note-label { font-weight: bold; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; display: block; }
+  .user-note .del-note { position: absolute; top: 6px; right: 8px; cursor: pointer; border: none; background: none; color: #0c447c; font-size: 14px; font-family: Arial, sans-serif; }
+  #note-input-box {
+    position: fixed;
+    display: none;
+    background: #fff;
+    border: 2px solid #1d5b8b;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    z-index: 100;
+    font-family: Arial, sans-serif;
+  }
+  #note-input-box textarea { width: 240px; height: 60px; font-family: Arial, sans-serif; font-size: 13px; border: 1px solid #d8d2c6; border-radius: 4px; padding: 6px; }
+  #note-input-box .note-actions { margin-top: 6px; display: flex; gap: 6px; justify-content: flex-end; }
+  #note-input-box button { font-size: 12px; padding: 5px 10px; border-radius: 4px; border: 1px solid #d8d2c6; background: #fff; cursor: pointer; }
+  #note-input-box button.primary { background: #1d5b8b; color: #fff; border-color: #1d5b8b; }
+  .content-target::selection { background: #ffe082; }
+  .board-caption { font-family: Arial, sans-serif; font-size: 0.82em; color: #57606a; margin-top: -8px; margin-bottom: 14px; }
+  .arcs-box {
+    background: #fff;
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 14px 0;
+  }
+  .arcs-box h4 { margin: 0 0 10px; color: #1d5b8b; font-family: Arial, sans-serif; font-size: 0.98em; }
+  .recall-q { margin-bottom: 14px; }
+  .recall-q p.q-text { font-weight: bold; margin: 0 0 6px; }
+  .recall-q details { border: none; margin: 0; }
+  .recall-q summary { font-family: Arial, sans-serif; font-size: 0.82em; color: #1d5b8b; cursor: pointer; list-style: none; padding: 2px 0; }
+  .recall-q summary::-webkit-details-marker { display: none; }
+  .recall-q summary::before { content: "Show answer \25B8 "; }
+  .recall-q details[open] summary::before { content: "Hide answer \25BE "; }
+  .recall-q .ans { background: #eef4f0; border-radius: 6px; padding: 8px 12px; margin-top: 6px; font-size: 0.95em; }
+  .spacing-tracker { font-family: Arial, sans-serif; font-size: 0.92em; }
+  .spacing-tracker table { margin: 8px 0; }
+  .spacing-tracker input[type="checkbox"] { width: 16px; height: 16px; cursor: pointer; }
+  .mnemonic-box { background: #fff7e6; border: 1px solid #f0dba8; border-radius: 8px; padding: 14px 18px; margin: 10px 0; }
+  .mnemonic-box h4 { margin: 0 0 6px; color: #8b5a1d; font-family: Arial, sans-serif; font-size: 0.92em; }
+  .applic-table td.gs-tag { font-family: Arial, sans-serif; font-weight: bold; font-size: 0.85em; white-space: nowrap; }
+  .applic-table .prelims-badge, .applic-table .mains-badge {
+    display: inline-block; font-family: Arial, sans-serif; font-size: 0.72em; font-weight: bold;
+    padding: 2px 8px; border-radius: 10px; margin-right: 4px;
+  }
+  .prelims-badge { background: #eaf3de; color: #3b6d11; }
+  .mains-badge { background: #e6f1fb; color: #1d5b8b; }
+  #fallback-help {
+    position: fixed;
+    display: none;
+    top: 60px;
+    right: 20px;
+    max-width: 320px;
+    background: #fff;
+    border: 2px solid #993c1d;
+    border-radius: 8px;
+    padding: 14px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    z-index: 200;
+  }
+  .mcq-card { background: #fff; border: 1px solid #e2ddd4; border-left: 4px solid #1d5b8b; border-radius: 8px; padding: 16px 20px; margin: 14px 0; }
+  .mcq-card .q-num { font-family: Arial, sans-serif; font-weight: bold; color: #1d5b8b; font-size: 0.82em; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 6px; }
+  .mcq-card .q-text { font-weight: bold; margin-bottom: 10px; }
+  .mcq-card .options { display: flex; flex-direction: column; gap: 6px; margin-bottom: 10px; }
+  .mcq-card .option { font-family: Arial, sans-serif; font-size: 0.92em; padding: 6px 10px; border-radius: 6px; background: #faf9f6; border: 1px solid #e2ddd4; }
+  .mcq-card .option.correct { background: #eaf3de; border-color: #b9d79a; color: #3b6d11; font-weight: bold; }
+  .mcq-card .answer-box { font-family: Arial, sans-serif; font-size: 0.88em; background: #eef4f0; border-radius: 6px; padding: 8px 12px; }
+  .mcq-card .answer-label { font-weight: bold; color: #2f6b4f; }
+  .es-box { background:#f2f7ee; border-left:4px solid #3b6d11; border-radius:6px; padding:10px 16px; margin:18px 0; font-size:0.95em; }
+  .es-box h4 { margin:0 0 6px; font-family:Arial,sans-serif; font-size:0.85em; color:#3b6d11; text-transform:uppercase; letter-spacing:.03em; }
+  .es-box ul { margin:0; padding-left:20px; }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <button id="btn-highlight" title="Select text, then click to highlight it">Highlight</button>
+  <button id="btn-underline" title="Select text, then click to underline it">Underline</button>
+  <button id="btn-note" title="Click this, then click anywhere in the notes to drop a note">Add note</button>
+  <button id="btn-clear" title="Remove all your highlights, underlines, and notes">Clear my edits</button>
+  <span class="status" id="status-text">Not connected to file — click Save once to connect</span>
+  <button class="save-btn" id="btn-save">Save</button>
+</div>
+
+<div id="fallback-help">
+  <strong>Your browser can't save directly</strong>
+  <p style="margin:6px 0;">File System Access isn't supported here (common on Safari/Firefox). Use Chrome or Edge to enable direct-save, or use your browser's Save Page As (Ctrl/Cmd+S) to overwrite this file manually after editing.</p>
+  <button id="fallback-close" style="font-size: 12px; padding: 6px 12px; border-radius: 4px; border: 1px solid #993c1d; background: #993c1d; color: #fff; cursor: pointer;">Got it</button>
+</div>
+
+<div id="note-input-box">
+  <textarea id="note-text" placeholder="Type your note..."></textarea>
+  <div class="note-actions">
+    <button id="note-cancel">Cancel</button>
+    <button class="primary" id="note-add">Add</button>
+  </div>
+</div>
+
+<div class="wrap content-target" id="content-root">
+<header>
+  <h1>Economic Survey 2025-26 — Chapter-wise Notes (Prelims + Mains)</h1>
+  <div class="meta">
+    <span>Source: unlisted YouTube recordings ("economic survey 2026 — 01, 02, 03"; part 04 pending captions)</span> &middot;
+    <span>Coverage: lectures 01–03 + official Survey data; lecture 04 pending</span> &middot;
+    <span>Track: UPSC GS-3 (Economy) with GS-2 links — Prelims facts + Mains data</span>
+  </div>
+</header>
+
+<nav class="toc">
+  <h2>Contents</h2>
+  <ol>
+    <li><a href="#howto">How to use this note</a></li>
+    <li><a href="#ch1">Ch 1 — State of the economy</a></li>
+    <li><a href="#ch2">Ch 2 — Fiscal developments</a></li>
+    <li><a href="#ch3">Ch 3 — Monetary management &amp; financial intermediation</a></li>
+    <li><a href="#ch4">Ch 4 — External sector</a></li>
+    <li><a href="#ch5">Ch 5 — Inflation</a></li>
+    <li><a href="#ch6">Ch 6 — Agriculture</a></li>
+    <li><a href="#ch7">Ch 7 — Services</a></li>
+    <li><a href="#ch8">Ch 8 — Industry</a></li>
+    <li><a href="#ch9">Ch 9 — Investment &amp; infrastructure</a></li>
+    <li><a href="#ch10">Ch 10 — Climate, environment &amp; energy transition</a></li>
+    <li><a href="#ch11">Ch 11 — Social sector: education &amp; health</a></li>
+    <li><a href="#ch12">Ch 12 — Employment &amp; skilling</a></li>
+    <li><a href="#ch13">Remaining themes: rural, social security, urban, AI, Swadeshi</a></li>
+    <li><a href="#mcqs">Prelims trap MCQs</a></li>
+    <li><a href="#glossary">Glossary</a></li>
+    <li><a href="#arcs">Revision kit (ARCS)</a></li>
+    <li><a href="#gaps">Verification notes</a></li>
+  </ol>
+</nav>
+
+<section id="howto">
+  <h2>How to use this note</h2>
+  <div class="summary-box">
+    <p>The Survey has 17 chapters. The instructor covers what is relevant for both Prelims and Mains: a few facts are Prelims-critical (flagged <span class="prelims-badge" style="display:inline-block;font-family:Arial,sans-serif;font-size:0.72em;font-weight:bold;padding:2px 8px;border-radius:10px;background:#eaf3de;color:#3b6d11;">PT</span>), while most of the data, terms and state best practices are for Mains answer-writing.</p>
+    <p>Recurring theme across chapters: <strong>shift from access/quantity to quality/outcomes</strong> — in education, health, jobs, financial inclusion and skilling.</p>
+  </div>
+</section>
+
+<section id="ch1">
+  <h2>Ch 1 — State of the economy</h2>
+  <h3>Global context</h3>
+  <ul>
+    <li><strong>Fragmentation</strong> of the global economic order from geopolitical competition; scepticism toward free trade and multilateral bodies like the WTO.</li>
+    <li><strong>Trade disruptions</strong> — tariffs, sanctions, export controls, reciprocal tariffs → trade wars.</li>
+    <li><strong>Diverging growth</strong>: US growth driven by AI; Europe mixed; China facing deflation (weak domestic demand, property crisis, hit to its export-led model); Japan moderate growth with inflation and rate hikes.</li>
+    <li>Advanced economies ran high primary deficits after the pandemic; <strong>India and Brazil are the notable exceptions</strong> that brought deficits down <span class="prelims-badge">PT</span>.</li>
+  </ul>
+  <h3>Why India stands out (fiscal prudence)</h3>
+  <ul>
+    <li>Shrinking fiscal deficit (FY27 target 4.3%); better quality of spending (capex); plugging leakages via DBT; strong direct/indirect tax and non-tax revenue (RBI surplus).</li>
+  </ul>
+  <h3>Economic statecraft</h3>
+  <div class="term-box"><strong>Economic policy vs. economic statecraft:</strong> policy uses fiscal/monetary tools for domestic growth and stability; statecraft deliberately uses economic tools (tariffs, export controls, sanctions, strategic fiscal policy like China's BRI) for foreign-policy and security goals.</div>
+  <ul>
+    <li>Interdependence, once seen as efficiency and stability, is now seen as a <strong>channel of vulnerability</strong> → deglobalisation, friend-shoring, near-shoring.</li>
+    <li>India should move beyond resilience to <strong>strategic indispensability</strong> — offering goods and services partners can't ignore or substitute.</li>
+  </ul>
+  <h3>Domestic economy — demand side</h3>
+  <div class="data-box">
+    Real GDP growth estimate: ~7.4%.<br>
+    Private final consumption expenditure: ~61.5% of nominal GDP — the primary anchor (tax rationalisation, low inflation).<br>
+    Gross fixed capital formation: ~30% of nominal GDP (supported by public capex).<br>
+    Government final consumption expenditure: ~9.9% of nominal GDP.<br>
+    Exports: ~21.5% of nominal GDP (the Survey gives exports, not net exports).
+  </div>
+  <h3>Supply side</h3>
+  <ul>
+    <li><strong>Services</strong> — primary driver, ~9.1% growth.</li>
+    <li><strong>Industry</strong> — growth accelerator, ~6.2%, led by manufacturing (plus construction).</li>
+    <li><strong>Agriculture</strong> — stabiliser, ~3.1%; crops volatile, but <strong>allied sectors (livestock, fisheries) grow steadily</strong> <span class="prelims-badge">PT</span>.</li>
+  </ul>
+  <h3>Statistics and potential growth</h3>
+  <ul>
+    <li><strong>Nowcasting</strong> — predicting the present, near future and recent past using high-frequency indicators (UPI transactions, e-way bills, electricity/cement/steel output, air and rail traffic), because official data comes with a 2–3 month lag.</li>
+    <li><strong>Cobb-Douglas framework</strong> for potential output; <strong>total factor productivity</strong> (efficiency gains from better use of <em>both</em> capital and labour) averaged ~1.9%, driven by digital technology, allocative efficiency (ease of doing business, IBC) and human capital.</li>
+  </ul>
+  <h3>Poverty</h3>
+  <div class="data-box">
+    World Bank raised the international poverty line from $2.15 to $3 (June 2025).<br>
+    India: extreme poverty ~5.3%; lower-middle-income poverty line ~23.9%.<br>
+    Drivers: inclusive growth, targeted welfare, social-sector investment.
+  </div>
+  <h3>Statistical reforms (remember names) <span class="prelims-badge">PT</span></h3>
+  <ul>
+    <li>Annual Survey of Incorporated Service Sector Enterprises (complements ASUSE for unincorporated firms).</li>
+    <li>All India Debt and Investment Survey (from July 2026 — what households own and owe).</li>
+    <li>Situation Assessment Survey of Agricultural Households (2026-27).</li>
+    <li>Household Income Survey.</li>
+  </ul>
+
+  <div class="es-box"><h4>From the official Survey (PIB, 29 Jan 2026)</h4><ul>
+    <li>First Advance Estimates: real GDP <strong>7.4%</strong>, GVA <strong>7.3%</strong> in FY26 — fastest-growing major economy for the <strong>4th straight year</strong>. FY25 was 6.5%.</li>
+    <li>FY27 projection <strong>6.8–7.2%</strong>; medium-term potential growth <strong>~7%</strong>.</li>
+    <li>PFCE grew 7.0% → <strong>61.5% of GDP, highest since 2011-12</strong>; GFCF grew 7.8%, steady at ~30%.</li>
+    <li>Manufacturing GVA +7.72% (Q1) and +9.13% (Q2) FY26; services 9.1% (FAE); agriculture 3.1%.</li>
+    <li>Credit-rating upgrades: S&amp;P BBB- → BBB; CareEdge Global assigned BBB+.</li>
+    <li>Tendulkar-line poverty: 21.9% (2011-12) → 4.7% (2022-23) → 2.3% (2023-24). NITI MPI: 55.3% (2005-06) → 11.28% (2022-23).</li>
+    <li>Social-protection coverage 22% (2016) → <strong>64.3% (2025)</strong>.</li>
+    <li>29 central labour laws merged into 4 Labour Codes (notified 21 Nov 2025); CPI series to be rebased.</li>
+  </ul></div>
+</section>
+
+<section id="ch2">
+  <h2>Ch 2 — Fiscal developments</h2>
+  <ul>
+    <li><strong>New fiscal anchor</strong>: from FRBM's fiscal-deficit target to a <strong>debt-to-GDP target of 50% ± 1% by FY31</strong> <span class="prelims-badge">PT</span>.</li>
+    <li><strong>Direct-tax dominance</strong> — ~58.8% of gross tax revenue (FY25); buoyancy above nominal GDP. The income-tax <strong>NUDGE</strong> framework shifted from coercive enforcement to non-intrusive, data-led nudges (behavioural economics) for voluntary compliance.</li>
+    <li><strong>GST 2.0</strong> — two rates (standard 18%, merit 5%) plus a demerit rate of 40%; inverted duty structure fixed.</li>
+    <li><strong>Disinvestment</strong>: the Companies Act requires 51% government stake for a "government company". The Survey <em>proposes</em> amending this to 26% for listed companies (enough to block special resolutions) to enable monetisation while retaining control — not yet amended <span class="prelims-badge">PT</span>.</li>
+  </ul>
+  <h3>Tech-driven public finance</h3>
+  <ul>
+    <li>From the old <strong>"credit push"</strong> model (bulk advances → idle cash, diversion, interest cost on borrowed money) to a <strong>"debit pull"</strong>, just-in-time model.</li>
+    <li><strong>SNA-SPARSH</strong> for centrally sponsored schemes; <strong>Treasury Single Account</strong> for central sector schemes — funds drawn only when spent. Benefits: less diversion, less idle cash, interest savings.</li>
+    <li><strong>Route optimisation of PDS</strong> — most efficient routes from warehouses to FPS: ~₹250 crore annual savings; CO₂ cut up to ~35%; better inter-state movement; less pilferage.</li>
+  </ul>
+  <h3>State finances</h3>
+  <div class="data-box">
+    States' combined fiscal deficit ~3.2% of GDP (FY25).<br>
+    States with revenue surplus fell from 19 (FY19) to 11 (FY25).<br>
+    Committed expenditure (salaries, pensions, interest, subsidies) &gt;60% of revenue receipts.
+  </div>
+  <ul>
+    <li><strong>Unconditional cash transfers</strong> (often to women): fiscal strain, rigidity (no sunset clause or review), crowd out productive investment, and don't reliably improve human-capital outcomes like nutrition and education.</li>
+    <li>Better: conditional transfers with review — Mexico's <strong>Progresa</strong>, Brazil's <strong>Bolsa Família</strong>, the Philippines' <strong>4Ps (Pantawid Pamilyang Pilipino)</strong>, USA's <strong>Opportunity NYC</strong>.</li>
+    <li><strong>Market failure in State Development Loans</strong>: interest rates don't differentiate by fiscal health because of concentrated ownership (banks holding to maturity, regional preferences), low secondary-market liquidity and poor disclosure of off-budget liabilities (15th FC urged better disclosure) <span class="prelims-badge">PT</span>.</li>
+    <li><strong>MITRA study (1980-81 to 2022-23)</strong>: higher transfer <em>volume</em> doesn't automatically raise growth — what matters is quality of spending, fiscal discipline and above all <strong>capital expenditure</strong>.</li>
+  </ul>
+
+  <div class="es-box"><h4>From the official Survey (PIB, 29 Jan 2026)</h4><ul>
+    <li>Centre's fiscal deficit: 4.8% (FY25) → <strong>4.4% BE (FY26)</strong>; revenue deficit 0.8%, lowest since FY09.</li>
+    <li>Debt-to-GDP <strong>55.7% (FY25)</strong>, down 7.1 pp since 2020; anchor 50±1% by FY31. Return to rule-based regime (debt ~50%, deficit ~3%) may be considered after 2031 (PRS).</li>
+    <li>Revenue receipts 8.5% of GDP (FY16-20 avg) → 9.1% (FY22-25) → <strong>9.2% (FY25 PA)</strong>.</li>
+    <li>Direct-tax share of gross tax <strong>58.2% in FY25</strong> (51.9% pre-COVID). ITRs 6.9 crore (FY22) → 9.2 crore (FY25).</li>
+    <li>NUDGE = Non-intrusive Usage of Data to Guide and Enable.</li>
+    <li>Effective capex 2.7% of GDP (pre-pandemic) → ~4% (FY25). States' capex ~2.4% of GDP; SASCI (50-year interest-free loans) uptake ₹4,49,845 crore over 5 years.</li>
+    <li>Subsidies 1.9% (FY22) → 1.1% of GDP (FY26); revenue expenditure 13.6% → 10.9% of GDP.</li>
+    <li>GST gross ₹17.4 lakh crore Apr-Dec 2025 (+6.7%); taxpayers 60 lakh (2017) → 1.5 crore+.</li>
+  </ul></div>
+</section>
+
+<section id="ch3">
+  <h2>Ch 3 — Monetary management &amp; financial intermediation</h2>
+  <ul>
+    <li>Low inflation allowed repo cuts to ~5.25%; stance moved to neutral; <strong>CRR cut to 3%</strong>.</li>
+    <li>Reserve money (M0) growth fell — not tightening, but because the CRR cut reduced banks' deposits with RBI. Banks lent more, so <strong>broad money (M3) grew ~12.1%</strong> and the <strong>money multiplier rose to ~6.21</strong> (Dec 2025) <span class="prelims-badge">PT</span>.</li>
+    <li>Banks: GNPA and NNPA at multi-decade lows; capital adequacy ~17.2%; stress now in agriculture and unsecured personal loans rather than large corporates.</li>
+    <li><strong>RRB consolidation</strong> — "one state, one RRB": from 196 down to 28; record profits; GNPA down to ~5.4%.</li>
+    <li><strong>RBI FREE-AI framework</strong> (Framework for Responsible and Ethical Enablement of AI) with seven sutras: trust, people first, innovation over restraint, fairness and equity, accountability, understandable by design, safety/resilience/sustainability.</li>
+    <li><strong>Financial inclusion</strong>: from opening accounts to <strong>credit utilisation</strong>. Microfinance contracted ~14% due to stress — inaccurate income assessment, poor visibility of borrowers' other debts, rigid pricing, intense competition. Graduated-credit models (PM SVANidhi, MUDRA) work.</li>
+    <li><strong>RBI Financial Inclusion Index</strong>: access 35%, usage 45%, quality 20%.</li>
+    <li><strong>Capital markets</strong>: domestic institutional investors now own more Indian equity by value than FPIs — a shock absorber <span class="prelims-badge">PT</span>.</li>
+    <li><strong>Insurance</strong>: FDI limit raised to 100%; insurance <strong>density rose but penetration stagnated</strong> <span class="prelims-badge">PT</span>.</li>
+  </ul>
+
+  <div class="es-box"><h4>From the official Survey (PIB, 29 Jan 2026)</h4><ul>
+    <li>Repo cut <strong>125 bps</strong> since Feb 2025 (to 5.25%). Liquidity: CRR cut ₹2.5 lakh crore, OMOs ₹6.95 lakh crore, forex swaps ~$25 bn.</li>
+    <li>Lending rates (WALR) fell 59 bps on fresh and 69 bps on outstanding loans (Feb-Nov 2025).</li>
+    <li>GNPA <strong>2.2% (Sep 2025)</strong>, multi-decade low; slippage ratio 0.7%; NPA recovery rate 13.2% (FY18) → 26.2% (FY25).</li>
+    <li>RBI regulation-making framework (May 2025) + <strong>Regulatory Review Cell</strong> (from 1 Oct 2025) reviews each regulation every 5–7 years.</li>
+    <li>RRBs: net profit ₹7.6 thousand crore (FY24), ₹6.8 thousand crore (FY25).</li>
+    <li>PSB <strong>Credit Assessment Model</strong> uses digital footprints for MSME loans (linked to CGTMSE).</li>
+    <li>RBI FI-Index <strong>67.0 (Mar 2025)</strong> vs 64.2. PMJDY 55.02 crore accounts (36.63 crore rural/semi-urban). Account ownership 35% (2011) → 89% (2021).</li>
+    <li>Microfinance: 95% women and 80% rural borrowers; portfolio ₹33,517 crore (FY14) → ₹2,38,198 crore (FY25).</li>
+    <li>IBC: ₹3.99 lakh crore realised in 1,300 cases (170% of liquidation value); S&amp;P moved India's insolvency regime from Group C to B.</li>
+    <li>Unique investors cross <strong>12 crore</strong> (Sep 2025), ~25% women; financial-sector assets ~187% of GDP (CY24).</li>
+  </ul></div>
+</section>
+
+<section id="ch4">
+  <h2>Ch 4 — External sector</h2>
+  <h3>Geostrategic globalisation</h3>
+  <p>From seamless, efficiency-driven globalisation (comparative advantage, WTO) to <strong>geostrategic globalisation</strong> — still interconnected, but choosing whom to trade with and depend on, prioritising resilience and national security. Signs: new alignments (BRICS+, IMEC), friend-shoring (politically aligned partners), near-shoring (geographically close partners); trade-policy and economic-policy uncertainty indices peaked in 2025; weakening trade agreements, aggressive industrial policy, competition for critical minerals.</p>
+  <h3>India's performance</h3>
+  <div class="data-box">
+    Total exports: record ~$825 billion (FY25).<br>
+    Share of global merchandise exports ~1.8%; of commercial services ~4.3%.<br>
+    Non-petroleum, non-gems-and-jewellery exports growing.<br>
+    Agriculture paradox: 2nd-largest agricultural producer by value but only ~2.2% of global agri exports — ad hoc export bans hurt reliability.<br>
+    Services exports: record ~$387.5 billion; current account deficit ~0.8% of GDP.<br>
+    Remittances: ~$135.4 billion (FY25) — world's largest recipient; <strong>USA has overtaken the Gulf</strong> as top source (~27.7%) <span class="prelims-badge">PT</span>; remittances now exceed gross FDI inflows.<br>
+    FDI: top destination in South Asia; 4th globally for greenfield projects; risk-adjusted FDI return ~7.3% (2nd after Indonesia).
+  </div>
+  <h3>Economic complexity <span class="prelims-badge">PT</span></h3>
+  <ul>
+    <li><strong>Economic Complexity Index</strong> (Harvard Growth Lab) — productive knowledge, measured by <em>diversity</em> of exports and their <em>ubiquity</em> (how many other countries make them). India ranks <strong>44th of 145</strong> (2023), unchanged since 2019 — exports are low/mid-complexity (petroleum, gems, rice, medicines).</li>
+    <li><strong>Complexity Outlook Index</strong> — how easily a country can diversify into complex products. India ranks <strong>2nd</strong> — strong foundational know-how. The gap between present and potential calls for targeted policy (PLI), technology and scaling up manufacturing.</li>
+  </ul>
+  <h3>Outward FDI</h3>
+  <ul>
+    <li>Not just "capital flight": gains via the <strong>capital channel</strong> (repatriated profits), <strong>knowledge channel</strong> (practices, technology, standards) and <strong>resource/market channel</strong> (foreign assets, brands, GVC integration) — if the home economy has <strong>absorptive capacity</strong> (skills, infrastructure, R&amp;D, institutions).</li>
+    <li>OFDI rose from ~$14.4 billion (FY24) to ~$23.6 billion (FY25), increasingly asset- and capability-seeking.</li>
+    <li><strong>Investment Development Path</strong> (John Dunning): net outward investment position moves from negative (investment importer) to positive (exporter) as an economy matures. <strong>India is at stage 3</strong> — still a net recipient but investing abroad more.</li>
+  </ul>
+  <h3>Exchange rate</h3>
+  <p>A weaker rupee: the <strong>trade-channel gains</strong> (exports, import substitution) outweigh the <strong>financial-channel costs</strong> (capital outflow). No need to keep the rupee artificially strong to please foreign investors.</p>
+  <h3>Net international investment position <span class="prelims-badge">PT</span></h3>
+  <ul>
+    <li><strong>Germany overtook Japan</strong> as the world's largest net creditor (2024); China also a top creditor.</li>
+    <li>USA is the largest net debtor; India is a net debtor, ~11th largest.</li>
+  </ul>
+
+  <div class="es-box"><h4>From the official Survey (PIB, 29 Jan 2026)</h4><ul>
+    <li>Total exports <strong>$825.3 bn (FY25, +6.1%)</strong>: merchandise $437.7 bn, services <strong>$387.6 bn (+13.6%)</strong>; services surplus a record $188.8 bn.</li>
+    <li>Share of world merchandise exports 1% (2005) → <strong>1.8% (2024)</strong>; commercial services 2% → 4.3%. India is the <strong>7th-largest services exporter</strong>.</li>
+    <li>UNCTAD TDR 2025: <strong>3rd in the Global South</strong> for trade-partner diversification.</li>
+    <li>Agri exports $34.5 bn (FY20) → $51.1 bn (FY25); pharma exports $1.9 bn (FY01) → $30.5 bn (FY25).</li>
+    <li>CAD <strong>0.8% of GDP in H1 FY26</strong> (1.3% in H1 FY25). FDI inflows $81 bn in 2025 (+13%).</li>
+    <li>Forex reserves <strong>$701.4 bn (16 Jan 2026)</strong> = ~11 months of imports, ~94% of external debt.</li>
+    <li>Trade deals: India–UK CETA, India–Oman CEPA, New Zealand FTA (Dec 2025); India–EU FTA concluded Jan 2026, awaiting ratification.</li>
+    <li>Remittances $135.4 bn (FY25), largest in the world; rising immigration controls flagged as a risk.</li>
+  </ul></div>
+</section>
+
+<section id="ch5">
+  <h2>Ch 5 — Inflation</h2>
+  <ul>
+    <li>Globally, inflation has subsided — advanced economies ~2–3%, emerging ~5%. China in deflation; <strong>Japan</strong> the outlier — ended negative rates; wage-driven inflation from labour shortages (ageing).</li>
+    <li>India's CPI averaged ~1.7% in FY26 (to December), driven by a crash in food prices (vegetables, spices) — food inflation went negative.</li>
+    <li><strong>Momentum vs. base effect</strong>: momentum = month-on-month change; base effect = influence of last year's level on year-on-year inflation. FY26's low inflation was largely a <strong>base effect</strong> (high base in FY25) <span class="prelims-badge">PT</span>.</li>
+    <li><strong>Structural excess demand</strong> in pulses and edible oils (consumption exceeds production) → <strong>counter-cyclical tariffs</strong>: raise duties when world prices crash (protect farmers), cut them when prices surge (protect consumers).</li>
+    <li>Rural inflation fell below urban because food has a larger weight in the rural basket.</li>
+  </ul>
+
+  <div class="es-box"><h4>From the official Survey (PIB, 29 Jan 2026)</h4><ul>
+    <li>CPI averaged <strong>1.7% (Apr-Dec 2025)</strong>, the lowest in the CPI series. Oct 2025 = <strong>0.3%</strong>, the lowest reading of CPI (2012=100).</li>
+    <li>Food and fuel = 52.7% of the CPI basket; food inflation negative since June 2025.</li>
+    <li>Core inflation rose 3.8% → 4.62% (Dec 2025), driven by gold and silver; excluding precious metals, core is easing.</li>
+    <li>Potato, onion, tomato and garlic prices fell 20–40%; the edible-oil duty cut eased prices from Aug 2025.</li>
+    <li>Global inflation 8.7% (2022) → 4.2% (2025). FY27 outlook: gradual rise within the 2–6% band; risks are base metals, gold/silver and rupee depreciation.</li>
+  </ul></div>
+</section>
+
+<section id="ch6">
+  <h2>Ch 6 — Agriculture</h2>
+  <div class="data-box">
+    Agriculture and allied: ~1/5 of national income, ~46% of the workforce; decadal growth ~4.45%.<br>
+    Crops ~3.5% vs. livestock ~7.1% and fisheries ~8.8% — allied sectors drive growth.<br>
+    Horticulture ~33% of agri GVA; output ~362 million tonnes — <strong>exceeds foodgrains</strong> <span class="prelims-badge">PT</span>.<br>
+    India: largest producer of dry onions (~25% of world); 2nd in vegetables, fruits, potatoes.<br>
+    Gross irrigated area ~55.8% of gross cropped area — but ~67% of rice is irrigated vs. &lt;15% of millets and ~26% of pulses.<br>
+    Feed/fodder &gt;70% of milk production cost; fodder crops only ~4.6% of gross cropped area.<br>
+    Ideal NPK ratio 4:2:1; actual skewed to ~10.9:4.1:1 by urea overuse.<br>
+    Ethanol blending saved ~₹1.4 lakh crore in forex.
+  </div>
+  <h3>Reform ideas</h3>
+  <ul>
+    <li><strong>Fertiliser</strong>: urea is artificially cheap → overuse → soil damage. Let prices reflect cost and pay farmers the subsidy as <strong>per-acre DBT</strong> (by land, crop and agro-climatic zone) — nudging balanced use.</li>
+    <li><strong>Energy vs. food security</strong>: higher prices for maize-based ethanol are pulling land from pulses and oilseeds.</li>
+    <li><strong>Procurement</strong>: open-ended procurement of rice and wheat exceeds needs; cut it and pass the fiscal savings to farmers as per-acre incentives to diversify.</li>
+    <li><strong>PMFBY tech</strong>: <strong>YES-TECH</strong> (yield estimation using remote sensing) and <strong>WINDS</strong> (weather information network with automatic weather stations and rain gauges).</li>
+  </ul>
+  <h3>State best practices (for Mains)</h3>
+  <ul>
+    <li>Andhra Pradesh — drone-based resurvey and digital land titles; e-farm market linking farmers to traders through Rythu Bharosa Kendras.</li>
+    <li>Bihar — Chaur Vikas Yojana repurposing low-lying land.</li>
+    <li>Madhya Pradesh — Sampada/"Sarthi"-type digital MSP purchase platform (name unclear in captions).</li>
+    <li>Assam — state irrigation plan. Uttar Pradesh — groundwater rules. Karnataka — <strong>FRUITS</strong> farmer registry. Jharkhand — GIS-based climate-smart agriculture.</li>
+  </ul>
+
+  <div class="es-box"><h4>From the official Survey (PIB, 29 Jan 2026)</h4><ul>
+    <li>Decadal growth <strong>4.45% (FY16-FY25)</strong>, the highest of any decade: livestock 7.1%, fisheries 8.8%, crops 3.5%. Agriculture grew 4.6% in FY25.</li>
+    <li>Foodgrains a record <strong>3,577.3 LMT (AY 2024-25)</strong>, +254.3 LMT.</li>
+    <li>Horticulture ~33% of agri GVA; output 362.08 MT, ahead of foodgrains (other tables show 367.72 MT for 2024-25: fruits 114.51, vegetables 219.67).</li>
+    <li>Livestock GVA +195% (FY15-FY24); fish production +140% (2014-24).</li>
+    <li>PM-KISAN: over <strong>₹4.09 lakh crore</strong> released since inception.</li>
+    <li>Priorities (PRS): productivity and resource sustainability, R&amp;D, climate resilience, private investment in storage and processing, and high-growth areas (horticulture, dairy, poultry, fisheries).</li>
+  </ul></div>
+</section>
+
+<section id="ch7">
+  <h2>Ch 7 — Services</h2>
+  <ul>
+    <li><strong>Precocious, services-led growth</strong> — India shifted to services at a much lower per-capita income than others.</li>
+    <li>Services ~53.6% of GVA; high growth, low volatility; services exports keep expanding even as goods stagnate globally.</li>
+    <li>Services' share of FDI rose from ~77.7% (FY16-20 average) to ~80.2% (FY23-25), with ~89% concentrated in five segments: information and communication (largest), professional services (GCCs), finance and insurance, energy, trade.</li>
+  </ul>
+  <h3>NITI Aayog decadal assessment</h3>
+  <ul>
+    <li><strong>Employment–output paradox</strong>: services employ ~30% of workers with better job quality (~51% regular wage vs. 25% in industry, 1% in agriculture), but high-end services create output, not many jobs; jobs come from low-value sub-sectors (trade, hospitality, transport).</li>
+    <li>Regional concentration — Karnataka, Tamil Nadu, Telangana, Maharashtra ~40% of services output; Bihar is also service-heavy (~58%) but low-value.</li>
+    <li>Urban phenomenon — ~60% of urban workers vs. ~20% rural; ~60% of urban women vs. ~10.5% of rural women. In ICT, urban women sometimes out-earn men.</li>
+  </ul>
+  <h3>Do services exports build state capacity? No — four reasons</h3>
+  <ol class="answers">
+    <li>They are <strong>firm-selective, not system-forcing</strong> — they succeed on skills and talent even when infrastructure and institutions are weak.</li>
+    <li>They <strong>exit without voice</strong> — move quietly between cities rather than pressing the state to fix systems (unlike manufacturers).</li>
+    <li>They impose <strong>no hard constraints</strong> on the state — low employment elasticity, so shocks stay local.</li>
+    <li>They are <strong>skill-based, not system-based</strong>. Manufacturing disciplines the state; services don't.</li>
+  </ol>
+  <h3>Other points</h3>
+  <ul>
+    <li><strong>Servicification of manufacturing</strong> — services (R&amp;D, design, software, logistics) embedded in manufacturing; ~17.7% of manufactured export value (2020); EVs as "software on wheels".</li>
+    <li><strong>GCCs</strong> — ~1,700 units employing ~19 lakh; from routine support to core operations and innovation.</li>
+    <li><strong>Data-centre paradox</strong> — India generates ~20% of world data but hosts ~3% of data centres; capacity plan 1.4 GW (2025) → 8 GW (2030) is energy-intensive. Survey: classify data centres as a distinct category (not commercial buildings), give green-power access, tax clarity and visas, and publish anonymised public data.</li>
+    <li>Medical tourism; <strong>marinas</strong> for the blue economy; the <strong>orange (creative) economy</strong>; port turnaround cut from ~43 to ~30 hours.</li>
+    <li>Adopt Singapore's <strong>Research, Innovation and Enterprise</strong> plans; India's step: Anusandhan National Research Foundation.</li>
+  </ul>
+
+  <div class="es-box"><h4>From the official Survey (PIB, 29 Jan 2026)</h4><ul>
+    <li>Services ~54% of GDP (H1 FY26), growing 9% vs 7% a year earlier.</li>
+    <li>Services export growth 7.6% (FY16-20) → <strong>14% (FY23-25)</strong>; ~8% in FY26 (Apr-Nov). Software &gt;40% of services exports; consulting share 10.5% → 18.3%.</li>
+    <li>Services employment elasticity 0.43 (2011-24) → 0.63 post-COVID, second only to construction. Services = 61.9% of urban jobs and 51.7% of EPFO net additions.</li>
+    <li>Tourism 5.22% of GDP (FY24), 8.46 crore jobs; forex earnings $35 bn (2024).</li>
+    <li>IT-ITeS revenue $283 bn (FY25); 1,700+ GCCs employing ~19 lakh.</li>
+    <li>Data centres ~150 of the world's ~11,000; GenAI start-ups ~240 → 890+ (H1 CY24 → H1 CY25).</li>
+    <li>Space: ~2% of the global market; 393 foreign satellites launched for 34 countries (2015-24). Survey suggests a national marina policy and hiking trails.</li>
+  </ul></div>
+</section>
+
+<section id="ch8">
+  <h2>Ch 8 — Industry</h2>
+  <div class="data-box">
+    Industrial GVA growth ~7% (H1 FY26).<br>
+    Medium- and high-tech activities ~46.3% of manufacturing value added.<br>
+    UNIDO Competitive Industrial Performance rank: 37th (2023), up from 40th <span class="prelims-badge">PT</span>.<br>
+    Steel: 2nd-largest crude steel producer, yet a net importer in FY26 (cheap imports).<br>
+    Coal: record output FY25; 5th-largest reserves; 2nd-largest consumer; ~55% of energy mix.<br>
+    Cement: 2nd-largest producer; per-capita use ~290 kg vs. world ~540 kg.<br>
+    Electronics: 7th-largest export category (FY22) → 3rd (FY25).<br>
+    Pharma: 3rd largest by volume; ~20% of global generics.<br>
+    Textiles: 6th-largest exporter; over-reliant on cotton as the world moves to man-made fibres.<br>
+    National Manufacturing Mission target: manufacturing to 25% of GDP by 2035.<br>
+    R&amp;D: 3rd in scholarly publications; Global Innovation Index 38th (2025); GERD stuck ~0.64% of GDP (China ~2.4%, US ~3.5%), with low private share (advanced economies &gt;75% private).
+  </div>
+  <ul>
+    <li>Corporates diversifying from bank credit to commercial paper and corporate bonds — deepening the bond market.</li>
+    <li><strong>Quality control orders</strong> — helped toys turn from net import to net export, but blanket QCOs on intermediates and raw materials without domestic substitutes hurt export competitiveness.</li>
+    <li><strong>MSME online dispute resolution scheme</strong> — MSMEs avoid filing delayed-payment cases against large buyers for fear of losing business; ODR encourages amicable settlement before formal action.</li>
+    <li><strong>Backward GVC participation</strong> (import inputs, assemble, export) suits a labour-rich economy — the BVAX ratio (foreign value added in exports). Low BVAX looks "self-reliant" but means weak GVC integration (cf. Vietnam, China).</li>
+  </ul>
+
+  <div class="es-box"><h4>From the official Survey (PIB, 29 Jan 2026)</h4><ul>
+    <li>Industry GVA +7.0% (H1 FY26) vs 5.9% (FY25). <strong>CIP rank 40 (2022) → 37 (2023)</strong>.</li>
+    <li>Coal output 1,047.52 MT (FY25). Mobile production ₹18,000 crore (FY15) → ₹5.45 lakh crore (FY25), ~30x.</li>
+    <li><strong>PLI</strong> (14 sectors, ₹1.97 lakh crore outlay): ₹2.0 lakh crore+ invested, ₹18.7 lakh crore output, 12.6 lakh jobs, ₹23,946 crore disbursed (to Sep 2025).</li>
+    <li><strong>India Semiconductor Mission</strong>: 10 projects, ~₹1.60 lakh crore, in 6 states; ₹76,000 crore incentive outlay.</li>
+    <li>MSMEs: ~35.4% of manufacturing, 48.58% of exports, 31.1% of GDP; 7.47 crore enterprises, 32.82 crore workers.</li>
+    <li><strong>GII rank 66 (2019) → 38 (2025)</strong>, 1st in Central and Southern Asia. Business share of R&amp;D 41% (China 77%). RDI Fund ₹1 lakh crore over 6 years.</li>
+    <li>DPIIT start-ups ~500 (2016) → 2 lakh+ (2025). India ranks 6th in patent filings and 4th in trademarks (2024).</li>
+  </ul></div>
+</section>
+
+<section id="ch9">
+  <h2>Ch 9 — Investment &amp; infrastructure</h2>
+  <div class="data-box">
+    Central capex up ~89%: ~₹5.92 lakh crore (FY22) → ~₹11.21 lakh crore (FY26).<br>
+    Infrastructure spending multiplier: <strong>2.5–3.5×</strong> GDP <span class="prelims-badge">PT</span>.
+  </div>
+  <ul>
+    <li><strong>Silos to integration</strong>: fragmented planning raised logistics and transaction costs and hurt competitiveness → <strong>PM GatiShakti National Master Plan</strong> (GIS-based) and the National Logistics Policy's <strong>ULIP</strong> (Unified Logistics Interface Platform) integrating FASTag, customs, rail, Vahan data.</li>
+    <li><strong>Financing</strong>: from bank loans to InvITs, AIFs and the like for cheaper long-term money.</li>
+    <li><strong>RBI Project Finance Directions 2025</strong> — limits indefinite extension of the "date of commencement of commercial operations" to stop evergreening of stressed project loans.</li>
+    <li><strong>Small and Medium REITs</strong> — SEBI cut the minimum asset size from ₹500 crore to <strong>₹50 crore</strong>, democratising the channel for mid-sized developers <span class="prelims-badge">PT</span>.</li>
+    <li><strong>PPP reset</strong> — government as a true partner taking early-stage risks (land, clearances), with renegotiation for unforeseen events; viability gap funding 40% (economic) and 50% (social projects).</li>
+  </ul>
+  <h3>Sector data</h3>
+  <div class="data-box">
+    National highways up ~60% (FY14–FY25); high-speed corridors ~10×; ~8,000 km of roads for PVTG habitations (PM-JANMAN).<br>
+    Railways ~99% electrified; Kavach rollout; dedicated freight corridors.<br>
+    Aviation: 3rd-largest domestic market; airports 74 (2014) → 164 (2025); new Bharatiya Vayuyan Adhiniyam <span class="prelims-badge">PT</span>.<br>
+    Ports: turnaround ~30 hours; 32 national waterways operational; Jal Marg Vikas on NW-1.<br>
+    Power: installed capacity ~509.74 GW (+11.6%); <strong>discoms posted a positive profit after tax in FY25</strong> for the first time.<br>
+    Renewables ~49.83% of installed capacity (~253.96 GW): solar ~52%, wind ~21%, large hydro ~20%, bio ~5%, small hydro ~2%. India 3rd in renewables and solar, 4th in wind <span class="prelims-badge">PT</span>.<br>
+    Teledensity ~86.76%; internet connections ~25 crore (2014) → ~101.78 crore (2025); broadband ~6 crore → ~99 crore.<br>
+    100% FDI via automatic route in less-sensitive space segments; Jal Jeevan Mission ~81% rural tap water.
+  </div>
+  <ul>
+    <li><strong>India Energy Stack</strong> — DPI for power: from centralised to decentralised, consumer-driven markets; peer-to-peer trading; households and MSMEs become <strong>prosumers</strong>.</li>
+    <li>Telecom's four pillars: Samavesh (inclusive), Viksit, Tvarit (accelerated), Surakshit (secure).</li>
+  </ul>
+
+  <div class="es-box"><h4>From the official Survey (PIB, 29 Jan 2026)</h4><ul>
+    <li>Central capex ₹2.63 lakh crore (FY18) → <strong>₹11.21 lakh crore (FY26 BE)</strong>, ~4.2x; effective capex ₹15.48 lakh crore.</li>
+    <li>World Bank: India is among the <strong>top 5 LMICs for private investment in infrastructure</strong> and takes 90%+ of South Asia's.</li>
+    <li>NH network 91,287 km (FY14) → 1,46,572 km (FY26); high-speed corridors 550 → 5,364 km. Railways 99.1% electrified; 1,337 Amrit Bharat stations.</li>
+    <li>Airports 74 → 164; 412 mn passengers (FY25), projected 665 mn by FY31. Protection of Interests in Aircraft Objects Act 2025.</li>
+    <li>Ports: 7 in the top 100 of the World Bank CPPI 2024; inland water cargo 18 → 146 MMT; ₹69,725 crore shipbuilding package (Sep 2025); five maritime Acts in 2025.</li>
+    <li>DISCOM PAT <strong>₹2,701 crore (FY25)</strong>, first-ever positive; AT&amp;C losses 22.62% → 15.04%; RDSS outlay ₹3.03 lakh crore.</li>
+    <li>RE 76.38 GW (2014) → 253.96 GW (Nov 2025). Tele-density 75.23% → 86.76%; 5G in 99.9% of districts.</li>
+    <li>Space: SpaDeX makes India the <strong>4th nation with autonomous docking</strong>; NVS-02 was the 100th launch from Sriharikota.</li>
+  </ul></div>
+</section>
+
+<section id="ch10">
+  <h2>Ch 10 — Climate, environment &amp; energy transition</h2>
+  <ul>
+    <li><strong>Sea-level rise</strong>: ~95% of sites globally show no statistically significant acceleration; where acceleration exists it is often local or non-climatic. Not climate denial — a call for <strong>evidence-based adaptation</strong> and institutional prudence over alarmism.</li>
+    <li>Scarce fiscal resources in poor countries should prioritise poverty reduction and human capital over near-term climate milestones.</li>
+    <li>India's per-capita emissions ~2.9 t vs. world ~6.7 t; domestic climate finance rose from ~3.7% of GDP (FY16) to ~5.6% (FY22); ~98% of climate finance domestically sourced.</li>
+    <li><strong>MISHTI</strong> — mangrove restoration (carbon sink, coastal buffer).</li>
+  </ul>
+  <h3>Sub-national adaptation (Mains examples)</h3>
+  <ul>
+    <li>Meghalaya — Mega Rice project (water security). Odisha — Pani Panchayats (community water governance). Tamil Nadu — coastal restoration and blue-economy project.</li>
+    <li><strong>Ahmedabad</strong> — South Asia's first Heat Action Plan (2013) and parametric heat insurance compensating informal women workers when temperatures cross a threshold.</li>
+    <li>Jodhpur — community cooling stations combining solar power and traditional cooling.</li>
+    <li>Uttarakhand — community radio for early warnings.</li>
+  </ul>
+  <h3>Mitigation and minerals</h3>
+  <ul>
+    <li>India 4th globally in total installed renewable capacity; SHANTI Act (private nuclear participation, graded liability).</li>
+    <li>India needs ~336 GWh of battery storage by 2030; inter-state transmission charges waived for storage.</li>
+    <li><strong>Critical minerals</strong>: chokepoints (copper price spikes). <strong>Standards dilemma</strong> — rich-country ESG and traceability standards act as non-tariff barriers: higher compliance costs, asymmetrical enforcement → entry barriers, a <strong>value-chain trap</strong> (developing countries stuck mining, not refining), and a <strong>sustainability premium</strong> raising costs and hurting a just transition. India's response: National Critical Mineral Mission.</li>
+    <li><strong>Climate finance skew</strong> — more than half goes to advanced economies, ~30% to China, ~15% to other developing countries. India issues sovereign green bonds; cities issue municipal green bonds.</li>
+    <li><strong>Greenium</strong> — the lower yield investors accept on green bonds. Strong in Europe (transparent reporting); modest in India (limited liquidity, held to maturity) <span class="prelims-badge">PT</span>.</li>
+    <li><strong>From Pigouvian command-and-control to market-based instruments</strong> — e.g., <strong>Surat's particulate matter emissions trading scheme</strong>, the world's first market-based ETS for particulate pollution <span class="prelims-badge">PT</span>.</li>
+    <li>PARIVESH single-window clearances; colour-coded industry categories (red, orange, green, white, blue); decriminalisation of minor environmental offences (with higher penalties for serious harm); green-belt norms tied to pollution potential.</li>
+    <li>Circular economy — Odisha's waste-to-wealth mission; Kerala's KERA (climate-resilient agri value chains, World Bank).</li>
+  </ul>
+
+  <div class="es-box"><h4>From the official Survey (PIB, 29 Jan 2026)</h4><ul>
+    <li>Survey's framing: a development-centred, whole-of-economy strategy — "development is itself a form of adaptation".</li>
+    <li>Non-fossil share <strong>51.93% of installed capacity (Dec 2025)</strong>, ahead of the NDC's 50% goal.</li>
+    <li>Adaptation spending 3.7% (FY16) → 5.6% of GDP (FY22). India funds ~83% of mitigation and ~98% of adaptation finance domestically.</li>
+    <li>Carbon Credit Trading Scheme (2023), built on PAT; KABIL holds 15,703 ha of lithium blocks in Argentina.</li>
+    <li>Sovereign green bonds ₹72,697 crore cumulative since FY23; municipal green bonds from Indore, Ghaziabad, Ahmedabad, Vadodara. India's greenium is 'intermittent' (0–6 bps).</li>
+    <li>MDBs should move from <strong>'originate-to-hold' to 'originate-to-share'</strong> (guarantees, insurance, blended finance).</li>
+    <li>Mission LiFE called the 'behavioural foundation' of India's NDCs.</li>
+  </ul></div>
+</section>
+
+<section id="ch11">
+  <h2>Ch 11 — Social sector: education &amp; health</h2>
+  <p>Theme: from <strong>access to quality and outcomes</strong>.</p>
+  <h3>School education</h3>
+  <ul>
+    <li>~21% of the population is of school-going age (3–18).</li>
+    <li>HDI dimensions: health (life expectancy), education (mean and expected years of schooling), standard of living (GNI per capita).</li>
+    <li><strong>Mean years of schooling</strong> looks back at adults (25+); <strong>expected years of schooling</strong> looks forward for today's children. India's expected years ~13 vs. China ~15.5, Brazil ~15.8, US ~15.9, Germany ~17.3. NEP's 5+3+3+4 with early childhood education aims to push this to ~15.</li>
+    <li>GER above 90% at foundational/preparatory stages but ~68.5% at higher secondary; only ~17.1% of rural schools offer secondary education vs. ~38% urban.</li>
+    <li>~2 crore adolescents (14–18) out of school — mainly due to <strong>economic pressure, not distance</strong> <span class="prelims-badge">PT</span>.</li>
+    <li>Fewer than 1% of 14–18-year-olds receive formal skill training.</li>
+    <li><strong>PARAKH</strong> (NCERT's assessment centre): foundational learning recovered after COVID; in Grade 3, girls slightly outperformed boys in language and <strong>rural students outperformed urban</strong>; only ~35% of schools accommodate children with special needs; only ~55% of students feel motivated to attend.</li>
+    <li><strong>ASER 2024</strong>: mothers with no schooling fell from ~43% (2014) to ~24%; children aged 8+ in Grade 2 perform better; underage Grade 1 enrolment fell from ~25% (2018) to ~16.7%; ~89% of rural 14–16-year-olds have smartphone access — about half use it for study, ~75% for social media.</li>
+    <li>Shift assessments toward the US <strong>NAEP</strong> and OECD <strong>PISA</strong> models <span class="prelims-badge">PT</span>.</li>
+    <li>Systemic issues: rote, certification-focused boards; weak accountability (self-reporting); poor inclusion; low motivation; entry-age readiness.</li>
+    <li>Community models: Andhra Pradesh's <strong>Chaduvula Panduga</strong>, Assam's <strong>Alokar Jatra</strong>, Haryana's <strong>School Chalo</strong>; Maharashtra's <strong>Jalindar</strong> subject-friend model; teacher communities.</li>
+  </ul>
+  <h3>Higher education and internationalisation</h3>
+  <ul>
+    <li>Higher-education GER ~29.5%.</li>
+    <li>Viksit Bharat Shiksha Adhishthan to replace UGC, AICTE, NCTE; <strong>Professors of Practice</strong> let industry experts teach.</li>
+    <li>India is the largest source of international students; Indians abroad projected above 18 lakh (2025); <strong>28 Indians go abroad for every 1 foreign student who comes</strong> — a forex drain <span class="prelims-badge">PT</span>.</li>
+    <li>Policy: 100% FDI and foreign campuses; "Study in India"; short modular courses; faster visas, post-study work, housing. Risk: over-commercialisation and exclusion.</li>
+  </ul>
+  <h3>Health</h3>
+  <div class="data-box">
+    Life expectancy: 49.7 (1973) → 70.3 (2023).<br>
+    MMR down ~86% since 1990; IMR down ~37% in a decade (40 → 25 per 1,000 live births, 2013–2023); Kerala, Manipur, Sikkim, Goa in single digits.<br>
+    NCDs ~57% of deaths; cardiovascular disease the leading cause.<br>
+    UPF retail sales up ~40-fold (2006–2019); 24% of women and 23% of men overweight; child overweight 2.1% → 3.4%.
+  </div>
+  <ul>
+    <li>Gender gaps: men have higher mortality; women face delayed diagnosis.</li>
+    <li><strong>UPF vs. HFSS</strong>: classification by processing vs. by nutrient profile <span class="prelims-badge">PT</span>.</li>
+    <li>Responses: higher GST on UPF; marketing time restrictions; <strong>front-of-pack warning labels</strong> (not ranking-style); FSSAI definitions (NOVA-type); healthier school food, daily physical activity, school well-being scores; ICMR-NIN 2024 dietary guidelines; Fit India, Eat Right.</li>
+    <li><strong>Nutrition</strong>: calorie and protein intake rising; rural–urban gap narrowing; but cereal-heavy diets — only ~8.7% (rural) and ~14.3% (urban) consume enough milk. Shift from food security to <strong>nutrition security</strong>. Rajasthan's <strong>cash-plus model</strong> pairs DBT with social and behaviour change communication.</li>
+    <li><strong>Digital addiction</strong>: digital economy ~11.74% of national income (FY23); ~85% of households own a smartphone. Focus shifts from access to <strong>digital hygiene</strong>. Costs: productivity loss, sleep debt, anxiety. The Facebook Social Connectedness Index study links strong in-district ties (UP, Bihar) with lower suicide rates, and scattered/online networks (Karnataka, Tamil Nadu) with higher rates. WHO recognises gaming disorder. Global responses: Australia's under-16 ban; China's limits (1 hour on weekends/holidays for minors); South Korea's Cinderella law; Singapore's cyber-wellness; UK digital resilience. India: CBSE guidelines, Tele-MANAS, NIMHANS SHUT clinic, the Online Gaming Act, Kerala's digital detox centres.</li>
+  </ul>
+
+  <div class="es-box"><h4>From the official Survey (PIB, 29 Jan 2026)</h4><ul>
+    <li>GER (old stages): primary 90.9, upper primary 90.3, secondary 78.7, higher secondary 58.4. By NEP stage: secondary (IX–XII) 68.5.</li>
+    <li>UDISE+ 2024-25: 24.69 crore students, 14.71 lakh schools, 1.01 crore+ teachers; 13,076 PM SHRI schools.</li>
+    <li><strong>PARAKH 2024 (Grade III)</strong>: maths proficiency 42% → 65%, language 39% → 57% (vs 2021).</li>
+    <li>Higher education: HEIs 51,534 → 70,018; 23 IITs, 21 IIMs, 20 AIIMS; IIT campuses in Zanzibar and Abu Dhabi; NEP goal of 50% GER by 2035.</li>
+    <li>Health (1990–2023): MMR −86% (world −48%), U5MR −78% (−61%), NMR −70% (−54%).</li>
+    <li>UPF sales grew &gt;150% (2009–2023); the lecture's ~40-fold figure (2006–19) is from a different series.</li>
+    <li>Digital wellness: PRAGYATA screen-time framework, Online Gaming (Regulation) Act 2025, Tele-MANAS 14416 (32 lakh+ calls). Survey suggests a Digital Wellness Curriculum and offline youth hubs.</li>
+  </ul></div>
+</section>
+
+<section id="ch12">
+  <h2>Ch 12 — Employment &amp; skilling</h2>
+  <p>Theme: from <strong>job quantity to job quality</strong> (decent work).</p>
+  <div class="data-box">
+    Working-age population (15–59) to exceed ~98 crore by 2036; demographic dividend peaks around 2030 (~65% working age).<br>
+    PLFS Q2 FY26: ~56.2 crore employed; ~8.7 lakh jobs added over the previous quarter.<br>
+    Rural employment: agriculture ~57.7%, self-employment ~62.8%. Urban: services ~62%.<br>
+    Women: ~37.5% own-account workers; only ~10.8% regular wage in rural areas.<br>
+    Time Use Survey 2024: women ~363 minutes/day on unpaid activities vs. men ~123; 41% of women are primary caregivers vs. 21% of men.<br>
+    ASI: small factories (&lt;100 workers) are 77% of factories but employ 21% of workers; large factories (22%) employ 79%.<br>
+    Female LFPR: ~23% (2017-18) → ~41.7% (2023-24) <span class="prelims-badge">PT</span>; women ~43% of STEM enrolment; female-headed establishments 24.2% → 26% (FY22–FY24).<br>
+    Only ~4.9% of youth (15–29) have formal vocational training.
+  </div>
+  <ul>
+    <li><strong>Demographic dividend</strong> (larger working-age share; youth influx) vs. <strong>longevity dividend</strong> (gains from longer, healthy, productive lives — needs health, social security, age-friendly work, lifelong learning).</li>
+    <li><strong>Pink tax on mobility</strong> — women pay more for safer transport. State examples: Uttar Pradesh start-up support, Kerala's women-focused schemes, Maharashtra's Mahila Arthik Vikas Mahamandal.</li>
+    <li>Worker well-being: buddy systems pairing new migrant women workers with experienced peers; earned-wage access to avoid informal loans.</li>
+    <li>Labour codes (Survey estimates): lower compliance costs could add jobs; night shifts, equal pay and crèches could raise female LFPR; <strong>fixed-term employment</strong> lets small firms hire for projects.</li>
+    <li><strong>Gig workers (McKinsey typology)</strong>: free agents (primary income), casual earners (supplementary), reluctants (prefer regular jobs), financially strapped (no other option); also by skill level. ILO began standard-setting on platform work (2025).</li>
+    <li>Skilling: from enrolment to outcomes — vocationalisation in school (Madhya Pradesh, Maharashtra career portal, Meghalaya SPARK), National Credit Framework, apprenticeship-embedded degrees, NAPS/NATS. Problems: low SME participation, ministry overlap, compliance burden, regional skew.</li>
+    <li><strong>Skill India Digital Hub</strong> — one DPI for skilling, education, jobs and entrepreneurship.</li>
+    <li><strong>Skill impact bonds</strong> (four parties): outcome funder (government pays only for results), investor (CSR/philanthropy funds upfront), training provider, independent evaluator who verifies outcomes <span class="prelims-badge">PT</span>.</li>
+    <li><strong>Skill vouchers</strong> — demand-side choice of institute.</li>
+    <li><strong>Odisha's 10-6-4-2 campaign</strong> — showcasing 10 successful ITI alumni: 6 employed outside Odisha, 4 women, 2 entrepreneurs.</li>
+  </ul>
+
+  <div class="es-box"><h4>From the official Survey (PIB, 29 Jan 2026)</h4><ul>
+    <li>Unemployment 6% (2017-18) → <strong>3.2% (2023-24)</strong>; FLFPR 23.3% → 41.7%.</li>
+    <li>Organised manufacturing added 57 lakh jobs (FY15–FY24, 4% CAGR); ASI FY24 +10 lakh jobs. 60% of manufacturing jobs are in seven states.</li>
+    <li>Unincorporated sector (QBUSE): 7.9 crore establishments, 12.9 crore workers; working owners ~60% of employed (Q2 FY26).</li>
+    <li>e-Shram <strong>31 crore+ (54% women)</strong>; NCS portal 2.8 crore+ vacancies (FY25).</li>
+    <li>Gig workers 77 lakh (FY21) → 120 lakh (FY25), ~2% of the workforce → 6.7% by 2029-30; ~40% earn &lt;₹15,000/month.</li>
+    <li>Vocational/technical training (15–59, PLFS broad definition) 8.1% → 34.7%; only 0.97% of 14–18-year-olds had institutional skilling.</li>
+    <li>PM-NAPS 43.47 lakh apprentices (20% women); 1,000 ITIs upgraded under a hub-and-spoke model; PMKVY 4.0.</li>
+  </ul></div>
+</section>
+
+<section id="ch13">
+  <h2>Remaining Survey themes (from official releases — lecture 04 pending)</h2>
+  <div class="gap-box"><h4>Source note</h4><p>Lecture 04 still has no captions. This section is built from the official PIB releases, so treat it as Survey content rather than lecture content. Commentary from the lecture will be added once its transcript is available.</p></div>
+
+  <h3>A. Rural economy &amp; inclusive growth — MGNREGS to VB-G RAM G</h3>
+  <ul>
+    <li>MGNREGS (2005, 100 days of unskilled work): women's share 48% (FY14) → 58.1% (FY25); Aadhaar-based payments, geo-tagged assets.</li>
+    <li>Survey verdict: the scheme <strong>"reached its limits"</strong> — work not done on the ground, spending out of step with progress, machines in labour work, bypassed attendance, few households completing 100 days.</li>
+    <li><strong>Viksit Bharat – Guarantee for Rozgar and Ajeevika Mission (Gramin) Act, 2025</strong>: weekly wages (within a fortnight at most); admin ceiling 6% → 9%; Viksit Gram Panchayat Plans linked to PM GatiShakti; GPs implement at least half the work by cost; assets pooled into a National Rural Infrastructure Stack; social audits every 6 months; GPS, AI and biometric monitoring; normative, cost-shared funding <span class="prelims-badge">PT</span>.</li>
+    <li>Rural drinking water 94.6% → 99.6%; Jal Jeevan Mission 81%+ tap connections; 96%+ villages ODF Plus.</li>
+    <li>Social-services spending CAGR FY22–26: 12% (education 11%, health 8%).</li>
+  </ul>
+
+  <h3>B. Social security — pensions &amp; insurance</h3>
+  <ul>
+    <li>Multi-tier pension system: NPS, <strong>Unified Pension Scheme (2025)</strong>, EPF, APY. NPS 211.7 lakh subscribers (Dec 2025); APY subscriptions CAGR 43.7%.</li>
+    <li><strong>NPS e-Shramik</strong> (Oct 2025) for gig and platform workers.</li>
+    <li>Insurance: "Insurance for All by 2047"; <strong>Sabka Bima Sabki Suraksha (Amendment of Insurance Laws) Act, 2025</strong> allows 100% FDI; GST exempted on individual life and health policies <span class="prelims-badge">PT</span>.</li>
+    <li>Health insurance (41% of non-life premium) has overtaken motor. Diagnosis: a "low-penetration, high-cost" equilibrium → digitise distribution.</li>
+  </ul>
+
+  <h3>C. Urbanisation</h3>
+  <ul>
+    <li>India is <strong>more urban in economic and functional terms</strong> than the Census suggests: satellite data (EU GHSL) put India at ~63% urban in 2015, nearly double Census 2011 (31%) <span class="prelims-badge">PT</span>.</li>
+    <li>World Bank: ~600 mn urban residents (40%) by 2036, generating ~70% of GDP.</li>
+    <li>Constraints: land, housing and mobility supply; fragmented municipal governance; weak city fiscal autonomy.</li>
+    <li>Proposal: every million-plus city to prepare a <strong>statutory 20-year City Spatial and Economic Plan</strong> (updated every 5 years) with three non-negotiables — transport network plan, housing supply plan with annual targets, and a land-value capture framework.</li>
+    <li>Also: transit-oriented development, congestion pricing, clear land titles and density norms; PM e-Bus Sewa (10,000 e-buses); metro/RRTS ~1,036 km in 24 cities; PMAY-U 122 lakh houses sanctioned.</li>
+  </ul>
+
+  <h3>D. Artificial intelligence as economic strategy</h3>
+  <ul>
+    <li>AI raises the productivity of capital relative to labour — a tension for labour-abundant India.</li>
+    <li>India's edge is <strong>application-led innovation and human-capital depth</strong>, not frontier-model scale. Prioritise decentralised, sector-specific, open and interoperable systems with shared infrastructure.</li>
+    <li>Sequencing: "coordination first, capacity next and binding policy leverage last". Data governance through trusted flows and auditability rather than rigid localisation.</li>
+    <li>Proposed <strong>AI Economic Council</strong> with five principles: human primacy, labour-market sensitivity by design, sequencing over speed, co-evolution of technology and human capital, public-interest safeguards <span class="prelims-badge">PT</span>.</li>
+    <li>Examples: Bhashini, AI4Bharat, thermal-imaging breast-cancer screening; "Earn and Learn"; move India from AI "back office" to "front office".</li>
+  </ul>
+
+  <h3>E. Disciplined Swadeshi — from resilience to indispensability</h3>
+  <ul>
+    <li>Path: <strong>Swadeshi → Strategic Resilience → Strategic Indispensability</strong>. "Protection without productivity-enhancing investment… creates fragility."</li>
+    <li><strong>Three-tier indigenisation framework</strong>: (1) critical vulnerabilities with high strategic urgency; (2) economically feasible capabilities with strategic payoffs; (3) low urgency or high-cost substitution. Tiers are dynamic and aim for export capability <span class="prelims-badge">PT</span>.</li>
+    <li><strong>National Input Cost Reduction Strategy</strong> — "competitiveness as infrastructure".</li>
+    <li>Entrepreneurial-state lessons: outcome-oriented bureaucracy, tolerance for good-faith failure, credible exit from support ("exit is as important as entry").</li>
+    <li>Regulatory principles: clarity, separation within authority, proportionality, due process; Schools of Regulatory Studies; deemed approvals.</li>
+    <li>Compliance Reduction &amp; Deregulation Initiative: 828 actionable reforms (23 areas × 36 States/UTs), 630 (76%) done by 23 Jan 2026.</li>
+    <li>Goal: move the world from "thinking about buying Indian" to "buying Indian without thinking".</li>
+  </ul>
+</section>
+
+<section id="mcqs">
+  <h2>Prelims trap MCQs (from the lectures, rewritten)</h2>
+  <p style="font-family: Arial, sans-serif; font-size: 0.85em; color: #57606a;">Statements the instructor flagged as traps, rewritten as original MCQs.</p>
+  <div class="mcq-card"><div class="q-num">Q1</div><div class="q-text">Per the Survey, which countries are notable exceptions with comparatively low primary deficits?</div><div class="options"><div class="option">(A) China and India</div><div class="option correct">(B) India and Brazil</div><div class="option">(C) US and Japan</div><div class="option">(D) Germany and France</div></div><div class="answer-box"><span class="answer-label">Answer: (B).</span></div></div>
+  <div class="mcq-card"><div class="q-num">Q2</div><div class="q-text">Stability in agricultural growth in recent years is mainly attributed to:</div><div class="options"><div class="option">(A) Climate-resilient crop varieties</div><div class="option correct">(B) Allied sectors — livestock and fisheries</div><div class="option">(C) Higher MSPs for cereals</div><div class="option">(D) Expansion of irrigation for millets</div></div><div class="answer-box"><span class="answer-label">Answer: (B).</span></div></div>
+  <div class="mcq-card"><div class="q-num">Q3</div><div class="q-text">Total factor productivity captures efficiency gains from:</div><div class="options"><div class="option">(A) Upgrading labour skills only</div><div class="option">(B) Capital deepening only</div><div class="option correct">(C) Better use of both capital and labour</div><div class="option">(D) Population growth</div></div><div class="answer-box"><span class="answer-label">Answer: (C).</span></div></div>
+  <div class="mcq-card"><div class="q-num">Q4</div><div class="q-text">The Survey's fiscal anchor for FY31 is:</div><div class="options"><div class="option">(A) Fiscal deficit of 3%</div><div class="option correct">(B) Debt-to-GDP of 50% ± 1%</div><div class="option">(C) Revenue deficit of zero</div><div class="option">(D) Primary deficit of 1%</div></div><div class="answer-box"><span class="answer-label">Answer: (B).</span></div></div>
+  <div class="mcq-card"><div class="q-num">Q5</div><div class="q-text">The sharp fall in reserve money (M0) growth in FY26 mainly reflects:</div><div class="options"><div class="option">(A) Severe liquidity tightening by RBI</div><div class="option correct">(B) The CRR cut reducing banks' deposits with RBI while broad money grew</div><div class="option">(C) Currency demonetisation</div><div class="option">(D) Capital outflows</div></div><div class="answer-box"><span class="answer-label">Answer: (B).</span></div></div>
+  <div class="mcq-card"><div class="q-num">Q6</div><div class="q-text">Which is correct about India's insurance sector?</div><div class="options"><div class="option">(A) Penetration has risen steadily</div><div class="option correct">(B) Density has risen but penetration has stagnated</div><div class="option">(C) FDI is capped at 74%</div><div class="option">(D) Both density and penetration fell</div></div><div class="answer-box"><span class="answer-label">Answer: (B).</span></div></div>
+  <div class="mcq-card"><div class="q-num">Q7</div><div class="q-text">India's top source of inward remittances now is:</div><div class="options"><div class="option">(A) UAE</div><div class="option">(B) Saudi Arabia</div><div class="option correct">(C) USA</div><div class="option">(D) UK</div></div><div class="answer-box"><span class="answer-label">Answer: (C).</span> ~27.7%.</div></div>
+  <div class="mcq-card"><div class="q-num">Q8</div><div class="q-text">On Harvard's measures, India ranks:</div><div class="options"><div class="option">(A) Low on both ECI and COI</div><div class="option correct">(B) Modest on ECI (44th) but 2nd on COI</div><div class="option">(C) High on ECI but low on COI</div><div class="option">(D) Top 10 on both</div></div><div class="answer-box"><span class="answer-label">Answer: (B).</span></div></div>
+  <div class="mcq-card"><div class="q-num">Q9</div><div class="q-text">The world's largest net creditor in 2024 became:</div><div class="options"><div class="option">(A) Japan</div><div class="option correct">(B) Germany</div><div class="option">(C) China</div><div class="option">(D) Switzerland</div></div><div class="answer-box"><span class="answer-label">Answer: (B).</span> Overtaking Japan.</div></div>
+  <div class="mcq-card"><div class="q-num">Q10</div><div class="q-text">SEBI's small and medium REIT framework sets a minimum asset size of:</div><div class="options"><div class="option">(A) ₹1,000 crore</div><div class="option">(B) ₹500 crore</div><div class="option correct">(C) ₹50 crore</div><div class="option">(D) ₹10 crore</div></div><div class="answer-box"><span class="answer-label">Answer: (C).</span></div></div>
+  <div class="mcq-card"><div class="q-num">Q11</div><div class="q-text">India Energy Stack is best described as:</div><div class="options"><div class="option">(A) A centralised database storing citizens' energy use</div><div class="option correct">(B) Digital public infrastructure enabling decentralised, consumer-driven power markets and P2P trading</div><div class="option">(C) A coal stockpiling scheme</div><div class="option">(D) A nuclear liability fund</div></div><div class="answer-box"><span class="answer-label">Answer: (B).</span></div></div>
+  <div class="mcq-card"><div class="q-num">Q12</div><div class="q-text">The world's first market-based emissions trading scheme for particulate matter was launched in:</div><div class="options"><div class="option">(A) Delhi</div><div class="option correct">(B) Surat</div><div class="option">(C) Beijing</div><div class="option">(D) Singapore</div></div><div class="answer-box"><span class="answer-label">Answer: (B).</span></div></div>
+  <div class="mcq-card"><div class="q-num">Q13</div><div class="q-text">Under the Survey's three-tier indigenisation framework, Tier 1 covers:</div><div class="options"><div class="option">(A) Low-cost substitution items</div><div class="option correct">(B) Critical vulnerabilities with high strategic urgency</div><div class="option">(C) All consumer goods</div><div class="option">(D) Only defence imports</div></div><div class="answer-box"><span class="answer-label">Answer: (B).</span> </div></div>
+  <div class="mcq-card"><div class="q-num">Q14</div><div class="q-text">Satellite-based estimates cited by the Survey put India's urban share in 2015 at about:</div><div class="options"><div class="option">(A) 31%</div><div class="option">(B) 40%</div><div class="option correct">(C) 63%</div><div class="option">(D) 75%</div></div><div class="answer-box"><span class="answer-label">Answer: (C).</span> EU GHSL data.</div></div>
+  <div class="mcq-card"><div class="q-num">Q15</div><div class="q-text">VB-G RAM G changes MGNREGS by:</div><div class="options"><div class="option">(A) Removing the work guarantee</div><div class="option correct">(B) Raising the admin-expense ceiling from 6% to 9% and paying wages weekly</div><div class="option">(C) Moving the scheme to states only</div><div class="option">(D) Paying only through cash</div></div><div class="answer-box"><span class="answer-label">Answer: (B).</span> </div></div>
+  <div class="mcq-card"><div class="q-num">Q16</div><div class="q-text">The Survey's AI strategy for India prioritises:</div><div class="options"><div class="option">(A) Building the largest frontier models</div><div class="option">(B) Strict data localisation</div><div class="option correct">(C) Decentralised, application-driven, interoperable systems</div><div class="option">(D) Banning open-source models</div></div><div class="answer-box"><span class="answer-label">Answer: (C).</span> </div></div>
+  <div class="mcq-card"><div class="q-num">Q17</div><div class="q-text">Which statement on Global Innovation Index is correct?</div><div class="options"><div class="option correct">(A) India ranked 38th in 2025, up from 66th in 2019</div><div class="option">(B) India ranked 66th in 2025</div><div class="option">(C) India entered the top 20 in 2025</div><div class="option">(D) India is not ranked</div></div><div class="answer-box"><span class="answer-label">Answer: (A).</span> </div></div>
+  <div class="mcq-card"><div class="q-num">Q18</div><div class="q-text">CPI inflation in October 2025 was:</div><div class="options"><div class="option">(A) 1.7%</div><div class="option correct">(B) 0.3%</div><div class="option">(C) 2.2%</div><div class="option">(D) 4.6%</div></div><div class="answer-box"><span class="answer-label">Answer: (B).</span> Lowest in the CPI (2012=100) series.</div></div>
+</section>
+
+<section id="glossary">
+  <h2>Glossary</h2>
+  <dl>
+    <div class="glossary-term"><dt>Economic statecraft</dt><dd>Using economic tools for foreign-policy and security goals.</dd></div>
+    <div class="glossary-term"><dt>Strategic indispensability</dt><dd>Making a country's goods and services hard for partners to replace.</dd></div>
+    <div class="glossary-term"><dt>Nowcasting</dt><dd>Estimating present/near-term activity from high-frequency data.</dd></div>
+    <div class="glossary-term"><dt>NUDGE (tax)</dt><dd>Data-led, non-intrusive prompts for voluntary tax compliance.</dd></div>
+    <div class="glossary-term"><dt>Credit push vs. debit pull</dt><dd>Bulk advances vs. just-in-time release of funds.</dd></div>
+    <div class="glossary-term"><dt>Money multiplier</dt><dd>M3 ÷ M0 (~6.21).</dd></div>
+    <div class="glossary-term"><dt>Geostrategic globalisation</dt><dd>Interconnected trade filtered by security and resilience.</dd></div>
+    <div class="glossary-term"><dt>ECI vs. COI</dt><dd>Present export complexity vs. ease of diversifying into complex goods.</dd></div>
+    <div class="glossary-term"><dt>Investment Development Path</dt><dd>Dunning: net outward FDI rises as an economy matures (India at stage 3).</dd></div>
+    <div class="glossary-term"><dt>Base vs. momentum effect</dt><dd>Influence of last year's level vs. month-on-month change.</dd></div>
+    <div class="glossary-term"><dt>Counter-cyclical tariff</dt><dd>Raise duties when world prices fall; cut when they rise.</dd></div>
+    <div class="glossary-term"><dt>Precocious services-led growth</dt><dd>Shift to services at low per-capita income.</dd></div>
+    <div class="glossary-term"><dt>System-forcing vs. firm-selective</dt><dd>Sectors that press the state to improve systems vs. those that bypass them.</dd></div>
+    <div class="glossary-term"><dt>Servicification</dt><dd>Services embedded in manufacturing.</dd></div>
+    <div class="glossary-term"><dt>Backward GVC participation</dt><dd>Importing inputs to assemble and export.</dd></div>
+    <div class="glossary-term"><dt>Prosumer</dt><dd>Consumer who also produces (e.g., rooftop solar).</dd></div>
+    <div class="glossary-term"><dt>Greenium</dt><dd>Lower yield investors accept on green bonds.</dd></div>
+    <div class="glossary-term"><dt>Standards dilemma</dt><dd>ESG/traceability standards acting as non-tariff barriers.</dd></div>
+    <div class="glossary-term"><dt>Expected vs. mean years of schooling</dt><dd>Forward-looking for children vs. backward-looking for adults.</dd></div>
+    <div class="glossary-term"><dt>Longevity dividend</dt><dd>Gains from longer, healthier, productive lives.</dd></div>
+    <div class="glossary-term"><dt>Pink tax (mobility)</dt><dd>Extra cost women pay for safer transport.</dd></div>
+    <div class="glossary-term"><dt>Skill impact bond</dt><dd>Outcome-based financing with an independent evaluator.</dd></div>
+  </dl>
+</section>
+
+<section id="arcs">
+  <h2>Revision kit (ARCS method)</h2>
+  <div class="arcs-box">
+    <h4>A — Active Recall</h4>
+    <div class="recall-q"><p class="q-text">1. Give the four demand-side components and their shares.</p><details><summary></summary><div class="ans">PFCE ~61.5%, GFCF ~30%, GFCE ~9.9%, exports ~21.5% of nominal GDP.</div></details></div>
+    <div class="recall-q"><p class="q-text">2. Why don't services exports build state capacity?</p><details><summary></summary><div class="ans">Firm-selective not system-forcing; exit without voice; no hard constraints; skill-based not system-based.</div></details></div>
+    <div class="recall-q"><p class="q-text">3. What are the three channels of OFDI gains?</p><details><summary></summary><div class="ans">Capital, knowledge, resource/market — conditional on absorptive capacity.</div></details></div>
+    <div class="recall-q"><p class="q-text">4. What is the Survey's fertiliser reform idea?</p><details><summary></summary><div class="ans">Let urea prices reflect cost; pay per-acre DBT by land, crop and agro-climatic zone.</div></details></div>
+    <div class="recall-q"><p class="q-text">5. Name the four parties in a skill impact bond.</p><details><summary></summary><div class="ans">Outcome funder (government), investor, training provider, independent evaluator.</div></details></div>
+  </div>
+  <div class="arcs-box spacing-tracker">
+    <h4>R — Repeat with Spacing</h4>
+    <p>Processed: Oct 12, 2026.</p>
+    <table>
+      <tr><th>Review</th><th>Target date</th><th>Done</th></tr>
+      <tr><td>Day 1</td><td>Oct 12</td><td><input type="checkbox"></td></tr>
+      <tr><td>Day 3</td><td>Oct 15</td><td><input type="checkbox"></td></tr>
+      <tr><td>Day 7</td><td>Oct 19</td><td><input type="checkbox"></td></tr>
+      <tr><td>Day 21</td><td>Nov 2</td><td><input type="checkbox"></td></tr>
+    </table>
+  </div>
+  <div class="arcs-box mnemonic-box">
+    <h4>S — Stick with Encoding Tricks</h4>
+    <p><strong>Renewables mix "52-21-20-5-2"</strong>: solar, wind, large hydro, bio, small hydro.</p>
+    <p><strong>Financial Inclusion Index "35-45-20"</strong>: access, usage, quality.</p>
+    <p><strong>Conditional cash transfers "PB-4P-NYC"</strong>: Progresa (Mexico), Bolsa Família (Brazil), 4Ps (Philippines), Opportunity NYC.</p>
+  </div>
+</section>
+
+<section id="gaps">
+  <h2>Verification notes</h2>
+  <div class="gap-box">
+    <h4>Check against the Survey PDF before quoting</h4>
+    <ul>
+      <li><strong>Corrected against official data:</strong> direct-tax share is 58.2% (FY25), not 58.8%; services exports $387.6 bn; FI-Index is 67.0 (lecture gave only the weights); vocational-training share depends on definition (lecture 4.9% formal for 15–29; PLFS 34.7% any training for 15–59).</li>
+      <li><strong>Inconsistent within PIB:</strong> data-centre capacity (services release: ~1.4 GW → 8 GW by 2030; telecom release: ~1,280 MW → ~4 GW); horticulture 362.08 vs 367.72 MT. Cite with the year.</li>
+      <li>Figures came through auto-captions; spot-check key numbers (GDP shares, export totals, poverty rates, renewable shares) against the official Economic Survey 2025-26.</li>
+      <li>Some state scheme names were garbled (e.g., the Madhya Pradesh MSP platform, Bihar's chaur scheme) — confirm before citing.</li>
+      <li>The fertiliser NPK actual ratio was dictated quickly in the lecture; confirm the exact figure.</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  Notes compiled from unlisted recordings of an Economic Survey 2025-26 lecture series using YouTube's auto-generated transcripts. Lecture 04 pending; remaining themes from official PIB releases. MCQs are rewritten from traps flagged in class. Click Save (first time will ask you to pick this file) to write your edits directly to disk.
+</footer>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11.15.0/dist/mermaid.min.js" integrity="sha384-yQ4mmBBT+vhTAwjFH0toJXNYJ6O4usWnt6EPIdWwrRvx2V/n5lXuDZQwQFeSFydF" crossorigin="anonymous"></script>
+<script>
+(function() {
+  var mode = null;
+  var noteCounter = 0;
+
+  var btnHighlight = document.getElementById('btn-highlight');
+  var btnUnderline = document.getElementById('btn-underline');
+  var btnNote = document.getElementById('btn-note');
+  var btnClear = document.getElementById('btn-clear');
+  var btnSave = document.getElementById('btn-save');
+  var statusText = document.getElementById('status-text');
+  var contentRoot = document.getElementById('content-root');
+  var noteBox = document.getElementById('note-input-box');
+  var noteText = document.getElementById('note-text');
+  var pendingNoteTarget = null;
+
+  function setMode(newMode) {
+    mode = mode === newMode ? null : newMode;
+    btnHighlight.classList.toggle('active', mode === 'highlight');
+    btnUnderline.classList.toggle('active', mode === 'underline');
+    btnNote.classList.toggle('active', mode === 'note');
+  }
+
+  btnHighlight.addEventListener('click', function() { setMode('highlight'); });
+  btnUnderline.addEventListener('click', function() { setMode('underline'); });
+  btnNote.addEventListener('click', function() { setMode('note'); });
+
+  function markDirty() {
+    statusText.textContent = 'Unsaved changes';
+    statusText.style.color = '#993c1d';
+  }
+
+  document.addEventListener('mouseup', function(e) {
+    if (mode !== 'highlight' && mode !== 'underline') return;
+    var sel = window.getSelection();
+    if (!sel || sel.isCollapsed || sel.rangeCount === 0) return;
+    var range = sel.getRangeAt(0);
+    if (!contentRoot.contains(range.commonAncestorContainer)) return;
+
+    var wrapper = document.createElement(mode === 'highlight' ? 'mark' : 'u');
+    wrapper.className = mode === 'highlight' ? 'user-highlight' : 'user-underline';
+    try {
+      range.surroundContents(wrapper);
+    } catch (err) {
+      var frag = range.extractContents();
+      wrapper.appendChild(frag);
+      range.insertNode(wrapper);
+    }
+    sel.removeAllRanges();
+    markDirty();
+  });
+
+  contentRoot.addEventListener('click', function(e) {
+    if (mode !== 'note') return;
+    if (e.target.closest('.user-note')) return;
+    pendingNoteTarget = e.target;
+    noteBox.style.display = 'block';
+    var x = Math.min(e.clientX, window.innerWidth - 280);
+    var y = Math.min(e.clientY, window.innerHeight - 140);
+    noteBox.style.left = x + 'px';
+    noteBox.style.top = y + 'px';
+    noteText.value = '';
+    noteText.focus();
+  });
+
+  document.getElementById('note-cancel').addEventListener('click', function() {
+    noteBox.style.display = 'none';
+    pendingNoteTarget = null;
+  });
+
+  document.getElementById('note-add').addEventListener('click', function() {
+    var text = noteText.value.trim();
+    if (!text || !pendingNoteTarget) { noteBox.style.display = 'none'; return; }
+    noteCounter++;
+    var noteDiv = document.createElement('div');
+    noteDiv.className = 'user-note';
+    noteDiv.setAttribute('data-note-id', noteCounter);
+    noteDiv.innerHTML = '<span class="note-label">Your note</span>' +
+      '<button class="del-note" title="Remove note">&times;</button>' +
+      '<span class="note-body"></span>';
+    noteDiv.querySelector('.note-body').textContent = text;
+    noteDiv.querySelector('.del-note').addEventListener('click', function() {
+      noteDiv.remove();
+      markDirty();
+    });
+
+    var target = pendingNoteTarget.closest('li, p, td, div.quote-card, section') || contentRoot;
+    target.parentNode.insertBefore(noteDiv, target.nextSibling);
+
+    noteBox.style.display = 'none';
+    pendingNoteTarget = null;
+    markDirty();
+    setMode('note');
+  });
+
+  btnClear.addEventListener('click', function() {
+    if (!confirm('Remove all your highlights, underlines, and notes on this page?')) return;
+    contentRoot.querySelectorAll('.user-note').forEach(function(n) { n.remove(); });
+    contentRoot.querySelectorAll('mark.user-highlight').forEach(function(m) {
+      var parent = m.parentNode;
+      while (m.firstChild) parent.insertBefore(m.firstChild, m);
+      parent.removeChild(m);
+    });
+    contentRoot.querySelectorAll('u.user-underline').forEach(function(u) {
+      var parent = u.parentNode;
+      while (u.firstChild) parent.insertBefore(u.firstChild, u);
+      parent.removeChild(u);
+    });
+    markDirty();
+  });
+
+  var fallbackHelp = document.getElementById('fallback-help');
+  document.getElementById('fallback-close').addEventListener('click', function() {
+    fallbackHelp.style.display = 'none';
+  });
+
+  var fileHandle = null;
+  var fsaSupported = 'showSaveFilePicker' in window;
+  var THIS_FILENAME = 'notes.html';
+
+  function buildFullHtml() {
+    var doc = document.documentElement.cloneNode(true);
+    var liveContentRoot = doc.querySelector('#content-root');
+    if (liveContentRoot) liveContentRoot.innerHTML = contentRoot.innerHTML;
+    return '<!DOCTYPE html>\n' + doc.outerHTML;
+  }
+
+  async function writeToFile() {
+    var writable = await fileHandle.createWritable();
+    await writable.write(buildFullHtml());
+    await writable.close();
+  }
+
+  btnSave.addEventListener('click', async function() {
+    statusText.textContent = 'Saving…';
+    statusText.style.color = '#57606a';
+    if (!fsaSupported) {
+      fallbackHelp.style.display = 'block';
+      statusText.textContent = 'Direct save not supported in this browser';
+      statusText.style.color = '#993c1d';
+      return;
+    }
+    try {
+      if (!fileHandle) {
+        fileHandle = await window.showSaveFilePicker({
+          suggestedName: THIS_FILENAME,
+          types: [{ description: 'HTML file', accept: { 'text/html': ['.html'] } }]
+        });
+      }
+      var perm = await fileHandle.queryPermission({ mode: 'readwrite' });
+      if (perm !== 'granted') {
+        perm = await fileHandle.requestPermission({ mode: 'readwrite' });
+      }
+      if (perm !== 'granted') {
+        statusText.textContent = 'File permission denied — click Save to retry';
+        statusText.style.color = '#993c1d';
+        fileHandle = null;
+        return;
+      }
+      await writeToFile();
+      statusText.textContent = 'Saved to file just now';
+      statusText.style.color = '#3b6d11';
+    } catch (err) {
+      console.error('SAVE_ERROR', err.name, err.message, err);
+      if (err.name === 'AbortError') {
+        statusText.textContent = 'Save cancelled';
+        statusText.style.color = '#57606a';
+      } else {
+        statusText.textContent = 'Save failed: ' + err.name + ' — click Save to retry';
+        statusText.style.color = '#993c1d';
+        fileHandle = null;
+      }
+    }
+  });
+
+  contentRoot.querySelectorAll('.user-note .del-note').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      btn.closest('.user-note').remove();
+      markDirty();
+    });
+  });
+
+  contentRoot.querySelectorAll('.spacing-tracker input[type="checkbox"]').forEach(function(cb) {
+    cb.addEventListener('change', function() {
+      if (cb.checked) { cb.setAttribute('checked', 'checked'); }
+      else { cb.removeAttribute('checked'); }
+      markDirty();
+    });
+  });
+
+  if (window.mermaid) {
+    mermaid.initialize({ startOnLoad: true, securityLevel: 'strict' });
+  }
+})();
+</script>
+
+</body>
+</html>
