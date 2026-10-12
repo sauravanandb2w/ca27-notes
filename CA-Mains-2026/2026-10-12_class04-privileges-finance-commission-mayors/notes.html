@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class 4(26): Parliamentary Privileges, 16th Finance Commission, Empowered Mayors</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: #faf9f6;
+    color: #1f2328;
+    margin: 0;
+    padding: 0 0 80px;
+    line-height: 1.6;
+  }
+  .toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: #ffffff;
+    border-bottom: 2px solid #1d5b8b;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: Arial, sans-serif;
+    flex-wrap: wrap;
+  }
+  .toolbar button {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    padding: 7px 14px;
+    border-radius: 6px;
+    border: 1px solid #d8d2c6;
+    background: #fff;
+    cursor: pointer;
+    color: #1f2328;
+  }
+  .toolbar button:hover { background: #e6f1fb; border-color: #1d5b8b; }
+  .toolbar button.active { background: #1d5b8b; color: #fff; border-color: #1d5b8b; }
+  .toolbar .save-btn { background: #2f6b4f; color: #fff; border-color: #2f6b4f; margin-left: auto; }
+  .toolbar .save-btn:hover { background: #24543e; }
+  .toolbar .status { font-size: 12px; color: #57606a; margin-left: auto; padding-right: 8px; }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 30px 20px; }
+  header { border-bottom: 3px solid #1d5b8b; padding-bottom: 20px; margin-bottom: 30px; }
+  header h1 { font-size: 1.6em; margin: 0 0 6px; color: #1d5b8b; }
+  header .meta { color: #57606a; font-size: 0.95em; font-family: Arial, sans-serif; }
+  section { margin-bottom: 42px; }
+  h2 { font-size: 1.4em; color: #1d5b8b; border-left: 4px solid #1d5b8b; padding-left: 12px; margin-bottom: 14px; }
+  h3 { font-size: 1.12em; margin: 22px 0 8px; }
+  p { margin: 10px 0; }
+  .summary-box { background: #e6f1fb; border-radius: 8px; padding: 18px 22px; font-size: 0.98em; }
+  ul, ol.answers { padding-left: 24px; }
+  li { margin-bottom: 6px; }
+  .timestamp { font-family: 'Courier New', monospace; font-size: 0.78em; color: #57606a; background: #e2ddd4; border-radius: 4px; padding: 1px 6px; margin-right: 6px; }
+  .quote-card { background: #fff; border: 1px solid #e2ddd4; border-left: 4px solid #1d5b8b; border-radius: 6px; padding: 14px 18px; margin: 14px 0; }
+  .quote-card .q { font-style: italic; font-size: 1.05em; }
+  .quote-card .attrib { font-family: Arial, sans-serif; font-size: 0.85em; color: #57606a; margin-top: 6px; }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.95em; background: #fff; }
+  th, td { border: 1px solid #e2ddd4; padding: 8px 12px; text-align: left; vertical-align: top; }
+  th { background: #e6f1fb; font-family: Arial, sans-serif; font-size: 0.88em; }
+  .gap-box { background: #eef4f0; border: 1px solid #cfe3d6; border-radius: 8px; padding: 16px 20px; margin-top: 16px; font-size: 0.95em; }
+  .gap-box h4 { margin: 0 0 8px; color: #2f6b4f; font-family: Arial, sans-serif; font-size: 0.95em; }
+  .exam-tip { background: #fff7e6; border: 1px solid #f0dba8; border-radius: 8px; padding: 14px 20px; margin: 14px 0; font-size: 0.95em; }
+  .exam-tip::before { content: "Exam strategy: "; font-weight: bold; font-family: Arial, sans-serif; }
+  .term-box { background: #fdf3f3; border: 1px solid #ecd4d4; border-radius: 8px; padding: 12px 16px; margin: 10px 0; }
+  .term-box strong { color: #8b3a3a; }
+  .data-box { background: #f3f0fb; border: 1px solid #ddd6f0; border-radius: 8px; padding: 12px 16px; margin: 10px 0; font-family: 'Courier New', monospace; font-size: 0.9em; }
+  footer { margin-top: 60px; border-top: 1px solid #e2ddd4; padding-top: 16px; color: #57606a; font-size: 0.82em; font-family: Arial, sans-serif; }
+  .toc {
+    background: #fff;
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    padding: 16px 22px;
+    margin-bottom: 36px;
+    font-family: Arial, sans-serif;
+    font-size: 0.9em;
+  }
+  .toc h2 { font-size: 1em; margin: 0 0 10px; border: none; padding: 0; color: #1d5b8b; text-transform: uppercase; letter-spacing: 0.04em; }
+  .toc ol { columns: 2; margin: 0; padding-left: 20px; }
+  .toc a { color: #1f2328; text-decoration: none; }
+  .toc a:hover { color: #1d5b8b; text-decoration: underline; }
+  details.collapse-section {
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    background: #fff;
+    margin: 14px 0;
+    padding: 0;
+  }
+  details.collapse-section summary {
+    cursor: pointer;
+    padding: 12px 16px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 0.92em;
+    color: #1d5b8b;
+    list-style: none;
+  }
+  details.collapse-section summary::-webkit-details-marker { display: none; }
+  details.collapse-section summary::before { content: "▸ "; }
+  details.collapse-section[open] summary::before { content: "▾ "; }
+  details.collapse-section .collapse-body { padding: 4px 16px 16px; }
+  .glossary-term {
+    display: flex;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+  }
+  .glossary-term:last-child { border-bottom: none; }
+  .glossary-term dt { font-weight: bold; color: #8b3a3a; min-width: 220px; flex-shrink: 0; font-family: Arial, sans-serif; font-size: 0.9em; }
+  .glossary-term dd { margin: 0; }
+
+  mark.user-highlight { background: #fff176; padding: 1px 2px; border-radius: 2px; }
+  u.user-underline { text-decoration: underline; text-decoration-color: #1d5b8b; text-decoration-thickness: 2px; }
+  .user-note {
+    background: #e6f1fb;
+    border: 1px solid #85b7eb;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin: 8px 0;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #0c447c;
+    position: relative;
+  }
+  .user-note .note-label { font-weight: bold; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; display: block; }
+  .user-note .del-note { position: absolute; top: 6px; right: 8px; cursor: pointer; border: none; background: none; color: #0c447c; font-size: 14px; font-family: Arial, sans-serif; }
+  #note-input-box {
+    position: fixed;
+    display: none;
+    background: #fff;
+    border: 2px solid #1d5b8b;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    z-index: 100;
+    font-family: Arial, sans-serif;
+  }
+  #note-input-box textarea { width: 240px; height: 60px; font-family: Arial, sans-serif; font-size: 13px; border: 1px solid #d8d2c6; border-radius: 4px; padding: 6px; }
+  #note-input-box .note-actions { margin-top: 6px; display: flex; gap: 6px; justify-content: flex-end; }
+  #note-input-box button { font-size: 12px; padding: 5px 10px; border-radius: 4px; border: 1px solid #d8d2c6; background: #fff; cursor: pointer; }
+  #note-input-box button.primary { background: #1d5b8b; color: #fff; border-color: #1d5b8b; }
+  .content-target::selection { background: #ffe082; }
+  .board-caption { font-family: Arial, sans-serif; font-size: 0.82em; color: #57606a; margin-top: -8px; margin-bottom: 14px; }
+  .arcs-box {
+    background: #fff;
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 14px 0;
+  }
+  .arcs-box h4 { margin: 0 0 10px; color: #1d5b8b; font-family: Arial, sans-serif; font-size: 0.98em; }
+  .recall-q { margin-bottom: 14px; }
+  .recall-q p.q-text { font-weight: bold; margin: 0 0 6px; }
+  .recall-q details { border: none; margin: 0; }
+  .recall-q summary { font-family: Arial, sans-serif; font-size: 0.82em; color: #1d5b8b; cursor: pointer; list-style: none; padding: 2px 0; }
+  .recall-q summary::-webkit-details-marker { display: none; }
+  .recall-q summary::before { content: "Show answer \25B8 "; }
+  .recall-q details[open] summary::before { content: "Hide answer \25BE "; }
+  .recall-q .ans { background: #eef4f0; border-radius: 6px; padding: 8px 12px; margin-top: 6px; font-size: 0.95em; }
+  .spacing-tracker { font-family: Arial, sans-serif; font-size: 0.92em; }
+  .spacing-tracker table { margin: 8px 0; }
+  .spacing-tracker input[type="checkbox"] { width: 16px; height: 16px; cursor: pointer; }
+  .mnemonic-box { background: #fff7e6; border: 1px solid #f0dba8; border-radius: 8px; padding: 14px 18px; margin: 10px 0; }
+  .mnemonic-box h4 { margin: 0 0 6px; color: #8b5a1d; font-family: Arial, sans-serif; font-size: 0.92em; }
+  .applic-table td.gs-tag { font-family: Arial, sans-serif; font-weight: bold; font-size: 0.85em; white-space: nowrap; }
+  .applic-table .prelims-badge, .applic-table .mains-badge {
+    display: inline-block; font-family: Arial, sans-serif; font-size: 0.72em; font-weight: bold;
+    padding: 2px 8px; border-radius: 10px; margin-right: 4px;
+  }
+  .prelims-badge { background: #eaf3de; color: #3b6d11; }
+  .mains-badge { background: #e6f1fb; color: #1d5b8b; }
+  #fallback-help {
+    position: fixed;
+    display: none;
+    top: 60px;
+    right: 20px;
+    max-width: 320px;
+    background: #fff;
+    border: 2px solid #993c1d;
+    border-radius: 8px;
+    padding: 14px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    z-index: 200;
+  }
+  .mcq-card { background: #fff; border: 1px solid #e2ddd4; border-left: 4px solid #1d5b8b; border-radius: 8px; padding: 16px 20px; margin: 14px 0; }
+  .mcq-card .q-num { font-family: Arial, sans-serif; font-weight: bold; color: #1d5b8b; font-size: 0.82em; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 6px; }
+  .mcq-card .q-text { font-weight: bold; margin-bottom: 10px; }
+  .mcq-card .options { display: flex; flex-direction: column; gap: 6px; margin-bottom: 10px; }
+  .mcq-card .option { font-family: Arial, sans-serif; font-size: 0.92em; padding: 6px 10px; border-radius: 6px; background: #faf9f6; border: 1px solid #e2ddd4; }
+  .mcq-card .option.correct { background: #eaf3de; border-color: #b9d79a; color: #3b6d11; font-weight: bold; }
+  .mcq-card .answer-box { font-family: Arial, sans-serif; font-size: 0.88em; background: #eef4f0; border-radius: 6px; padding: 8px 12px; }
+  .mcq-card .answer-label { font-weight: bold; color: #2f6b4f; }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <button id="btn-highlight" title="Select text, then click to highlight it">Highlight</button>
+  <button id="btn-underline" title="Select text, then click to underline it">Underline</button>
+  <button id="btn-note" title="Click this, then click anywhere in the notes to drop a note">Add note</button>
+  <button id="btn-clear" title="Remove all your highlights, underlines, and notes">Clear my edits</button>
+  <span class="status" id="status-text">Not connected to file — click Save once to connect</span>
+  <button class="save-btn" id="btn-save">Save</button>
+</div>
+
+<div id="fallback-help">
+  <strong>Your browser can't save directly</strong>
+  <p style="margin:6px 0;">File System Access isn't supported here (common on Safari/Firefox). Use Chrome or Edge to enable direct-save, or use your browser's Save Page As (Ctrl/Cmd+S) to overwrite this file manually after editing.</p>
+  <button id="fallback-close" style="font-size: 12px; padding: 6px 12px; border-radius: 4px; border: 1px solid #993c1d; background: #993c1d; color: #fff; cursor: pointer;">Got it</button>
+</div>
+
+<div id="note-input-box">
+  <textarea id="note-text" placeholder="Type your note..."></textarea>
+  <div class="note-actions">
+    <button id="note-cancel">Cancel</button>
+    <button class="primary" id="note-add">Add</button>
+  </div>
+</div>
+
+<div class="wrap content-target" id="content-root">
+
+<header>
+  <h1>CA Mains 2026 — Class 4(26): Parliamentary Privileges, the 16th Finance Commission &amp; Fiscal Federalism, City Governance &amp; Empowered Mayors</h1>
+  <div class="meta">
+    <span>Source: unlisted YouTube lecture recording ("class 04 CAVA26")</span> &middot;
+    <span>Duration: 0:00 – 1:40:02</span> &middot;
+    <span>Track: UPSC GS-2 (Polity — Parliament, Federalism, Local Government) — Current Affairs Answer Writing</span>
+  </div>
+</header>
+
+<nav class="toc">
+  <h2>Contents</h2>
+  <ol>
+    <li><a href="#applicability">Applicability — GS papers, Prelims &amp; Mains</a></li>
+    <li><a href="#part0">Answer review: Committee on Government Assurances</a></li>
+    <li><a href="#part1">Topic 1: Parliamentary privileges — framework</a></li>
+    <li><a href="#part2">Topic 1: Debates, judgments, way forward</a></li>
+    <li><a href="#part3">Topic 2: Fiscal federalism &amp; the 16th Finance Commission</a></li>
+    <li><a href="#part4">Topic 2: Debates, issues, model answer</a></li>
+    <li><a href="#part5">Topic 3: City governance &amp; empowered mayors</a></li>
+    <li><a href="#part6">Topic 3: Reform agenda, models, challenges</a></li>
+    <li><a href="#mcqs">Practice MCQs (self-authored)</a></li>
+    <li><a href="#glossary">Glossary — quick revision</a></li>
+    <li><a href="#arcs">Revision kit (ARCS)</a></li>
+    <li><a href="#gaps">Supplementary research</a></li>
+  </ol>
+</nav>
+
+<section id="summary">
+  <h2>Executive summary</h2>
+  <div class="summary-box">
+  <p>Fourth class of the series (polity faculty), following Class 3's Committee on Government Assurances. After reviewing that answer, three topics:</p>
+  <ul>
+    <li><strong>Parliamentary privileges</strong> — Articles 105/194, the uncodified "as before 1979" position, Lok Sabha rules on expunction and allegations, and the shift from <em>P.V. Narasimha Rao</em> (1998) to <em>Sita Soren</em> (2024): bribery is not protected.</li>
+    <li><strong>16th Finance Commission</strong> — 41% vertical share retained; a new horizontal formula tilting from equity toward efficiency (contribution to GDP added); revenue-deficit grants discontinued; the "41% illusion" from cesses and surcharges; the SFC bypass proposal.</li>
+    <li><strong>City governance</strong> — NITI Aayog's 2026 report on million-plus cities: directly elected mayors with five-year terms, a mayor-in-council system, unified service delivery, stronger municipal finances.</li>
+  </ul>
+  <p>Instructor's notes on format: never write the words "introduction", "conclusion" or "debate" as headings in an answer — use the question's keywords instead ("CGA strengthens accountability in the following ways…"); "suggestions"/"way forward" are fine. The course is short (to wind up by mid-July), so keep pace.</p>
+  </div>
+</section>
+
+<section id="applicability">
+  <h2>Applicability — GS papers, Prelims &amp; Mains</h2>
+  <table class="applic-table">
+    <tr><th>Sub-topic</th><th>GS Paper</th><th>Prelims</th><th>Mains</th></tr>
+    <tr><td class="gs-tag">Parliamentary privileges</td><td>GS-2 (Parliament)</td><td><span class="prelims-badge">High</span>Articles 105, 194, 122, 212, 361A; Sita Soren.</td><td><span class="mains-badge">High</span>Codification debate, free speech vs. procedure.</td></tr>
+    <tr><td class="gs-tag">16th Finance Commission</td><td>GS-2 (Federalism) / GS-3 (Fiscal)</td><td><span class="prelims-badge">High</span>Criteria and weights; Articles 270, 275, 280, 282.</td><td><span class="mains-badge">High</span>Equity vs. efficiency; north–south.</td></tr>
+    <tr><td class="gs-tag">City governance / mayors</td><td>GS-2 (Local government)</td><td><span class="prelims-badge">Medium</span>74th Amendment, 12th Schedule (18 functions).</td><td><span class="mains-badge">High</span>Elected mayor vs. unelected bureaucrat.</td></tr>
+  </table>
+</section>
+
+<section id="part0">
+  <h2>0. Answer review: Committee on Government Assurances (from Class 3)</h2>
+  <div class="quote-card"><div class="q">Parliamentary committees are meant to act as watchdogs of people's rights. In light of this, examine the role of the Committee on Government Assurances.</div><div class="attrib">— Practice question (paraphrased)</div></div>
+  <ol class="answers">
+    <li>Open with a quote, or the idea of the CGA. The NEET paper-leak scrutiny belongs in the body as an example, not the intro.</li>
+    <li>Strengths: watchdog function; converts political promises into binding governance follow-up; can summon officials (e.g., on the NEET leak).</li>
+    <li>Weaknesses: recommendations non-binding; assurances dropped or kept pending with excuses (quote the committee's own remarks, use data).</li>
+    <li>Diagram: minister's promise → examined by CGA → enforced (democratic deepening) or pending/dropped (democratic backsliding).</li>
+    <li>Suggestions with global examples (e.g., time-bound ministerial replies, as in Canada).</li>
+  </ol>
+</section>
+
+<section id="part1">
+  <h2>1. Topic 1: Parliamentary privileges — framework</h2>
+  <h3>Model introduction</h3>
+  <p>Parliamentary privileges form the bedrock of a robust, independent and functional democracy.</p>
+  <h3>Context pegs</h3>
+  <ul>
+    <li>Expunction of opposition leaders' speeches by the Speaker — free speech of legislators vs. procedural rules; allegations of microphones being switched off.</li>
+    <li><strong>Sita Soren v. Union of India (2024)</strong> — a seven-judge bench overruled the 1998 JMM bribery case judgment.</li>
+    <li>"Cash for query" allegations and an ethics committee inquiry into an MP.</li>
+  </ul>
+  <h3>Definition</h3>
+  <div class="term-box"><strong>Parliamentary privileges:</strong> special rights, immunities and exemptions enjoyed by the Houses and their members — "special" because ordinary citizens don't have them, "privileges" because only legislators enjoy them. The purpose is not to create an elite class but to ensure free speech and independent functioning on the floor of the House.</div>
+  <p>Draw a box: <strong>collective privileges</strong> (enjoyed by the House) and <strong>individual privileges</strong> (enjoyed by members — e.g., freedom from arrest in civil cases during and 40 days before/after a session).</p>
+  <h3>Constitutional and legal framework</h3>
+  <ul>
+    <li><strong>Articles 105 (Parliament) and 194 (state legislatures)</strong> — freedom of speech in the House; immunity from court proceedings for anything said or any vote given (105(2)); other privileges as enjoyed before the 44th Amendment's commencement (1979), i.e., effectively British House of Commons conventions (105(3)) — <strong>still uncodified</strong>.</li>
+    <li><strong>Articles 122 and 212</strong> — courts cannot inquire into the validity of legislative proceedings on grounds of procedural irregularity.</li>
+    <li><strong>Article 361A</strong> — protects publication of substantially true reports of legislative proceedings (press freedom).</li>
+    <li><strong>Prevention of Corruption Act, 1988</strong> — MPs and MLAs are public servants.</li>
+  </ul>
+  <h3>Lok Sabha rules to cite as examples</h3>
+  <table>
+    <tr><th>Rule</th><th>Subject</th></tr>
+    <tr><td>380</td><td>Expunction of words from the record</td></tr>
+    <tr><td>352</td><td>Restrictions on defamatory and unparliamentary words</td></tr>
+    <tr><td>353</td><td>No defamatory or incriminating allegations without advance notice to the Speaker (used to stop an MP quoting a former army chief's unpublished memoir)</td></tr>
+    <tr><td>349</td><td>Members may not read out certain external material</td></tr>
+  </table>
+</section>
+
+<section id="part2">
+  <h2>2. Topic 1: Debates, judgments, way forward</h2>
+  <div class="exam-tip">Debates aren't a heading in the answer — sort each debate into the positives or the concerns section depending on the question.</div>
+  <h3>Debates</h3>
+  <details class="collapse-section" open><summary>Constitutional privilege vs. procedural rules</summary><div class="collapse-body">
+    Internal procedure (e.g., expunging whole sentences or passages under Rule 380) should not override the constitutional free speech of members under Article 105. Experts: the presiding officer's disciplinary power must not supersede an MP's fundamental right to free speech.
+  </div></details>
+  <details class="collapse-section"><summary>Legislative supremacy vs. judicial review</summary><div class="collapse-body">
+    Courts are barred from inquiring into House proceedings, but committees are often dominated by the ruling party. Where there is <strong>substantive</strong> (not merely procedural) illegality, unconstitutionality or denial of natural justice, courts will intervene.
+  </div></details>
+  <details class="collapse-section"><summary>Codification vs. non-codification</summary><div class="collapse-body">
+    Neither Parliament nor state legislatures have codified privileges. The <strong>Committee of Privileges (2008)</strong> advised against codification to preserve flexibility, but non-codification makes "breach of privilege" subjective and arbitrary.
+  </div></details>
+  <h3>Arguments for privileges</h3>
+  <ul>
+    <li>Free, frank and fearless expression — essential for genuine deliberation.</li>
+    <li>Protection from arbitrary arrest and political vendetta.</li>
+    <li>Institutional independence — contempt powers protect the dignity and authority of the House.</li>
+    <li>Summary disciplinary control — faster internal action than courts.</li>
+    <li>Independent voting without fear of legal consequences.</li>
+  </ul>
+  <h3>Concerns</h3>
+  <ul>
+    <li>Threat to fundamental rights of citizens and press freedom, given vague, boundaryless definitions (e.g., a state assembly issuing a privilege notice even against a judge who granted bail).</li>
+    <li>Weaponisation — disproportionate punitive action by committees; a chilling effect on journalists and critics; political censorship.</li>
+    <li><strong>Unspeaking warrants</strong> — arrests for "breach of privilege" without specific reasons, so the accused can't defend; the House acts as both accuser and judge, against natural justice.</li>
+    <li>Pre-2024, a <strong>shield for corruption</strong> (below).</li>
+  </ul>
+  <h3>Judgments</h3>
+  <table>
+    <tr><th>Case</th><th>Holding</th></tr>
+    <tr><td>P.V. Narasimha Rao v. State (JMM bribery, 1998)</td><td>Broad reading: MPs who took bribes <em>and voted</em> as agreed were immune; those who took bribes but didn't vote were not — a "bizarre legal paradox".</td></tr>
+    <tr><td><strong>Sita Soren v. Union of India (2024, seven judges)</strong></td><td>Overruled 1998: bribery is not a legislative act; the offence is complete on accepting the bribe, irrespective of the vote. Laid down a <strong>two-fold test</strong>: the privilege must be tied to the collective functioning of the House and necessary to the legislator's essential duties (lecture framing: it must enhance the House's dignity and be a legitimate exercise of free speech).</td></tr>
+    <tr><td>Raja Ram Pal v. Speaker (2007)</td><td>Judicial review of privilege actions is possible where there is substantive illegality or unconstitutionality.</td></tr>
+  </table>
+  <h3>Quotes</h3>
+  <div class="quote-card"><div class="q">Only the free, frank and fearless expression of members' views enables the legislature to perform its role effectively.</div><div class="attrib">— P.D.T. Achary, former Secretary-General, Lok Sabha (paraphrased)</div></div>
+  <div class="quote-card"><div class="q">Privileges are privileges of the people and for the people — not privileges against the people.</div><div class="attrib">— Cited in the lecture (attribution unclear in captions)</div></div>
+  <div class="quote-card"><div class="q">While privilege is an exemption from the general law, it is strictly limited to what is absolutely necessary for the House to function.</div><div class="attrib">— The principle in Erskine May, the authoritative text on British parliamentary practice (paraphrased) — usable as a conclusion</div></div>
+  <h3>Recommendations and way forward</h3>
+  <ul>
+    <li><strong>NCRWC</strong> — amend Article 105 to exclude corrupt acts from privilege.</li>
+    <li><strong>Commonwealth Parliamentary Association</strong> — urged MPs to reduce deadlocks and raise political issues outside the House to preserve decorum.</li>
+    <li>Narrow expunction — only specific unparliamentary words, not passages.</li>
+    <li>Codify privileges; privileges committees to follow natural justice.</li>
+    <li>Tech protocols (e.g., two-factor authentication on MPs' portal access — after the cash-for-query case involved sharing login credentials).</li>
+  </ul>
+  <div class="quote-card">
+    <div class="q">Parliamentary privileges are designed to protect the independence of legislators. Examine in the context of the Supreme Court's 2024 verdict overruling the P.V. Narasimha Rao judgment.</div>
+    <div class="attrib">— Practice question</div>
+  </div>
+  <ol class="answers">
+    <li>Definition; box with collective and individual privileges.</li>
+    <li>How they protect independence: free speech, vote, immunity from arrest, institutional independence.</li>
+    <li>Pre-2024 vs. post-2024: shield for corruption under Narasimha Rao → Sita Soren's "bribery is not a legislative necessity" and the two-fold test.</li>
+    <li>Not to be a political weapon: expunctions, reported microphone switch-offs, arbitrary suspensions.</li>
+    <li>Demand for codification; narrow expunction; Lok Sabha's tech controls; conclude with Erskine May's principle.</li>
+  </ol>
+  <p style="font-family: Arial, sans-serif; font-size: 0.85em; color: #57606a;">Handout correction from class: the article barring courts from inquiring into Parliament's proceedings is Article 122 (not 112).</p>
+</section>
+
+<section id="part3">
+  <h2>3. Topic 2: Fiscal federalism &amp; the 16th Finance Commission</h2>
+  <h3>Context</h3>
+  <p>The <strong>16th Finance Commission's</strong> award period runs from 1 April 2026 to 31 March 2031; the government accepted its recommendations.</p>
+  <h3>Constitutional framework</h3>
+  <ul>
+    <li><strong>Article 280</strong> — Finance Commission; recommends vertical (Centre–states) and horizontal (among states) devolution.</li>
+    <li><strong>Article 275</strong> — statutory grants-in-aid; <strong>Article 282</strong> — discretionary grants.</li>
+  </ul>
+  <div class="term-box"><strong>Fiscal federalism:</strong> the study of financial relationships and responsibilities between levels of government — Centre, states and local bodies.</div>
+  <h3>Three principles (N.K. Singh, 15th FC chair)</h3>
+  <ul>
+    <li><strong>Fiscal equivalence</strong> — each public service has its own jurisdiction, and provision covers everyone who benefits (e.g., a city that supplies water also levies water charges).</li>
+    <li><strong>Decentralisation</strong> — a service should be provided by the jurisdiction controlling the minimum geographic area that captures its benefits.</li>
+    <li><strong>Subsidiarity</strong> — functions performed by the lowest competent authority.</li>
+  </ul>
+  <h3>Three imbalances (Vijay Kelkar)</h3>
+  <ul>
+    <li><strong>Vertical</strong> — mismatch between taxation powers and spending responsibilities of the Centre and states.</li>
+    <li><strong>Horizontal</strong> — unequal fiscal capacity among states.</li>
+    <li><strong>Developmental</strong> — regional disparities in physical and social infrastructure (the "3/3 puzzle": the three richest states are about three times as wealthy as the three poorest).</li>
+  </ul>
+  <h3>16th FC horizontal formula</h3>
+  <table>
+    <tr><th>Criterion</th><th>15th FC</th><th>16th FC</th><th>Logic</th></tr>
+    <tr><td>Income distance</td><td>45%</td><td>42.5%</td><td>Equity — reduced weight</td></tr>
+    <tr><td>Population (2011)</td><td>15%</td><td>17.5%</td><td>Need — recognises larger welfare spending</td></tr>
+    <tr><td>Demographic performance</td><td>12.5%</td><td>10%</td><td>Rewards population control (now measured by inverse population growth 1971–2011, not TFR)</td></tr>
+    <tr><td>Area</td><td>15%</td><td>10%</td><td>Reduced — area alone shouldn't drive allocation</td></tr>
+    <tr><td>Forest &amp; ecology</td><td>10%</td><td>10%</td><td>Opportunity cost; now includes open forest and increases in cover 2015–23</td></tr>
+    <tr><td>Tax effort</td><td>2.5%</td><td>—</td><td>Replaced</td></tr>
+    <tr><td><strong>Contribution to GDP</strong></td><td>—</td><td><strong>10%</strong></td><td>Efficiency — rewards fast-growing states</td></tr>
+  </table>
+  <ul>
+    <li>Vertical devolution retained at <strong>41%</strong> of the divisible pool.</li>
+    <li><strong>Revenue-deficit grants discontinued</strong> — a move toward fiscal discipline (Article 275 statutory grants give way to more discretionary/conditional transfers).</li>
+    <li>Grants to local bodies: about ₹7.91 lakh crore (as cited).</li>
+  </ul>
+</section>
+
+<section id="part4">
+  <h2>4. Topic 2: Debates, issues, model answer</h2>
+  <h3>Debates</h3>
+  <ul>
+    <li><strong>Equity vs. efficiency</strong> — for decades funds favoured poorer states to help them converge; the 16th FC tilts toward rewarding economic performance, answering complaints from Maharashtra, Gujarat and others that they were penalised.</li>
+    <li><strong>North–south</strong> — southern states contribute disproportionately to central taxes yet receive less, and are penalised for better governance, human development and demographic indicators; northern states argue historical under-investment requires compensation.</li>
+    <li><strong>Freebies vs. fiscal prudence</strong>.</li>
+    <li><strong>Population size vs. demographic performance</strong> — both weights adjusted.</li>
+    <li><strong>Revenue vs. expenditure</strong> — the Centre collects ~62% of revenue but spends ~36%; states collect ~38% and spend ~64% — the vertical imbalance.</li>
+  </ul>
+  <h3>Issues</h3>
+  <ul>
+    <li><strong>The "41% illusion"</strong> — cesses and surcharges (~2.2% of GDP, ~₹9 lakh crore as cited) sit outside the divisible pool, so states' real share is well below 41%.</li>
+    <li><strong>Statutory vs. discretionary grants</strong> — ending revenue-deficit grants and shifting to Article 282 transfers weakens guaranteed equity.</li>
+    <li><strong>State Finance Commissions</strong> — the FC must base local-body grants on SFC reports, but SFCs are often not constituted or produce unusable data (lecture: only Chhattisgarh and Sikkim submitted usable reports in this cycle). The 16th FC suggested amending the Constitution to drop the SFC-report requirement — critics say this removes states' incentive to empower SFCs and goes against the constitutional mandate.</li>
+  </ul>
+  <h3>Views and suggestions</h3>
+  <ul>
+    <li>16th FC's <strong>"grand bargain"</strong>: fold cesses and surcharges into the divisible pool; states accept a smaller percentage of a larger pool, with no revenue loss to either side.</li>
+    <li>"Fiscal federalism endures only when efficiency disciplines equity" — a public-policy expert (as cited).</li>
+    <li><strong>Counter-cyclical buffers</strong> — save during growth, deploy during slowdowns (especially important once revenue-deficit grants end).</li>
+    <li>More data-driven horizontal devolution.</li>
+  </ul>
+  <div class="quote-card">
+    <div class="q">The 16th Finance Commission has shifted the balance of fiscal federalism from equity to efficiency. Evaluate in light of its new horizontal devolution formula.</div>
+    <div class="attrib">— Practice question</div>
+  </div>
+  <ol class="answers">
+    <li>Intro: award period, or Article 280, or fiscal federalism with N.K. Singh's three principles.</li>
+    <li>A table of criteria marked equity/efficiency/need/opportunity cost (income distance — equity; population and area — need; demographic performance and GDP contribution — efficiency; forest — opportunity cost).</li>
+    <li>Further shifts: revenue-deficit grants ended (prevents moral hazard, enforces discipline); move to discretionary transfers (bypasses Article 275).</li>
+    <li>Counterpoints: the 41% illusion; SFC bypass; need-based support still exists — it's a balance, not a full swing.</li>
+    <li>Diagram — virtuous cycle: fiscal discipline → investment in infrastructure → economic opportunity → more tax/non-tax revenue → better governance.</li>
+  </ol>
+</section>
+
+<section id="part5">
+  <h2>5. Topic 3: City governance &amp; empowered mayors</h2>
+  <h3>Model introduction (from NITI Aayog's report)</h3>
+  <p>Urbanisation will be central to Viksit Bharat and a $30 trillion economy by 2047: urban regions will anchor growth, drive innovation and create jobs. For this, cities must deliver reliable infrastructure, efficient services, predictable regulation and strong governance, and become aspirational cities that attract global talent.</p>
+  <h3>Context</h3>
+  <p>NITI Aayog's April 2026 report, <em>Moving Towards Effective City Government: A Framework for Million-Plus Cities</em>, proposes turning the mayor from a ceremonial head into an empowered executive. Mayoral elections in New York and London have also fuelled the debate.</p>
+  <h3>Framework and present structure</h3>
+  <ul>
+    <li><strong>74th Amendment</strong> provides for municipal elections, chairpersons and five-year terms — but says nothing specific on mayors; municipal corporations are created by state laws.</li>
+    <li><strong>Mayor</strong> heads the council, usually indirectly elected, with a short term (as little as one year in some cities) — largely ceremonial.</li>
+    <li><strong>Standing committees</strong> handle day-to-day work.</li>
+    <li><strong>Municipal commissioner</strong> — usually an IAS officer appointed by the state — is the real chief executive.</li>
+    <li>Ward committees for decentralisation.</li>
+  </ul>
+  <h3>Debates</h3>
+  <ul>
+    <li><strong>Elected mayor vs. unelected bureaucrat</strong> — who can best drive city growth in a democracy?</li>
+    <li><strong>Centralisation vs. decentralisation</strong> — states hold on to powers; decentralisation exists on paper but not in practice.</li>
+  </ul>
+  <h3>Five structural challenges (NITI Aayog)</h3>
+  <ol class="answers">
+    <li><strong>Limited devolution of functions</strong> — of the 18 functions in the 12th Schedule, cities fully control only about 4 on average ("powerless city government").</li>
+    <li><strong>Fragmented set-up and weak leadership</strong> — ceremonial mayors, executive power with bureaucrats, short terms → no long-term vision.</li>
+    <li><strong>Weak revenue base</strong> — chronic financial distress; can't invest independently in infrastructure.</li>
+    <li><strong>Fragmented service delivery</strong> — water, transport and waste handled by state-level parastatals; poor coordination, and citizens can't hold their councillors accountable.</li>
+    <li><strong>Inadequate human resources</strong> — few planners and finance experts; temporary consultants and deputations.</li>
+  </ol>
+  <h3>Data</h3>
+  <div class="data-box">
+    India's ~46–47 million-plus municipal corporations hold ~30% of the urban population on ~10% of urban area, and contribute ~60% of national GDP.<br>
+    AMRUT credit ratings (as cited): of 468 urban local bodies rated, only 162 were investment grade.<br>
+    2017–2025: only ~25 municipal bond issues raising ~₹3,579 crore — while China issued 252 local government bonds worth ~$142 billion in August 2025 alone.
+  </div>
+</section>
+
+<section id="part6">
+  <h2>6. Topic 3: Reform agenda, models, challenges</h2>
+  <h3>NITI Aayog's reform agenda (four pillars)</h3>
+  <ol class="answers">
+    <li><strong>Empowered political leadership</strong> — directly elected mayors; fixed five-year term coterminous with the council; mayor legally designated executive head, with the municipal commissioner reporting to the mayor; sanctions against arbitrary dissolution and time-bound elections.</li>
+    <li><strong>Mayor-in-council</strong> — a cabinet-style system replacing standing committees: councillors hold portfolios (water, health, finance, transport); mayor appoints department heads; zonal committees for local differences.</li>
+    <li><strong>Unified service delivery</strong> — any agency delivering a public service in the city should work under the corporation, e.g., city-specific divisions of state parastatals under municipal control.</li>
+    <li><strong>Stronger municipal finances</strong> — SFCs set up at least two years before their award period; state action-taken reports on SFC recommendations; mandatory publication of budget allocations to cities. (Note the contrast with the 16th FC's proposal to bypass SFCs.)</li>
+  </ol>
+  <h3>Global and domestic models</h3>
+  <ul>
+    <li><strong>New York</strong> — strong-mayor system. <strong>London</strong> — directly elected mayor controlling citywide transport and housing policy.</li>
+    <li><strong>Brazil</strong> — among the most autonomous mayors, controlling local policing, education, healthcare and land use.</li>
+    <li><strong>East Asian model</strong> — local governments as <strong>residual claimants</strong> who keep a share of the prosperity they generate (Indian cities generate ~60% of GDP but taxes flow to the Centre and states).</li>
+    <li><strong>Kolkata</strong> — Subhas Chandra Bose (chief executive officer) and C.R. Das (mayor) show city government as a political pipeline.</li>
+    <li>Tamil Nadu, Himachal Pradesh and Rajasthan discontinued direct mayoral elections; Madhya Pradesh and Chhattisgarh restored them — inconsistent models.</li>
+  </ul>
+  <h3>Positives of empowered mayors</h3>
+  <ul>
+    <li>Direct accountability; effective city governance → virtuous cycle of investment, revenue and governance.</li>
+    <li>A political pipeline that prevents "political hollowing" — genuine local leaders emerge.</li>
+    <li>Incentivised prosperity (residual claimant logic).</li>
+  </ul>
+  <h3>Challenges</h3>
+  <ul>
+    <li>State reluctance; inconsistent state models; legislative stagnation (private members' bills for direct elections found no support); parastatal fragmentation; delayed elections.</li>
+  </ul>
+  <h3>Views — a three-way harm</h3>
+  <p>One expert: the lack of effective, accountable local government "hurts citizens, throttles the economy and weakens the political system":</p>
+  <ul>
+    <li><strong>Hurts citizens</strong> — service-delivery failure → alienation → private substitutes (gated societies, private security), migration.</li>
+    <li><strong>Throttles the economy</strong> — weak revenue → weak infrastructure and human capital → poor ease of doing business → economic underperformance.</li>
+    <li><strong>Weakens politics</strong> — a <strong>patronage economy</strong> (services only through political intermediaries) → participation deficit → <strong>elite capture</strong> (contractor and crony capture).</li>
+  </ul>
+  <div class="quote-card">
+    <div class="q">The 74th Constitutional Amendment promised participatory urban democracy, but Indian cities are effectively run by unelected bureaucrats. Examine in the context of the demand for empowered mayors.</div>
+    <div class="attrib">— Practice question (homework; reviewed at the start of Class 5)</div>
+  </div>
+</section>
+
+<section id="mcqs">
+  <h2>7. Practice MCQs (self-authored, Prelims-style)</h2>
+  <p style="font-family: Arial, sans-serif; font-size: 0.85em; color: #57606a;">Original questions written from the facts in this class.</p>
+  <div class="mcq-card"><div class="q-num">Q1</div><div class="q-text">Parliamentary privileges of MPs are provided under:</div><div class="options"><div class="option correct">(A) Article 105</div><div class="option">(B) Article 194</div><div class="option">(C) Article 122</div><div class="option">(D) Article 361A</div></div><div class="answer-box"><span class="answer-label">Answer: (A).</span> Article 194 covers state legislators.</div></div>
+  <div class="mcq-card"><div class="q-num">Q2</div><div class="q-text">Which article protects the publication of substantially true reports of parliamentary proceedings?</div><div class="options"><div class="option">(A) Article 19(1)(a)</div><div class="option">(B) Article 105(2)</div><div class="option correct">(C) Article 361A</div><div class="option">(D) Article 212</div></div><div class="answer-box"><span class="answer-label">Answer: (C).</span></div></div>
+  <div class="mcq-card"><div class="q-num">Q3</div><div class="q-text">In Sita Soren v. Union of India (2024), the Supreme Court held that:</div><div class="options"><div class="option">(A) Legislators who take bribes and vote are immune</div><div class="option correct">(B) Bribery is not protected by parliamentary privilege; the offence is complete on acceptance</div><div class="option">(C) Privileges must be codified within one year</div><div class="option">(D) Speakers' expunction orders are void</div></div><div class="answer-box"><span class="answer-label">Answer: (B).</span> Overruling P.V. Narasimha Rao (1998).</div></div>
+  <div class="mcq-card"><div class="q-num">Q4</div><div class="q-text">The 16th Finance Commission's vertical devolution to states is:</div><div class="options"><div class="option">(A) 32%</div><div class="option">(B) 42%</div><div class="option correct">(C) 41%</div><div class="option">(D) 45%</div></div><div class="answer-box"><span class="answer-label">Answer: (C).</span> Same as the 15th FC.</div></div>
+  <div class="mcq-card"><div class="q-num">Q5</div><div class="q-text">Which criterion was newly introduced in the 16th FC's horizontal devolution formula?</div><div class="options"><div class="option">(A) Tax effort</div><div class="option correct">(B) Contribution to GDP</div><div class="option">(C) Forest cover</div><div class="option">(D) Income distance</div></div><div class="answer-box"><span class="answer-label">Answer: (B).</span> 10% weight; tax effort was dropped.</div></div>
+  <div class="mcq-card"><div class="q-num">Q6</div><div class="q-text">Cesses and surcharges are significant for fiscal federalism because they:</div><div class="options"><div class="option">(A) Are shared equally with states</div><div class="option correct">(B) Fall outside the divisible pool shared with states</div><div class="option">(C) Can only be levied by states</div><div class="option">(D) Fund Finance Commission grants</div></div><div class="answer-box"><span class="answer-label">Answer: (B).</span> Hence the "41% illusion".</div></div>
+  <div class="mcq-card"><div class="q-num">Q7</div><div class="q-text">How many functions does the 12th Schedule list for urban local bodies?</div><div class="options"><div class="option">(A) 11</div><div class="option correct">(B) 18</div><div class="option">(C) 29</div><div class="option">(D) 15</div></div><div class="answer-box"><span class="answer-label">Answer: (B).</span> The 11th Schedule lists 29 for panchayats.</div></div>
+  <div class="mcq-card"><div class="q-num">Q8</div><div class="q-text">NITI Aayog's 2026 framework for million-plus cities recommends:</div><div class="options"><div class="option">(A) Abolishing municipal commissioners</div><div class="option correct">(B) Directly elected mayors with five-year terms and a mayor-in-council system</div><div class="option">(C) Appointment of mayors by Governors</div><div class="option">(D) Merging cities with districts</div></div><div class="answer-box"><span class="answer-label">Answer: (B).</span> With commissioners reporting to the mayor.</div></div>
+</section>
+
+<section id="glossary">
+  <h2>Glossary — quick revision</h2>
+  <dl>
+    <div class="glossary-term"><dt>Parliamentary privileges</dt><dd>Special rights and immunities of Houses and members to ensure free functioning.</dd></div>
+    <div class="glossary-term"><dt>Collective vs. individual privileges</dt><dd>Enjoyed by the House vs. by each member.</dd></div>
+    <div class="glossary-term"><dt>Expunction</dt><dd>Removing words from the record (Rule 380).</dd></div>
+    <div class="glossary-term"><dt>Unspeaking warrant</dt><dd>Arrest for breach of privilege without stated reasons.</dd></div>
+    <div class="glossary-term"><dt>Two-fold test (Sita Soren)</dt><dd>Privilege must be tied to the House's collective functioning and necessary to legislative duties.</dd></div>
+    <div class="glossary-term"><dt>Fiscal federalism</dt><dd>Financial relations between Centre, states and local bodies.</dd></div>
+    <div class="glossary-term"><dt>Fiscal equivalence</dt><dd>Provision of a public good matches the jurisdiction of its beneficiaries.</dd></div>
+    <div class="glossary-term"><dt>Subsidiarity</dt><dd>Functions performed at the lowest competent level.</dd></div>
+    <div class="glossary-term"><dt>Vertical/horizontal imbalance</dt><dd>Centre–state mismatch vs. inter-state capacity gaps.</dd></div>
+    <div class="glossary-term"><dt>Income distance</dt><dd>Gap between a state's per-capita income and the richest state's.</dd></div>
+    <div class="glossary-term"><dt>41% illusion</dt><dd>Cesses/surcharges outside the pool shrink states' real share.</dd></div>
+    <div class="glossary-term"><dt>Grand bargain</dt><dd>Fold cesses into the pool; states accept a smaller share of a bigger pool.</dd></div>
+    <div class="glossary-term"><dt>Mayor-in-council</dt><dd>Cabinet-style city executive with portfolio councillors.</dd></div>
+    <div class="glossary-term"><dt>Parastatal</dt><dd>State-level agency delivering city services outside municipal control.</dd></div>
+    <div class="glossary-term"><dt>Residual claimant</dt><dd>Local government keeping a share of the prosperity it generates.</dd></div>
+    <div class="glossary-term"><dt>Patronage economy</dt><dd>Access to services only through political intermediaries.</dd></div>
+  </dl>
+</section>
+
+<section id="arcs">
+  <h2>Revision kit (ARCS method)</h2>
+  <div class="arcs-box">
+    <h4>A — Active Recall</h4>
+    <div class="recall-q"><p class="q-text">1. What paradox did the 1998 Narasimha Rao judgment create?</p><details><summary></summary><div class="ans">MPs who took bribes and voted as agreed were immune; those who took bribes but didn't vote were not.</div></details></div>
+    <div class="recall-q"><p class="q-text">2. Give the 16th FC's horizontal weights.</p><details><summary></summary><div class="ans">Income distance 42.5, population 17.5, demographic performance 10, area 10, forest 10, contribution to GDP 10.</div></details></div>
+    <div class="recall-q"><p class="q-text">3. What are NITI Aayog's five structural challenges for city government?</p><details><summary></summary><div class="ans">Limited devolution, fragmented leadership, weak revenue, fragmented service delivery, inadequate human resources.</div></details></div>
+    <div class="recall-q"><p class="q-text">4. What are the four pillars of NITI's reform agenda?</p><details><summary></summary><div class="ans">Empowered political leadership; mayor-in-council; unified service delivery; stronger municipal finances.</div></details></div>
+  </div>
+  <div class="arcs-box spacing-tracker">
+    <h4>R — Repeat with Spacing</h4>
+    <p>Lecture processed: Oct 12, 2026.</p>
+    <table>
+      <tr><th>Review</th><th>Target date</th><th>Done</th></tr>
+      <tr><td>Day 1</td><td>Oct 12</td><td><input type="checkbox"></td></tr>
+      <tr><td>Day 3</td><td>Oct 15</td><td><input type="checkbox"></td></tr>
+      <tr><td>Day 7</td><td>Oct 19</td><td><input type="checkbox"></td></tr>
+      <tr><td>Day 21</td><td>Nov 2</td><td><input type="checkbox"></td></tr>
+    </table>
+  </div>
+  <div class="arcs-box">
+    <h4>C — Contrast &amp; Chunk</h4>
+    <table>
+      <tr><th>Term A</th><th>Term B</th><th>The ONE distinguishing point</th></tr>
+      <tr><td>Narasimha Rao (1998)</td><td>Sita Soren (2024)</td><td>Bribe-then-vote immune vs. bribery never protected</td></tr>
+      <tr><td>Procedural illegality</td><td>Substantive illegality</td><td>Courts stay out vs. courts can intervene (Raja Ram Pal)</td></tr>
+      <tr><td>Article 275 grants</td><td>Article 282 grants</td><td>Statutory vs. discretionary</td></tr>
+      <tr><td>16th FC on SFCs</td><td>NITI Aayog on SFCs</td><td>Bypass them vs. strengthen them</td></tr>
+    </table>
+  </div>
+  <div class="arcs-box mnemonic-box">
+    <h4>S — Stick with Encoding Tricks</h4>
+    <p><strong>Lok Sabha rules "380-352-353-349"</strong>: Expunge, unparliamentary words, allegations need notice, no outside material.</p>
+    <p><strong>16th FC weights "42.5 / 17.5 / 10-10-10-10"</strong>.</p>
+  </div>
+</section>
+
+<section id="gaps">
+  <h2>Supplementary research — filling gaps</h2>
+  <div class="gap-box">
+    <h4>16th Finance Commission — verified</h4>
+    <p>Award period FY 2026-27 to 2030-31; vertical share retained at 41%. Horizontal weights: income distance 42.5% (from 45), population 17.5% (from 15), demographic performance 10% (from 12.5), area 10% (from 15), forest 10%, contribution to GDP 10% (new); tax effort removed. Revenue-deficit grants discontinued. One report described the area weight as "increased", which contradicts other summaries — the 15→10 reduction is the consistent figure.</p>
+  </div>
+  <div class="gap-box">
+    <h4>NITI Aayog city-governance report — verified</h4>
+    <p><em>Moving Towards Effective City Government: A Framework for Million-Plus Cities</em>, released late April 2026: directly elected mayors with five-year terms coterminous with the council; mayor as formal head with the municipal commissioner under the mayor's supervision; a mayor-in-council system with sector portfolios. Current mayoral tenures range from one year (e.g., Bengaluru, Delhi) to five years (e.g., Bhopal). Sources differ on 46 vs. 47 million-plus cities.</p>
+  </div>
+  <div class="gap-box">
+    <h4>To verify</h4>
+    <ul>
+      <li>The lecture's grant-to-local-bodies figure (₹7.91 lakh crore) and cess/surcharge share.</li>
+      <li>Which states submitted usable SFC reports.</li>
+      <li>Attribution of "privileges of the people, not against the people".</li>
+      <li>Sita Soren's exact formulation of the two-fold test (the lecture's paraphrase differs slightly from the judgment's wording).</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  Notes compiled from an unlisted lecture recording ("class 04 CAVA26") using YouTube's auto-generated transcript. Names transcribed imperfectly are corrected from standard sources or flagged. Practice MCQs are original questions written from the lecture's facts. Click Save (first time will ask you to pick this file) to write your edits directly to disk.
+</footer>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11.15.0/dist/mermaid.min.js" integrity="sha384-yQ4mmBBT+vhTAwjFH0toJXNYJ6O4usWnt6EPIdWwrRvx2V/n5lXuDZQwQFeSFydF" crossorigin="anonymous"></script>
+<script>
+(function() {
+  var mode = null;
+  var noteCounter = 0;
+
+  var btnHighlight = document.getElementById('btn-highlight');
+  var btnUnderline = document.getElementById('btn-underline');
+  var btnNote = document.getElementById('btn-note');
+  var btnClear = document.getElementById('btn-clear');
+  var btnSave = document.getElementById('btn-save');
+  var statusText = document.getElementById('status-text');
+  var contentRoot = document.getElementById('content-root');
+  var noteBox = document.getElementById('note-input-box');
+  var noteText = document.getElementById('note-text');
+  var pendingNoteTarget = null;
+
+  function setMode(newMode) {
+    mode = mode === newMode ? null : newMode;
+    btnHighlight.classList.toggle('active', mode === 'highlight');
+    btnUnderline.classList.toggle('active', mode === 'underline');
+    btnNote.classList.toggle('active', mode === 'note');
+  }
+
+  btnHighlight.addEventListener('click', function() { setMode('highlight'); });
+  btnUnderline.addEventListener('click', function() { setMode('underline'); });
+  btnNote.addEventListener('click', function() { setMode('note'); });
+
+  function markDirty() {
+    statusText.textContent = 'Unsaved changes';
+    statusText.style.color = '#993c1d';
+  }
+
+  document.addEventListener('mouseup', function(e) {
+    if (mode !== 'highlight' && mode !== 'underline') return;
+    var sel = window.getSelection();
+    if (!sel || sel.isCollapsed || sel.rangeCount === 0) return;
+    var range = sel.getRangeAt(0);
+    if (!contentRoot.contains(range.commonAncestorContainer)) return;
+
+    var wrapper = document.createElement(mode === 'highlight' ? 'mark' : 'u');
+    wrapper.className = mode === 'highlight' ? 'user-highlight' : 'user-underline';
+    try {
+      range.surroundContents(wrapper);
+    } catch (err) {
+      var frag = range.extractContents();
+      wrapper.appendChild(frag);
+      range.insertNode(wrapper);
+    }
+    sel.removeAllRanges();
+    markDirty();
+  });
+
+  contentRoot.addEventListener('click', function(e) {
+    if (mode !== 'note') return;
+    if (e.target.closest('.user-note')) return;
+    pendingNoteTarget = e.target;
+    noteBox.style.display = 'block';
+    var x = Math.min(e.clientX, window.innerWidth - 280);
+    var y = Math.min(e.clientY, window.innerHeight - 140);
+    noteBox.style.left = x + 'px';
+    noteBox.style.top = y + 'px';
+    noteText.value = '';
+    noteText.focus();
+  });
+
+  document.getElementById('note-cancel').addEventListener('click', function() {
+    noteBox.style.display = 'none';
+    pendingNoteTarget = null;
+  });
+
+  document.getElementById('note-add').addEventListener('click', function() {
+    var text = noteText.value.trim();
+    if (!text || !pendingNoteTarget) { noteBox.style.display = 'none'; return; }
+    noteCounter++;
+    var noteDiv = document.createElement('div');
+    noteDiv.className = 'user-note';
+    noteDiv.setAttribute('data-note-id', noteCounter);
+    noteDiv.innerHTML = '<span class="note-label">Your note</span>' +
+      '<button class="del-note" title="Remove note">&times;</button>' +
+      '<span class="note-body"></span>';
+    noteDiv.querySelector('.note-body').textContent = text;
+    noteDiv.querySelector('.del-note').addEventListener('click', function() {
+      noteDiv.remove();
+      markDirty();
+    });
+
+    var target = pendingNoteTarget.closest('li, p, td, div.quote-card, section') || contentRoot;
+    target.parentNode.insertBefore(noteDiv, target.nextSibling);
+
+    noteBox.style.display = 'none';
+    pendingNoteTarget = null;
+    markDirty();
+    setMode('note');
+  });
+
+  btnClear.addEventListener('click', function() {
+    if (!confirm('Remove all your highlights, underlines, and notes on this page?')) return;
+    contentRoot.querySelectorAll('.user-note').forEach(function(n) { n.remove(); });
+    contentRoot.querySelectorAll('mark.user-highlight').forEach(function(m) {
+      var parent = m.parentNode;
+      while (m.firstChild) parent.insertBefore(m.firstChild, m);
+      parent.removeChild(m);
+    });
+    contentRoot.querySelectorAll('u.user-underline').forEach(function(u) {
+      var parent = u.parentNode;
+      while (u.firstChild) parent.insertBefore(u.firstChild, u);
+      parent.removeChild(u);
+    });
+    markDirty();
+  });
+
+  var fallbackHelp = document.getElementById('fallback-help');
+  document.getElementById('fallback-close').addEventListener('click', function() {
+    fallbackHelp.style.display = 'none';
+  });
+
+  var fileHandle = null;
+  var fsaSupported = 'showSaveFilePicker' in window;
+  var THIS_FILENAME = 'notes.html';
+
+  function buildFullHtml() {
+    var doc = document.documentElement.cloneNode(true);
+    var liveContentRoot = doc.querySelector('#content-root');
+    if (liveContentRoot) liveContentRoot.innerHTML = contentRoot.innerHTML;
+    return '<!DOCTYPE html>\n' + doc.outerHTML;
+  }
+
+  async function writeToFile() {
+    var writable = await fileHandle.createWritable();
+    await writable.write(buildFullHtml());
+    await writable.close();
+  }
+
+  btnSave.addEventListener('click', async function() {
+    statusText.textContent = 'Saving…';
+    statusText.style.color = '#57606a';
+    if (!fsaSupported) {
+      fallbackHelp.style.display = 'block';
+      statusText.textContent = 'Direct save not supported in this browser';
+      statusText.style.color = '#993c1d';
+      return;
+    }
+    try {
+      if (!fileHandle) {
+        fileHandle = await window.showSaveFilePicker({
+          suggestedName: THIS_FILENAME,
+          types: [{ description: 'HTML file', accept: { 'text/html': ['.html'] } }]
+        });
+      }
+      var perm = await fileHandle.queryPermission({ mode: 'readwrite' });
+      if (perm !== 'granted') {
+        perm = await fileHandle.requestPermission({ mode: 'readwrite' });
+      }
+      if (perm !== 'granted') {
+        statusText.textContent = 'File permission denied — click Save to retry';
+        statusText.style.color = '#993c1d';
+        fileHandle = null;
+        return;
+      }
+      await writeToFile();
+      statusText.textContent = 'Saved to file just now';
+      statusText.style.color = '#3b6d11';
+    } catch (err) {
+      console.error('SAVE_ERROR', err.name, err.message, err);
+      if (err.name === 'AbortError') {
+        statusText.textContent = 'Save cancelled';
+        statusText.style.color = '#57606a';
+      } else {
+        statusText.textContent = 'Save failed: ' + err.name + ' — click Save to retry';
+        statusText.style.color = '#993c1d';
+        fileHandle = null;
+      }
+    }
+  });
+
+  contentRoot.querySelectorAll('.user-note .del-note').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      btn.closest('.user-note').remove();
+      markDirty();
+    });
+  });
+
+  contentRoot.querySelectorAll('.spacing-tracker input[type="checkbox"]').forEach(function(cb) {
+    cb.addEventListener('change', function() {
+      if (cb.checked) { cb.setAttribute('checked', 'checked'); }
+      else { cb.removeAttribute('checked'); }
+      markDirty();
+    });
+  });
+
+  if (window.mermaid) {
+    mermaid.initialize({ startOnLoad: true, securityLevel: 'strict' });
+  }
+})();
+</script>
+
+</body>
+</html>
