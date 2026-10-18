@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class 17(27) — Definition of Industry &amp; Left-Wing Extremism</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: #faf9f6;
+    color: #1f2328;
+    margin: 0;
+    padding: 0 0 80px;
+    line-height: 1.6;
+  }
+  .toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: #ffffff;
+    border-bottom: 2px solid #1d5b8b;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: Arial, sans-serif;
+    flex-wrap: wrap;
+  }
+  .toolbar button {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    padding: 7px 14px;
+    border-radius: 6px;
+    border: 1px solid #d8d2c6;
+    background: #fff;
+    cursor: pointer;
+    color: #1f2328;
+  }
+  .toolbar button:hover { background: #e6f1fb; border-color: #1d5b8b; }
+  .toolbar button.active { background: #1d5b8b; color: #fff; border-color: #1d5b8b; }
+  .toolbar .save-btn { background: #2f6b4f; color: #fff; border-color: #2f6b4f; margin-left: auto; }
+  .toolbar .save-btn:hover { background: #24543e; }
+  .toolbar .status { font-size: 12px; color: #57606a; margin-left: auto; padding-right: 8px; }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 30px 20px; }
+  header { border-bottom: 3px solid #1d5b8b; padding-bottom: 20px; margin-bottom: 30px; }
+  header h1 { font-size: 1.6em; margin: 0 0 6px; color: #1d5b8b; }
+  header .meta { color: #57606a; font-size: 0.95em; font-family: Arial, sans-serif; }
+  section { margin-bottom: 42px; }
+  h2 { font-size: 1.4em; color: #1d5b8b; border-left: 4px solid #1d5b8b; padding-left: 12px; margin-bottom: 14px; }
+  h3 { font-size: 1.12em; margin: 22px 0 8px; }
+  p { margin: 10px 0; }
+  .summary-box { background: #e6f1fb; border-radius: 8px; padding: 18px 22px; font-size: 0.98em; }
+  ul, ol.answers { padding-left: 24px; }
+  li { margin-bottom: 6px; }
+  .timestamp { font-family: 'Courier New', monospace; font-size: 0.78em; color: #57606a; background: #e2ddd4; border-radius: 4px; padding: 1px 6px; margin-right: 6px; }
+  .quote-card { background: #fff; border: 1px solid #e2ddd4; border-left: 4px solid #1d5b8b; border-radius: 6px; padding: 14px 18px; margin: 14px 0; }
+  .quote-card .q { font-style: italic; font-size: 1.05em; }
+  .quote-card .attrib { font-family: Arial, sans-serif; font-size: 0.85em; color: #57606a; margin-top: 6px; }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.95em; background: #fff; }
+  th, td { border: 1px solid #e2ddd4; padding: 8px 12px; text-align: left; vertical-align: top; }
+  th { background: #e6f1fb; font-family: Arial, sans-serif; font-size: 0.88em; }
+  .gap-box { background: #eef4f0; border: 1px solid #cfe3d6; border-radius: 8px; padding: 16px 20px; margin-top: 16px; font-size: 0.95em; }
+  .gap-box h4 { margin: 0 0 8px; color: #2f6b4f; font-family: Arial, sans-serif; font-size: 0.95em; }
+  .exam-tip { background: #fff7e6; border: 1px solid #f0dba8; border-radius: 8px; padding: 14px 20px; margin: 14px 0; font-size: 0.95em; }
+  .exam-tip::before { content: "Exam strategy: "; font-weight: bold; font-family: Arial, sans-serif; }
+  .term-box { background: #fdf3f3; border: 1px solid #ecd4d4; border-radius: 8px; padding: 12px 16px; margin: 10px 0; }
+  .term-box strong { color: #8b3a3a; }
+  .data-box { background: #f3f0fb; border: 1px solid #ddd6f0; border-radius: 8px; padding: 12px 16px; margin: 10px 0; font-family: 'Courier New', monospace; font-size: 0.9em; }
+  footer { margin-top: 60px; border-top: 1px solid #e2ddd4; padding-top: 16px; color: #57606a; font-size: 0.82em; font-family: Arial, sans-serif; }
+  .toc {
+    background: #fff;
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    padding: 16px 22px;
+    margin-bottom: 36px;
+    font-family: Arial, sans-serif;
+    font-size: 0.9em;
+  }
+  .toc h2 { font-size: 1em; margin: 0 0 10px; border: none; padding: 0; color: #1d5b8b; text-transform: uppercase; letter-spacing: 0.04em; }
+  .toc ol { columns: 2; margin: 0; padding-left: 20px; }
+  .toc a { color: #1f2328; text-decoration: none; }
+  .toc a:hover { color: #1d5b8b; text-decoration: underline; }
+  details.collapse-section {
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    background: #fff;
+    margin: 14px 0;
+    padding: 0;
+  }
+  details.collapse-section summary {
+    cursor: pointer;
+    padding: 12px 16px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 0.92em;
+    color: #1d5b8b;
+    list-style: none;
+  }
+  details.collapse-section summary::-webkit-details-marker { display: none; }
+  details.collapse-section summary::before { content: "▸ "; }
+  details.collapse-section[open] summary::before { content: "▾ "; }
+  details.collapse-section .collapse-body { padding: 4px 16px 16px; }
+  .glossary-term {
+    display: flex;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+  }
+  .glossary-term:last-child { border-bottom: none; }
+  .glossary-term dt { font-weight: bold; color: #8b3a3a; min-width: 220px; flex-shrink: 0; font-family: Arial, sans-serif; font-size: 0.9em; }
+  .glossary-term dd { margin: 0; }
+
+  mark.user-highlight { background: #fff176; padding: 1px 2px; border-radius: 2px; }
+  u.user-underline { text-decoration: underline; text-decoration-color: #1d5b8b; text-decoration-thickness: 2px; }
+  .user-note {
+    background: #e6f1fb;
+    border: 1px solid #85b7eb;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin: 8px 0;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #0c447c;
+    position: relative;
+  }
+  .user-note .note-label { font-weight: bold; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; display: block; }
+  .user-note .del-note { position: absolute; top: 6px; right: 8px; cursor: pointer; border: none; background: none; color: #0c447c; font-size: 14px; font-family: Arial, sans-serif; }
+  #note-input-box {
+    position: fixed;
+    display: none;
+    background: #fff;
+    border: 2px solid #1d5b8b;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    z-index: 100;
+    font-family: Arial, sans-serif;
+  }
+  #note-input-box textarea { width: 240px; height: 60px; font-family: Arial, sans-serif; font-size: 13px; border: 1px solid #d8d2c6; border-radius: 4px; padding: 6px; }
+  #note-input-box .note-actions { margin-top: 6px; display: flex; gap: 6px; justify-content: flex-end; }
+  #note-input-box button { font-size: 12px; padding: 5px 10px; border-radius: 4px; border: 1px solid #d8d2c6; background: #fff; cursor: pointer; }
+  #note-input-box button.primary { background: #1d5b8b; color: #fff; border-color: #1d5b8b; }
+  .content-target::selection { background: #ffe082; }
+  .board-caption { font-family: Arial, sans-serif; font-size: 0.82em; color: #57606a; margin-top: -8px; margin-bottom: 14px; }
+  .arcs-box {
+    background: #fff;
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 14px 0;
+  }
+  .arcs-box h4 { margin: 0 0 10px; color: #1d5b8b; font-family: Arial, sans-serif; font-size: 0.98em; }
+  .recall-q { margin-bottom: 14px; }
+  .recall-q p.q-text { font-weight: bold; margin: 0 0 6px; }
+  .recall-q details { border: none; margin: 0; }
+  .recall-q summary { font-family: Arial, sans-serif; font-size: 0.82em; color: #1d5b8b; cursor: pointer; list-style: none; padding: 2px 0; }
+  .recall-q summary::-webkit-details-marker { display: none; }
+  .recall-q summary::before { content: "Show answer \25B8 "; }
+  .recall-q details[open] summary::before { content: "Hide answer \25BE "; }
+  .recall-q .ans { background: #eef4f0; border-radius: 6px; padding: 8px 12px; margin-top: 6px; font-size: 0.95em; }
+  .spacing-tracker { font-family: Arial, sans-serif; font-size: 0.92em; }
+  .spacing-tracker table { margin: 8px 0; }
+  .spacing-tracker input[type="checkbox"] { width: 16px; height: 16px; cursor: pointer; }
+  .mnemonic-box { background: #fff7e6; border: 1px solid #f0dba8; border-radius: 8px; padding: 14px 18px; margin: 10px 0; }
+  .mnemonic-box h4 { margin: 0 0 6px; color: #8b5a1d; font-family: Arial, sans-serif; font-size: 0.92em; }
+  .applic-table td.gs-tag { font-family: Arial, sans-serif; font-weight: bold; font-size: 0.85em; white-space: nowrap; }
+  .applic-table .prelims-badge, .applic-table .mains-badge {
+    display: inline-block; font-family: Arial, sans-serif; font-size: 0.72em; font-weight: bold;
+    padding: 2px 8px; border-radius: 10px; margin-right: 4px;
+  }
+  .prelims-badge { background: #eaf3de; color: #3b6d11; }
+  .mains-badge { background: #e6f1fb; color: #1d5b8b; }
+  #fallback-help {
+    position: fixed;
+    display: none;
+    top: 60px;
+    right: 20px;
+    max-width: 320px;
+    background: #fff;
+    border: 2px solid #993c1d;
+    border-radius: 8px;
+    padding: 14px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    z-index: 200;
+  }
+  .mcq-card { background: #fff; border: 1px solid #e2ddd4; border-left: 4px solid #1d5b8b; border-radius: 8px; padding: 16px 20px; margin: 14px 0; }
+  .mcq-card .q-num { font-family: Arial, sans-serif; font-weight: bold; color: #1d5b8b; font-size: 0.82em; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 6px; }
+  .mcq-card .q-text { font-weight: bold; margin-bottom: 10px; }
+  .mcq-card .options { display: flex; flex-direction: column; gap: 6px; margin-bottom: 10px; }
+  .mcq-card .option { font-family: Arial, sans-serif; font-size: 0.92em; padding: 6px 10px; border-radius: 6px; background: #faf9f6; border: 1px solid #e2ddd4; }
+  .mcq-card .option.correct { background: #eaf3de; border-color: #b9d79a; color: #3b6d11; font-weight: bold; }
+  .mcq-card .answer-box { font-family: Arial, sans-serif; font-size: 0.88em; background: #eef4f0; border-radius: 6px; padding: 8px 12px; }
+  .mcq-card .answer-label { font-weight: bold; color: #2f6b4f; }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <button id="btn-highlight" title="Select text, then click to highlight it">Highlight</button>
+  <button id="btn-underline" title="Select text, then click to underline it">Underline</button>
+  <button id="btn-note" title="Click this, then click anywhere in the notes to drop a note">Add note</button>
+  <button id="btn-clear" title="Remove all your highlights, underlines, and notes">Clear my edits</button>
+  <span class="status" id="status-text">Not connected to file — click Save once to connect</span>
+  <button class="save-btn" id="btn-save">Save</button>
+</div>
+
+<div id="fallback-help">
+  <strong>Your browser can't save directly</strong>
+  <p style="margin:6px 0;">File System Access isn't supported here (common on Safari/Firefox). Use Chrome or Edge to enable direct-save, or use your browser's Save Page As (Ctrl/Cmd+S) to overwrite this file manually after editing.</p>
+  <button id="fallback-close" style="font-size: 12px; padding: 6px 12px; border-radius: 4px; border: 1px solid #993c1d; background: #993c1d; color: #fff; cursor: pointer;">Got it</button>
+</div>
+
+<div id="note-input-box">
+  <textarea id="note-text" placeholder="Type your note..."></textarea>
+  <div class="note-actions">
+    <button id="note-cancel">Cancel</button>
+    <button class="primary" id="note-add">Add</button>
+  </div>
+</div>
+
+<div class="wrap content-target" id="content-root">
+
+<header>
+  <h1>Class 17(27) — Evolving Definition of "Industry" (Labour Jurisprudence) &amp; Left-Wing Extremism: Post-2026 Status</h1>
+  <div class="meta">
+    <span>Source: unlisted YouTube lecture recording ("class 17 CAVA2027")</span> &middot;
+    <span>Substantive content: 0:00 – ~1:50 (upload runs 1h56m11s)</span> &middot;
+    <span>Track: UPSC GS-2 (Polity — judicial interpretation, labour rights; Internal Security) / GS-3 (Economy — labour, industrial relations; Security — LWE) — Current Affairs with live answer-writing guidance</span>
+  </div>
+</header>
+
+<div class="gap-box">
+  <h4>Two topics in this class</h4>
+  <p><strong>Part A (0:00–~1:00):</strong> the evolving definition of "industry" — a labour-jurisprudence topic built on the 2026 nine-judge verdict. <strong>Part B (~1:00–end):</strong> Left-wing extremism (LWE / Naxalism / Maoism) and the post-March 2026 status. The class also includes a long digression on freedom vs. liberty and generational remarks; these are not exam content and are omitted.</p>
+  <p><strong>Continuity:</strong> nothing here depends on Classes 14–15 (handouts). The definition of "industry" connects to the Class 9 (VB-G RAM G / labour) and Class 6 (MSME/employment) material only loosely.</p>
+</div>
+
+<nav class="toc">
+  <h2>Contents</h2>
+  <ol>
+    <li><a href="#applicability">Applicability — GS papers, Prelims &amp; Mains</a></li>
+    <li><a href="#partA">Part A — Definition of "industry"</a></li>
+    <li><a href="#part1">1. Context &amp; the triple test (Bangalore Water Supply, 1978)</a></li>
+    <li><a href="#part2">2. Why labour law exists — asymmetry, constitutional safeguards</a></li>
+    <li><a href="#part3">3. Economic efficiency vs. social protection</a></li>
+    <li><a href="#part4">4. Legal framework: IDA 1947 → Industrial Relations Code 2020</a></li>
+    <li><a href="#part5">5. Phase-wise evolution (I–IV) &amp; the 2026 verdict</a></li>
+    <li><a href="#part6">6. Significance, challenges, way forward</a></li>
+    <li><a href="#part7">7. Live answer-writing — evolving interpretation of "industry"</a></li>
+    <li><a href="#partB">Part B — Left-wing extremism: post-2026 status</a></li>
+    <li><a href="#part8">8. Concepts — LWE, Naxalism, Maoism; protracted people's war</a></li>
+    <li><a href="#part9">9. Frameworks — greed vs. grievance; strong societies, weak states; conflict transformation</a></li>
+    <li><a href="#part10">10. Evolution in five phases &amp; Operation Kagar</a></li>
+    <li><a href="#part11">11. Post-2026 status, emerging challenges &amp; state responses</a></li>
+    <li><a href="#part12">12. Live answer-writing — factors behind the fall of the Red Corridor</a></li>
+    <li><a href="#mcqs">Prelims trap MCQs</a></li>
+    <li><a href="#glossary">Glossary — quick revision</a></li>
+    <li><a href="#arcs">Revision kit (ARCS)</a></li>
+    <li><a href="#gaps">Supplementary research &amp; verification</a></li>
+  </ol>
+</nav>
+
+<section id="summary">
+  <h2>Executive summary</h2>
+  <div class="summary-box">
+  <ul>
+    <li><strong>Part A — "Industry":</strong> the 2026 nine-judge bench refined the 1978 <em>Bangalore Water Supply</em> triple test for pending disputes and left future disputes to the Industrial Relations Code 2020's definition. The definition decides whether workers get protection (layoff, strike rights) — and it is contested for hospitals, schools, NGOs and government services.</li>
+    <li><strong>Part B — LWE:</strong> the Centre declared India free from armed Naxalism in March 2026 (Lok Sabha statement, ~30–31 Mar). The lecture traces five phases, the factors behind the collapse (security, infrastructure, rights implementation), residual risks, and steps needed to prevent relapse.</li>
+    <li>Recurring device: <strong>"Red Corridor → Development Corridor"</strong> (Vikram Singh's formulation, paraphrased in class).</li>
+  </ul>
+  <p style="font-family: Arial, sans-serif; font-size: 0.88em; color: #57606a;">Instructor's meta-advice: when a question says "discuss through case laws," do not separate judgments into separate paragraphs; discuss positives and negatives inside each case. Start with a framing idea (asymmetry of labour and capital) rather than repeating the case law in the introduction.</p>
+  </div>
+</section>
+
+<section id="applicability">
+  <h2>Applicability — GS papers, Prelims &amp; Mains</h2>
+  <table class="applic-table">
+    <tr><th>Sub-topic</th><th>GS Paper</th><th>Prelims</th><th>Mains</th></tr>
+    <tr><td class="gs-tag">Definition of "industry"; triple test; IR Code 2020</td><td>GS-2 (Judiciary, labour welfare) / GS-3 (Labour reforms, economy)</td><td><span class="prelims-badge">High</span>Industrial Relations Code 2020 (consolidated 4 codes, effective 21 Nov 2025); Art. 23, 42, 43, 43A; labour in the Concurrent List.</td><td><span class="mains-badge">High</span>Labour welfare vs. ease of doing business; judicial interpretation; gig/platform workers.</td></tr>
+    <tr><td class="gs-tag">LWE / Naxalism post-2026</td><td>GS-3 (Internal security) / GS-2 (Tribal rights, governance)</td><td><span class="prelims-badge">High</span>Red Corridor; SAMADHAN; Operation Kagar (name per lecture); FRA/PESA; Telecommunications Act 2023 (Digital Bharat Nidhi).</td><td><span class="mains-badge">High</span>Security vs. development; conflict transformation; sustaining peace after insurgency.</td></tr>
+  </table>
+</section>
+
+<section id="partA">
+  <h2>Part A — Definition of "industry" (labour jurisprudence)</h2>
+</section>
+
+<section id="part1">
+  <h2>1. Context &amp; the triple test</h2>
+  <p><span class="timestamp">0:00</span>Planned structure: introduction, concepts, legal framework, evolution in four phases, significance, challenges, way forward.</p>
+  <div class="data-box">
+    <strong>Why it matters:</strong> if a workplace is an "industry", its workers get legal protection — e.g., against sudden layoff and the right to strike.<br>
+    <strong>IDA 1947 definition:</strong> very broad — any business, trade, undertaking, manufacture or employment, professional employment, handicraft.<br>
+    <strong>Triple test</strong> (<em>Bangalore Water Supply &amp; Sewerage Board v. A. Rajappa</em>, 1978, seven judges, Krishna Iyer J.): a workplace is an industry if it involves
+    <ol class="answers">
+      <li><strong>Systematic activity</strong> — organised, regular work (not a one-off or a home activity);</li>
+      <li><strong>Cooperation between employer and employees</strong> (teamwork);</li>
+      <li><strong>Production/supply of goods or services</strong> to satisfy human wants.</li>
+    </ol>
+    <strong>Profit is irrelevant</strong> — so charities, hospitals and educational institutions can fall within the test.
+  </div>
+  <p>Labour is on the Concurrent List, so state and central laws differ — one reason for codification.</p>
+</section>
+
+<section id="part2">
+  <h2>2. Why labour law exists — asymmetry and constitutional safeguards</h2>
+  <ul>
+    <li><strong>Core asymmetry:</strong> individual workers have less bargaining power than capital. Ambedkar argued state intervention is needed to prevent the "dictatorship of the private employer".</li>
+    <li><strong>Art. 23</strong> prohibits forced labour. In <em>People's Union for Democratic Rights v. Union of India</em> (Asiad Workers case, 1982), the Court held that paying less than the minimum wage amounts to forced labour.</li>
+    <li><strong>Directive Principles:</strong> Art. 42 (just and humane conditions of work), Art. 43 (living wage), Art. 43A (workers' participation in management).</li>
+  </ul>
+</section>
+
+<section id="part3">
+  <h2>3. Economic efficiency vs. social protection</h2>
+  <table>
+    <tr><th>Economic efficiency</th><th>Social protection</th></tr>
+    <tr><td>Flexible labour laws, easy hiring and firing; less compliance and inspection; investment attraction. Rigid laws were called "regulatory cholesterol" in an earlier Economic Survey; they can keep firms small and informal.</td><td>Statutory safeguards offset the bargaining imbalance; without them, market forces exploit labour. Over-deregulation risks exploitation.</td></tr>
+  </table>
+  <p>Policy dilemma: over-regulation harms growth; under-regulation harms workers. The balance depends on context.</p>
+</section>
+
+<section id="part4">
+  <h2>4. Legal framework: IDA 1947 → Industrial Relations Code 2020</h2>
+  <ul>
+    <li><strong>Industrial Disputes Act 1947</strong> (repealed; the Code took effect 21 Nov 2025): broad definition; the triple test was judicially read in.</li>
+    <li><strong>Industrial Relations Code 2020, s.2(p):</strong> "industry" means any <em>systematic activity</em> carried on by <em>cooperation between an employer and workers</em> for the <em>production, supply or distribution of goods or services</em> to satisfy human wants. It incorporates the triple test in statutory text.</li>
+    <li><strong>Exclusions in the Code:</strong> sovereign functions of government, charitable/philanthropic activity, domestic service, and home-made goods not produced as a systematic activity.</li>
+    <li>Related codes: Occupational Safety, Health and Working Conditions Code; Social Security Code; Wages Code. Factories Act and Contract Labour Act apply separately.</li>
+  </ul>
+</section>
+
+<section id="part5">
+  <h2>5. Phase-wise evolution &amp; the 2026 verdict</h2>
+  <div class="data-box">
+    <strong>Phase I — statutory and judicial ambiguity (post-1947):</strong> vague definition; conflicting High Court rulings; hospitals, universities and NGOs unsure of their status.<br>
+    <strong>Phase II — worker-welfare era (1970s–):</strong> <em>Bangalore Water Supply (1978)</em> — the triple test; wide coverage; positive for dignity and worker protection. Negatives: charities and public services pulled in; hospitals and education could face strikes; criticised as <strong>judicial legislation</strong> (separation-of-powers concern).<br>
+    <strong>Phase III — liberalisation (1991–):</strong> employers sought operational flexibility. <em>State of UP v. Jai Bir Singh</em> (2005) questioned the 1978 test as worker-oriented but was referred to a larger bench; the question stayed open for two decades.<br>
+    <strong>Phase IV — the 2026 nine-judge verdict (20 Aug 2026):</strong> the Court <strong>retained the triple test for pending disputes</strong> under the repealed IDA (judicial stability), while <strong>future disputes are to be decided on the text and context of the IR Code 2020</strong>. The lecture describes this as a "dual-track" transition.
+  </div>
+  <div class="exam-tip"><strong>Verdict discrepancy:</strong> sources disagree on the vote (one report says 5:4 refinement; another reports a 4:4 split). Check the judgment text before quoting the bench's numbers. The Court also refrained from examining the IR Code's own definition.</div>
+</section>
+
+<section id="part6">
+  <h2>6. Significance, challenges, way forward</h2>
+  <h3>Significance</h3>
+  <ul>
+    <li><strong>Judicial stability</strong> for pending cases.</li>
+    <li><strong>Interpretative independence</strong>: future courts read the Code, not the judge-made test.</li>
+    <li><strong>Greater clarity</strong>: explicit exclusions for charities, sovereign functions and domestic service.</li>
+  </ul>
+  <h3>Challenges</h3>
+  <ol class="answers">
+    <li><strong>Interpretive divergence:</strong> the Phase I problem can return as High Courts read the new text differently.</li>
+    <li><strong>The "modern worker" boundary:</strong> IT and services employees designated "managers" lose protection even when doing worker-type work. Gig workers are "partners" and fall outside protection.</li>
+    <li><strong>Erosion of safety nets:</strong> explicit exclusions remove protection from NGO and hospital workers; the gig economy is a case in point (the government is moving to social security for platform workers).</li>
+    <li><strong>Litigation burden:</strong> workers must first prove the workplace is an industry, then prove they are workers — a multi-tier, slow process.</li>
+  </ol>
+  <h3>Way forward</h3>
+  <ul>
+    <li>Harmonised state rules (labour is a Concurrent subject).</li>
+    <li>Legislative clarity on who is a "worker".</li>
+    <li>A universal social-protection floor across industry, gig, NGO and public-service work.</li>
+    <li>Speedy dispute resolution to replace multi-tier litigation.</li>
+    <li>Align legal clarity with the Directive Principles for growth with labour dignity.</li>
+  </ul>
+</section>
+
+<section id="part7">
+  <h2>7. Live answer-writing — evolving interpretation of "industry"</h2>
+  <div class="quote-card"><strong>Q.</strong> "A significant achievement of modern labour jurisprudence in India is the Supreme Court's evolving interpretation of 'industry'. Discuss with the help of relevant case laws." <span class="attrib">— set in class</span></div>
+  <ol class="answers">
+    <li><strong>Intro:</strong> labour jurisprudence originates in the asymmetry of labour and capital (Ambedkar's "dictatorship of the private employer"); Art. 42–43; legislation (IDA 1947, IR Code 2020) plus judicial interpretation.</li>
+    <li><strong>Timeline:</strong> socialist-era worker welfare vs. market-era balance.</li>
+    <li><strong>Phase I</strong> — ambiguity; <strong>Phase II</strong> — <em>Bangalore Water Supply</em> (positives and negatives together); <strong>Phase III</strong> — <em>Jai Bir Singh</em>; <strong>Phase IV</strong> — 2026 dual-track verdict (positives and negatives together).</li>
+    <li><strong>Way forward and conclusion.</strong></li>
+  </ol>
+  <p><em>Note:</em> do not separate case names from their analysis; you are asked for the judicial interpretation, not a list of cases.</p>
+</section>
+
+<section id="partB">
+  <h2>Part B — Left-wing extremism: post-2026 status</h2>
+</section>
+
+<section id="part8">
+  <h2>8. Concepts — LWE, Naxalism, Maoism; protracted people's war</h2>
+  <ul>
+    <li><strong>Left-wing extremism (LWE):</strong> an umbrella term for armed groups with radical Marxist-Leninist or Maoist ideologies seeking to overthrow the state through armed struggle.</li>
+    <li><strong>Naxalism:</strong> a form of LWE inspired by Maoism, named after <strong>Naxalbari</strong> (West Bengal), where an armed peasant uprising took place in <strong>1967</strong>.</li>
+    <li><strong>Marxism</strong> (general theory of class struggle); <strong>Leninism</strong> (a vanguard party, urban and factory-based, Russia); <strong>Maoism</strong> (rural peasant uprising against landlords, China). The Indian movement is primarily Maoist in character, with Marxist roots.</li>
+    <li><strong>Protracted people's war</strong> (Mao): three strategic phases — <strong>(1) strategic defence</strong> ("hide and grow", building rural base areas); <strong>(2) strategic stalemate</strong> (guerrilla warfare, asymmetric); <strong>(3) strategic offence</strong> (attack, capture of urban centres). The lecture stresses that a movement can regress between phases.</li>
+  </ul>
+  <div class="term-box"><strong>Red Corridor:</strong> a contiguous forest and tribal belt where Maoists held territorial dominance and set up <em>Janatana Sarkar</em> (parallel governance).</div>
+</section>
+
+<section id="part9">
+  <h2>9. Frameworks — greed vs. grievance; strong societies, weak states; conflict transformation</h2>
+  <h3>Greed vs. grievance</h3>
+  <ul>
+    <li><strong>Grievance</strong> starts a movement: land alienation, displacement, denial of tribal rights, administrative neglect.</li>
+    <li><strong>Greed</strong> sustains it: extortion, protection money, mining levies, control of resource-rich areas.</li>
+  </ul>
+  <h3>Strong societies, weak states (Joel Migdal)</h3>
+  <ul>
+    <li>In such areas, local strongmen (here, Maoist structures) provided livelihood and security, so people obeyed them; the state could not penetrate → <strong>governance vacuum</strong> → development deficit and alienation.</li>
+    <li>Related idea (Gunnar Myrdal): South Asian <em>soft states</em> fail to implement their own policies.</li>
+  </ul>
+  <h3>Conflict transformation (John Paul Lederach, <em>Building Peace</em>)</h3>
+  <ul>
+    <li><strong>Peacebuilding framework:</strong> reconciliation; <strong>pyramid structure</strong> (top leaders, middle-level actors, grassroots — the middle is the crucial connector); process (may take generations); resources (schools, health, infrastructure); coordination.</li>
+    <li><strong>Lasting change across four dimensions:</strong> personal, relational (bridging victim–cadre distrust), structural (changing unfair rules), cultural.</li>
+  </ul>
+</section>
+
+<section id="part10">
+  <h2>10. Evolution in five phases &amp; Operation Kagar</h2>
+  <table>
+    <tr><th>Phase</th><th>What happened</th></tr>
+    <tr><td>I — Telangana (late 1940s)</td><td>Armed squads mobilised peasants against feudal landlords; subsided.</td></tr>
+    <tr><td>II — Naxalbari (1967)</td><td>Maoist uprising; replicated in Andhra Pradesh (Srikakulam, "Srikakulam movement" in the captions as "Rikulum"); declined by the 1970s after crackdowns and leaders' deaths.</td></tr>
+    <tr><td>III — Re-emergence</td><td>People's War Group recruited youth; mobilised tribals on forest and land issues.</td></tr>
+    <tr><td>IV — Peak violence</td><td>Unified CPI (Maoist) formed the People's Liberation Guerrilla Army and Janatana Sarkars; the PM called it the biggest internal security challenge.</td></tr>
+    <tr><td>V — Multi-pronged counter-offensive</td><td>Forward Operating Bases; satellite and drone intelligence; fortified police stations on reclaimed land; "Clear, Hold, Build"; generous surrender-rehabilitation policy; Operation Kagar (2024–2026) decapitated top commands.</td></tr>
+  </table>
+  <h3>Data</h3>
+  <div class="data-box">
+    Peak (2009–10): about 20 states and 223 districts (per former DGP Prakash Singh).<br>
+    Early 2026: about 7–11 districts affected (sources differ; Singh's remarks in class).<br>
+    Since 2014: over 12,000 km of roads and over 1,800 bank branches added (per Vikram Singh, citing the government).
+  </div>
+</section>
+
+<section id="part11">
+  <h2>11. Post-2026 status, emerging challenges &amp; state responses</h2>
+  <h3>Status</h3>
+  <ul>
+    <li><strong>Declaration:</strong> the Centre declared India free from armed Naxalism in March 2026; the PM repeated it in his 15 Aug 2026 speech.</li>
+    <li><strong>Geographic shrinkage</strong> of the Red Corridor; <strong>operational decimation</strong> of cadres and leadership; <strong>forward operating bases</strong>; <strong>elite forces</strong> (CoBRA, jungle-warfare units) and better connectivity made the transition possible.</li>
+    <li>Shift from <em>security dominance</em> to <em>governance credibility</em>: civilian administration, hospitals, schools, local elections, development outreach (e.g., Chhattisgarh's <em>Niyad Nellanar</em> scheme), FRA and PESA implementation, Gram Sabha strengthening, and reverse-vasectomy care for former cadres (to allow family life and reintegration).</li>
+  </ul>
+  <h3>Emerging challenges</h3>
+  <ol class="answers">
+    <li><strong>Legal:</strong> surrendered cadres face cases, including murder charges; investigative lapses linked to alleged extrajudicial killings.</li>
+    <li><strong>Residual risk:</strong> remaining leaders and cadres could regroup into strategic defence again.</li>
+    <li><strong>Mutation:</strong> "overground workers" in urban areas, or links to transnational organised crime (drugs, arms).</li>
+    <li><strong>Development-induced displacement:</strong> private extraction in mineral-rich areas could re-ignite grievance.</li>
+    <li><strong>Social integration:</strong> surrendered cadres lack education and skills — need vocational training, adult education and livelihoods.</li>
+  </ol>
+  <h3>State responses</h3>
+  <ul>
+    <li><strong>National Policy and Action Plan (2015)</strong>, a four-pronged strategy: security; development; rights and entitlements; perception management. Operationalised as <strong>SAMADHAN</strong>.</li>
+    <li><strong>Surrender and rehabilitation policy:</strong> financial incentives, housing, vocational training.</li>
+    <li><strong>Clear, Hold, Build (CHB):</strong> clear the area of armed groups, hold it with fortified police stations, then build roads, schools and connectivity.</li>
+    <li><strong>Digital connectivity</strong> through <strong>Digital Bharat Nidhi</strong> under the Telecommunications Act 2023 (levy on telecom firms to fund rural access).</li>
+    <li><strong>Eklavya Model Residential Schools</strong> and special central assistance for LWE-affected districts.</li>
+    <li><strong>Pandum cafés</strong> (Chhattisgarh): run by victims of Naxal violence and surrendered cadres, set up by the police and district administration — an example of social integration (<em>Winning Hearts and Minds</em>).</li>
+    <li>Planning Commission (Unnikrishnan Committee, 2008) had recommended land reforms and tribal rights; the lecture credits this as a root-cause diagnosis.</li>
+  </ul>
+  <h3>Comparison — Colombia's FARC</h3>
+  <p>The FARC peace agreement converted an armed group into a political party with direct representation, ending the conflict through the democratic process. The lecture uses this to suggest <strong>direct political representation</strong> as one option for ex-insurgents in India, which is debatable.</p>
+  <h3>Views</h3>
+  <ul>
+    <li><strong>Prakash Singh</strong> (former DGP): the near-total decimation of Maoism is the biggest internal-security success after Punjab terrorism.</li>
+    <li><strong>Vikram Singh</strong> (former DGP, paraphrased in class): the Red Corridor must become a <strong>development corridor</strong>.</li>
+  </ul>
+</section>
+
+<section id="part12">
+  <h2>12. Live answer-writing — factors behind the fall of the Red Corridor</h2>
+  <div class="quote-card"><strong>Q.</strong> "The defeat of left-wing extremism is as much a triumph of targeted security operations as it is of expanding infrastructure." Analyse the factors that led to the disbanding of the Red Corridor. Also discuss the measures needed to ensure that former insurgent strongholds do not slip back into instability. <span class="attrib">— set in class</span></div>
+  <ol class="answers">
+    <li><strong>Intro:</strong> Prakash Singh's "biggest success" statement linked to the March 2026 declaration; two maps (2009–10 peak vs. 2026 remnants).</li>
+    <li><strong>Security factors:</strong> targeted operations, Operation Kagar, forward operating bases, technology, CoBRA, CHB strategy.</li>
+    <li><strong>Infrastructure and governance:</strong> roads, bank branches, digital connectivity; FRA/PESA implementation and tribal rights.</li>
+    <li><strong>Emerging challenges:</strong> mutation, residual risk, legal and social integration issues.</li>
+    <li><strong>Steps needed:</strong> prevent grievance (rights, land reforms); strong state (continue the 2015 policy and SAMADHAN); conflict transformation (Lederach's pyramid and four dimensions); FARC-style representation if considered.</li>
+    <li><strong>Conclusion:</strong> "Red Corridor into Development Corridor".</li>
+  </ol>
+</section>
+
+<section id="mcqs">
+  <h2>Prelims trap MCQs</h2>
+  <div class="mcq-card"><div class="q-num">Q1</div><div class="q-text">The triple test to define "industry" was laid down in:</div><div class="options"><div class="option">(A) Kesavananda Bharati (1973)</div><div class="option correct">(B) Bangalore Water Supply &amp; Sewerage Board v. A. Rajappa (1978)</div><div class="option">(C) State of UP v. Jai Bir Singh (2005)</div><div class="option">(D) Asiad Workers case (1982)</div></div><div class="answer-box"><span class="answer-label">Answer: (B).</span> Systematic activity, employer–employee cooperation, goods or services.</div></div>
+  <div class="mcq-card"><div class="q-num">Q2</div><div class="q-text">Which is NOT one of the three elements of the triple test?</div><div class="options"><div class="option">(A) Systematic activity</div><div class="option">(B) Cooperation between employer and employees</div><div class="option">(C) Production of goods or services</div><div class="option correct">(D) Profit-making motive</div></div><div class="answer-box"><span class="answer-label">Answer: (D).</span> Profit is irrelevant.</div></div>
+  <div class="mcq-card"><div class="q-num">Q3</div><div class="q-text">Under the Industrial Relations Code 2020, which is EXCLUDED from "industry"?</div><div class="options"><div class="option">(A) Manufacturing units</div><div class="option correct">(B) Sovereign functions of government</div><div class="option">(C) Trade undertakings</div><div class="option">(D) Professional employment</div></div><div class="answer-box"><span class="answer-label">Answer: (B).</span> Also charity and domestic service.</div></div>
+  <div class="mcq-card"><div class="q-num">Q4</div><div class="q-text">Naxalism takes its name from a 1967 armed peasant uprising in:</div><div class="options"><div class="option">(A) Srikakulam, Andhra Pradesh</div><div class="option">(B) Dandakaranya, Chhattisgarh</div><div class="option correct">(C) Naxalbari, West Bengal</div><div class="option">(D) Bastar, Chhattisgarh</div></div><div class="answer-box"><span class="answer-label">Answer: (C).</span></div></div>
+  <div class="mcq-card"><div class="q-num">Q5</div><div class="q-text">In Mao's protracted people's war, the first strategic phase is:</div><div class="options"><div class="option correct">(A) Strategic defence (hide and grow)</div><div class="option">(B) Strategic offence</div><div class="option">(C) Strategic stalemate</div><div class="option">(D) Mass insurrection in cities</div></div><div class="answer-box"><span class="answer-label">Answer: (A).</span></div></div>
+  <div class="mcq-card"><div class="q-num">Q6</div><div class="q-text">The "greed" factor in the LWE movement refers mainly to:</div><div class="options"><div class="option">(A) Land alienation</div><div class="option">(B) Denial of forest rights</div><div class="option correct">(C) Extortion, levies and protection money</div><div class="option">(D) Lack of roads</div></div><div class="answer-box"><span class="answer-label">Answer: (C).</span> Grievance starts a movement; greed sustains it.</div></div>
+</section>
+
+<section id="glossary">
+  <h2>Glossary — quick revision</h2>
+  <dl>
+    <div class="glossary-term"><dt>Triple test</dt><dd>Systematic activity + employer–worker cooperation + goods/services — defines "industry" (1978).</dd></div>
+    <div class="glossary-term"><dt>Sovereign functions</dt><dd>Core state functions excluded from "industry".</dd></div>
+    <div class="glossary-term"><dt>Dual-track transition</dt><dd>2026 verdict: triple test for pending disputes, IR Code text for future ones.</dd></div>
+    <div class="glossary-term"><dt>Regulatory cholesterol</dt><dd>Economic Survey term for rigid labour regulation.</dd></div>
+    <div class="glossary-term"><dt>Protracted people's war</dt><dd>Mao's three-phase strategy: defence, stalemate, offence.</dd></div>
+    <div class="glossary-term"><dt>Janatana Sarkar</dt><dd>Maoist parallel government.</dd></div>
+    <div class="glossary-term"><dt>Strong societies, weak states</dt><dd>Migdal: local strongmen hold people, blocking state penetration.</dd></div>
+    <div class="glossary-term"><dt>Clear, Hold, Build</dt><dd>Counter-insurgency sequence: clear armed groups, hold ground, build infrastructure.</dd></div>
+    <div class="glossary-term"><dt>Pandum café</dt><dd>Chhattisgarh restaurant staffed by victims and surrendered cadres.</dd></div>
+    <div class="glossary-term"><dt>Conflict transformation</dt><dd>Lederach's approach: personal, relational, structural and cultural change.</dd></div>
+  </dl>
+</section>
+
+<section id="arcs">
+  <h2>Revision kit (ARCS method)</h2>
+  <div class="arcs-box">
+    <h4>A — Active Recall</h4>
+    <div class="recall-q"><p class="q-text">1. Name the three elements of the triple test.</p><details><summary></summary><div class="ans">Systematic activity; employer–employee cooperation; production of goods or services.</div></details></div>
+    <div class="recall-q"><p class="q-text">2. What did the 2026 verdict do for pending and future cases?</p><details><summary></summary><div class="ans">Pending: triple test. Future: IR Code 2020 text and context.</div></details></div>
+    <div class="recall-q"><p class="q-text">3. Why did Mao's strategy include "hide and grow"?</p><details><summary></summary><div class="ans">Strategic defence phase: build a rural base quietly before attacking.</div></details></div>
+    <div class="recall-q"><p class="q-text">4. List the five parts of the 2015 national policy's four-pronged strategy.</p><details><summary></summary><div class="ans">Four prongs: security; development; rights and entitlements; perception management (framework: SAMADHAN).</div></details></div>
+    <div class="recall-q"><p class="q-text">5. Give three residual risks after the 2026 declaration.</p><details><summary></summary><div class="ans">Regrouping into strategic defence; overground urban workers; links to transnational organised crime.</div></details></div>
+  </div>
+  <div class="arcs-box mnemonic-box">
+    <h4>S — Stick with Encoding Tricks</h4>
+    <p><strong>Triple test "SCG"</strong>: Systematic activity, Cooperation, Goods/services.</p>
+    <p><strong>Protracted war "DOO"</strong>: Defence → Stalemate → Offence.</p>
+    <p><strong>Conflict transformation "PRSC"</strong>: Personal, Relational, Structural, Cultural.</p>
+  </div>
+</section>
+
+<section id="gaps">
+  <h2>Supplementary research &amp; verification</h2>
+  <div class="gap-box">
+    <h4>Verified via web search</h4>
+    <ul>
+      <li><strong>2026 nine-judge verdict</strong> (20 Aug 2026, <em>State of UP v. Jai Bir Singh</em>, 2026 INSC 897): the triple test is retained for pending disputes; the IR Code definition was not examined. <strong>Vote count unclear</strong> across sources (5:4 refinement vs. 4:4 split) — check the judgment.</li>
+      <li><strong>Naxal-free declaration</strong>: Home Minister Amit Shah told the Lok Sabha around 30 Mar 2026 that India had become free from Naxals (ahead of a 31 Mar deadline); formal announcement to follow after due process. Reported figures: 4,839 surrendered, 2,218 jailed, 706 killed.</li>
+      <li><strong>Industrial Relations Code 2020</strong> in force from 21 Nov 2025; IDA 1947 repealed.</li>
+    </ul>
+    <h4>Lecture points not independently verified — cite cautiously</h4>
+    <ul>
+      <li>"Operation Kagar" name: not confirmed in the sources found; the operation is described in the lecture as 2024–2026.</li>
+      <li>Prakash Singh's peak-year figures (20 states, 223 districts) and the current count (7 vs. 11 districts): sources differ.</li>
+      <li>Vikram Singh's road and bank-branch figures (12,000 km; 1,800 branches) are attributed to the government in the lecture.</li>
+      <li>FARC comparison and the "direct political representation" suggestion are the lecturer's view, not an official position.</li>
+      <li>Quote attributions (Prakash Singh, Vikram Singh) were paraphrased in class.</li>
+    </ul>
+  </div>
+</section>
+
+</div>
+
+<footer>
+  Notes compiled from an unlisted lecture recording using YouTube's auto-generated transcript, plus web verification. MCQs are original. Click Save (first time will ask you to pick this file) to write your edits directly to disk.
+</footer>
+
+<script>
+(function() {
+  var mode = null;
+  var noteCounter = 0;
+
+  var btnHighlight = document.getElementById('btn-highlight');
+  var btnUnderline = document.getElementById('btn-underline');
+  var btnNote = document.getElementById('btn-note');
+  var btnClear = document.getElementById('btn-clear');
+  var btnSave = document.getElementById('btn-save');
+  var statusText = document.getElementById('status-text');
+  var contentRoot = document.getElementById('content-root');
+  var noteBox = document.getElementById('note-input-box');
+  var noteText = document.getElementById('note-text');
+  var pendingNoteTarget = null;
+
+  function setMode(newMode) {
+    mode = mode === newMode ? null : newMode;
+    btnHighlight.classList.toggle('active', mode === 'highlight');
+    btnUnderline.classList.toggle('active', mode === 'underline');
+    btnNote.classList.toggle('active', mode === 'note');
+  }
+
+  btnHighlight.addEventListener('click', function() { setMode('highlight'); });
+  btnUnderline.addEventListener('click', function() { setMode('underline'); });
+  btnNote.addEventListener('click', function() { setMode('note'); });
+
+  function markDirty() {
+    statusText.textContent = 'Unsaved changes';
+    statusText.style.color = '#993c1d';
+  }
+
+  document.addEventListener('mouseup', function(e) {
+    if (mode !== 'highlight' && mode !== 'underline') return;
+    var sel = window.getSelection();
+    if (!sel || sel.isCollapsed || sel.rangeCount === 0) return;
+    var range = sel.getRangeAt(0);
+    if (!contentRoot.contains(range.commonAncestorContainer)) return;
+
+    var wrapper = document.createElement(mode === 'highlight' ? 'mark' : 'u');
+    wrapper.className = mode === 'highlight' ? 'user-highlight' : 'user-underline';
+    try {
+      range.surroundContents(wrapper);
+    } catch (err) {
+      var frag = range.extractContents();
+      wrapper.appendChild(frag);
+      range.insertNode(wrapper);
+    }
+    sel.removeAllRanges();
+    markDirty();
+  });
+
+  contentRoot.addEventListener('click', function(e) {
+    if (mode !== 'note') return;
+    if (e.target.closest('.user-note')) return;
+    pendingNoteTarget = e.target;
+    noteBox.style.display = 'block';
+    var x = Math.min(e.clientX, window.innerWidth - 280);
+    var y = Math.min(e.clientY, window.innerHeight - 140);
+    noteBox.style.left = x + 'px';
+    noteBox.style.top = y + 'px';
+    noteText.value = '';
+    noteText.focus();
+  });
+
+  document.getElementById('note-cancel').addEventListener('click', function() {
+    noteBox.style.display = 'none';
+    pendingNoteTarget = null;
+  });
+
+  document.getElementById('note-add').addEventListener('click', function() {
+    var text = noteText.value.trim();
+    if (!text || !pendingNoteTarget) { noteBox.style.display = 'none'; return; }
+    noteCounter++;
+    var noteDiv = document.createElement('div');
+    noteDiv.className = 'user-note';
+    noteDiv.setAttribute('data-note-id', noteCounter);
+    noteDiv.innerHTML = '<span class="note-label">Your note</span>' +
+      '<button class="del-note" title="Remove note">&times;</button>' +
+      '<span class="note-body"></span>';
+    noteDiv.querySelector('.note-body').textContent = text;
+    noteDiv.querySelector('.del-note').addEventListener('click', function() {
+      noteDiv.remove();
+      markDirty();
+    });
+
+    var target = pendingNoteTarget.closest('li, p, td, div.quote-card, section') || contentRoot;
+    target.parentNode.insertBefore(noteDiv, target.nextSibling);
+
+    noteBox.style.display = 'none';
+    pendingNoteTarget = null;
+    markDirty();
+    setMode('note');
+  });
+
+  btnClear.addEventListener('click', function() {
+    if (!confirm('Remove all your highlights, underlines, and notes on this page?')) return;
+    contentRoot.querySelectorAll('.user-note').forEach(function(n) { n.remove(); });
+    contentRoot.querySelectorAll('mark.user-highlight').forEach(function(m) {
+      var parent = m.parentNode;
+      while (m.firstChild) parent.insertBefore(m.firstChild, m);
+      parent.removeChild(m);
+    });
+    contentRoot.querySelectorAll('u.user-underline').forEach(function(u) {
+      var parent = u.parentNode;
+      while (u.firstChild) parent.insertBefore(u.firstChild, u);
+      parent.removeChild(u);
+    });
+    markDirty();
+  });
+
+  var fallbackHelp = document.getElementById('fallback-help');
+  document.getElementById('fallback-close').addEventListener('click', function() {
+    fallbackHelp.style.display = 'none';
+  });
+
+  var fileHandle = null;
+  var fsaSupported = 'showSaveFilePicker' in window;
+  var THIS_FILENAME = 'notes.html';
+
+  function buildFullHtml() {
+    var doc = document.documentElement.cloneNode(true);
+    var liveContentRoot = doc.querySelector('#content-root');
+    if (liveContentRoot) liveContentRoot.innerHTML = contentRoot.innerHTML;
+    return '<!DOCTYPE html>\n' + doc.outerHTML;
+  }
+
+  async function writeToFile() {
+    var writable = await fileHandle.createWritable();
+    await writable.write(buildFullHtml());
+    await writable.close();
+  }
+
+  btnSave.addEventListener('click', async function() {
+    statusText.textContent = 'Saving…';
+    statusText.style.color = '#57606a';
+    if (!fsaSupported) {
+      fallbackHelp.style.display = 'block';
+      statusText.textContent = 'Direct save not supported in this browser';
+      statusText.style.color = '#993c1d';
+      return;
+    }
+    try {
+      if (!fileHandle) {
+        fileHandle = await window.showSaveFilePicker({
+          suggestedName: THIS_FILENAME,
+          types: [{ description: 'HTML file', accept: { 'text/html': ['.html'] } }]
+        });
+      }
+      var perm = await fileHandle.queryPermission({ mode: 'readwrite' });
+      if (perm !== 'granted') {
+        perm = await fileHandle.requestPermission({ mode: 'readwrite' });
+      }
+      if (perm !== 'granted') {
+        statusText.textContent = 'File permission denied — click Save to retry';
+        statusText.style.color = '#993c1d';
+        fileHandle = null;
+        return;
+      }
+      await writeToFile();
+      statusText.textContent = 'Saved to file just now';
+      statusText.style.color = '#3b6d11';
+    } catch (err) {
+      console.error('SAVE_ERROR', err.name, err.message, err);
+      if (err.name === 'AbortError') {
+        statusText.textContent = 'Save cancelled';
+        statusText.style.color = '#57606a';
+      } else {
+        statusText.textContent = 'Save failed: ' + err.name + ' — click Save to retry';
+        statusText.style.color = '#993c1d';
+        fileHandle = null;
+      }
+    }
+  });
+
+  contentRoot.querySelectorAll('.user-note .del-note').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      btn.closest('.user-note').remove();
+      markDirty();
+    });
+  });
+
+  contentRoot.querySelectorAll('.spacing-tracker input[type="checkbox"]').forEach(function(cb) {
+    cb.addEventListener('change', function() {
+      if (cb.checked) { cb.setAttribute('checked', 'checked'); }
+      else { cb.removeAttribute('checked'); }
+      markDirty();
+    });
+  });
+})();
+</script>
+</body>
+</html>
