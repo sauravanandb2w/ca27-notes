@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class 18(27) — AFSPA &amp; Corporate Social Responsibility</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: #faf9f6;
+    color: #1f2328;
+    margin: 0;
+    padding: 0 0 80px;
+    line-height: 1.6;
+  }
+  .toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: #ffffff;
+    border-bottom: 2px solid #1d5b8b;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: Arial, sans-serif;
+    flex-wrap: wrap;
+  }
+  .toolbar button {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    padding: 7px 14px;
+    border-radius: 6px;
+    border: 1px solid #d8d2c6;
+    background: #fff;
+    cursor: pointer;
+    color: #1f2328;
+  }
+  .toolbar button:hover { background: #e6f1fb; border-color: #1d5b8b; }
+  .toolbar button.active { background: #1d5b8b; color: #fff; border-color: #1d5b8b; }
+  .toolbar .save-btn { background: #2f6b4f; color: #fff; border-color: #2f6b4f; margin-left: auto; }
+  .toolbar .save-btn:hover { background: #24543e; }
+  .toolbar .status { font-size: 12px; color: #57606a; margin-left: auto; padding-right: 8px; }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 30px 20px; }
+  header { border-bottom: 3px solid #1d5b8b; padding-bottom: 20px; margin-bottom: 30px; }
+  header h1 { font-size: 1.6em; margin: 0 0 6px; color: #1d5b8b; }
+  header .meta { color: #57606a; font-size: 0.95em; font-family: Arial, sans-serif; }
+  section { margin-bottom: 42px; }
+  h2 { font-size: 1.4em; color: #1d5b8b; border-left: 4px solid #1d5b8b; padding-left: 12px; margin-bottom: 14px; }
+  h3 { font-size: 1.12em; margin: 22px 0 8px; }
+  p { margin: 10px 0; }
+  .summary-box { background: #e6f1fb; border-radius: 8px; padding: 18px 22px; font-size: 0.98em; }
+  ul, ol.answers { padding-left: 24px; }
+  li { margin-bottom: 6px; }
+  .timestamp { font-family: 'Courier New', monospace; font-size: 0.78em; color: #57606a; background: #e2ddd4; border-radius: 4px; padding: 1px 6px; margin-right: 6px; }
+  .quote-card { background: #fff; border: 1px solid #e2ddd4; border-left: 4px solid #1d5b8b; border-radius: 6px; padding: 14px 18px; margin: 14px 0; }
+  .quote-card .q { font-style: italic; font-size: 1.05em; }
+  .quote-card .attrib { font-family: Arial, sans-serif; font-size: 0.85em; color: #57606a; margin-top: 6px; }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.95em; background: #fff; }
+  th, td { border: 1px solid #e2ddd4; padding: 8px 12px; text-align: left; vertical-align: top; }
+  th { background: #e6f1fb; font-family: Arial, sans-serif; font-size: 0.88em; }
+  .gap-box { background: #eef4f0; border: 1px solid #cfe3d6; border-radius: 8px; padding: 16px 20px; margin-top: 16px; font-size: 0.95em; }
+  .gap-box h4 { margin: 0 0 8px; color: #2f6b4f; font-family: Arial, sans-serif; font-size: 0.95em; }
+  .exam-tip { background: #fff7e6; border: 1px solid #f0dba8; border-radius: 8px; padding: 14px 20px; margin: 14px 0; font-size: 0.95em; }
+  .exam-tip::before { content: "Exam strategy: "; font-weight: bold; font-family: Arial, sans-serif; }
+  .term-box { background: #fdf3f3; border: 1px solid #ecd4d4; border-radius: 8px; padding: 12px 16px; margin: 10px 0; }
+  .term-box strong { color: #8b3a3a; }
+  .data-box { background: #f3f0fb; border: 1px solid #ddd6f0; border-radius: 8px; padding: 12px 16px; margin: 10px 0; font-family: 'Courier New', monospace; font-size: 0.9em; }
+  footer { margin-top: 60px; border-top: 1px solid #e2ddd4; padding-top: 16px; color: #57606a; font-size: 0.82em; font-family: Arial, sans-serif; }
+  .toc {
+    background: #fff;
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    padding: 16px 22px;
+    margin-bottom: 36px;
+    font-family: Arial, sans-serif;
+    font-size: 0.9em;
+  }
+  .toc h2 { font-size: 1em; margin: 0 0 10px; border: none; padding: 0; color: #1d5b8b; text-transform: uppercase; letter-spacing: 0.04em; }
+  .toc ol { columns: 2; margin: 0; padding-left: 20px; }
+  .toc a { color: #1f2328; text-decoration: none; }
+  .toc a:hover { color: #1d5b8b; text-decoration: underline; }
+  details.collapse-section {
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    background: #fff;
+    margin: 14px 0;
+    padding: 0;
+  }
+  details.collapse-section summary {
+    cursor: pointer;
+    padding: 12px 16px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 0.92em;
+    color: #1d5b8b;
+    list-style: none;
+  }
+  details.collapse-section summary::-webkit-details-marker { display: none; }
+  details.collapse-section summary::before { content: "▸ "; }
+  details.collapse-section[open] summary::before { content: "▾ "; }
+  details.collapse-section .collapse-body { padding: 4px 16px 16px; }
+  .glossary-term {
+    display: flex;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+  }
+  .glossary-term:last-child { border-bottom: none; }
+  .glossary-term dt { font-weight: bold; color: #8b3a3a; min-width: 220px; flex-shrink: 0; font-family: Arial, sans-serif; font-size: 0.9em; }
+  .glossary-term dd { margin: 0; }
+
+  mark.user-highlight { background: #fff176; padding: 1px 2px; border-radius: 2px; }
+  u.user-underline { text-decoration: underline; text-decoration-color: #1d5b8b; text-decoration-thickness: 2px; }
+  .user-note {
+    background: #e6f1fb;
+    border: 1px solid #85b7eb;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin: 8px 0;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #0c447c;
+    position: relative;
+  }
+  .user-note .note-label { font-weight: bold; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; display: block; }
+  .user-note .del-note { position: absolute; top: 6px; right: 8px; cursor: pointer; border: none; background: none; color: #0c447c; font-size: 14px; font-family: Arial, sans-serif; }
+  #note-input-box {
+    position: fixed;
+    display: none;
+    background: #fff;
+    border: 2px solid #1d5b8b;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    z-index: 100;
+    font-family: Arial, sans-serif;
+  }
+  #note-input-box textarea { width: 240px; height: 60px; font-family: Arial, sans-serif; font-size: 13px; border: 1px solid #d8d2c6; border-radius: 4px; padding: 6px; }
+  #note-input-box .note-actions { margin-top: 6px; display: flex; gap: 6px; justify-content: flex-end; }
+  #note-input-box button { font-size: 12px; padding: 5px 10px; border-radius: 4px; border: 1px solid #d8d2c6; background: #fff; cursor: pointer; }
+  #note-input-box button.primary { background: #1d5b8b; color: #fff; border-color: #1d5b8b; }
+  .content-target::selection { background: #ffe082; }
+  .board-caption { font-family: Arial, sans-serif; font-size: 0.82em; color: #57606a; margin-top: -8px; margin-bottom: 14px; }
+  .arcs-box {
+    background: #fff;
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 14px 0;
+  }
+  .arcs-box h4 { margin: 0 0 10px; color: #1d5b8b; font-family: Arial, sans-serif; font-size: 0.98em; }
+  .recall-q { margin-bottom: 14px; }
+  .recall-q p.q-text { font-weight: bold; margin: 0 0 6px; }
+  .recall-q details { border: none; margin: 0; }
+  .recall-q summary { font-family: Arial, sans-serif; font-size: 0.82em; color: #1d5b8b; cursor: pointer; list-style: none; padding: 2px 0; }
+  .recall-q summary::-webkit-details-marker { display: none; }
+  .recall-q summary::before { content: "Show answer \25B8 "; }
+  .recall-q details[open] summary::before { content: "Hide answer \25BE "; }
+  .recall-q .ans { background: #eef4f0; border-radius: 6px; padding: 8px 12px; margin-top: 6px; font-size: 0.95em; }
+  .spacing-tracker { font-family: Arial, sans-serif; font-size: 0.92em; }
+  .spacing-tracker table { margin: 8px 0; }
+  .spacing-tracker input[type="checkbox"] { width: 16px; height: 16px; cursor: pointer; }
+  .mnemonic-box { background: #fff7e6; border: 1px solid #f0dba8; border-radius: 8px; padding: 14px 18px; margin: 10px 0; }
+  .mnemonic-box h4 { margin: 0 0 6px; color: #8b5a1d; font-family: Arial, sans-serif; font-size: 0.92em; }
+  .applic-table td.gs-tag { font-family: Arial, sans-serif; font-weight: bold; font-size: 0.85em; white-space: nowrap; }
+  .applic-table .prelims-badge, .applic-table .mains-badge {
+    display: inline-block; font-family: Arial, sans-serif; font-size: 0.72em; font-weight: bold;
+    padding: 2px 8px; border-radius: 10px; margin-right: 4px;
+  }
+  .prelims-badge { background: #eaf3de; color: #3b6d11; }
+  .mains-badge { background: #e6f1fb; color: #1d5b8b; }
+  #fallback-help {
+    position: fixed;
+    display: none;
+    top: 60px;
+    right: 20px;
+    max-width: 320px;
+    background: #fff;
+    border: 2px solid #993c1d;
+    border-radius: 8px;
+    padding: 14px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    z-index: 200;
+  }
+  .mcq-card { background: #fff; border: 1px solid #e2ddd4; border-left: 4px solid #1d5b8b; border-radius: 8px; padding: 16px 20px; margin: 14px 0; }
+  .mcq-card .q-num { font-family: Arial, sans-serif; font-weight: bold; color: #1d5b8b; font-size: 0.82em; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 6px; }
+  .mcq-card .q-text { font-weight: bold; margin-bottom: 10px; }
+  .mcq-card .options { display: flex; flex-direction: column; gap: 6px; margin-bottom: 10px; }
+  .mcq-card .option { font-family: Arial, sans-serif; font-size: 0.92em; padding: 6px 10px; border-radius: 6px; background: #faf9f6; border: 1px solid #e2ddd4; }
+  .mcq-card .option.correct { background: #eaf3de; border-color: #b9d79a; color: #3b6d11; font-weight: bold; }
+  .mcq-card .answer-box { font-family: Arial, sans-serif; font-size: 0.88em; background: #eef4f0; border-radius: 6px; padding: 8px 12px; }
+  .mcq-card .answer-label { font-weight: bold; color: #2f6b4f; }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <button id="btn-highlight" title="Select text, then click to highlight it">Highlight</button>
+  <button id="btn-underline" title="Select text, then click to underline it">Underline</button>
+  <button id="btn-note" title="Click this, then click anywhere in the notes to drop a note">Add note</button>
+  <button id="btn-clear" title="Remove all your highlights, underlines, and notes">Clear my edits</button>
+  <span class="status" id="status-text">Not connected to file — click Save once to connect</span>
+  <button class="save-btn" id="btn-save">Save</button>
+</div>
+
+<div id="fallback-help">
+  <strong>Your browser can't save directly</strong>
+  <p style="margin:6px 0;">File System Access isn't supported here (common on Safari/Firefox). Use Chrome or Edge to enable direct-save, or use your browser's Save Page As (Ctrl/Cmd+S) to overwrite this file manually after editing.</p>
+  <button id="fallback-close" style="font-size: 12px; padding: 6px 12px; border-radius: 4px; border: 1px solid #993c1d; background: #993c1d; color: #fff; cursor: pointer;">Got it</button>
+</div>
+
+<div id="note-input-box">
+  <textarea id="note-text" placeholder="Type your note..."></textarea>
+  <div class="note-actions">
+    <button id="note-cancel">Cancel</button>
+    <button class="primary" id="note-add">Add</button>
+  </div>
+</div>
+
+<div class="wrap content-target" id="content-root">
+
+<header>
+  <h1>Class 18(27) — AFSPA: Security vs. Constitutional Guarantees (Northeast roll-back &amp; reimposition) · Corporate Social Responsibility &amp; Development Financing</h1>
+  <div class="meta">
+    <span>Source: unlisted YouTube lecture recording ("18", CAVA2027)</span> &middot;
+    <span>Substantive content: 0:00 – ~1:26:15 (upload runs 1h26m15s)</span> &middot;
+    <span>Track: UPSC GS-2 (Polity — fundamental rights, Union–state relations; Governance — CSR and social sector) / GS-3 (Internal security; economy — development finance) — Current Affairs with two live Mains questions</span>
+  </div>
+</header>
+
+<div class="gap-box">
+  <h4>Two topics in this class</h4>
+  <p><strong>Part A (0:00–~44:00):</strong> the Armed Forces (Special Powers) Act, 1958 (AFSPA) — concepts, provisions, significance, concerns, judgments, committees, way forward, and the Northeast roll-back/reimposition question. <strong>Part B (~44:00–end):</strong> Corporate Social Responsibility (CSR) and development financing.</p>
+  <p><strong>Continuity:</strong> the lecture reuses the Class 9/10 "negative vs. positive peace" idea (see Part A) and the "conflict transformation" framework from Class 17. Nothing depends on Classes 14–15.</p>
+  <p><strong>Deferred items:</strong> the lecture ends Part B with the statement that the CSR rules are fresh; no new deferral is mentioned. The PM-AASHA and "exchange entitlement decline" deferrals from earlier classes are not mentioned here.</p>
+</div>
+
+<nav class="toc">
+  <h2>Contents</h2>
+  <ol>
+    <li><a href="#applicability">Applicability — GS papers, Prelims &amp; Mains</a></li>
+    <li><a href="#partA">Part A — AFSPA</a></li>
+    <li><a href="#part1">1. Introduction &amp; context (1 Oct 2026 extension)</a></li>
+    <li><a href="#part2">2. Concepts — state of exception (Agamben); negative vs. positive peace (Galtung); security federalism; concentric circles of security</a></li>
+    <li><a href="#part3">3. Key provisions — disturbed areas (s.3), powers (s.4), protection (s.6), Art. 355 and Entry 2A</a></li>
+    <li><a href="#part4">4. Significance and concerns</a></li>
+    <li><a href="#part5">5. Judgments, committees, way forward</a></li>
+    <li><a href="#part6">6. Roll-backs and reimposition in the Northeast</a></li>
+    <li><a href="#part7">7. Live answer-writing — perpetual conflict between security and constitutional guarantees</a></li>
+    <li><a href="#partB">Part B — CSR &amp; development financing</a></li>
+    <li><a href="#part8">8. Introduction, context and definition</a></li>
+    <li><a href="#part9">9. Thinkers: Friedman, Freeman, Carroll, Elkington, Gandhi; California consensus</a></li>
+    <li><a href="#part10">10. Constitutional and legal framework — Arts. 38, 39(b)–(c); s.135, Companies Act 2013; Schedule VII</a></li>
+    <li><a href="#part11">11. Data, evolution in phases, significance</a></li>
+    <li><a href="#part12">12. Challenges, social stock exchange, way forward</a></li>
+    <li><a href="#part13">13. Live answer-writing — efficiency of mandated CSR</a></li>
+    <li><a href="#mcqs">Prelims trap MCQs</a></li>
+    <li><a href="#glossary">Glossary — quick revision</a></li>
+    <li><a href="#arcs">Revision kit (ARCS)</a></li>
+    <li><a href="#gaps">Supplementary research &amp; verification</a></li>
+  </ol>
+</nav>
+
+<section id="summary">
+  <h2>Executive summary</h2>
+  <div class="summary-box">
+  <ul>
+    <li><strong>Part A — AFSPA:</strong> an extraordinary law (1958) that lets the armed forces in "disturbed areas" use lethal force and arrest/search without warrant, and requires prior sanction for prosecution. The Centre extended it for six months from 1 Oct 2026 in parts of Manipur, Nagaland and Arunachal Pradesh. The lecture argues it secures only <em>negative peace</em>, and that it fuels alienation and fragile gains; the Supreme Court upheld it but laid down safeguards, and committees have urged repeal.</li>
+    <li><strong>Part B — CSR:</strong> CSR sits at the intersection of market capital, corporate governance and state-led social policy. India's s.135 (Companies Act 2013) mandates 2% of average net profit for qualifying companies. Spending reached a record ~₹40,000+ crore in FY25, but it is concentrated (education ~34%, health ~21%, environment 7–9%), flows mostly to a few states, and raises debates on crowding out and "closed loop" foundations. The social stock exchange (SSE) is a proposed alternative.</li>
+  </ul>
+  <p style="font-family: Arial, sans-serif; font-size: 0.88em; color: #57606a;">Instructor's meta-advice: for "debate" questions, frame two debates (voluntary vs. mandatory; mandatory vs. SSE) and say which is more efficient. Use the data, and do not spend the answer on definitions alone. Revise concepts regularly — the lecturer warned that unrevised concepts (e.g., Agamben) are hard to recall in exam conditions.</p>
+  </div>
+</section>
+
+<section id="applicability">
+  <h2>Applicability — GS papers, Prelims &amp; Mains</h2>
+  <table class="applic-table">
+    <tr><th>Sub-topic</th><th>GS Paper</th><th>Prelims</th><th>Mains</th></tr>
+    <tr><td class="gs-tag">AFSPA; disturbed areas; Northeast roll-backs</td><td>GS-2 (Fundamental rights, Union–state relations) / GS-3 (Internal security)</td><td><span class="prelims-badge">High</span>AFSPA s.3 (disturbed area), s.4 (powers), s.6 (prior sanction); Art. 355; Entry 2A, Union List (42nd Amendment); Assam, Manipur, Nagaland, Arunachal Pradesh.</td><td><span class="mains-badge">High</span>Security vs. rights; negative vs. positive peace; alienation and fragility of security gains.</td></tr>
+    <tr><td class="gs-tag">CSR; s.135 Companies Act; SSE</td><td>GS-2 (Governance) / GS-3 (Inclusive growth, development finance)</td><td><span class="prelims-badge">High</span>s.135 thresholds (₹500 cr net worth / ₹1,000 cr turnover / ₹5 cr net profit); 2% of average net profit (3 years); Schedule VII; social stock exchange (SSE) zero-coupon zero-principal bonds (up to 10% of CSR funds).</td><td><span class="mains-badge">High</span>Mandated CSR as tax vs. responsibility; crowding out; regional disparity; efficiency debate.</td></tr>
+  </table>
+</section>
+
+<section id="partA">
+  <h2>Part A — AFSPA</h2>
+</section>
+
+<section id="part1">
+  <h2>1. Introduction &amp; context</h2>
+  <p><span class="timestamp">0:00</span>Planned structure: introduction, concepts, key provisions, significance, concerns, judgments, committees, way forward.</p>
+  <ul>
+    <li><strong>Introduction:</strong> the Armed Forces (Special Powers) Act, 1958 grants special powers and legal protection to armed forces operating in areas notified as "disturbed". The lecturer's advice: for an introduction, state the option (what the law is) first, then the context.</li>
+    <li><strong>Context:</strong> on <strong>1 October 2026</strong>, the Centre extended AFSPA for six months in parts of <strong>Manipur, Nagaland and Arunachal Pradesh</strong>. Sources say the Gazette orders were published on 25 Sep 2026, effective 1 Oct (see verification).</li>
+  </ul>
+</section>
+
+<section id="part2">
+  <h2>2. Concepts</h2>
+  <h3>State of exception (Giorgio Agamben)</h3>
+  <ul>
+    <li>In response to a perceived emergency, the state suspends normal law ("the law suspends itself"). The measure is meant to be temporary, but it can become prolonged.</li>
+    <li>Those excluded from protection are <em>homo sacer</em> — no protection, and no one is punished for harming them. Their condition is <em>bare life</em>. Scholars apply this to AFSPA areas.</li>
+  </ul>
+  <h3>Negative vs. positive peace (Johan Galtung)</h3>
+  <div class="term-box">
+    <strong>Negative peace</strong> = absence of violence. Extraordinary laws like AFSPA can produce it — but it falls apart once the law is lifted.<br>
+    <strong>Positive peace</strong> = presence of justice, fairness, trusted institutions and resolved structural causes. Links to Lederach's conflict transformation (personal, relational, structural, cultural) from Class 17.
+  </div>
+  <h3>Security federalism</h3>
+  <ul>
+    <li><strong>Police and public order</strong> are State subjects: local police are closer to people and accountable to elected governments.</li>
+    <li><strong>Concentric circles of security</strong> (Supreme Court): the response should escalate with the threat. A law-and-order problem needs little action; an organised, inter-state insurgency needs central authority.</li>
+    <li>The tension: national-security priorities can produce a <strong>democratic deficit</strong> by affecting the right to life and personal liberty.</li>
+  </ul>
+</section>
+
+<section id="part3">
+  <h2>3. Key provisions</h2>
+  <table>
+    <tr><th>Section</th><th>What it does</th></tr>
+    <tr><td><strong>s.3</strong></td><td>The Centre <em>or</em> the State may declare an area "disturbed" where there are severe security concerns.</td></tr>
+    <tr><td><strong>s.4</strong></td><td>Operational powers for the armed forces: use lethal force (even causing death), arrest without warrant, enter and search without warrant.</td></tr>
+    <tr><td><strong>s.5</strong></td><td>Arrested persons must be handed to the nearest police station "with the least possible delay" (no fixed 24 hours, unlike the ordinary CrPC/BNSS rule).</td></tr>
+    <tr><td><strong>s.6</strong></td><td>Protection: no prosecution or suit against personnel without prior sanction of the Central Government.</td></tr>
+  </table>
+  <h3>Constitutional links</h3>
+  <ul>
+    <li><strong>Entry 2A, Union List</strong> (inserted by the 42nd Amendment, 1976): the Union may deploy armed forces in aid of the state.</li>
+    <li><strong>Art. 355</strong>: the Union's duty to protect states against internal disturbance.</li>
+  </ul>
+</section>
+
+<section id="part4">
+  <h2>4. Significance and concerns</h2>
+  <h3>Significance</h3>
+  <ul>
+    <li>Constitutional basis: Entry 2A and Art. 355 make it the Union's responsibility to act in internal disturbance.</li>
+    <li>Specialised, trained and unbiased force for severe security situations, which local police cannot handle.</li>
+    <li>Insulation from frivolous or politically motivated prosecutions through prior sanction.</li>
+    <li><strong>Calibrated security instrument:</strong> it can be expanded or contracted as the situation changes (the Supreme Court has laid down guidelines for use).</li>
+  </ul>
+  <h3>Concerns</h3>
+  <ol class="answers">
+    <li><strong>Wide powers:</strong> lethal force and warrantless arrest. Human-rights groups call the law "draconian" and incompatible with modern human-rights standards.</li>
+    <li><strong>Immunity barrier (s.6):</strong> prior sanction is rarely granted, which limits victims' access to justice.</li>
+    <li><strong>Alienation:</strong> the combination of bare life and immunity breeds grievance. In a "strong societies, weak states" setting, people turn to alternative providers of security, including radical groups (see Class 17).</li>
+    <li><strong>Fragility of gains:</strong> the gains produced are negative peace. Manipur's 2023 violence — after AFSPA was revoked in the valley — is cited as an example of how quickly security can collapse.</li>
+    <li><strong>Ethnic security dilemma</strong> (Northeast): when the state cannot protect groups, each group arms itself to protect itself, and others respond in turn — an arms-race logic.</li>
+    <li><strong>Intergovernmental disagreement:</strong> either the Centre or the State can declare an area disturbed, so they can take conflicting positions (as in Manipur).</li>
+  </ol>
+</section>
+
+<section id="part5">
+  <h2>5. Judgments, committees, way forward</h2>
+  <h3>Judgments</h3>
+  <ul>
+    <li><strong>Naga People's Movement for Human Rights v. Union of India (1997/1998):</strong> the Supreme Court upheld AFSPA's validity but laid down safeguards — the declaration must be reviewed (at least every six months), and the power must be used within limits. The lecture quotes the six-month review as one of the guidelines <span class="prelims-badge">PT</span>.</li>
+    <li><strong>Extra-Judicial Execution Victim Families Association v. Union of India (2016):</strong> security personnel do not enjoy <em>absolute</em> immunity; there is "no licence to kill".</li>
+  </ul>
+  <h3>Committees</h3>
+  <ul>
+    <li><strong>Justice Jeevan Reddy Committee (2005):</strong> recommended repealing AFSPA, calling it a "symbol of oppression". The Second ARC endorsed the recommendation.</li>
+    <li><strong>Justice J.S. Verma Committee (2013):</strong> recommended removing offences against women from the immunity under s.6.</li>
+  </ul>
+  <h3>Way forward (lecture)</h3>
+  <ol class="answers">
+    <li><strong>Conditions, not the calendar:</strong> withdraw the law based on conditions (normalcy, stability, peace prospects), not six-month extensions.</li>
+    <li><strong>Build police capacity</strong> so the army is the last option, not the first.</li>
+    <li><strong>Mandatory periodic judicial review</strong> of disturbed-area notifications.</li>
+    <li><strong>Conflict transformation</strong> (personal, relational, structural, cultural) alongside security measures.</li>
+  </ol>
+</section>
+
+<section id="part6">
+  <h2>6. Roll-backs and reimposition in the Northeast</h2>
+  <ul>
+    <li><strong>Meghalaya, Tripura:</strong> AFSPA was revoked after the security environment improved and civilian normalisation progressed (public trust and police capacity). The factors that decide revocation:
+      <ol class="answers">
+        <li>Overall security environment (is there active conflict?);</li>
+        <li>Civilian normalisation and public trust;</li>
+        <li>Progress in peace negotiations (e.g., with Naga groups, revocation is not possible until an accord is reached);</li>
+        <li>Trans-boundary and cross-border insurgent corridors, which need central coordination (e.g., Arunachal).</li>
+      </ol></li>
+    <li><strong>Nagaland:</strong> remains under AFSPA in many districts because the peace settlement is incomplete.</li>
+    <li><strong>Manipur:</strong> reimposition is linked to ethnic conflict and the failure to make peace progress.</li>
+    <li><strong>Arunachal Pradesh:</strong> extended in Tirap, Changlang and Longding (and parts of Namsai) — the reason given is trans-boundary security risk.</li>
+  </ul>
+  <div class="exam-tip">For map questions, draw Assam first and then mark Arunachal, Nagaland, Manipur, Mizoram, Tripura and Meghalaya around it.</div>
+</section>
+
+<section id="part7">
+  <h2>7. Live answer-writing — perpetual conflict between security and constitutional guarantees</h2>
+  <div class="quote-card"><strong>Q.</strong> "AFSPA embodies a perpetual conflict between state security imperatives and constitutional guarantees." Examine the statement in light of the roll-backs and reimposition of AFSPA in north-eastern India. <span class="attrib">— set in class</span></div>
+  <ol class="answers">
+    <li><strong>Intro:</strong> state the option (AFSPA is an extraordinary law for disturbed areas), then the context (the 1 Oct 2026 extension).</li>
+    <li><strong>Flowchart</strong> of the provisions if helpful.</li>
+    <li><strong>The conflict:</strong> state-centric (security imperatives, Art. 355, Entry 2A) vs. citizen-centric (rule of law, Art. 21, human-rights violations).</li>
+    <li><strong>Roll-backs and reimposition:</strong> Meghalaya, Tripura (revoked); Nagaland (continued because peace is incomplete); Manipur (reimposed, ethnic conflict); Arunachal (trans-boundary risk).</li>
+    <li><strong>Way forward:</strong> Supreme Court's guidelines, committee recommendations, conditions-based withdrawal, police capacity, periodic review.</li>
+    <li><strong>Conclusion:</strong> negative vs. positive peace.</li>
+  </ol>
+</section>
+
+<section id="partB">
+  <h2>Part B — CSR &amp; development financing</h2>
+</section>
+
+<section id="part8">
+  <h2>8. Introduction, context and definition</h2>
+  <p><span class="timestamp">44:00</span>Planned structure: introduction, context, terms and concepts, constitutional and legal framework (s.135, Companies Act 2013), data, evolution in phases, significance, challenges, Supreme Court views, case studies, way forward. The lecturer says a question from this area is likely in the next exam.</p>
+  <ul>
+    <li><strong>Introduction:</strong> CSR and development financing sits at the intersection of <strong>market capital</strong> (money comes from business), <strong>corporate governance</strong> (how it is managed — mandated by law, handled by corporate committees) and <strong>state-led social policy</strong> (the government defines permitted areas).</li>
+    <li><strong>Context:</strong> CSR spending hit a record <strong>~₹40,794 crore in FY 2024–25</strong> (up ~17%), from roughly 30,000 companies to ~72,000 projects (sources differ — see verification).</li>
+    <li><strong>Context — social stock exchange:</strong> SEBI allowed companies to invest up to <strong>10% of CSR funds</strong> in SSE zero-coupon zero-principal bonds issued by non-profits.</li>
+  </ul>
+  <h3>Definition</h3>
+  <div class="term-box">CSR is the social activity undertaken by companies to bring about a positive change in the society and environment in which they operate. It has two dimensions: <strong>how a company earns</strong> (ethically and responsibly) and <strong>how it spends</strong> part of its profit (giving back).</div>
+</section>
+
+<section id="part9">
+  <h2>9. Thinkers: Friedman, Freeman, Carroll, Elkington, Gandhi; California consensus</h2>
+  <table>
+    <tr><th>Thinker</th><th>Idea</th></tr>
+    <tr><td><strong>Milton Friedman</strong></td><td>"The business of business is business." The only social responsibility of business is to increase profits for shareholders, within the rules of the game.</td></tr>
+    <tr><td><strong>R. Edward Freeman</strong></td><td><strong>Stakeholder theory:</strong> firms must serve all stakeholders — anyone affected by the business, including society and the environment, not only shareholders. (Do not confuse Friedman and Freeman.)</td></tr>
+    <tr><td><strong>Archie Carroll</strong></td><td><strong>CSR pyramid</strong> — four layers, not a hierarchy: economic (be profitable; the foundation), legal (obey the law), ethical (do what is just and fair; expected by society), philanthropic (give back; desired by society).</td></tr>
+    <tr><td><strong>John Elkington</strong></td><td><strong>Triple bottom line</strong> — the three Ps: <em>profit</em> (economic), <em>people</em> (social), <em>planet</em> (environmental). Success is measured on all three.</td></tr>
+    <tr><td><strong>Gandhi</strong></td><td><strong>Trusteeship</strong> — wealth is held in trust for society.</td></tr>
+  </table>
+  <h3>California consensus</h3>
+  <ul>
+    <li>An emerging, technocratic philanthropy model led by tech billionaires and new-age donors (the lecture's example: Silicon Valley).</li>
+    <li><strong>Traditional model:</strong> patient, long-term commitment to institution-building (schools, hospitals, trusts; India's trusteeship tradition).</li>
+    <li><strong>California consensus:</strong> rapid, technology-driven change; scalability; a fixation on measurable numbers. Concern: this can distract from things that are hard to measure but socially valuable.</li>
+  </ul>
+</section>
+
+<section id="part10">
+  <h2>10. Constitutional and legal framework</h2>
+  <h3>Constitution</h3>
+  <ul>
+    <li><strong>Art. 38:</strong> the state secures a social order for the promotion of the welfare of the people.</li>
+    <li><strong>Art. 39(b):</strong> ownership and control of material resources distributed to serve the common good.</li>
+    <li><strong>Art. 39(c):</strong> prevent the concentration of wealth.</li>
+  </ul>
+  <h3>Legal framework — s.135, Companies Act 2013</h3>
+  <table>
+    <tr><th>Element</th><th>Provision (as presented)</th></tr>
+    <tr><td>Applicability</td><td>Companies with net worth ≥ ₹500 crore, or turnover ≥ ₹1,000 crore, or net profit ≥ ₹5 crore <span class="prelims-badge">PT</span>.</td></tr>
+    <tr><td>Obligation</td><td>Spend <strong>2% of the average net profit</strong> of the preceding three financial years on CSR.</td></tr>
+    <tr><td>Governance</td><td>Board-constituted CSR Committee to implement the policy.</td></tr>
+    <tr><td>Permitted activities</td><td>Schedule VII of the Companies Act — poverty eradication, education, health, environmental sustainability, rural development, etc. <span class="prelims-badge">PT</span>.</td></tr>
+    <tr><td>Penalties</td><td>Fines for unspent CSR money; the earlier jail term was decriminalised.</td></tr>
+  </table>
+  <p>Previously CSR was voluntary; s.135 made it mandatory for qualifying companies.</p>
+</section>
+
+<section id="part11">
+  <h2>11. Data, evolution in phases, significance</h2>
+  <h3>Data (FY 2024–25, reported)</h3>
+  <div class="data-box">
+    Total CSR spend: ~₹40,794 crore (record; ~17% year on year).<br>
+    Education: ~34% (about ₹13,877 crore). Health: ~21% (₹8,531 crore; lecture says 22%). Environment and sustainability: only ~7–9%. Rural development: ~10%.<br>
+    Geography: six or so industrialised states get ~60% of spending; Maharashtra is the largest recipient (₹8,631 crore). All eight north-eastern states combined received ~₹855 crore.<br>
+    Aspirational districts: a small share (the lecture says ~2.15% since 2014; CRISIL's data for listed companies gives 12% of CSR spend in a different base year — verify before citing).<br>
+    Per-capita: ~₹19 in aspirational districts vs. ~₹375 in Pune (lecture, from a study).
+  </div>
+  <h3>Evolution in phases</h3>
+  <ol class="answers">
+    <li><strong>Phase I — voluntary philanthropy (pre-1947 to the 1950s):</strong> business families set up charitable trusts (e.g., Tata, Birla trusts).</li>
+    <li><strong>Phase II — state-led model (1960s–2000s):</strong> the state led welfare; grants to NGOs and foreign aid for social infrastructure.</li>
+    <li><strong>Phase III — mandatory regime (post-2013):</strong> s.135, a 2% profit-sharing mandate.</li>
+    <li><strong>Phase IV — new models (present):</strong> blended finance, social stock exchange, social impact bonds; "constitutionalisation" of CSR through judicial pronouncements.</li>
+  </ol>
+  <h3>Significance</h3>
+  <ul>
+    <li><strong>Dependable, non-tax development finance</strong> that grows with profits.</li>
+    <li><strong>Social infrastructure:</strong> education (including remote areas), health clinics (important during COVID), environmental measures.</li>
+    <li><strong>Last-mile delivery</strong> through NGOs at the grassroots, supporting inclusive growth and positive peace (see Part A).</li>
+    <li><strong>De-risking investment</strong>: e.g., mangrove plantations protect coastal investments.</li>
+    <li><strong>Constitutional and judicial links:</strong> in <em>M.K. Ranjitsinh v. Union of India</em> (2021), the Supreme Court held CSR cannot be divorced from corporate environmental responsibility.</li>
+  </ul>
+</section>
+
+<section id="part12">
+  <h2>12. Challenges, social stock exchange, way forward</h2>
+  <h3>Challenges</h3>
+  <ol class="answers">
+    <li><strong>From responsibility to tax:</strong> a mandatory 2% contribution acts like a tax, but spending is less transparent and less efficient than a government tax-and-spend.</li>
+    <li><strong>Tax avoidance:</strong> companies have an incentive to show lower profits to reduce CSR liability.</li>
+    <li><strong>Crowding out</strong> (Shivam Rajapal's study, as cited in the lecture): mandates push out voluntary good behaviour — companies treat CSR as a statutory task, not a commitment.</li>
+    <li><strong>Closed-loop model:</strong> companies create foundations that fund projects benefiting the company itself.</li>
+    <li><strong>Humanistic bias:</strong> spending concentrates on health and education; environment and future-generation needs are underfunded.</li>
+    <li><strong>Regional disparity:</strong> industrialised states get most funds; aspirational districts get little.</li>
+    <li><strong>Activity-based compliance and greenwashing:</strong> "tick-the-box" tree planting with no verification.</li>
+    <li><strong>Political interference:</strong> pressure to fund favoured projects, creating patron–client relations between business and politics.</li>
+  </ol>
+  <h3>Social stock exchange (SSE) as a model</h3>
+  <ul>
+    <li>Companies invest in pre-verified projects listed on the exchange through zero-coupon, zero-principal bonds — no need for a company-owned foundation (prevents closed loops).</li>
+    <li>Independent verification by the SSE and the regulator.</li>
+    <li>Ready projects absorb CSR money, reducing <strong>idle or unspent CSR</strong>.</li>
+    <li><strong>Broad-based participation:</strong> any donor, not only profitable large companies, can contribute.</li>
+    <li>Non-profits in neglected areas can receive funds, which narrows the regional gap.</li>
+  </ul>
+  <h3>Way forward (lecture)</h3>
+  <ul>
+    <li><strong>Outcome-based, not activity-based,</strong> spending. Move from fragmented projects to <strong>collective intervention</strong> with other companies.</li>
+    <li><strong>Expertise, not just money:</strong> align CSR with each company's core competence.</li>
+    <li><strong>Government matching contributions</strong> to raise spending in low-CSR (last-mile) areas.</li>
+    <li><strong>National social return-on-investment (SROI) framework</strong> to measure the value per rupee.</li>
+    <li><strong>Mandatory diversity</strong> components (e.g., a share for gender equality or environment).</li>
+    <li><strong>Regional equalisation fund</strong> pooling CSR money for neglected states.</li>
+    <li><strong>Geo-tagged national database</strong> of CSR projects, with sector, amount, implementer and outcome.</li>
+  </ul>
+</section>
+
+<section id="part13">
+  <h2>13. Live answer-writing — efficiency of mandated CSR</h2>
+  <div class="quote-card"><strong>Q.</strong> "Mandating CSR transforms a voluntary activity into a tax." In light of this statement, debate the efficiency of mandated CSR. <span class="attrib">— set in class</span></div>
+  <ol class="answers">
+    <li><strong>Intro:</strong> data (FY25 record; ~30,000 companies; ~72,000 projects) and a one-line definition.</li>
+    <li><strong>Background:</strong> s.135 (2% of average net profit); Schedule VII.</li>
+    <li><strong>Debate 1 — voluntary vs. mandatory:</strong> voluntary model (long-term, trusteeship) vs. mandatory (dependable finance, education ~34%, health ~22%, Harali and palliative-care examples). Mandatory model is efficient in volume and reach.</li>
+    <li><strong>Debate 2 — mandatory vs. SSE:</strong> mandatory suffers from closed loops, idle money and regional skew; SSE offers verification and broad participation. SSE is more efficient but has challenges (new market, verification capacity).</li>
+    <li><strong>Way forward:</strong> outcome-based spending, geo-tagged database, SROI framework, regional equalisation.</li>
+    <li><strong>Conclusion:</strong> triple bottom line, stakeholder theory, or Carroll's pyramid.</li>
+  </ol>
+  <div class="exam-tip">The lecturer's comparison: a good answer with a debate structure earns about six marks; a definition-led answer about three. Name both debates explicitly.</div>
+</section>
+
+<section id="mcqs">
+  <h2>Prelims trap MCQs</h2>
+  <div class="mcq-card"><div class="q-num">Q1</div><div class="q-text">AFSPA empowers the armed forces to arrest without warrant in a "disturbed area". This power is provided under:</div><div class="options"><div class="option">(A) Section 6</div><div class="option correct">(B) Section 4</div><div class="option">(C) Section 3</div><div class="option">(D) Section 5</div></div><div class="answer-box"><span class="answer-label">Answer: (B).</span> s.3 declares; s.4 gives operational powers; s.6 gives prior-sanction protection.</div></div>
+  <div class="mcq-card"><div class="q-num">Q2</div><div class="q-text">Under AFSPA, prosecution of armed personnel requires:</div><div class="options"><div class="option">(A) Approval of the High Court</div><div class="option correct">(B) Prior sanction of the Central Government</div><div class="option">(C) Consent of the local MP</div><div class="option">(D) No sanction at all</div></div><div class="answer-box"><span class="answer-label">Answer: (B).</span> s.6.</div></div>
+  <div class="mcq-card"><div class="q-num">Q3</div><div class="q-text">Johan Galtung's "positive peace" is best described as:</div><div class="options"><div class="option">(A) Absence of violence</div><div class="option correct">(B) Presence of justice, fairness and trusted institutions</div><div class="option">(C) Military victory</div><div class="option">(D) Ceasefire agreement</div></div><div class="answer-box"><span class="answer-label">Answer: (B).</span> Negative peace = absence of violence.</div></div>
+  <div class="mcq-card"><div class="q-num">Q4</div><div class="q-text">Under s.135 of the Companies Act 2013, qualifying companies must spend:</div><div class="options"><div class="option">(A) 1% of average turnover</div><div class="option correct">(B) 2% of average net profit of the preceding three years</div><div class="option">(C) 5% of net worth</div><div class="option">(D) 10% of profit after tax</div></div><div class="answer-box"><span class="answer-label">Answer: (B).</span></div></div>
+  <div class="mcq-card"><div class="q-num">Q5</div><div class="q-text">Archie Carroll's CSR pyramid places which responsibility at the base?</div><div class="options"><div class="option correct">(A) Economic (be profitable)</div><div class="option">(B) Philanthropic</div><div class="option">(C) Ethical</div><div class="option">(D) Legal</div></div><div class="answer-box"><span class="answer-label">Answer: (A).</span> The pyramid is not hierarchical in importance, but economic responsibility is its foundation.</div></div>
+  <div class="mcq-card"><div class="q-num">Q6</div><div class="q-text">The "triple bottom line" (Elkington) comprises:</div><div class="options"><div class="option">(A) Profit, productivity, prosperity</div><div class="option correct">(B) Profit, people, planet</div><div class="option">(C) Price, product, place</div><div class="option">(D) Power, property, prestige</div></div><div class="answer-box"><span class="answer-label">Answer: (B).</span></div></div>
+</section>
+
+<section id="glossary">
+  <h2>Glossary — quick revision</h2>
+  <dl>
+    <div class="glossary-term"><dt>Disturbed area (AFSPA s.3)</dt><dd>Area declared by the Centre or a State where security conditions justify special powers.</dd></div>
+    <div class="glossary-term"><dt>Prior sanction (s.6)</dt><dd>Central Government approval needed before prosecuting armed personnel.</dd></div>
+    <div class="glossary-term"><dt>State of exception</dt><dd>Agamben: the law suspends itself in an emergency, often becoming prolonged.</dd></div>
+    <div class="glossary-term"><dt>Bare life</dt><dd>Life without legal protection (Agamben).</dd></div>
+    <div class="glossary-term"><dt>Negative vs. positive peace</dt><dd>Absence of violence vs. presence of justice (Galtung).</dd></div>
+    <div class="glossary-term"><dt>Ethnic security dilemma</dt><dd>Groups arm for self-protection when the state cannot protect them, triggering arms races.</dd></div>
+    <div class="glossary-term"><dt>Section 135</dt><dd>Companies Act 2013 — mandatory CSR (2% of average net profit).</dd></div>
+    <div class="glossary-term"><dt>Stakeholder theory</dt><dd>Freeman: firms serve all affected parties, not only shareholders.</dd></div>
+    <div class="glossary-term"><dt>Triple bottom line</dt><dd>Elkington: profit, people, planet.</dd></div>
+    <div class="glossary-term"><dt>California consensus</dt><dd>Tech-led, scalable, measurement-driven philanthropy.</dd></div>
+    <div class="glossary-term"><dt>Closed-loop CSR</dt><dd>Company-owned foundations funding projects that benefit the company.</dd></div>
+    <div class="glossary-term"><dt>Social stock exchange (SSE)</dt><dd>Platform for verified social projects; zero-coupon, zero-principal bonds.</dd></div>
+  </dl>
+</section>
+
+<section id="arcs">
+  <h2>Revision kit (ARCS method)</h2>
+  <div class="arcs-box">
+    <h4>A — Active Recall</h4>
+    <div class="recall-q"><p class="q-text">1. Name the four AFSPA provisions the lecture lists.</p><details><summary></summary><div class="ans">s.3 disturbed area; s.4 operational powers (lethal force, warrantless arrest and search); s.5 least possible delay to hand over arrestees; s.6 prior-sanction protection.</div></details></div>
+    <div class="recall-q"><p class="q-text">2. Give the four factors that decide whether AFSPA is revoked.</p><details><summary></summary><div class="ans">Security environment; civilian normalisation and public trust; progress of peace talks; trans-boundary insurgency.</div></details></div>
+    <div class="recall-q"><p class="q-text">3. Which committee recommended repeal of AFSPA in 2005?</p><details><summary></summary><div class="ans">Justice Jeevan Reddy Committee.</div></details></div>
+    <div class="recall-q"><p class="q-text">4. Name the four layers of Carroll's CSR pyramid.</p><details><summary></summary><div class="ans">Economic, legal, ethical, philanthropic.</div></details></div>
+    <div class="recall-q"><p class="q-text">5. What is the SSE's advantage over mandated CSR in the lecture?</p><details><summary></summary><div class="ans">Prevents closed loops; verified projects; reduces idle money; broad participation.</div></details></div>
+  </div>
+  <div class="arcs-box mnemonic-box">
+    <h4>S — Stick with Encoding Tricks</h4>
+    <p><strong>AFSPA provisions "3-4-5-6"</strong>: declare, power, arrest, protect.</p>
+    <p><strong>Triple bottom line "3 P"</strong>: Profit, People, Planet.</p>
+    <p><strong>Carroll's pyramid "E-L-E-P"</strong>: Economic, Legal, Ethical, Philanthropic.</p>
+  </div>
+</section>
+
+<section id="gaps">
+  <h2>Supplementary research &amp; verification</h2>
+  <div class="gap-box">
+    <h4>Verified via web search</h4>
+    <ul>
+      <li><strong>AFSPA extension:</strong> Gazette orders (reported 25 Sep 2026) extend AFSPA for six months from 1 Oct 2026 in Manipur (excluding 13 police-station jurisdictions in five districts), Nagaland (nine districts and 21 police stations) and Arunachal Pradesh (Tirap, Changlang, Longding and three Namsai police-station areas). The lecture says the notification was issued on 1 Oct; sources place the Gazette publication on 25 Sep, effective 1 Oct.</li>
+      <li><strong>CSR FY25:</strong> ₹40,794 crore, +17%, education ~34% (₹13,877 crore), health ~21% (₹8,531 crore); Maharashtra ₹8,631 crore; all eight NE states ~₹855 crore (Sattva / Fulcrum reports).</li>
+      <li><strong>Aspirational districts (CRISIL, listed companies, FY24):</strong> 12% of CSR spend (₹2,390 cr of ₹19,208 cr). The lecture's ~2.15% figure is from a different base and source; cite the source you use.</li>
+    </ul>
+    <h4>Lecture points not independently verified — cite cautiously</h4>
+    <ul>
+      <li>The Naga People's Movement case year (1997 judgment, reported 1998) and the six-month review guideline wording.</li>
+      <li>Justice Jeevan Reddy (2005) and Verma (2013) committee recommendations — widely cited; cross-check the text before quoting.</li>
+      <li>Shivam Rajapal's "crowding out" study — name as transcribed in captions; verify the author.</li>
+      <li>Per-capita CSR figures (₹19 aspirational vs. ₹375 Pune) — from a single study cited in class.</li>
+      <li>Tripura and Meghalaya revocation dates and the Manipur 2023 timeline — check before using as examples.</li>
+      <li>Friedman, Freeman, Carroll, Elkington and Gandhi attributions are standard; the lecturer's paraphrases should be checked against the originals.</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  Notes compiled from an unlisted lecture recording using YouTube's auto-generated transcript, plus web verification. MCQs are original. Click Save (first time will ask you to pick this file) to write your edits directly to disk.
+</footer>
+</div>
+
+<script>
+(function() {
+  var mode = null;
+  var noteCounter = 0;
+
+  var btnHighlight = document.getElementById('btn-highlight');
+  var btnUnderline = document.getElementById('btn-underline');
+  var btnNote = document.getElementById('btn-note');
+  var btnClear = document.getElementById('btn-clear');
+  var btnSave = document.getElementById('btn-save');
+  var statusText = document.getElementById('status-text');
+  var contentRoot = document.getElementById('content-root');
+  var noteBox = document.getElementById('note-input-box');
+  var noteText = document.getElementById('note-text');
+  var pendingNoteTarget = null;
+
+  function setMode(newMode) {
+    mode = mode === newMode ? null : newMode;
+    btnHighlight.classList.toggle('active', mode === 'highlight');
+    btnUnderline.classList.toggle('active', mode === 'underline');
+    btnNote.classList.toggle('active', mode === 'note');
+  }
+
+  btnHighlight.addEventListener('click', function() { setMode('highlight'); });
+  btnUnderline.addEventListener('click', function() { setMode('underline'); });
+  btnNote.addEventListener('click', function() { setMode('note'); });
+
+  function markDirty() {
+    statusText.textContent = 'Unsaved changes';
+    statusText.style.color = '#993c1d';
+  }
+
+  document.addEventListener('mouseup', function(e) {
+    if (mode !== 'highlight' && mode !== 'underline') return;
+    var sel = window.getSelection();
+    if (!sel || sel.isCollapsed || sel.rangeCount === 0) return;
+    var range = sel.getRangeAt(0);
+    if (!contentRoot.contains(range.commonAncestorContainer)) return;
+
+    var wrapper = document.createElement(mode === 'highlight' ? 'mark' : 'u');
+    wrapper.className = mode === 'highlight' ? 'user-highlight' : 'user-underline';
+    try {
+      range.surroundContents(wrapper);
+    } catch (err) {
+      var frag = range.extractContents();
+      wrapper.appendChild(frag);
+      range.insertNode(wrapper);
+    }
+    sel.removeAllRanges();
+    markDirty();
+  });
+
+  contentRoot.addEventListener('click', function(e) {
+    if (mode !== 'note') return;
+    if (e.target.closest('.user-note')) return;
+    pendingNoteTarget = e.target;
+    noteBox.style.display = 'block';
+    var x = Math.min(e.clientX, window.innerWidth - 280);
+    var y = Math.min(e.clientY, window.innerHeight - 140);
+    noteBox.style.left = x + 'px';
+    noteBox.style.top = y + 'px';
+    noteText.value = '';
+    noteText.focus();
+  });
+
+  document.getElementById('note-cancel').addEventListener('click', function() {
+    noteBox.style.display = 'none';
+    pendingNoteTarget = null;
+  });
+
+  document.getElementById('note-add').addEventListener('click', function() {
+    var text = noteText.value.trim();
+    if (!text || !pendingNoteTarget) { noteBox.style.display = 'none'; return; }
+    noteCounter++;
+    var noteDiv = document.createElement('div');
+    noteDiv.className = 'user-note';
+    noteDiv.setAttribute('data-note-id', noteCounter);
+    noteDiv.innerHTML = '<span class="note-label">Your note</span>' +
+      '<button class="del-note" title="Remove note">&times;</button>' +
+      '<span class="note-body"></span>';
+    noteDiv.querySelector('.note-body').textContent = text;
+    noteDiv.querySelector('.del-note').addEventListener('click', function() {
+      noteDiv.remove();
+      markDirty();
+    });
+
+    var target = pendingNoteTarget.closest('li, p, td, div.quote-card, section') || contentRoot;
+    target.parentNode.insertBefore(noteDiv, target.nextSibling);
+
+    noteBox.style.display = 'none';
+    pendingNoteTarget = null;
+    markDirty();
+    setMode('note');
+  });
+
+  btnClear.addEventListener('click', function() {
+    if (!confirm('Remove all your highlights, underlines, and notes on this page?')) return;
+    contentRoot.querySelectorAll('.user-note').forEach(function(n) { n.remove(); });
+    contentRoot.querySelectorAll('mark.user-highlight').forEach(function(m) {
+      var parent = m.parentNode;
+      while (m.firstChild) parent.insertBefore(m.firstChild, m);
+      parent.removeChild(m);
+    });
+    contentRoot.querySelectorAll('u.user-underline').forEach(function(u) {
+      var parent = u.parentNode;
+      while (u.firstChild) parent.insertBefore(u.firstChild, u);
+      parent.removeChild(u);
+    });
+    markDirty();
+  });
+
+  var fallbackHelp = document.getElementById('fallback-help');
+  document.getElementById('fallback-close').addEventListener('click', function() {
+    fallbackHelp.style.display = 'none';
+  });
+
+  var fileHandle = null;
+  var fsaSupported = 'showSaveFilePicker' in window;
+  var THIS_FILENAME = 'notes.html';
+
+  function buildFullHtml() {
+    var doc = document.documentElement.cloneNode(true);
+    var liveContentRoot = doc.querySelector('#content-root');
+    if (liveContentRoot) liveContentRoot.innerHTML = contentRoot.innerHTML;
+    return '<!DOCTYPE html>\n' + doc.outerHTML;
+  }
+
+  async function writeToFile() {
+    var writable = await fileHandle.createWritable();
+    await writable.write(buildFullHtml());
+    await writable.close();
+  }
+
+  btnSave.addEventListener('click', async function() {
+    statusText.textContent = 'Saving…';
+    statusText.style.color = '#57606a';
+    if (!fsaSupported) {
+      fallbackHelp.style.display = 'block';
+      statusText.textContent = 'Direct save not supported in this browser';
+      statusText.style.color = '#993c1d';
+      return;
+    }
+    try {
+      if (!fileHandle) {
+        fileHandle = await window.showSaveFilePicker({
+          suggestedName: THIS_FILENAME,
+          types: [{ description: 'HTML file', accept: { 'text/html': ['.html'] } }]
+        });
+      }
+      var perm = await fileHandle.queryPermission({ mode: 'readwrite' });
+      if (perm !== 'granted') {
+        perm = await fileHandle.requestPermission({ mode: 'readwrite' });
+      }
+      if (perm !== 'granted') {
+        statusText.textContent = 'File permission denied — click Save to retry';
+        statusText.style.color = '#993c1d';
+        fileHandle = null;
+        return;
+      }
+      await writeToFile();
+      statusText.textContent = 'Saved to file just now';
+      statusText.style.color = '#3b6d11';
+    } catch (err) {
+      console.error('SAVE_ERROR', err.name, err.message, err);
+      if (err.name === 'AbortError') {
+        statusText.textContent = 'Save cancelled';
+        statusText.style.color = '#57606a';
+      } else {
+        statusText.textContent = 'Save failed: ' + err.name + ' — click Save to retry';
+        statusText.style.color = '#993c1d';
+        fileHandle = null;
+      }
+    }
+  });
+
+  contentRoot.querySelectorAll('.user-note .del-note').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      btn.closest('.user-note').remove();
+      markDirty();
+    });
+  });
+
+  contentRoot.querySelectorAll('.spacing-tracker input[type="checkbox"]').forEach(function(cb) {
+    cb.addEventListener('change', function() {
+      if (cb.checked) { cb.setAttribute('checked', 'checked'); }
+      else { cb.removeAttribute('checked'); }
+      markDirty();
+    });
+  });
+})();
+</script>
+</body>
+</html>
