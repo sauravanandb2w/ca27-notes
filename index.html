@@ -169,6 +169,24 @@
   .tag-date { background: #f3f1ea; color: #57606a; font-weight: normal; text-transform: none; }
   .search-box { width: 100%; padding: 8px 12px; border: 1px solid #d8d2c6; border-radius: 8px; font-size: 14px; font-family: Arial, sans-serif; margin-bottom: 14px; }
   footer { margin-top: 60px; border-top: 1px solid #e2ddd4; padding-top: 16px; color: #57606a; font-size: 0.82em; font-family: Arial, sans-serif; }
+
+  /* ---- top-level teacher tabs ---- */
+  .teacher-tabs { display:flex; gap:10px; margin:0 0 22px; font-family: Arial, sans-serif; }
+  .teacher-tab { flex:1; padding:12px 18px; border-radius:10px 10px 0 0; border:2px solid; font-size:1.05em; font-weight:bold; cursor:pointer; text-align:center; }
+  .teacher-tab[data-tab="dipin"] { border-color:#2f2f6b; color:#2f2f6b; background:#eef0fb; }
+  .teacher-tab[data-tab="dipin"].active { background:#2f2f6b; color:#fff; }
+  .teacher-tab[data-tab="satvik"] { border-color:#0f766e; color:#0f766e; background:#e3f5f2; }
+  .teacher-tab[data-tab="satvik"].active { background:#0f766e; color:#fff; }
+  .teacher-tab small { display:block; font-weight:normal; font-size:.72em; opacity:.85; }
+  .tab-panel { display:none; }
+  .tab-panel.active { display:block; }
+  body.theme-satvik header { border-bottom-color:#0f766e; }
+  body.theme-satvik header h1, body.theme-satvik .class-no { color:#0f766e; }
+  body.theme-satvik .class-no, body.theme-satvik .stat-card { background:#e3f5f2; }
+  body.theme-satvik .stat-card .num { color:#0f766e; }
+  body.theme-satvik .filter-btn.active { background:#0f766e; border-color:#0f766e; }
+  body.theme-satvik .track-group > summary { background:#0f766e; }
+  body.theme-satvik .track-group { border-color:#b7e0da; }
 </style>
 </head>
 <body>
@@ -187,6 +205,11 @@
   <div class="meta">UPSC 2027 prep — all lecture notes, one place, updated as classes are added. &middot; <a href="data-points.html" style="color:#2f2f6b; font-weight:bold;">Lecture data points →</a> &middot; <a href="gs-datapoints.html" style="color:#2f2f6b; font-weight:bold;">GS1-4 data points (PIB/govt sources) →</a></div>
 </header>
 
+<div class="teacher-tabs" id="teacher-tabs">
+  <button class="teacher-tab active" data-tab="dipin">Dipin Sir<small>CA Mains 2026 · 2027 · Budget &amp; Survey</small></button>
+  <button class="teacher-tab" data-tab="satvik">Satvik Bhan<small>Current Affairs · own list</small></button>
+</div>
+
 <div class="stats">
   <div class="stat-card"><div class="num" id="stat-total">32</div><div class="label">Lectures logged</div></div>
   <div class="stat-card"><div class="num" id="stat-topics">0/0</div><div class="label">Topics done</div></div>
@@ -202,6 +225,7 @@
   <button class="filter-btn" data-filter="economy">Economy</button>
 </div>
 
+<div class="tab-panel active" id="panel-dipin" data-tab="dipin">
 <details class="track-group" data-track="2026" open>
   <summary><span class="track-name">CA Mains 2026 <small>(CAVA26)</small></span><span class="track-meta">12 classes &middot; <span class="prog"></span></span></summary>
   <div class="track-body">
@@ -599,22 +623,7 @@
   </div>
 </details>
 
-<details class="track-group" data-track="satvik" open>
-  <summary><span class="track-name">Satvik Bhan CA <small>(<a href="CA-Satvik-Bhan/index.html" style="color:inherit;">series index</a>)</small></span><span class="track-meta">1 class &middot; <span class="prog"></span></span></summary>
-  <div class="track-body">
-    <div class="lecture-card" data-subject="ca">
-      <span class="class-no" title="CA-Satvik-Bhan/2026-07-02_class01-mythos-cyber-security/">1</span>
-      <span class="lecture-title">
-        <a href="CA-Satvik-Bhan/2026-07-02_class01-mythos-cyber-security/notes.html">Mythos &amp; Cyber Security</a> <a href="CA-Satvik-Bhan/2026-07-02_class01-mythos-cyber-security/one-pager.html" class="onepager-link">1-pager</a> <a href="CA-Satvik-Bhan/static/cyber-security-static.html" class="onepager-link">static</a>
-        <ul class="card-topics">
-          <li><label><input type="checkbox" id="topic-200"> Mythos, zero-day &amp; dual use</label></li>
-          <li><label><input type="checkbox" id="topic-201"> Cyber-security &amp; sectoral implications (BFSI, DPI, national security)</label></li>
-        </ul>
-        <span class="chips"><span class="tag tag-ca">Current Affairs</span><span class="tag tag-date">Lecture 02 Jul 2026</span></span>
-      </span>
-    </div>
-  </div>
-</details>
+
 
 <details class="track-group" data-track="budget-es" open>
   <summary><span class="track-name">Budget &amp; Economic Survey <small>(per financial year)</small></span><span class="track-meta">1 note &middot; <span class="prog"></span></span></summary>
@@ -647,6 +656,27 @@
     </div>
   </div>
 </details>
+
+</div>
+
+<div class="tab-panel" id="panel-satvik" data-tab="satvik">
+<details class="track-group" data-track="satvik" open>
+  <summary><span class="track-name">Satvik Bhan CA <small>(<a href="CA-Satvik-Bhan/index.html" style="color:inherit;">series index</a>)</small></span><span class="track-meta">1 class &middot; <span class="prog"></span></span></summary>
+  <div class="track-body">
+    <div class="lecture-card" data-subject="ca">
+      <span class="class-no" title="CA-Satvik-Bhan/2026-07-02_class01-mythos-cyber-security/">1</span>
+      <span class="lecture-title">
+        <a href="CA-Satvik-Bhan/2026-07-02_class01-mythos-cyber-security/notes.html">Mythos &amp; Cyber Security</a> <a href="CA-Satvik-Bhan/2026-07-02_class01-mythos-cyber-security/one-pager.html" class="onepager-link">1-pager</a> <a href="CA-Satvik-Bhan/static/cyber-security-static.html" class="onepager-link">static</a>
+        <ul class="card-topics">
+          <li><label><input type="checkbox" id="topic-200"> Mythos, zero-day &amp; dual use</label></li>
+          <li><label><input type="checkbox" id="topic-201"> Cyber-security &amp; sectoral implications (BFSI, DPI, national security)</label></li>
+        </ul>
+        <span class="chips"><span class="tag tag-ca">Current Affairs</span><span class="tag tag-date">Lecture 02 Jul 2026</span></span>
+      </span>
+    </div>
+  </div>
+</details>
+</div>
 
 <footer>
   Each lecture folder contains: <code>notes.html</code> (editable notes with highlight/underline/note tools), plus any teacher PDFs, handwritten note scans, or maps you add. Open any notes.html directly in Chrome or Edge to view and edit; click Save inside a notes file to connect it to disk for direct saving.
@@ -687,7 +717,13 @@
   function prog() {
     var all = document.querySelectorAll('.card-topics input[type="checkbox"]'), done = 0;
     all.forEach(function(c){ if (c.checked) done++; });
-    document.getElementById('stat-topics').textContent = done + '/' + all.length;
+    var ap = document.querySelector('.tab-panel.active');
+    var cnt = 0, tdone = 0, tall = 0;
+    ap.querySelectorAll('.card-topics input[type="checkbox"]').forEach(function(c){ tall++; if (c.checked) tdone++; });
+    cnt = ap.querySelectorAll('.lecture-card').length;
+    document.getElementById('stat-total').textContent = cnt;
+    document.getElementById('stat-subjects').textContent = ap.querySelectorAll('.track-group').length;
+    document.getElementById('stat-topics').textContent = tdone + '/' + tall;
     document.querySelectorAll('.track-group').forEach(function(g) {
       var b = g.querySelectorAll('.card-topics input'), d = 0;
       b.forEach(function(c){ if (c.checked) d++; });
@@ -695,7 +731,16 @@
     });
   }
   document.addEventListener('change', function(e){ if (e.target.matches('.card-topics input')) prog(); });
-  prog();
+  function showTab(t) {
+    document.querySelectorAll('.tab-panel').forEach(function(p){ p.classList.toggle('active', p.getAttribute('data-tab') === t); });
+    document.querySelectorAll('.teacher-tab').forEach(function(b){ b.classList.toggle('active', b.getAttribute('data-tab') === t); });
+    document.body.classList.toggle('theme-satvik', t === 'satvik');
+    prog();
+  }
+  document.querySelectorAll('.teacher-tab').forEach(function(b){
+    b.addEventListener('click', function(){ showTab(b.getAttribute('data-tab')); history.replaceState(null, '', '#' + b.getAttribute('data-tab')); });
+  });
+  showTab(location.hash === '#satvik' ? 'satvik' : 'dipin');
   var s = document.getElementById('search');
   s.addEventListener('input', function() {
     var q = s.value.trim().toLowerCase();
