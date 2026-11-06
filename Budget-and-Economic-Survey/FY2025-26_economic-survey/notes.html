@@ -198,6 +198,12 @@
   .es-box { background:#f2f7ee; border-left:4px solid #3b6d11; border-radius:6px; padding:10px 16px; margin:18px 0; font-size:0.95em; }
   .es-box h4 { margin:0 0 6px; font-family:Arial,sans-serif; font-size:0.85em; color:#3b6d11; text-transform:uppercase; letter-spacing:.03em; }
   .es-box ul { margin:0; padding-left:20px; }
+  .my-additions { margin-top: 40px; border-top: 3px solid #0f766e; padding-top: 10px; }
+  .my-additions h2 { color:#0f766e; border-left-color:#0f766e; }
+  .my-add { min-height: 110px; background:#fff; border:1px dashed #0f766e; border-radius:8px; padding:12px 16px; font-size:0.98em; outline:none; }
+  .my-add:focus { border-style: solid; box-shadow: 0 0 0 2px #b7e0da; }
+  .my-add:empty:before { content: attr(data-placeholder); color:#8a929a; }
+  .my-add-status { font-family: Arial, sans-serif; font-size: 0.75em; color:#57606a; margin-top:4px; }
 </style>
 </head>
 <body>
@@ -1044,6 +1050,11 @@
   </div>
 </section>
 
+<section id="my-additions" class="my-additions">
+  <h2>My additions</h2>
+  <div id="my-add-box" class="my-add" contenteditable="true" data-placeholder="Type your own points here. Auto-saved in this browser; click Save in the toolbar to also write them into the file."></div>
+  <div class="my-add-status" id="my-add-status">Auto-saves in this browser as you type.</div>
+</section>
 <footer>
   Notes compiled from unlisted recordings of an Economic Survey 2025-26 lecture series using YouTube's auto-generated transcripts. Ch 16–17 from official PIB releases. MCQs are rewritten from traps flagged in class. Click Save (first time will ask you to pick this file) to write your edits directly to disk.
 </footer>
@@ -1247,5 +1258,17 @@
 })();
 </script>
 
+<script>
+(function(){
+  var box=document.getElementById('my-add-box'), st=document.getElementById('my-add-status');
+  if(!box) return;
+  var key='myadd:'+location.pathname;
+  try{ var v=localStorage.getItem(key); if(v!==null && v!==box.innerHTML){ box.innerHTML=v; } }catch(e){}
+  box.addEventListener('input',function(){
+    try{ localStorage.setItem(key, box.innerHTML); st.textContent='Saved in this browser '+new Date().toLocaleTimeString()+'. Click Save (toolbar) to write into the file.'; }
+    catch(e){ st.textContent='Browser storage unavailable; use Save (toolbar).'; }
+  });
+})();
+</script>
 </body>
 </html>
