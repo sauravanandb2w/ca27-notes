@@ -188,12 +188,30 @@
     box-shadow: 0 4px 16px rgba(0,0,0,0.15);
     z-index: 200;
   }
-  .my-additions { margin-top: 40px; border-top: 3px solid #0f766e; padding-top: 10px; }
-  .my-additions h2 { color:#0f766e; border-left-color:#0f766e; }
-  .my-add { min-height: 110px; background:#fff; border:1px dashed #0f766e; border-radius:8px; padding:12px 16px; font-size:0.98em; outline:none; }
-  .my-add:focus { border-style: solid; box-shadow: 0 0 0 2px #b7e0da; }
-  .my-add:empty:before { content: attr(data-placeholder); color:#8a929a; }
-  .my-add-status { font-family: Arial, sans-serif; font-size: 0.75em; color:#57606a; margin-top:4px; }
+/*ANCH-CSS*/
+  .note-anchor { background:#d9f2ee; border-bottom:2px solid #0f766e; cursor:pointer; border-radius:2px; }
+  .note-anchor:hover { background:#b7e0da; }
+  .anchored-note { background:#e3f5f2 !important; border:1px solid #7fc4ba !important; color:#0b4f49 !important; }
+  .anchored-note .note-label { color:#0f766e; }
+  .anchored-note .anch-btns { float:right; margin-left:8px; }
+  .anchored-note .anch-btns button { font-family:Arial,sans-serif; font-size:11px; border:1px solid #7fc4ba; background:#fff; color:#0f766e; border-radius:4px; padding:1px 6px; margin-left:3px; cursor:pointer; }
+  .anchored-note .anch-btns button:hover { background:#0f766e; color:#fff; }
+  .anch-flash { animation: anchflash 1.4s ease-out; }
+  @keyframes anchflash { 0% { background:#ffe066; box-shadow:0 0 0 4px #ffe066; } 100% { box-shadow:0 0 0 0 transparent; } }
+  #anch-btn { position:absolute; z-index:300; display:none; font-family:Arial,sans-serif; font-size:13px; background:#0f766e; color:#fff; border:none; border-radius:6px; padding:6px 12px; cursor:pointer; box-shadow:0 2px 8px rgba(0,0,0,.25); }
+  #anch-pop { position:absolute; z-index:301; display:none; width:280px; background:#fff; border:2px solid #0f766e; border-radius:8px; padding:10px; box-shadow:0 4px 16px rgba(0,0,0,.25); font-family:Arial,sans-serif; }
+  #anch-pop .ap-quote { font-size:12px; color:#57606a; margin-bottom:6px; font-style:italic; }
+  #anch-pop textarea { width:100%; min-height:70px; font-size:13px; padding:6px; border:1px solid #d8d2c6; border-radius:4px; font-family:Arial,sans-serif; }
+  #anch-pop .ap-actions { text-align:right; margin-top:6px; }
+  #anch-pop .ap-actions button { font-size:12px; padding:5px 12px; border-radius:4px; border:1px solid #0f766e; background:#fff; color:#0f766e; cursor:pointer; margin-left:4px; }
+  #anch-pop .ap-actions .ap-add { background:#0f766e; color:#fff; }
+  .my-notes-index { margin-top:40px; border-top:3px solid #0f766e; padding-top:10px; }
+  .my-notes-index h2 { color:#0f766e; border-left-color:#0f766e; }
+  .my-notes-index .ni-item { padding:6px 0; border-bottom:1px solid #e2ddd4; font-size:0.95em; }
+  .my-notes-index .ni-link { color:#0f766e; font-weight:bold; text-decoration:none; }
+  .my-notes-index .ni-note { color:#1f2328; }
+  .my-notes-index .ni-empty { color:#57606a; font-size:0.9em; }
+/*/ANCH-CSS*/
 </style>
 </head>
 <body>
@@ -812,11 +830,11 @@ flowchart LR
   </div>
 </section>
 
-<section id="my-additions" class="my-additions">
-  <h2>My additions</h2>
-  <div id="my-add-box" class="my-add" contenteditable="true" data-placeholder="Type your own points here. Auto-saved in this browser; click Save in the toolbar to also write them into the file."></div>
-  <div class="my-add-status" id="my-add-status">Auto-saves in this browser as you type.</div>
-</section>
+<!--ANCH-SEC--><section id="note-index" class="my-notes-index">
+  <h2>My notes</h2>
+  <p style="font-size:0.85em;color:#57606a;">Select any text above and click <strong>Add note</strong>. Click the highlighted text to jump to its note; click <strong>&uarr; text</strong> on a note to jump back. Auto-saved in this browser; use Save (toolbar) to write into the file.</p>
+  <div id="note-index-list"></div>
+</section><!--/ANCH-SEC-->
 <footer>
   Notes compiled from an unlisted lecture recording using YouTube's auto-generated transcript. Timestamps are approximate; several proper nouns (scholar names, case citations) were transcribed imperfectly by auto-captions and are flagged inline for verification against the original lecture or handwritten notes before citing in an exam answer. Supplementary research sections are separately verified via web search and marked accordingly. Click Save (first time will ask you to pick this file) to write your edits directly to disk — no chat needed.
 </footer>
@@ -1020,17 +1038,160 @@ flowchart LR
 })();
 </script>
 
-<script>
+<!--ANCH-JS--><script>
 (function(){
-  var box=document.getElementById('my-add-box'), st=document.getElementById('my-add-status');
-  if(!box) return;
-  var key='myadd:'+location.pathname;
-  try{ var v=localStorage.getItem(key); if(v!==null && v!==box.innerHTML){ box.innerHTML=v; } }catch(e){}
-  box.addEventListener('input',function(){
-    try{ localStorage.setItem(key, box.innerHTML); st.textContent='Saved in this browser '+new Date().toLocaleTimeString()+'. Click Save (toolbar) to write into the file.'; }
-    catch(e){ st.textContent='Browser storage unavailable; use Save (toolbar).'; }
+  var root=document.getElementById('content-root'); if(!root) return;
+  var KEY='anchnotes:'+location.pathname;
+  var BLOCK='p,li,td,th,h2,h3,h4,dd,figcaption';
+  var statusEl=document.getElementById('status-text');
+  function dirty(){ if(statusEl){ statusEl.textContent='Unsaved changes (also kept in this browser)'; statusEl.style.color='#993c1d'; } }
+  function blocks(){ return Array.prototype.filter.call(root.querySelectorAll(BLOCK),function(b){ return !b.closest('.user-note,#note-index,.toc'); }); }
+  function textNodes(b){
+    var w=document.createTreeWalker(b,NodeFilter.SHOW_TEXT,{acceptNode:function(n){ return (n.parentElement&&n.parentElement.closest('.user-note'))?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT; }});
+    var a=[],n; while((n=w.nextNode())) a.push(n); return a;
+  }
+  function fullText(b){ return textNodes(b).map(function(n){return n.data;}).join(''); }
+  function offsetIn(b,c,o){
+    var r=document.createRange(); r.setStart(b,0); r.setEnd(c,o);
+    var tot=0, tn=textNodes(b);
+    for(var i=0;i<tn.length;i++){ var t=tn[i];
+      if(r.comparePoint(t,t.length)<=0){ tot+=t.length; continue; }
+      if(r.comparePoint(t,0)>0) break;
+      if(t===c) tot+=o; break; }
+    return tot;
+  }
+  function captureSel(){
+    var sel=window.getSelection(); if(!sel||sel.isCollapsed||!sel.rangeCount) return null;
+    var r=sel.getRangeAt(0);
+    if(!root.contains(r.commonAncestorContainer)) return null;
+    var sc=r.startContainer.nodeType===1?r.startContainer:r.startContainer.parentElement;
+    if(!sc||sc.closest('.user-note,#note-index,.toolbar,.toc')) return null;
+    var b=sc.closest(BLOCK); if(!b||!root.contains(b)) return null;
+    var bi=blocks().indexOf(b); if(bi<0) return null;
+    var end=r.endContainer, eo=r.endOffset;
+    if(!b.contains(end)){ var tn=textNodes(b); if(!tn.length) return null; end=tn[tn.length-1]; eo=end.length; }
+    var s=offsetIn(b,r.startContainer,r.startOffset), e=offsetIn(b,end,eo);
+    if(e<=s) return null;
+    var t=fullText(b).slice(s,e); if(!t.trim()) return null;
+    return {bi:bi,s:s,e:e,t:t};
+  }
+  function wrap(b,s,e,id,note){
+    var pos=0, tn=textNodes(b);
+    tn.forEach(function(t){
+      var len=t.length, a=Math.max(s-pos,0), z=Math.min(e-pos,len); pos+=len;
+      if(z<=a) return;
+      var mid=t; if(a>0) mid=t.splitText(a); if(z-a<mid.length) mid.splitText(z-a);
+      var sp=document.createElement('span'); sp.className='note-anchor'; sp.setAttribute('data-nid',id); sp.title=note;
+      mid.parentNode.insertBefore(sp,mid); sp.appendChild(mid);
+    });
+  }
+  function short(t){ t=t.replace(/\s+/g,' ').trim(); return t.length>70?t.slice(0,67)+'…':t; }
+  function makeNote(id,t,note,bi,s,e){
+    var d=document.createElement('div'); d.className='user-note anchored-note'; d.id='note-'+id;
+    d.setAttribute('data-nid',id); d.setAttribute('data-b',bi); d.setAttribute('data-s',s); d.setAttribute('data-e',e); d.setAttribute('data-t',t);
+    d.innerHTML='<span class="anch-btns"><button class="anch-up" title="Go to the text">↑ text</button><button class="anch-edit" title="Edit note">✎</button><button class="anch-del" title="Delete note">×</button></span><span class="note-label"></span><span class="note-body"></span>';
+    d.querySelector('.note-label').textContent='Note on “'+short(t)+'”';
+    d.querySelector('.note-body').textContent=note;
+    return d;
+  }
+  function place(b,d){
+    if(/^(P|H2|H3|H4|FIGCAPTION)$/.test(b.tagName)){
+      var ref=b.nextSibling; while(ref&&ref.classList&&ref.classList.contains('anchored-note')) ref=ref.nextSibling;
+      b.parentNode.insertBefore(d,ref);
+    } else b.appendChild(d);
+  }
+  function snapshot(){
+    return Array.prototype.map.call(root.querySelectorAll('.anchored-note'),function(d){
+      return {id:d.getAttribute('data-nid'),b:+d.getAttribute('data-b'),s:+d.getAttribute('data-s'),e:+d.getAttribute('data-e'),t:d.getAttribute('data-t'),n:d.querySelector('.note-body').textContent};
+    });
+  }
+  function persist(){ try{ localStorage.setItem(KEY,JSON.stringify(snapshot())); }catch(x){} }
+  function addNote(sel,note){
+    var b=blocks()[sel.bi]; if(!b) return;
+    var id='n'+Date.now().toString(36)+Math.random().toString(36).slice(2,5);
+    wrap(b,sel.s,sel.e,id,note); place(b,makeNote(id,sel.t,note,sel.bi,sel.s,sel.e));
+    persist(); buildIndex(); dirty();
+  }
+  function restore(){
+    var st=[]; try{ st=JSON.parse(localStorage.getItem(KEY)||'[]'); }catch(x){}
+    st.forEach(function(it){
+      if(root.querySelector('.anchored-note[data-nid="'+it.id+'"]')) return;
+      var b=blocks()[it.b]; if(!b) return;
+      var full=fullText(b), s=it.s, e=it.e;
+      if(full.slice(s,e)!==it.t){ var k=full.indexOf(it.t); if(k<0) return; s=k; e=k+it.t.length; }
+      wrap(b,s,e,it.id,it.n); place(b,makeNote(it.id,it.t,it.n,it.b,s,e));
+    });
+  }
+  function anchorsOf(id){ return root.querySelectorAll('.note-anchor[data-nid="'+id+'"]'); }
+  function flash(els){ Array.prototype.forEach.call(els.length!==undefined?els:[els],function(el){ el.classList.remove('anch-flash'); void el.offsetWidth; el.classList.add('anch-flash'); }); }
+  function jumpNote(id){ var n=document.getElementById('note-'+id); if(!n) return; n.scrollIntoView({block:'center',behavior:'smooth'}); flash(n); }
+  function jumpText(id){ var a=anchorsOf(id); if(!a.length) return; a[0].scrollIntoView({block:'center',behavior:'smooth'}); flash(a); }
+  function unwrap(id){ Array.prototype.forEach.call(anchorsOf(id),function(sp){ var p=sp.parentNode; while(sp.firstChild) p.insertBefore(sp.firstChild,sp); p.removeChild(sp); p.normalize(); }); }
+  function buildIndex(){
+    var box=document.getElementById('note-index-list'); if(!box) return;
+    var notes=root.querySelectorAll('.anchored-note'); box.innerHTML='';
+    if(!notes.length){ var p=document.createElement('p'); p.className='ni-empty'; p.textContent='No notes yet. Select any text above, click “Add note”. Click the highlighted text any time to jump to its note.'; box.appendChild(p); return; }
+    Array.prototype.forEach.call(notes,function(d,i){
+      var it=document.createElement('div'); it.className='ni-item';
+      var a=document.createElement('a'); a.href='#'; a.className='ni-link'; a.setAttribute('data-nid',d.getAttribute('data-nid')); a.textContent=(i+1)+'. “'+short(d.getAttribute('data-t'))+'”';
+      var sp=document.createElement('span'); sp.className='ni-note'; sp.textContent=' — '+d.querySelector('.note-body').textContent;
+      it.appendChild(a); it.appendChild(sp); box.appendChild(it);
+    });
+  }
+  root.addEventListener('click',function(ev){
+    var t=ev.target, a;
+    if((a=t.closest('.ni-link'))){ ev.preventDefault(); jumpText(a.getAttribute('data-nid')); return; }
+    if((a=t.closest('.anch-up'))){ jumpText(a.closest('.anchored-note').getAttribute('data-nid')); return; }
+    if((a=t.closest('.anch-del'))){
+      var d=a.closest('.anchored-note'); if(!confirm('Delete this note?')) return;
+      unwrap(d.getAttribute('data-nid')); d.remove(); persist(); buildIndex(); dirty(); return; }
+    if((a=t.closest('.anch-edit'))){
+      var n=a.closest('.anchored-note'), body=n.querySelector('.note-body'), v=prompt('Edit note',body.textContent);
+      if(v===null||!v.trim()) return; body.textContent=v.trim();
+      Array.prototype.forEach.call(anchorsOf(n.getAttribute('data-nid')),function(sp){ sp.title=v.trim(); });
+      persist(); buildIndex(); dirty(); return; }
+    if((a=t.closest('.note-anchor'))){
+      var s=window.getSelection(); if(s&&!s.isCollapsed) return;
+      jumpNote(a.getAttribute('data-nid')); }
   });
+  var clr=document.getElementById('btn-clear');
+  if(clr) clr.addEventListener('click',function(){ setTimeout(function(){
+    if(root.querySelector('.anchored-note')) return;
+    var ids={}; Array.prototype.forEach.call(root.querySelectorAll('.note-anchor'),function(sp){ ids[sp.getAttribute('data-nid')]=1; });
+    Object.keys(ids).forEach(unwrap); persist(); buildIndex();
+  },60); });
+
+  var btn=document.getElementById('anch-btn'), pop=document.getElementById('anch-pop');
+  if(!btn){ btn=document.createElement('button'); btn.id='anch-btn'; btn.type='button'; btn.textContent='📝 Add note'; document.body.appendChild(btn); }
+  if(!pop){ pop=document.createElement('div'); pop.id='anch-pop'; pop.innerHTML='<div class="ap-quote"></div><textarea placeholder="Type your note…"></textarea><div class="ap-actions"><button type="button" class="ap-cancel">Cancel</button><button type="button" class="ap-add">Add</button></div>'; document.body.appendChild(pop); }
+  btn.style.display='none'; pop.style.display='none';
+  var cur=null, tm=null, popOpen=false;
+  function update(){
+    if(popOpen) return;
+    var h=document.getElementById('btn-highlight'), u=document.getElementById('btn-underline');
+    if((h&&h.classList.contains('active'))||(u&&u.classList.contains('active'))){ btn.style.display='none'; return; }
+    var c=captureSel(); if(!c){ btn.style.display='none'; return; }
+    cur=c; var r=window.getSelection().getRangeAt(0).getBoundingClientRect();
+    btn.style.left=Math.max(8,Math.min(window.scrollX+r.left,window.scrollX+window.innerWidth-130))+'px';
+    btn.style.top=(window.scrollY+r.bottom+6)+'px'; btn.style.display='block';
+  }
+  document.addEventListener('selectionchange',function(){ clearTimeout(tm); tm=setTimeout(update,180); });
+  btn.addEventListener('mousedown',function(e){ e.preventDefault(); });
+  btn.addEventListener('click',function(){
+    if(!cur) return; popOpen=true;
+    pop.querySelector('.ap-quote').textContent='“'+short(cur.t)+'”';
+    pop.style.left=btn.style.left; pop.style.top=btn.style.top; pop.style.display='block'; btn.style.display='none';
+    var ta=pop.querySelector('textarea'); ta.value=''; setTimeout(function(){ ta.focus(); },0);
+  });
+  function closePop(){ popOpen=false; pop.style.display='none'; cur=null; }
+  pop.querySelector('.ap-cancel').addEventListener('click',closePop);
+  pop.querySelector('.ap-add').addEventListener('click',function(){
+    var v=pop.querySelector('textarea').value.trim();
+    if(v&&cur) addNote(cur,v);
+    var s=window.getSelection(); if(s) s.removeAllRanges(); closePop();
+  });
+  restore(); buildIndex();
 })();
-</script>
+</script><!--/ANCH-JS-->
 </body>
 </html>
