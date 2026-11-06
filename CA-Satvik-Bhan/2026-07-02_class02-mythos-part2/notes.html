@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Satvik Bhan CA — Class 2: Mythos Part 2 (Sovereignty, Gaps, Way Forward)</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: #faf9f6;
+    color: #1f2328;
+    margin: 0;
+    padding: 0 0 80px;
+    line-height: 1.6;
+  }
+  .toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: #ffffff;
+    border-bottom: 2px solid #1d5b8b;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: Arial, sans-serif;
+    flex-wrap: wrap;
+  }
+  .toolbar button {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    padding: 7px 14px;
+    border-radius: 6px;
+    border: 1px solid #d8d2c6;
+    background: #fff;
+    cursor: pointer;
+    color: #1f2328;
+  }
+  .toolbar button:hover { background: #e6f1fb; border-color: #1d5b8b; }
+  .toolbar button.active { background: #1d5b8b; color: #fff; border-color: #1d5b8b; }
+  .toolbar .save-btn { background: #2f6b4f; color: #fff; border-color: #2f6b4f; margin-left: auto; }
+  .toolbar .save-btn:hover { background: #24543e; }
+  .toolbar .status { font-size: 12px; color: #57606a; margin-left: auto; padding-right: 8px; }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 30px 20px; }
+  header { border-bottom: 3px solid #1d5b8b; padding-bottom: 20px; margin-bottom: 30px; }
+  header h1 { font-size: 1.6em; margin: 0 0 6px; color: #1d5b8b; }
+  header .meta { color: #57606a; font-size: 0.95em; font-family: Arial, sans-serif; }
+  section { margin-bottom: 42px; }
+  h2 { font-size: 1.4em; color: #1d5b8b; border-left: 4px solid #1d5b8b; padding-left: 12px; margin-bottom: 14px; }
+  h3 { font-size: 1.12em; margin: 22px 0 8px; }
+  p { margin: 10px 0; }
+  .summary-box { background: #e6f1fb; border-radius: 8px; padding: 18px 22px; font-size: 0.98em; }
+  ul, ol.answers { padding-left: 24px; }
+  li { margin-bottom: 6px; }
+  .timestamp { font-family: 'Courier New', monospace; font-size: 0.78em; color: #57606a; background: #e2ddd4; border-radius: 4px; padding: 1px 6px; margin-right: 6px; }
+  .quote-card { background: #fff; border: 1px solid #e2ddd4; border-left: 4px solid #1d5b8b; border-radius: 6px; padding: 14px 18px; margin: 14px 0; }
+  .quote-card .q { font-style: italic; font-size: 1.05em; }
+  .quote-card .attrib { font-family: Arial, sans-serif; font-size: 0.85em; color: #57606a; margin-top: 6px; }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.95em; background: #fff; }
+  th, td { border: 1px solid #e2ddd4; padding: 8px 12px; text-align: left; vertical-align: top; }
+  th { background: #e6f1fb; font-family: Arial, sans-serif; font-size: 0.88em; }
+  .gap-box { background: #eef4f0; border: 1px solid #cfe3d6; border-radius: 8px; padding: 16px 20px; margin-top: 16px; font-size: 0.95em; }
+  .gap-box h4 { margin: 0 0 8px; color: #2f6b4f; font-family: Arial, sans-serif; font-size: 0.95em; }
+  .exam-tip { background: #fff7e6; border: 1px solid #f0dba8; border-radius: 8px; padding: 14px 20px; margin: 14px 0; font-size: 0.95em; }
+  .exam-tip::before { content: "Exam strategy: "; font-weight: bold; font-family: Arial, sans-serif; }
+  .term-box { background: #fdf3f3; border: 1px solid #ecd4d4; border-radius: 8px; padding: 12px 16px; margin: 10px 0; }
+  .term-box strong { color: #8b3a3a; }
+  .data-box { background: #f3f0fb; border: 1px solid #ddd6f0; border-radius: 8px; padding: 12px 16px; margin: 10px 0; font-family: 'Courier New', monospace; font-size: 0.9em; }
+  footer { margin-top: 60px; border-top: 1px solid #e2ddd4; padding-top: 16px; color: #57606a; font-size: 0.82em; font-family: Arial, sans-serif; }
+  .toc {
+    background: #fff;
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    padding: 16px 22px;
+    margin-bottom: 36px;
+    font-family: Arial, sans-serif;
+    font-size: 0.9em;
+  }
+  .toc h2 { font-size: 1em; margin: 0 0 10px; border: none; padding: 0; color: #1d5b8b; text-transform: uppercase; letter-spacing: 0.04em; }
+  .toc ol { columns: 2; margin: 0; padding-left: 20px; }
+  .toc a { color: #1f2328; text-decoration: none; }
+  .toc a:hover { color: #1d5b8b; text-decoration: underline; }
+  details.collapse-section {
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    background: #fff;
+    margin: 14px 0;
+    padding: 0;
+  }
+  details.collapse-section summary {
+    cursor: pointer;
+    padding: 12px 16px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 0.92em;
+    color: #1d5b8b;
+    list-style: none;
+  }
+  details.collapse-section summary::-webkit-details-marker { display: none; }
+  details.collapse-section summary::before { content: "▸ "; }
+  details.collapse-section[open] summary::before { content: "▾ "; }
+  details.collapse-section .collapse-body { padding: 4px 16px 16px; }
+  .glossary-term {
+    display: flex;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+  }
+  .glossary-term:last-child { border-bottom: none; }
+  .glossary-term dt { font-weight: bold; color: #8b3a3a; min-width: 220px; flex-shrink: 0; font-family: Arial, sans-serif; font-size: 0.9em; }
+  .glossary-term dd { margin: 0; }
+
+  mark.user-highlight { background: #fff176; padding: 1px 2px; border-radius: 2px; }
+  u.user-underline { text-decoration: underline; text-decoration-color: #1d5b8b; text-decoration-thickness: 2px; }
+  .user-note {
+    background: #e6f1fb;
+    border: 1px solid #85b7eb;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin: 8px 0;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #0c447c;
+    position: relative;
+  }
+  .user-note .note-label { font-weight: bold; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; display: block; }
+  .user-note .del-note { position: absolute; top: 6px; right: 8px; cursor: pointer; border: none; background: none; color: #0c447c; font-size: 14px; font-family: Arial, sans-serif; }
+  #note-input-box {
+    position: fixed;
+    display: none;
+    background: #fff;
+    border: 2px solid #1d5b8b;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    z-index: 100;
+    font-family: Arial, sans-serif;
+  }
+  #note-input-box textarea { width: 240px; height: 60px; font-family: Arial, sans-serif; font-size: 13px; border: 1px solid #d8d2c6; border-radius: 4px; padding: 6px; }
+  #note-input-box .note-actions { margin-top: 6px; display: flex; gap: 6px; justify-content: flex-end; }
+  #note-input-box button { font-size: 12px; padding: 5px 10px; border-radius: 4px; border: 1px solid #d8d2c6; background: #fff; cursor: pointer; }
+  #note-input-box button.primary { background: #1d5b8b; color: #fff; border-color: #1d5b8b; }
+  .content-target::selection { background: #ffe082; }
+  .board-caption { font-family: Arial, sans-serif; font-size: 0.82em; color: #57606a; margin-top: -8px; margin-bottom: 14px; }
+  .arcs-box {
+    background: #fff;
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 14px 0;
+  }
+  .arcs-box h4 { margin: 0 0 10px; color: #1d5b8b; font-family: Arial, sans-serif; font-size: 0.98em; }
+  .recall-q { margin-bottom: 14px; }
+  .recall-q p.q-text { font-weight: bold; margin: 0 0 6px; }
+  .recall-q details { border: none; margin: 0; }
+  .recall-q summary { font-family: Arial, sans-serif; font-size: 0.82em; color: #1d5b8b; cursor: pointer; list-style: none; padding: 2px 0; }
+  .recall-q summary::-webkit-details-marker { display: none; }
+  .recall-q summary::before { content: "Show answer \25B8 "; }
+  .recall-q details[open] summary::before { content: "Hide answer \25BE "; }
+  .recall-q .ans { background: #eef4f0; border-radius: 6px; padding: 8px 12px; margin-top: 6px; font-size: 0.95em; }
+  .spacing-tracker { font-family: Arial, sans-serif; font-size: 0.92em; }
+  .spacing-tracker table { margin: 8px 0; }
+  .spacing-tracker input[type="checkbox"] { width: 16px; height: 16px; cursor: pointer; }
+  .mnemonic-box { background: #fff7e6; border: 1px solid #f0dba8; border-radius: 8px; padding: 14px 18px; margin: 10px 0; }
+  .mnemonic-box h4 { margin: 0 0 6px; color: #8b5a1d; font-family: Arial, sans-serif; font-size: 0.92em; }
+  .applic-table td.gs-tag { font-family: Arial, sans-serif; font-weight: bold; font-size: 0.85em; white-space: nowrap; }
+  .applic-table .prelims-badge, .applic-table .mains-badge {
+    display: inline-block; font-family: Arial, sans-serif; font-size: 0.72em; font-weight: bold;
+    padding: 2px 8px; border-radius: 10px; margin-right: 4px;
+  }
+  .prelims-badge { background: #eaf3de; color: #3b6d11; }
+  .mains-badge { background: #e6f1fb; color: #1d5b8b; }
+  #fallback-help {
+    position: fixed;
+    display: none;
+    top: 60px;
+    right: 20px;
+    max-width: 320px;
+    background: #fff;
+    border: 2px solid #993c1d;
+    border-radius: 8px;
+    padding: 14px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    z-index: 200;
+  }
+  .mcq-card { background: #fff; border: 1px solid #e2ddd4; border-left: 4px solid #1d5b8b; border-radius: 8px; padding: 16px 20px; margin: 14px 0; }
+  .mcq-card .q-num { font-family: Arial, sans-serif; font-weight: bold; color: #1d5b8b; font-size: 0.82em; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 6px; }
+  .mcq-card .q-text { font-weight: bold; margin-bottom: 10px; }
+  .mcq-card .options { display: flex; flex-direction: column; gap: 6px; margin-bottom: 10px; }
+  .mcq-card .option { font-family: Arial, sans-serif; font-size: 0.92em; padding: 6px 10px; border-radius: 6px; background: #faf9f6; border: 1px solid #e2ddd4; }
+  .mcq-card .option.correct { background: #eaf3de; border-color: #b9d79a; color: #3b6d11; font-weight: bold; }
+  .mcq-card .answer-box { font-family: Arial, sans-serif; font-size: 0.88em; background: #eef4f0; border-radius: 6px; padding: 8px 12px; }
+  .mcq-card .answer-label { font-weight: bold; color: #2f6b4f; }
+  figure.lecture-diagram { margin: 16px 0; background:#fff; border:1px solid #e2ddd4; border-radius:8px; padding:10px; }
+  figure.lecture-diagram figcaption { font-family: Arial, sans-serif; font-size:0.8em; color:#57606a; text-align:center; margin-top:6px; }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <button id="btn-highlight" title="Select text, then click to highlight it">Highlight</button>
+  <button id="btn-underline" title="Select text, then click to underline it">Underline</button>
+  <button id="btn-note" title="Click this, then click anywhere in the notes to drop a note">Add note</button>
+  <button id="btn-clear" title="Remove all your highlights, underlines, and notes">Clear my edits</button>
+  <span class="status" id="status-text">Not connected to file — click Save once to connect</span>
+  <button class="save-btn" id="btn-save">Save</button>
+</div>
+
+<div id="fallback-help">
+  <strong>Your browser can't save directly</strong>
+  <p style="margin:6px 0;">File System Access isn't supported here (common on Safari/Firefox). Use Chrome or Edge to enable direct-save, or use your browser's Save Page As (Ctrl/Cmd+S) to overwrite this file manually after editing.</p>
+  <button id="fallback-close" style="font-size: 12px; padding: 6px 12px; border-radius: 4px; border: 1px solid #993c1d; background: #993c1d; color: #fff; cursor: pointer;">Got it</button>
+</div>
+
+<div id="note-input-box">
+  <textarea id="note-text" placeholder="Type your note..."></textarea>
+  <div class="note-actions">
+    <button id="note-cancel">Cancel</button>
+    <button class="primary" id="note-add">Add</button>
+  </div>
+</div>
+
+<div class="wrap content-target" id="content-root">
+<header>
+  <h1>Class 2 — Mythos, Part 2: Sovereignty, Gaps, Steps &amp; Way Forward (Satvik Bhan · 02-07-2026)</h1>
+  <div class="meta">
+    <span>Source: YouTube "02. MYTHOS Part 02 (02-07-2026)", ~3h37m, Hindi–English mix</span> &middot;
+    <span>Continues <a href="../2026-07-02_class01-mythos-cyber-security/notes.html">Class 1 (Mythos &amp; Cyber Security)</a> after the lunch break</span> &middot;
+    <span>Track: UPSC GS-3 Internal Security / S&amp;T + GS-2 IR — Current Affairs</span>
+  </div>
+</header>
+
+<div class="gap-box">
+  <h4>What this class covers</h4>
+  <p>Finishes the <strong>Implications</strong> head (AI sovereignty, cyber-power inequality, AI cyber arms race, hybrid warfare, financial cost, merits), then the remaining heads: <strong>Issues &amp; gaps (challenges)</strong>, <strong>Steps taken</strong>, <strong>Way forward</strong> and a live answer-writing demo. Content before 0:10 is course admin and a recap (not exam content).</p>
+</div>
+
+<nav class="toc">
+  <h2>Contents</h2>
+  <ol>
+    <li><a href="#recap">Recap — how the Mythos notes are memorised</a></li>
+    <li><a href="#map">Master structure map</a></li>
+    <li><a href="#sov">1. Implication 3 — AI sovereignty</a></li>
+    <li><a href="#race">2. AI race, 6-month and 2-year gaps, India's stance</a></li>
+    <li><a href="#inequality">3. Implication 4 — Cyber-power inequality (haves vs have-nots)</a></li>
+    <li><a href="#chips">4. Chips, ASML &amp; India Semiconductor Mission</a></li>
+    <li><a href="#arms">5. AI cyber arms race, hybrid &amp; asymmetric warfare</a></li>
+    <li><a href="#cost">6. Financial cost &amp; MSMEs</a></li>
+    <li><a href="#merits">7. Merits of access (the positive side)</a></li>
+    <li><a href="#gaps">8. Issues &amp; gaps (challenges)</a></li>
+    <li><a href="#steps">9. Steps taken by India</a></li>
+    <li><a href="#way">10. Way forward — strategy</a></li>
+    <li><a href="#writing">11. Answer writing — worked question &amp; model answer</a></li>
+    <li><a href="#static">12. Prelims / static hooks</a></li>
+    <li><a href="#mcqs">Prelims trap MCQs</a></li>
+    <li><a href="#glossary">Glossary</a></li>
+    <li><a href="#study">Study advice from the class</a></li>
+    <li><a href="#verify">Claims to verify</a></li>
+  </ol>
+</nav>
+
+<section id="summary">
+  <h2>Executive summary</h2>
+  <div class="summary-box"><ul>
+    <li><strong>AI sovereignty:</strong> sovereignty is no longer only borders — access to <strong>frontier AI tools</strong> now decides geopolitical might. The US government treated Mythos (and Fable) as <strong>national-security-sensitive</strong> and restricted access; India could not buy its way in.</li>
+    <li><strong>Cyber-power inequality:</strong> <strong>haves</strong> (Global North, owners of frontier AI) vs <strong>have-nots</strong> (Global South, dependent on external vendors) — attacks at <strong>machine speed</strong>, patching at <strong>human speed</strong>.</li>
+    <li><strong>AI cyber arms race</strong> (e.g. Qihoo 360) and <strong>hybrid/asymmetric warfare</strong>: non-state actors can skip expensive weapons and strike critical infrastructure and air-defence software.</li>
+    <li><strong>Cost hits MSMEs hardest</strong>; they lack capability, trained staff, backups and incident-response plans.</li>
+    <li><strong>Gaps:</strong> narrow vision · institutional (headless AI Safety Institute, no model-testing body, development-first approach, many agencies, little convergence) · human resource · legal/accountability · risk-classification · pre-release evaluation · R&amp;D · outdated 2013 policy · poor patching (WannaCry, AIIMS) · weak sector coordination.</li>
+    <li><strong>Steps taken:</strong> high-level inter-sectoral review (FinMin–MeitY–RBI–NPCI–CERT-In) · RBI advisories and board-level gap assessment · engagement with Project Glasswing · panel under SBI chairman · RBI AI framework (2025).</li>
+    <li><strong>Way forward:</strong> start with a <strong>grand strategy</strong>; then policy/legal, sectoral, regulation/accountability, AI diplomacy, AI skilling, <strong>sovereign AI</strong> — conclusion line: <em>"India must develop and indigenise sovereign AI capabilities."</em></li>
+  </ul></div>
+</section>
+
+<section id="recap">
+  <h2>Recap — how the Mythos notes are memorised <span class="timestamp">0:05 – 0:12</span></h2>
+  <ul>
+    <li>Lecturer's own recall method: remember a <strong>framework</strong> (heads), then the <strong>keywords</strong> he must say in class, then a few <strong>facts</strong>. The rest returns while writing — "your subconscious mind is awake in the exam".</li>
+    <li>Keywords he repeats: <strong>frontier AI</strong>, <strong>zero-day vulnerability</strong>, scale marker <strong>US$400 bn</strong>, and the comparison with other LLMs on four points: (1) finds software vulnerabilities with <strong>speed and scale</strong> (→ zero-day), (2) high <strong>autonomy</strong>, (3) very high <strong>situational awareness</strong> <em>(new keyword added in this class)</em>, (4) <strong>low barrier</strong> (cite UK AI Safety Institute). Fact to carry: <strong>10,000 vulnerabilities</strong> found.</li>
+    <li>Implications structure: <strong>Broad</strong> (dual use; cyber security) → <strong>Sectoral</strong> (five–six sectors) → <strong>Other</strong> (all the rest). "Other" is a safety valve: if you forget a sector, club two–three points there.</li>
+    <li>Implications and challenges mean the same to the examiner in a current-affairs topic like this — but practise them separately.</li>
+  </ul>
+</section>
+
+<section id="map">
+  <h2>Master structure map</h2>
+  <figure class="lecture-diagram"><svg viewBox="0 0 700 380" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif" role="img"><defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#57606a"/></marker></defs><rect x="240" y="8" width="220" height="40" rx="7" fill="#1d5b8b" stroke="#1d5b8b" stroke-width="1.5"/><text x="350.0" y="32.9" text-anchor="middle" font-size="14" fill="#ffffff" font-weight="bold">MYTHOS - exam map</text><rect x="10" y="80" width="130" height="54" rx="7" fill="#e6f1fb" stroke="#1d5b8b" stroke-width="1.5"/><text x="75.0" y="103.85" text-anchor="middle" font-size="11" fill="#0c447c" font-weight="normal">1. Introduction</text><text x="75.0" y="117.85" text-anchor="middle" font-size="11" fill="#0c447c" font-weight="normal">what + vs LLMs</text><rect x="155" y="80" width="130" height="54" rx="7" fill="#eef4f0" stroke="#2f6b4f" stroke-width="1.5"/><text x="220.0" y="96.85" text-anchor="middle" font-size="11" fill="#1f4d37" font-weight="bold">2. IMPLICATIONS</text><text x="220.0" y="110.85" text-anchor="middle" font-size="11" fill="#1f4d37" font-weight="bold">(= impact =</text><text x="220.0" y="124.85" text-anchor="middle" font-size="11" fill="#1f4d37" font-weight="bold">significance)</text><rect x="300" y="80" width="130" height="54" rx="7" fill="#fdf3f3" stroke="#8b3a3a" stroke-width="1.5"/><text x="365.0" y="103.85" text-anchor="middle" font-size="11" fill="#6b2a2a" font-weight="bold">3. ISSUES / GAPS</text><text x="365.0" y="117.85" text-anchor="middle" font-size="11" fill="#6b2a2a" font-weight="bold">(= challenges)</text><rect x="445" y="80" width="120" height="54" rx="7" fill="#fff7e6" stroke="#c28a1a" stroke-width="1.5"/><text x="505.0" y="110.85" text-anchor="middle" font-size="11" fill="#6b4f15" font-weight="bold">4. STEPS TAKEN</text><rect x="580" y="80" width="110" height="54" rx="7" fill="#fff7e6" stroke="#c28a1a" stroke-width="1.5"/><text x="635.0" y="103.85" text-anchor="middle" font-size="11" fill="#6b4f15" font-weight="bold">5. WAY</text><text x="635.0" y="117.85" text-anchor="middle" font-size="11" fill="#6b4f15" font-weight="bold">FORWARD</text><line x1="350" y1="48" x2="75" y2="80" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="350" y1="48" x2="220" y2="80" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="350" y1="48" x2="365" y2="80" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="350" y1="48" x2="505" y2="80" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="350" y1="48" x2="635" y2="80" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="10" y="190" width="190" height="60" rx="7" fill="#eef4f0" stroke="#2f6b4f" stroke-width="1.5"/><text x="105.0" y="210.5" text-anchor="middle" font-size="10" fill="#1f4d37" font-weight="normal">BROAD</text><text x="105.0" y="223.5" text-anchor="middle" font-size="10" fill="#1f4d37" font-weight="normal">1 Dual use  2 Cyber security</text><text x="105.0" y="236.5" text-anchor="middle" font-size="10" fill="#1f4d37" font-weight="normal">3 AI sovereignty  4 Cyber-power inequality</text><rect x="215" y="190" width="200" height="60" rx="7" fill="#eef4f0" stroke="#2f6b4f" stroke-width="1.5"/><text x="315.0" y="210.5" text-anchor="middle" font-size="10" fill="#1f4d37" font-weight="normal">SECTORAL</text><text x="315.0" y="223.5" text-anchor="middle" font-size="10" fill="#1f4d37" font-weight="normal">CI - BFSI - DPI - national security</text><text x="315.0" y="236.5" text-anchor="middle" font-size="10" fill="#1f4d37" font-weight="normal">- citizens - sovereignty</text><rect x="430" y="190" width="260" height="60" rx="7" fill="#eef4f0" stroke="#2f6b4f" stroke-width="1.5"/><text x="560.0" y="210.5" text-anchor="middle" font-size="10" fill="#1f4d37" font-weight="normal">OTHER</text><text x="560.0" y="223.5" text-anchor="middle" font-size="10" fill="#1f4d37" font-weight="normal">7 AI cyber arms race  8 Hybrid/asymmetric war</text><text x="560.0" y="236.5" text-anchor="middle" font-size="10" fill="#1f4d37" font-weight="normal">9 Financial cost (MSMEs)  + merits</text><line x1="220" y1="134" x2="105" y2="190" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="220" y1="134" x2="315" y2="190" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="220" y1="134" x2="560" y2="190" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><text x="350" y="285" text-anchor="middle" font-size="11" fill="#6b2a2a" font-weight="bold" font-style="normal">Gaps chain: Vision - Institutions - People - Law - Risk-tiering/pre-release - Money</text><text x="350" y="310" text-anchor="middle" font-size="11" fill="#6b4f15" font-weight="bold" font-style="normal">Way forward chain: Grand strategy - Policy/legal - Sectoral - Regulation - Diplomacy - Skilling - Sovereign AI</text><text x="350" y="345" text-anchor="middle" font-size="10.5" fill="#1f2328" font-weight="normal" font-style="italic">Merits (flip side): better cyber capability - early access/indigenisation - capacity - economic - deterrence</text></svg><figcaption>Fig. 1 - Mythos master map with the lecturer&#x27;s heads and chains</figcaption></figure>
+</section>
+
+<section id="sov">
+  <h2>1. Implication 3 — Emergence of AI sovereignty <span class="timestamp">0:10 – 0:22</span></h2>
+  <p>Third-level implication: <strong>international concept level</strong> (beyond cyber security and sectors).</p>
+  <ul>
+    <li>Sovereignty was once defined by <strong>borders</strong> ("you cannot enter mine; I cannot enter yours"). That idea has become largely irrelevant: <strong>economic security now decides sovereignty</strong> (C. Raja Mohan and other experts).</li>
+    <li>Example: if China stops supply chains even while discussing de-escalation, disengagement and de-induction on the LAC, the economy hurts at once.</li>
+    <li><strong>Chip anecdote (lecturer):</strong> a chip order for EV components cancelled overnight; prices up ~20% by morning. Reason: <strong>Nvidia and Anthropic</strong> placed bulk orders with chip fabs for cutting-edge <strong>GPUs</strong>, so fabs deprioritise regular chips (cars/EVs, mobiles, laptops) → prices rise. Linked to talk of an <strong>"AI bubble"</strong> bursting.</li>
+    <li><strong>What happened when Anthropic launched Project Glasswing:</strong> after realising Mythos' power, the <strong>US administration (Trump)</strong> told Anthropic's chief not to sell the model to any country the US cannot approve. India's Finance Ministry (Sitharaman) called a meeting; RBI Governor Sanjay Malhotra gave immediate directions — but there was <strong>no way out</strong>: Anthropic was willing, the US government said no until the country is vetted. <em>Note: [Fable] and Mythos are the two models named.</em></li>
+  </ul>
+  <div class="term-box"><strong>Write-up (lecturer's board text):</strong> "Frontier AI models have emerged as <strong>tools of geopolitics</strong>, and <strong>access to these tools decides the geopolitical might of nations</strong>. <em>Example:</em> <strong>restricted access of Fable and Mythos</strong> by the US government, citing <strong>national security</strong>."</div>
+  <figure class="lecture-diagram"><svg viewBox="0 0 700 250" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif" role="img"><defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#57606a"/></marker></defs><rect x="10" y="20" width="150" height="60" rx="7" fill="#e6f1fb" stroke="#1d5b8b" stroke-width="1.5"/><text x="85.0" y="39.85" text-anchor="middle" font-size="11" fill="#0c447c" font-weight="normal">Frontier labs buy</text><text x="85.0" y="53.85" text-anchor="middle" font-size="11" fill="#0c447c" font-weight="normal">bulk GPU capacity</text><text x="85.0" y="67.85" text-anchor="middle" font-size="11" fill="#0c447c" font-weight="normal">(Nvidia, Anthropic)</text><rect x="190" y="20" width="150" height="60" rx="7" fill="#fff7e6" stroke="#c28a1a" stroke-width="1.5"/><text x="265.0" y="39.85" text-anchor="middle" font-size="11" fill="#6b4f15" font-weight="normal">Regular chips</text><text x="265.0" y="53.85" text-anchor="middle" font-size="11" fill="#6b4f15" font-weight="normal">(EVs, mobiles, PCs)</text><text x="265.0" y="67.85" text-anchor="middle" font-size="11" fill="#6b4f15" font-weight="normal">deprioritised -&gt; price up</text><rect x="370" y="20" width="150" height="60" rx="7" fill="#fdf3f3" stroke="#8b3a3a" stroke-width="1.5"/><text x="445.0" y="39.85" text-anchor="middle" font-size="11" fill="#6b2a2a" font-weight="normal">Mythos/Fable launch</text><text x="445.0" y="53.85" text-anchor="middle" font-size="11" fill="#6b2a2a" font-weight="normal">-&gt; US govt: no sale to</text><text x="445.0" y="67.85" text-anchor="middle" font-size="11" fill="#6b2a2a" font-weight="normal">unapproved countries</text><rect x="550" y="20" width="140" height="60" rx="7" fill="#fdf3f3" stroke="#8b3a3a" stroke-width="1.5"/><text x="620.0" y="39.85" text-anchor="middle" font-size="11" fill="#6b2a2a" font-weight="normal">India: no access</text><text x="620.0" y="53.85" text-anchor="middle" font-size="11" fill="#6b2a2a" font-weight="normal">(FinMin, RBI, MeitY</text><text x="620.0" y="67.85" text-anchor="middle" font-size="11" fill="#6b2a2a" font-weight="normal">meetings)</text><line x1="160" y1="50" x2="190" y2="50" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="340" y1="50" x2="370" y2="50" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="520" y1="50" x2="550" y2="50" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="150" y="130" width="400" height="54" rx="7" fill="#1d5b8b" stroke="#1d5b8b" stroke-width="1.5"/><text x="350.0" y="153.55" text-anchor="middle" font-size="13" fill="#ffffff" font-weight="bold">AI SOVEREIGNTY</text><text x="350.0" y="169.55" text-anchor="middle" font-size="13" fill="#ffffff" font-weight="bold">Access to frontier AI tools decides geopolitical might</text><line x1="85" y1="80" x2="350" y2="130" stroke="#57606a" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#ar)"/><line x1="265" y1="80" x2="350" y2="130" stroke="#57606a" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#ar)"/><line x1="445" y1="80" x2="350" y2="130" stroke="#57606a" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#ar)"/><line x1="620" y1="80" x2="350" y2="130" stroke="#57606a" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#ar)"/><text x="350" y="215" text-anchor="middle" font-size="11" fill="#1f2328" font-weight="normal" font-style="italic">Sovereignty earlier = borders. Now = economic security + access to frontier AI.</text><text x="350" y="235" text-anchor="middle" font-size="11" fill="#6b2a2a" font-weight="bold" font-style="normal">Example: restricted access of Fable and Mythos by US government citing national security</text></svg><figcaption>Fig. 2 - How AI sovereignty emerged</figcaption></figure>
+  <div class="exam-tip">AI sovereignty is a Mains super-keyword: it also fits economics (supply-chain security), IR and cyber security. Also in IR: <strong>economic security now dominates political security; geo-economics dominates geopolitics.</strong></div>
+</section>
+
+<section id="race">
+  <h2>2. The AI race — gaps in time and India's stance <span class="timestamp">0:15 – 0:30</span></h2>
+  <ul>
+    <li>Earlier: space race (1950s–70s). Now: <strong>AI race</strong>, and inside it a second race — <strong>who builds frontier AI models</strong>. Building a ChatGPT-class model is now ordinary; frontier models that can unravel whole systems are the new frontier.</li>
+    <li><strong>Six-month gaps (lecturer's claim):</strong> US ahead of other nations by ~6 months; within the US, <strong>New York is ~6 months behind Silicon Valley</strong>; within Silicon Valley, <strong>frontier-AI firms are ~6 months ahead</strong> of other IT firms. Net: frontier labs are roughly <strong>1–2 years</strong> ahead of India (estimates in newspapers range 1.5–3 years).</li>
+    <li>A tech race has become a <strong>race between nations</strong>. The larger IR discourse: sovereignty is not decided by guns alone but by <strong>how good your AI models are</strong>.</li>
+    <li>Talent point: best coders/prompters/AI modellers will lead; but note a recent caution — a US carmaker's AI use failed and it re-hired people.</li>
+  </ul>
+  <h3>Domestic debate: what should India build?</h3>
+  <table>
+    <tr><th>View</th><th>Argument</th></tr>
+    <tr><td>Don't build ChatGPT-like LLMs</td><td>An IIT-linked founder: India cannot win; don't waste time.</td></tr>
+    <tr><td>Dual approach</td><td><strong>Nandan Nilekani</strong> (as cited): build <strong>small language models</strong> for specific sectors <em>and</em> still use frontier models — if access is cut, dependence becomes a "significant hazard"; India is 100% vulnerable in the AI race.</td></tr>
+    <tr><td>Government's stance</td><td>India knows it can't win the build race; thus emphasises <strong>AI governance</strong> — <em>it doesn't matter who makes a technology; it matters how it is used for welfare</em> (<strong>India AI Impact Summit</strong>, Feb 2026).</td></tr>
+  </table>
+  <div class="gap-box"><h4>Congruence with France / EU</h4><p>Macron (France) and India are both "squeezed": the US has stepped back in the West, Japan in the East. France holds the <strong>G7</strong> presidency, India <strong>BRICS</strong> chair — a rare chance to bridge Global North and South; risk: managing Iran, UAE and Arab states inside BRICS. Use "<strong>congruence</strong>" in IR answers.</p></div>
+</section>
+
+<section id="inequality">
+  <h2>3. Implication 4 — Cyber-power inequality <span class="timestamp">0:27 – 0:33</span></h2>
+  <ul>
+    <li>Frontier AI creates <strong>haves and have-nots</strong>: <strong>haves</strong> = those with access to frontier AI tech; <strong>have-nots</strong> = dependent on <strong>external vendors</strong> (OpenAI, Claude) without access.</li>
+    <li>Write <strong>cyber-power inequality</strong> ("country-wise divide between haves and have-nots") — Global North (haves) vs <strong>Global South</strong> (have-nots).</li>
+    <li>The Global South would be exposed to <strong>machine-speed attacks</strong> with <strong>human-speed patching</strong> — "patches will take years; accept it".</li>
+    <li>Best example: <strong>China</strong> — denied the International Space Station → built <strong>Tiangong</strong>; denied advanced chips by Nvidia → partial H200 supplies only after the Xi–Trump meeting.</li>
+  </ul>
+  <figure class="lecture-diagram"><svg viewBox="0 0 700 260" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif" role="img"><defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#57606a"/></marker></defs><rect x="30" y="20" width="300" height="90" rx="7" fill="#eef4f0" stroke="#2f6b4f" stroke-width="1.5"/><text x="180.0" y="54.2" text-anchor="middle" font-size="12" fill="#1f4d37" font-weight="normal">HAVES - Global North</text><text x="180.0" y="69.2" text-anchor="middle" font-size="12" fill="#1f4d37" font-weight="normal">Access to frontier AI (OpenAI, Claude, ...)</text><text x="180.0" y="84.2" text-anchor="middle" font-size="12" fill="#1f4d37" font-weight="normal">Find + patch at machine speed</text><rect x="370" y="20" width="300" height="90" rx="7" fill="#fdf3f3" stroke="#8b3a3a" stroke-width="1.5"/><text x="520.0" y="46.7" text-anchor="middle" font-size="12" fill="#6b2a2a" font-weight="normal">HAVE-NOTS - Global South</text><text x="520.0" y="61.7" text-anchor="middle" font-size="12" fill="#6b2a2a" font-weight="normal">Dependent on external vendors</text><text x="520.0" y="76.7" text-anchor="middle" font-size="12" fill="#6b2a2a" font-weight="normal">Exposed to machine-speed attacks</text><text x="520.0" y="91.7" text-anchor="middle" font-size="12" fill="#6b2a2a" font-weight="normal">with HUMAN-speed patching</text><line x1="330" y1="65" x2="370" y2="65" stroke="#57606a" stroke-width="1.6" stroke-dasharray="5,4"/><text x="350" y="60" text-anchor="middle" font-size="12" fill="#1f2328" font-weight="bold" font-style="normal">vs</text><rect x="130" y="150" width="440" height="44" rx="7" fill="#1d5b8b" stroke="#1d5b8b" stroke-width="1.5"/><text x="350.0" y="176.55" text-anchor="middle" font-size="13" fill="#ffffff" font-weight="bold">CYBER-POWER INEQUALITY (country-wise divide)</text><line x1="180" y1="110" x2="300" y2="150" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="520" y1="110" x2="400" y2="150" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><text x="350" y="225" text-anchor="middle" font-size="11" fill="#1f2328" font-weight="normal" font-style="italic">Precedent: China denied ISS -&gt; built Tiangong; denied Nvidia chips -&gt; partial H200 later</text></svg><figcaption>Fig. 3 - Cyber-power inequality</figcaption></figure>
+</section>
+
+<section id="chips">
+  <h2>4. Chips, ASML and the India Semiconductor Mission <span class="timestamp">0:30 – 0:36</span></h2>
+  <ul>
+    <li><strong>ASML</strong> (Netherlands): the only company with <strong>EUV (Extreme Ultraviolet) lithography</strong> — machines that imprint chip dies on silicon wafers. The smaller the chip, the greater the precision needed.</li>
+    <li>The US (Trump administration) directed ASML (~2 years earlier) not to supply the latest equipment to China, so China's chips lag Taiwan's.</li>
+    <li>India link: PM Modi met ASML's CEO in the Netherlands (the lecturer also recalls an earlier photo of the CEO with Tata in India). Reason: US tariff policy and the decline in <strong>trans-Atlantic cooperation</strong> make the Netherlands attractive. ~2.5 lakh Indians live in the Netherlands (Europe: UK first, Germany second, Netherlands third).</li>
+    <li><strong>India Semiconductor Mission:</strong> ~<strong>12 plants</strong> approved so far; ISM 2.0 expected before Prelims. Chips can be made in India (plants approved, ~2 more years) but <strong>equipment must be imported</strong> — hence ASML.</li>
+    <li><strong>Static hooks:</strong> India's rare-earth corridor scheme (four states) for <strong>sintered permanent magnets</strong> (Budget class); critical minerals gave <strong>3 questions in Prelims 2025</strong> and 1 in 2026 (rare earth elements).</li>
+  </ul>
+</section>
+
+<section id="arms">
+  <h2>5. AI cyber arms race, hybrid &amp; asymmetric warfare <span class="timestamp">0:35 – 0:55</span></h2>
+  <h3>Implication 7 — AI cyber arms race</h3>
+  <ul>
+    <li><strong>Chinese cybersecurity firm Qihoo 360 (Q360)</strong> announced tools to match Mythos-type capabilities — <strong>an autonomous software-vulnerability detection tool</strong>. (Always use the names the lecturer gave: examiners reward precision.)</li>
+    <li>IDSA commentary (a young researcher, June 2026) on this — good source, but no time to read.</li>
+    <li>Cyber conflict precedents: Georgia and Estonia, Ukraine–Russia, India–Pakistan (our backyard).</li>
+  </ul>
+  <h3>Implication 8 — Intensification of hybrid and asymmetric warfare</h3>
+  <ul>
+    <li><strong>Asymmetric example — Iran vs US:</strong> the US has the strongest defence tech and ~19–20 aircraft carriers (China ~9–10, India 1–2). Iran's strength was <strong>horizontal escalation</strong> with cheap drones and missiles. For the weaker side, <strong>not losing</strong> is a win — keep the stronger power engaged for all "five rounds".</li>
+    <li>Non-state actors need no expensive drones: <strong>one clever engineer</strong> with Mythos-type access can hit critical infrastructure or air-defence software. Mission Sudarshan Chakra (air-defence shield) runs on software. (Rafale loss: the vendor admitted one jet was down — software dependence.)</li>
+    <li>If a Chinese model like Q360 succeeds, it could be <strong>given to Pakistan</strong> — no need to engage forces; instead cause internal-security crises in India.</li>
+  </ul>
+  <figure class="lecture-diagram"><svg viewBox="0 0 700 250" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif" role="img"><defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#57606a"/></marker></defs><rect x="20" y="10" width="320" height="40" rx="7" fill="#e6f1fb" stroke="#1d5b8b" stroke-width="1.5"/><text x="180.0" y="34.55" text-anchor="middle" font-size="13" fill="#0c447c" font-weight="bold">TRADITIONAL WARFARE</text><rect x="360" y="10" width="320" height="40" rx="7" fill="#fdf3f3" stroke="#8b3a3a" stroke-width="1.5"/><text x="520.0" y="34.55" text-anchor="middle" font-size="13" fill="#6b2a2a" font-weight="bold">HYBRID / ASYMMETRIC (post-Mythos)</text><rect x="20" y="62" width="320" height="38" rx="7" fill="#ffffff" stroke="#57606a" stroke-width="1.5"/><text x="180.0" y="84.675" text-anchor="middle" font-size="10.5" fill="#1f2328" font-weight="normal">State-led</text><rect x="360" y="62" width="320" height="38" rx="7" fill="#ffffff" stroke="#57606a" stroke-width="1.5"/><text x="520.0" y="84.675" text-anchor="middle" font-size="10.5" fill="#1f2328" font-weight="normal">Non-state actors (LeT, JeM) + proxies</text><line x1="340" y1="81" x2="360" y2="81" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="20" y="107" width="320" height="38" rx="7" fill="#ffffff" stroke="#57606a" stroke-width="1.5"/><text x="180.0" y="122.925" text-anchor="middle" font-size="10.5" fill="#1f2328" font-weight="normal">Force ratio, firepower, mobility</text><text x="180.0" y="136.425" text-anchor="middle" font-size="10.5" fill="#1f2328" font-weight="normal">(Kargil: ~35-40 days to mobilise)</text><rect x="360" y="107" width="320" height="38" rx="7" fill="#ffffff" stroke="#57606a" stroke-width="1.5"/><text x="520.0" y="122.925" text-anchor="middle" font-size="10.5" fill="#1f2328" font-weight="normal">Data flows, decision latency,</text><text x="520.0" y="136.425" text-anchor="middle" font-size="10.5" fill="#1f2328" font-weight="normal">machine-assisted command</text><line x1="340" y1="126" x2="360" y2="126" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="20" y="152" width="320" height="38" rx="7" fill="#ffffff" stroke="#57606a" stroke-width="1.5"/><text x="180.0" y="174.675" text-anchor="middle" font-size="10.5" fill="#1f2328" font-weight="normal">Tanks, guns, carriers</text><rect x="360" y="152" width="320" height="38" rx="7" fill="#ffffff" stroke="#57606a" stroke-width="1.5"/><text x="520.0" y="174.675" text-anchor="middle" font-size="10.5" fill="#1f2328" font-weight="normal">Cheap drones, cyber, info war</text><line x1="340" y1="171" x2="360" y2="171" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="20" y="197" width="320" height="38" rx="7" fill="#ffffff" stroke="#57606a" stroke-width="1.5"/><text x="180.0" y="212.925" text-anchor="middle" font-size="10.5" fill="#1f2328" font-weight="normal">Needs money + state</text><text x="180.0" y="226.425" text-anchor="middle" font-size="10.5" fill="#1f2328" font-weight="normal">to field weapons</text><rect x="360" y="197" width="320" height="38" rx="7" fill="#ffffff" stroke="#57606a" stroke-width="1.5"/><text x="520.0" y="212.925" text-anchor="middle" font-size="10.5" fill="#1f2328" font-weight="normal">One good engineer + AI access</text><text x="520.0" y="226.425" text-anchor="middle" font-size="10.5" fill="#1f2328" font-weight="normal">-&gt; critical infra / air-defence software</text><line x1="340" y1="216" x2="360" y2="216" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><text x="350" y="245" text-anchor="middle" font-size="11" fill="#6b2a2a" font-weight="bold" font-style="normal">Not only a cyber threat: internal security + national security + sovereignty threat</text></svg><figcaption>Fig. 4 - Traditional vs hybrid and asymmetric warfare</figcaption></figure>
+  <div class="term-box"><strong>Write-up:</strong> "There is a <strong>shift from traditional warfare</strong> (state-led; force ratio; <strong>firepower</strong>; mobility — Kargil took ~35–40 days to mobilise) to <strong>hybrid &amp; asymmetric warfare</strong> (non-state actors; information, cyber, proxy)." Add: it is <strong>not</strong> dependent on cyber alone — it is based on <strong>data flows</strong>; add <strong>decision latency</strong> and <strong>machine-assisted command</strong>.</div>
+  <ul>
+    <li><strong>Operation Sindoor lessons (lecturer's view):</strong> India lost the <em>information</em> and <em>diplomatic</em> battle; Pakistan spread narratives abroad. Non-state actors (LeT, JeM) launched cyber attacks (e.g. on an army school in Srinagar) — neutralised, but war is <strong>all-encompassing</strong>, not just on borders.</li>
+    <li>Core thought for the question: <strong>this is not merely a cyber-security threat — it is an internal-security, national-security and sovereignty threat.</strong></li>
+  </ul>
+</section>
+
+<section id="cost">
+  <h2>6. Implication 9 — Financial cost; MSMEs <span class="timestamp">0:46 – 0:55</span></h2>
+  <ul>
+    <li><strong>Acquisition cost</strong> of access to frontier AI is high (even a ChatGPT-class subscription ~₹23,000/yr; frontier access is at another scale).</li>
+    <li>State, Infosys-type firms and unicorns can pay. The worst hit are <strong>MSMEs</strong> (bulk of Indian IT firms are MSMEs). Recommendation: a <strong>separate fund</strong> for them with immediate effect.</li>
+    <li>Government has no access yet; once it does, officials will study and then act — too late if an attacker (e.g. a militant group) has already used it.</li>
+  </ul>
+  <div class="term-box"><strong>Why MSMEs are most vulnerable (write 1–2–3):</strong> (1) lack of <strong>cyber-security capabilities</strong>, (2) <strong>shortage of trained staff</strong>, (3) weak <strong>backup discipline</strong> and <strong>incident response plans</strong> — they have prepared for fire, monsoon and internet outages, not cyber attack.</div>
+  <p><strong>Conclusion line for "Implications":</strong> "Therefore, <strong>the Mythos-led frontier AI model era is a national security concern</strong>." (This is also the 'Discuss' question flipped — if asked "Discuss", cover the dimensions above.)</p>
+</section>
+
+<section id="merits">
+  <h2>7. Merits of access to Mythos — the positive side <span class="timestamp">0:55 – 1:07</span></h2>
+  <p>Negatives dominate (about 70–80% of the answer), but passing mention of positives is needed. Government meetings, RBI statements and MeitY's access request show the downsides are serious.</p>
+  <ol>
+    <li><strong>Better (sovereign) cyber-security capabilities.</strong></li>
+    <li><strong>Early access</strong> → <strong>indigenisation</strong> of frontier AI model technology.</li>
+    <li><strong>Capacity building</strong> and training of human resource (cyber professionals learning AI tools).</li>
+    <li><strong>Economic advantages:</strong> a team of 100 cyber experts at ~₹1 crore each is a big cost; with Mythos, <strong>patching/discovery time falls</strong> and <strong>need for human deployment reduces</strong> (because of speed and scale of detection) → reduced dependence on cyber-security manpower.</li>
+    <li><strong>Strong deterrence</strong> against cyber attacks by non-state actors like LeT/JeM exploiting vulnerabilities for cyber crime (e.g. ransomware).</li>
+  </ol>
+  <p>All merits are the <em>flip side of the demerits</em> — hence "double-edged sword" and "dual-use technology" (like a missile: send it to Pakistan or to outer space).</p>
+  <div class="gap-box"><h4>Dual-use export-control regimes (lecturer unsure which two — verify)</h4><p>Four regimes: <strong>NSG</strong> (nuclear), <strong>MTCR</strong> (missiles), <strong>Australia Group</strong> (chemical/biological), <strong>Wassenaar Arrangement</strong> (conventional arms and dual-use goods/technologies). [Supplement] India is a member of MTCR, Australia Group and Wassenaar; not NSG.</p></div>
+</section>
+
+<section id="gaps">
+  <h2>8. Issues &amp; gaps — challenges for India <span class="timestamp">1:07 – 1:55</span></h2>
+  <div class="exam-tip">There is a thin line: <strong>issues of India's cyber-security capabilities</strong> (a 3–4 page topic) vs <strong>issues from frontier-AI/Mythos-led threats</strong>. A "Mythos" question wants the second; cover the first in 3 lines.</div>
+  <figure class="lecture-diagram"><svg viewBox="0 0 700 330" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif" role="img"><defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#57606a"/></marker></defs><rect x="240" y="8" width="220" height="38" rx="7" fill="#1d5b8b" stroke="#1d5b8b" stroke-width="1.5"/><text x="350.0" y="31.55" text-anchor="middle" font-size="13" fill="#ffffff" font-weight="bold">ISSUES / GAPS for India</text><rect x="10" y="80" width="105" height="60" rx="7" fill="#fdf3f3" stroke="#8b3a3a" stroke-width="1.5"/><text x="62.5" y="99.85" text-anchor="middle" font-size="11" fill="#6b2a2a" font-weight="bold">A</text><text x="62.5" y="113.85" text-anchor="middle" font-size="11" fill="#6b2a2a" font-weight="bold">Narrow</text><text x="62.5" y="127.85" text-anchor="middle" font-size="11" fill="#6b2a2a" font-weight="bold">vision</text><line x1="350" y1="46" x2="62" y2="80" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="125" y="80" width="105" height="60" rx="7" fill="#fdf3f3" stroke="#8b3a3a" stroke-width="1.5"/><text x="177.5" y="106.85" text-anchor="middle" font-size="11" fill="#6b2a2a" font-weight="bold">B</text><text x="177.5" y="120.85" text-anchor="middle" font-size="11" fill="#6b2a2a" font-weight="bold">Institutional</text><line x1="350" y1="46" x2="177" y2="80" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="240" y="80" width="105" height="60" rx="7" fill="#fdf3f3" stroke="#8b3a3a" stroke-width="1.5"/><text x="292.5" y="99.85" text-anchor="middle" font-size="11" fill="#6b2a2a" font-weight="bold">C</text><text x="292.5" y="113.85" text-anchor="middle" font-size="11" fill="#6b2a2a" font-weight="bold">Human</text><text x="292.5" y="127.85" text-anchor="middle" font-size="11" fill="#6b2a2a" font-weight="bold">resource</text><line x1="350" y1="46" x2="292" y2="80" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="355" y="80" width="105" height="60" rx="7" fill="#fdf3f3" stroke="#8b3a3a" stroke-width="1.5"/><text x="407.5" y="99.85" text-anchor="middle" font-size="11" fill="#6b2a2a" font-weight="bold">D</text><text x="407.5" y="113.85" text-anchor="middle" font-size="11" fill="#6b2a2a" font-weight="bold">Legal &amp;</text><text x="407.5" y="127.85" text-anchor="middle" font-size="11" fill="#6b2a2a" font-weight="bold">accountability</text><line x1="350" y1="46" x2="407" y2="80" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="470" y="80" width="105" height="60" rx="7" fill="#fdf3f3" stroke="#8b3a3a" stroke-width="1.5"/><text x="522.5" y="99.85" text-anchor="middle" font-size="11" fill="#6b2a2a" font-weight="bold">E</text><text x="522.5" y="113.85" text-anchor="middle" font-size="11" fill="#6b2a2a" font-weight="bold">Risk-tier &amp;</text><text x="522.5" y="127.85" text-anchor="middle" font-size="11" fill="#6b2a2a" font-weight="bold">pre-release</text><line x1="350" y1="46" x2="522" y2="80" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="585" y="80" width="105" height="60" rx="7" fill="#fff7e6" stroke="#c28a1a" stroke-width="1.5"/><text x="637.5" y="106.85" text-anchor="middle" font-size="11" fill="#6b4f15" font-weight="bold">F</text><text x="637.5" y="120.85" text-anchor="middle" font-size="11" fill="#6b4f15" font-weight="bold">Other</text><line x1="350" y1="46" x2="637" y2="80" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><text x="62" y="165" text-anchor="middle" font-size="9.5" fill="#1f2328" font-weight="normal" font-style="normal">Cyber = support fn</text><text x="62" y="181" text-anchor="middle" font-size="9.5" fill="#1f2328" font-weight="normal" font-style="normal">Shift to AI-enabled,</text><text x="62" y="197" text-anchor="middle" font-size="9.5" fill="#1f2328" font-weight="normal" font-style="normal">autonomous,</text><text x="62" y="213" text-anchor="middle" font-size="9.5" fill="#1f2328" font-weight="normal" font-style="normal">network-centric</text><text x="177" y="165" text-anchor="middle" font-size="9.5" fill="#1f2328" font-weight="normal" font-style="normal">AISI headless</text><text x="177" y="181" text-anchor="middle" font-size="9.5" fill="#1f2328" font-weight="normal" font-style="normal">No model-test body</text><text x="177" y="197" text-anchor="middle" font-size="9.5" fill="#1f2328" font-weight="normal" font-style="normal">Dev &gt; safety</text><text x="177" y="213" text-anchor="middle" font-size="9.5" fill="#1f2328" font-weight="normal" font-style="normal">Many agencies</text><text x="292" y="165" text-anchor="middle" font-size="9.5" fill="#1f2328" font-weight="normal" font-style="normal">Exploit analysts</text><text x="292" y="181" text-anchor="middle" font-size="9.5" fill="#1f2328" font-weight="normal" font-style="normal">Code reviewers</text><text x="292" y="197" text-anchor="middle" font-size="9.5" fill="#1f2328" font-weight="normal" font-style="normal">Reverse engineers</text><text x="292" y="213" text-anchor="middle" font-size="9.5" fill="#1f2328" font-weight="normal" font-style="normal">~6 lakh gap</text><text x="407" y="165" text-anchor="middle" font-size="9.5" fill="#1f2328" font-weight="normal" font-style="normal">IT Act 2000</text><text x="407" y="181" text-anchor="middle" font-size="9.5" fill="#1f2328" font-weight="normal" font-style="normal">No liability for</text><text x="407" y="197" text-anchor="middle" font-size="9.5" fill="#1f2328" font-weight="normal" font-style="normal">non-patching</text><text x="407" y="213" text-anchor="middle" font-size="9.5" fill="#1f2328" font-weight="normal" font-style="normal">Safe harbour s.79</text><text x="522" y="165" text-anchor="middle" font-size="9.5" fill="#1f2328" font-weight="normal" font-style="normal">Risk tiering</text><text x="522" y="181" text-anchor="middle" font-size="9.5" fill="#1f2328" font-weight="normal" font-style="normal">Pre-release eval</text><text x="522" y="197" text-anchor="middle" font-size="9.5" fill="#1f2328" font-weight="normal" font-style="normal">Controlled access</text><text x="522" y="213" text-anchor="middle" font-size="9.5" fill="#1f2328" font-weight="normal" font-style="normal">Jailbreak std</text><text x="637" y="165" text-anchor="middle" font-size="9.5" fill="#1f2328" font-weight="normal" font-style="normal">R&amp;D ~0.6% GDP</text><text x="637" y="181" text-anchor="middle" font-size="9.5" fill="#1f2328" font-weight="normal" font-style="normal">2013 policy, WannaCry</text><text x="637" y="197" text-anchor="middle" font-size="9.5" fill="#1f2328" font-weight="normal" font-style="normal">sector coordination</text><text x="637" y="213" text-anchor="middle" font-size="9.5" fill="#1f2328" font-weight="normal" font-style="normal">MeitY budget</text><text x="350" y="275" text-anchor="middle" font-size="11" fill="#6b2a2a" font-weight="bold" font-style="normal">Chain: Vision - Institutions - People - Law - Classification - Tech/money</text><text x="350" y="300" text-anchor="middle" font-size="10.5" fill="#1f2328" font-weight="normal" font-style="italic">Thin line: Mythos-led gaps (this question) vs general cyber-security gaps (3 lines)</text></svg><figcaption>Fig. 5 - Issues and gaps (A to F)</figcaption></figure>
+
+  <h3>A. Narrow vision <span class="timestamp">1:10</span></h3>
+  <ul>
+    <li>Cyber security is seen as a <strong>support function</strong> — protecting military systems and information systems (a few computers and antivirus).</li>
+    <li>The focus must now shift to: (1) <strong>AI-enabled cyber security</strong>, (2) <strong>autonomous systems</strong>, (3) <strong>network-centric architecture</strong> and the <strong>all-encompassing nature of frontier-AI-led cyber security</strong>.</li>
+    <li>This is a <strong>conceptual flaw</strong>. Fix the vision first.</li>
+  </ul>
+
+  <h3>B. Institutional gaps <span class="timestamp">1:15 – 1:30</span></h3>
+  <ol>
+    <li><strong>AI Safety Institute</strong> recently established (lecturer: Oct 2025) and <strong>headless</strong> (no director). Compare: <strong>UK AI Safety Institute</strong> analysed Mythos; US has the <strong>Center for AI Standards and Innovation (CAISI)</strong>.</li>
+    <li><strong>No dedicated body for model testing.</strong> Even if Mythos were handed to India, no body can reverse-engineer and test it with top experts. UK and US have world-class institutions.</li>
+    <li><strong>Development-driven, not safety-driven approach:</strong> <strong>IndiaAI Mission</strong> (MeitY) is more tilted to development/better models than safety evaluation — although "safe &amp; trusted AI" is one of the seven pillars. Understandable for a developing country, but ethics should be clear from day one. <em>Approach style:</em> India is <strong>light-touch regulatory</strong> (like Japan) — US believes in unconstrained innovation; EU is strict on personal data; China is state-driven.</li>
+    <li><strong>Multiplicity of institutions, lack of convergence:</strong> <figure class="lecture-diagram"><svg viewBox="0 0 700 280" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif" role="img"><defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#57606a"/></marker></defs><rect x="240" y="8" width="220" height="36" rx="7" fill="#fff7e6" stroke="#c28a1a" stroke-width="1.5"/><text x="350.0" y="30.2" text-anchor="middle" font-size="12" fill="#6b4f15" font-weight="bold">Cyber incident / AI threat</text><rect x="10" y="85" width="150" height="66" rx="7" fill="#e6f1fb" stroke="#1d5b8b" stroke-width="1.5"/><text x="85.0" y="107.85" text-anchor="middle" font-size="11" fill="#0c447c" font-weight="normal">STATE POLICE</text><text x="85.0" y="121.85" text-anchor="middle" font-size="11" fill="#0c447c" font-weight="normal">Zero FIR</text><text x="85.0" y="135.85" text-anchor="middle" font-size="11" fill="#0c447c" font-weight="normal">investigation</text><rect x="180" y="85" width="160" height="66" rx="7" fill="#e6f1fb" stroke="#1d5b8b" stroke-width="1.5"/><text x="260.0" y="107.85" text-anchor="middle" font-size="11" fill="#0c447c" font-weight="normal">MeitY / CERT-In</text><text x="260.0" y="121.85" text-anchor="middle" font-size="11" fill="#0c447c" font-weight="normal">IT Act 2000</text><text x="260.0" y="135.85" text-anchor="middle" font-size="11" fill="#0c447c" font-weight="normal">incident reports</text><rect x="360" y="85" width="160" height="66" rx="7" fill="#e6f1fb" stroke="#1d5b8b" stroke-width="1.5"/><text x="440.0" y="107.85" text-anchor="middle" font-size="11" fill="#0c447c" font-weight="normal">MHA / I4C</text><text x="440.0" y="121.85" text-anchor="middle" font-size="11" fill="#0c447c" font-weight="normal">Centre-State</text><text x="440.0" y="135.85" text-anchor="middle" font-size="11" fill="#0c447c" font-weight="normal">coordination</text><rect x="540" y="85" width="150" height="66" rx="7" fill="#e6f1fb" stroke="#1d5b8b" stroke-width="1.5"/><text x="615.0" y="107.85" text-anchor="middle" font-size="11" fill="#0c447c" font-weight="normal">NSCS (PMO)</text><text x="615.0" y="121.85" text-anchor="middle" font-size="11" fill="#0c447c" font-weight="normal">NSA, DNSA</text><text x="615.0" y="135.85" text-anchor="middle" font-size="11" fill="#0c447c" font-weight="normal">strategy</text><line x1="350" y1="44" x2="85" y2="85" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="350" y1="44" x2="260" y2="85" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="350" y1="44" x2="440" y2="85" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="350" y1="44" x2="615" y2="85" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="150" y="185" width="400" height="40" rx="7" fill="#fdf3f3" stroke="#8b3a3a" stroke-width="1.5"/><text x="350.0" y="209.2" text-anchor="middle" font-size="12" fill="#6b2a2a" font-weight="bold">Limited coordination, no institutional convergence</text><line x1="85" y1="151" x2="350" y2="185" stroke="#57606a" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#ar)"/><line x1="260" y1="151" x2="350" y2="185" stroke="#57606a" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#ar)"/><line x1="440" y1="151" x2="350" y2="185" stroke="#57606a" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#ar)"/><line x1="615" y1="151" x2="350" y2="185" stroke="#57606a" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#ar)"/><text x="350" y="255" text-anchor="middle" font-size="11" fill="#1f2328" font-weight="normal" font-style="italic">Mythos is not a cyber crime or attack: framework must change (AI governance)</text></svg><figcaption>Fig. 6 - Multiplicity of institutions (lecturer&#x27;s board)</figcaption></figure></li>
+  </ol>
+
+  <h3>C. Human resource challenge <span class="timestamp">1:27 – 1:32</span></h3>
+  <ul>
+    <li>Lack of <strong>AI-related skilled professionals</strong>. Need specific roles (not generic "data analyst"): <strong>exploit analysts</strong>, <strong>secure-code reviewers</strong>, <strong>reverse engineers</strong>, <strong>cloud and API security experts</strong>, <strong>legal-forensic specialists</strong>.</li>
+    <li>Fact: <strong>cyber-security workforce gap of ~6 lakh professionals</strong> in India <em>(lecturer garbled: "6000 … 6 lakh" — verify)</em>.</li>
+    <li>Fact: <strong>CERT-In reported 29.44 lakh cyber incidents</strong> <em>(year not clear in the audio — verify)</em>; the lecturer will graph the trend in cyber security class.</li>
+  </ul>
+
+  <h3>D. Legal and accountability gap <span class="timestamp">1:32 – 1:42</span></h3>
+  <ul>
+    <li><strong>Archaic laws</strong> incapable of addressing Mythos-type threats; e.g. <strong>IT Act, 2000</strong> (26 years old). Other jurisdictions (EU, US, NZ, Australia) have legal frameworks; India has none for this layer — if Mythos were used to attack a bank or all coaching institutes, is it a cyber crime? It is a different layer altogether.</li>
+    <li><strong>Accountability:</strong> a developer building a Mythos-type model has no regime to bind them; analogy: <strong>Manhattan Project</strong> minds. In the US, too, there is no regime — the administration's experts caught Anthropic's head and told him not to send anyone.</li>
+    <li>No <strong>AI-vulnerability governance regime</strong> covering <strong>safe harbour</strong> — e.g. <strong>Sec. 79 IT Act</strong> (intermediary protection): Telegram's brief ban threat to force compliance with MeitY directions.</li>
+    <li>No <strong>mandatory disclosure</strong> for critical vendors; no <strong>liability for negligent non-patching</strong>; no <strong>penalties for malicious use of AI-generated exploit pathways</strong>.</li>
+  </ul>
+
+  <h3>E. Classification and pre-release evaluation gaps <span class="timestamp">1:40 – 1:52</span></h3>
+  <ul>
+    <li><strong>Frontier AI cyber-capability classification gap:</strong> a <strong>visible risk-tiering framework</strong> (high/medium/low risk) for AI models with <strong>offensive cyber capability</strong> needs to be developed. Some argue India shouldn't classify; many countries do (China, parts of the West). Classification is the first step to regulating development and release.</li>
+    <li><strong>Pre-release evaluation and controlled-access gap:</strong> e.g. <strong>US government treated Fable and Mythos as national-security-sensitive models</strong>, temporarily restricted access, and lifted the restrictions <strong>only after safeguards and work on jailbreak standards</strong>. (<strong>Jailbreak</strong> = bypassing a software's built-in restrictions, like an iPhone jailbreak/unlocking.)</li>
+    <li>US process: tested extensively, studied implications, checked whether it could leak / be jailbroken by non-state actors (Al-Qaeda, Taliban), ransomware experts, Russian/Chinese experts → then allowed release to approved countries. India has no such pre-release mechanism (and no access).</li>
+  </ul>
+
+  <h3>F. Other gaps <span class="timestamp">1:50 – 2:12</span></h3>
+  <ol>
+    <li><strong>Limited R&amp;D spending</strong> (about 0.6–0.7% of GDP; the audio reads "6%") — majority from public sector.</li>
+    <li><strong>Cyber-security related challenges</strong> (inside "Other"; a separate topic in the next class):
+      <ul>
+        <li><strong>Outdated cyber-security policy</strong> — <strong>National Cyber Security Policy, 2013</strong>; no AI in it. (UPSC asked a basic cyber-security question in 2013; the lecturer missed the interview call by 1 mark that year.)</li>
+        <li><strong>Poor record in vulnerability patching:</strong> <strong>WannaCry</strong> ransomware (Windows) — Microsoft discovered and patched the flaw ~2 months before the attack but Indian systems did not patch and ran outdated software; it hit hospitals and critical infrastructure. Similarly <strong>AIIMS Delhi ransomware, 2022</strong> — slow to respond/patch.</li>
+        <li><strong>Limited sectoral coordination</strong> — critical-infrastructure vulnerability needs Finance, Telecom, Railways, Power and Airports together.</li>
+        <li><strong>Lack of sector-specific AI-cyber playbooks</strong> and <strong>lack of mandatory drills</strong> for AI-related threats.</li>
+        <li>AI-related threats to name: <strong>frontier-AI-led cyber-security concerns</strong>, <strong>supply-chain security</strong>, <strong>AI-assisted ransomware scenarios</strong>.</li>
+        <li><strong>Cyber hygiene</strong> (better than "cyber literacy") — next class.</li>
+      </ul>
+    </li>
+    <li><strong>Resource constraints:</strong> limited budget allocation to MeitY and limited allocation by companies towards cyber security.</li>
+  </ol>
+  <div class="gap-box"><h4>The lecturer's order of gaps (memorise as a chain)</h4><p>Vision → Institutions → People → Law &amp; accountability → Classification &amp; pre-release → Technology inferiority and money. "Vision (A) · Institutions (B) · HR (C) · Legal (D) · Risk-tiering/pre-release (E) · Other (F)".</p></div>
+</section>
+
+<section id="steps">
+  <h2>9. Steps taken by India <span class="timestamp">2:05 – 2:20</span></h2>
+  <div class="exam-tip">"Steps" in Mains means the steps <strong>already taken</strong>; "way forward" expands them into your strategy. Steps here are specifically for the <strong>Mythos-led threat</strong>, not generic cyber steps.</div>
+  <figure class="lecture-diagram"><svg viewBox="0 0 700 210" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif" role="img"><defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#57606a"/></marker></defs><rect x="10" y="30" width="160" height="90" rx="7" fill="#e6f1fb" stroke="#1d5b8b" stroke-width="1.5"/><text x="90.0" y="65.175" text-anchor="middle" font-size="10.5" fill="#0c447c" font-weight="normal">1. High-level review</text><text x="90.0" y="78.675" text-anchor="middle" font-size="10.5" fill="#0c447c" font-weight="normal">FinMin + MeitY +</text><text x="90.0" y="92.175" text-anchor="middle" font-size="10.5" fill="#0c447c" font-weight="normal">RBI, NPCI, CERT-In</text><line x1="170" y1="75" x2="182" y2="75" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="182" y="30" width="160" height="90" rx="7" fill="#eef4f0" stroke="#2f6b4f" stroke-width="1.5"/><text x="262.0" y="58.425" text-anchor="middle" font-size="10.5" fill="#1f4d37" font-weight="normal">2. RBI role</text><text x="262.0" y="71.925" text-anchor="middle" font-size="10.5" fill="#1f4d37" font-weight="normal">advisories to banks/NBFCs</text><text x="262.0" y="85.425" text-anchor="middle" font-size="10.5" fill="#1f4d37" font-weight="normal">board gap assessment,</text><text x="262.0" y="98.925" text-anchor="middle" font-size="10.5" fill="#1f4d37" font-weight="normal">global CB coordination</text><line x1="342" y1="75" x2="354" y2="75" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="354" y="30" width="160" height="90" rx="7" fill="#fff7e6" stroke="#c28a1a" stroke-width="1.5"/><text x="434.0" y="65.175" text-anchor="middle" font-size="10.5" fill="#6b4f15" font-weight="normal">3. Glasswing</text><text x="434.0" y="78.675" text-anchor="middle" font-size="10.5" fill="#6b4f15" font-weight="normal">engagement</text><text x="434.0" y="92.175" text-anchor="middle" font-size="10.5" fill="#6b4f15" font-weight="normal">(diplomacy, access)</text><line x1="514" y1="75" x2="526" y2="75" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="526" y="30" width="160" height="90" rx="7" fill="#fdf3f3" stroke="#8b3a3a" stroke-width="1.5"/><text x="606.0" y="58.425" text-anchor="middle" font-size="10.5" fill="#6b2a2a" font-weight="normal">4. Panel under</text><text x="606.0" y="71.925" text-anchor="middle" font-size="10.5" fill="#6b2a2a" font-weight="normal">SBI Chairman:</text><text x="606.0" y="85.425" text-anchor="middle" font-size="10.5" fill="#6b2a2a" font-weight="normal">assess AI-platform risk,</text><text x="606.0" y="98.925" text-anchor="middle" font-size="10.5" fill="#6b2a2a" font-weight="normal">mitigate</text><text x="350" y="150" text-anchor="middle" font-size="10.5" fill="#1f2328" font-weight="normal" font-style="italic">Also: RBI 2025 framework for responsible and ethical AI in finance (came before; indirect)</text><text x="350" y="180" text-anchor="middle" font-size="11" fill="#1f2328" font-weight="bold" font-style="normal">Frame: threat to financial security + critical digital infrastructure = proactive response</text></svg><figcaption>Fig. 7 - Steps taken (lecture order)</figcaption></figure>
+  <ol>
+    <li><strong>High-level inter-sectoral review</strong> — Ministry of Finance (Sitharaman) called a meeting with MeitY (Ashwini Vaishnaw) and sectoral regulators; participants included <strong>RBI, NPCI, CERT-In</strong>. It was <strong>not</strong> convened by MHA. Treated as a threat to <strong>financial security and critical digital infrastructure</strong>; shows <strong>proactive</strong> response.</li>
+    <li><strong>Role of RBI:</strong> issued <strong>advisories to regulated entities</strong> (banks and NBFCs); <strong>coordinated with global central banks</strong> (US Federal Reserve, Bank of England); directed <strong>boards to approve a gap assessment and a time-bound action plan</strong>. Assessments: scan risk from frontier AI models, identify vulnerabilities, structured cyber-security framework.</li>
+    <li><strong>RBI framework (2025):</strong> a framework to promote <strong>responsible and ethical adoption of AI in the financial sector</strong> — not a direct response to this threat but came before it.</li>
+    <li><strong>Engagement with Project Glasswing:</strong> India engaged via diplomacy and governmental agencies to <strong>gain access to Claude Mythos</strong> so as to see the vulnerabilities (the lecturer says Indian cyber-security agencies <strong>got access</strong> — verify).</li>
+    <li><strong>Panel under the SBI Chairman:</strong> set up to <strong>assess risk from AI platforms like Mythos</strong> and <strong>develop mitigating measures</strong>.</li>
+  </ol>
+  <p style="font-size:0.9em;color:#57606a;">The lecturer says "four steps" then lists these; the RBI 2025 framework is a sub-point. Memorise as 4: review · RBI · Glasswing · SBI panel.</p>
+</section>
+
+<section id="way">
+  <h2>10. Way forward — strategy <span class="timestamp">2:20 – 3:08</span></h2>
+  <div class="exam-tip">Strategy logic: <strong>vision first → then policy/law → sector steps → regulation/accountability → capacity → diplomacy → sovereign AI</strong>. Remedies must come from the <em>gaps</em> you listed ("treat the disease you diagnosed"). Newspapers add refinements later.</div>
+  <figure class="lecture-diagram"><svg viewBox="0 0 700 360" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif" role="img"><defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#57606a"/></marker></defs><rect x="230" y="8" width="240" height="38" rx="7" fill="#1d5b8b" stroke="#1d5b8b" stroke-width="1.5"/><text x="350.0" y="31.55" text-anchor="middle" font-size="13" fill="#ffffff" font-weight="bold">GRAND STRATEGY (vision first)</text><rect x="8" y="80" width="90" height="56" rx="7" fill="#e6f1fb" stroke="#1d5b8b" stroke-width="1.5"/><text x="53.0" y="104.925" text-anchor="middle" font-size="10.5" fill="#0c447c" font-weight="bold">Policy &amp;</text><text x="53.0" y="118.425" text-anchor="middle" font-size="10.5" fill="#0c447c" font-weight="bold">legal</text><line x1="350" y1="46" x2="53" y2="80" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="106" y="80" width="90" height="56" rx="7" fill="#e6f1fb" stroke="#1d5b8b" stroke-width="1.5"/><text x="151.0" y="111.675" text-anchor="middle" font-size="10.5" fill="#0c447c" font-weight="bold">Sectoral</text><line x1="350" y1="46" x2="151" y2="80" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="204" y="80" width="90" height="56" rx="7" fill="#e6f1fb" stroke="#1d5b8b" stroke-width="1.5"/><text x="249.0" y="104.925" text-anchor="middle" font-size="10.5" fill="#0c447c" font-weight="bold">Regulation &amp;</text><text x="249.0" y="118.425" text-anchor="middle" font-size="10.5" fill="#0c447c" font-weight="bold">accountability</text><line x1="350" y1="46" x2="249" y2="80" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="302" y="80" width="90" height="56" rx="7" fill="#eef4f0" stroke="#2f6b4f" stroke-width="1.5"/><text x="347.0" y="104.925" text-anchor="middle" font-size="10.5" fill="#1f4d37" font-weight="bold">AI</text><text x="347.0" y="118.425" text-anchor="middle" font-size="10.5" fill="#1f4d37" font-weight="bold">diplomacy</text><line x1="350" y1="46" x2="347" y2="80" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="400" y="80" width="90" height="56" rx="7" fill="#eef4f0" stroke="#2f6b4f" stroke-width="1.5"/><text x="445.0" y="104.925" text-anchor="middle" font-size="10.5" fill="#1f4d37" font-weight="bold">AI</text><text x="445.0" y="118.425" text-anchor="middle" font-size="10.5" fill="#1f4d37" font-weight="bold">skilling</text><line x1="350" y1="46" x2="445" y2="80" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="498" y="80" width="90" height="56" rx="7" fill="#fff7e6" stroke="#c28a1a" stroke-width="1.5"/><text x="543.0" y="104.925" text-anchor="middle" font-size="10.5" fill="#6b4f15" font-weight="bold">Sovereign</text><text x="543.0" y="118.425" text-anchor="middle" font-size="10.5" fill="#6b4f15" font-weight="bold">AI</text><line x1="350" y1="46" x2="543" y2="80" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="596" y="80" width="90" height="56" rx="7" fill="#1d5b8b" stroke="#1d5b8b" stroke-width="1.5"/><text x="641.0" y="104.925" text-anchor="middle" font-size="10.5" fill="#ffffff" font-weight="bold">Whole of</text><text x="641.0" y="118.425" text-anchor="middle" font-size="10.5" fill="#ffffff" font-weight="bold">government</text><line x1="350" y1="46" x2="641" y2="80" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><text x="53" y="160" text-anchor="middle" font-size="9" fill="#1f2328" font-weight="normal" font-style="normal">National Frontier AI</text><text x="53" y="175" text-anchor="middle" font-size="9" fill="#1f2328" font-weight="normal" font-style="normal">Cyber Strategy</text><text x="53" y="190" text-anchor="middle" font-size="9" fill="#1f2328" font-weight="normal" font-style="normal">AI-Cyber Fusion</text><text x="53" y="205" text-anchor="middle" font-size="9" fill="#1f2328" font-weight="normal" font-style="normal">Centre</text><text x="151" y="160" text-anchor="middle" font-size="9" fill="#1f2328" font-weight="normal" font-style="normal">AI-assisted audits</text><text x="151" y="175" text-anchor="middle" font-size="9" fill="#1f2328" font-weight="normal" font-style="normal">Asset inventory</text><text x="151" y="190" text-anchor="middle" font-size="9" fill="#1f2328" font-weight="normal" font-style="normal">Sector drills</text><text x="151" y="205" text-anchor="middle" font-size="9" fill="#1f2328" font-weight="normal" font-style="normal">Small entities</text><text x="151" y="220" text-anchor="middle" font-size="9" fill="#1f2328" font-weight="normal" font-style="normal">Trusted vendors</text><text x="249" y="160" text-anchor="middle" font-size="9" fill="#1f2328" font-weight="normal" font-style="normal">Laws must not weaken</text><text x="249" y="175" text-anchor="middle" font-size="9" fill="#1f2328" font-weight="normal" font-style="normal">cyber security</text><text x="249" y="190" text-anchor="middle" font-size="9" fill="#1f2328" font-weight="normal" font-style="normal">(Digital Competition</text><text x="249" y="205" text-anchor="middle" font-size="9" fill="#1f2328" font-weight="normal" font-style="normal">Bill: side-loading)</text><text x="347" y="160" text-anchor="middle" font-size="9" fill="#1f2328" font-weight="normal" font-style="normal">Like-minded nations</text><text x="347" y="175" text-anchor="middle" font-size="9" fill="#1f2328" font-weight="normal" font-style="normal">Quad, G20, BIMSTEC</text><text x="347" y="190" text-anchor="middle" font-size="9" fill="#1f2328" font-weight="normal" font-style="normal">ASEAN, bilateral</text><text x="347" y="205" text-anchor="middle" font-size="9" fill="#1f2328" font-weight="normal" font-style="normal">India-Israel</text><text x="445" y="160" text-anchor="middle" font-size="9" fill="#1f2328" font-weight="normal" font-style="normal">Industry-academia</text><text x="445" y="175" text-anchor="middle" font-size="9" fill="#1f2328" font-weight="normal" font-style="normal">-govt</text><text x="445" y="190" text-anchor="middle" font-size="9" fill="#1f2328" font-weight="normal" font-style="normal">IITs/NITs</text><text x="445" y="205" text-anchor="middle" font-size="9" fill="#1f2328" font-weight="normal" font-style="normal">subsidies</text><text x="543" y="160" text-anchor="middle" font-size="9" fill="#1f2328" font-weight="normal" font-style="normal">Domestic models</text><text x="543" y="175" text-anchor="middle" font-size="9" fill="#1f2328" font-weight="normal" font-style="normal">Real-time anomaly</text><text x="543" y="190" text-anchor="middle" font-size="9" fill="#1f2328" font-weight="normal" font-style="normal">detection</text><text x="543" y="205" text-anchor="middle" font-size="9" fill="#1f2328" font-weight="normal" font-style="normal">Glasswing-like</text><text x="543" y="220" text-anchor="middle" font-size="9" fill="#1f2328" font-weight="normal" font-style="normal">Indian cohort</text><text x="641" y="160" text-anchor="middle" font-size="9" fill="#1f2328" font-weight="normal" font-style="normal">Inter-ministerial</text><text x="641" y="175" text-anchor="middle" font-size="9" fill="#1f2328" font-weight="normal" font-style="normal">Inter-sectoral</text><text x="641" y="190" text-anchor="middle" font-size="9" fill="#1f2328" font-weight="normal" font-style="normal">National security =</text><text x="641" y="205" text-anchor="middle" font-size="9" fill="#1f2328" font-weight="normal" font-style="normal">digital resilience</text><rect x="100" y="270" width="500" height="44" rx="7" fill="#fff7e6" stroke="#c28a1a" stroke-width="1.5"/><text x="350.0" y="296.2" text-anchor="middle" font-size="12" fill="#6b4f15" font-weight="bold">Conclusion idea: India must develop and indigenise SOVEREIGN AI capabilities</text><text x="350" y="340" text-anchor="middle" font-size="10.5" fill="#1f2328" font-weight="normal" font-style="italic">Also internationally: models above a threshold -&gt; notification + review (IDSA)</text></svg><figcaption>Fig. 8 - Way-forward strategy</figcaption></figure>
+
+  <h3>Grand strategy (opening line)</h3>
+  <p>A <strong>grand strategy</strong> for India comes first (like deciding "I want to be an IAS" before taking a course and allocating resources). No siloed approach.</p>
+
+  <h3>1. Policy and legal steps</h3>
+  <ul>
+    <li>Do not say "update cyber-security policy" (a different domain) — instead <strong>create/formulate a National Frontier AI Cyber-Security Strategy</strong> focusing on: <strong>AI-assisted vulnerability discovery</strong>, <strong>AI-enabled phishing</strong>, <strong>AI model access governance</strong>, and <strong>incident reporting</strong> for AI-related incidents.</li>
+    <li><strong>AI model access governance:</strong> who gets access to a Mythos-type model, how it is made, risk tiers, steps.</li>
+    <li>Establish a <strong>National AI-Cyber Fusion Centre</strong> integrating inputs from <strong>CERT-In, NCIIPC, I4C, RBI, SEBI, DoT, cyber-security companies and major cloud providers</strong> — avoids silo-based sectoral approach. Analogy: <strong>Information Fusion Centre – Indian Ocean Region (IFC-IOR), Gurugram</strong> (maritime security).</li>
+  </ul>
+
+  <h3>2. Sectoral steps (critical infrastructure and others)</h3>
+  <ul>
+    <li><strong>Continuous AI-assisted security audits</strong>.</li>
+    <li><strong>Mandatory asset inventory</strong> — hardware, software, vendors, cloud dependencies, APIs, open-source libraries.</li>
+    <li><strong>Sectoral AI-cyber drills</strong> for all sectors to test preparedness.</li>
+    <li><strong>Focus on smaller entities in critical sectors</strong> (The Hindu article): <em>Example:</em> while deposing before the <strong>Parliamentary Standing Committee on Finance</strong>, <strong>RBI acknowledged that cooperative banks lag in security maturity and have been subject to cyber attacks</strong>. Co-op banks (farmers' money) likely don't use robust CBS-based systems like HDFC/ICICI/Axis; many attacks go unnoticed. MSMEs must be told about the threat.</li>
+    <li><strong>Prepare a trusted-vendor list</strong>.</li>
+  </ul>
+
+  <h3>3. Regulation and accountability</h3>
+  <ul>
+    <li>Government laws should <strong>not weaken cyber security.</strong> Example: the <strong>Digital Competition Bill (draft)</strong> aims to increase competition by allowing <strong>side-loading</strong> (installing third-party apps outside the app store's own market); this may expose users to <strong>malicious and fake applications</strong>, since app stores (esp. Apple iOS) run strict security checks that Android side-loading lacks.</li>
+    <li>Fill the legal/accountability gaps (safe harbour limits, mandatory disclosure, liability for negligent non-patching, penalties for malicious AI exploit use).</li>
+  </ul>
+
+  <h3>4. AI diplomacy</h3>
+  <ul>
+    <li>Cooperate with <strong>like-minded nations</strong> on AI-cyber risk, <strong>vulnerability disclosure</strong> and <strong>incident response</strong>.</li>
+    <li>Use platforms: <strong>Quad, G20, BIMSTEC, ASEAN</strong>, and bilateral dialogues on cyber security.</li>
+    <li><strong>Example:</strong> India–Israel cooperation (Pegasus was built by Israel's NSO; the PM visited Israel in Feb 2026 per lecturer; Iran's attack on Israeli security used orchestrated cyber elements). Sign MoUs, learn capabilities.</li>
+  </ul>
+
+  <h3>5. AI skilling</h3>
+  <ul>
+    <li><strong>AI-enabled cyber-security capacity building</strong>; <strong>industry–academia–government collaboration</strong> (IITs, NITs teach; government gives <strong>subsidies</strong>). Engage universities, private sector; design curricula.</li>
+  </ul>
+
+  <h3>6. Sovereign AI</h3>
+  <ul>
+    <li><strong>Develop indigenous domestic AI models with domestic AI firms</strong> to <strong>detect anomalies and isolate vulnerabilities in real time</strong>.</li>
+    <li><strong>Ensure internationally</strong> that AI models <strong>above a certain threshold</strong> are subject to <strong>international notification and review requirements</strong> (IDSA commentary after Mythos). Reason: AI is trans-national; everyone should be informed, not a few friends of a company. India can be the <strong>bridge</strong> between North–South, East–West.</li>
+    <li>Launch an <strong>equivalent of Project Glasswing in India</strong> with <strong>secured access</strong> — involve top 10–15 AI firms (e.g. <strong>Sarvam AI</strong>, <strong>Hanooman</strong>) to build generative AI models; the government currently follows a <strong>light-touch regulatory approach</strong>. Classify, adopt a <strong>frontier AI strategy</strong> and conduct <strong>pre-release trials</strong>.</li>
+  </ul>
+
+  <h3>7. Whole-of-government approach (end line)</h3>
+  <p>Adopt a <strong>whole-of-government approach</strong> to ensure <strong>inter-ministerial and inter-sectoral cooperation</strong>, as <strong>national security is inseparable from national digital resilience</strong>.</p>
+  <div class="quote-card"><div class="q">Conclusion keyword: AI sovereignty — "India needs to develop and indigenise sovereign AI capabilities; it should not depend on anyone."</div><div class="attrib">Lecturer's grand idea for the ending</div></div>
+  <div class="exam-tip">PM's 15 August speech announcing <strong>Mission Sudarshan Chakra</strong>: two versions existed — PIB's speech text did not mention "all public places" while the other did; this cost a Prelims question. Lesson: check primary sources (PIB) before relying on newspaper text.</div>
+</section>
+
+<section id="writing">
+  <h2>11. Answer writing — worked question and model answer <span class="timestamp">3:08 – 3:35</span></h2>
+  <div class="term-box"><strong>Question (dictated):</strong> "Discuss the concept of <strong>zero-day vulnerability in the light of Mythos</strong>. Also discuss the <strong>challenges faced by India because of the evolving era of frontier-AI-led cyber security</strong>." (Time: 10–12 min.)</div>
+  <figure class="lecture-diagram"><svg viewBox="0 0 700 290" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif" role="img"><defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#57606a"/></marker></defs><rect x="30" y="10" width="640" height="44" rx="7" fill="#e6f1fb" stroke="#1d5b8b" stroke-width="1.5"/><text x="350.0" y="35.85" text-anchor="middle" font-size="11" fill="#0c447c" font-weight="normal">INTRO (~40-50 words): 1) define zero-day  2) next para: &quot;in the light of Mythos&quot; (use question keyword)</text><rect x="30" y="66" width="640" height="28" rx="7" fill="#eef4f0" stroke="#2f6b4f" stroke-width="1.5"/><text x="350.0" y="83.85" text-anchor="middle" font-size="11" fill="#1f4d37" font-weight="normal">BODY (~200 words): boxed title &quot;Challenges for India&quot; with 1-2-3 numbered points + 2 lines example each</text><rect x="30" y="108" width="120" height="40" rx="7" fill="#ffffff" stroke="#57606a" stroke-width="1.5"/><text x="90.0" y="131.675" text-anchor="middle" font-size="10.5" fill="#1f2328" font-weight="normal">A. Cyber-security</text><rect x="160" y="108" width="120" height="40" rx="7" fill="#ffffff" stroke="#57606a" stroke-width="1.5"/><text x="220.0" y="131.675" text-anchor="middle" font-size="10.5" fill="#1f2328" font-weight="normal">B. Sectoral</text><rect x="290" y="108" width="120" height="40" rx="7" fill="#ffffff" stroke="#57606a" stroke-width="1.5"/><text x="350.0" y="131.675" text-anchor="middle" font-size="10.5" fill="#1f2328" font-weight="normal">C. AI sovereignty</text><rect x="420" y="108" width="120" height="40" rx="7" fill="#ffffff" stroke="#57606a" stroke-width="1.5"/><text x="480.0" y="131.675" text-anchor="middle" font-size="10.5" fill="#1f2328" font-weight="normal">D. Cyber arms race</text><rect x="550" y="108" width="120" height="40" rx="7" fill="#ffffff" stroke="#57606a" stroke-width="1.5"/><text x="610.0" y="131.675" text-anchor="middle" font-size="10.5" fill="#1f2328" font-weight="normal">E. Sovereign AI</text><rect x="30" y="164" width="640" height="44" rx="7" fill="#fff7e6" stroke="#c28a1a" stroke-width="1.5"/><text x="350.0" y="189.85" text-anchor="middle" font-size="11" fill="#6b4f15" font-weight="bold">CONCLUSION (~20-30 words) with grand idea: &quot;In the light of Mythos, India must develop and indigenise sovereign AI capabilities&quot;</text><text x="350" y="232" text-anchor="middle" font-size="11" fill="#6b2a2a" font-weight="bold" font-style="normal">Rules: keyword from question must show - neat handwriting - simple English - no red pen</text><text x="350" y="252" text-anchor="middle" font-size="10.5" fill="#1f2328" font-weight="normal" font-style="italic">Intro-&gt;body link: do not jump straight to challenges; connect para 2 to para 1</text></svg><figcaption>Fig. 9 - Answer template used in the demo</figcaption></figure>
+  <h3>Rules from the demo</h3>
+  <ul>
+    <li><strong>Intro:</strong> 20–30 words normally; here ~40–50 words because two things are asked. <strong>Body:</strong> ~200 words. <strong>Conclusion:</strong> 20–30 words with a <strong>grand idea</strong> (here: sovereign AI).</li>
+    <li>Do <strong>not</strong> define Mythos first. The question is zero-day <em>in the light of</em> Mythos — first define zero-day (~25 words), then in the <strong>next paragraph</strong> link it to Mythos using the <strong>same keyword</strong> as the question ("in the light of").</li>
+    <li><strong>Examiner has little time — the keyword in the question must show in your answer.</strong></li>
+    <li>Paragraph 2 must <strong>connect</strong> to paragraph 1; don't jump straight to challenges. Use plain English; play with language (not "Mythos is frontier AI; it is autonomous").</li>
+    <li>Body: use a <strong>diagram/box</strong> titled "Challenges for India": <strong>A. Cyber-security challenge</strong> (1,2,3), <strong>B. Sectoral challenge</strong> (1,2,3,4), then <strong>C. AI sovereignty</strong>, <strong>D. Cyber arms race</strong>, <strong>E. Challenge of developing sovereign AI</strong>; add 2 lines of example for each. Use numbered points (1, 2, 3) not loose lines.</li>
+    <li>Handwriting: neat, medium size, no red pen. Practise in class; handwriting plays a large role in marks.</li>
+  </ul>
+  <details class="collapse-section" open><summary>Model answer (drafted from the lecture's framework)</summary><div class="collapse-body">
+    <p><strong>Intro:</strong> Zero-day vulnerability refers to an undisclosed flaw in software or hardware, unknown to its developer, which threat actors can exploit — it is called "zero-day" because the developer has zero days to fix it once it is found.</p>
+    <p>In the light of frontier AI models like Anthropic's Mythos, with autonomous capability to detect and exploit zero-day vulnerabilities at machine speed and scale, the concept has gained prominence and presents a major challenge for India.</p>
+    <p><strong>Challenges for India:</strong></p>
+    <ol>
+      <li><strong>Cyber-security challenges:</strong> (a) outdated cyber-security policy (2013) and IT Act (2000) with no AI provisions; (b) poor record of vulnerability patching — e.g. WannaCry, AIIMS 2022; (c) shortage of AI-skilled professionals (workforce gap ~6 lakh); (d) institutional gaps — headless AI Safety Institute, no model-testing body.</li>
+      <li><strong>Sectoral challenges:</strong> BFSI (legacy core-banking systems, shared infrastructure), DPI (Aadhaar, CoWIN), critical infrastructure (power grids, ports, SCADA-run wind turbines), and national security (defence and intelligence platforms).</li>
+      <li><strong>AI sovereignty:</strong> frontier tools are geopolitical instruments — US restricted access to Mythos citing national security; India depends on foreign vendors to even learn of its flaws.</li>
+      <li><strong>Cyber arms race:</strong> e.g. China's Qihoo 360 matching Mythos-type capability; non-state actors can exploit with a low barrier.</li>
+      <li><strong>Challenge of developing sovereign AI:</strong> limited R&amp;D spend, compute and talent.</li>
+    </ol>
+    <p><strong>Conclusion:</strong> In the light of Mythos, India must build a National Frontier-AI Cyber-Security Strategy and develop and indigenise sovereign AI capabilities, so that it does not depend on anyone for its digital security.</p>
+  </div></details>
+  <p style="font-size:0.9em;color:#57606a;">Weakness-first prep: identify your own weak area (Prelims score 60–70 → fix Prelims first; don't join a Mains test series just because others did).</p>
+</section>
+
+<section id="static">
+  <h2>12. Prelims / static hooks from this class</h2>
+  <p>Full static page: <a href="../static/ai-geopolitics-static.html"><strong>AI, Semiconductors &amp; Tech Geopolitics — Static Reference</strong></a>.</p>
+  <table>
+    <tr><th>Item</th><th>Point</th></tr>
+    <tr><td>Mission Sudarshan Chakra</td><td>Air-defence mission announced in the PM's 15 August speech; depends on software; check PIB text</td></tr>
+    <tr><td>India Semiconductor Mission</td><td>~12 plants approved; ISM 2.0 expected; equipment (EUV) imported</td></tr>
+    <tr><td>ASML</td><td>Netherlands; sole maker of EUV lithography machines</td></tr>
+    <tr><td>Rare-earth corridors / sintered permanent magnets</td><td>Scheme for four states (Budget); critical minerals gave Prelims questions in 2025 and 2026</td></tr>
+    <tr><td>Parliamentary Standing Committees</td><td>Hold government and organisations accountable; Mains static question; RBI testimony on co-op banks before the Standing Committee on Finance</td></tr>
+    <tr><td>Digital Competition Bill (draft)</td><td>Side-loading and app-store commission issue</td></tr>
+    <tr><td>Dual-use export controls</td><td>NSG, MTCR, Australia Group, Wassenaar</td></tr>
+    <tr><td>US bodies</td><td>Center for AI Standards and Innovation (CAISI); UK AI Safety Institute</td></tr>
+    <tr><td>Myanmar scam compounds</td><td>Along Thai border in Karen State, held by Karen armed groups (not the Tatmadaw junta) — not in Chin, Sagaing or Rakhine where India has links</td></tr>
+    <tr><td>Fusion centre</td><td>IFC-IOR, Gurugram (maritime information)</td></tr>
+    <tr><td>Pegasus</td><td>By Israel's NSO Group</td></tr>
+  </table>
+</section>
+
+<section id="mcqs">
+  <h2>Prelims trap MCQs</h2>
+  <div class="mcq-card"><div class="q-num">Q1</div><div class="q-text">Which company is the only one with EUV (Extreme Ultraviolet) lithography technology used for advanced chips?</div>
+    <div class="options"><div class="option">A. TSMC</div><div class="option correct">B. ASML</div><div class="option">C. Nvidia</div><div class="option">D. Intel</div></div>
+    <div class="answer-box"><span class="answer-label">Answer: B.</span> ASML is Dutch; TSMC manufactures but buys ASML's machines.</div></div>
+  <div class="mcq-card"><div class="q-num">Q2</div><div class="q-text">Which of the following is a dual-use export-control regime?</div>
+    <div class="options"><div class="option">A. G20</div><div class="option correct">B. Wassenaar Arrangement</div><div class="option">C. BRICS</div><div class="option">D. Quad</div></div>
+    <div class="answer-box"><span class="answer-label">Answer: B.</span> Also NSG, MTCR and Australia Group.</div></div>
+  <div class="mcq-card"><div class="q-num">Q3</div><div class="q-text">The Digital Competition Bill's side-loading provision is linked to cyber security because it:</div>
+    <div class="options"><div class="option correct">A. Lets users install third-party apps outside the app store, risking malicious apps</div><div class="option">B. Forces app stores to charge more</div><div class="option">C. Bans Android</div><div class="option">D. Creates a data-localisation rule</div></div>
+    <div class="answer-box"><span class="answer-label">Answer: A.</span></div></div>
+  <div class="mcq-card"><div class="q-num">Q4</div><div class="q-text">In Mythos-related steps, the inter-sectoral review meeting was convened by:</div>
+    <div class="options"><div class="option">A. Ministry of Home Affairs</div><div class="option correct">B. Ministry of Finance</div><div class="option">C. NSCS</div><div class="option">D. CERT-In</div></div>
+    <div class="answer-box"><span class="answer-label">Answer: B.</span> With MeitY, RBI, NPCI and CERT-In present. (Per the lecture.)</div></div>
+</section>
+
+<section id="glossary">
+  <h2>Glossary</h2>
+  <dl>
+    <div class="glossary-term"><dt>AI sovereignty</dt><dd>A nation's control over, and access to, frontier AI capabilities; access decides geopolitical might.</dd></div>
+    <div class="glossary-term"><dt>Cyber-power inequality</dt><dd>Divide between countries with frontier AI access (haves) and dependants (have-nots).</dd></div>
+    <div class="glossary-term"><dt>Situational awareness</dt><dd>Mythos' very high awareness of its environment/system context — added as a keyword.</dd></div>
+    <div class="glossary-term"><dt>Horizontal escalation</dt><dd>Widening a conflict geographically/across fronts (Iran's strength vs US).</dd></div>
+    <div class="glossary-term"><dt>Asymmetric warfare</dt><dd>Weaker side avoids defeat using low-cost means (drones, cyber).</dd></div>
+    <div class="glossary-term"><dt>Decision latency</dt><dd>Time between detecting a threat and deciding to act; machine-assisted command aims to cut it.</dd></div>
+    <div class="glossary-term"><dt>Jailbreak</dt><dd>Bypassing a system's built-in restrictions.</dd></div>
+    <div class="glossary-term"><dt>Safe harbour</dt><dd>Legal protection to intermediaries (Sec. 79 IT Act) from liability for user content, on condition of compliance.</dd></div>
+    <div class="glossary-term"><dt>Risk tiering</dt><dd>Classifying AI models into high/medium/low risk.</dd></div>
+    <div class="glossary-term"><dt>AI-Cyber Fusion Centre</dt><dd>Proposed body pooling inputs from CERT-In, NCIIPC, I4C, RBI, SEBI, DoT, firms and clouds.</dd></div>
+    <div class="glossary-term"><dt>Side-loading</dt><dd>Installing apps outside the official app store.</dd></div>
+    <div class="glossary-term"><dt>Sovereign AI</dt><dd>Domestic AI models and compute not dependent on foreign vendors.</dd></div>
+    <div class="glossary-term"><dt>EUV lithography</dt><dd>Extreme-ultraviolet process used to print advanced chip patterns on wafers.</dd></div>
+    <div class="glossary-term"><dt>Congruence</dt><dd>Alignment of interests between nations (e.g. India–France on AI governance).</dd></div>
+  </dl>
+</section>
+
+<section id="study">
+  <h2>Study advice from the class</h2>
+  <ul>
+    <li>Read notes twice right after class; make own short notes; the one-pager stage comes after depth (about a year of work; ~8–9 hours/day).</li>
+    <li>Revise on an <strong>A4 sheet</strong> by writing from memory — not on a screen or surfaces with no friction.</li>
+    <li>Know your own weakness (Prelims score, handwriting); don't copy others' test series.</li>
+    <li>YouTube revision alone will not clear the exam; the structure is also what helps in the interview.</li>
+    <li>Course notes (for enrolled students): Prelims-120 notes, weekly class-note dispatch; mentoring not included; doubts through the app.</li>
+  </ul>
+</section>
+
+<section id="verify">
+  <h2>Claims to verify</h2>
+  <div class="gap-box"><h4>Lecturer statements not independently checked</h4>
+    <ul>
+      <li>US told Anthropic not to sell Mythos to unapproved countries; India's Indian agencies' access via Glasswing — verify with news sources.</li>
+      <li>"~6-month" and "~2-year" gaps — opinion, not data.</li>
+      <li>CERT-In 29.44 lakh incidents — which year? Workforce gap ~6 lakh; R&amp;D % of GDP (audio garbled).</li>
+      <li>ISM: 12 plants approved; ISM 2.0 timing.</li>
+      <li>RBI Governor Sanjay Malhotra statements; panel under SBI chairman; RBI 2025 framework name (FREE-AI) — confirm.</li>
+      <li>Qihoo 360 announcement; IDSA commentary; Digital Competition Bill status.</li>
+      <li>ASR errors: some names garbled (Fable/Mythos spellings; "Hanooman"; "Sarvam"); Hindi-English mix mis-transcribed numbers.</li>
+    </ul>
+  </div>
+</section>
+
+<footer>Notes compiled from the lecture transcript (auto-generated captions). Part 1: <a href="../2026-07-02_class01-mythos-cyber-security/notes.html">Class 1</a>. Static: <a href="../static/ai-geopolitics-static.html">AI, Semiconductors &amp; Tech Geopolitics — Static</a> · <a href="../static/cyber-security-static.html">Cyber Security — Static</a>. <a href="one-pager.html">One-pager</a> · <a href="../index.html">← Series index</a></footer>
+
+</div>
+
+<script>
+(function() {
+  var mode = null;
+  var noteCounter = 0;
+
+  var btnHighlight = document.getElementById('btn-highlight');
+  var btnUnderline = document.getElementById('btn-underline');
+  var btnNote = document.getElementById('btn-note');
+  var btnClear = document.getElementById('btn-clear');
+  var btnSave = document.getElementById('btn-save');
+  var statusText = document.getElementById('status-text');
+  var contentRoot = document.getElementById('content-root');
+  var noteBox = document.getElementById('note-input-box');
+  var noteText = document.getElementById('note-text');
+  var pendingNoteTarget = null;
+
+  function setMode(newMode) {
+    mode = mode === newMode ? null : newMode;
+    btnHighlight.classList.toggle('active', mode === 'highlight');
+    btnUnderline.classList.toggle('active', mode === 'underline');
+    btnNote.classList.toggle('active', mode === 'note');
+  }
+
+  btnHighlight.addEventListener('click', function() { setMode('highlight'); });
+  btnUnderline.addEventListener('click', function() { setMode('underline'); });
+  btnNote.addEventListener('click', function() { setMode('note'); });
+
+  function markDirty() {
+    statusText.textContent = 'Unsaved changes';
+    statusText.style.color = '#993c1d';
+  }
+
+  document.addEventListener('mouseup', function(e) {
+    if (mode !== 'highlight' && mode !== 'underline') return;
+    var sel = window.getSelection();
+    if (!sel || sel.isCollapsed || sel.rangeCount === 0) return;
+    var range = sel.getRangeAt(0);
+    if (!contentRoot.contains(range.commonAncestorContainer)) return;
+
+    var wrapper = document.createElement(mode === 'highlight' ? 'mark' : 'u');
+    wrapper.className = mode === 'highlight' ? 'user-highlight' : 'user-underline';
+    try {
+      range.surroundContents(wrapper);
+    } catch (err) {
+      var frag = range.extractContents();
+      wrapper.appendChild(frag);
+      range.insertNode(wrapper);
+    }
+    sel.removeAllRanges();
+    markDirty();
+  });
+
+  contentRoot.addEventListener('click', function(e) {
+    if (mode !== 'note') return;
+    if (e.target.closest('.user-note')) return;
+    pendingNoteTarget = e.target;
+    noteBox.style.display = 'block';
+    var x = Math.min(e.clientX, window.innerWidth - 280);
+    var y = Math.min(e.clientY, window.innerHeight - 140);
+    noteBox.style.left = x + 'px';
+    noteBox.style.top = y + 'px';
+    noteText.value = '';
+    noteText.focus();
+  });
+
+  document.getElementById('note-cancel').addEventListener('click', function() {
+    noteBox.style.display = 'none';
+    pendingNoteTarget = null;
+  });
+
+  document.getElementById('note-add').addEventListener('click', function() {
+    var text = noteText.value.trim();
+    if (!text || !pendingNoteTarget) { noteBox.style.display = 'none'; return; }
+    noteCounter++;
+    var noteDiv = document.createElement('div');
+    noteDiv.className = 'user-note';
+    noteDiv.setAttribute('data-note-id', noteCounter);
+    noteDiv.innerHTML = '<span class="note-label">Your note</span>' +
+      '<button class="del-note" title="Remove note">&times;</button>' +
+      '<span class="note-body"></span>';
+    noteDiv.querySelector('.note-body').textContent = text;
+    noteDiv.querySelector('.del-note').addEventListener('click', function() {
+      noteDiv.remove();
+      markDirty();
+    });
+
+    var target = pendingNoteTarget.closest('li, p, td, div.quote-card, section') || contentRoot;
+    target.parentNode.insertBefore(noteDiv, target.nextSibling);
+
+    noteBox.style.display = 'none';
+    pendingNoteTarget = null;
+    markDirty();
+    setMode('note');
+  });
+
+  btnClear.addEventListener('click', function() {
+    if (!confirm('Remove all your highlights, underlines, and notes on this page?')) return;
+    contentRoot.querySelectorAll('.user-note').forEach(function(n) { n.remove(); });
+    contentRoot.querySelectorAll('mark.user-highlight').forEach(function(m) {
+      var parent = m.parentNode;
+      while (m.firstChild) parent.insertBefore(m.firstChild, m);
+      parent.removeChild(m);
+    });
+    contentRoot.querySelectorAll('u.user-underline').forEach(function(u) {
+      var parent = u.parentNode;
+      while (u.firstChild) parent.insertBefore(u.firstChild, u);
+      parent.removeChild(u);
+    });
+    markDirty();
+  });
+
+  var fallbackHelp = document.getElementById('fallback-help');
+  document.getElementById('fallback-close').addEventListener('click', function() {
+    fallbackHelp.style.display = 'none';
+  });
+
+  var fileHandle = null;
+  var fsaSupported = 'showSaveFilePicker' in window;
+  var THIS_FILENAME = 'notes.html';
+
+  function buildFullHtml() {
+    var doc = document.documentElement.cloneNode(true);
+    var liveContentRoot = doc.querySelector('#content-root');
+    if (liveContentRoot) liveContentRoot.innerHTML = contentRoot.innerHTML;
+    return '<!DOCTYPE html>\n' + doc.outerHTML;
+  }
+
+  async function writeToFile() {
+    var writable = await fileHandle.createWritable();
+    await writable.write(buildFullHtml());
+    await writable.close();
+  }
+
+  btnSave.addEventListener('click', async function() {
+    statusText.textContent = 'Saving…';
+    statusText.style.color = '#57606a';
+    if (!fsaSupported) {
+      fallbackHelp.style.display = 'block';
+      statusText.textContent = 'Direct save not supported in this browser';
+      statusText.style.color = '#993c1d';
+      return;
+    }
+    try {
+      if (!fileHandle) {
+        fileHandle = await window.showSaveFilePicker({
+          suggestedName: THIS_FILENAME,
+          types: [{ description: 'HTML file', accept: { 'text/html': ['.html'] } }]
+        });
+      }
+      var perm = await fileHandle.queryPermission({ mode: 'readwrite' });
+      if (perm !== 'granted') {
+        perm = await fileHandle.requestPermission({ mode: 'readwrite' });
+      }
+      if (perm !== 'granted') {
+        statusText.textContent = 'File permission denied — click Save to retry';
+        statusText.style.color = '#993c1d';
+        fileHandle = null;
+        return;
+      }
+      await writeToFile();
+      statusText.textContent = 'Saved to file just now';
+      statusText.style.color = '#3b6d11';
+    } catch (err) {
+      console.error('SAVE_ERROR', err.name, err.message, err);
+      if (err.name === 'AbortError') {
+        statusText.textContent = 'Save cancelled';
+        statusText.style.color = '#57606a';
+      } else {
+        statusText.textContent = 'Save failed: ' + err.name + ' — click Save to retry';
+        statusText.style.color = '#993c1d';
+        fileHandle = null;
+      }
+    }
+  });
+
+  contentRoot.querySelectorAll('.user-note .del-note').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      btn.closest('.user-note').remove();
+      markDirty();
+    });
+  });
+
+  contentRoot.querySelectorAll('.spacing-tracker input[type="checkbox"]').forEach(function(cb) {
+    cb.addEventListener('change', function() {
+      if (cb.checked) { cb.setAttribute('checked', 'checked'); }
+      else { cb.removeAttribute('checked'); }
+      markDirty();
+    });
+  });
+})();
+</script>
+</body>
+</html>
