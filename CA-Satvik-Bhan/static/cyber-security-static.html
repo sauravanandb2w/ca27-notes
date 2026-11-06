@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cyber Security — Static Reference (Satvik Bhan CA)</title>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: Georgia, 'Times New Roman', serif; background: #faf9f6; color: #1f2328; margin: 0; padding: 30px 20px 80px; line-height: 1.55; }
+  .wrap { max-width: 920px; margin: 0 auto; }
+  header { border-bottom: 3px solid #2f2f6b; padding-bottom: 14px; margin-bottom: 22px; }
+  header h1 { font-size: 1.6em; margin: 0 0 4px; color: #2f2f6b; }
+  header .meta { color: #57606a; font-size: 0.9em; font-family: Arial, sans-serif; }
+  h2 { font-size: 1.2em; color: #2f2f6b; border-left: 4px solid #2f2f6b; padding-left: 10px; margin: 30px 0 10px; }
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 0.93em; background: #fff; }
+  th, td { border: 1px solid #e2ddd4; padding: 7px 10px; text-align: left; vertical-align: top; }
+  th { background: #eef0fb; font-family: Arial, sans-serif; font-size: 0.85em; }
+  ul { padding-left: 22px; } li { margin-bottom: 4px; }
+  .note { background: #fff7e6; border: 1px solid #f0dba8; border-radius: 8px; padding: 10px 14px; font-size: 0.9em; margin: 10px 0; }
+  .toc { background: #fff; border: 1px solid #e2ddd4; border-radius: 8px; padding: 12px 18px; font-family: Arial, sans-serif; font-size: 0.88em; }
+  .toc a { color: #2f2f6b; text-decoration: none; margin-right: 14px; display: inline-block; }
+  footer { margin-top: 40px; border-top: 1px solid #e2ddd4; padding-top: 12px; color: #57606a; font-size: 0.82em; font-family: Arial, sans-serif; }
+  @media print { body { padding: 8px; font-size: 10pt; } h2 { break-after: avoid; } table { break-inside: avoid; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>Cyber Security — Static Reference</h1>
+  <div class="meta">Static layer for GS-3 Internal Security / Science &amp; Tech. Pair with Class 1 (Mythos). Compiled from standard sources; verify numbers/dates marked ★ before use. <a href="../index.html" style="color:#2f2f6b;">← Series index</a></div>
+</header>
+
+<div class="toc"><a href="#threats">Threat types</a><a href="#law">Legal framework</a><a href="#inst">Institutions</a><a href="#policy">Policy &amp; initiatives</a><a href="#intl">International</a><a href="#ai">AI governance</a><a href="#incidents">Incidents</a><a href="#warfare">Warfare terms</a><a href="#tech">Tech terms</a><a href="#pyq">PYQ trend</a></div>
+
+<h2 id="threats">1. Threat types</h2>
+<table>
+<tr><th>Term</th><th>Meaning</th></tr>
+<tr><td>Malware / virus / worm / trojan</td><td>Malicious software; worm self-spreads, trojan disguises as legitimate</td></tr>
+<tr><td>Ransomware</td><td>Encrypts data, demands payment</td></tr>
+<tr><td>Phishing / spear-phishing / vishing / smishing</td><td>Deceptive messages/calls to steal credentials; spear = targeted</td></tr>
+<tr><td>DDoS</td><td>Flooding a service with traffic to make it unavailable</td></tr>
+<tr><td>APT (Advanced Persistent Threat)</td><td>Long-term stealth intrusion, usually state-backed</td></tr>
+<tr><td>Zero-day</td><td>Unknown, unpatched flaw exploited before developer can fix</td></tr>
+<tr><td>Supply-chain attack</td><td>Compromise via a vendor/library/update (e.g. SolarWinds)</td></tr>
+<tr><td>Botnet</td><td>Network of infected devices controlled remotely</td></tr>
+<tr><td>Logic bomb / backdoor</td><td>Hidden code triggered by condition / hidden access path</td></tr>
+<tr><td>Deepfake / impersonation</td><td>AI-generated fake audio/video/identity</td></tr>
+<tr><td>Digital arrest</td><td>Fraudsters pose as police/agency officials, hold victim on video call and extort money</td></tr>
+<tr><td>Scam hubs / compounds</td><td>Cyber-fraud centres (e.g. Myanmar–Thailand border, Myawaddy) using trafficked workers, incl. Indians</td></tr>
+</table>
+
+<h2 id="law">2. Legal framework (India)</h2>
+<table>
+<tr><th>Law / provision</th><th>Key point</th></tr>
+<tr><td>Information Technology Act, 2000 (amended 2008)</td><td>Main cyber law; legal recognition of e-records, cyber offences</td></tr>
+<tr><td>IT Act s.43 / 66</td><td>Unauthorised access/damage; computer-related offences</td></tr>
+<tr><td>s.66F</td><td>Cyber terrorism</td></tr>
+<tr><td>s.69 / 69A</td><td>Interception, monitoring, decryption / blocking of public access to information</td></tr>
+<tr><td>s.70</td><td>Protected systems (declared critical)</td></tr>
+<tr><td>s.70A</td><td>NCIIPC — nodal agency for Critical Information Infrastructure</td></tr>
+<tr><td>s.70B</td><td>CERT-In — national agency for incident response</td></tr>
+<tr><td>s.79</td><td>Intermediary safe harbour</td></tr>
+<tr><td>CERT-In Directions, April 2022</td><td>Report incidents within 6 hours; maintain logs 180 days ★</td></tr>
+<tr><td>Digital Personal Data Protection Act, 2023</td><td>Consent-based data processing; Data Protection Board; rules notified in phases ★</td></tr>
+<tr><td>Bharatiya Nyaya Sanhita / BNSS (2023)</td><td>Replaced IPC/CrPC; cyber-fraud related provisions apply</td></tr>
+</table>
+
+<h2 id="inst">3. Institutions</h2>
+<table>
+<tr><th>Body</th><th>Role / parent</th></tr>
+<tr><td>CERT-In</td><td>Indian Computer Emergency Response Team — MeitY; incident response, advisories</td></tr>
+<tr><td>NCIIPC</td><td>National Critical Information Infrastructure Protection Centre — under NTRO; protects CII (power, banking, telecom, transport, govt, strategic sectors)</td></tr>
+<tr><td>National Cyber Security Coordinator (NCSC)</td><td>In NSCS (PMO); coordinates cyber policy across agencies</td></tr>
+<tr><td>NTRO</td><td>National Technical Research Organisation — technical intelligence</td></tr>
+<tr><td>Defence Cyber Agency (DCA)</td><td>Tri-service, operational since 2019 (Delhi)</td></tr>
+<tr><td>I4C</td><td>Indian Cyber Crime Coordination Centre — MHA; cybercrime portal; helpline 1930</td></tr>
+<tr><td>CERT-Fin, sectoral CERTs</td><td>Sector-specific incident response (finance, power etc.)</td></tr>
+<tr><td>CSIRTs / SOCs</td><td>Organisation-level response/monitoring</td></tr>
+<tr><td>DoT (Sanchar Saathi, Chakshu)</td><td>Report suspected fraud calls/messages; block stolen handsets (CEIR)</td></tr>
+<tr><td>Cyber Swachhta Kendra</td><td>Botnet cleaning and malware analysis</td></tr>
+<tr><td>IndiaAI Safety Institute</td><td>AI safety/security (under IndiaAI Mission); lecturer notes director pending</td></tr>
+<tr><td>State police cyber cells</td><td>FIR and investigation; cyber security handled by states at first instance</td></tr>
+</table>
+
+<h2 id="policy">4. Policy &amp; initiatives</h2>
+<ul>
+<li>National Cyber Security Policy 2013 (replacement strategy long awaited ★).</li>
+<li>Cyber Surakshit Bharat (MeitY, 2018) — CISO training/awareness.</li>
+<li>Mandatory cyber audits for large/critical entities via CERT-In empanelled auditors.</li>
+<li>Government cloud: MeghRaj; DPI: Aadhaar, UPI, CoWIN, DigiLocker, DigiYatra, PFMS.</li>
+<li>Cyber crime reporting: cybercrime.gov.in; helpline 1930; financial fraud suspension system (CFCFRMS) ★.</li>
+<li>IndiaAI Mission (compute, foundation models, safety) ★.</li>
+</ul>
+
+<h2 id="intl">5. International</h2>
+<table>
+<tr><th>Item</th><th>Point</th></tr>
+<tr><td>Budapest Convention (2001)</td><td>Council of Europe cybercrime treaty; India is <strong>not</strong> a signatory</td></tr>
+<tr><td>UN Convention against Cybercrime</td><td>Adopted by UNGA Dec 2024; opened for signature Hanoi, Oct 2025 ★</td></tr>
+<tr><td>UN GGE / OEWG</td><td>Norms of responsible state behaviour in cyberspace</td></tr>
+<tr><td>Tallinn Manual</td><td>Non-binding academic study on international law and cyber warfare (NATO CCDCOE)</td></tr>
+<tr><td>ITU Global Cybersecurity Index</td><td>Ranks national cyber maturity</td></tr>
+<tr><td>Quad / bilateral cyber dialogues</td><td>India–US (iCET → TRUST) ★, Quad cyber group</td></tr>
+</table>
+
+<h2 id="ai">6. AI governance timeline</h2>
+<table>
+<tr><th>Event</th><th>Detail</th></tr>
+<tr><td>AI Safety Summit, Bletchley Park (UK)</td><td>Nov 2023 — Bletchley Declaration</td></tr>
+<tr><td>Seoul AI Summit</td><td>May 2024</td></tr>
+<tr><td>AI Action Summit, Paris</td><td>Feb 2025 (co-chaired by India)</td></tr>
+<tr><td>India AI Impact Summit, New Delhi</td><td>Feb 2026</td></tr>
+<tr><td>UK AI Safety Institute</td><td>Set up 2023; renamed AI Security Institute in 2025 ★</td></tr>
+<tr><td>Mythos / Project Glasswing</td><td>Anthropic, Apr 2026 — restricted release to defenders</td></tr>
+</table>
+<div class="note">AI-governance questions link to GS-4: access, safeguards, accountability.</div>
+
+<h2 id="incidents">7. Incidents to cite</h2>
+<table>
+<tr><th>Incident</th><th>Lesson</th></tr>
+<tr><td>Stuxnet (2010)</td><td>Malware physically damaging industrial systems (Iran); state-grade cyber weapon</td></tr>
+<tr><td>WannaCry / NotPetya (2017)</td><td>Ransomware/wiper at global scale; unpatched legacy systems</td></tr>
+<tr><td>SolarWinds (2020)</td><td>Supply-chain compromise of software updates</td></tr>
+<tr><td>Colonial Pipeline (2021)</td><td>Ransomware hits critical infrastructure (US fuel)</td></tr>
+<tr><td>Log4Shell (2021)</td><td>Flaw in shared open-source library, global exposure</td></tr>
+<tr><td>Kudankulam malware (2019)</td><td>Malware found in nuclear plant admin network</td></tr>
+<tr><td>AIIMS Delhi ransomware (Nov 2022)</td><td>Health-sector disruption, servers down for days</td></tr>
+<tr><td>Mumbai power outage (Oct 2020)</td><td>Alleged link to grid-targeting malware ★</td></tr>
+<tr><td>CrowdStrike update outage (Jul 2024)</td><td>Single faulty update disrupted airlines, banks worldwide</td></tr>
+<tr><td>Iberian blackout (Apr 2025)</td><td>Grid instability case (Spain/Portugal) ★</td></tr>
+</table>
+
+<h2 id="warfare">8. Warfare terms</h2>
+<ul>
+<li><strong>Hybrid warfare:</strong> mix of conventional, irregular, cyber, information and economic means.</li>
+<li><strong>Grey-zone warfare:</strong> coercion below the threshold of open war.</li>
+<li><strong>Asymmetric warfare:</strong> weaker party exploits the stronger one's vulnerabilities.</li>
+<li><strong>Information warfare:</strong> narratives, disinformation, deepfakes.</li>
+<li><strong>Fifth domain:</strong> cyberspace (after land, sea, air, space).</li>
+<li><strong>Cyber deterrence:</strong> difficult due to attribution problem.</li>
+</ul>
+
+<h2 id="tech">9. Tech terms</h2>
+<ul>
+<li><strong>SCADA / ICS:</strong> control systems for power, water, manufacturing.</li>
+<li><strong>CBS:</strong> Core Banking Solution. <strong>RTGS/NEFT/UPI/IMPS:</strong> payment rails.</li>
+<li><strong>SBOM:</strong> Software Bill of Materials — list of components in software.</li>
+<li><strong>Red teaming:</strong> simulated attack to test defences. <strong>Bug bounty:</strong> reward for reporting flaws.</li>
+<li><strong>Encryption, 2FA, firewall, VPN, honeypot, sandbox.</strong></li>
+<li><strong>Legacy software:</strong> old systems still in use; hard to patch.</li>
+</ul>
+
+<h2 id="pyq">10. PYQ trend (Mains GS-3, cyber) ★ verify exact wording</h2>
+<table>
+<tr><th>Year</th><th>Theme</th></tr>
+<tr><td>2015</td><td>Potential threats of cyber attack and the security framework to prevent it</td></tr>
+<tr><td>2016</td><td>Use of internet and social media by non-state actors for subversive activities</td></tr>
+<tr><td>2019</td><td>Impact of cross-border cyber attacks; defensive measures</td></tr>
+<tr><td>2022</td><td>Elements of cyber security; India's National Cyber Security Strategy</td></tr>
+</table>
+<div class="note">Lecturer's count: about 9 questions between 2013 and 2025 on cyber security/Paper 3 internal-security link; one every 1–2 years. Expect Mythos-style current layer inside this static frame.</div>
+
+<footer>Static reference compiled alongside Class 1. Verify ★ items before relying on them.</footer>
+</div>
+</body>
+</html>

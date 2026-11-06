@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class 1 One-Pager: Mythos &amp; Cyber Security (Satvik Bhan CA)</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: #faf9f6;
+    color: #1f2328;
+    margin: 0;
+    padding: 14px 22px 26px;
+    line-height: 1.32;
+    font-size: 12.5px;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; }
+  header { border-bottom: 2px solid #2f2f6b; padding-bottom: 6px; margin-bottom: 8px; }
+  header h1 { font-size: 1.28em; margin: 0 0 2px; color: #2f2f6b; }
+  header .tag { font-family: Arial, sans-serif; font-size: 0.82em; color: #57606a; }
+  header .backlink { font-family: Arial, sans-serif; font-size: 0.8em; }
+  header .backlink a { color: #2f2f6b; }
+  .cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  .topic h2 {
+    font-size: 1.02em;
+    color: #2f2f6b;
+    border-left: 3px solid #2f2f6b;
+    padding-left: 8px;
+    margin: 0 0 6px;
+  }
+  .topic ul { margin: 0 0 6px; padding-left: 16px; }
+  .topic li { margin-bottom: 3px; }
+  .callout {
+    background: #eef4f0;
+    border: 1px solid #b9d6c3;
+    border-radius: 5px;
+    padding: 6px 8px;
+    margin: 6px 0;
+    font-size: 0.94em;
+  }
+  .callout strong { color: #2f6b4f; }
+  .callout.alt {
+    background: #fdf3f3;
+    border-color: #e0bdbd;
+  }
+  .callout.alt strong { color: #8b3a3a; }
+  .visual {
+    font-family: Arial, sans-serif;
+    font-size: 0.82em;
+    background: #fff;
+    border: 1px solid #d8d2c6;
+    border-radius: 5px;
+    padding: 6px 8px;
+    margin-top: 6px;
+  }
+  .visual .row { display: flex; align-items: center; flex-wrap: wrap; gap: 3px; margin: 2px 0; }
+  .visual .box { background: #e6f1fb; border: 1px solid #2f2f6b; border-radius: 4px; padding: 2px 6px; color: #2f2f6b; font-weight: bold; }
+  .visual .arrow { color: #2f2f6b; font-weight: bold; }
+  footer {
+    margin-top: 10px;
+    border-top: 1px solid #d8d2c6;
+    padding-top: 5px;
+    color: #57606a;
+    font-family: Arial, sans-serif;
+    font-size: 0.72em;
+    text-align: center;
+  }
+  footer a { color: #2f2f6b; }
+  @media print {
+    @page { size: A4 landscape; margin: 8mm; }
+    body { padding: 0; font-size: 8.6pt; line-height: 1.22; }
+    .cols { gap: 10px; }
+    .topic { break-inside: avoid; }
+    .callout, .visual { break-inside: avoid; padding: 4px 6px; }
+    header h1 { font-size: 1.1em; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Class 1 — One-Pager: Mythos &amp; Cyber Security</h1>
+  <div class="tag">UPSC GS-3 Internal Security (cyber) + Prelims — Satvik Bhan CA, lecture of 02-07-2026 — last-minute revision sheet</div>
+  <div class="backlink">Full notes: <a href="notes.html">notes.html</a> &middot; Static GK: <a href="../static/cyber-security-static.html">cyber-security-static.html</a></div>
+</header>
+
+<div class="cols">
+
+  <div class="topic">
+    <h2>1. What is Mythos</h2>
+    <ul>
+      <li><strong>Frontier AI model</strong> by <strong>Anthropic</strong> (~Apr 2026): strong at <strong>vulnerability detection, cyber-security reasoning, software analysis</strong>.</li>
+      <li>Limited-access cohort: <strong>Project Glasswing</strong> (~40 firms). Rival capability: <strong>Qihoo 360</strong> (China).</li>
+      <li>Not built for cyber — general model that turned cyber-relevant.</li>
+      <li>Lecturer's figure: <strong>10,000+ major vulnerabilities in a month</strong>; a ~27-year-old bug.</li>
+    </ul>
+    <div class="callout"><strong>Keywords:</strong> frontier AI model · zero-day · patch · threat actors · defender overload · supply-chain security · legacy software · AI cyber arms race.</div>
+    <div class="visual">
+      <div class="row"><span class="box">Software has hidden bug</span><span class="arrow">→</span><span class="box">Mythos finds it</span><span class="arrow">→</span><span class="box">0 days to fix = zero-day</span></div>
+      <div class="row"><span class="box">Defender first → PATCH</span><span class="arrow">vs</span><span class="box">Attacker first → EXPLOIT</span></div>
+    </div>
+  </div>
+
+  <div class="topic">
+    <h2>2. Mythos vs other LLMs</h2>
+    <ul>
+      <li>Others: assist coding, debug (give patch), write scripts; <strong>limited autonomy</strong> (repeated prompts); detect some bugs, not at scale.</li>
+      <li>Mythos: finds <strong>zero-days at scale</strong>, <strong>autonomous</strong>; chains <strong>many low-severity bugs → one destructive attack</strong>.</li>
+      <li><strong>UK AI Safety Institute:</strong> can autonomously attack small, weakly defended enterprise systems; engineers <strong>without formal security training</strong> can exploit fast → <strong>low entry barrier</strong>.</li>
+    </ul>
+    <div class="callout alt"><strong>Shift:</strong> State-led cyber security → <strong>ransomware groups / non-state actors</strong> (box title: "Shift in cyber security post-Anthropic").</div>
+  </div>
+
+  <div class="topic">
+    <h2>3. Broad &amp; cyber implications</h2>
+    <ul>
+      <li><strong>Dual-use dilemma:</strong> defence (states) + offence (non-state). Right question = <strong>who gets access · what safeguards · what accountability</strong>.</li>
+      <li><strong>Machine-speed discovery</strong> → <strong>defender overload</strong> (find faster than verify/prioritise/patch).</li>
+      <li><strong>Supply-chain security:</strong> shared libraries, open source, cloud, third-party vendors (e.g. Zoho, MeghRaj).</li>
+      <li>Attacks more <strong>scalable, automated, accessible</strong>; <strong>legacy interconnected infra</strong> hard to patch → <strong>systemic risk</strong>.</li>
+      <li>More <strong>dependence on foreign AI</strong> for detection/patching.</li>
+    </ul>
+  </div>
+
+  <div class="topic">
+    <h2>4. Sectoral impact</h2>
+    <ul>
+      <li><strong>Critical infrastructure:</strong> grid (Spain, Netherlands cases), ports, rail (IRCTC), airports (IndiGo), hospitals, telecom, highways; <strong>SCADA</strong> in wind turbines (foreign-made).</li>
+      <li><strong>BFSI:</strong> digital robbery, payment gateways/aggregators. Why prone: <strong>shared digital infra</strong> + <strong>structural issue</strong> = <strong>complexity (CBS)</strong> + <strong>legacy zero-days that evaded audits</strong>.</li>
+      <li><strong>DPI:</strong> Aadhaar (~134 cr holders), CoWIN, DigiYatra, DigiLocker, PFMS, Sanchar Saathi, Chakshu; UPI-based finance. Stack = cloud + open source + shared libraries.</li>
+      <li><strong>National security:</strong> defence systems · strategic communication · intelligence platforms · critical infrastructure.</li>
+      <li><strong>Citizens:</strong> identity theft, fraud, phishing, impersonation, deepfakes.</li>
+      <li><strong>Sovereignty:</strong> beyond borders (LAC, drone smuggling, FICN) → <strong>data sovereignty</strong>; India depends on foreign AI for cyber defence.</li>
+    </ul>
+  </div>
+
+  <div class="topic">
+    <h2>5. Static anchors &amp; PYQ frame</h2>
+    <ul>
+      <li><strong>CERT-In</strong> = nodal, <strong>IT Act s.70B</strong>; <strong>NCIIPC</strong> = s.70A (under NTRO); FIR with state police; cyber audits mandatory for big/critical entities.</li>
+      <li>UPSC cyber questions: ~<strong>9 in 2013–25</strong> (one every 1–2 years).</li>
+      <li>Answer heads: <strong>Intro → Impact (=implications/significance) → Challenges → Steps taken → Way forward</strong>.</li>
+      <li>IndiaAI Safety Institute: set up, director pending (lecturer's note).</li>
+    </ul>
+    <div class="callout"><strong>Conclusion line:</strong> "Mythos marks a shift from human-led to machine-led cyber security — a double-edged sword."</div>
+  </div>
+
+  <div class="topic">
+    <h2>6. Memorise — Five practice Qs</h2>
+    <ul>
+      <li>Is Mythos a threat to <strong>internal security</strong>? (more than cyber)</li>
+      <li>Dimensions of internal security transformed — Mythos capabilities + remedies.</li>
+      <li>Evolution of warfare — <strong>Operation Sindoor</strong> + Mythos threat.</li>
+      <li>Mythos a <strong>double-edged sword</strong>? implications, challenges, steps.</li>
+    </ul>
+    <div class="callout alt"><strong>Not in this video:</strong> power/telecom/health sector details, steps taken, way forward (post-lunch half). Verify figures flagged in notes before use.</div>
+  </div>
+
+</div>
+
+<footer>Class 1 one-pager · <a href="notes.html">full notes</a> · <a href="../index.html">series index</a></footer>
+</div>
+
+</body>
+</html>
