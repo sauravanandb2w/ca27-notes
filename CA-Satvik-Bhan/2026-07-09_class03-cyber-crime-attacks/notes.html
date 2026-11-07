@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Satvik Bhan CA — Class 3: Cyber Security — Attacks &amp; Cyber Crimes</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: #faf9f6;
+    color: #1f2328;
+    margin: 0;
+    padding: 0 0 80px;
+    line-height: 1.6;
+  }
+  .toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: #ffffff;
+    border-bottom: 2px solid #1d5b8b;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: Arial, sans-serif;
+    flex-wrap: wrap;
+  }
+  .toolbar button {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    padding: 7px 14px;
+    border-radius: 6px;
+    border: 1px solid #d8d2c6;
+    background: #fff;
+    cursor: pointer;
+    color: #1f2328;
+  }
+  .toolbar button:hover { background: #e6f1fb; border-color: #1d5b8b; }
+  .toolbar button.active { background: #1d5b8b; color: #fff; border-color: #1d5b8b; }
+  .toolbar .save-btn { background: #2f6b4f; color: #fff; border-color: #2f6b4f; margin-left: auto; }
+  .toolbar .save-btn:hover { background: #24543e; }
+  .toolbar .status { font-size: 12px; color: #57606a; margin-left: auto; padding-right: 8px; }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 30px 20px; }
+  header { border-bottom: 3px solid #1d5b8b; padding-bottom: 20px; margin-bottom: 30px; }
+  header h1 { font-size: 1.6em; margin: 0 0 6px; color: #1d5b8b; }
+  header .meta { color: #57606a; font-size: 0.95em; font-family: Arial, sans-serif; }
+  section { margin-bottom: 42px; }
+  h2 { font-size: 1.4em; color: #1d5b8b; border-left: 4px solid #1d5b8b; padding-left: 12px; margin-bottom: 14px; }
+  h3 { font-size: 1.12em; margin: 22px 0 8px; }
+  p { margin: 10px 0; }
+  .summary-box { background: #e6f1fb; border-radius: 8px; padding: 18px 22px; font-size: 0.98em; }
+  ul, ol.answers { padding-left: 24px; }
+  li { margin-bottom: 6px; }
+  .timestamp { font-family: 'Courier New', monospace; font-size: 0.78em; color: #57606a; background: #e2ddd4; border-radius: 4px; padding: 1px 6px; margin-right: 6px; }
+  .quote-card { background: #fff; border: 1px solid #e2ddd4; border-left: 4px solid #1d5b8b; border-radius: 6px; padding: 14px 18px; margin: 14px 0; }
+  .quote-card .q { font-style: italic; font-size: 1.05em; }
+  .quote-card .attrib { font-family: Arial, sans-serif; font-size: 0.85em; color: #57606a; margin-top: 6px; }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.95em; background: #fff; }
+  th, td { border: 1px solid #e2ddd4; padding: 8px 12px; text-align: left; vertical-align: top; }
+  th { background: #e6f1fb; font-family: Arial, sans-serif; font-size: 0.88em; }
+  .gap-box { background: #eef4f0; border: 1px solid #cfe3d6; border-radius: 8px; padding: 16px 20px; margin-top: 16px; font-size: 0.95em; }
+  .gap-box h4 { margin: 0 0 8px; color: #2f6b4f; font-family: Arial, sans-serif; font-size: 0.95em; }
+  .exam-tip { background: #fff7e6; border: 1px solid #f0dba8; border-radius: 8px; padding: 14px 20px; margin: 14px 0; font-size: 0.95em; }
+  .exam-tip::before { content: "Exam strategy: "; font-weight: bold; font-family: Arial, sans-serif; }
+  .term-box { background: #fdf3f3; border: 1px solid #ecd4d4; border-radius: 8px; padding: 12px 16px; margin: 10px 0; }
+  .term-box strong { color: #8b3a3a; }
+  .data-box { background: #f3f0fb; border: 1px solid #ddd6f0; border-radius: 8px; padding: 12px 16px; margin: 10px 0; font-family: 'Courier New', monospace; font-size: 0.9em; }
+  footer { margin-top: 60px; border-top: 1px solid #e2ddd4; padding-top: 16px; color: #57606a; font-size: 0.82em; font-family: Arial, sans-serif; }
+  .toc {
+    background: #fff;
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    padding: 16px 22px;
+    margin-bottom: 36px;
+    font-family: Arial, sans-serif;
+    font-size: 0.9em;
+  }
+  .toc h2 { font-size: 1em; margin: 0 0 10px; border: none; padding: 0; color: #1d5b8b; text-transform: uppercase; letter-spacing: 0.04em; }
+  .toc ol { columns: 2; margin: 0; padding-left: 20px; }
+  .toc a { color: #1f2328; text-decoration: none; }
+  .toc a:hover { color: #1d5b8b; text-decoration: underline; }
+  details.collapse-section {
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    background: #fff;
+    margin: 14px 0;
+    padding: 0;
+  }
+  details.collapse-section summary {
+    cursor: pointer;
+    padding: 12px 16px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 0.92em;
+    color: #1d5b8b;
+    list-style: none;
+  }
+  details.collapse-section summary::-webkit-details-marker { display: none; }
+  details.collapse-section summary::before { content: "▸ "; }
+  details.collapse-section[open] summary::before { content: "▾ "; }
+  details.collapse-section .collapse-body { padding: 4px 16px 16px; }
+  .glossary-term {
+    display: flex;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+  }
+  .glossary-term:last-child { border-bottom: none; }
+  .glossary-term dt { font-weight: bold; color: #8b3a3a; min-width: 220px; flex-shrink: 0; font-family: Arial, sans-serif; font-size: 0.9em; }
+  .glossary-term dd { margin: 0; }
+
+  mark.user-highlight { background: #fff176; padding: 1px 2px; border-radius: 2px; }
+  u.user-underline { text-decoration: underline; text-decoration-color: #1d5b8b; text-decoration-thickness: 2px; }
+  .user-note {
+    background: #e6f1fb;
+    border: 1px solid #85b7eb;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin: 8px 0;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #0c447c;
+    position: relative;
+  }
+  .user-note .note-label { font-weight: bold; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; display: block; }
+  .user-note .del-note { position: absolute; top: 6px; right: 8px; cursor: pointer; border: none; background: none; color: #0c447c; font-size: 14px; font-family: Arial, sans-serif; }
+  #note-input-box {
+    position: fixed;
+    display: none;
+    background: #fff;
+    border: 2px solid #1d5b8b;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    z-index: 100;
+    font-family: Arial, sans-serif;
+  }
+  #note-input-box textarea { width: 240px; height: 60px; font-family: Arial, sans-serif; font-size: 13px; border: 1px solid #d8d2c6; border-radius: 4px; padding: 6px; }
+  #note-input-box .note-actions { margin-top: 6px; display: flex; gap: 6px; justify-content: flex-end; }
+  #note-input-box button { font-size: 12px; padding: 5px 10px; border-radius: 4px; border: 1px solid #d8d2c6; background: #fff; cursor: pointer; }
+  #note-input-box button.primary { background: #1d5b8b; color: #fff; border-color: #1d5b8b; }
+  .content-target::selection { background: #ffe082; }
+  .board-caption { font-family: Arial, sans-serif; font-size: 0.82em; color: #57606a; margin-top: -8px; margin-bottom: 14px; }
+  .arcs-box {
+    background: #fff;
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 14px 0;
+  }
+  .arcs-box h4 { margin: 0 0 10px; color: #1d5b8b; font-family: Arial, sans-serif; font-size: 0.98em; }
+  .recall-q { margin-bottom: 14px; }
+  .recall-q p.q-text { font-weight: bold; margin: 0 0 6px; }
+  .recall-q details { border: none; margin: 0; }
+  .recall-q summary { font-family: Arial, sans-serif; font-size: 0.82em; color: #1d5b8b; cursor: pointer; list-style: none; padding: 2px 0; }
+  .recall-q summary::-webkit-details-marker { display: none; }
+  .recall-q summary::before { content: "Show answer \25B8 "; }
+  .recall-q details[open] summary::before { content: "Hide answer \25BE "; }
+  .recall-q .ans { background: #eef4f0; border-radius: 6px; padding: 8px 12px; margin-top: 6px; font-size: 0.95em; }
+  .spacing-tracker { font-family: Arial, sans-serif; font-size: 0.92em; }
+  .spacing-tracker table { margin: 8px 0; }
+  .spacing-tracker input[type="checkbox"] { width: 16px; height: 16px; cursor: pointer; }
+  .mnemonic-box { background: #fff7e6; border: 1px solid #f0dba8; border-radius: 8px; padding: 14px 18px; margin: 10px 0; }
+  .mnemonic-box h4 { margin: 0 0 6px; color: #8b5a1d; font-family: Arial, sans-serif; font-size: 0.92em; }
+  .applic-table td.gs-tag { font-family: Arial, sans-serif; font-weight: bold; font-size: 0.85em; white-space: nowrap; }
+  .applic-table .prelims-badge, .applic-table .mains-badge {
+    display: inline-block; font-family: Arial, sans-serif; font-size: 0.72em; font-weight: bold;
+    padding: 2px 8px; border-radius: 10px; margin-right: 4px;
+  }
+  .prelims-badge { background: #eaf3de; color: #3b6d11; }
+  .mains-badge { background: #e6f1fb; color: #1d5b8b; }
+  #fallback-help {
+    position: fixed;
+    display: none;
+    top: 60px;
+    right: 20px;
+    max-width: 320px;
+    background: #fff;
+    border: 2px solid #993c1d;
+    border-radius: 8px;
+    padding: 14px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    z-index: 200;
+  }
+  .mcq-card { background: #fff; border: 1px solid #e2ddd4; border-left: 4px solid #1d5b8b; border-radius: 8px; padding: 16px 20px; margin: 14px 0; }
+  .mcq-card .q-num { font-family: Arial, sans-serif; font-weight: bold; color: #1d5b8b; font-size: 0.82em; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 6px; }
+  .mcq-card .q-text { font-weight: bold; margin-bottom: 10px; }
+  .mcq-card .options { display: flex; flex-direction: column; gap: 6px; margin-bottom: 10px; }
+  .mcq-card .option { font-family: Arial, sans-serif; font-size: 0.92em; padding: 6px 10px; border-radius: 6px; background: #faf9f6; border: 1px solid #e2ddd4; }
+  .mcq-card .option.correct { background: #eaf3de; border-color: #b9d79a; color: #3b6d11; font-weight: bold; }
+  .mcq-card .answer-box { font-family: Arial, sans-serif; font-size: 0.88em; background: #eef4f0; border-radius: 6px; padding: 8px 12px; }
+  .mcq-card .answer-label { font-weight: bold; color: #2f6b4f; }
+  figure.lecture-diagram { margin: 16px 0; background:#fff; border:1px solid #e2ddd4; border-radius:8px; padding:10px; }
+  figure.lecture-diagram figcaption { font-family: Arial, sans-serif; font-size:0.8em; color:#57606a; text-align:center; margin-top:6px; }
+/*ANCH-CSS*/
+  .note-anchor { background:#d9f2ee; border-bottom:2px solid #0f766e; cursor:pointer; border-radius:2px; }
+  .note-anchor:hover { background:#b7e0da; }
+  .anchored-note { background:#e3f5f2 !important; border:1px solid #7fc4ba !important; color:#0b4f49 !important; }
+  .anchored-note .note-label { color:#0f766e; }
+  .anchored-note .anch-btns { float:right; margin-left:8px; }
+  .anchored-note .anch-btns button { font-family:Arial,sans-serif; font-size:11px; border:1px solid #7fc4ba; background:#fff; color:#0f766e; border-radius:4px; padding:1px 6px; margin-left:3px; cursor:pointer; }
+  .anchored-note .anch-btns button:hover { background:#0f766e; color:#fff; }
+  .anch-flash { animation: anchflash 1.4s ease-out; }
+  @keyframes anchflash { 0% { background:#ffe066; box-shadow:0 0 0 4px #ffe066; } 100% { box-shadow:0 0 0 0 transparent; } }
+  #anch-btn { position:absolute; z-index:300; display:none; font-family:Arial,sans-serif; font-size:13px; background:#0f766e; color:#fff; border:none; border-radius:6px; padding:6px 12px; cursor:pointer; box-shadow:0 2px 8px rgba(0,0,0,.25); }
+  #anch-pop { position:absolute; z-index:301; display:none; width:280px; background:#fff; border:2px solid #0f766e; border-radius:8px; padding:10px; box-shadow:0 4px 16px rgba(0,0,0,.25); font-family:Arial,sans-serif; }
+  #anch-pop .ap-quote { font-size:12px; color:#57606a; margin-bottom:6px; font-style:italic; }
+  #anch-pop textarea { width:100%; min-height:70px; font-size:13px; padding:6px; border:1px solid #d8d2c6; border-radius:4px; font-family:Arial,sans-serif; }
+  #anch-pop .ap-actions { text-align:right; margin-top:6px; }
+  #anch-pop .ap-actions button { font-size:12px; padding:5px 12px; border-radius:4px; border:1px solid #0f766e; background:#fff; color:#0f766e; cursor:pointer; margin-left:4px; }
+  #anch-pop .ap-actions .ap-add { background:#0f766e; color:#fff; }
+  .my-notes-index { margin-top:40px; border-top:3px solid #0f766e; padding-top:10px; }
+  .my-notes-index h2 { color:#0f766e; border-left-color:#0f766e; }
+  .my-notes-index .ni-item { padding:6px 0; border-bottom:1px solid #e2ddd4; font-size:0.95em; }
+  .my-notes-index .ni-link { color:#0f766e; font-weight:bold; text-decoration:none; }
+  .my-notes-index .ni-note { color:#1f2328; }
+  .my-notes-index .ni-empty { color:#57606a; font-size:0.9em; }
+/*/ANCH-CSS*/
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <button id="btn-highlight" title="Select text, then click to highlight it">Highlight</button>
+  <button id="btn-underline" title="Select text, then click to underline it">Underline</button>
+  <button id="btn-note" title="Click this, then click anywhere in the notes to drop a note">Add note</button>
+  <button id="btn-clear" title="Remove all your highlights, underlines, and notes">Clear my edits</button>
+  <span class="status" id="status-text">Not connected to file — click Save once to connect</span>
+  <button class="save-btn" id="btn-save">Save</button>
+</div>
+
+<div id="fallback-help">
+  <strong>Your browser can't save directly</strong>
+  <p style="margin:6px 0;">File System Access isn't supported here (common on Safari/Firefox). Use Chrome or Edge to enable direct-save, or use your browser's Save Page As (Ctrl/Cmd+S) to overwrite this file manually after editing.</p>
+  <button id="fallback-close" style="font-size: 12px; padding: 6px 12px; border-radius: 4px; border: 1px solid #993c1d; background: #993c1d; color: #fff; cursor: pointer;">Got it</button>
+</div>
+
+<div id="note-input-box">
+  <textarea id="note-text" placeholder="Type your note..."></textarea>
+  <div class="note-actions">
+    <button id="note-cancel">Cancel</button>
+    <button class="primary" id="note-add">Add</button>
+  </div>
+</div>
+
+<div class="wrap content-target" id="content-root">
+<header>
+  <h1>Class 3 — Cyber Security: Concept, Elements, Cyber Attacks &amp; Cyber Crimes (Satvik Bhan · 09-07-2026)</h1>
+  <div class="meta">
+    <span>Source: YouTube "03. Cyber Security (09-07-2026)", ~3h02m captured (pre-lunch half), Hindi–English mix</span> &middot;
+    <span>Builds on <a href="../2026-07-02_class02-mythos-part2/notes.html">Class 2 (Mythos Part 2)</a></span> &middot;
+    <span>Track: UPSC GS-3 Internal Security — Current Affairs</span>
+  </div>
+</header>
+
+<div class="gap-box">
+  <h4>What this class covers</h4>
+  <p>First half of the full <strong>Cyber Security</strong> topic. Covered: PYQ pattern and the 6-part answer structure; definition and <strong>scope</strong> of cyber security; <strong>functions</strong> and <strong>elements (pillars)</strong>; <strong>definitions</strong> (cyber attack, cyber crime, cyber terrorism, espionage, warfare); types of attacks; the long list of cyber crimes including <strong>digital arrest</strong>, <strong>scam compounds</strong> and <strong>cyber slavery</strong>; and the first leg of <strong>Impact</strong>. The post-lunch half (impact in detail, challenges, strategy, AI &amp; cyber security, way forward) is <strong>not in this video</strong> and will follow when the next recording is added. Minutes 0:00–0:08 are admin.</p>
+</div>
+
+<nav class="toc">
+  <h2>Contents</h2>
+  <ol>
+    <li><a href="#admin">Course admin &amp; study method</a></li>
+    <li><a href="#pyq">What UPSC has asked — and the answer structure</a></li>
+    <li><a href="#concept">1. Cyber security as a concept</a></li>
+    <li><a href="#overlap">2. Not a technical issue — an overlapping issue</a></li>
+    <li><a href="#functions">3. Functions of cyber security</a></li>
+    <li><a href="#elements">4. Elements (pillars) of cyber security</a></li>
+    <li><a href="#attack">5. Definition: cyber attack, and types of attacks</a></li>
+    <li><a href="#vs">6. Cyber attack vs cyber crime</a></li>
+    <li><a href="#crimes">7. Cyber crimes — the detailed list</a></li>
+    <li><a href="#digital">8. Digital arrest, scam compounds &amp; cyber slavery</a></li>
+    <li><a href="#evolution">9. Evolution of cyber crime</a></li>
+    <li><a href="#other">10. Other definitions: cyber terrorism, espionage, warfare</a></li>
+    <li><a href="#facts">11. Facts for the exam — sectors, hotspots, diplomacy</a></li>
+    <li><a href="#impact">12. Impact — how to open it</a></li>
+    <li><a href="#practice">13. Practice questions</a></li>
+    <li><a href="#mcqs">Prelims trap MCQs</a></li>
+    <li><a href="#glossary">Glossary</a></li>
+    <li><a href="#study">Study advice from the class</a></li>
+    <li><a href="#verify">Claims to verify</a></li>
+  </ol>
+</nav>
+
+<section id="summary">
+  <h2>Executive summary</h2>
+  <div class="summary-box"><ul>
+    <li><strong>Frame every cyber answer in 6 parts:</strong> Introduction (definitions) → Impact → Challenges/issues + gaps in India's approach → India's strategy/steps → Way forward. Keywords: <em>impact, elements, measures taken, types of cyber crime, threats, cyber warfare.</em></li>
+    <li><strong>Cyber security = protection of cyber space</strong> (computer systems, networks, data, digital services, critical infrastructure) from <strong>unauthorised access, disruption, manipulation, espionage, fraud and destruction</strong>.</li>
+    <li><strong>It is an overlapping issue, not a technical one</strong>: internal security, economic security (supply chains, BFSI), privacy, public order and national security/sovereignty. Link to AIIMS 2022 ransomware, co-op banks, telecom, transport, <strong>ports</strong>.</li>
+    <li><strong>Functions (IBM list):</strong> protect sensitive data · prevent threats · business continuity · secure digital infrastructure · <strong>maintain the CIA triad</strong> · secure communication · regulatory compliance (GDPR, <strong>DPDP Act 2023</strong>) · identify &amp; mitigate risk · educate users (<strong>cyber hygiene</strong>) · incident response.</li>
+    <li><strong>7 elements/pillars:</strong> network · information · endpoint · cloud · application · operational · disaster recovery &amp; business continuity.</li>
+    <li><strong>Cyber attack ≠ cyber crime.</strong> Almost every cyber attack is a cyber crime, but not vice versa. Attack = technical act on a system; crime = unlawful act (law decides) where the computer is a <strong>target or a tool</strong>. Government calls attacks <strong>"cyber security incidents"</strong>, reported to <strong>CERT-In</strong> (MeitY); crimes go to police/<strong>I4C</strong> (MHA) and <strong>NCRB</strong> keeps data.</li>
+    <li><strong>New trend:</strong> <strong>FaaS (Fraud-as-a-Service)</strong>, WormGPT-style tools, <strong>low entry barrier</strong> because of AI. Cyber crime is now <strong>multidimensional</strong>: fraud + human trafficking + organised crime + terror/insurgent funding (<strong>scam compounds</strong> in Myanmar/Cambodia/Laos; <strong>cyber slavery</strong>).</li>
+    <li><strong>Current-affairs hooks:</strong> Telegram blocked under <strong>Sec 69A</strong> after NEET 2026 leak, <strong>Operation Chakra</strong> (CBI), <strong>Online Gaming Act 2025</strong>, <strong>WazirX</strong> hack, Hezbollah <strong>pager</strong> attack, Iran-linked DDoS on GCC states.</li>
+  </ul></div>
+</section>
+
+<section id="admin">
+  <h2>Course admin &amp; study method <span class="timestamp">0:02 – 0:08</span></h2>
+  <ul>
+    <li>One class a week for now — "exponential curve": content and load will rise. After every class, <strong>revise twice immediately</strong> (on the metro, nearby, or online) and write your own 2–3 page notes. Do not re-read the class notes later; revise your own pages repeatedly. The class notes are only to improve writing speed and for answer practice.</li>
+    <li>Plan stated: core topics promised in the brochure will be covered till <strong>December</strong> (70–80% of core syllabus integrated with current affairs). <strong>Prelims classes</strong> start around Christmas (Environment, Science &amp; Tech first); a <strong>map discussion</strong> around the last week of January.</li>
+    <li>Recap question asked: last class = AI models (Mythos) → implications (critical infrastructure, national security, citizen security, BFSI keyword) → India's response issues → steps by government → way forward. <strong>Mythos is 100% expected</strong> in the next Mains.</li>
+    <li>Today's plan: cyber security (8 questions have come), <strong>digital arrest</strong>, <strong>scam hubs</strong>, and a specific focus on <strong>AI and cyber security</strong>.</li>
+    <li>Memorise: "the exam is for donkeys, not horses" — whoever works 10–12 hours like a donkey qualifies. Objective is <strong>to learn by heart</strong>.</li>
+  </ul>
+</section>
+
+<section id="pyq">
+  <h2>What UPSC has asked — and the answer structure <span class="timestamp">0:08 – 0:23</span></h2>
+  <p>Always keep the <strong>PYQ booklet</strong> in hand when studying a topic: first learn <em>what type of questions</em> come. The lecturer opens the PYQs on cyber security and notes the keywords:</p>
+  <ul>
+    <li><strong>Cyber attack</strong> + its <strong>impact</strong> ("what shall be the impact").</li>
+    <li><strong>Elements of cyber security</strong> — a new term; just list the elements for now.</li>
+    <li><strong>Measures taken by India</strong> (= "steps taken"; = "cyber security strategy"). If the verb is "critically analyse", add <strong>pros and cons</strong> (positives first, then negatives).</li>
+    <li><strong>Different types of cyber crime</strong> — a fruitful area (phishing; digital arrest was expected and a full-page news article appeared).</li>
+    <li><strong>Threats of cyber attack</strong> and <strong>cyber warfare</strong>. Social-networking-site meanings (2013) and the B.N. Srikrishna report — not relevant now.</li>
+  </ul>
+  <div class="exam-tip"><strong>Structure rule:</strong> every topic must be organised around a structure; before reading anything ask <em>"where will I fit this?"</em></div>
+  <figure class="lecture-diagram"><svg viewBox="0 0 700 300" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif" role="img"><defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#57606a"/></marker></defs><rect x="230" y="8" width="240" height="38" rx="7" fill="#1d5b8b" stroke="#1d5b8b" stroke-width="1.5"/><text x="350.0" y="31.9" text-anchor="middle" font-size="14" fill="#ffffff" font-weight="bold">CYBER SECURITY - answer structure</text><rect x="10" y="90" width="126" height="70" rx="7" fill="#e6f1fb" stroke="#1d5b8b" stroke-width="1.5"/><text x="73.0" y="107.85" text-anchor="middle" font-size="11" fill="#0c447c" font-weight="bold">1. INTRO</text><text x="73.0" y="121.85" text-anchor="middle" font-size="11" fill="#0c447c" font-weight="bold">definitions:</text><text x="73.0" y="135.85" text-anchor="middle" font-size="11" fill="#0c447c" font-weight="bold">attack - crime -</text><text x="73.0" y="149.85" text-anchor="middle" font-size="11" fill="#0c447c" font-weight="bold">concept - AI</text><line x1="350" y1="46" x2="73" y2="90" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="146" y="90" width="126" height="70" rx="7" fill="#eef4f0" stroke="#2f6b4f" stroke-width="1.5"/><text x="209.0" y="121.85" text-anchor="middle" font-size="11" fill="#1f4d37" font-weight="bold">2. IMPACT /</text><text x="209.0" y="135.85" text-anchor="middle" font-size="11" fill="#1f4d37" font-weight="bold">IMPLICATIONS</text><line x1="350" y1="46" x2="209" y2="90" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="282" y="90" width="126" height="70" rx="7" fill="#fdf3f3" stroke="#8b3a3a" stroke-width="1.5"/><text x="345.0" y="114.85" text-anchor="middle" font-size="11" fill="#6b2a2a" font-weight="bold">3. CHALLENGES</text><text x="345.0" y="128.85" text-anchor="middle" font-size="11" fill="#6b2a2a" font-weight="bold">+ GAPS in</text><text x="345.0" y="142.85" text-anchor="middle" font-size="11" fill="#6b2a2a" font-weight="bold">India&#x27;s approach</text><line x1="350" y1="46" x2="345" y2="90" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="418" y="90" width="126" height="70" rx="7" fill="#fff7e6" stroke="#c28a1a" stroke-width="1.5"/><text x="481.0" y="114.85" text-anchor="middle" font-size="11" fill="#6b4f15" font-weight="bold">4. STRATEGY</text><text x="481.0" y="128.85" text-anchor="middle" font-size="11" fill="#6b4f15" font-weight="bold">(= steps taken)</text><text x="481.0" y="142.85" text-anchor="middle" font-size="11" fill="#6b4f15" font-weight="bold">of India</text><line x1="350" y1="46" x2="481" y2="90" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="554" y="90" width="126" height="70" rx="7" fill="#fff7e6" stroke="#c28a1a" stroke-width="1.5"/><text x="617.0" y="114.85" text-anchor="middle" font-size="11" fill="#6b4f15" font-weight="bold">5. WAY</text><text x="617.0" y="128.85" text-anchor="middle" font-size="11" fill="#6b4f15" font-weight="bold">FORWARD</text><text x="617.0" y="142.85" text-anchor="middle" font-size="11" fill="#6b4f15" font-weight="bold">(= suggest)</text><line x1="350" y1="46" x2="617" y2="90" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><text x="350" y="195" text-anchor="middle" font-size="11" fill="#6b2a2a" font-weight="bold" font-style="normal">PYQ keywords: impact - elements - measures by India - types of cyber crime - threats - cyber warfare</text><text x="350" y="225" text-anchor="middle" font-size="11" fill="#1f2328" font-weight="normal" font-style="italic">If verb = &quot;critically analyse&quot;: positives first, then negatives</text><text x="350" y="250" text-anchor="middle" font-size="11" fill="#6b4f15" font-weight="bold" font-style="normal">Always ask: where will this fit in my structure?</text></svg><figcaption>Fig. 1 - Cyber security answer structure used in class</figcaption></figure>
+  <ol>
+    <li><strong>Introduction</strong> — details of cyber attack and cyber crime (the two are different); cyber security as a concept; AI and cyber security (because AI is a current-affairs topic and cannot be taught in isolation — look at its effect in diplomacy, security, governance, society, geography).</li>
+    <li><strong>Impact</strong> (UPSC also says <em>implications</em>) — PYQ.</li>
+    <li><strong>Challenges / issues</strong> in dealing with cyber attacks <em>and gaps in India's approach</em> (what are the problems).</li>
+    <li><strong>Response — cyber security strategy of India</strong> (in brackets: "steps taken by the Government of India". Both mean the same whether UPSC says "steps" or "strategies").</li>
+    <li><strong>Way forward</strong> — usually asked as "suggest the strategies / what steps do you recommend".</li>
+  </ol>
+  <p><strong>Current-affairs framing:</strong> current affairs must be placed into a core structure; reading them "the way you read news" does not prepare you. Also: AI-enabled misuse is just one strand — you can ask ChatGPT/Claude how to launch an attack, and "FaaS" kits are sold on Telegram.</p>
+  <div class="exam-tip"><strong>Examples of how the question arrives:</strong> "Critically analyse the steps taken by the Government of India…", "Discuss the evolving pattern of cyber crimes and suggest strategies…". Interview tip: structure also helps you talk in the interview.</div>
+  <div class="exam-tip"><strong>Latest cyber-crime tool:</strong> <strong>WormGPT</strong> — the "other brother of ChatGPT" that explains how to carry out a cyber attack (the lecturer says "don't use it"). Reported by Times of India; <strong>FaaS = Fraud as a Service</strong>. <strong>Low entry barrier</strong> is AI's biggest problem (to be studied separately).</div>
+</section>
+
+<section id="concept">
+  <h2>1. Cyber security as a concept <span class="timestamp">0:23 – 0:28</span></h2>
+  <ul>
+    <li><strong>Definition:</strong> cyber security is <strong>protection of cyber space</strong>.</li>
+    <li><strong>What is in cyber space:</strong> (1) <strong>computer systems</strong>, (2) <strong>networks</strong>, (3) <strong>data</strong> (data breach is the concern), (4) <strong>digital services</strong> (e.g. UPI), (5) <strong>critical infrastructure</strong> — "an important keyword; always show it separately to the examiner".</li>
+    <li><strong>Protection from what:</strong> (1) <strong>unauthorised access</strong>, (2) <strong>disruption</strong>, (3) <strong>manipulation</strong>, (4) <strong>espionage</strong> (snooping/surveillance — see <strong>cyber espionage</strong>, e.g. Israel against Hezbollah, Hamas, Iran), (5) <strong>fraud</strong> and (6) <strong>destruction</strong> of systems.</li>
+    <li>Cyber crime is a <strong>small subset</strong> of cyber security. If you say "cyber attack", cyber crime is left out; if you say "cyber crime", cyber attack is left out — so define cyber security broadly.</li>
+    <li>Example: if malware/virus/trojan affects my UPI data, my <strong>services</strong> are affected as well. Whenever you discuss internal security, show critical infrastructure separately.</li>
+  </ul>
+</section>
+
+<section id="overlap">
+  <h2>2. Not a technical issue — an overlapping issue <span class="timestamp">0:28 – 0:40</span></h2>
+  <ul>
+    <li>Twenty years ago people said cyber security is only for those who own a computer or laptop. That is also the government's earlier mistake: the <strong>Cyber Security Policy came in 2013</strong>. <em>(Context: the pattern of Civil Services Mains was changing and cyber security was becoming a topic.)</em></li>
+    <li>Do not define cyber security every time. Tell the examiner at the start: <strong>"cyber security is not a technical issue; it is an overlapping issue."</strong> Show it with a <strong>polygon (dots) diagram</strong> — the lecturer uses polygons; a Venn diagram is also acceptable.</li>
+  </ul>
+  <figure class="lecture-diagram"><svg viewBox="0 0 700 330" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif" role="img"><defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#57606a"/></marker></defs><rect x="250" y="130" width="200" height="60" rx="7" fill="#1d5b8b" stroke="#1d5b8b" stroke-width="1.5"/><text x="350.0" y="149.2" text-anchor="middle" font-size="12" fill="#ffffff" font-weight="bold">CYBER SECURITY</text><text x="350.0" y="164.2" text-anchor="middle" font-size="12" fill="#ffffff" font-weight="bold">(overlapping issue,</text><text x="350.0" y="179.2" text-anchor="middle" font-size="12" fill="#ffffff" font-weight="bold">NOT a technical one)</text><rect x="20" y="20" width="160" height="70" rx="7" fill="#eef4f0" stroke="#2f6b4f" stroke-width="1.5"/><text x="100.0" y="45.175" text-anchor="middle" font-size="10.5" fill="#1f4d37" font-weight="normal">INTERNAL</text><text x="100.0" y="58.675" text-anchor="middle" font-size="10.5" fill="#1f4d37" font-weight="normal">SECURITY</text><text x="100.0" y="72.175" text-anchor="middle" font-size="10.5" fill="#1f4d37" font-weight="normal">(AIIMS, banks, ports)</text><line x1="100.0" y1="90" x2="350" y2="160" stroke="#57606a" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#ar)"/><rect x="270" y="10" width="160" height="70" rx="7" fill="#fff7e6" stroke="#c28a1a" stroke-width="1.5"/><text x="350.0" y="35.175" text-anchor="middle" font-size="10.5" fill="#6b4f15" font-weight="normal">ECONOMIC SECURITY</text><text x="350.0" y="48.675" text-anchor="middle" font-size="10.5" fill="#6b4f15" font-weight="normal">supply chains - BFSI</text><text x="350.0" y="62.175" text-anchor="middle" font-size="10.5" fill="#6b4f15" font-weight="normal">financial sector</text><line x1="350.0" y1="80" x2="350" y2="160" stroke="#57606a" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#ar)"/><rect x="520" y="20" width="160" height="70" rx="7" fill="#fdf3f3" stroke="#8b3a3a" stroke-width="1.5"/><text x="600.0" y="45.175" text-anchor="middle" font-size="10.5" fill="#6b2a2a" font-weight="normal">NATIONAL SECURITY</text><text x="600.0" y="58.675" text-anchor="middle" font-size="10.5" fill="#6b2a2a" font-weight="normal">sovereignty</text><text x="600.0" y="72.175" text-anchor="middle" font-size="10.5" fill="#6b2a2a" font-weight="normal">cyber terrorism</text><line x1="600.0" y1="90" x2="350" y2="160" stroke="#57606a" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#ar)"/><rect x="20" y="240" width="160" height="70" rx="7" fill="#e6f1fb" stroke="#1d5b8b" stroke-width="1.5"/><text x="100.0" y="265.175" text-anchor="middle" font-size="10.5" fill="#0c447c" font-weight="normal">PRIVACY</text><text x="100.0" y="278.675" text-anchor="middle" font-size="10.5" fill="#0c447c" font-weight="normal">personal data</text><text x="100.0" y="292.175" text-anchor="middle" font-size="10.5" fill="#0c447c" font-weight="normal">identity theft</text><line x1="100.0" y1="240" x2="350" y2="190" stroke="#57606a" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#ar)"/><rect x="520" y="240" width="160" height="70" rx="7" fill="#fdf3f3" stroke="#8b3a3a" stroke-width="1.5"/><text x="600.0" y="265.175" text-anchor="middle" font-size="10.5" fill="#6b2a2a" font-weight="normal">PUBLIC ORDER</text><text x="600.0" y="278.675" text-anchor="middle" font-size="10.5" fill="#6b2a2a" font-weight="normal">deepfakes - disinfo</text><text x="600.0" y="292.175" text-anchor="middle" font-size="10.5" fill="#6b2a2a" font-weight="normal">radicalisation</text><line x1="600.0" y1="240" x2="350" y2="190" stroke="#57606a" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#ar)"/><rect x="250" y="255" width="200" height="56" rx="7" fill="#ffffff" stroke="#57606a" stroke-width="1.5"/><text x="350.0" y="273.175" text-anchor="middle" font-size="10.5" fill="#1f2328" font-weight="normal">PUBLIC TRUST IN</text><text x="350.0" y="286.675" text-anchor="middle" font-size="10.5" fill="#1f2328" font-weight="normal">GOVERNANCE</text><text x="350.0" y="300.175" text-anchor="middle" font-size="10.5" fill="#1f2328" font-weight="normal">(UPI - Aadhaar - DigiLocker)</text><line x1="350" y1="255" x2="350" y2="190" stroke="#57606a" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#ar)"/></svg><figcaption>Fig. 2 - Cyber security as an overlapping issue</figcaption></figure>
+  <ul>
+    <li><strong>Internal security</strong> (centre of the diagram) — also expect the IR keyword used by the Prime Minister: India's ties with Japan, New Zealand, Indonesia, Australia are to be seen from this perspective. <em>Hint: a similar keyword was asked in last year's Mains.</em></li>
+    <li><strong>Economic security</strong> — ensuring the <strong>financial sector</strong> is not hit by cyber attacks; <strong>supply-chain resilience</strong>; <strong>security of BFSI</strong>. If an import system or a government website is attacked, economic security is compromised.</li>
+    <li><strong>Privacy protection</strong>.</li>
+    <li><strong>Public order</strong> — e.g. deepfake videos of politicians released; political statements circulated.</li>
+    <li><strong>National security / sovereignty</strong> — "if I do not protect my country's cyber network I compromise my national security."</li>
+  </ul>
+  <p><strong>Why internal security?</strong> Cyber attacks can disrupt <strong>essential services</strong>:</p>
+  <ul>
+    <li><strong>Health:</strong> ransomware attack on <strong>AIIMS</strong> (2022) — a very popular example.</li>
+    <li><strong>Banking:</strong> frequent attacks on <strong>co-operative banks</strong>.</li>
+    <li><strong>Telecom</strong>, <strong>transport</strong> and (most important) <strong>ports</strong> — the port is the government's vision; <strong>maritime security</strong> was asked in Mains last year (Internal Security).</li>
+  </ul>
+  <p>It also enables <strong>cyber terrorism, propaganda and radicalisation</strong>; allows theft of personal data, <strong>identity theft</strong>, <strong>fraud</strong> and <strong>online blackmail</strong>; and — since <strong>Operation Sindoor</strong> — is part of <strong>information warfare, asymmetric warfare, hybrid warfare, disinformation</strong> (spreading fake news at national/international level) and <strong>grey-zone warfare by non-state actors</strong>.</p>
+  <p>Finally it <strong>weakens public interest/trust in governance</strong>: everyone uses UPI, Aadhaar, DigiLocker, CoWIN, hospital appointment platforms (AIIMS, Safdarjung). If people lose faith, they stop using Aadhaar/DigiLocker. <strong>Recent scam — FASTag:</strong> fake sites rank first on search (search-engine optimisation by criminals) and charge for a fake FASTag recharge; the user pays at the toll twice. Use such scams as <strong>examples inside the main structure</strong> ("these are just a few words in your Mains answer"). <em>Do not confuse the fake-recharge example with an actual NHAI/government system.</em></p>
+  <div class="exam-tip">Templates, not rules: you can define, give broad implications, and justify why it is an internal-security issue. If you forget "privacy", it is fine — the examiner looks for <strong>keywords</strong>.</div>
+</section>
+
+<section id="functions">
+  <h2>3. Functions of cyber security <span class="timestamp">0:39 – 0:51</span></h2>
+  <p>Taken from IBM's website (the lecturer's source). These are the <strong>ingredients/pillars of a cyber security policy</strong>.</p>
+  <ol>
+    <li><strong>Protect sensitive data.</strong></li>
+    <li><strong>Prevent cyber threats.</strong></li>
+    <li><strong>Ensure business continuity.</strong></li>
+    <li><strong>Secure digital infrastructure</strong> — servers, databases, <strong>cloud environments</strong>.</li>
+    <li><strong>Maintain the CIA triad</strong> (see below) — "any company or government agency providing cyber security will always maintain the CIA".</li>
+    <li><strong>Enable secure communication.</strong></li>
+    <li><strong>Support regulatory compliance</strong> — EU's <strong>GDPR (2018)</strong>; in India the <strong>DPDP Act, 2023</strong> (Digital Personal Data Protection Act). <em>DPDP Act is also expected in Mains this year because the government recently approved the new rules for implementation; to be studied in Prelims later.</em></li>
+    <li><strong>Identify and mitigate risk.</strong></li>
+    <li><strong>Educate and train users</strong> — <strong>cyber hygiene</strong> (keyword: if you don't write it, you don't get marks).</li>
+    <li><strong>Facilitate incident response</strong> — develop and execute plans to quickly <strong>detect, contain and recover</strong> from cyber security incidents.</li>
+  </ol>
+  <h3>The CIA triad (tripod / "triad of cyber security")</h3>
+  <figure class="lecture-diagram"><svg viewBox="0 0 700 260" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif" role="img"><defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#57606a"/></marker></defs><rect x="250" y="10" width="200" height="70" rx="7" fill="#1d5b8b" stroke="#1d5b8b" stroke-width="1.5"/><text x="350.0" y="50.25" text-anchor="middle" font-size="15" fill="#ffffff" font-weight="bold">CIA TRIAD</text><rect x="10" y="130" width="210" height="90" rx="7" fill="#e6f1fb" stroke="#1d5b8b" stroke-width="1.5"/><text x="115.0" y="157.85" text-anchor="middle" font-size="11" fill="#0c447c" font-weight="normal">C - CONFIDENTIALITY</text><text x="115.0" y="171.85" text-anchor="middle" font-size="11" fill="#0c447c" font-weight="normal">only authorised parties</text><text x="115.0" y="185.85" text-anchor="middle" font-size="11" fill="#0c447c" font-weight="normal">can access</text><text x="115.0" y="199.85" text-anchor="middle" font-size="11" fill="#0c447c" font-weight="normal">(breach = data theft)</text><rect x="245" y="130" width="210" height="90" rx="7" fill="#eef4f0" stroke="#2f6b4f" stroke-width="1.5"/><text x="350.0" y="157.85" text-anchor="middle" font-size="11" fill="#1f4d37" font-weight="normal">I - INTEGRITY</text><text x="350.0" y="171.85" text-anchor="middle" font-size="11" fill="#1f4d37" font-weight="normal">data not altered</text><text x="350.0" y="185.85" text-anchor="middle" font-size="11" fill="#1f4d37" font-weight="normal">or corrupted</text><text x="350.0" y="199.85" text-anchor="middle" font-size="11" fill="#1f4d37" font-weight="normal">(virus = integrity hit)</text><rect x="480" y="130" width="210" height="90" rx="7" fill="#fff7e6" stroke="#c28a1a" stroke-width="1.5"/><text x="585.0" y="157.85" text-anchor="middle" font-size="11" fill="#6b4f15" font-weight="normal">A - AVAILABILITY</text><text x="585.0" y="171.85" text-anchor="middle" font-size="11" fill="#6b4f15" font-weight="normal">resources available</text><text x="585.0" y="185.85" text-anchor="middle" font-size="11" fill="#6b4f15" font-weight="normal">when needed</text><text x="585.0" y="199.85" text-anchor="middle" font-size="11" fill="#6b4f15" font-weight="normal">(DDoS = availability hit)</text><line x1="350" y1="80" x2="115" y2="130" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="350" y1="80" x2="350" y2="130" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="350" y1="80" x2="585" y2="130" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><text x="350" y="245" text-anchor="middle" font-size="11.5" fill="#6b2a2a" font-weight="bold" font-style="normal">Any cyber attack violates one or more pillars of the CIA triad</text></svg><figcaption>Fig. 3 - CIA triad and what each attack type hits</figcaption></figure>
+  <ul>
+    <li><strong>C — Confidentiality:</strong> information is accessible <strong>only to authorised parties</strong>.</li>
+    <li><strong>I — Integrity:</strong> protection of data from being <strong>altered or corrupted</strong>.</li>
+    <li><strong>A — Availability:</strong> resources are available <strong>when needed</strong>.</li>
+    <li>Link to Mythos (Class 1): "patching software" is a <em>keyword</em> from the CIA mindset.</li>
+  </ul>
+  <h3>Cyber hygiene — what it means</h3>
+  <ul>
+    <li>India has <strong>no training for users</strong> on cyber hygiene. Hygiene = what you do like washing hands/brushing teeth; for cyber space: <strong>don't log in on unauthorised websites</strong>; don't leave private-data logins open; <strong>two-factor authentication</strong>; <strong>change passwords</strong> (about 85% of a class of 100 won't have done even these); <strong>antivirus</strong>; use <strong>biometrics</strong> with privacy in mind; <strong>regular backups</strong> — the most important part.</li>
+    <li>Government link: whenever it faces an imminent threat, it ensures that <strong>data is located/served within the territory of India</strong> (data localisation) so that a backup exists after an attack.</li>
+  </ul>
+  <div class="exam-tip"><strong>Question to write and attempt after class:</strong> "In the light of increasing cyber security challenges, <strong>discuss and devise a cyber security policy</strong> and also <strong>analyse India's cyber security approach</strong>." — the 6–7 heads above are the ingredients of the policy.</div>
+</section>
+
+<section id="elements">
+  <h2>4. Elements (pillars) of cyber security <span class="timestamp">0:52 – 1:05</span></h2>
+  <p>Asked in an earlier Mains (2022 or 2024 — lecturer unsure; <strong>a "bouncer"</strong>). Some IT firms list <strong>"seven types of cyber security"</strong>. Lowest bouncer probability is in <strong>Internal Security</strong> among GS 1–3, so 3–4 questions per year should be straight from class notes (example: left-wing extremism last year appeared as a straight 10-marker).</p>
+  <p><em>"Elements" = dimensions / aspects / pillars / components — all mean the same.</em> Ask yourself "what all comes under cyber security?"</p>
+  <table>
+    <tr><th>#</th><th>Element</th><th>What it protects</th><th>Examples</th></tr>
+    <tr><td>1</td><td><strong>Network security</strong></td><td>Network from unauthorised access, misuse and cyber threats</td><td>Firewall, encryption</td></tr>
+    <tr><td>2</td><td><strong>Information security</strong></td><td>Data and information (physical <em>and</em> digital) from unauthorised access; maintains CIA</td><td>Access control, CIA triad</td></tr>
+    <tr><td>3</td><td><strong>Endpoint security</strong></td><td>Devices — computers, smartphones, tablets</td><td>Antivirus software</td></tr>
+    <tr><td>4</td><td><strong>Cloud security</strong></td><td>Data on cloud services</td><td>Cloud security policies</td></tr>
+    <tr><td>5</td><td><strong>Application security</strong></td><td>Apps/software</td><td>Secure coding, testing for vulnerabilities, authorisation &amp; authentication</td></tr>
+    <tr><td>6</td><td><strong>Operational security</strong></td><td>Processes and decisions — ensures sensitive information is not leaked</td><td>Risk management, secure workflows</td></tr>
+    <tr><td>7</td><td><strong>Disaster recovery &amp; business continuity planning</strong></td><td>Quick recovery after a cyber incident/disaster</td><td>Backup solutions, <strong>Incident Response Plan (IRP)</strong></td></tr>
+  </table>
+  <p>Also write <strong>end-to-end encryption</strong> (EEE) under network security; the lecturer does <em>not</em> want depth, only the names. Keep "pillars" for the exam: if you forget a pillar, other heads (anticipation, response, planning for disasters) fit in the same way.</p>
+</section>
+
+<section id="attack">
+  <h2>5. Definition: cyber attack, and types of attacks <span class="timestamp">1:05 – 1:40</span></h2>
+  <p>Make a heading <strong>"A. Some definitions for the exam"</strong> in the introduction. First definition: <strong>cyber attack</strong>.</p>
+  <div class="term-box">
+    <strong>Cyber attack:</strong> an attack on <strong>data, networks, applications, computer systems, critical infrastructure and services</strong> (e.g. health, UPI) <strong>with the intent of</strong> stealing information, disrupting services, causing financial loss, manipulating systems — and thereby <strong>threatening national security / internal security / sovereignty</strong> (these terms are interchangeable for the answer).
+  </div>
+  <p><strong>Broad objective:</strong> violation of <strong>one or more pillars of the CIA triad</strong>. Example — a <strong>virus</strong> corrupts data → threatens <strong>integrity</strong>; if the phone can't be accessed → threatens <strong>availability</strong>; confidentiality stays intact if the contact list was not stolen. Whenever you target a computer system, it is a cyber attack.</p>
+  <h3>Official terminology (important)</h3>
+  <ul>
+    <li>The <strong>Government of India does not use "cyber attacks"</strong> — it uses <strong>"cyber security incidents"</strong>. The IT Act, 2000 gives the frame; there is no formal definition of "cyber attack" in government documents (definitions below are from IBM, Kaspersky, US telecom etc.).</li>
+    <li>If a <strong>cyber attack</strong> happens → report to <strong>CERT-In</strong> (<strong>Computer Emergency Response Team – India</strong>) under <strong>MeitY</strong> (Minister: Ashwini Vaishnaw). CERT-In is the body formed to <strong>report cyber security incidents</strong> — data released through <strong>PIB</strong> on "increasing number of cyber security incidents".</li>
+    <li>If it is also a <strong>cyber crime</strong> → report to the nearest police station / <strong>Ministry of Home Affairs</strong> (MHA); an FIR is lodged. Example: my app is attacked and data stolen → I report the incident to CERT-In <em>and</em> file a police complaint.</li>
+    <li>Do <strong>not</strong> confuse with cyber bullying, cyber extortion, <strong>digital arrest</strong> or <strong>FASTag</strong> scams — those are cyber crimes. <em>"Cyber security incident" ≈ cyber attack; remember "CSI → CERT-In" (CSI = Cyber Security Incidents)</em> and: <strong>Prelims angle — the ministry is Electronics &amp; IT</strong> (a recent Prelims asked the ministry behind <em>Rashtriya Gram Swaraj Abhiyan</em> — knowledge of ministries is needed).</li>
+  </ul>
+  <h3>Types of cyber attack (names only — depth is not required)</h3>
+  <figure class="lecture-diagram"><svg viewBox="0 0 700 320" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif" role="img"><defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#57606a"/></marker></defs><rect x="250" y="8" width="200" height="40" rx="7" fill="#1d5b8b" stroke="#1d5b8b" stroke-width="1.5"/><text x="350.0" y="32.55" text-anchor="middle" font-size="13" fill="#ffffff" font-weight="bold">TYPES OF CYBER ATTACK</text><rect x="4" y="90" width="94" height="30" rx="7" fill="#fdf3f3" stroke="#8b3a3a" stroke-width="1.5"/><text x="51.0" y="108.15" text-anchor="middle" font-size="9" fill="#6b2a2a" font-weight="bold">1 MALWARE</text><rect x="4" y="124" width="94" height="78" rx="7" fill="#ffffff" stroke="#57606a" stroke-width="1.5"/><text x="51.0" y="154.475" text-anchor="middle" font-size="8.5" fill="#1f2328" font-weight="normal">virus - trojan</text><text x="51.0" y="165.975" text-anchor="middle" font-size="8.5" fill="#1f2328" font-weight="normal">spyware - bots</text><text x="51.0" y="177.475" text-anchor="middle" font-size="8.5" fill="#1f2328" font-weight="normal">(Android God Mode)</text><line x1="350" y1="48" x2="51" y2="90" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="103" y="90" width="94" height="30" rx="7" fill="#fdf3f3" stroke="#8b3a3a" stroke-width="1.5"/><text x="150.0" y="108.15" text-anchor="middle" font-size="9" fill="#6b2a2a" font-weight="bold">2 RANSOMWARE</text><rect x="103" y="124" width="94" height="78" rx="7" fill="#ffffff" stroke="#57606a" stroke-width="1.5"/><text x="150.0" y="154.475" text-anchor="middle" font-size="8.5" fill="#1f2328" font-weight="normal">single -&gt; double</text><text x="150.0" y="165.975" text-anchor="middle" font-size="8.5" fill="#1f2328" font-weight="normal">extortion</text><text x="150.0" y="177.475" text-anchor="middle" font-size="8.5" fill="#1f2328" font-weight="normal">(exfiltrate + publish)</text><line x1="350" y1="48" x2="150" y2="90" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="202" y="90" width="94" height="30" rx="7" fill="#fff7e6" stroke="#c28a1a" stroke-width="1.5"/><text x="249.0" y="108.15" text-anchor="middle" font-size="9" fill="#6b4f15" font-weight="bold">3 SOCIAL ENG.</text><rect x="202" y="124" width="94" height="78" rx="7" fill="#ffffff" stroke="#57606a" stroke-width="1.5"/><text x="249.0" y="154.475" text-anchor="middle" font-size="8.5" fill="#1f2328" font-weight="normal">phishing - vishing</text><text x="249.0" y="165.975" text-anchor="middle" font-size="8.5" fill="#1f2328" font-weight="normal">smishing</text><text x="249.0" y="177.475" text-anchor="middle" font-size="8.5" fill="#1f2328" font-weight="normal">spear phishing</text><line x1="350" y1="48" x2="249" y2="90" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="301" y="90" width="94" height="30" rx="7" fill="#e6f1fb" stroke="#1d5b8b" stroke-width="1.5"/><text x="348.0" y="108.15" text-anchor="middle" font-size="9" fill="#0c447c" font-weight="bold">4 DDoS</text><rect x="301" y="124" width="94" height="78" rx="7" fill="#ffffff" stroke="#57606a" stroke-width="1.5"/><text x="348.0" y="154.475" text-anchor="middle" font-size="8.5" fill="#1f2328" font-weight="normal">bots flood a site</text><text x="348.0" y="165.975" text-anchor="middle" font-size="8.5" fill="#1f2328" font-weight="normal">unavailable</text><text x="348.0" y="177.475" text-anchor="middle" font-size="8.5" fill="#1f2328" font-weight="normal">(Iran vs GCC)</text><line x1="350" y1="48" x2="348" y2="90" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="400" y="90" width="94" height="30" rx="7" fill="#e6f1fb" stroke="#1d5b8b" stroke-width="1.5"/><text x="447.0" y="108.15" text-anchor="middle" font-size="9" fill="#0c447c" font-weight="bold">5 MITM</text><rect x="400" y="124" width="94" height="78" rx="7" fill="#ffffff" stroke="#57606a" stroke-width="1.5"/><text x="447.0" y="154.475" text-anchor="middle" font-size="8.5" fill="#1f2328" font-weight="normal">rogue Wi-Fi</text><text x="447.0" y="165.975" text-anchor="middle" font-size="8.5" fill="#1f2328" font-weight="normal">DNS spoofing</text><text x="447.0" y="177.475" text-anchor="middle" font-size="8.5" fill="#1f2328" font-weight="normal">fake certs - proxies</text><line x1="350" y1="48" x2="447" y2="90" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="499" y="90" width="94" height="30" rx="7" fill="#eef4f0" stroke="#2f6b4f" stroke-width="1.5"/><text x="546.0" y="108.15" text-anchor="middle" font-size="9" fill="#1f4d37" font-weight="bold">6 ZERO-DAY</text><rect x="499" y="124" width="94" height="78" rx="7" fill="#ffffff" stroke="#57606a" stroke-width="1.5"/><text x="546.0" y="154.475" text-anchor="middle" font-size="8.5" fill="#1f2328" font-weight="normal">unknown bug</text><text x="546.0" y="165.975" text-anchor="middle" font-size="8.5" fill="#1f2328" font-weight="normal">0 days to respond</text><text x="546.0" y="177.475" text-anchor="middle" font-size="8.5" fill="#1f2328" font-weight="normal">(Mythos link)</text><line x1="350" y1="48" x2="546" y2="90" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="598" y="90" width="94" height="30" rx="7" fill="#eef4f0" stroke="#2f6b4f" stroke-width="1.5"/><text x="645.0" y="108.15" text-anchor="middle" font-size="9" fill="#1f4d37" font-weight="bold">7 SUPPLY CHAIN</text><rect x="598" y="124" width="94" height="78" rx="7" fill="#ffffff" stroke="#57606a" stroke-width="1.5"/><text x="645.0" y="154.475" text-anchor="middle" font-size="8.5" fill="#1f2328" font-weight="normal">vendor - software</text><text x="645.0" y="165.975" text-anchor="middle" font-size="8.5" fill="#1f2328" font-weight="normal">cloud - hardware</text><text x="645.0" y="177.475" text-anchor="middle" font-size="8.5" fill="#1f2328" font-weight="normal">(Hezbollah pagers)</text><line x1="350" y1="48" x2="645" y2="90" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="150" y="225" width="400" height="34" rx="7" fill="#ffffff" stroke="#57606a" stroke-width="1.5"/><text x="350.0" y="245.675" text-anchor="middle" font-size="10.5" fill="#1f2328" font-weight="normal">8 OTHERS: account takeover - website defacement - server compromise</text><text x="350" y="285" text-anchor="middle" font-size="11" fill="#6b2a2a" font-weight="bold" font-style="normal">Govt term for attack = &quot;cyber security incident&quot; -&gt; report to CERT-In (MeitY)</text><text x="350" y="305" text-anchor="middle" font-size="10.5" fill="#1f2328" font-weight="normal" font-style="italic">Depth not needed: just names + one example each</text></svg><figcaption>Fig. 4 - Types of cyber attack</figcaption></figure>
+  <h4>(i) Malware — malicious software</h4>
+  <ul>
+    <li>Includes <strong>virus, trojan, spyware, bots</strong>.</li>
+    <li><strong>Example — "Android God Mode" malware</strong>: impersonated bank services (e.g. SBI YONO), replicating the <strong>SBI YONO</strong> and <strong>Jeevan Pramaan</strong> apps and other customer-support apps via a fake app. Just remember <em>"God Mode"</em>.</li>
+    <li>The lecturer's note: <em>"Don't confuse with COVID virus — pathogenic viruses will be studied in Prelims (Health)"</em> and mentions two viruses currently in the news — <strong>Ebola</strong> (study locations, transmission, vaccine/drug availability, origin, human-to-human transmission) and <strong>Hanta</strong> virus. ★ verify current status.</li>
+  </ul>
+  <h4>(ii) Ransomware — where ransom is demanded</h4>
+  <ul>
+    <li>Attacker takes control of a system and demands money (like kidnapping for ransom) from an individual/company/organisation.</li>
+    <li><strong>Modern ransomware = double extortion</strong> (keyword): <strong>1)</strong> <em>Exfiltration</em> — copy the data out and demand a ransom to release it; <strong>2)</strong> threaten to <strong>publish the data</strong> if the ransom is not paid, damaging reputation. (<em>Infiltration = entering the system; exfiltration = taking data out.</em>)</li>
+    <li>Lecturer's framing: nature of crime is <strong>evolving</strong> — write examples of <strong>single → double extortion</strong> ransomware, <strong>evolution of FaaS</strong>, and the <strong>emergence of AI-based, replicating phishing tools and deepfakes</strong>.</li>
+  </ul>
+  <figure class="lecture-diagram"><svg viewBox="0 0 700 220" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif" role="img"><defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#57606a"/></marker></defs><rect x="10" y="20" width="150" height="60" rx="7" fill="#e6f1fb" stroke="#1d5b8b" stroke-width="1.5"/><text x="85.0" y="46.85" text-anchor="middle" font-size="11" fill="#0c447c" font-weight="normal">Attacker infiltrates</text><text x="85.0" y="60.85" text-anchor="middle" font-size="11" fill="#0c447c" font-weight="normal">system (entry)</text><rect x="190" y="20" width="150" height="60" rx="7" fill="#fff7e6" stroke="#c28a1a" stroke-width="1.5"/><text x="265.0" y="46.85" text-anchor="middle" font-size="11" fill="#6b4f15" font-weight="normal">EXFILTRATES data</text><text x="265.0" y="60.85" text-anchor="middle" font-size="11" fill="#6b4f15" font-weight="normal">(copies it out)</text><rect x="370" y="20" width="150" height="60" rx="7" fill="#fdf3f3" stroke="#8b3a3a" stroke-width="1.5"/><text x="445.0" y="39.85" text-anchor="middle" font-size="11" fill="#6b2a2a" font-weight="normal">EXTORTION 1:</text><text x="445.0" y="53.85" text-anchor="middle" font-size="11" fill="#6b2a2a" font-weight="normal">pay to get data /</text><text x="445.0" y="67.85" text-anchor="middle" font-size="11" fill="#6b2a2a" font-weight="normal">system back</text><rect x="550" y="20" width="140" height="60" rx="7" fill="#fdf3f3" stroke="#8b3a3a" stroke-width="1.5"/><text x="620.0" y="39.85" text-anchor="middle" font-size="11" fill="#6b2a2a" font-weight="normal">EXTORTION 2:</text><text x="620.0" y="53.85" text-anchor="middle" font-size="11" fill="#6b2a2a" font-weight="normal">pay or we PUBLISH</text><text x="620.0" y="67.85" text-anchor="middle" font-size="11" fill="#6b2a2a" font-weight="normal">the data</text><line x1="160" y1="50" x2="190" y2="50" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="340" y1="50" x2="370" y2="50" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="520" y1="50" x2="550" y2="50" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="150" y="120" width="400" height="44" rx="7" fill="#1d5b8b" stroke="#1d5b8b" stroke-width="1.5"/><text x="350.0" y="138.7" text-anchor="middle" font-size="12" fill="#ffffff" font-weight="bold">MODERN RANSOMWARE = DOUBLE EXTORTION</text><text x="350.0" y="153.7" text-anchor="middle" font-size="12" fill="#ffffff" font-weight="bold">(money + reputation damage)</text><line x1="445" y1="80" x2="350" y2="120" stroke="#57606a" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#ar)"/><line x1="620" y1="80" x2="450" y2="120" stroke="#57606a" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#ar)"/><text x="350" y="195" text-anchor="middle" font-size="11" fill="#1f2328" font-weight="normal" font-style="italic">Evolution to quote: single -&gt; double extortion - FaaS - AI-based replicating phishing - deepfakes</text></svg><figcaption>Fig. 5 - Double-extortion ransomware</figcaption></figure>
+  <h4>(iii) Social engineering</h4>
+  <ul>
+    <li><strong>Phishing</strong> — impersonate <strong>trusted entities</strong> to steal credentials (OTPs, bank details) or introduce malware. Example: caller says "I am from HDFC Bank, you received ₹20,000; send OTP/QR".</li>
+    <li><strong>Vishing</strong> = voice-based; <strong>Smishing</strong> = SMS-based. "<em>Just keywords, touch and go</em>".</li>
+    <li><strong>Spear phishing</strong> — targets a <strong>head of an organisation or a specific individual</strong> (someone with resources / prominence); e.g. repeated calls to a UPSC-qualified candidate.</li>
+  </ul>
+  <h4>(iv) DDoS — Distributed Denial-of-Service</h4>
+  <ul>
+    <li>Launch several <strong>bots</strong> on a system so the site suffers heavy simultaneous traffic; users cannot log in. Keywords: <em>attempts to make a website, application and network unavailable.</em></li>
+    <li><strong>Current example:</strong> in the <strong>Iran war</strong>, Iran carried out many such attacks on the <strong>Gulf Cooperation Council</strong> states (Saudi Arabia, UAE, Oman, Bahrain, Kuwait, Qatar). ★ verify.</li>
+  </ul>
+  <h4>(v) Man-in-the-Middle (MITM)</h4>
+  <ul>
+    <li>An attacker <strong>secretly intercepts and alters communication between two parties</strong>. Methods: <strong>rogue Wi-Fi</strong>, <strong>DNS spoofing</strong>, <strong>fake certificates</strong>, <strong>malicious proxies</strong>.</li>
+  </ul>
+  <h4>(vi) Exploiting zero-day vulnerabilities</h4>
+  <ul>
+    <li>Software bug/error whose existence is unknown, so there are <strong>zero days of response</strong>. In brackets add: <strong>"Mythos' capability to attack and exploit zero-day vulnerabilities"</strong> (Class 1 link).</li>
+  </ul>
+  <h4>(vii) Supply-chain attacks</h4>
+  <ul>
+    <li>An organisation is <strong>indirectly targeted</strong> through (1) a <strong>trusted vendor</strong>, (2) a <strong>software provider</strong>, (3) a <strong>cloud service</strong> (e.g. attack on iCloud affects a teacher who teaches from a laptop and phone), (4) <strong>hardware components</strong>.</li>
+    <li><strong>Hardware example:</strong> Israel's attack on <strong>Hezbollah pagers</strong> (a glitch/identified fault, then use triggered blasts; thousands of casualties). So far software was discussed; hardware is also an example.</li>
+    <li>Even an attack on Windows/macOS/iOS counts under <strong>supply-chain attack</strong> from the perspective of dependent users.</li>
+    <li>Prelims differ in depth: such questions will come as <strong>"match the following"</strong>; for Mains only the structure matters.</li>
+  </ul>
+  <h4>(viii) Other attacks</h4>
+  <ul>
+    <li><strong>Account takeover</strong>, <strong>website defacement</strong> (changing a site's appearance with software), <strong>server compromise</strong>. Definitions differ across sources (Kaspersky, IBM, telecom firms); India has no single definition.</li>
+  </ul>
+  <div class="exam-tip">After listing, write one line: <strong>"However, cyber attacks need to be differentiated from cyber crimes."</strong></div>
+</section>
+
+<section id="vs">
+  <h2>6. Cyber attack vs cyber crime <span class="timestamp">1:39 – 1:49</span></h2>
+  <figure class="lecture-diagram"><svg viewBox="0 0 700 300" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif" role="img"><defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#57606a"/></marker></defs><rect x="20" y="20" width="300" height="130" rx="7" fill="#e6f1fb" stroke="#1d5b8b" stroke-width="1.5"/><text x="170.0" y="60.85" text-anchor="middle" font-size="11" fill="#0c447c" font-weight="normal">CYBER ATTACK</text><text x="170.0" y="74.85" text-anchor="middle" font-size="11" fill="#0c447c" font-weight="normal">Technical exercise on a SYSTEM</text><text x="170.0" y="88.85" text-anchor="middle" font-size="11" fill="#0c447c" font-weight="normal">Targets networks, servers, apps, CI</text><text x="170.0" y="102.85" text-anchor="middle" font-size="11" fill="#0c447c" font-weight="normal">AI lowers the entry barrier</text><text x="170.0" y="116.85" text-anchor="middle" font-size="11" fill="#0c447c" font-weight="normal">Report: CERT-In (MeitY)</text><rect x="380" y="20" width="300" height="130" rx="7" fill="#fdf3f3" stroke="#8b3a3a" stroke-width="1.5"/><text x="530.0" y="60.85" text-anchor="middle" font-size="11" fill="#6b2a2a" font-weight="normal">CYBER CRIME</text><text x="530.0" y="74.85" text-anchor="middle" font-size="11" fill="#6b2a2a" font-weight="normal">Unlawful act (LAW decides)</text><text x="530.0" y="88.85" text-anchor="middle" font-size="11" fill="#6b2a2a" font-weight="normal">Computer = target OR tool</text><text x="530.0" y="102.85" text-anchor="middle" font-size="11" fill="#6b2a2a" font-weight="normal">Mostly individual level</text><text x="530.0" y="116.85" text-anchor="middle" font-size="11" fill="#6b2a2a" font-weight="normal">Report: police / I4C (MHA); FIR</text><rect x="250" y="100" width="200" height="90" rx="7" fill="#fff7e6" stroke="#c28a1a" stroke-width="1.5"/><text x="350.0" y="127.85" text-anchor="middle" font-size="11" fill="#6b4f15" font-weight="bold">OVERLAP</text><text x="350.0" y="141.85" text-anchor="middle" font-size="11" fill="#6b4f15" font-weight="bold">almost ALL attacks</text><text x="350.0" y="155.85" text-anchor="middle" font-size="11" fill="#6b4f15" font-weight="bold">are crimes</text><text x="350.0" y="169.85" text-anchor="middle" font-size="11" fill="#6b4f15" font-weight="bold">(IT Act + BNS)</text><text x="170" y="175" text-anchor="middle" font-size="10.5" fill="#0c447c" font-weight="bold" font-style="normal">Exception: ethical hacking</text><text x="530" y="175" text-anchor="middle" font-size="10.5" fill="#6b2a2a" font-weight="bold" font-style="normal">Digital arrest, stalking, piracy,</text><text x="530" y="192" text-anchor="middle" font-size="10.5" fill="#6b2a2a" font-weight="bold" font-style="normal">bullying, deepfake, betting</text><text x="350" y="235" text-anchor="middle" font-size="12" fill="#ffffff" font-weight="bold" font-style="normal">Attack =&gt; crime (almost always)   |   Crime =&gt; attack (NOT necessarily)</text><text x="350" y="262" text-anchor="middle" font-size="10.5" fill="#1f2328" font-weight="normal" font-style="italic">Stolen physical server = simple theft; compromised server = attack</text></svg><figcaption>Fig. 6 - Cyber attack vs cyber crime</figcaption></figure>
+  <ul>
+    <li><strong>Rule of thumb:</strong> <em>almost all cyber attacks are cyber crimes</em>, but <strong>not vice versa</strong>. Ask: is it a crime under the <strong>IT Act, 2000</strong> and under the <strong>Bharatiya Nyaya Sanhita (BNS)</strong> (earlier IPC)? Then report to <strong>CERT-In</strong> (if an attack) and file an <strong>FIR</strong> (<strong>MHA</strong> involved). Exceptions are very few.</li>
+    <li><strong>Exception example — ethical hacking:</strong> hiring a firm (e.g. Anthropic's CEO) to use Mythos on your software to find zero-day vulnerabilities and patch them. It is a "cyber attack" technique but not a crime — you paid for it.</li>
+    <li><strong>Cyber crime that is not an attack:</strong> sharing a paid class with 10 others (piracy); <strong>digital arrest</strong> phone calls ("I am from ED/CBI; your passport found with ₹2 crore drugs; pay immediately"); <strong>cyber bullying</strong> (writing bad things about a person); <strong>cyber stalking</strong>; <strong>deepfakes</strong> (AI edits of a photo) — "not an attack and not wholly a cyber attack". The law/government decides what is a cyber crime.</li>
+    <li><strong>Cyber attack = technical exercise</strong> (you attack a computer system) — "not something a Tom, Dick or Harry can do… <em>but AI lowers the entry barrier</em>". <strong>Cyber crime</strong> = any crime committed through a network/phone/laptop; usually at <strong>individual level</strong> (though can be at large scale). Cyber attacks usually hit a <strong>system</strong>, harming many people.</li>
+    <li>Lecturer's view: <strong>AI-enabled cyber attack is more dangerous than AI-enabled cyber crime</strong> — because attacks need technical capability and AI removes that barrier; crimes like OTP fraud are already common.</li>
+    <li>Server example: if a <strong>server is compromised</strong> through an attack → cyber attack. If someone <strong>steals the physical server</strong> → simple theft (not cyber attack).</li>
+  </ul>
+</section>
+
+<section id="crimes">
+  <h2>7. Cyber crimes — the detailed list <span class="timestamp">1:46 – 2:20</span></h2>
+  <div class="term-box">
+    <strong>Cyber crime (definition):</strong> <strong>unlawful acts</strong> — <em>cyber attack is technical; cyber crime is law</em> — where a <strong>computer, mobile, network, internet or digital identity</strong> is either the <strong>target</strong> or the <strong>tool</strong>, or the <strong>place of commission of the offence</strong>.
+  </div>
+  <ul>
+    <li><strong>Target</strong> — someone's computer/phone is attacked. <strong>Tool</strong> — a crime committed <em>using</em> a phone/computer, e.g. <strong>online betting</strong> (Dream11-type IPL betting), crypto trading that is illegal, etc.; no malware or bots, but the computer is the instrument.</li>
+    <li>Includes: all <strong>cyber attacks</strong> (malware, ransomware, DDoS, phishing, social engineering) plus <strong>identity theft</strong> (e.g. someone steals your Aadhaar OTP), <strong>online financial fraud</strong>, <strong>cyber stalking</strong>.</li>
+  </ul>
+  <h3>Government classification (MHA / I4C) — remember if you can</h3>
+  <ul>
+    <li><strong>I4C</strong> = <strong>Indian Cyber Crime Coordination Centre</strong>, under the <strong>Ministry of Home Affairs</strong> (to be studied in steps taken).</li>
+    <li>Data comes from <strong>NCRB</strong> (National Crime Records Bureau; a new DG was appointed recently; office in Delhi near the airport — lecturer's recollection).</li>
+    <li>I4C's <strong>four categories</strong>: <strong>(1) Cryptocurrency crime</strong> (example: <strong>WazirX</strong> hack — ~US$230 million, ~₹2,300 crore ★), <strong>(2) Cyber terrorism</strong>, <strong>(3) Hacking</strong>, <strong>(4) Online financial fraud</strong> (also ransomware).</li>
+  </ul>
+  <h3>Detailed list of cyber crimes (a PYQ — write as 1, 2, 3, 4)</h3>
+  <p>PYQs: only study those likely to recur; five-year-old PYQs are "out of fashion". The lecturer will help pick PYQs later.</p>
+  <ol>
+    <li><strong>Cyber attacks</strong> (in brackets: the list above — malware, ransomware, DDoS, phishing, social engineering).</li>
+    <li><strong>Online financial fraud</strong> — includes <strong>smishing, phishing, vishing</strong>; <strong>KYC update fraud</strong>; <strong>job fraud and work-from-home scams</strong>; <strong>loan app fraud</strong> (fintech apps; "the biggest fraud"); <strong>matrimonial and romance fraud</strong> (dating apps, <strong>honey trapping</strong>). Causes: rise of internet, urbanisation, rising disposable income and associated <strong>loneliness in urban areas</strong> (India reportedly second most lonely country ★).</li>
+    <li><strong>Digital arrest</strong> — see next section.</li>
+    <li><strong>Cyber blackmail, online extortion, sextortion</strong> (threat of publishing content for money).</li>
+    <li><strong>Cyber stalking, cyber bullying, online harassment, and doxing</strong> — <em>doxing = publishing personal information (phone numbers, address, workplace details)</em>; asked in an earlier exam.</li>
+    <li><strong>CSEM — Child Sexual Exploitative Material / Child Sexual Abuse and Exploitative Material.</strong> Linked to <strong>NCPCR</strong> (National Commission for Protection of Child Rights; Paper 2 question asked about its role). The Supreme Court used the term CSEM in a judgment (lecturer can't recall the case).</li>
+    <li><strong>Fake news, misinformation, disinformation</strong> (mis = unintended; dis = deliberate; Pakistan does it "to the highest order") and <strong>deepfake-enabled offences</strong>.</li>
+    <li><strong>Piracy, digital counterfeiting and intellectual-property offences</strong> (watching paid lectures on Telegram).</li>
+    <li><strong>Online betting, gaming and illegal lotteries</strong> (step: <strong>Online Gaming Act 2025</strong> — the government recently issued the online-gaming rules; gaming companies have a Supreme Court case ★).</li>
+    <li><strong>Crypto-related cyber crime and virtual digital asset fraud</strong> (WazirX example).</li>
+    <li><strong>Cyber-enabled trafficking, forced cyber crime and scam compounds</strong> (Myanmar, Cambodia, Laos).</li>
+  </ol>
+  <h3>Telegram block — a current-affairs case study</h3>
+  <ul>
+    <li>Government gave <strong>15 days</strong> to Telegram after paper leaks (NEET 2024; 2026) because Telegram hosts <strong>CSAM</strong>, leaked papers and tool kits (<em>"FaaS fees ~₹2,000 for WormGPT"</em> per Times of India). <strong>Delhi High Court</strong>: government action is <strong>proportionate</strong> to the objective (lecturer will discuss in Polity). ★ verify details.</li>
+    <li>Earlier use of <strong>Sec 69A, IT Act</strong> was mostly <strong>account/post blocking</strong>: Facebook (Meta) and Twitter dominated; <strong>WhatsApp very few; Telegram ~2–3%</strong>. Three levels: <strong>post → account → entire platform</strong>. First time a whole platform is blocked.</li>
+    <li>"Next year (after Prelims): implementation of the IT Act — <strong>Sec 79(3)(b)</strong> and <strong>Sec 69A</strong> — is a very interesting discourse."</li>
+  </ul>
+  <h3>Online betting — the lecturer's policy view</h3>
+  <ul>
+    <li>Banning does not eliminate demand: people use <strong>VPNs, dark web, Telegram, crypto</strong>. Western countries (US) have legalised betting for revenue; India needs a <strong>stronger regulatory channel</strong> so the state earns revenue — analogous to liquor prohibition (Gujarat, Bihar, Kerala except five-star hotels) where bans create <strong>bootlegging networks</strong> (Bihar → UP; Delhi's poor excise policy → Haryana, as the lecturer observed). Ethical dilemma to quote.</li>
+  </ul>
+</section>
+
+<section id="digital">
+  <h2>8. Digital arrest, scam compounds &amp; cyber slavery <span class="timestamp">2:01 – 2:27</span></h2>
+  <h3>Digital arrest</h3>
+  <div class="term-box"><strong>Digital arrest:</strong> <strong>not a formal legal term</strong>, but a <strong>common modus operandi</strong> where fraudsters <strong>impersonate</strong> police, CBI, ED, customs, <strong>TRAI</strong> (Telecom Regulatory Authority of India) and court officials and <strong>falsely claim</strong> the victim is involved in <strong>money laundering</strong>, <strong>drug trafficking</strong> or <strong>illegal parcels</strong>, then <strong>force the victim to stay on a video call under psychological control</strong> and extract money.</div>
+  <ul>
+    <li>Why it works: an ordinary person is scared of police; preparation for the exam also helps remove fear. The lecturer's family anecdote: a student received a call from a "Excise Inspector" in uniform (SSC-selected officers wear uniform); a cyber complaint was filed; victims in some cases lost lakhs/crores. <em>"Don't pay."</em></li>
+    <li><strong>Impact angle:</strong> beyond money — <strong>psychological trauma</strong> (educated people fooled; <strong>fear of reputation</strong> — "people will say he teaches current affairs and got fooled"). An AI clone of me would hurt less than being fooled — this is where <strong>psychological impact</strong> becomes a head of "Impact".</li>
+    <li><strong>Government response:</strong> CBI's <strong>Operation Chakra</strong> — "just know the name Operation Chakra of CBI" (started across 100+ locations/states; the transcript says "101 states", garbled ★).</li>
+    <li>A full-page article on <strong>scam hubs</strong> appeared in <em>The Hindu</em> (Saturday Spotlight) and the <em>Indian Express</em> — scam compounds along the <strong>Myanmar–Thailand border</strong> in <strong>Karen State</strong>, where Indians are lured by job offers and held in compounds.</li>
+  </ul>
+  <h3>Scam compounds and "cyber slavery"</h3>
+  <ul>
+    <li><strong>Cyber-enabled trafficking:</strong> unemployed youths are taken from India to <strong>Laos, Cambodia, Myanmar</strong> under false promises ("trafficking = taking a person to another country/state under false pretences", e.g. promised a job in Delhi but forced into <strong>prostitution</strong> or <strong>bonded labour</strong>).</li>
+    <li>Victims are <strong>forced to commit cyber crime</strong> in <strong>scam compounds</strong>: <strong>(1) phishing, (2) romance scams, (3) investment fraud, (4) digital arrest fraud</strong>.</li>
+    <li>Link-ups: <strong>narco-trafficking</strong> (Myanmar is part of the <strong>Golden Triangle</strong>), <strong>FICN</strong> (Fake Indian Currency Notes) and an <strong>ecosystem of organised crime</strong>.</li>
+    <li><strong>Why Myanmar:</strong> failed state, junta controls only part of territory (<strong>&gt;50% area under ethnic armed organisations</strong> that need money for armed struggle). Once they realise that scam compounds yield thousands of crores, they will make it their "bread and butter" — as <strong>Taliban/Afghan poppy</strong> did, as <strong>Kashmir terror groups moved from disinformation fundraising to narco-terrorism</strong> with drones, and as <strong>Lashkar</strong> sends fake notes from Nepal.</li>
+    <li><strong>Diplomatic hook:</strong> improving relations with <strong>Myanmar</strong> is a prerequisite; the (now) President of Myanmar <strong>Min Aung Hlaing</strong> (the transcript garbles the name) visited <strong>India first</strong> (after China) after the elections and promised <strong>Myanmar soil would not be used for internal-security activities</strong>. ★ verify. Also mentioned: <strong>Vietnam</strong> link.</li>
+    <li><strong>Laws used:</strong> cyber crime laws + <strong>Prevention of Human Trafficking / Immoral Traffic (Prevention) Act</strong> — "three Acts" in a single case. <em>Do not mix up with the Myanmar "Chin / Sagaing / Rakhine" regions where India has links; compounds are in Karen state.</em></li>
+  </ul>
+</section>
+
+<section id="evolution">
+  <h2>9. Evolution of cyber crime <span class="timestamp">2:25 – 2:27</span></h2>
+  <figure class="lecture-diagram"><svg viewBox="0 0 700 260" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif" role="img"><defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#57606a"/></marker></defs><rect x="20" y="10" width="200" height="60" rx="7" fill="#e6f1fb" stroke="#1d5b8b" stroke-width="1.5"/><text x="120.0" y="29.85" text-anchor="middle" font-size="11" fill="#0c447c" font-weight="normal">THEN: single-dimension</text><text x="120.0" y="43.85" text-anchor="middle" font-size="11" fill="#0c447c" font-weight="normal">cyber crime</text><text x="120.0" y="57.85" text-anchor="middle" font-size="11" fill="#0c447c" font-weight="normal">(OTP fraud, hacking)</text><line x1="220" y1="40" x2="270" y2="40" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="270" y="10" width="410" height="60" rx="7" fill="#1d5b8b" stroke="#1d5b8b" stroke-width="1.5"/><text x="475.0" y="44.2" text-anchor="middle" font-size="12" fill="#ffffff" font-weight="bold">NOW: MULTIDIMENSIONAL - transnational organised crime</text><rect x="20" y="110" width="160" height="70" rx="7" fill="#fdf3f3" stroke="#8b3a3a" stroke-width="1.5"/><text x="100.0" y="135.5" text-anchor="middle" font-size="10" fill="#6b2a2a" font-weight="normal">Cyber fraud</text><text x="100.0" y="148.5" text-anchor="middle" font-size="10" fill="#6b2a2a" font-weight="normal">(phishing, romance,</text><text x="100.0" y="161.5" text-anchor="middle" font-size="10" fill="#6b2a2a" font-weight="normal">investment, digital arrest)</text><line x1="475" y1="70" x2="100" y2="110" stroke="#57606a" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#ar)"/><rect x="190" y="110" width="160" height="70" rx="7" fill="#fff7e6" stroke="#c28a1a" stroke-width="1.5"/><text x="270.0" y="142.0" text-anchor="middle" font-size="10" fill="#6b4f15" font-weight="normal">Human trafficking</text><text x="270.0" y="155.0" text-anchor="middle" font-size="10" fill="#6b4f15" font-weight="normal">(fake jobs, cyber slavery)</text><line x1="475" y1="70" x2="270" y2="110" stroke="#57606a" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#ar)"/><rect x="360" y="110" width="160" height="70" rx="7" fill="#eef4f0" stroke="#2f6b4f" stroke-width="1.5"/><text x="440.0" y="135.5" text-anchor="middle" font-size="10" fill="#1f4d37" font-weight="normal">Organised crime</text><text x="440.0" y="148.5" text-anchor="middle" font-size="10" fill="#1f4d37" font-weight="normal">(narco, FICN,</text><text x="440.0" y="161.5" text-anchor="middle" font-size="10" fill="#1f4d37" font-weight="normal">Golden Triangle)</text><line x1="475" y1="70" x2="440" y2="110" stroke="#57606a" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#ar)"/><rect x="530" y="110" width="160" height="70" rx="7" fill="#fdf3f3" stroke="#8b3a3a" stroke-width="1.5"/><text x="610.0" y="135.5" text-anchor="middle" font-size="10" fill="#6b2a2a" font-weight="normal">Funding of armed</text><text x="610.0" y="148.5" text-anchor="middle" font-size="10" fill="#6b2a2a" font-weight="normal">groups / terror</text><text x="610.0" y="161.5" text-anchor="middle" font-size="10" fill="#6b2a2a" font-weight="normal">(Myanmar EAOs)</text><line x1="475" y1="70" x2="610" y2="110" stroke="#57606a" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#ar)"/><text x="350" y="210" text-anchor="middle" font-size="11" fill="#6b2a2a" font-weight="bold" font-style="normal">Example: SCAM COMPOUNDS (Myanmar-Thailand border, Karen State; Cambodia; Laos)</text><text x="350" y="235" text-anchor="middle" font-size="10.5" fill="#1f2328" font-weight="normal" font-style="italic">Laws in one case: IT Act + BNS + anti-trafficking law</text></svg><figcaption>Fig. 7 - Evolution of cyber crimes (boxed with a heading)</figcaption></figure>
+  <ul>
+    <li>Cyber crime is no longer one issue — it is <strong>multidimensional</strong>: involves <strong>human trafficking</strong>, a point of <strong>cyber fraud</strong>, and <strong>transnational organised crime</strong>. Always <strong>box</strong> such a diagram and give it a <strong>heading</strong>: "Evolution of cyber crimes".</li>
+    <li>Example for the box: <strong>scam compounds</strong>.</li>
+    <li>Police must now catch cyber criminals <em>and</em> check cross-border agencies/terror organisations <em>and</em> use the human-trafficking law.</li>
+    <li>"To be quoted while discussing <strong>organised crime as a theme in Paper 3</strong>."</li>
+    <li>Different patterns of evolution to quote: single → double extortion (ransomware); evolution of <strong>FaaS</strong>; emergence of <strong>AI-based replicating phishing</strong> and <strong>deepfakes</strong>; online gaming/<strong>Dream11-type</strong> platforms (3–4 years ago nobody knew them); <strong>cyber slavery</strong>.</li>
+  </ul>
+</section>
+
+<section id="other">
+  <h2>10. Other definitions: cyber terrorism, espionage, warfare <span class="timestamp">2:27 – 2:35</span></h2>
+  <p>Heading: <strong>"Other definitions"</strong> (three, in this order).</p>
+  <div class="term-box">
+    <strong>1. Cyber terrorism</strong> (as per <strong>IT Act, 2000</strong>): use of <strong>digital systems</strong> to threaten the <strong>sovereignty, integrity, security and public order</strong> of the country.
+    <ul style="margin:6px 0 0 18px;">
+      <li>Catch: terrorism is defined in law, but <strong>law and NCRB data carry no details of cyber terrorism incidents</strong>. Example to add: <strong>In 2025, the NIA registered a case</strong> for commission of cyber terrorism ★ (verify).</li>
+    </ul>
+  </div>
+  <div class="term-box">
+    <strong>2. Cyber espionage:</strong> <strong>secret cyber operations</strong> to steal <strong>confidential information, strategic data, defence secrets, diplomatic communication, intellectual property</strong> and <strong>sensitive government and corporate data</strong>. (Israel vs Hezbollah/Hamas/Iran — referenced in the "snooping/surveillance" element.)
+  </div>
+  <div class="term-box">
+    <strong>3. Cyber warfare:</strong> <strong>use of cyber operations by states and non-state actors during a strategic conflict</strong> to <strong>disrupt, degrade, destroy, manipulate and spy on another state's</strong> <strong>(1) military, (2) governmental, (3) critical infrastructure and information systems</strong>.
+    <ul style="margin:6px 0 0 18px;">
+      <li>A company cannot wage "war"; only <strong>states and non-state actors</strong> can.</li>
+      <li><strong>India's need:</strong> a <strong>cyber warfare defence and deterrence mechanism</strong>. Reason: the <strong>US has recognised cyberspace as the fifth domain</strong> (air, land, water, space + cyber) — if the US has done it, India must follow.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="facts">
+  <h2>11. Facts for the exam — sectors, hotspots, diplomacy <span class="timestamp">2:34 – 3:02</span></h2>
+  <p>Draw a <strong>box "Facts for the exam"</strong>. These are anecdotes/accessories: <em>"without examples your answer is sketchy."</em> Substantiate; example: "Will it flood today?" → "yes, because X mm of rain this morning; last time this much rain led to floods."</p>
+  <h3>Most vulnerable sectors (fact 1)</h3>
+  <ol>
+    <li><strong>Critical infrastructure</strong>, 2. <strong>Finance</strong>, 3. <strong>Health</strong>, 4. <strong>Telecommunications</strong>.</li>
+  </ol>
+  <p>Where to write it: under <strong>Impact</strong> as a substantiation: "gone are the days when computer security was the whole picture (2013 policy); now it is national security, information security, economic security, financial-sector security, personal-data security (after <strong>K.S. Puttaswamy</strong> recognised the right to privacy)".</p>
+  <h3>Geographical hotspots (fact 2) — draw a map</h3>
+  <ul>
+    <li><strong>Jamtara</strong> (Jharkhand) — the famous origin of phishing/vishing.</li>
+    <li><strong>Mewat / Nuh</strong> (Haryana; <strong>aspirational district</strong>, among the most backward) — near Gurgaon (~50 km), Delhi's neighbour. Reasons given: low literacy, poor economic capability, poor farming, high unemployment, <strong>proximity to Gurgaon–Manesar industrialisation</strong> (Maruti factory) → early marriage, driving as a livelihood, <strong>trained truck drivers by 18</strong>, heavy-vehicle licences, strong nexus → hotbed of cyber crime in North India. <em>(The lecturer: "if you get Haryana cadre you'll be sent as SP/DM".)</em></li>
+    <li><strong>Chandigarh</strong> — emerging as a centre of <strong>narco-terrorism</strong> with certain chemical drugs not available elsewhere.</li>
+    <li>Other points the lecturer pencilled on the map (listing garbled in the captions): <strong>Ahmedabad, Visakhapatnam, Hyderabad, Guwahati</strong> (and a mention of Varanasi). ★ confirm each against an MHA/I4C hotspot source.</li>
+    <li>Heading for the map: <strong>"Cyber security hotspots of India (as per MHA and MeitY)"</strong> — always <strong>quote the source</strong> for every fact; <em>MHA = Ministry of Home Affairs; MeitY = Ministry of Electronics and IT</em>.</li>
+    <li>Rule: any time you must show <strong>regional distribution</strong> in Internal Security, make a map; <strong>box</strong> the places and give a title.</li>
+  </ul>
+  <h3>Diplomatic anecdote used to illustrate "diversification" (IR hook)</h3>
+  <ul>
+    <li>US has pulled back from Quad (lecturer's view); Japan's PM <strong>Sanae Takaichi</strong> (first woman PM) visited India; India is moving toward the Pacific. Cooperation moves: <strong>India–EU</strong>, Nordic summit (Norway), Danish PM, Vietnamese head, Netherlands — "<strong>diversification of partnerships by middle-power nations</strong>" in the era of <strong>economic deglobalisation</strong> (a Mains Paper 2 question last year). Don't cover IR in depth yet.</li>
+    <li>South Korea: shipbuilding and a <strong>₹20,000 crore maritime/shipbuilding</strong> deal framework for ports; India sees South Korea, Japan, Australia and New Zealand as similar-value partners hit by waning transpacific cooperation of the US. ★ verify the number.</li>
+  </ul>
+</section>
+
+<section id="impact">
+  <h2>12. Impact — how to open it <span class="timestamp">2:47 – 3:02</span></h2>
+  <p><strong>Recap before lunch:</strong> defined cyber security; elements; "not a technical threat — a national-security threat, privacy threat, a threat to <strong>public trust in governance</strong>"; cyber crime ≠ cyber attack; list of attacks and crimes; the multidimensional / transnational evolution.</p>
+  <p>Part 2 of the structure is <strong>Impact &amp; Implications</strong>. Aim: if a cyber attack happens, what is the effect on people and the country. <em>Always read topics in a structured form — it goes into the brain, stays in memory, and helps in the interview.</em></p>
+  <figure class="lecture-diagram"><svg viewBox="0 0 700 270" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif" role="img"><defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#57606a"/></marker></defs><rect x="250" y="8" width="200" height="40" rx="7" fill="#1d5b8b" stroke="#1d5b8b" stroke-width="1.5"/><text x="350.0" y="32.55" text-anchor="middle" font-size="13" fill="#ffffff" font-weight="bold">IMPACT of cyber attack</text><rect x="10" y="90" width="126" height="44" rx="7" fill="#fff7e6" stroke="#c28a1a" stroke-width="1.5"/><text x="73.0" y="115.5" text-anchor="middle" font-size="10" fill="#6b4f15" font-weight="bold">ECONOMIC</text><rect x="10" y="138" width="126" height="62" rx="7" fill="#ffffff" stroke="#57606a" stroke-width="1.5"/><text x="73.0" y="166.075" text-anchor="middle" font-size="9.5" fill="#1f2328" font-weight="normal">loss - supply chain</text><text x="73.0" y="178.575" text-anchor="middle" font-size="9.5" fill="#1f2328" font-weight="normal">BFSI - MSMEs</text><line x1="350" y1="48" x2="73" y2="90" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="146" y="90" width="126" height="44" rx="7" fill="#e6f1fb" stroke="#1d5b8b" stroke-width="1.5"/><text x="209.0" y="109.0" text-anchor="middle" font-size="10" fill="#0c447c" font-weight="bold">SOCIAL +</text><text x="209.0" y="122.0" text-anchor="middle" font-size="10" fill="#0c447c" font-weight="bold">PSYCHOLOGICAL</text><rect x="146" y="138" width="126" height="62" rx="7" fill="#ffffff" stroke="#57606a" stroke-width="1.5"/><text x="209.0" y="166.075" text-anchor="middle" font-size="9.5" fill="#1f2328" font-weight="normal">dignity - reputation</text><text x="209.0" y="178.575" text-anchor="middle" font-size="9.5" fill="#1f2328" font-weight="normal">trauma (digital arrest)</text><line x1="350" y1="48" x2="209" y2="90" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="282" y="90" width="126" height="44" rx="7" fill="#eef4f0" stroke="#2f6b4f" stroke-width="1.5"/><text x="345.0" y="115.5" text-anchor="middle" font-size="10" fill="#1f4d37" font-weight="bold">POLITICAL</text><rect x="282" y="138" width="126" height="62" rx="7" fill="#ffffff" stroke="#57606a" stroke-width="1.5"/><text x="345.0" y="166.075" text-anchor="middle" font-size="9.5" fill="#1f2328" font-weight="normal">trust in governance</text><text x="345.0" y="178.575" text-anchor="middle" font-size="9.5" fill="#1f2328" font-weight="normal">UPI/IRCTC/NPCI</text><line x1="350" y1="48" x2="345" y2="90" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="418" y="90" width="126" height="44" rx="7" fill="#fdf3f3" stroke="#8b3a3a" stroke-width="1.5"/><text x="481.0" y="109.0" text-anchor="middle" font-size="10" fill="#6b2a2a" font-weight="bold">NATIONAL</text><text x="481.0" y="122.0" text-anchor="middle" font-size="10" fill="#6b2a2a" font-weight="bold">SECURITY</text><rect x="418" y="138" width="126" height="62" rx="7" fill="#ffffff" stroke="#57606a" stroke-width="1.5"/><text x="481.0" y="166.075" text-anchor="middle" font-size="9.5" fill="#1f2328" font-weight="normal">internal security</text><text x="481.0" y="178.575" text-anchor="middle" font-size="9.5" fill="#1f2328" font-weight="normal">sovereignty</text><line x1="350" y1="48" x2="481" y2="90" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="554" y="90" width="126" height="44" rx="7" fill="#fdf3f3" stroke="#8b3a3a" stroke-width="1.5"/><text x="617.0" y="115.5" text-anchor="middle" font-size="10" fill="#6b2a2a" font-weight="bold">GEOPOLITICAL</text><rect x="554" y="138" width="126" height="62" rx="7" fill="#ffffff" stroke="#57606a" stroke-width="1.5"/><text x="617.0" y="159.825" text-anchor="middle" font-size="9.5" fill="#1f2328" font-weight="normal">reputation</text><text x="617.0" y="172.325" text-anchor="middle" font-size="9.5" fill="#1f2328" font-weight="normal">Myanmar = failed state</text><text x="617.0" y="184.825" text-anchor="middle" font-size="9.5" fill="#1f2328" font-weight="normal">Israel-India pact</text><line x1="350" y1="48" x2="617" y2="90" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar)"/><text x="350" y="235" text-anchor="middle" font-size="10.5" fill="#1f2328" font-weight="normal" font-style="italic">Alternative: sector-wise - BFSI - corporates - IT - MSMEs - defence - CI - govt websites - individuals</text><text x="350" y="255" text-anchor="middle" font-size="11" fill="#6b2a2a" font-weight="bold" font-style="normal">Both are templates; keyword NATIONAL SECURITY is mandatory</text></svg><figcaption>Fig. 8 - How to open Impact</figcaption></figure>
+  <ol>
+    <li><strong>Economic impact.</strong></li>
+    <li><strong>Social and psychological impact</strong> — private chats released; bullying; reputation. The Supreme Court held that <strong>dignity</strong> (including the right to reputation) is part of Article 21. Money loss is felt less than social loss. <em>Do not add too much psychology; internal security is the subject.</em></li>
+    <li><strong>Political impact</strong> — if UPI/IRCTC (Tatkal bookings)/NPCI systems are repeatedly attacked, <strong>trust in governance</strong> falls; people shift to cash; political fallout.</li>
+    <li><strong>National security</strong> — a mandatory keyword; "a cyber-security expert will always talk about national security" (and cyber security is an <em>upcoming</em> field, comparable to disaster management 10–12 years ago).</li>
+    <li><strong>Geopolitical impact — reputation.</strong> <strong>Myanmar</strong> is a failed state because of its compounds; nobody trades with it. India is among the top-four economies and one of the fastest-growing; repeated cyber incidents would hurt India's reputation. Example: <strong>grid failure in the Netherlands</strong> (as quoted) → India needs a <strong>renewable energy transition strategy</strong> with cyber resilience. India's strength — <strong>UPI, Aadhaar</strong>: technology is <strong>scalable, innovative, low-cost</strong>; ~55 African countries want to deal with India as the model is not exploitative like China's and is cheaper than US.</li>
+    <li><strong>India–Israel link:</strong> <strong>Israel is the most vulnerable nation to cyber attacks</strong> so it knows more than India; the PM's visit to Tel Aviv (two days before 28 February) included a <strong>cyber-security agreement</strong> ★ verify.</li>
+    <li><strong>Alternative method (sector-wise):</strong> BFSI · business/corporates · IT sector · MSMEs · defence · critical infrastructure · government databases/ministry websites/applications · individual level (critical infra = power, telecom, health, ports). Both methods are templates. <em>(Note — Prelims: 20,000 crore ports Maritime Vision; South Korea shipbuilding.)</em></li>
+  </ol>
+  <p>The class stops here at the lunch break (3:02); next half will cover <strong>challenges + gaps, strategy, AI &amp; cyber security, way forward</strong>.</p>
+  <div class="exam-tip"><strong>Exam-time strategy shared:</strong> weaknesses decide prep. Use the next 2–3 months (post-Prelims, pre-Mains) to fix your own mistakes — Prelims, History, Polity — not copy others' Mains test series. If your answer writing is already good, take classes lightly and give months to CSAT/Prelims.</div>
+</section>
+
+<section id="practice">
+  <h2>13. Practice questions (from the class) <span class="timestamp">0:49 – 0:56 &middot; 2:18</span></h2>
+  <ol>
+    <li><strong>Q1.</strong> "In the light of increasing cyber security challenges, <strong>discuss and devise</strong> a cyber security policy and also <strong>analyse India's cyber security approach</strong>." — Use heads: protect data; prevent threats; business continuity; secure infrastructure; CIA; secure communication; regulatory compliance; risk; cyber hygiene training; incident response; then analyse approach with pros/cons.</li>
+    <li><strong>Q2.</strong> "Discuss the <strong>evolving pattern of cyber crimes</strong> and recommend strategies <strong>in the light of the evolving nature of cyber crimes including AI-enabled cyber crime</strong>." — Evolution box (single → double extortion; FaaS; AI-phishing/deepfake; online gaming; cyber slavery; scam compounds → transnational organised crime), challenges (jurisdiction, trans-national, low entry barrier), strategies (I4C, 1930/NCRP, CERT-In, global cooperation with Myanmar/Thailand/Cambodia/Laos, laws, hygiene, platform accountability).</li>
+    <li><strong>Q3.</strong> Distinguish cyber attack from cyber crime (use the Venn; give two examples of each; note the ethical-hacking exception).</li>
+    <li><strong>Q4.</strong> "Cyber security is an overlapping issue, not a technical one" — discuss with five dimensions (internal security, economic security, privacy, public order, national security).</li>
+    <li><strong>Q5.</strong> Explain elements/pillars of cyber security with an example each.</li>
+  </ol>
+</section>
+
+<section id="mcqs">
+  <h2>Prelims trap MCQs</h2>
+  <div class="mcq-card"><div class="q-num">Q1</div><div class="q-text">Which of the following is NOT a component of the CIA triad in cyber security?</div>
+    <div class="options"><div class="option">A. Confidentiality</div><div class="option">B. Integrity</div><div class="option correct">C. Authenticity</div><div class="option">D. Availability</div></div>
+    <div class="answer-box"><span class="answer-label">Answer: C.</span> Authenticity is a related property but not one of the three letters.</div></div>
+  <div class="mcq-card"><div class="q-num">Q2</div><div class="q-text">Cyber security incidents in India are required to be reported to:</div>
+    <div class="options"><div class="option">A. I4C</div><div class="option correct">B. CERT-In</div><div class="option">C. NCRB</div><div class="option">D. NCPCR</div></div>
+    <div class="answer-box"><span class="answer-label">Answer: B.</span> CERT-In is under MeitY; I4C is under MHA; NCRB compiles crime data; NCPCR protects child rights.</div></div>
+  <div class="mcq-card"><div class="q-num">Q3</div><div class="q-text">"Double extortion" in modern ransomware refers to:</div>
+    <div class="options"><div class="option">A. Demanding ransom twice in two currencies</div><div class="option correct">B. Exfiltrating data and demanding ransom for its release, plus threatening to publish it if the ransom is not paid</div><div class="option">C. Attacking two organisations together</div><div class="option">D. Demanding ransom from the victim and a bank</div></div>
+    <div class="answer-box"><span class="answer-label">Answer: B.</span></div></div>
+  <div class="mcq-card"><div class="q-num">Q4</div><div class="q-text">An attacker secretly intercepts and alters communication between two parties using rogue Wi-Fi or DNS spoofing. This is:</div>
+    <div class="options"><div class="option">A. DDoS</div><div class="option">B. Smishing</div><div class="option correct">C. Man-in-the-middle</div><div class="option">D. Ransomware</div></div>
+    <div class="answer-box"><span class="answer-label">Answer: C.</span></div></div>
+  <div class="mcq-card"><div class="q-num">Q5</div><div class="q-text">Which statement is correct?</div>
+    <div class="options"><div class="option">A. Every cyber crime is a cyber attack</div><div class="option correct">B. Almost every cyber attack is a cyber crime, but many cyber crimes are not cyber attacks</div><div class="option">C. Cyber attacks and crimes are the same under the IT Act</div><div class="option">D. Cyber attacks are only reported to the police</div></div>
+    <div class="answer-box"><span class="answer-label">Answer: B.</span> Ethical hacking is a rare attack that is not a crime; digital arrest, stalking and piracy are crimes but not attacks.</div></div>
+</section>
+
+<section id="glossary">
+  <h2>Glossary</h2>
+  <dl>
+    <div class="glossary-term"><dt>Cyber hygiene</dt><dd>Routine practices — 2FA, password change, antivirus, backups, avoiding unauthorised sites.</dd></div>
+    <div class="glossary-term"><dt>CIA triad</dt><dd>Confidentiality, Integrity, Availability.</dd></div>
+    <div class="glossary-term"><dt>Endpoint security</dt><dd>Protection of devices such as computers, smartphones and tablets.</dd></div>
+    <div class="glossary-term"><dt>IRP</dt><dd>Incident Response Plan.</dd></div>
+    <div class="glossary-term"><dt>Exfiltration</dt><dd>Taking data out of a compromised system; infiltration = entering it.</dd></div>
+    <div class="glossary-term"><dt>FaaS</dt><dd>Fraud as a Service — ready-made fraud toolkits sold online.</dd></div>
+    <div class="glossary-term"><dt>WormGPT</dt><dd>Malicious chatbot that assists in cyber crime (lecturer: do not use).</dd></div>
+    <div class="glossary-term"><dt>Vishing / Smishing</dt><dd>Voice-based / SMS-based phishing.</dd></div>
+    <div class="glossary-term"><dt>Spear phishing</dt><dd>Phishing aimed at a specific prominent individual or the head of an organisation.</dd></div>
+    <div class="glossary-term"><dt>DDoS</dt><dd>Distributed Denial of Service — flooding a service with traffic to make it unavailable.</dd></div>
+    <div class="glossary-term"><dt>MITM</dt><dd>Man-in-the-middle: secret interception and alteration of communication.</dd></div>
+    <div class="glossary-term"><dt>Zero-day</dt><dd>An unknown flaw with zero days to respond.</dd></div>
+    <div class="glossary-term"><dt>Supply-chain attack</dt><dd>Indirect attack through vendor, software provider, cloud or hardware.</dd></div>
+    <div class="glossary-term"><dt>Doxing</dt><dd>Publishing someone's personal information (phone, address, workplace).</dd></div>
+    <div class="glossary-term"><dt>CSEM</dt><dd>Child Sexual Exploitative (Abuse) Material.</dd></div>
+    <div class="glossary-term"><dt>Digital arrest</dt><dd>Modus operandi of fake officials holding a victim on video call under psychological control.</dd></div>
+    <div class="glossary-term"><dt>Scam compound</dt><dd>Fortified sites (Myanmar, Cambodia, Laos) where trafficked people run online scams.</dd></div>
+    <div class="glossary-term"><dt>Cyber slavery</dt><dd>Cyber-enabled trafficking and forced cyber crime.</dd></div>
+    <div class="glossary-term"><dt>I4C</dt><dd>Indian Cyber Crime Coordination Centre (MHA).</dd></div>
+    <div class="glossary-term"><dt>CERT-In</dt><dd>Computer Emergency Response Team – India (MeitY).</dd></div>
+    <div class="glossary-term"><dt>Fifth domain</dt><dd>Cyberspace after land, sea, air and space.</dd></div>
+    <div class="glossary-term"><dt>Honey trapping</dt><dd>Luring a person into a compromising relationship for blackmail.</dd></div>
+  </dl>
+</section>
+
+<section id="study">
+  <h2>Study advice from the class</h2>
+  <ul>
+    <li><strong>Re-read twice</strong> after every class; then keep your own 2–3 page notes and revise those; the class notes are only for writing practice.</li>
+    <li>Always <strong>structure first</strong>, then fill content — keep <strong>PYQs</strong> in hand to see how questions come, but don't write every PYQ.</li>
+    <li>Use <strong>boxes with headings</strong> for diagrams; always <strong>quote the source</strong> for a fact (MHA, MeitY, PIB).</li>
+    <li>Use <strong>polygons</strong> for overlapping issues; <strong>maps</strong> for regional distribution (practise drawing India's map).</li>
+    <li>Take a short break after eating — don't overeat (glucose spikes) and don't skip meals.</li>
+    <li>Identify your own <strong>weak area</strong> and fix it in the three-month gap after Prelims.</li>
+  </ul>
+</section>
+
+<section id="verify">
+  <h2>Claims to verify</h2>
+  <div class="gap-box"><h4>Lecturer statements / garbled captions not independently checked</h4>
+    <ul>
+      <li>Count of "8 questions" and "9 questions 2013–2025" on cyber topics — lecturer's estimate.</li>
+      <li>Telegram block and 15-day notice; Delhi High Court "proportionate" statement; "2–3%" share of Telegram blocks; NEET leak dates (2024, 2026).</li>
+      <li>Operation Chakra scale ("101 states" — captions garbled; likely Chakra-series by CBI).</li>
+      <li>Online Gaming Act 2025, rules, and Supreme Court case status.</li>
+      <li>WazirX hack amount (US$203/230 million in captions; ~₹2,300 crore).</li>
+      <li>NIA's 2025 cyber-terrorism case; I4C four categories; NCRB DG appointment.</li>
+      <li>"India second most lonely country"; Myanmar President's name and India visit sequence; Myanmar assurance; Vietnam link.</li>
+      <li>Hotspot list (Ahmedabad, Visakhapatnam, Hyderabad, Guwahati, Varanasi) — captions garbled; confirm with MHA/I4C data.</li>
+      <li>Iran-led DDoS on GCC states; Israel–India cyber agreement before 28 February; Netherlands grid failure.</li>
+      <li>South Korea shipbuilding / ₹20,000 crore maritime vision; Japan PM Takaichi visit.</li>
+      <li>Ebola / Hanta virus references (captions garbled).</li>
+      <li>DPDP rules approval status; GDPR date (2018); 2013 Cyber Security Policy.</li>
+      <li>ASR errors: many English words and names garbled; the post-lunch half is missing from this transcript.</li>
+    </ul>
+  </div>
+</section>
+
+<!--ANCH-SEC--><section id="note-index" class="my-notes-index">
+  <h2>My notes</h2>
+  <p style="font-size:0.85em;color:#57606a;">Select any text above and click <strong>Add note</strong>. Click the highlighted text to jump to its note; click <strong>&uarr; text</strong> on a note to jump back. Auto-saved in this browser; use Save (toolbar) to write into the file.</p>
+  <div id="note-index-list"></div>
+</section><!--/ANCH-SEC-->
+<footer>Notes compiled from the lecture transcript (auto-generated captions; first half only). Previous: <a href="../2026-07-02_class02-mythos-part2/notes.html">Class 2</a>. Static: <a href="../static/cyber-crime-static.html">Cyber Crime &amp; Attacks — Static</a>. <a href="one-pager.html">One-pager</a> · <a href="../index.html">Series index</a></footer>
+
+</div>
+
+<script>
+(function() {
+  var mode = null;
+  var noteCounter = 0;
+
+  var btnHighlight = document.getElementById('btn-highlight');
+  var btnUnderline = document.getElementById('btn-underline');
+  var btnNote = document.getElementById('btn-note');
+  var btnClear = document.getElementById('btn-clear');
+  var btnSave = document.getElementById('btn-save');
+  var statusText = document.getElementById('status-text');
+  var contentRoot = document.getElementById('content-root');
+  var noteBox = document.getElementById('note-input-box');
+  var noteText = document.getElementById('note-text');
+  var pendingNoteTarget = null;
+
+  function setMode(newMode) {
+    mode = mode === newMode ? null : newMode;
+    btnHighlight.classList.toggle('active', mode === 'highlight');
+    btnUnderline.classList.toggle('active', mode === 'underline');
+    btnNote.classList.toggle('active', mode === 'note');
+  }
+
+  btnHighlight.addEventListener('click', function() { setMode('highlight'); });
+  btnUnderline.addEventListener('click', function() { setMode('underline'); });
+  btnNote.addEventListener('click', function() { setMode('note'); });
+
+  function markDirty() {
+    statusText.textContent = 'Unsaved changes';
+    statusText.style.color = '#993c1d';
+  }
+
+  document.addEventListener('mouseup', function(e) {
+    if (mode !== 'highlight' && mode !== 'underline') return;
+    var sel = window.getSelection();
+    if (!sel || sel.isCollapsed || sel.rangeCount === 0) return;
+    var range = sel.getRangeAt(0);
+    if (!contentRoot.contains(range.commonAncestorContainer)) return;
+
+    var wrapper = document.createElement(mode === 'highlight' ? 'mark' : 'u');
+    wrapper.className = mode === 'highlight' ? 'user-highlight' : 'user-underline';
+    try {
+      range.surroundContents(wrapper);
+    } catch (err) {
+      var frag = range.extractContents();
+      wrapper.appendChild(frag);
+      range.insertNode(wrapper);
+    }
+    sel.removeAllRanges();
+    markDirty();
+  });
+
+  contentRoot.addEventListener('click', function(e) {
+    if (mode !== 'note') return;
+    if (e.target.closest('.user-note')) return;
+    pendingNoteTarget = e.target;
+    noteBox.style.display = 'block';
+    var x = Math.min(e.clientX, window.innerWidth - 280);
+    var y = Math.min(e.clientY, window.innerHeight - 140);
+    noteBox.style.left = x + 'px';
+    noteBox.style.top = y + 'px';
+    noteText.value = '';
+    noteText.focus();
+  });
+
+  document.getElementById('note-cancel').addEventListener('click', function() {
+    noteBox.style.display = 'none';
+    pendingNoteTarget = null;
+  });
+
+  document.getElementById('note-add').addEventListener('click', function() {
+    var text = noteText.value.trim();
+    if (!text || !pendingNoteTarget) { noteBox.style.display = 'none'; return; }
+    noteCounter++;
+    var noteDiv = document.createElement('div');
+    noteDiv.className = 'user-note';
+    noteDiv.setAttribute('data-note-id', noteCounter);
+    noteDiv.innerHTML = '<span class="note-label">Your note</span>' +
+      '<button class="del-note" title="Remove note">&times;</button>' +
+      '<span class="note-body"></span>';
+    noteDiv.querySelector('.note-body').textContent = text;
+    noteDiv.querySelector('.del-note').addEventListener('click', function() {
+      noteDiv.remove();
+      markDirty();
+    });
+
+    var target = pendingNoteTarget.closest('li, p, td, div.quote-card, section') || contentRoot;
+    target.parentNode.insertBefore(noteDiv, target.nextSibling);
+
+    noteBox.style.display = 'none';
+    pendingNoteTarget = null;
+    markDirty();
+    setMode('note');
+  });
+
+  btnClear.addEventListener('click', function() {
+    if (!confirm('Remove all your highlights, underlines, and notes on this page?')) return;
+    contentRoot.querySelectorAll('.user-note').forEach(function(n) { n.remove(); });
+    contentRoot.querySelectorAll('mark.user-highlight').forEach(function(m) {
+      var parent = m.parentNode;
+      while (m.firstChild) parent.insertBefore(m.firstChild, m);
+      parent.removeChild(m);
+    });
+    contentRoot.querySelectorAll('u.user-underline').forEach(function(u) {
+      var parent = u.parentNode;
+      while (u.firstChild) parent.insertBefore(u.firstChild, u);
+      parent.removeChild(u);
+    });
+    markDirty();
+  });
+
+  var fallbackHelp = document.getElementById('fallback-help');
+  document.getElementById('fallback-close').addEventListener('click', function() {
+    fallbackHelp.style.display = 'none';
+  });
+
+  var fileHandle = null;
+  var fsaSupported = 'showSaveFilePicker' in window;
+  var THIS_FILENAME = 'notes.html';
+
+  function buildFullHtml() {
+    var doc = document.documentElement.cloneNode(true);
+    var liveContentRoot = doc.querySelector('#content-root');
+    if (liveContentRoot) liveContentRoot.innerHTML = contentRoot.innerHTML;
+    return '<!DOCTYPE html>\n' + doc.outerHTML;
+  }
+
+  async function writeToFile() {
+    var writable = await fileHandle.createWritable();
+    await writable.write(buildFullHtml());
+    await writable.close();
+  }
+
+  btnSave.addEventListener('click', async function() {
+    statusText.textContent = 'Saving…';
+    statusText.style.color = '#57606a';
+    if (!fsaSupported) {
+      fallbackHelp.style.display = 'block';
+      statusText.textContent = 'Direct save not supported in this browser';
+      statusText.style.color = '#993c1d';
+      return;
+    }
+    try {
+      if (!fileHandle) {
+        fileHandle = await window.showSaveFilePicker({
+          suggestedName: THIS_FILENAME,
+          types: [{ description: 'HTML file', accept: { 'text/html': ['.html'] } }]
+        });
+      }
+      var perm = await fileHandle.queryPermission({ mode: 'readwrite' });
+      if (perm !== 'granted') {
+        perm = await fileHandle.requestPermission({ mode: 'readwrite' });
+      }
+      if (perm !== 'granted') {
+        statusText.textContent = 'File permission denied — click Save to retry';
+        statusText.style.color = '#993c1d';
+        fileHandle = null;
+        return;
+      }
+      await writeToFile();
+      statusText.textContent = 'Saved to file just now';
+      statusText.style.color = '#3b6d11';
+    } catch (err) {
+      console.error('SAVE_ERROR', err.name, err.message, err);
+      if (err.name === 'AbortError') {
+        statusText.textContent = 'Save cancelled';
+        statusText.style.color = '#57606a';
+      } else {
+        statusText.textContent = 'Save failed: ' + err.name + ' — click Save to retry';
+        statusText.style.color = '#993c1d';
+        fileHandle = null;
+      }
+    }
+  });
+
+  contentRoot.querySelectorAll('.user-note .del-note').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      btn.closest('.user-note').remove();
+      markDirty();
+    });
+  });
+
+  contentRoot.querySelectorAll('.spacing-tracker input[type="checkbox"]').forEach(function(cb) {
+    cb.addEventListener('change', function() {
+      if (cb.checked) { cb.setAttribute('checked', 'checked'); }
+      else { cb.removeAttribute('checked'); }
+      markDirty();
+    });
+  });
+})();
+</script>
+<!--ANCH-JS--><script>
+(function(){
+  var root=document.getElementById('content-root'); if(!root) return;
+  var KEY='anchnotes:'+location.pathname;
+  var BLOCK='p,li,td,th,h2,h3,h4,dd,figcaption';
+  var statusEl=document.getElementById('status-text');
+  function dirty(){ if(statusEl){ statusEl.textContent='Unsaved changes (also kept in this browser)'; statusEl.style.color='#993c1d'; } }
+  function blocks(){ return Array.prototype.filter.call(root.querySelectorAll(BLOCK),function(b){ return !b.closest('.user-note,#note-index,.toc'); }); }
+  function textNodes(b){
+    var w=document.createTreeWalker(b,NodeFilter.SHOW_TEXT,{acceptNode:function(n){ return (n.parentElement&&n.parentElement.closest('.user-note'))?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT; }});
+    var a=[],n; while((n=w.nextNode())) a.push(n); return a;
+  }
+  function fullText(b){ return textNodes(b).map(function(n){return n.data;}).join(''); }
+  function offsetIn(b,c,o){
+    var r=document.createRange(); r.setStart(b,0); r.setEnd(c,o);
+    var tot=0, tn=textNodes(b);
+    for(var i=0;i<tn.length;i++){ var t=tn[i];
+      if(r.comparePoint(t,t.length)<=0){ tot+=t.length; continue; }
+      if(r.comparePoint(t,0)>0) break;
+      if(t===c) tot+=o; break; }
+    return tot;
+  }
+  function captureSel(){
+    var sel=window.getSelection(); if(!sel||sel.isCollapsed||!sel.rangeCount) return null;
+    var r=sel.getRangeAt(0);
+    if(!root.contains(r.commonAncestorContainer)) return null;
+    var sc=r.startContainer.nodeType===1?r.startContainer:r.startContainer.parentElement;
+    if(!sc||sc.closest('.user-note,#note-index,.toolbar,.toc')) return null;
+    var b=sc.closest(BLOCK); if(!b||!root.contains(b)) return null;
+    var bi=blocks().indexOf(b); if(bi<0) return null;
+    var end=r.endContainer, eo=r.endOffset;
+    if(!b.contains(end)){ var tn=textNodes(b); if(!tn.length) return null; end=tn[tn.length-1]; eo=end.length; }
+    var s=offsetIn(b,r.startContainer,r.startOffset), e=offsetIn(b,end,eo);
+    if(e<=s) return null;
+    var t=fullText(b).slice(s,e); if(!t.trim()) return null;
+    return {bi:bi,s:s,e:e,t:t};
+  }
+  function wrap(b,s,e,id,note){
+    var pos=0, tn=textNodes(b);
+    tn.forEach(function(t){
+      var len=t.length, a=Math.max(s-pos,0), z=Math.min(e-pos,len); pos+=len;
+      if(z<=a) return;
+      var mid=t; if(a>0) mid=t.splitText(a); if(z-a<mid.length) mid.splitText(z-a);
+      var sp=document.createElement('span'); sp.className='note-anchor'; sp.setAttribute('data-nid',id); sp.title=note;
+      mid.parentNode.insertBefore(sp,mid); sp.appendChild(mid);
+    });
+  }
+  function short(t){ t=t.replace(/\s+/g,' ').trim(); return t.length>70?t.slice(0,67)+'…':t; }
+  function makeNote(id,t,note,bi,s,e){
+    var d=document.createElement('div'); d.className='user-note anchored-note'; d.id='note-'+id;
+    d.setAttribute('data-nid',id); d.setAttribute('data-b',bi); d.setAttribute('data-s',s); d.setAttribute('data-e',e); d.setAttribute('data-t',t);
+    d.innerHTML='<span class="anch-btns"><button class="anch-up" title="Go to the text">↑ text</button><button class="anch-edit" title="Edit note">✎</button><button class="anch-del" title="Delete note">×</button></span><span class="note-label"></span><span class="note-body"></span>';
+    d.querySelector('.note-label').textContent='Note on “'+short(t)+'”';
+    d.querySelector('.note-body').textContent=note;
+    return d;
+  }
+  function place(b,d){
+    if(/^(P|H2|H3|H4|FIGCAPTION)$/.test(b.tagName)){
+      var ref=b.nextSibling; while(ref&&ref.classList&&ref.classList.contains('anchored-note')) ref=ref.nextSibling;
+      b.parentNode.insertBefore(d,ref);
+    } else b.appendChild(d);
+  }
+  function snapshot(){
+    return Array.prototype.map.call(root.querySelectorAll('.anchored-note'),function(d){
+      return {id:d.getAttribute('data-nid'),b:+d.getAttribute('data-b'),s:+d.getAttribute('data-s'),e:+d.getAttribute('data-e'),t:d.getAttribute('data-t'),n:d.querySelector('.note-body').textContent};
+    });
+  }
+  function persist(){
+    var data=JSON.stringify(snapshot());
+    try{ localStorage.setItem(KEY,data); }catch(x){}
+    try{ fetch('/__save?p='+encodeURIComponent(location.pathname),{method:'POST',body:data}).then(function(r){
+      if(r.ok&&statusEl){ statusEl.textContent='Notes saved to file (my-notes.json)'; statusEl.style.color='#0f766e'; } }).catch(function(){}); }catch(x){}
+  }
+  function addNote(sel,note){
+    var b=blocks()[sel.bi]; if(!b) return;
+    var id='n'+Date.now().toString(36)+Math.random().toString(36).slice(2,5);
+    wrap(b,sel.s,sel.e,id,note); place(b,makeNote(id,sel.t,note,sel.bi,sel.s,sel.e));
+    persist(); buildIndex(); dirty();
+  }
+  function restore(side){
+    var st=[]; try{ st=JSON.parse(localStorage.getItem(KEY)||'[]'); }catch(x){}
+    var seen={}; st.forEach(function(i){seen[i.id]=1;});
+    (side||[]).forEach(function(i){ if(!seen[i.id]) st.push(i); });
+    st.forEach(function(it){
+      if(root.querySelector('.anchored-note[data-nid="'+it.id+'"]')) return;
+      var b=blocks()[it.b]; if(!b) return;
+      var full=fullText(b), s=it.s, e=it.e;
+      if(full.slice(s,e)!==it.t){ var k=full.indexOf(it.t); if(k<0) return; s=k; e=k+it.t.length; }
+      wrap(b,s,e,it.id,it.n); place(b,makeNote(it.id,it.t,it.n,it.b,s,e));
+    });
+  }
+  function anchorsOf(id){ return root.querySelectorAll('.note-anchor[data-nid="'+id+'"]'); }
+  function flash(els){ Array.prototype.forEach.call(els.length!==undefined?els:[els],function(el){ el.classList.remove('anch-flash'); void el.offsetWidth; el.classList.add('anch-flash'); }); }
+  function jumpNote(id){ var n=document.getElementById('note-'+id); if(!n) return; n.scrollIntoView({block:'center',behavior:'smooth'}); flash(n); }
+  function jumpText(id){ var a=anchorsOf(id); if(!a.length) return; a[0].scrollIntoView({block:'center',behavior:'smooth'}); flash(a); }
+  function unwrap(id){ Array.prototype.forEach.call(anchorsOf(id),function(sp){ var p=sp.parentNode; while(sp.firstChild) p.insertBefore(sp.firstChild,sp); p.removeChild(sp); p.normalize(); }); }
+  function buildIndex(){
+    var box=document.getElementById('note-index-list'); if(!box) return;
+    var notes=root.querySelectorAll('.anchored-note'); box.innerHTML='';
+    if(!notes.length){ var p=document.createElement('p'); p.className='ni-empty'; p.textContent='No notes yet. Select any text above, click “Add note”. Click the highlighted text any time to jump to its note.'; box.appendChild(p); return; }
+    Array.prototype.forEach.call(notes,function(d,i){
+      var it=document.createElement('div'); it.className='ni-item';
+      var a=document.createElement('a'); a.href='#'; a.className='ni-link'; a.setAttribute('data-nid',d.getAttribute('data-nid')); a.textContent=(i+1)+'. “'+short(d.getAttribute('data-t'))+'”';
+      var sp=document.createElement('span'); sp.className='ni-note'; sp.textContent=' — '+d.querySelector('.note-body').textContent;
+      it.appendChild(a); it.appendChild(sp); box.appendChild(it);
+    });
+  }
+  root.addEventListener('click',function(ev){
+    var t=ev.target, a;
+    if((a=t.closest('.ni-link'))){ ev.preventDefault(); jumpText(a.getAttribute('data-nid')); return; }
+    if((a=t.closest('.anch-up'))){ jumpText(a.closest('.anchored-note').getAttribute('data-nid')); return; }
+    if((a=t.closest('.anch-del'))){
+      var d=a.closest('.anchored-note'); if(!confirm('Delete this note?')) return;
+      unwrap(d.getAttribute('data-nid')); d.remove(); persist(); buildIndex(); dirty(); return; }
+    if((a=t.closest('.anch-edit'))){
+      var n=a.closest('.anchored-note'), body=n.querySelector('.note-body'), v=prompt('Edit note',body.textContent);
+      if(v===null||!v.trim()) return; body.textContent=v.trim();
+      Array.prototype.forEach.call(anchorsOf(n.getAttribute('data-nid')),function(sp){ sp.title=v.trim(); });
+      persist(); buildIndex(); dirty(); return; }
+    if((a=t.closest('.note-anchor'))){
+      var s=window.getSelection(); if(s&&!s.isCollapsed) return;
+      jumpNote(a.getAttribute('data-nid')); }
+  });
+  var clr=document.getElementById('btn-clear');
+  if(clr) clr.addEventListener('click',function(){ setTimeout(function(){
+    if(root.querySelector('.anchored-note')) return;
+    var ids={}; Array.prototype.forEach.call(root.querySelectorAll('.note-anchor'),function(sp){ ids[sp.getAttribute('data-nid')]=1; });
+    Object.keys(ids).forEach(unwrap); persist(); buildIndex();
+  },60); });
+
+  var btn=document.getElementById('anch-btn'), pop=document.getElementById('anch-pop');
+  if(!btn){ btn=document.createElement('button'); btn.id='anch-btn'; btn.type='button'; btn.textContent='📝 Add note'; document.body.appendChild(btn); }
+  if(!pop){ pop=document.createElement('div'); pop.id='anch-pop'; pop.innerHTML='<div class="ap-quote"></div><textarea placeholder="Type your note…"></textarea><div class="ap-actions"><button type="button" class="ap-cancel">Cancel</button><button type="button" class="ap-add">Add</button></div>'; document.body.appendChild(pop); }
+  btn.style.display='none'; pop.style.display='none';
+  var cur=null, tm=null, popOpen=false;
+  function update(){
+    if(popOpen) return;
+    var h=document.getElementById('btn-highlight'), u=document.getElementById('btn-underline');
+    if((h&&h.classList.contains('active'))||(u&&u.classList.contains('active'))){ btn.style.display='none'; return; }
+    var c=captureSel(); if(!c){ btn.style.display='none'; return; }
+    cur=c; var r=window.getSelection().getRangeAt(0).getBoundingClientRect();
+    btn.style.left=Math.max(8,Math.min(window.scrollX+r.left,window.scrollX+window.innerWidth-130))+'px';
+    btn.style.top=(window.scrollY+r.bottom+6)+'px'; btn.style.display='block';
+  }
+  document.addEventListener('selectionchange',function(){ clearTimeout(tm); tm=setTimeout(update,180); });
+  btn.addEventListener('mousedown',function(e){ e.preventDefault(); });
+  btn.addEventListener('click',function(){
+    if(!cur) return; popOpen=true;
+    pop.querySelector('.ap-quote').textContent='“'+short(cur.t)+'”';
+    pop.style.left=btn.style.left; pop.style.top=btn.style.top; pop.style.display='block'; btn.style.display='none';
+    var ta=pop.querySelector('textarea'); ta.value=''; setTimeout(function(){ ta.focus(); },0);
+  });
+  function closePop(){ popOpen=false; pop.style.display='none'; cur=null; }
+  pop.querySelector('.ap-cancel').addEventListener('click',closePop);
+  pop.querySelector('.ap-add').addEventListener('click',function(){
+    var v=pop.querySelector('textarea').value.trim();
+    if(v&&cur) addNote(cur,v);
+    var s=window.getSelection(); if(s) s.removeAllRanges(); closePop();
+  });
+  fetch('my-notes.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():[];}).catch(function(){return [];})
+    .then(function(side){ restore(Array.isArray(side)?side:[]); buildIndex(); persist(); });
+})();
+</script><!--/ANCH-JS-->
+</body>
+</html>

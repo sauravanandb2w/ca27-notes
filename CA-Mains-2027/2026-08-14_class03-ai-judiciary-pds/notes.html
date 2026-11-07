@@ -1049,15 +1049,22 @@ flowchart LR
       return {id:d.getAttribute('data-nid'),b:+d.getAttribute('data-b'),s:+d.getAttribute('data-s'),e:+d.getAttribute('data-e'),t:d.getAttribute('data-t'),n:d.querySelector('.note-body').textContent};
     });
   }
-  function persist(){ try{ localStorage.setItem(KEY,JSON.stringify(snapshot())); }catch(x){} }
+  function persist(){
+    var data=JSON.stringify(snapshot());
+    try{ localStorage.setItem(KEY,data); }catch(x){}
+    try{ fetch('/__save?p='+encodeURIComponent(location.pathname),{method:'POST',body:data}).then(function(r){
+      if(r.ok&&statusEl){ statusEl.textContent='Notes saved to file (my-notes.json)'; statusEl.style.color='#0f766e'; } }).catch(function(){}); }catch(x){}
+  }
   function addNote(sel,note){
     var b=blocks()[sel.bi]; if(!b) return;
     var id='n'+Date.now().toString(36)+Math.random().toString(36).slice(2,5);
     wrap(b,sel.s,sel.e,id,note); place(b,makeNote(id,sel.t,note,sel.bi,sel.s,sel.e));
     persist(); buildIndex(); dirty();
   }
-  function restore(){
+  function restore(side){
     var st=[]; try{ st=JSON.parse(localStorage.getItem(KEY)||'[]'); }catch(x){}
+    var seen={}; st.forEach(function(i){seen[i.id]=1;});
+    (side||[]).forEach(function(i){ if(!seen[i.id]) st.push(i); });
     st.forEach(function(it){
       if(root.querySelector('.anchored-note[data-nid="'+it.id+'"]')) return;
       var b=blocks()[it.b]; if(!b) return;
@@ -1134,7 +1141,8 @@ flowchart LR
     if(v&&cur) addNote(cur,v);
     var s=window.getSelection(); if(s) s.removeAllRanges(); closePop();
   });
-  restore(); buildIndex();
+  fetch('my-notes.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():[];}).catch(function(){return [];})
+    .then(function(side){ restore(Array.isArray(side)?side:[]); buildIndex(); persist(); });
 })();
 </script><!--/ANCH-JS-->
 </body>
