@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class 4 One-Pager — Cyber Security Part 2: Impact &amp; Challenges</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: #faf9f6;
+    color: #1f2328;
+    margin: 0;
+    padding: 14px 22px 26px;
+    line-height: 1.32;
+    font-size: 12.5px;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; }
+  header { border-bottom: 2px solid #2f2f6b; padding-bottom: 6px; margin-bottom: 8px; }
+  header h1 { font-size: 1.28em; margin: 0 0 2px; color: #2f2f6b; }
+  header .tag { font-family: Arial, sans-serif; font-size: 0.82em; color: #57606a; }
+  header .backlink { font-family: Arial, sans-serif; font-size: 0.8em; }
+  header .backlink a { color: #2f2f6b; }
+  .cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  .topic h2 {
+    font-size: 1.02em;
+    color: #2f2f6b;
+    border-left: 3px solid #2f2f6b;
+    padding-left: 8px;
+    margin: 0 0 6px;
+  }
+  .topic ul { margin: 0 0 6px; padding-left: 16px; }
+  .topic li { margin-bottom: 3px; }
+  .callout {
+    background: #eef4f0;
+    border: 1px solid #b9d6c3;
+    border-radius: 5px;
+    padding: 6px 8px;
+    margin: 6px 0;
+    font-size: 0.94em;
+  }
+  .callout strong { color: #2f6b4f; }
+  .callout.alt {
+    background: #fdf3f3;
+    border-color: #e0bdbd;
+  }
+  .callout.alt strong { color: #8b3a3a; }
+  .visual {
+    font-family: Arial, sans-serif;
+    font-size: 0.82em;
+    background: #fff;
+    border: 1px solid #d8d2c6;
+    border-radius: 5px;
+    padding: 6px 8px;
+    margin-top: 6px;
+  }
+  .visual .row { display: flex; align-items: center; flex-wrap: wrap; gap: 3px; margin: 2px 0; }
+  .visual .box { background: #e6f1fb; border: 1px solid #2f2f6b; border-radius: 4px; padding: 2px 6px; color: #2f2f6b; font-weight: bold; }
+  .visual .arrow { color: #2f2f6b; font-weight: bold; }
+  footer {
+    margin-top: 10px;
+    border-top: 1px solid #d8d2c6;
+    padding-top: 5px;
+    color: #57606a;
+    font-family: Arial, sans-serif;
+    font-size: 0.72em;
+    text-align: center;
+  }
+  footer a { color: #2f2f6b; }
+  @media print {
+    @page { size: A4 landscape; margin: 8mm; }
+    body { padding: 0; font-size: 8.6pt; line-height: 1.22; }
+    .cols { gap: 10px; }
+    .topic { break-inside: avoid; }
+    .callout, .visual { break-inside: avoid; padding: 4px 6px; }
+    header h1 { font-size: 1.1em; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Class 4 — One-Pager: Cyber Security Part 2 (Impact · Challenges · Writing)</h1>
+  <div class="tag">UPSC GS-3 Internal Security — Satvik Bhan CA, 09-07-2026 (post-lunch half) — last-minute revision sheet</div>
+  <div class="backlink">Full notes: <a href="notes.html">notes.html</a> &middot; Previous: <a href="../2026-07-09_class03-cyber-crime-attacks/one-pager.html">Class 3 one-pager</a></div>
+</header>
+
+<div class="cols">
+
+  <div class="topic">
+    <h2>1. Impact ladder</h2>
+    <ul>
+      <li><strong>Individual &rarr; business &rarr; nation &rarr; international</strong>. Cyber heads: <strong>Economic &middot; Social &middot; Political &middot; National security &middot; Geopolitical</strong>.</li>
+      <li>Internal-security topic: weight <strong>economic, national security, geopolitical</strong> above social/political.</li>
+      <li><strong>Attack question &rarr; no digital arrest / scam-hub examples</strong> (those are crimes). Use malware, ransomware, DDoS, supply chain.</li>
+    </ul>
+    <h2 style="margin-top:8px">2. Economic</h2>
+    <ul>
+      <li><strong>Individual:</strong> loss of savings (digital arrest, scam hub, extortion, fake loans).</li>
+      <li><strong>Business:</strong> loss for MSMEs/corporates (<em>boss/CEO scam</em>); <strong>higher cost of doing business</strong> &mdash; audit, fraud monitoring, customer redressal, <strong>cyber insurance</strong>, compliance, training.</li>
+      <li><strong>BFSI:</strong> weakens financial integrity; <strong>co-op banks</strong> = systemic risk; hits <strong>financial inclusion</strong> (UPI/QR), <strong>JAM</strong>.</li>
+      <li><strong>Nation:</strong> budget for CERT-In, MHA forensics, I4C, NATGRID, Pratibimb; social-sector spend may shrink.</li>
+    </ul>
+  </div>
+
+  <div class="topic">
+    <h2>3. Social &amp; political</h2>
+    <ul>
+      <li><strong>Social:</strong> trauma, humiliation, anxiety, stigma &rarr; <strong>family harm</strong> (isolation, suicide) &rarr; <strong>digital hesitation</strong> (elderly, disabled, rural; SC: right to digital access, Art. 21) &rarr; <strong>women/children</strong> (morphing, CSEM, <em>Blue Whale</em>) &rarr; <strong>youth</strong> (instant gratification; <strong>money mules</strong>).</li>
+      <li><strong>Political:</strong> e-governance/service delivery hit (hospitals, municipal, certificates, welfare portals) &rarr; <strong>loss of trust &amp; credibility</strong> &rarr; disinformation, dissent &rarr; <strong>non-state actors</strong> (NE groups, Manipur). High social capital (Nordics) resists fake news.</li>
+    </ul>
+    <div class="callout alt"><strong>Rule:</strong> don't write only your own suffering. Be a sponge: size the answer to the question.</div>
+  </div>
+
+  <div class="topic">
+    <h2>4. National security &amp; geopolitical</h2>
+    <ul>
+      <li><strong>National security:</strong> non-state actors &middot; extremist groups &middot; hostile intelligence networks; <strong>critical infra</strong> (hospitals, power, banking, telecom, transport/<strong>ports</strong>). <strong>JNPT ransomware 2017</strong>; <strong>GPS spoofing</strong> (West Asia shipping; aircraft near western border/J&amp;K).</li>
+      <li><strong>Geopolitical:</strong> <strong>dependence on Global North</strong> for toolkits, software, capacity (AI triples <em>speed, scale, low entry</em>); dependence on bilateral/multilateral cooperation (<strong>India&ndash;Myanmar</strong> on cyber slavery: evidence sharing, financial tracing, infra takedown, asset recovery; <strong>Israel</strong>); <strong>loss of credibility</strong> of India's DPI model and Global South leadership.</li>
+      <li><strong>PYQ 2025:</strong> India&ndash;Africa digital partnership (mutual respect, co-development, long-term institutional) vs China's debt model, US's exploitative model; IIT Madras Zanzibar, Kenya, UPI.</li>
+      <li><strong>Conclusion word:</strong> <em>strategic impact</em>.</li>
+    </ul>
+  </div>
+
+  <div class="topic">
+    <h2>5. Challenges (map)</h2>
+    <ul>
+      <li><strong>1 Volume:</strong> CERT-In ~13.9 &rarr; 15.9 &rarr; <strong>20.4 lakh</strong> (2022&ndash;24): better reporting + higher vulnerability.</li>
+      <li><strong>2 Digitalisation:</strong> 1.4 bn Aadhaar; 86% households online.</li>
+      <li><strong>3 Evolving crime:</strong> digital arrest, scam compounds, <strong>FaaS</strong> (WormGPT, FraudGPT).</li>
+      <li><strong>4 Geography:</strong> hostile neighbours = <em>cyber frontiers</em> (APT36 <em>Transparent Tribe</em>; Ladakh grid; Srinagar army school) &middot; proximity to Myanmar/Thailand/Laos (<strong>KK Park</strong>) &middot; weak border-area resilience (asymmetric) &middot; <strong>vast maritime geography</strong> (~11,000 km coast; ~17 submarine cables, 14 landing stations: Mumbai, Chennai, Kochi, Thoothukudi, Thiruvananthapuram) &middot; <strong>concentration of CI</strong> in metros (data centres, exchanges, fintech).</li>
+      <li><strong>5 Policy:</strong> 2013 policy outdated &middot; no maritime cyber policy &middot; <strong>fragmented coordination</strong> (CERT-In, I4C, NCRB, DoT/TRAI, NSCS, NCIIPC, RBI/SEBI, state police) &middot; no unified command (Israel has) &middot; <strong>sectoral gaps</strong>.</li>
+      <li><strong>6 Federal:</strong> police/public order = State List; weak state cyber-policing; jurisdiction; <strong>borderless crime vs unequal capability</strong>.</li>
+    </ul>
+  </div>
+
+  <div class="topic">
+    <h2>6. "Other" challenges</h2>
+    <ul>
+      <li><strong>Public&ndash;private trust deficit:</strong> private-run CI, under-reporting (reputation, penalties, litigation) &rarr; weak threat-intel sharing.</li>
+      <li><strong>Privacy&ndash;security dilemma:</strong> surveillance apps, mandatory installs (<strong>Sanchar Saathi</strong>, DoT), large-scale data collection.</li>
+      <li><strong>Geopolitical:</strong> Global North dependence; export/access limits (US on Mythos); limited global cooperation.</li>
+      <li><strong>Tech/resource:</strong> R&amp;D ~0.66% of GDP; no sovereign Mythos-class model.</li>
+      <li><strong>HR:</strong> forensic experts, malware analysts, privacy engineers, AI-security researchers, cyber prosecutors.</li>
+      <li><strong>National security:</strong> BFSI, ports + submarine cables, smart grids, industrial systems.</li>
+      <li><strong>AI-led:</strong> authenticity (deepfakes), scale, attribution, trust (doctored police videos), frontier-model threats (Mythos).</li>
+      <li><strong>Citizen:</strong> low awareness, poor hygiene.</li>
+    </ul>
+  </div>
+
+  <div class="topic">
+    <h2>7. Answer writing</h2>
+    <ul>
+      <li><strong>1 Underline keywords &rarr; 2 structure around them (show asked heading) &rarr; 3 intro 15&ndash;30 + body ~200 + conclusion.</strong></li>
+      <li><strong>Q:</strong> <em>Impact of cross-border cyber attacks + challenges (15 marks, 250 words).</em> Intro: name borders (China, Pakistan, Myanmar; proximity to Thailand, Laos) &mdash; <strong>don't define cyber attack</strong>; polygon of securities. Impact ~100 words (no psychological trauma). Challenges: digitalisation, policy/federal, geography, HR, tech/resource, AI (Pak&ndash;China, Qihoo 360).</li>
+      <li><strong>Conclusion:</strong> new cyber policy + international collaboration; UN comprehensive convention on terrorism; call out proxy terror and cyber terrorism together.</li>
+      <li><strong>Way forward:</strong> solve the issues <em>or</em> expand steps already taken.</li>
+      <li>Q1: <em>AI is a double-edged sword &mdash; discuss AI-led cyber threats for India.</em></li>
+    </ul>
+    <div class="callout alt"><strong>Verify:</strong> incident counts, R&amp;D %, cable counts, SC right to digital access, Israel pact dates, Pratibimb. Pending: <strong>steps taken</strong>, <strong>AI challenges</strong>, <strong>way forward</strong> (next class).</div>
+  </div>
+
+</div>
+
+<footer>Class 4 one-pager &middot; <a href="notes.html">full notes</a> &middot; <a href="../index.html">series index</a></footer>
+</div>
+
+</body>
+</html>
